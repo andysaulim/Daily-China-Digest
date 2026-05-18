@@ -211,5 +211,23 @@ def location_names_for_prompt() -> dict:
     }
 
 
+def update_from_digest(digest: dict) -> None:
+    """Extract monitored location updates from digest output and persist them."""
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    valid_names = {loc["name"] for loc in ALL_LOCATIONS}
+
+    for loc in (digest.get("monitored_locations") or []):
+        name = (loc.get("name") or "").strip()
+        if name not in valid_names:
+            continue
+        note = (loc.get("note") or "").strip()
+        if not note or note.lower() == "no new reporting":
+            continue
+        status = loc.get("status", "normal")
+        direction = loc.get("direction", "")
+        source_date = loc.get("last_source_date") or today
+        update_location(name, status, note, source_date, direction)
+
+
 if __name__ == "__main__":
     print(build_context_block())
