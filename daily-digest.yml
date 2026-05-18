@@ -1,0 +1,62 @@
+name: Daily China Digest
+
+on:
+  schedule:
+    # Primary: 7:30 AM ET daily (30 min stagger after Daily-Korea-Digest at 7:00 AM ET)
+    # Cron uses UTC. 11:30 UTC = 7:30 AM ET during DST (Mar–Nov),
+    #                       = 6:30 AM ET in standard time (Nov–Mar).
+    # Fallback: 12:00 UTC handles the standard-time case (8:00 AM ET) +
+    #          serves as a retry if the primary run fails.
+    - cron: '30 11 * * *'
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: china-digest
+  cancel-in-progress: false
+
+jobs:
+  build-and-send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+          fetch-depth: 0
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS }}
+          DIGEST_TO: ${{ secrets.DIGEST_TO }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          WEB_URL: ${{ vars.WEB_URL }}
+        run: python run.py
+
+      - name: Commit tracker state + archive
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add xi_tracker.json xinhua_tracker.json bp_tracker.json public/ README.md 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Daily China Digest run $(date -u +%Y-%m-%d)"
+          git push || echo "Nothing to push"
