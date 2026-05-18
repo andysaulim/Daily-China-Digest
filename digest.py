@@ -633,7 +633,7 @@ Return a digest object with:
 
 - us_china_trade: US-China trade and sanctions architecture. Object with sub-blocks (NO REPETITION across sub-blocks):
   - tariff_tracker: object with headline_section_301_rate (current Section 301 average), section_232_rates (object: steel, aluminum, copper, autos, semiconductors), ieepa_fentanyl_rate ("20%"), section_122_surcharge ("10%, expires Jul 24 2026"), last_change (string), next_trigger (string). Use TRADE BASELINES above as default; only change if today's articles report new action.
-  - entity_list_tracker: object with total_count (string, verify from articles), recent_adds_7day (array of {entity_name, sector, date}), most_recent_add (string).
+  - entity_list_tracker: object with total_count (string, verify from articles), recent_adds_7day (array of {{entity_name, sector, date}}), most_recent_add (string).
   - sdn_tracker: object with china_designations_total (string), recent_adds_7day (array), program_distribution (e.g. "Xinjiang: X, Hong Kong: Y, narcotics: Z").
   - dod_1260h_tracker: object with total_count (string), notable_listed (array of company names), most_recent_change (string).
   - outbound_investment: object with covered_transactions_notified (int or "data not available"), prohibited_actions (int or string), last_update (date).
