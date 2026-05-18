@@ -203,8 +203,8 @@ def run_pipeline(args: argparse.Namespace) -> int:
     # ─── Database context (Hidden Reach / AMTI updates if available) ─────
     db_context = ""
     try:
-        from databases import build_database_context
-        db_context = build_database_context()
+        from databases import build_db_context
+        db_context = build_db_context()
         if db_context:
             print(f"📊 Database context loaded ({len(db_context)} chars)")
     except Exception as e:
@@ -259,6 +259,13 @@ def run_pipeline(args: argparse.Namespace) -> int:
     # ─── Archive ─────────────────────────────────────────────────────────
     if not args.no_archive:
         _archive_html(html, digest)
+
+    # ─── Update README ───────────────────────────────────────────────────
+    try:
+        from update_readme import update_readme
+        update_readme()
+    except Exception as e:
+        print(f"⚠ README update failed (non-fatal): {e}")
 
     # ─── Send ────────────────────────────────────────────────────────────
     if args.no_send:
