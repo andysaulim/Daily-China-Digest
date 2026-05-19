@@ -153,16 +153,16 @@ def update_from_digest(digest: dict) -> None:
     phrase_counts = {}
     for change in (xd.get("key_phrase_changes") or []):
         phrase = change.get("phrase", "").strip()
-        count = change.get("count_today")
+        count = change.get("count_this_week")
         if phrase and isinstance(count, int):
             phrase_counts[phrase] = count
 
     tones = {}
-    for entry in (xd.get("tone_quadrants") or []):
-        target = entry.get("target", "").strip()
-        tone = entry.get("tone", "").strip()
-        if target and tone:
-            tones[target] = tone
+    tone_shifts = xd.get("tone_shifts") or {}
+    if isinstance(tone_shifts, dict):
+        for target, tone in tone_shifts.items():
+            if target and tone:
+                tones[target] = tone
 
     if phrase_counts or tones:
         record_day(today, phrase_counts, tones or None)
