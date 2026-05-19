@@ -56,7 +56,7 @@ SOURCE-OR-SKIP PRINCIPLE: For EVERY factual claim you write, you must be able to
 
 - ACADEMIC FABRICATION — HARD BLOCK: Same rule applies to academic_today. Do NOT include any journal article that does not appear in the Tier 3 input with a real URL. The authors field must come from the article metadata — do NOT populate it from training data or invent it. If the authors field is missing from the source, set it to null. A news outlet name (e.g. "Ratopati", "The Hindu") appearing as "author" means the source is a news article, not a journal paper — exclude it entirely from academic_today.
 
-- URL INTEGRITY: Every url field must be copied exactly from the input article. Do NOT shorten, paraphrase, or reconstruct URLs. Do NOT use Google News redirect URLs as the final URL — if the input article's link is a Google News redirect (news.google.com/...), copy it as-is; do not fabricate the destination URL.
+- URL INTEGRITY — ZERO TOLERANCE: Every url field must be copied CHARACTER-FOR-CHARACTER from the input article's url field. Do NOT reconstruct, guess, shorten, or invent URLs. Do NOT write a URL based on knowing the publication's domain — only use the exact URL from the input. If an article in the input has no URL or an empty URL, set the url field to "" in your output. A missing URL is always better than a fabricated one.
 
 QUALITY STANDARD — THE EXPERT TEST: Every entry must pass these tests:
 
