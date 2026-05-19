@@ -54,7 +54,7 @@ collect.py          digest.py           render.py          send_email.py
 
 ---
 
-## Newsletter Sections (20 in delivery order)
+## Newsletter Sections (19 in delivery order)
 
 | # | Section | Description |
 | - | - | - |
@@ -67,8 +67,7 @@ collect.py          digest.py           render.py          send_email.py
 | 7 | Overnight Flash | 6 secondary items |
 | 8 | Xinhua / People's Daily Delta | **DARK SECTION** — propaganda analysis, Xi appearances, doctrinal language |
 | 9 | Expert Analysts | Op-eds + academic — Scott Kennedy, Bonny Lin, Hass, Glaser, Mastro, Bishop |
-| 10 | Public Sentiment & Signals | Censorship signals, capital flow proxies, Taiwan polling, protest tracker |
-| 11 | Social Statements | Quotes from Xi, Wang Yi, Li Qiang, MOFA spokespersons, US / Taiwan officials |
+| 10 | Social Statements | Quotes from Xi, Wang Yi, Li Qiang, MOFA spokespersons, US / Taiwan officials |
 | 12 | Satellite & Location Watch | Gray-zone (8 AMTI / China Power) + Hidden Reach (8 CSIS) — only active sites shown |
 | 13 | PRC Government | State Council, MOFA, MOD, MOFCOM, PBOC + Personnel Changes + NPC/Politburo + Calendar Watch |
 | 14 | US–China Trade & Sanctions | Section 301 / 232 / IEEPA fentanyl / Section 122 / Entity List / SDN / 1260H / OIS / CFIUS |
