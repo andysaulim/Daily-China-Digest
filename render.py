@@ -394,10 +394,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
     # 4b. Overnight Flash
     overnight = digest.get("overnight_items") or []
     if overnight:
-        cat_colors = {"Cross-Strait": "#8E44AD", "US-China": "#2980B9", "Sanctions": "#C0392B",
-                      "Trade": "#E67E22", "Defense": "#1B2A4A", "Technology": "#16A085",
-                      "Macro": "#D4AC0D", "Diplomacy": "#1B6A4A", "Cyber": "#8B0000",
-                      "Hong Kong": "#7F8C8D", "Belt and Road": "#2E4057"}
+        cat_colors = {"Cross-Strait": "#8E44AD", "PLA": "#C0392B"}
         fh = ""
         for it in overnight:
             cat_raw = _str(it.get("category", ""))
@@ -848,32 +845,6 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 {at}
 </div>"""
 
-        sdn = trade.get("sdn_tracker") or {}
-        h1260 = trade.get("dod_1260h_tracker") or {}
-        oi = trade.get("outbound_investment") or {}
-        if sdn or h1260 or oi:
-            sc = ""
-            if sdn:
-                sc += f"""<td style="width:33%;padding:10px;background:#FFF5F0;border-radius:4px;text-align:center;vertical-align:top;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#E67E22;font-weight:600;margin-bottom:4px;">OFAC SDN</div>
-<div style="font-size:18px;font-weight:700;color:#1B2A4A;">{_esc(str(sdn.get("china_designations_total", "—")))}</div>
-<div style="font-size:10px;color:#888;line-height:1.3;">{_esc(str(sdn.get("program_distribution", "")))}</div>
-</td>"""
-            if h1260:
-                nl_ = h1260.get("notable_listed", [])
-                nls = ", ".join(_esc(n) for n in nl_[:4]) if nl_ else ""
-                sc += f"""<td style="width:33%;padding:10px;background:#F0F0F8;border-radius:4px;text-align:center;vertical-align:top;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#8E44AD;font-weight:600;margin-bottom:4px;">DoD 1260H</div>
-<div style="font-size:18px;font-weight:700;color:#1B2A4A;">{_esc(str(h1260.get("total_count", "—")))}</div>
-<div style="font-size:10px;color:#888;line-height:1.3;">{nls}</div>
-</td>"""
-            if oi:
-                sc += f"""<td style="width:33%;padding:10px;background:#F0F8F0;border-radius:4px;text-align:center;vertical-align:top;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#16A085;font-weight:600;margin-bottom:4px;">Outbound Investment</div>
-<div style="font-size:14px;font-weight:700;color:#1B2A4A;">EO 14105</div>
-<div style="font-size:10px;color:#888;margin-top:2px;">{_esc(str(oi.get("last_update", "")))}</div>
-</td>"""
-            body += f'<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:16px;border-spacing:6px 0;"><tr>{sc}</tr></table>'
 
         cf = trade.get("cfius") or []
         if cf:
@@ -917,9 +888,9 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
     # 11. Indo-Pacific
     ip = digest.get("indo_pacific") or []
     if ip:
-        rc = {"Cross-Strait": "#8E44AD", "Japan-China": "#1B6A4A", "Philippines-China": "#C0392B",
-              "Australia-China": "#2980B9", "India-China": "#D4AC0D", "Korea-China": "#1B2A4A",
-              "Trilateral": "#2E4057", "Indo-Pacific": "#7F8C8D"}
+        rc = {"Cross-Strait": "#8E44AD", "Japan-China": "#2C3E50", "Philippines-China": "#2C3E50",
+              "Australia-China": "#2C3E50", "India-China": "#2C3E50", "Korea-China": "#2C3E50",
+              "Trilateral": "#2C3E50", "Indo-Pacific": "#7F8C8D"}
         ih = ""
         for it in ip[:6]:
             r = it.get("region_tag", "Indo-Pacific")
@@ -928,10 +899,8 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
             bt = _esc(it.get("body_text", ""))
             url = it.get("url", "")
             src = _esc(_clean_src(it.get("source", "")))
-            sig = it.get("signal_type", "")
-            bd = f' {_signal_badge(sig)}' if sig else ""
             ih += f"""<div style="margin-bottom:10px;padding-left:12px;border-left:3px solid {bar};">
-<div style="font-size:11px;color:{bar};text-transform:uppercase;font-weight:600;">{_esc(r)} · {src}{bd}</div>
+<div style="font-size:11px;color:{bar};text-transform:uppercase;font-weight:600;">{_esc(r)} · {src}</div>
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(h, url)}</div>
 <div style="font-size:12px;line-height:1.4;color:#555;">{bt}</div>
 </div>"""
@@ -991,53 +960,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 </div>"""
         sections_analysis.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Expert Analysts</span>{body}</div>')
 
-    # 14. Public Sentiment
-    sent = digest.get("public_sentiment") or {}
-    if sent and any(sent.values()):
-        body = ""
-        cs = sent.get("censorship_signals")
-        if cs and cs.get("blocked_terms"):
-            terms = cs.get("blocked_terms", [])
-            pills = " ".join(f'<code style="background:#1B2A4A;color:#fff;padding:2px 8px;border-radius:3px;font-size:11px;font-family:Courier,monospace;margin-right:4px;">{_esc(t)}</code>' for t in terms[:5])
-            body += f"""<div style="margin-bottom:12px;padding:10px 12px;background:#FAFAF5;border-radius:4px;border-left:3px solid #C0392B;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#C0392B;font-weight:600;margin-bottom:6px;">Censorship Signals · Blocked Terms Today</div>
-<div style="line-height:2;">{pills}</div>
-<div style="font-size:10px;color:#888;margin-top:6px;">{_esc(cs.get("source", ""))} · {_esc(cs.get("last_updated", ""))}</div>
-</div>"""
-        cf = sent.get("capital_flow_proxies") or {}
-        if cf:
-            body += f"""<div style="margin-bottom:12px;padding:10px 12px;background:#F0F7FF;border-radius:4px;border-left:3px solid #2980B9;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#2980B9;font-weight:600;margin-bottom:6px;">Capital Flow Proxies</div>
-<div style="font-size:12px;line-height:1.6;color:#333;">
-<strong>Stock Connect:</strong> {_esc(cf.get("stock_connect_net", "—"))}<br>
-<strong>CNY pressure:</strong> {_esc(cf.get("cny_pressure", "—"))}{("<br><strong>Gold:</strong> " + _esc(cf.get("gold_signal", ""))) if cf.get("gold_signal") else ""}
-</div>
-</div>"""
-        prot = sent.get("protest_tracker") or []
-        if prot:
-            ph_ = ""
-            for p in prot[:4]:
-                ph_ += f"""<div style="margin-bottom:4px;padding-left:8px;border-left:2px solid #E67E22;">
-<span style="font-size:12px;font-weight:600;color:#1B2A4A;">{_esc(p.get("location", ""))}</span> · {_esc(p.get("type", ""))} <span style="color:#888;font-size:11px;">({_esc(p.get("date", ""))})</span>
-</div>"""
-            body += f"""<div style="margin-bottom:12px;padding:10px 12px;background:#FFF8F0;border-radius:4px;border-left:3px solid #E67E22;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#E67E22;font-weight:600;margin-bottom:6px;">Protest Tracker</div>
-{ph_}
-</div>"""
-        tp = sent.get("taiwan_polling")
-        if tp:
-            body += f"""<div style="margin-bottom:12px;padding:10px 12px;background:#F0F8F0;border-radius:4px;border-left:3px solid #27AE60;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#27AE60;font-weight:600;margin-bottom:6px;">Taiwan Polling</div>
-<div style="font-size:12px;line-height:1.5;color:#333;">{_esc(tp.get("finding", ""))}</div>
-<div style="font-size:10px;color:#888;margin-top:4px;">{_esc(tp.get("source", ""))} · {_esc(tp.get("date", ""))}</div>
-</div>"""
-        disc = sent.get("discourse_flag")
-        if disc:
-            body += f"""<div style="padding:8px 12px;background:#1B2A4A;color:#fff;border-radius:4px;font-size:12px;line-height:1.5;">
-<span style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.7;">Discourse Flag · </span>{_esc(disc)}
-</div>"""
-        if body:
-            sections_analysis.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Public Sentiment &amp; Signals</span>{body}</div>')
+    # 14. Public Sentiment — removed (low signal-to-noise)
 
     # 15. Social Statements
     stmts = digest.get("social_statements") or []
@@ -1064,8 +987,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
     # 16. Also Today
     also = digest.get("also_today") or []
     if also:
-        wc_ = {"Macro": "#D4AC0D", "Technology": "#16A085", "Cyber": "#8B0000",
-               "Hong Kong": "#7F8C8D", "Belt and Road": "#2E4057", "Cross-Strait": "#8E44AD", "Trade": "#E67E22"}
+        wc_ = {"Cross-Strait": "#8E44AD", "PLA": "#C0392B"}
         ah = ""
         for a in also[:6]:
             cr_ = _str(a.get("category", ""))

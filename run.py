@@ -8,6 +8,8 @@ import os
 import sys
 import time
 import traceback
+import requests as _requests
+from concurrent.futures import ThreadPoolExecutor as _ThreadPoolExecutor, as_completed as _as_completed
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -128,6 +130,79 @@ def _validate_digest(digest: dict) -> list[str]:
 # ARCHIVE TO GITHUB PAGES
 # ─────────────────────────────────────────────────────────────────────────────
 
+def _resolve_google_url(url: str) -> str:
+    """Follow a Google News redirect URL to get the real article URL."""
+    try:
+        resp = _requests.get(
+            url, allow_redirects=True, timeout=6,
+            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        )
+        final = resp.url
+        return final if final and not final.startswith("https://news.google.com") else url
+    except Exception:
+        return url
+
+
+_URL_SECTIONS = (
+    "top_stories", "overnight_items", "also_today", "business_economy",
+    "indo_pacific", "opeds_today", "academic_today", "social_statements",
+    "prc_government", "congressional_watch", "npc_politburo", "personnel_changes",
+)
+
+
+def _sanitise_urls(digest: dict, collected_urls: set) -> dict:
+    """Null out hallucinated URLs; resolve Google News redirects for real ones."""
+    google_urls = {}
+
+    for section in _URL_SECTIONS:
+        for item in (digest.get(section) or []):
+            if not isinstance(item, dict):
+                continue
+            url = item.get("url", "")
+            if not url or not url.startswith("http"):
+                item["url"] = ""
+                continue
+            if url not in collected_urls:
+                item["url"] = ""  # hallucinated — strip it
+            elif "news.google.com" in url:
+                google_urls[url] = url  # will resolve below
+
+    # Also handle cfius / deals inside us_china_trade
+    trade = digest.get("us_china_trade") or {}
+    for key in ("cfius", "deals"):
+        for item in (trade.get(key) or []):
+            if not isinstance(item, dict):
+                continue
+            url = item.get("url", "")
+            if not url or not url.startswith("http"):
+                item["url"] = ""
+                continue
+            if url not in collected_urls:
+                item["url"] = ""
+            elif "news.google.com" in url:
+                google_urls[url] = url
+
+    if google_urls:
+        print(f"   ↻ Resolving {len(google_urls)} Google News redirect(s)...")
+        with _ThreadPoolExecutor(max_workers=10) as pool:
+            futures = {pool.submit(_resolve_google_url, u): u for u in google_urls}
+            for future in _as_completed(futures):
+                original = futures[future]
+                google_urls[original] = future.result()
+
+        # Apply resolved URLs back
+        for section in _URL_SECTIONS:
+            for item in (digest.get(section) or []):
+                if isinstance(item, dict) and item.get("url") in google_urls:
+                    item["url"] = google_urls[item["url"]]
+        for key in ("cfius", "deals"):
+            for item in ((digest.get("us_china_trade") or {}).get(key) or []):
+                if isinstance(item, dict) and item.get("url") in google_urls:
+                    item["url"] = google_urls[item["url"]]
+
+    return digest
+
+
 def _archive_html(html: str, digest: dict) -> None:
     """Write the dated HTML to public/ for GitHub Pages."""
     PUBLIC_DIR.mkdir(exist_ok=True)
@@ -214,6 +289,19 @@ def run_pipeline(args: argparse.Namespace) -> int:
     print("\n🤖 Generating digest...")
     from digest import generate_digest
     digest = generate_digest(payload, db_context=db_context)
+
+    # ─── Sanitise URLs (strip hallucinated, resolve Google News redirects) ─
+    print("\n🔗 Sanitising URLs...")
+    collected_urls: set = set()
+    for tier in ("tier1", "tier2", "tier3", "tier4",
+                 "xi_tracker_articles", "hidden_reach_articles", "gray_zone_articles"):
+        for art in (payload.get(tier) or []):
+            u = art.get("url", "")
+            if u:
+                collected_urls.add(u)
+    digest = _sanitise_urls(digest, collected_urls)
+    print(f"   ✓ URL sanitisation complete ({len(collected_urls)} collected URLs as reference)")
+
     DIGEST_JSON.write_text(json.dumps(digest, ensure_ascii=False, indent=2),
                           encoding="utf-8")
 

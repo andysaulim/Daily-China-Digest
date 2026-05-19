@@ -54,6 +54,10 @@ SOURCE-OR-SKIP PRINCIPLE: For EVERY factual claim you write, you must be able to
 
 - THINK TANK FABRICATION — HARD BLOCK: You have a strong tendency to fabricate generic-sounding think tank articles from CSIS, CFR, Brookings, Carnegie, RAND, MERICS, etc. when the feed is thin. These fabrications follow a telltale pattern: vague titles ("examines evolving security environment", "argues for export control modernization", "analyzes expanding dimensions"), no specific data points, and no real URL. STOP. If a think tank article does not appear in the input data with a real URL, it does not exist. Do NOT create it.
 
+- ACADEMIC FABRICATION — HARD BLOCK: Same rule applies to academic_today. Do NOT include any journal article that does not appear in the Tier 3 input with a real URL. The authors field must come from the article metadata — do NOT populate it from training data or invent it. If the authors field is missing from the source, set it to null. A news outlet name (e.g. "Ratopati", "The Hindu") appearing as "author" means the source is a news article, not a journal paper — exclude it entirely from academic_today.
+
+- URL INTEGRITY — ZERO TOLERANCE: Every url field must be copied CHARACTER-FOR-CHARACTER from the input article's url field. Do NOT reconstruct, guess, shorten, or invent URLs. Do NOT write a URL based on knowing the publication's domain — only use the exact URL from the input. If an article in the input has no URL or an empty URL, set the url field to "" in your output. A missing URL is always better than a fabricated one.
+
 QUALITY STANDARD — THE EXPERT TEST: Every entry must pass these tests:
 
 1. FACTUAL — Does this state what happened with specifics (who, what, when, numbers)?
@@ -556,7 +560,7 @@ TIER 1: NEWS ARTICLES (last 24h)
 For EACH article, return:
 - url, source, translated_title (English title — translate if Chinese)
 - categories: array of: Cross-Strait / US-China / PRC-Economy / PLA / Indo-Pacific / Technology / Sanctions / Energy / Diplomacy
-- signal_type: ESCALATION / ANOMALY / DEVELOPMENT / CONFIRMATION / CONTEXT
+- signal_type: omit this field
 - relevance_score: 1-10 (10 = essential for China policy analyst today)
 - summary: 1-2 sentences in clear policy-analyst prose
 - policy_so_what: For score >= 7 only. 1 sentence.
@@ -634,22 +638,12 @@ Return a digest object with:
 - us_china_trade: US-China trade and sanctions architecture. Object with sub-blocks (NO REPETITION across sub-blocks):
   - tariff_tracker: object with headline_section_301_rate (current Section 301 average), section_232_rates (object: steel, aluminum, copper, autos, semiconductors), ieepa_fentanyl_rate ("20%"), section_122_surcharge ("10%, expires Jul 24 2026"), last_change (string), next_trigger (string). Use TRADE BASELINES above as default; only change if today's articles report new action.
   - entity_list_tracker: object with total_count (string, verify from articles), recent_adds_7day (array of {{entity_name, sector, date}}), most_recent_add (string).
-  - sdn_tracker: object with china_designations_total (string), recent_adds_7day (array), program_distribution (e.g. "Xinjiang: X, Hong Kong: Y, narcotics: Z").
-  - dod_1260h_tracker: object with total_count (string), notable_listed (array of company names), most_recent_change (string).
-  - outbound_investment: object with covered_transactions_notified (int or "data not available"), prohibited_actions (int or string), last_update (date).
   - cfius: array of recent CFIUS reviews/divestiture orders from today's articles. Each: company, sector, action, date.
   - deals: array of NEW US-China deals or divestitures announced TODAY. Each: url, source, headline, value (or null), parties, detail (1 sentence).
 
 - business_economy: array up to 6 China business/economy items. Each: url, source, headline, body_text (1-2 sentences with specific numbers), companies (array of names), sector (tech/auto/energy/finance/manufacturing/property/macro).
 
-- indo_pacific: array of 4-6 items covering Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN. Always include at least one Cross-Strait item even on slow days. Each: url, source, headline, body_text (1-2 sentences), category (cross-strait, taiwan-elections, taiwan-arms, japan-senkaku, japan-history, philippines-scs, australia-aukus, india-lac, korea-china, vietnam-scs, asean), signal_type (ESCALATION/ANOMALY/DEVELOPMENT/CONFIRMATION/CONTEXT), region_tag ("Cross-Strait" / "Japan-China" / "Philippines-China" / "Australia-China" / "India-China" / "Korea-China" / "Indo-Pacific").
-
-- public_sentiment: standing signals object. China has no transparent polling so we proxy. Object with:
-  - censorship_signals: object or null — Weibo/WeChat blocked terms detected today (from FreeWeibo, GreatFire, or news coverage). Object: blocked_terms (array of strings, max 5), source, last_updated.
-  - capital_flow_proxies: object — Stock Connect southbound flows, USD/CNY pressure, gold demand. Object: stock_connect_net (string with direction), cny_pressure (string), gold_signal (string or null).
-  - protest_tracker: array of known unrest events from today's articles (China Labour Bulletin, etc.). Each: location, type, date, source. Empty if nothing.
-  - taiwan_polling: object or null — Taiwan polling data if today's articles cite TPOF, Election Study Center, MAC, or similar. Object: source, finding (1 sentence), date.
-  - discourse_flag: string or null — viral PRC nationalism, anti-Japan/anti-US online spike, or significant social media moment.
+- indo_pacific: array of 4-6 items covering Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN. Always include at least one Cross-Strait item even on slow days. Each: url, source, headline, body_text (1-2 sentences), category (cross-strait, taiwan-elections, taiwan-arms, japan-senkaku, japan-history, philippines-scs, australia-aukus, india-lac, korea-china, vietnam-scs, asean), region_tag ("Cross-Strait" / "Japan-China" / "Philippines-China" / "Australia-China" / "India-China" / "Korea-China" / "Indo-Pacific").
 
 - social_statements: 3-6 quotes from senior officials. ATTRIBUTION RULE: quote MUST be a statement made BY the named person in their OFFICIAL CAPACITY on a policy-relevant topic. Prioritize Xi Jinping, Li Qiang, Wang Yi, He Lifeng, Dong Jun, MOFA spokespersons; US officials (Trump, Rubio, Hegseth, Bessent, Lutnick, Greer); Taiwan officials (Lai, Hsiao, Lin Chia-lung, Wellington Koo); foreign leaders.
 
