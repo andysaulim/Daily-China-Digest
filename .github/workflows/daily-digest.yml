@@ -2,12 +2,12 @@ name: Daily China Digest
 
 on:
   schedule:
-    # 7:00 AM ET daily
-    # Cron uses UTC. 11:00 UTC = 7:00 AM ET during DST (Mar–Nov),
-    #                          = 6:00 AM ET in standard time (Nov–Mar).
-    # Fallback: 12:00 UTC = 7:00 AM ET in standard time (Nov–Mar).
-    - cron: '0 11 * * *'
-    - cron: '0 12 * * *'
+    # 6:30 AM ET daily
+    # Cron uses UTC. 10:30 UTC = 6:30 AM ET during DST (Mar–Nov),
+    #                          = 5:30 AM ET in standard time (Nov–Mar).
+    # Fallback: 11:30 UTC = 6:30 AM ET in standard time (Nov–Mar).
+    - cron: '30 10 * * *'
+    - cron: '30 11 * * *'
   workflow_dispatch:
 
 permissions:

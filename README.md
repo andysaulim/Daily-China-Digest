@@ -1,6 +1,6 @@
 # China Daily Brief
 
-Automated daily intelligence briefing on the People's Republic of China for the CSIS Korea Chair. Sibling pipeline to [Daily-Korea-Digest](https://github.com/andysaulim/Daily-Korea-Digest). Collects from 130+ sources, generates an analyst-grade digest via Claude, and delivers a styled HTML email at **7:30 AM ET** (30 minutes after the Korea Daily Brief).
+Automated daily intelligence briefing on the People's Republic of China for the CSIS Korea Chair. Sibling pipeline to [Daily-Korea-Digest](https://github.com/andysaulim/Daily-Korea-Digest). Collects from 130+ sources, generates an analyst-grade digest via Claude, and delivers a styled HTML email at **6:30 AM ET**.
 
 **Live archive:** `andysaulim.github.io/Daily-China-Digest` (planned)
 
@@ -153,7 +153,7 @@ python run.py --no-push      # Skip GitHub Pages push
 
 ## Schedule
 
-GitHub Actions workflow (`.github/workflows/daily-digest.yml`) runs daily at **7:30 AM ET** with an **8:00 AM ET fallback**. Cron handles both EST and EDT. Manual trigger via `workflow_dispatch`.
+GitHub Actions workflow (`.github/workflows/daily-digest.yml`) runs daily at **6:30 AM ET** with a **7:30 AM ET fallback**. Cron handles both EST and EDT. Manual trigger via `workflow_dispatch`.
 
 Required secrets: `ANTHROPIC_API_KEY`, `GMAIL_USER`, `GMAIL_APP_PASS`, `DIGEST_TO`, `GH_PAT`.
 
@@ -191,7 +191,7 @@ Required secrets: `ANTHROPIC_API_KEY`, `GMAIL_USER`, `GMAIL_APP_PASS`, `DIGEST_T
 ├── weekly.py                # Weekly digest variant
 ├── requirements.txt
 ├── .github/workflows/
-│   └── daily-digest.yml     # 7:30 AM ET cron
+│   └── daily-digest.yml     # 6:30 AM ET cron
 └── public/                  # GitHub Pages archive (generated)
 ```
 
