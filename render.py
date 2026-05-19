@@ -168,7 +168,7 @@ def _word_count(d: dict) -> int:
 
     # Xinhua Delta — full coverage
     xd = d.get("xinhua_delta") or {}
-    for f in ("bottom_line", "doctrinal_shift", "tone_shift", "mofa_presser",
+    for f in ("bottom_line", "doctrinal_shift", "mofa_presser",
               "output_volume", "xi_activity", "notable_omissions"):
         w += _w(xd.get(f, ""))
     for p in (xd.get("propaganda_focus") or []):
@@ -177,6 +177,8 @@ def _word_count(d: dict) -> int:
         if isinstance(q, dict):
             w += _w(q.get("quote", ""))
             w += _w(q.get("source_article", ""))
+    for v in (xd.get("tone_shifts") or {}).values():
+        w += _w(v)
     sc = xd.get("signed_commentary") or {}
     w += _w(sc.get("topic", ""))
     w += _w(sc.get("pseudonym", ""))
@@ -432,7 +434,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         bl = _esc(xd.get("bottom_line", ""))
         watch = xd.get("watch_flag", False)
         silence = xd.get("silence_today", False)
-        tone = _esc(xd.get("tone_shift", "")) if xd.get("tone_shift") else ""
+        tone_shifts = xd.get("tone_shifts") or {}
         vol = _esc(xd.get("output_volume", "")) if xd.get("output_volume") else ""
         doc = _esc(xd.get("doctrinal_shift", "")) if xd.get("doctrinal_shift") else ""
         doc_html = f"<div style='margin:12px 0;padding:8px 14px;background:#8E44AD;color:#fff;border-radius:4px;font-size:12px;'><strong>Doctrinal shift:</strong> {doc}</div>" if doc else ""
@@ -491,8 +493,14 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
                 prop_html = f"<div style='margin-top:10px;'><div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:4px;'>Propaganda Focus</div>{pills}</div>"
 
         tone_row = ""
-        if tone:
-            tone_row = f"""<tr><td colspan="2" style="padding-top:8px;"><div style="padding:8px 12px;background:rgba(230,126,34,0.1);border-radius:4px;border-left:2px solid #E67E22;"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);margin-bottom:4px;">Tone Shift</div><div style="font-size:12px;color:#E67E22;font-weight:600;line-height:1.4;">&#8644; {tone}</div></div></td></tr>"""
+        if tone_shifts:
+            active_tones = {k: v for k, v in tone_shifts.items() if v}
+            if active_tones:
+                tone_items = "".join(
+                    f'<div style="font-size:12px;color:#E67E22;line-height:1.5;margin-bottom:3px;"><strong style="color:rgba(255,255,255,0.5);text-transform:uppercase;font-size:10px;margin-right:6px;">{_esc(k)}</strong>&#8644; {_esc(v)}</div>'
+                    for k, v in active_tones.items()
+                )
+                tone_row = f"""<tr><td colspan="2" style="padding-top:8px;"><div style="padding:8px 12px;background:rgba(230,126,34,0.1);border-radius:4px;border-left:2px solid #E67E22;"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);margin-bottom:6px;">Tone Shifts</div>{tone_items}</div></td></tr>"""
 
         phrases = xd.get("key_phrase_changes") or []
         ph_html = ""

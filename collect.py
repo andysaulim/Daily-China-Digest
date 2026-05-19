@@ -503,7 +503,10 @@ def _collect_tier2() -> list:
                 continue
             if not _is_china_related(entry):
                 continue
-            article = _entry_to_article(entry, source, extra={"prestige": prestige})
+            article = _entry_to_article(entry, source, extra={
+                "prestige_tier": prestige,
+                "china_primary": prestige == "A",
+            })
             articles.append(article)
     return _dedup(articles)
 
@@ -800,7 +803,7 @@ def _collect_markets() -> dict:
         result["cgb_10y"]      = cgb_f.result()
         result["pboc_lpr"]     = lpr_f.result()
         result["china_cds"]    = cds_f.result()
-        result["gdp_estimate"] = gdp_f.result()
+        result["gdp_yoy"] = gdp_f.result()
 
         macro = macro_f.result()
         if macro:

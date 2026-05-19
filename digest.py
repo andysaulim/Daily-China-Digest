@@ -351,7 +351,7 @@ _XINHUA_NO_DATA_STUB = (
     " silence_today: true, output_volume: \"Unavailable — 0 articles collected (scraper failure)\",\n"
     " xi_appearance_today: false (unless XI JINPING APPEARANCE REPORTS above confirm otherwise),\n"
     " days_since_last_appearance: use tracker data above,\n"
-    " propaganda_focus: null, notable_omissions: null, tone_shift: null,\n"
+    " propaganda_focus: null, notable_omissions: null, tone_shifts: null,\n"
     " key_phrase_changes: [], key_quotes: [], doctrinal_shift: null,\n"
     " senior_officials: [], baseline_period: null,\n"
     " watch_flag: false, bottom_line: \"No Xinhua / People's Daily data collected — scraper issue, not a blackout.\""
@@ -423,7 +423,8 @@ def build_user_prompt(payload: dict, date_str: str, db_context: str = "") -> str
                 "summary": a.get("summary", "")[:800],
                 "source": a.get("source", ""),
                 "lang": a.get("lang", "EN"),
-                "prestige": a.get("prestige"),
+                "prestige_tier": a.get("prestige_tier"),
+                "china_primary": a.get("china_primary", False),
                 "journal_tier": a.get("journal_tier"),
             }
             if a.get("tags"):
@@ -569,26 +570,30 @@ For EACH article, return:
 - is_reaction_source: true if Global Times, Xinhua, People's Daily, China Daily
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TIER 2: OP-EDS & PRESTIGE COMMENTARY
+TIER 2: OP-EDS & PRESTIGE COMMENTARY → OUTPUT: opeds_today
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {tier_json(payload.get("tier2", []), max_items=30)}
 
-ANTI-HALLUCINATION — OP-EDS: Only include op-eds/commentary that appear as actual articles in the input data above with a real URL. Do NOT fabricate generic think tank entries. If no qualifying Tier 2 articles are in today's batch, return an empty opeds_today array.
+ANTI-HALLUCINATION — OP-EDS: Only include op-eds/commentary that appear as actual articles in the Tier 2 input data above with a real URL. Do NOT fabricate think tank entries or authors. If no qualifying Tier 2 articles are present today, return an empty opeds_today array.
 
-For EACH piece: url, source, prestige_tier, authors, china_primary, relevance_score, central_argument (single sentence stating the thesis directly, not "this argues that..."), summary, policy_so_what.
+Each article in the Tier 2 input has fields: prestige_tier ("A" = top tier, "B" = standard), china_primary (true for all Tier-A sources — already computed). Use these directly; do not override them.
 
-Inclusion: Tier A if china_primary=true. Tier B if score >= 7. Tier C if score >= 9.
+For EACH qualifying piece output: url (copy verbatim from input — do not alter), source, prestige_tier (from input), authors (from article metadata if available, else null), china_primary (from input), relevance_score (1-10), central_argument (single sentence stating the thesis directly — not "this argues that..."), summary (2-3 sentences), policy_so_what (1 sentence, score >= 6 only).
 
-CSIS PRODUCTS (Trustee Chair / ChinaPower / AMTI / Hidden Reach): MANDATORY inclusion — these are in-house and must always appear.
+Inclusion thresholds: prestige_tier "A" if china_primary=true → always include. prestige_tier "B" or "A" without china_primary → include if relevance_score >= 7.
+
+CSIS PRODUCTS (CSIS China, CSIS ChinaPower, CSIS AMTI, CSIS Hidden Reach, CSIS Big Data China): MANDATORY inclusion whenever present in input — these are our own in-house products.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TIER 3: ACADEMIC JOURNALS
+TIER 3: ACADEMIC JOURNALS → OUTPUT: academic_today
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {tier_json(payload.get("tier3", []), max_items=20)}
 
-For EACH: url, source, journal_tier, authors, china_relevance_score, framework, summary (3 sentences), policy_implication.
+ANTI-HALLUCINATION — ACADEMIC: Only include journal articles that appear in the Tier 3 input data above with a real URL. Do NOT fabricate journal articles, authors, or journal names. News outlets (Reuters, AFP, Ratopati, etc.) are NEVER journal authors — if a source is not a recognized academic journal, skip it.
 
-Inclusion: score >= 6 (A+ journals: score >= 4).
+For EACH qualifying piece output: url (copy verbatim from input), source (journal name from input), journal_tier (from input: A+/A/B), authors (from article metadata if available, else null), china_relevance_score (1-10), framework, summary (2-3 sentences), policy_implication (1 sentence).
+
+Inclusion thresholds: journal_tier "A+" → include if score >= 4. journal_tier "A" → include if score >= 6. journal_tier "B" → include if score >= 8.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 TIER 4: XINHUA / PEOPLE'S DAILY / GLOBAL TIMES / MOFA (last 48h)
