@@ -54,7 +54,7 @@ collect.py          digest.py           render.py          send_email.py
 
 ---
 
-## Newsletter Sections (24 in delivery order)
+## Newsletter Sections (20 in delivery order)
 
 | # | Section | Description |
 | - | - | - |
@@ -65,23 +65,19 @@ collect.py          digest.py           render.py          send_email.py
 | 5 | Key Stat | Single striking number from today's news |
 | 6 | Top Stories | 2–4 biggest hard news stories with "So what" + pattern_note |
 | 7 | Overnight Flash | 6 secondary items |
-| 8 | Also Today | Up to 6 third-tier items, 1–2 sentence summaries |
-| 9 | US–China Trade | Section 301 / 232 / IEEPA fentanyl / Section 122 / Entity List / SDN / 1260H / OIS / CFIUS |
-| 10 | Business & Economy | Major corporates, M&A, macro indicators, property, tech sector |
-| 11 | Congressional Watch | Select Committee on the CCP, SFRC, HFAC, USCC, CECC |
-| 12 | PRC Government | State Council, MOFA, MOD, MOFCOM, PBOC, NDRC, MSS, SAFE, CSRC, TAO |
-| 13 | Personnel Changes | Politburo, ministerial, PLA theater commands, ambassadors, SOEs |
-| 14 | NPC / Politburo Watch | NPCSC sessions, Politburo Standing Committee, Two Sessions, Beidaihe, Plenums |
-| 15 | Indo-Pacific | Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN |
-| 16 | Expert Analysts | Op-eds + academic — Scott Kennedy, Bonny Lin, Hass, Glaser, Mastro, Bishop |
-| 17 | Public Sentiment & Signals | Censorship signals, capital flow proxies, Taiwan polling, protest tracker |
-| 18 | Social Statements | Quotes from Xi, Wang Yi, Li Qiang, MOFA spokespersons, US / Taiwan officials |
-| 19 | PLA & Gray-Zone Monitor | 8 AMTI / China Power locations |
-| 20 | Hidden Reach Monitor | 8 CSIS Hidden Reach locations |
-| 21 | Calendar Watch | 14–30 day lookahead |
-| 22 | On This Day | Verified historical event matching today's exact date |
-| 23 | Xinhua / People's Daily Delta | **DARK SECTION** — propaganda analysis, Xi appearances, doctrinal language |
-| 24 | Sanctions Status Line | OFAC SDN · BIS Entity List · 1260H · OIS — closing dashboard |
+| 8 | Xinhua / People's Daily Delta | **DARK SECTION** — propaganda analysis, Xi appearances, doctrinal language |
+| 9 | Expert Analysts | Op-eds + academic — Scott Kennedy, Bonny Lin, Hass, Glaser, Mastro, Bishop |
+| 10 | Public Sentiment & Signals | Censorship signals, capital flow proxies, Taiwan polling, protest tracker |
+| 11 | Social Statements | Quotes from Xi, Wang Yi, Li Qiang, MOFA spokespersons, US / Taiwan officials |
+| 12 | Satellite & Location Watch | Gray-zone (8 AMTI / China Power) + Hidden Reach (8 CSIS) — only active sites shown |
+| 13 | PRC Government | State Council, MOFA, MOD, MOFCOM, PBOC + Personnel Changes + NPC/Politburo + Calendar Watch |
+| 14 | US–China Trade & Sanctions | Section 301 / 232 / IEEPA fentanyl / Section 122 / Entity List / SDN / 1260H / OIS / CFIUS |
+| 15 | Congressional Watch | Select Committee on the CCP, SFRC, HFAC, USCC, CECC |
+| 16 | Business & Economy | Major corporates, M&A, macro indicators, property, tech sector |
+| 17 | Indo-Pacific | Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN |
+| 18 | Also Today / The Wire | Up to 6 third-tier items, 1–2 sentence summaries |
+| 19 | On This Day | Verified historical event matching today's exact date |
+| 20 | Footer | — |
 
 ---
 
