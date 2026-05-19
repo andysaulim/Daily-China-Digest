@@ -2,12 +2,11 @@ name: Daily China Digest
 
 on:
   schedule:
-    # Primary: 7:30 AM ET daily (30 min stagger after Daily-Korea-Digest at 7:00 AM ET)
-    # Cron uses UTC. 11:30 UTC = 7:30 AM ET during DST (Mar–Nov),
-    #                       = 6:30 AM ET in standard time (Nov–Mar).
-    # Fallback: 12:00 UTC handles the standard-time case (8:00 AM ET) +
-    #          serves as a retry if the primary run fails.
-    - cron: '30 11 * * *'
+    # 7:00 AM ET daily
+    # Cron uses UTC. 11:00 UTC = 7:00 AM ET during DST (Mar–Nov),
+    #                          = 6:00 AM ET in standard time (Nov–Mar).
+    # Fallback: 12:00 UTC = 7:00 AM ET in standard time (Nov–Mar).
+    - cron: '0 11 * * *'
     - cron: '0 12 * * *'
   workflow_dispatch:
 
