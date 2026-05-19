@@ -4,71 +4,71 @@
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.258714+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.415105+00:00"
     },
     "Scarborough Shoal": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.259016+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.415420+00:00"
     },
     "Second Thomas Shoal (Ayungin)": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.259370+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.415729+00:00"
     },
     "Sandy Cay": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.259694+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.416007+00:00"
     },
     "Mischief Reef": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.259998+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.416303+00:00"
     },
     "Fiery Cross Reef": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.260341+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.416585+00:00"
     },
     "Subi Reef": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.260661+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.416855+00:00"
     },
     "Senkaku / Diaoyu Islands": {
       "status": "normal",
       "note": "No reporting yet",
-      "last_source_date": null,
-      "direction": "",
-      "updated_at": null
+      "last_source_date": "—",
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.417126+00:00"
     },
     "Chancay, Peru (COSCO)": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.260981+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.417429+00:00"
     },
     "Cuba SIGINT (Bejucal / Wajay)": {
       "status": "normal",
       "note": "No reporting yet",
-      "last_source_date": null,
-      "direction": "",
-      "updated_at": null
+      "last_source_date": "—",
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.417705+00:00"
     },
     "Tier 1 Chinese shipyards (Jiangnan / Hudong-Zhonghua / Dalian)": {
       "status": "normal",
@@ -81,37 +81,37 @@
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.261307+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.417984+00:00"
     },
     "Khalifa Port, UAE": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.261636+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.418285+00:00"
     },
     "Ream Naval Base, Cambodia": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.261941+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.418574+00:00"
     },
     "Hambantota / Bay of Bengal": {
       "status": "normal",
       "note": "No reporting yet",
-      "last_source_date": null,
-      "direction": "",
-      "updated_at": null
+      "last_source_date": "—",
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.418843+00:00"
     },
     "Russian Arctic + Polar Silk Road": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
-      "direction": "",
-      "updated_at": "2026-05-19T02:33:43.262269+00:00"
+      "direction": "—",
+      "updated_at": "2026-05-19T20:54:08.419116+00:00"
     }
   },
-  "last_updated": "2026-05-19T02:33:43.262275+00:00"
+  "last_updated": "2026-05-19T20:54:08.419122+00:00"
 }

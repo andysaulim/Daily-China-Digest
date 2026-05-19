@@ -1,17 +1,16 @@
 {
   "daily_counts": {
     "2026-05-19": {
-      "new productive forces (新质生产力)": 1,
+      "new productive forces / 新质生产力": 3,
       "AI-manufacturing integration": 2
     }
   },
   "tone_history": {
     "2026-05-19": {
       "us": "Cautiously positive - emphasizing young people exchanges and cooperation potential",
-      "japan": "No notable signals today",
       "taiwan": "Hostile - denying international space and asserting sovereignty claims",
       "russia": "Highly positive - unprecedented partnership level emphasized"
     }
   },
-  "last_updated": "2026-05-19T02:33:43.258515+00:00"
+  "last_updated": "2026-05-19T20:54:08.414856+00:00"
 }
