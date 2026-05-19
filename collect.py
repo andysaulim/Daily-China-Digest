@@ -661,29 +661,29 @@ def _collect_markets() -> dict:
       - Macro indicators (CPI, PPI, PMI, retail)
     """
     YAHOO_SYMBOLS = {
-        "sse":         "000001.SS",
-        "hsi":         "^HSI",
-        "usd_cny":     "CNY=X",
-        "usd_cnh":     "CNH=X",
-        "brent":       "BZ=F",
+        "sse_composite": "000001.SS",
+        "hang_seng":     "^HSI",
+        "usd_cny":       "CNY=X",
+        "usd_cnh":       "CNH=X",
+        "brent":         "BZ=F",
     }
     STOOQ_SYMBOLS = {
-        "sse":         "^shc",
-        "hsi":         "^hsi",
-        "usd_cny":     "usdcny",
-        "usd_cnh":     "usdcnh",
-        "brent":       "cb.f",
+        "sse_composite": "^shc",
+        "hang_seng":     "^hsi",
+        "usd_cny":       "usdcny",
+        "usd_cnh":       "usdcnh",
+        "brent":         "cb.f",
     }
     _SANITY_RANGES = {
-        "sse":      (1500, 6500),
-        "hsi":      (10000, 35000),
-        "usd_cny":  (5.5, 9.0),
-        "usd_cnh":  (5.5, 9.0),
-        "brent":    (40, 200),
+        "sse_composite": (1500, 6500),
+        "hang_seng":     (10000, 35000),
+        "usd_cny":       (5.5, 9.0),
+        "usd_cnh":       (5.5, 9.0),
+        "brent":         (40, 200),
     }
 
     def _format_value(key, price):
-        if key in ("sse", "hsi"):
+        if key in ("sse_composite", "hang_seng"):
             return f"{price:,.2f}"
         return f"{price:.4f}" if "usd_" in key else f"{price:.2f}"
 
@@ -840,12 +840,12 @@ def _fetch_pboc_lpr() -> dict:
             text = f"{entry.get('title', '')} {entry.get('summary', '')}"
             ms = re.findall(r"(\d\.\d{2})\s*(?:%|percent)", text)
             if len(ms) >= 2:
-                return {"one_year": f"{ms[0]}%", "five_year": f"{ms[1]}%",
+                return {"lpr_1y": f"{ms[0]}%", "lpr_5y": f"{ms[1]}%",
                         "as_of": datetime.now(timezone.utc).strftime("%b %d")}
     except Exception as e:
         print(f"  ⚠ PBOC LPR fetch error: {e}")
     print("  ⚠ PBOC LPR: using fallback (1Y 3.0% / 5Y 3.5%, held since May 2025)")
-    return {"one_year": "3.0%", "five_year": "3.5%", "as_of": ""}
+    return {"lpr_1y": "3.0%", "lpr_5y": "3.5%", "as_of": ""}
 
 
 def _fetch_china_cds() -> dict:
