@@ -103,5 +103,46 @@ def build_context_block() -> str:
     return "\n".join(lines)
 
 
+def update_from_digest(digest: dict) -> None:
+    """Extract Xi appearance data from digest output and persist it."""
+    xd = digest.get("xinhua_delta") or {}
+    if not xd.get("xi_appearance_today"):
+        return
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    activity = xd.get("xi_activity_summary") or xd.get("xi_appearance_note") or "Confirmed appearance"
+    source = "digest"
+    record_appearance(today, activity, source)
+
+
+def build_dot_calendar(today_appeared: bool | None = None) -> str:
+    """Return an HTML dot-grid calendar of Xi appearances for the last 30 days."""
+    data = _load()
+    appearance_dates = {a["date"] for a in data["appearances"]}
+    today = datetime.now(timezone.utc)
+
+    cells = []
+    for i in range(29, -1, -1):
+        day = today - timedelta(days=i)
+        date_str = day.strftime("%Y-%m-%d")
+        label = day.strftime("%b %-d")
+        if i == 0:
+            appeared = today_appeared if today_appeared is not None else (date_str in appearance_dates)
+        else:
+            appeared = date_str in appearance_dates
+        color = "#4CAF50" if appeared else "rgba(255,255,255,0.12)"
+        cells.append(
+            f'<span title="{label}" style="display:inline-block;width:10px;height:10px;'
+            f'border-radius:2px;background:{color};margin:1px;"></span>'
+        )
+
+    return (
+        '<div style="margin-top:8px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;">'
+        '<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;'
+        'color:rgba(255,255,255,0.6);margin-bottom:6px;">Xi Appearances — Last 30 Days</div>'
+        '<div>' + "".join(cells) + '</div>'
+        '</div>'
+    )
+
+
 if __name__ == "__main__":
     print(build_context_block())

@@ -145,5 +145,28 @@ def build_context_block() -> str:
     return "\n".join(lines)
 
 
+def update_from_digest(digest: dict) -> None:
+    """Extract phrase counts and tone data from digest output and persist them."""
+    xd = digest.get("xinhua_delta") or {}
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    phrase_counts = {}
+    for change in (xd.get("key_phrase_changes") or []):
+        phrase = change.get("phrase", "").strip()
+        count = change.get("count_today")
+        if phrase and isinstance(count, int):
+            phrase_counts[phrase] = count
+
+    tones = {}
+    for entry in (xd.get("tone_quadrants") or []):
+        target = entry.get("target", "").strip()
+        tone = entry.get("tone", "").strip()
+        if target and tone:
+            tones[target] = tone
+
+    if phrase_counts or tones:
+        record_day(today, phrase_counts, tones or None)
+
+
 if __name__ == "__main__":
     print(build_context_block())
