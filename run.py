@@ -151,7 +151,37 @@ _URL_SECTIONS = (
 
 
 def _sanitise_urls(digest: dict, collected_urls: set) -> dict:
-    """Null out hallucinated URLs; resolve Google News redirects for real ones."""
+    """Null out hallucinated URLs; resolve Google News redirects for real ones.
+
+    URL is kept if it exactly matches a collected URL OR its hostname matches
+    any hostname seen in the collected payload (domain-level allowlist). Only
+    URLs from completely unknown domains are stripped as hallucinations.
+    """
+    from urllib.parse import urlparse as _up
+
+    # Build domain allowlist from collected URLs
+    collected_domains: set = set()
+    for u in collected_urls:
+        try:
+            h = _up(u).hostname or ""
+            if h.startswith("www."):
+                h = h[4:]
+            if h:
+                collected_domains.add(h)
+        except Exception:
+            pass
+
+    def _url_allowed(url: str) -> bool:
+        if url in collected_urls:
+            return True
+        try:
+            h = _up(url).hostname or ""
+            if h.startswith("www."):
+                h = h[4:]
+            return bool(h) and h in collected_domains
+        except Exception:
+            return False
+
     google_urls = {}
 
     for section in _URL_SECTIONS:
@@ -162,8 +192,8 @@ def _sanitise_urls(digest: dict, collected_urls: set) -> dict:
             if not url or not url.startswith("http"):
                 item["url"] = ""
                 continue
-            if url not in collected_urls:
-                item["url"] = ""  # hallucinated — strip it
+            if not _url_allowed(url):
+                item["url"] = ""  # unknown domain — hallucinated
             elif "news.google.com" in url:
                 google_urls[url] = url  # will resolve below
 
@@ -177,7 +207,7 @@ def _sanitise_urls(digest: dict, collected_urls: set) -> dict:
             if not url or not url.startswith("http"):
                 item["url"] = ""
                 continue
-            if url not in collected_urls:
+            if not _url_allowed(url):
                 item["url"] = ""
             elif "news.google.com" in url:
                 google_urls[url] = url

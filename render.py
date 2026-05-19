@@ -94,7 +94,7 @@ def _link_or_text(text: str, url: str,
 
 _SEC = 'style="padding:14px 32px;border-bottom:1px solid #E0E0E0;" class="sec"'
 _SEC_BG = lambda bg: f'style="padding:14px 32px;background:{bg};border-bottom:1px solid #E0E0E0;" class="sec"'
-_PILL = lambda bg: f'style="display:inline-block;background:{bg};color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;padding:4px 12px;border-radius:12px;font-family:Arial,sans-serif;margin-bottom:8px;"'
+_PILL = lambda bg: f'style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:{bg};padding-bottom:3px;border-bottom:2px solid {bg};margin-bottom:12px;display:inline-block;font-family:Arial,sans-serif;"'
 
 
 def _word_count(d: dict) -> int:
@@ -367,7 +367,8 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 </div>""")
 
     # 4. Top Stories — heaviest visual weight in TODAY chapter
-    stories = digest.get("top_stories") or []
+    stories = [s for s in (digest.get("top_stories") or [])
+               if (s.get("url") or "").startswith("http")]
     if stories:
         sh = ""
         for s in stories:
@@ -392,7 +393,8 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         sections_today.append(f'<div {_SEC}><span {_PILL("#2980B9")}>Top Stories</span>{sh}</div>')
 
     # 4b. Overnight Flash
-    overnight = digest.get("overnight_items") or []
+    overnight = [it for it in (digest.get("overnight_items") or [])
+                 if (it.get("url") or "").startswith("http")]
     if overnight:
         cat_colors = {"Cross-Strait": "#8E44AD", "PLA": "#C0392B"}
         fh = ""
@@ -867,7 +869,8 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
             sections_trackers.append(f'<div {_SEC}><span {_PILL("#C0392B")}>US-China Trade &amp; Sanctions</span>{body}</div>')
 
     # 10. Business & Economy
-    biz = digest.get("business_economy") or []
+    biz = [b for b in (digest.get("business_economy") or [])
+           if (b.get("url") or "").startswith("http")]
     if biz:
         bh = ""
         for b in biz[:6]:
@@ -886,7 +889,8 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         sections_wire.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Business &amp; Economy</span>{bh}</div>')
 
     # 11. Indo-Pacific
-    ip = digest.get("indo_pacific") or []
+    ip = [it for it in (digest.get("indo_pacific") or [])
+          if (it.get("url") or "").startswith("http")]
     if ip:
         rc = {"Cross-Strait": "#8E44AD", "Japan-China": "#2C3E50", "Philippines-China": "#2C3E50",
               "Australia-China": "#2C3E50", "India-China": "#2C3E50", "Korea-China": "#2C3E50",
@@ -923,8 +927,10 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         sections_trackers.append(f'<div {_SEC}><span {_PILL("#C0392B")}>Congressional Watch</span>{ch}</div>')
 
     # 13. Expert Analysts
-    opeds = digest.get("opeds_today") or []
-    academics = digest.get("academic_today") or []
+    opeds = [o for o in (digest.get("opeds_today") or [])
+             if (o.get("url") or "").startswith("http")]
+    academics = [a for a in (digest.get("academic_today") or [])
+                 if (a.get("url") or "").startswith("http")]
     if opeds or academics:
         body = ""
         if opeds:
@@ -985,7 +991,8 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         sections_analysis.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Social Statements</span>{sh}</div>')
 
     # 16. Also Today
-    also = digest.get("also_today") or []
+    also = [a for a in (digest.get("also_today") or [])
+            if (a.get("url") or "").startswith("http")]
     if also:
         wc_ = {"Cross-Strait": "#8E44AD", "PLA": "#C0392B"}
         ah = ""
