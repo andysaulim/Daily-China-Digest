@@ -146,7 +146,8 @@ python run.py                # Full pipeline: collect -> digest -> render -> sen
 python run.py --dry-run      # Collection only (outputs collected.json)
 python run.py --from-cache   # Skip collection, reuse collected.json
 python run.py --no-send      # Generate HTML but don't email
-python run.py --no-push      # Skip GitHub Pages push
+python run.py --no-archive   # Skip writing to public/ archive
+python run.py --force-send   # Send even if validation gates fail
 ```
 
 ---
@@ -188,7 +189,7 @@ Required secrets: `ANTHROPIC_API_KEY`, `GMAIL_USER`, `GMAIL_APP_PASS`, `DIGEST_T
 ├── bp_tracker.json          # Location status history
 ├── tension_scorer.py        # Cross-Strait / SCS / US-China tension
 ├── update_readme.py         # README auto-updater
-├── weekly.py                # Weekly digest variant
+├── build_test_fixture.py    # Test fixture builder
 ├── requirements.txt
 ├── .github/workflows/
 │   └── daily-digest.yml     # 6:30 AM ET cron
