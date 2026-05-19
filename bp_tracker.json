@@ -1,21 +1,117 @@
 {
   "locations": {
-    "Taiwan Strait Median Line": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Scarborough Shoal": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Second Thomas Shoal (Ayungin)": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Sandy Cay": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Mischief Reef": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Fiery Cross Reef": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Subi Reef": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Senkaku / Diaoyu Islands": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Chancay, Peru (COSCO)": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Cuba SIGINT (Bejucal / Wajay)": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Tier 1 Chinese shipyards (Jiangnan / Hudong-Zhonghua / Dalian)": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Djibouti PLA Support Base": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Khalifa Port, UAE": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Ream Naval Base, Cambodia": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Hambantota / Bay of Bengal": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null},
-    "Russian Arctic + Polar Silk Road": {"status": "normal", "note": "No reporting yet", "last_source_date": null, "direction": "", "updated_at": null}
+    "Taiwan Strait Median Line": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.258714+00:00"
+    },
+    "Scarborough Shoal": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.259016+00:00"
+    },
+    "Second Thomas Shoal (Ayungin)": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.259370+00:00"
+    },
+    "Sandy Cay": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.259694+00:00"
+    },
+    "Mischief Reef": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.259998+00:00"
+    },
+    "Fiery Cross Reef": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.260341+00:00"
+    },
+    "Subi Reef": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.260661+00:00"
+    },
+    "Senkaku / Diaoyu Islands": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": null,
+      "direction": "",
+      "updated_at": null
+    },
+    "Chancay, Peru (COSCO)": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.260981+00:00"
+    },
+    "Cuba SIGINT (Bejucal / Wajay)": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": null,
+      "direction": "",
+      "updated_at": null
+    },
+    "Tier 1 Chinese shipyards (Jiangnan / Hudong-Zhonghua / Dalian)": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": null,
+      "direction": "",
+      "updated_at": null
+    },
+    "Djibouti PLA Support Base": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.261307+00:00"
+    },
+    "Khalifa Port, UAE": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.261636+00:00"
+    },
+    "Ream Naval Base, Cambodia": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.261941+00:00"
+    },
+    "Hambantota / Bay of Bengal": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": null,
+      "direction": "",
+      "updated_at": null
+    },
+    "Russian Arctic + Polar Silk Road": {
+      "status": "normal",
+      "note": "No reporting yet",
+      "last_source_date": "2026-05-19",
+      "direction": "",
+      "updated_at": "2026-05-19T02:33:43.262269+00:00"
+    }
   },
-  "last_updated": null
+  "last_updated": "2026-05-19T02:33:43.262275+00:00"
 }
