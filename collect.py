@@ -352,18 +352,38 @@ def _parse_feed(url: str) -> list:
     return []
 
 
+def _real_url_from_gnews_entry(entry, gnews_link: str, raw_summary: str) -> str:
+    """Extract the real article URL from a Google News RSS entry.
+
+    Tries three methods in order:
+    1. feedparser's parsed links list (rel=alternate with non-Google href)
+    2. First non-Google href in summary HTML (handles both quote styles + &amp;)
+    3. Falls back to the original Google News redirect URL
+    """
+    # Method 1 — feedparser alternate links
+    for lk in (getattr(entry, "links", None) or []):
+        href = lk.get("href", "")
+        if href and href.startswith("http") and "news.google.com" not in href:
+            return href
+
+    # Method 2 — first non-Google href in summary HTML
+    if raw_summary:
+        m = re.search(r"""href=["'](https?://(?!news\.google\.com)[^"'<>\s]+)""", raw_summary)
+        if m:
+            return m.group(1).replace("&amp;", "&").replace("&#38;", "&")
+
+    return gnews_link  # fallback — Google News URL (better than empty)
+
+
 def _entry_to_article(entry, source: str, lang: str = "EN",
                       extra: dict | None = None) -> dict:
     title = entry.get("title", "").strip()
-    link = entry.get("link", "").strip()
+    raw_link = entry.get("link", "").strip()
     raw_summary = entry.get("summary", entry.get("description", ""))
 
-    # Google News RSS entries contain the real article URL as the first <a href>
-    # in the summary HTML. Extract it before stripping tags.
-    if "news.google.com" in link and raw_summary:
-        m = re.search(r'href="(https?://(?!news\.google\.com)[^"]+)"', raw_summary)
-        if m:
-            link = m.group(1)
+    # For Google News redirect URLs, try to extract the real article URL
+    link = (_real_url_from_gnews_entry(entry, raw_link, raw_summary)
+            if "news.google.com" in raw_link else raw_link)
 
     summary = re.sub(r"<[^>]+>", " ", raw_summary)
     summary = re.sub(r"\s+", " ", summary).strip()

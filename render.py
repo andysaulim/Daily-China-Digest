@@ -170,7 +170,8 @@ def _word_count(d: dict) -> int:
     xd = d.get("xinhua_delta") or {}
     for f in ("bottom_line", "doctrinal_shift", "output_volume",
               "xi_activity", "notable_omissions",
-              "peoples_daily_front_page", "global_times_editorial"):
+              "peoples_daily_front_page", "global_times_editorial",
+              "baseline_period"):
         w += _w(xd.get(f, ""))
     for p in (xd.get("propaganda_focus") or []):
         w += _w(p)
@@ -385,8 +386,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 </div>""")
 
     # 4. Top Stories — heaviest visual weight in TODAY chapter
-    stories = [s for s in (digest.get("top_stories") or [])
-               if (s.get("url") or "").startswith("http")]
+    stories = digest.get("top_stories") or []
     if stories:
         sh = ""
         for s in stories:
@@ -411,8 +411,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         sections_today.append(f'<div {_SEC}><span {_PILL("#2980B9")}>Top Stories</span>{sh}</div>')
 
     # 4b. Overnight Flash
-    overnight = [it for it in (digest.get("overnight_items") or [])
-                 if (it.get("url") or "").startswith("http")]
+    overnight = digest.get("overnight_items") or []
     if overnight:
         cat_colors = {"Cross-Strait": "#8E44AD", "PLA": "#C0392B"}
         fh = ""
@@ -501,16 +500,14 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 </div>"""
 
         pd_front = _esc(xd.get("peoples_daily_front_page", "") or "")
-        pd_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #C0392B;'>
-<div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:2px;'>People's Daily Front Page</div>
-<div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{pd_front}</div>
-</div>""" if pd_front else ""
-
         gt_ed = _esc(xd.get("global_times_editorial", "") or "")
-        gt_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #E67E22;'>
-<div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:2px;'>Global Times Editorial</div>
-<div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{gt_ed}</div>
-</div>""" if gt_ed else ""
+        # Compact two-column row for PD + GT to keep delta section tight
+        state_media_rows = ""
+        if pd_front:
+            state_media_rows += f"<div style='margin-bottom:4px;'><span style='font-size:9px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.5px;'>人民日报</span> <span style='font-size:11px;color:#D0D0D0;'>{pd_front}</span></div>"
+        if gt_ed:
+            state_media_rows += f"<div><span style='font-size:9px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.5px;'>环球时报</span> <span style='font-size:11px;color:#D0D0D0;'>{gt_ed}</span></div>"
+        state_media_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #C0392B;'>{state_media_rows}</div>""" if state_media_rows else ""
 
         if xd.get("xi_appearance_today"):
             xi_icon = '<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#27AE60;margin-right:6px;vertical-align:middle;"></span>'
@@ -623,8 +620,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 </table>
 {dc_html}
 {prop_html}
-{pd_html}
-{gt_html}
+{state_media_html}
 {m_html}
 {s_html}
 {q_html}
@@ -921,8 +917,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
             sections_trackers.append(f'<div {_SEC}><span {_PILL("#C0392B")}>US-China Trade &amp; Sanctions</span>{body}</div>')
 
     # 10. Business & Economy
-    biz = [b for b in (digest.get("business_economy") or [])
-           if (b.get("url") or "").startswith("http")]
+    biz = digest.get("business_economy") or []
     if biz:
         bh = ""
         for b in biz[:6]:
@@ -941,8 +936,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         sections_wire.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Business &amp; Economy</span>{bh}</div>')
 
     # 11. Indo-Pacific
-    ip = [it for it in (digest.get("indo_pacific") or [])
-          if (it.get("url") or "").startswith("http")]
+    ip = digest.get("indo_pacific") or []
     if ip:
         rc = {"Cross-Strait": "#8E44AD", "Japan-China": "#2C3E50", "Philippines-China": "#2C3E50",
               "Australia-China": "#2C3E50", "India-China": "#2C3E50", "Korea-China": "#2C3E50",
@@ -979,10 +973,8 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         sections_trackers.append(f'<div {_SEC}><span {_PILL("#C0392B")}>Congressional Watch</span>{ch}</div>')
 
     # 13. Expert Analysts
-    opeds = [o for o in (digest.get("opeds_today") or [])
-             if (o.get("url") or "").startswith("http")]
-    academics = [a for a in (digest.get("academic_today") or [])
-                 if (a.get("url") or "").startswith("http")]
+    opeds = digest.get("opeds_today") or []
+    academics = digest.get("academic_today") or []
     if opeds or academics:
         body = ""
         if opeds:
@@ -1043,8 +1035,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         sections_analysis.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Social Statements</span>{sh}</div>')
 
     # 16. Also Today
-    also = [a for a in (digest.get("also_today") or [])
-            if (a.get("url") or "").startswith("http")]
+    also = digest.get("also_today") or []
     if also:
         wc_ = {"Cross-Strait": "#8E44AD", "PLA": "#C0392B"}
         ah = ""
