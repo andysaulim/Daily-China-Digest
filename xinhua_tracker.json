@@ -3,14 +3,20 @@
     "2026-05-19": {
       "new productive forces / 新质生产力": 3,
       "AI-manufacturing integration": 2
-    }
+    },
+    "2026-05-20": {}
   },
   "tone_history": {
     "2026-05-19": {
       "us": "Cautiously positive - emphasizing young people exchanges and cooperation potential",
       "taiwan": "Hostile - denying international space and asserting sovereignty claims",
       "russia": "Highly positive - unprecedented partnership level emphasized"
+    },
+    "2026-05-20": {
+      "us": "Cautiously cooperative — emphasizing trade agreements and economic engagement potential",
+      "taiwan": "Welcoming — highlighting mainland openness to youth exchanges and cross-Strait cooperation",
+      "russia": "Highly positive — unprecedented partnership level emphasized repeatedly"
     }
   },
-  "last_updated": "2026-05-19T20:54:08.414856+00:00"
+  "last_updated": "2026-05-20T12:52:06.348721+00:00"
 }

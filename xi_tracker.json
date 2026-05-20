@@ -1,6 +1,13 @@
 {
   "appearances": [
     {
+      "date": "2026-05-20",
+      "activity": "Confirmed appearance",
+      "source": "digest",
+      "url": "",
+      "recorded_at": "2026-05-20T12:52:06.348449+00:00"
+    },
+    {
       "date": "2026-05-19",
       "activity": "Confirmed appearance",
       "source": "digest",
@@ -8,5 +15,5 @@
       "recorded_at": "2026-05-19T02:33:43.258271+00:00"
     }
   ],
-  "last_updated": "2026-05-19T02:33:43.258295+00:00"
+  "last_updated": "2026-05-20T12:52:06.348475+00:00"
 }
