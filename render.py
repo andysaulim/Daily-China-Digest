@@ -168,8 +168,9 @@ def _word_count(d: dict) -> int:
 
     # Xinhua Delta — full coverage
     xd = d.get("xinhua_delta") or {}
-    for f in ("bottom_line", "doctrinal_shift", "mofa_presser",
-              "output_volume", "xi_activity", "notable_omissions"):
+    for f in ("bottom_line", "doctrinal_shift", "output_volume",
+              "xi_activity", "notable_omissions",
+              "peoples_daily_front_page", "global_times_editorial"):
         w += _w(xd.get(f, ""))
     for p in (xd.get("propaganda_focus") or []):
         w += _w(p)
@@ -179,9 +180,12 @@ def _word_count(d: dict) -> int:
             w += _w(q.get("source_article", ""))
     for v in (xd.get("tone_shifts") or {}).values():
         w += _w(v)
-    sc = xd.get("signed_commentary") or {}
+    sc = xd.get("xinhua_commentary") or {}
     w += _w(sc.get("topic", ""))
-    w += _w(sc.get("pseudonym", ""))
+    w += _w(sc.get("key_argument", ""))
+    mofa_p = xd.get("mofa_presser") or {}
+    if isinstance(mofa_p, dict):
+        w += _w(mofa_p.get("key_qa", ""))
     for p in (xd.get("key_phrase_changes") or []):
         w += _w(p.get("phrase", ""))
         w += _w(p.get("delta_label", ""))
@@ -456,19 +460,45 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         om = _esc(xd.get("notable_omissions", "")) if xd.get("notable_omissions") else ""
         om_html = f"<div style='margin-top:8px;padding:6px 12px;background:rgba(230,126,34,0.12);border-radius:4px;border-left:2px solid #E67E22;font-size:11px;color:#E67E22;line-height:1.4;'><strong>Notable omission:</strong> {om}</div>" if om else ""
 
-        signed = xd.get("signed_commentary") or {}
+        signed = xd.get("xinhua_commentary") or {}
         s_html = ""
         if signed and signed.get("pseudonym"):
+            ka = _esc(signed.get("key_argument", "") or signed.get("topic", ""))
             s_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #D4AC0D;'>
 <div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:2px;'>Signed Commentary — {_esc(signed.get("pseudonym", ""))}</div>
 <div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{_esc(signed.get("topic", ""))}</div>
+{"<div style='font-size:11px;color:#B8A060;margin-top:3px;font-style:italic;'>" + ka + "</div>" if ka and ka != _esc(signed.get("topic", "")) else ""}
 </div>"""
 
-        mofa = _esc(xd.get("mofa_presser", "")) if xd.get("mofa_presser") else ""
-        m_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #5DADE2;'>
+        mofa_raw = xd.get("mofa_presser")
+        m_html = ""
+        if mofa_raw:
+            if isinstance(mofa_raw, dict):
+                spk = _esc(mofa_raw.get("spokesperson", ""))
+                kqa = _esc(mofa_raw.get("key_qa", ""))
+                spk_line = f" — {spk}" if spk else ""
+                m_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #5DADE2;'>
+<div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:2px;'>MOFA Presser{spk_line}</div>
+<div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{kqa}</div>
+</div>"""
+            else:
+                mofa_str = _esc(str(mofa_raw))
+                m_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #5DADE2;'>
 <div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:2px;'>MOFA Presser</div>
-<div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{mofa}</div>
-</div>""" if mofa else ""
+<div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{mofa_str}</div>
+</div>"""
+
+        pd_front = _esc(xd.get("peoples_daily_front_page", "") or "")
+        pd_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #C0392B;'>
+<div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:2px;'>People's Daily Front Page</div>
+<div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{pd_front}</div>
+</div>""" if pd_front else ""
+
+        gt_ed = _esc(xd.get("global_times_editorial", "") or "")
+        gt_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #E67E22;'>
+<div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:2px;'>Global Times Editorial</div>
+<div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{gt_ed}</div>
+</div>""" if gt_ed else ""
 
         if xd.get("xi_appearance_today"):
             xi_icon = '<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#27AE60;margin-right:6px;vertical-align:middle;"></span>'
@@ -581,6 +611,8 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 </table>
 {dc_html}
 {prop_html}
+{pd_html}
+{gt_html}
 {m_html}
 {s_html}
 {q_html}

@@ -356,8 +356,16 @@ def _entry_to_article(entry, source: str, lang: str = "EN",
                       extra: dict | None = None) -> dict:
     title = entry.get("title", "").strip()
     link = entry.get("link", "").strip()
-    summary = entry.get("summary", entry.get("description", "")).strip()
-    summary = re.sub(r"<[^>]+>", " ", summary)
+    raw_summary = entry.get("summary", entry.get("description", ""))
+
+    # Google News RSS entries contain the real article URL as the first <a href>
+    # in the summary HTML. Extract it before stripping tags.
+    if "news.google.com" in link and raw_summary:
+        m = re.search(r'href="(https?://(?!news\.google\.com)[^"]+)"', raw_summary)
+        if m:
+            link = m.group(1)
+
+    summary = re.sub(r"<[^>]+>", " ", raw_summary)
     summary = re.sub(r"\s+", " ", summary).strip()
 
     pub_date = None
