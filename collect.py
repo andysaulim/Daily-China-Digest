@@ -356,8 +356,16 @@ def _entry_to_article(entry, source: str, lang: str = "EN",
                       extra: dict | None = None) -> dict:
     title = entry.get("title", "").strip()
     link = entry.get("link", "").strip()
-    summary = entry.get("summary", entry.get("description", "")).strip()
-    summary = re.sub(r"<[^>]+>", " ", summary)
+    raw_summary = entry.get("summary", entry.get("description", ""))
+
+    # Google News RSS entries contain the real article URL as the first <a href>
+    # in the summary HTML. Extract it before stripping tags.
+    if "news.google.com" in link and raw_summary:
+        m = re.search(r'href="(https?://(?!news\.google\.com)[^"]+)"', raw_summary)
+        if m:
+            link = m.group(1)
+
+    summary = re.sub(r"<[^>]+>", " ", raw_summary)
     summary = re.sub(r"\s+", " ", summary).strip()
 
     pub_date = None
@@ -503,7 +511,10 @@ def _collect_tier2() -> list:
                 continue
             if not _is_china_related(entry):
                 continue
-            article = _entry_to_article(entry, source, extra={"prestige": prestige})
+            article = _entry_to_article(entry, source, extra={
+                "prestige_tier": prestige,
+                "china_primary": prestige == "A",
+            })
             articles.append(article)
     return _dedup(articles)
 
@@ -800,7 +811,7 @@ def _collect_markets() -> dict:
         result["cgb_10y"]      = cgb_f.result()
         result["pboc_lpr"]     = lpr_f.result()
         result["china_cds"]    = cds_f.result()
-        result["gdp_estimate"] = gdp_f.result()
+        result["gdp_yoy"] = gdp_f.result()
 
         macro = macro_f.result()
         if macro:

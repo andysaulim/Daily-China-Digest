@@ -143,6 +143,42 @@ def _resolve_google_url(url: str) -> str:
         return url
 
 
+def _resolve_payload_urls(payload: dict) -> dict:
+    """Resolve all Google News RSS redirect URLs in collected payload before Claude sees them.
+
+    Google News RSS URLs (news.google.com/rss/articles/CBMi...) are blocked by email
+    clients as invalid addresses. Resolving them at payload time means Claude copies
+    real article URLs verbatim, eliminating the problem at the source.
+    """
+    all_gnews: dict = {}
+    for tier in ("tier1", "tier2", "tier3", "tier4"):
+        for art in (payload.get(tier) or []):
+            u = art.get("url", "")
+            if u and "news.google.com" in u:
+                all_gnews[u] = u
+
+    if not all_gnews:
+        return payload
+
+    print(f"   ↻ Pre-resolving {len(all_gnews)} Google News URLs in payload...")
+    with _ThreadPoolExecutor(max_workers=20) as pool:
+        futures = {pool.submit(_resolve_google_url, u): u for u in all_gnews}
+        for future in _as_completed(futures):
+            original = futures[future]
+            all_gnews[original] = future.result()
+
+    resolved = sum(1 for v in all_gnews.values() if "news.google.com" not in v)
+    print(f"   ✓ {resolved}/{len(all_gnews)} resolved to real article URLs")
+
+    for tier in ("tier1", "tier2", "tier3", "tier4"):
+        for art in (payload.get(tier) or []):
+            u = art.get("url", "")
+            if u in all_gnews:
+                art["url"] = all_gnews[u]
+
+    return payload
+
+
 _URL_SECTIONS = (
     "top_stories", "overnight_items", "also_today", "business_economy",
     "indo_pacific", "opeds_today", "academic_today", "social_statements",
@@ -151,7 +187,37 @@ _URL_SECTIONS = (
 
 
 def _sanitise_urls(digest: dict, collected_urls: set) -> dict:
-    """Null out hallucinated URLs; resolve Google News redirects for real ones."""
+    """Null out hallucinated URLs; resolve Google News redirects for real ones.
+
+    URL is kept if it exactly matches a collected URL OR its hostname matches
+    any hostname seen in the collected payload (domain-level allowlist). Only
+    URLs from completely unknown domains are stripped as hallucinations.
+    """
+    from urllib.parse import urlparse as _up
+
+    # Build domain allowlist from collected URLs
+    collected_domains: set = set()
+    for u in collected_urls:
+        try:
+            h = _up(u).hostname or ""
+            if h.startswith("www."):
+                h = h[4:]
+            if h:
+                collected_domains.add(h)
+        except Exception:
+            pass
+
+    def _url_allowed(url: str) -> bool:
+        if url in collected_urls:
+            return True
+        try:
+            h = _up(url).hostname or ""
+            if h.startswith("www."):
+                h = h[4:]
+            return bool(h) and h in collected_domains
+        except Exception:
+            return False
+
     google_urls = {}
 
     for section in _URL_SECTIONS:
@@ -162,8 +228,8 @@ def _sanitise_urls(digest: dict, collected_urls: set) -> dict:
             if not url or not url.startswith("http"):
                 item["url"] = ""
                 continue
-            if url not in collected_urls:
-                item["url"] = ""  # hallucinated — strip it
+            if not _url_allowed(url):
+                item["url"] = ""  # unknown domain — hallucinated
             elif "news.google.com" in url:
                 google_urls[url] = url  # will resolve below
 
@@ -177,7 +243,7 @@ def _sanitise_urls(digest: dict, collected_urls: set) -> dict:
             if not url or not url.startswith("http"):
                 item["url"] = ""
                 continue
-            if url not in collected_urls:
+            if not _url_allowed(url):
                 item["url"] = ""
             elif "news.google.com" in url:
                 google_urls[url] = url
@@ -199,6 +265,16 @@ def _sanitise_urls(digest: dict, collected_urls: set) -> dict:
             for item in ((digest.get("us_china_trade") or {}).get(key) or []):
                 if isinstance(item, dict) and item.get("url") in google_urls:
                     item["url"] = google_urls[item["url"]]
+
+    # Strip any remaining news.google.com URLs — resolution failed, broken in email clients
+    for section in _URL_SECTIONS:
+        for item in (digest.get(section) or []):
+            if isinstance(item, dict) and "news.google.com" in (item.get("url") or ""):
+                item["url"] = ""
+    for key in ("cfius", "deals"):
+        for item in ((digest.get("us_china_trade") or {}).get(key) or []):
+            if isinstance(item, dict) and "news.google.com" in (item.get("url") or ""):
+                item["url"] = ""
 
     return digest
 
@@ -274,6 +350,10 @@ def run_pipeline(args: argparse.Namespace) -> int:
     if args.dry_run:
         print(f"\n✅ Dry run complete. Cached to {COLLECTED_JSON.name}")
         return 0
+
+    # ─── Pre-resolve Google News redirect URLs in payload ────────────────
+    print("\n🔗 Pre-resolving Google News URLs in payload...")
+    payload = _resolve_payload_urls(payload)
 
     # ─── Database context (Hidden Reach / AMTI updates if available) ─────
     db_context = ""
