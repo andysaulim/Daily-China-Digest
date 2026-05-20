@@ -109,7 +109,7 @@ def update_from_digest(digest: dict) -> None:
     if not xd.get("xi_appearance_today"):
         return
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    activity = xd.get("xi_activity_summary") or xd.get("xi_appearance_note") or "Confirmed appearance"
+    activity = xd.get("xi_activity") or "Confirmed appearance"
     source = "digest"
     record_appearance(today, activity, source)
 
