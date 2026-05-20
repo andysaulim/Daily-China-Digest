@@ -4,7 +4,10 @@
       "new productive forces / 新质生产力": 3,
       "AI-manufacturing integration": 2
     },
-    "2026-05-20": {}
+    "2026-05-20": {
+      "new productive forces / 新质生产力": 5,
+      "Chinese-style modernization / 中国式现代化": 2
+    }
   },
   "tone_history": {
     "2026-05-19": {
@@ -13,10 +16,10 @@
       "russia": "Highly positive - unprecedented partnership level emphasized"
     },
     "2026-05-20": {
-      "us": "Cautiously cooperative — emphasizing trade agreements and economic engagement potential",
-      "taiwan": "Welcoming — highlighting mainland openness to youth exchanges and cross-Strait cooperation",
-      "russia": "Highly positive — unprecedented partnership level emphasized repeatedly"
+      "us": "Cautiously cooperative — emphasizing trade agreements and managed competition framework",
+      "taiwan": "Hostile — rejecting Lai's anniversary speech as destructive to peace and stability",
+      "russia": "Highly positive — unprecedented partnership level and joint criticism of Western policies"
     }
   },
-  "last_updated": "2026-05-20T12:52:06.348721+00:00"
+  "last_updated": "2026-05-20T14:03:08.476992+00:00"
 }
