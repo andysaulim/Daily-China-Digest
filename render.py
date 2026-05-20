@@ -94,7 +94,7 @@ def _link_or_text(text: str, url: str,
 
 _SEC = 'style="padding:14px 32px;border-bottom:1px solid #E0E0E0;" class="sec"'
 _SEC_BG = lambda bg: f'style="padding:14px 32px;background:{bg};border-bottom:1px solid #E0E0E0;" class="sec"'
-_PILL = lambda bg: f'style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:{bg};padding-bottom:3px;border-bottom:2px solid {bg};margin-bottom:12px;display:inline-block;font-family:Arial,sans-serif;"'
+_PILL = lambda bg: f'style="display:inline-block;background:{bg};color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:5px 14px;border-radius:2px;font-family:Arial,sans-serif;margin-bottom:10px;"'
 
 
 def _word_count(d: dict) -> int:
@@ -384,9 +384,9 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
             sl = _esc(_clean_src(s.get("src_line", s.get("source", ""))))
             url = s.get("url", "")
             sh += f"""
-<div class="story-card" style="margin-bottom:14px;padding:16px 18px;background:#FAFAF5;border-left:5px solid #2980B9;border-radius:2px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:#2980B9;font-weight:700;margin-bottom:8px;">{cat}</div>
-<h3 style="margin:0 0 10px 0;font-size:17px;line-height:1.35;color:#1B2A4A;font-family:Georgia,serif;font-weight:700;">{_link_or_text(h, url)}</h3>
+<div class="story-card" style="margin-bottom:14px;padding:14px 16px;background:#fff;border-left:4px solid #1B2A4A;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:#2980B9;font-weight:700;margin-bottom:6px;">{cat}</div>
+<h3 style="margin:0 0 8px 0;font-size:16px;line-height:1.4;color:#1B2A4A;font-family:Georgia,serif;font-weight:700;">{_link_or_text(h, url, style="color:#1B2A4A;text-decoration:none;")}</h3>
 {"<p style='margin:0 0 10px 0;font-size:13px;line-height:1.55;color:#333;'>" + b + "</p>" if b else ""}
 {"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#2980B9;'><strong>So what:</strong> " + sw + "</p>" if sw else ""}
 {"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#5D6D7E;font-style:italic;'><strong>Pattern:</strong> " + pn + "</p>" if pn else ""}
@@ -951,12 +951,12 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
                 sm = _esc(o.get("summary", ""))
                 ps = _esc(o.get("policy_so_what", ""))
                 url = o.get("url", "")
-                body += f"""<div style="margin-bottom:14px;padding:10px 12px;background:#F8F9FA;border-radius:4px;border-left:3px solid #1B2A4A;">
-<div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.5px;">{src} · {auth}</div>
-<div style="font-size:14px;font-weight:700;color:#1B2A4A;font-family:Georgia,serif;margin:4px 0 6px 0;">{_link_or_text(title, url)}</div>
-{"<div style='font-size:12px;color:#1B2A4A;font-style:italic;margin-bottom:6px;'><strong>Argument:</strong> " + ca + "</div>" if ca else ""}
-<div style="font-size:12px;line-height:1.5;color:#555;">{sm}</div>
-{"<div style='font-size:11px;color:#2980B9;margin-top:4px;'><strong>So what:</strong> " + ps + "</div>" if ps else ""}
+                body += f"""<div style="margin-bottom:14px;padding:12px 14px;background:#fff;border-radius:2px;border-left:3px solid #1B2A4A;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+<div style="font-size:10px;color:#888;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px;">{src}{(' · ' + auth) if auth else ''}</div>
+<div style="font-size:14px;font-weight:700;color:#1B2A4A;font-family:Georgia,serif;line-height:1.35;margin-bottom:6px;">{_link_or_text(title, url, style="color:#1B2A4A;text-decoration:none;")}</div>
+{"<div style='font-size:12px;color:#444;font-style:italic;line-height:1.45;margin-bottom:5px;padding-left:8px;border-left:2px solid #D5D5D5;'>" + ca + "</div>" if ca else ""}
+{"<div style='font-size:11px;line-height:1.5;color:#666;'>" + sm + "</div>" if sm else ""}
+{"<div style='font-size:11px;color:#2980B9;margin-top:4px;font-weight:600;'>" + ps + "</div>" if ps else ""}
 </div>"""
         if academics:
             body += '<div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#8E44AD;margin:14px 0 8px 0;padding-bottom:4px;border-bottom:1px solid #E8E8E8;">Academic Journals</div>'
@@ -967,9 +967,9 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
                 auth = _esc(a.get("authors", ""))
                 sm = _esc(a.get("summary", ""))
                 url = a.get("url", "")
-                body += f"""<div style="margin-bottom:12px;padding:10px 12px;background:#FAF5FA;border-radius:4px;border-left:3px solid #8E44AD;">
-<div style="font-size:11px;color:#8E44AD;text-transform:uppercase;letter-spacing:0.5px;">{src} ({tier}) · {auth}</div>
-<div style="font-size:13px;font-weight:700;color:#1B2A4A;font-family:Georgia,serif;margin:4px 0 6px 0;">{_link_or_text(title, url)}</div>
+                body += f"""<div style="margin-bottom:12px;padding:12px 14px;background:#fff;border-radius:2px;border-left:3px solid #8E44AD;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+<div style="font-size:10px;color:#8E44AD;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px;">{src} · {tier}{(' · ' + auth) if auth else ''}</div>
+<div style="font-size:13px;font-weight:700;color:#1B2A4A;font-family:Georgia,serif;line-height:1.35;margin-bottom:5px;">{_link_or_text(title, url, style="color:#1B2A4A;text-decoration:none;")}</div>
 <div style="font-size:12px;line-height:1.5;color:#555;">{sm}</div>
 </div>"""
         sections_analysis.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Expert Analysts</span>{body}</div>')
