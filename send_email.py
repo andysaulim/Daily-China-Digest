@@ -41,7 +41,7 @@ def send_digest(html: str, subject: str | None = None,
 
     if subject is None:
         date_str = datetime.now(ZoneInfo("America/New_York")).strftime("%a %b %-d %Y")
-        subject = f"China Digest — {date_str}"
+        subject = f"China Daily Brief — {date_str}"
 
     msg = EmailMessage()
     msg["Subject"] = subject
