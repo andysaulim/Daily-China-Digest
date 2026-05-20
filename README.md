@@ -10,13 +10,13 @@ Automated daily intelligence briefing on the People's Republic of China for the 
 
 | Metric | Value |
 | --- | --- |
-| Last generated | May 20, 2026 at 2:25 PM ET |
+| Last generated | May 20, 2026 at 2:53 PM ET |
 | Digest date | Wednesday, May 20, 2026 |
-| Articles collected | 43 |
-| Unique sources | 7 |
+| Articles collected | 46 |
+| Unique sources | 2 |
 | Top stories | 3 |
 | Overnight items | 6 |
-| Word count | ~1,209 |
+| Word count | ~1,161 |
 | Xi appeared | Yes |
 
 ## How It Works
