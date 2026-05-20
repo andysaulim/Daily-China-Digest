@@ -76,12 +76,12 @@ Total cost of running this: about **$2–4 per day** for both digests combined.
 
 | Item | Monthly |
 |---|---|
-| Claude API (digest generation) | ~$50–80 |
+| Claude API (digest generation) | ~$10–15 |
 | Claude Code (development tool) | ~$20 |
 | Everything else (GitHub, Gmail) | $0 |
-| **Total** | **~$70–100/month** |
+| **Total** | **~$30–35/month** |
 
-*Cost per issue: roughly $1–2. The Korea digest is slightly cheaper because it's narrower in scope.*
+*Per digest: ~$5–8/month each. The pipeline tries the cheaper Sonnet model first (~$0.13/run) and only escalates to Opus (~$0.65/run) if the output doesn't meet quality minimums. Most days Sonnet is sufficient.*
 
 ---
 
