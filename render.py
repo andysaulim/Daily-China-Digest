@@ -92,9 +92,15 @@ def _link_or_text(text: str, url: str,
     return text
 
 
-_SEC = 'style="padding:14px 32px;border-bottom:1px solid #E0E0E0;" class="sec"'
-_SEC_BG = lambda bg: f'style="padding:14px 32px;background:{bg};border-bottom:1px solid #E0E0E0;" class="sec"'
-_PILL = lambda bg: f'style="display:inline-block;background:{bg};color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:5px 14px;border-radius:2px;font-family:Arial,sans-serif;margin-bottom:10px;"'
+_SEC = 'style="padding:20px 32px;border-bottom:1px solid #EBEBEB;" class="sec"'
+_SEC_ALERT = 'style="padding:20px 32px;border-top:3px solid #C0392B;border-bottom:1px solid #EBEBEB;" class="sec"'
+
+def _sec_label(label: str, color: str = "#1B2A4A") -> str:
+    """Section label — small-caps with rule, no background pill."""
+    return (f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:2px;color:{color};font-family:Arial,sans-serif;'
+            f'margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid {color};">'
+            f'{label}</div>')
 
 
 def _word_count(d: dict) -> int:
@@ -218,11 +224,12 @@ def _word_count(d: dict) -> int:
 
 
 def _chapter(label: str) -> str:
-    """Chapter divider — thin warm-gray band with centered navy uppercase letterspaced label."""
+    """Chapter divider — dark navy band with gold rule, white letterspaced label."""
     return f"""
-<div style="padding:22px 32px 18px;background:#F0EDE5;border-top:1px solid #D8D2C7;border-bottom:1px solid #D8D2C7;text-align:center;" class="sec">
-<span style="font-size:11px;font-family:Arial,sans-serif;color:#1B2A4A;text-transform:uppercase;letter-spacing:4px;font-weight:700;">{label}</span>
-<div style="height:2px;width:42px;background:#1B2A4A;margin:7px auto 0;"></div>
+<div style="padding:12px 32px;background:#1B2A4A;text-align:center;" class="sec">
+<div style="height:1px;background:rgba(212,172,13,0.4);margin-bottom:10px;"></div>
+<span style="font-size:9px;font-family:Arial,sans-serif;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:5px;font-weight:700;">{label}</span>
+<div style="height:1px;background:rgba(212,172,13,0.4);margin-top:10px;"></div>
 </div>"""
 
 
@@ -380,8 +387,8 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 </tr>
 </table>"""
         sections_today.append(f"""
-<div style="padding:16px 32px 12px;border-bottom:1px solid #E8E8E8;" class="sec">
-<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #D4AC0D;display:inline-block;">Today at a Glance</div>
+<div style="padding:20px 32px;border-bottom:1px solid #EBEBEB;" class="sec">
+<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #D4AC0D;">Today at a Glance</div>
 {memo_html}
 </div>""")
 
@@ -400,15 +407,15 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
             sl = _esc(_clean_src(s.get("src_line", s.get("source", ""))))
             url = s.get("url", "")
             sh += f"""
-<div class="story-card" style="margin-bottom:14px;padding:14px 16px;background:#fff;border-left:4px solid #1B2A4A;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:#2980B9;font-weight:700;margin-bottom:6px;">{cat}</div>
+<div class="story-card" style="margin-bottom:12px;padding:14px 16px;background:#fff;border-left:3px solid #1B2A4A;border-bottom:1px solid #F0F0F0;">
+<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#888;font-weight:700;margin-bottom:6px;">{cat}</div>
 <h3 style="margin:0 0 8px 0;font-size:16px;line-height:1.4;color:#1B2A4A;font-family:Georgia,serif;font-weight:700;">{_link_or_text(h, url, style="color:#1B2A4A;text-decoration:none;")}</h3>
-{"<p style='margin:0 0 10px 0;font-size:13px;line-height:1.55;color:#333;'>" + b + "</p>" if b else ""}
-{"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#2980B9;'><strong>So what:</strong> " + _link_or_text(sw, url, style="color:#2980B9;text-decoration:underline;") + "</p>" if sw else ""}
-{"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#5D6D7E;font-style:italic;'><strong>Pattern:</strong> " + pn + "</p>" if pn else ""}
-<div style="font-size:10px;color:#999;margin-top:6px;">{sl}</div>
+{"<p style='margin:0 0 10px 0;font-size:13px;line-height:1.55;color:#444;'>" + b + "</p>" if b else ""}
+{"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#555;font-style:italic;'><strong style='color:#1B2A4A;font-style:normal;'>So what:</strong> " + _link_or_text(sw, url, style="color:#555;text-decoration:underline;") + "</p>" if sw else ""}
+{"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#777;font-style:italic;'><strong style='color:#555;font-style:normal;'>Pattern:</strong> " + pn + "</p>" if pn else ""}
+<div style="font-size:10px;color:#aaa;margin-top:6px;text-transform:uppercase;letter-spacing:0.5px;">{sl}</div>
 </div>"""
-        sections_today.append(f'<div {_SEC}><span {_PILL("#2980B9")}>Top Stories</span>{sh}</div>')
+        sections_today.append(f'<div {_SEC}>{_sec_label("Top Stories")}{sh}</div>')
 
     # 4b. Overnight Flash
     overnight = digest.get("overnight_items") or []
@@ -425,11 +432,11 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
             bar = cat_colors.get(cat_raw, "#1B2A4A")
             fh += f"""
 <div style="margin-bottom:10px;padding-left:12px;border-left:3px solid {bar};">
-<div style="font-size:11px;color:#C0392B;text-transform:uppercase;font-weight:600;">{cat} &middot; {src}</div>
+<div style="font-size:9px;color:#888;text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:2px;">{cat} &middot; {src}</div>
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(h, url)}</div>
 <div style="font-size:12px;line-height:1.4;color:#555;">{b}</div>
 </div>"""
-        sections_today.append(f'<div {_SEC_BG("#FFF8F0")}><span {_PILL("#C0392B")}>&#9889; Overnight Flash</span>{fh}</div>')
+        sections_today.append(f'<div {_SEC_ALERT}>{_sec_label("&#9889; Overnight Flash", color="#C0392B")}{fh}</div>')
 
     # 5. Key Stat
     stat = digest.get("key_stat") or {}
@@ -441,193 +448,6 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 <div style="font-size:12px;opacity:0.85;margin-top:2px;">{_esc(stat.get("label", ""))}</div>
 <div style="font-size:11px;opacity:0.65;margin-top:4px;font-style:italic;">{_esc(stat.get("context", ""))}</div>
 {"<div style='font-size:10px;opacity:0.45;margin-top:4px;'>Source: " + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
-</div>""")
-
-    # 6. Xinhua Delta (dark)
-    xd = digest.get("xinhua_delta") or {}
-    if xd and any(xd.values()):
-        bl = _esc(xd.get("bottom_line", ""))
-        watch = xd.get("watch_flag", False)
-        silence = xd.get("silence_today", False)
-        tone_shifts = xd.get("tone_shifts") or {}
-        vol = _esc(xd.get("output_volume", "")) if xd.get("output_volume") else ""
-        doc = _esc(xd.get("doctrinal_shift", "")) if xd.get("doctrinal_shift") else ""
-        doc_html = f"<div style='margin:12px 0;padding:8px 14px;background:#8E44AD;color:#fff;border-radius:4px;font-size:12px;'><strong>Doctrinal shift:</strong> {doc}</div>" if doc else ""
-
-        kq = xd.get("key_quotes") or []
-        q_html = ""
-        if kq:
-            q = kq[0] if isinstance(kq, list) else kq
-            if isinstance(q, dict) and q.get("quote"):
-                qt = _esc(q.get("quote", ""))
-                sa = _esc(q.get("source_article", ""))
-                src_line = f"<div style='font-size:10px;color:#888;margin-top:4px;'>— {sa}</div>" if sa else ""
-                q_html = f"""<div style='margin-top:12px;padding:10px 14px;background:rgba(255,255,255,0.06);border-radius:4px;border-left:3px solid #C0392B;'>
-<div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:4px;'>Key Quote</div>
-<div style='font-size:13px;color:#E8E8E8;font-style:italic;line-height:1.5;'>&ldquo;{qt}&rdquo;</div>
-{src_line}
-</div>"""
-
-        om = _esc(xd.get("notable_omissions", "")) if xd.get("notable_omissions") else ""
-        om_html = f"<div style='margin-top:8px;padding:6px 12px;background:rgba(230,126,34,0.12);border-radius:4px;border-left:2px solid #E67E22;font-size:11px;color:#E67E22;line-height:1.4;'><strong>Notable omission:</strong> {om}</div>" if om else ""
-
-        signed = xd.get("xinhua_commentary") or {}
-        s_html = ""
-        if signed and signed.get("pseudonym"):
-            ka = _esc(signed.get("key_argument", "") or signed.get("topic", ""))
-            s_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #D4AC0D;'>
-<div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:2px;'>Signed Commentary — {_esc(signed.get("pseudonym", ""))}</div>
-<div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{_esc(signed.get("topic", ""))}</div>
-{"<div style='font-size:11px;color:#B8A060;margin-top:3px;font-style:italic;'>" + ka + "</div>" if ka and ka != _esc(signed.get("topic", "")) else ""}
-</div>"""
-
-        mofa_raw = xd.get("mofa_presser")
-        m_html = ""
-        if mofa_raw:
-            if isinstance(mofa_raw, dict):
-                spk = _esc(mofa_raw.get("spokesperson", ""))
-                kqa = _esc(mofa_raw.get("key_qa", ""))
-                spk_line = f" — {spk}" if spk else ""
-                m_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #5DADE2;'>
-<div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:2px;'>MOFA Presser{spk_line}</div>
-<div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{kqa}</div>
-</div>"""
-            else:
-                mofa_str = _esc(str(mofa_raw))
-                m_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #5DADE2;'>
-<div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:2px;'>MOFA Presser</div>
-<div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{mofa_str}</div>
-</div>"""
-
-        pd_front = _esc(xd.get("peoples_daily_front_page", "") or "")
-        gt_ed = _esc(xd.get("global_times_editorial", "") or "")
-        # Compact two-column row for PD + GT to keep delta section tight
-        state_media_rows = ""
-        if pd_front:
-            state_media_rows += f"<div style='margin-bottom:4px;'><span style='font-size:9px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.5px;'>人民日报</span> <span style='font-size:11px;color:#D0D0D0;'>{pd_front}</span></div>"
-        if gt_ed:
-            state_media_rows += f"<div><span style='font-size:9px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.5px;'>环球时报</span> <span style='font-size:11px;color:#D0D0D0;'>{gt_ed}</span></div>"
-        state_media_html = f"""<div style='margin-top:10px;padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;border-left:2px solid #C0392B;'>{state_media_rows}</div>""" if state_media_rows else ""
-
-        if xd.get("xi_appearance_today"):
-            xi_icon = '<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#27AE60;margin-right:6px;vertical-align:middle;"></span>'
-            xi_line = "Public appearance"
-            xa = _esc(xd.get("xi_activity", ""))
-            if xa:
-                xi_line += f" — {xa}"
-        else:
-            xi_icon = '<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C0392B;margin-right:6px;vertical-align:middle;"></span>'
-            xi_line = "No appearance"
-            d = xd.get("days_since_last_appearance")
-            if d:
-                xi_line += f" ({d}d since last)"
-
-        prop_focus = xd.get("propaganda_focus")
-        prop_html = ""
-        if prop_focus:
-            if isinstance(prop_focus, str):
-                prop_html = f"<div style='margin-top:10px;'><div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:4px;'>Propaganda Focus</div><div style='font-size:12px;color:#D0D0D0;line-height:1.5;'>{_esc(prop_focus)}</div></div>"
-            elif isinstance(prop_focus, list):
-                pills = "".join(f'<span style="display:inline-block;padding:2px 8px;margin:2px 4px 2px 0;background:rgba(255,255,255,0.08);border-radius:12px;font-size:10px;color:#BBB;">{_esc(str(p))}</span>' for p in prop_focus)
-                prop_html = f"<div style='margin-top:10px;'><div style='font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.5);margin-bottom:4px;'>Propaganda Focus</div>{pills}</div>"
-
-        tone_row = ""
-        if tone_shifts:
-            active_tones = {k: v for k, v in tone_shifts.items() if v}
-            if active_tones:
-                tone_items = "".join(
-                    f'<div style="font-size:12px;color:#E67E22;line-height:1.5;margin-bottom:3px;"><strong style="color:rgba(255,255,255,0.5);text-transform:uppercase;font-size:10px;margin-right:6px;">{_esc(k)}</strong>&#8644; {_esc(v)}</div>'
-                    for k, v in active_tones.items()
-                )
-                tone_row = f"""<tr><td colspan="2" style="padding-top:8px;"><div style="padding:8px 12px;background:rgba(230,126,34,0.1);border-radius:4px;border-left:2px solid #E67E22;"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);margin-bottom:6px;">Tone Shifts</div>{tone_items}</div></td></tr>"""
-
-        phrases = xd.get("key_phrase_changes") or []
-        ph_html = ""
-        if phrases:
-            rows = ""
-            for p in phrases[:5]:
-                ph = _esc(p.get("phrase", ""))
-                cw_ = p.get("count_this_week", 0)
-                cp = p.get("count_prior", 0)
-                delta = _esc(p.get("delta_label", ""))
-                dc = "#27AE60" if "↑" in delta else ("#C0392B" if "↓" in delta else "#888")
-                try:
-                    bw = min(int(cw_) * 6, 60)
-                except (ValueError, TypeError):
-                    bw = 0
-                bh = f'<span style="display:inline-block;width:{bw}px;height:3px;background:{dc};border-radius:2px;vertical-align:middle;margin-right:4px;"></span>' if bw > 0 else ""
-                rows += f"""<tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
-<td style="padding:5px 8px 5px 0;font-size:11px;color:#D0D0D0;">{ph}</td>
-<td style="padding:5px 6px;font-size:11px;color:#888;text-align:center;">{cp}</td>
-<td style="padding:5px 6px;font-size:11px;color:#D0D0D0;text-align:center;font-weight:600;">{bh}{cw_}</td>
-<td style="padding:5px 0 5px 6px;font-size:10px;color:{dc};font-weight:600;">{delta}</td>
-</tr>"""
-            ph_html = f"""<div style="margin-top:14px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);margin-bottom:6px;">Phrase Frequency</div>
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-<tr style="border-bottom:1px solid rgba(255,255,255,0.12);">
-<td style="padding:4px 8px 4px 0;font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;">Phrase</td>
-<td style="padding:4px 6px;font-size:10px;color:rgba(255,255,255,0.5);text-align:center;">Prior</td>
-<td style="padding:4px 6px;font-size:10px;color:rgba(255,255,255,0.5);text-align:center;">Today</td>
-<td style="padding:4px 0 4px 6px;font-size:10px;color:rgba(255,255,255,0.5);">Delta</td>
-</tr>
-{rows}
-</table>
-</div>"""
-
-        try:
-            from xi_tracker import build_dot_calendar
-            dc_html = build_dot_calendar(today_appeared=xd.get("xi_appearance_today"))
-        except Exception:
-            dc_html = ""
-
-        baseline = _esc(xd.get("baseline_period", ""))
-        baseline_html = f"7-day baseline · {baseline}" if baseline else ""
-
-        sections_analysis.append(f"""
-<div style="padding:0;border-bottom:1px solid #333;" class="sec">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1a1f2e;">
-<tr>
-<td style="padding:10px 32px;">
-<span style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:#E8DCC8;font-family:Arial,sans-serif;">Xinhua / People's Daily Delta</span>
-<span style="display:inline-block;width:60px;height:2px;background:#C0392B;vertical-align:middle;margin-left:10px;"></span>
-</td>
-<td style="padding:10px 32px;text-align:right;">
-<span style="font-size:11px;color:#8a8a8a;">{baseline_html}</span>
-</td>
-</tr>
-</table>
-<div style="padding:14px 32px;background:#1a1f2e;color:#E0E0E0;">
-{"<div style='margin-bottom:12px;padding:8px 14px;background:#C0392B;color:#fff;border-radius:4px;font-size:12px;font-weight:600;'>&#9888; Complete state-media silence today</div>" if silence else ""}
-{"<div style='margin-bottom:12px;padding:8px 14px;background:#C0392B;color:#fff;border-radius:4px;font-size:12px;font-weight:600;'>&#9888; WATCH FLAG — Escalation-level rhetoric or unusual activity</div>" if watch and not silence else ""}
-{doc_html}
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
-<tr>
-<td style="vertical-align:top;width:50%;padding-right:12px;">
-<div style="padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);margin-bottom:4px;">Xi Jinping</div>
-<div style="font-size:13px;color:#E0E0E0;font-weight:600;">{xi_icon}{xi_line}</div>
-</div>
-</td>
-<td style="vertical-align:top;width:50%;">
-<div style="padding:8px 12px;background:rgba(255,255,255,0.04);border-radius:4px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);margin-bottom:4px;">Output Volume</div>
-<div style="font-size:13px;color:#E0E0E0;">{vol if vol else "—"}</div>
-</div>
-</td>
-</tr>
-{tone_row}
-</table>
-{dc_html}
-{prop_html}
-{state_media_html}
-{m_html}
-{s_html}
-{q_html}
-{ph_html}
-{om_html}
-{"<div style='margin-top:14px;padding:10px 14px;background:rgba(255,255,255,0.06);border-radius:4px;border-left:3px solid #E8DCC8;font-size:13px;line-height:1.6;color:#E0E0E0;font-family:Georgia,serif;'><strong style='color:#E8DCC8;'>Bottom line:</strong> " + bl + "</div>" if bl else ""}
-</div>
 </div>""")
 
     # 7. Satellite & Location Watch — CONSOLIDATED, only sites with real evidence today
@@ -707,17 +527,16 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
                                f'style="color:#888;">Hidden Reach</a></div>')
 
             sections_trackers.append(f"""<div {_SEC}>
-<span {_PILL("#C0392B")}>Satellite &amp; Location Watch</span>
-<div style="font-size:11px;color:#888;font-style:italic;margin-top:-2px;margin-bottom:8px;">New evidence from monitored areas of interest · {len(active)} of {total} sites flagged</div>
+{_sec_label("Satellite &amp; Location Watch")}
+<div style="font-size:11px;color:#888;font-style:italic;margin-top:-8px;margin-bottom:12px;">{len(active)} of {total} monitored sites flagged</div>
 <table width="100%" cellpadding="0" cellspacing="0" border="0">{loc_cards}</table>
 {baseline_footer}
 </div>""")
         else:
-            # All sites at baseline — single line
             sections_trackers.append(f"""<div {_SEC}>
-<span {_PILL("#C0392B")}>Satellite &amp; Location Watch</span>
-<div style="font-size:12px;color:#555;margin-top:6px;">All {total} monitored sites at baseline today. No new satellite imagery or activity flags.</div>
-<div style="font-size:10px;color:#999;margin-top:6px;">Tracked: CSIS AMTI · China Power Project · Hidden Reach</div>
+{_sec_label("Satellite &amp; Location Watch")}
+<div style="font-size:12px;color:#555;">All {total} monitored sites at baseline today. No new satellite imagery or activity flags.</div>
+<div style="font-size:10px;color:#aaa;margin-top:6px;">Tracked: CSIS AMTI · China Power Project · Hidden Reach</div>
 </div>""")
 
     # 8. PRC Government (2x2 + personnel + NPC + calendar)
@@ -751,9 +570,9 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
             elif lbl:
                 slink = f'<div style="margin-top:6px;font-size:11px;color:#888;">→ {_esc(lbl)}</div>'
             gov_rows_html += f"""
-<div style="margin-bottom:12px;padding:14px 16px;background:#FAFAF5;border-left:4px solid #C0392B;border-radius:2px;">
-<div style="margin-bottom:8px;">{hdr}</div>
-<div style="font-size:14px;font-weight:700;color:#1B2A4A;line-height:1.4;margin-bottom:6px;">{act}</div>
+<div style="margin-bottom:12px;padding:12px 14px;border-left:3px solid #1B2A4A;border-bottom:1px solid #F0F0F0;">
+<div style="margin-bottom:6px;">{hdr}</div>
+<div style="font-size:14px;font-weight:700;color:#1B2A4A;line-height:1.4;margin-bottom:5px;">{act}</div>
 <div style="font-size:12px;line-height:1.55;color:#555;">{det}</div>
 {slink}
 </div>"""
@@ -832,8 +651,9 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         ds = _esc(str(digest.get("digest_date", "")))
         sections_trackers.append(f"""
 <div {_SEC}>
-<span {_PILL("#C0392B")}>PRC Government</span> <span style="font-size:10px;color:#888;font-family:Arial,sans-serif;">State Council + Ministries &middot; {ds}</span>
-<div style="padding-top:4px;">{gov_grid}{pers_html}{npc_html}{cal_html}</div>
+{_sec_label("PRC Government")}
+<div style="font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-top:-10px;margin-bottom:14px;">State Council + Ministries{(" · " + ds) if ds else ""}</div>
+{gov_grid}{pers_html}{npc_html}{cal_html}
 </div>""")
 
     # 9. US-China Trade
@@ -914,7 +734,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 </div>"""
 
         if body:
-            sections_trackers.append(f'<div {_SEC}><span {_PILL("#C0392B")}>US-China Trade &amp; Sanctions</span>{body}</div>')
+            sections_trackers.append(f'<div {_SEC}>{_sec_label("US-China Trade &amp; Sanctions")}{body}</div>')
 
     # 10. Business & Economy
     biz = digest.get("business_economy") or []
@@ -933,7 +753,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(h, url)}</div>
 <div style="font-size:12px;line-height:1.4;color:#555;">{bt}</div>
 </div>"""
-        sections_wire.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Business &amp; Economy</span>{bh}</div>')
+        sections_wire.append(f'<div {_SEC}>{_sec_label("Business &amp; Economy")}{bh}</div>')
 
     # 11. Indo-Pacific
     ip = digest.get("indo_pacific") or []
@@ -954,7 +774,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(h, url)}</div>
 <div style="font-size:12px;line-height:1.4;color:#555;">{bt}</div>
 </div>"""
-        sections_wire.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Indo-Pacific</span>{ih}</div>')
+        sections_wire.append(f'<div {_SEC}>{_sec_label("Indo-Pacific")}{ih}</div>')
 
     # 12. Congressional Watch
     cw = digest.get("congressional_watch") or []
@@ -970,7 +790,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(act, url)}</div>
 <div style="font-size:12px;line-height:1.4;color:#555;">{det}</div>
 </div>"""
-        sections_trackers.append(f'<div {_SEC}><span {_PILL("#C0392B")}>Congressional Watch</span>{ch}</div>')
+        sections_trackers.append(f'<div {_SEC}>{_sec_label("Congressional Watch")}{ch}</div>')
 
     # 13. Expert Analysts
     opeds = digest.get("opeds_today") or []
@@ -1008,7 +828,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 <div style="font-size:13px;font-weight:700;color:#1B2A4A;font-family:Georgia,serif;line-height:1.35;margin-bottom:5px;">{_link_or_text(title, url, style="color:#1B2A4A;text-decoration:none;")}</div>
 <div style="font-size:12px;line-height:1.5;color:#555;">{sm}</div>
 </div>"""
-        sections_analysis.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Expert Analysts</span>{body}</div>')
+        sections_analysis.append(f'<div {_SEC}>{_sec_label("Expert Analysts")}{body}</div>')
 
     # 14. Public Sentiment — removed (low signal-to-noise)
 
@@ -1032,7 +852,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 {"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Note:</strong> " + nt + "</div>" if nt else ""}
 {src_link}
 </div>"""
-        sections_analysis.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Social Statements</span>{sh}</div>')
+        sections_analysis.append(f'<div {_SEC}>{_sec_label("Social Statements")}{sh}</div>')
 
     # 16. Also Today
     also = digest.get("also_today") or []
@@ -1052,7 +872,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(h, url)}</div>
 <div style="font-size:12px;line-height:1.4;color:#555;">{b}</div>
 </div>"""
-        sections_wire.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>Also Today / The Wire</span>{ah}</div>')
+        sections_wire.append(f'<div {_SEC}>{_sec_label("Also Today / The Wire")}{ah}</div>')
 
     # 17. On This Day
     otd = digest.get("on_this_day") or []
@@ -1064,17 +884,18 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 <div style="font-size:14px;font-weight:600;color:#1B2A4A;font-family:Georgia,serif;margin:4px 0;">{_esc(it.get("event", ""))}</div>
 <div style="font-size:12px;color:#555;font-style:italic;line-height:1.5;">{_esc(it.get("relevance", ""))}</div>
 </div>"""
-        sections_wire.append(f'<div {_SEC}><span {_PILL("#7F8C8D")}>On This Day</span>{oh}</div>')
+        sections_wire.append(f'<div {_SEC}>{_sec_label("On This Day")}{oh}</div>')
 
     # 18. Sanctions Status footer — REMOVED. Will return when trade tracker is wired
     # with verifiable BIS/OFAC/DoD running totals. Placeholder text was misleading.
 
     # Footer
     sections_post.append(f"""
-<div style="padding:18px 32px;background:#F5F5F5;text-align:center;font-size:11px;color:#888;font-family:Arial,sans-serif;line-height:1.6;">
-CSIS Korea Chair · Daily China Brief<br>
-Generated {gen_time} · Prepared by Andy Lim<br>
-<a href="#top" style="color:#1B2A4A;text-decoration:none;">↑ Back to top</a>
+<div style="padding:20px 32px;background:#1B2A4A;text-align:center;" class="sec">
+<div style="font-size:9px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.45);font-family:Arial,sans-serif;line-height:2;">
+CSIS Korea Chair &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_time}
+</div>
+<a href="#top" style="font-size:10px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:1px;">&#8593; Back to top</a>
 </div>""")
 
     # Assemble with chapter dividers — Option B: existing dark bands serve as natural
