@@ -251,19 +251,19 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 
     # 1. Header
     sections_pre.append(f"""
-<div style="background:#1B2A4A;color:#fff;padding:14px 32px 12px;" class="sec">
+<div style="background:#1B2A4A;color:#fff;padding:18px 32px 14px;" class="sec">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
 <td style="vertical-align:top;">
-<h1 style="margin:0;font-size:24px;font-weight:700;font-family:Georgia,serif;color:#fff;letter-spacing:0.5px;">China Daily Brief</h1>
-<div style="margin-top:4px;font-size:11px;color:rgba(255,255,255,0.7);font-family:Arial,sans-serif;">By Andy Lim &middot; CSIS Korea Chair</div>
-<div style="margin-top:6px;font-size:18px;font-weight:700;color:rgba(255,255,255,0.95);letter-spacing:0.5px;font-family:Georgia,serif;">{_esc(date_str)}</div>
+<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS Korea Chair</div>
+<h1 style="margin:0 0 4px 0;font-size:28px;font-weight:700;font-family:Georgia,serif;color:#fff;letter-spacing:0.3px;">China Daily Brief</h1>
+<div style="font-size:16px;font-weight:400;color:rgba(255,255,255,0.85);font-family:Georgia,serif;">{_esc(date_str)}</div>
 </td>
 <td style="vertical-align:top;text-align:right;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);margin-bottom:2px;">{gen_time}</div>
-<div style="font-size:10px;color:rgba(255,255,255,0.55);">{wc:,} words &middot; {read_min} min read</div>
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.55);margin-bottom:3px;">{gen_time}</div>
+<div style="font-size:10px;color:rgba(255,255,255,0.4);">{wc:,} words &middot; {read_min} min read</div>
 </td>
 </tr></table>
-{"<div style='margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.15);font-size:13px;color:rgba(255,255,255,0.85);font-family:Georgia,serif;'><strong style='color:rgba(255,255,255,0.5);'>RE:</strong> " + re_line + "</div>" if re_line else ""}
+{"<div style='margin-top:12px;padding-top:12px;border-top:1px solid #D4AC0D;font-size:13px;color:rgba(255,255,255,0.9);font-family:Georgia,serif;'><strong style='color:#D4AC0D;font-family:Arial,sans-serif;font-size:11px;letter-spacing:1px;'>RE:</strong>&nbsp; " + re_line + "</div>" if re_line else ""}
 </div>""")
 
     # 2. Market strip (3 rows)
@@ -281,20 +281,23 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         sections_pre.append(f"""
 <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1B2A4A;color:#fff;border-bottom:1px solid rgba(255,255,255,0.1);">
 <tr>
-<td width="33%" align="center" style="padding:10px 8px 12px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">SSE Composite</div>
-<div style="font-size:18px;font-weight:700;">{_esc(str(sse.get("value", "—")))}</div>
+<td width="33%" align="center" style="padding:12px 8px 10px;">
+<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;opacity:0.55;">SSE Composite</div>
+<div style="font-size:20px;font-weight:700;margin:2px 0;">{_esc(str(sse.get("value", "—")))}</div>
 <div style="font-size:11px;">{_arrow(sse.get("change_pct", 0))}</div>
+<div style="font-size:9px;opacity:0.4;margin-top:2px;">as of {now.strftime("%b %-d")}</div>
 </td>
-<td width="34%" align="center" style="padding:10px 8px 12px;border-left:1px solid rgba(255,255,255,0.15);border-right:1px solid rgba(255,255,255,0.15);">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">Hang Seng</div>
-<div style="font-size:18px;font-weight:700;">{_esc(str(hsi.get("value", "—")))}</div>
+<td width="34%" align="center" style="padding:12px 8px 10px;border-left:1px solid rgba(255,255,255,0.12);border-right:1px solid rgba(255,255,255,0.12);">
+<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;opacity:0.55;">Hang Seng</div>
+<div style="font-size:20px;font-weight:700;margin:2px 0;">{_esc(str(hsi.get("value", "—")))}</div>
 <div style="font-size:11px;">{_arrow(hsi.get("change_pct", 0))}</div>
+<div style="font-size:9px;opacity:0.4;margin-top:2px;">as of {now.strftime("%b %-d")}</div>
 </td>
-<td width="33%" align="center" style="padding:10px 8px 12px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">USD/CNY</div>
-<div style="font-size:18px;font-weight:700;">{_esc(str(cny.get("value", "—")))}</div>
+<td width="33%" align="center" style="padding:12px 8px 10px;">
+<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;opacity:0.55;">USD/CNY</div>
+<div style="font-size:20px;font-weight:700;margin:2px 0;">{_esc(str(cny.get("value", "—")))}</div>
 <div style="font-size:11px;">{_arrow(cny.get("change_pct", 0))}</div>
+<div style="font-size:9px;opacity:0.4;margin-top:2px;">as of {now.strftime("%b %-d")}</div>
 </td>
 </tr>
 </table>
@@ -363,12 +366,21 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
     memo = digest.get("morning_memo") or []
     if memo:
         memo_html = ""
-        for mi in memo[:3]:
+        for idx, mi in enumerate(memo[:3], 1):
             t = _esc(mi) if isinstance(mi, str) else _esc(mi.get("text", "") if isinstance(mi, dict) else str(mi or ""))
-            memo_html += f'<div style="margin-bottom:8px;padding-left:12px;border-left:3px solid #1B2A4A;"><div style="font-size:14px;line-height:1.5;color:#333;font-family:Georgia,serif;">{t}</div></div>'
+            memo_html += f"""<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
+<tr>
+<td width="28" style="vertical-align:top;padding-top:1px;">
+<div style="width:22px;height:22px;border-radius:50%;background:#1B2A4A;color:#fff;font-size:11px;font-weight:700;text-align:center;line-height:22px;font-family:Arial,sans-serif;">{idx}</div>
+</td>
+<td style="vertical-align:top;padding-left:8px;">
+<div style="font-size:14px;line-height:1.5;color:#222;font-family:Georgia,serif;">{t}</div>
+</td>
+</tr>
+</table>"""
         sections_today.append(f"""
-<div style="padding:14px 32px;border-bottom:2px solid #1B2A4A;" class="sec">
-<span {_PILL("#1B2A4A")}>Morning Memo</span>
+<div style="padding:16px 32px 12px;border-bottom:1px solid #E8E8E8;" class="sec">
+<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #D4AC0D;display:inline-block;">Today at a Glance</div>
 {memo_html}
 </div>""")
 
@@ -392,7 +404,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:#2980B9;font-weight:700;margin-bottom:6px;">{cat}</div>
 <h3 style="margin:0 0 8px 0;font-size:16px;line-height:1.4;color:#1B2A4A;font-family:Georgia,serif;font-weight:700;">{_link_or_text(h, url, style="color:#1B2A4A;text-decoration:none;")}</h3>
 {"<p style='margin:0 0 10px 0;font-size:13px;line-height:1.55;color:#333;'>" + b + "</p>" if b else ""}
-{"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#2980B9;'><strong>So what:</strong> " + sw + "</p>" if sw else ""}
+{"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#2980B9;'><strong>So what:</strong> " + _link_or_text(sw, url, style="color:#2980B9;text-decoration:underline;") + "</p>" if sw else ""}
 {"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#5D6D7E;font-style:italic;'><strong>Pattern:</strong> " + pn + "</p>" if pn else ""}
 <div style="font-size:10px;color:#999;margin-top:6px;">{sl}</div>
 </div>"""
