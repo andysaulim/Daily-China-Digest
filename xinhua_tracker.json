@@ -10,8 +10,8 @@
     },
     "2026-05-21": {
       "new stage of bilateral relations / 双边关系新阶段": 5,
-      "multipolar world / 多极世界": 3,
-      "strategic partnership / 战略伙伴关系": 4
+      "strategic partnership / 战略伙伴关系": 4,
+      "multipolar world / 多极世界": 3
     }
   },
   "tone_history": {
@@ -26,8 +26,9 @@
       "russia": "Highly positive — unprecedented partnership level and joint criticism of Western policies"
     },
     "2026-05-21": {
-      "russia": "Highly positive - emphasizing new stage of strategic partnership and unprecedented cooperation level"
+      "taiwan": "Hostile — attacking Lai Ching-te's popular support and rejecting Taiwan independence as lacking backing",
+      "russia": "Highly positive — emphasizing new stage of strategic partnership and unprecedented cooperation level"
     }
   },
-  "last_updated": "2026-05-21T13:50:14.016697+00:00"
+  "last_updated": "2026-05-21T14:27:09.583426+00:00"
 }
