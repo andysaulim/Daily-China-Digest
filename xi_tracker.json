@@ -1,6 +1,13 @@
 {
   "appearances": [
     {
+      "date": "2026-05-21",
+      "activity": "Xi held formal talks with Putin, attended signing ceremony of cooperation documents, and jointly addressed opening ceremony of China-Russia Years of Education.",
+      "source": "digest",
+      "url": "",
+      "recorded_at": "2026-05-21T13:50:14.016386+00:00"
+    },
+    {
       "date": "2026-05-20",
       "activity": "Confirmed appearance",
       "source": "digest",
@@ -36,5 +43,5 @@
       "recorded_at": "2026-05-19T02:33:43.258271+00:00"
     }
   ],
-  "last_updated": "2026-05-20T21:19:19.868577+00:00"
+  "last_updated": "2026-05-21T13:50:14.016419+00:00"
 }

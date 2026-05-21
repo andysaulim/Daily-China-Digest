@@ -7,6 +7,11 @@
     "2026-05-20": {
       "new productive forces / 新质生产力": 5,
       "Chinese-style modernization / 中国式现代化": 2
+    },
+    "2026-05-21": {
+      "new stage of bilateral relations / 双边关系新阶段": 5,
+      "multipolar world / 多极世界": 3,
+      "strategic partnership / 战略伙伴关系": 4
     }
   },
   "tone_history": {
@@ -19,7 +24,10 @@
       "us": "Cautiously cooperative — emphasizing trade agreements and managed competition framework",
       "taiwan": "Hostile — rejecting Lai's anniversary speech as destructive to peace and stability",
       "russia": "Highly positive — unprecedented partnership level and joint criticism of Western policies"
+    },
+    "2026-05-21": {
+      "russia": "Highly positive - emphasizing new stage of strategic partnership and unprecedented cooperation level"
     }
   },
-  "last_updated": "2026-05-20T21:19:19.868841+00:00"
+  "last_updated": "2026-05-21T13:50:14.016697+00:00"
 }
