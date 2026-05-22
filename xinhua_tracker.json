@@ -12,6 +12,10 @@
       "new stage of bilateral relations / 双边关系新阶段": 5,
       "strategic partnership / 战略伙伴关系": 4,
       "multipolar world / 多极世界": 3
+    },
+    "2026-05-22": {
+      "new stage of bilateral relations / 双边关系新阶段": 1,
+      "strategic partnership / 战略伙伴关系": 1
     }
   },
   "tone_history": {
@@ -28,7 +32,12 @@
     "2026-05-21": {
       "taiwan": "Hostile — attacking Lai Ching-te's popular support and rejecting Taiwan independence as lacking backing",
       "russia": "Highly positive — emphasizing new stage of strategic partnership and unprecedented cooperation level"
+    },
+    "2026-05-22": {
+      "us": "Cautiously positive - emphasizing agricultural cooperation while maintaining criticism of arms sales",
+      "taiwan": "Hostile - slamming Lai's anniversary speech for advocating secessionism",
+      "russia": "Highly positive - highlighting 19.7% trade growth and deepened partnership"
     }
   },
-  "last_updated": "2026-05-21T14:27:09.583426+00:00"
+  "last_updated": "2026-05-22T12:44:13.932091+00:00"
 }
