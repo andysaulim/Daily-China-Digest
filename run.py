@@ -469,6 +469,16 @@ def main():
                        help="Send even if validation gates fail")
     args = parser.parse_args()
 
+    # Guard against double-send from dual DST crons — exit cleanly if
+    # today's archive file already exists (i.e. the earlier cron already ran).
+    if not args.dry_run and not args.force_send:
+        from zoneinfo import ZoneInfo
+        today_str = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
+        already_done = PUBLIC_DIR / f"{today_str}.html"
+        if already_done.exists():
+            print(f"⏭  Today's digest already sent ({today_str}) — skipping duplicate run.")
+            return 0
+
     try:
         return run_pipeline(args)
     except KeyboardInterrupt:
