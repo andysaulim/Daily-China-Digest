@@ -20,7 +20,8 @@
     },
     "2026-05-23": {
       "new productive forces / 新质生产力": 2,
-      "Chinese-style modernization / 中国式现代化": 0
+      "China-Russia strategic partnership / 中俄战略伙伴关系": 0,
+      "new stage of bilateral relations / 双边关系新阶段": 0
     }
   },
   "tone_history": {
@@ -44,10 +45,9 @@
       "russia": "Highly positive - highlighting 19.7% trade growth and deepened partnership"
     },
     "2026-05-23": {
-      "us": "Cautiously positive — emphasizing agricultural cooperation while maintaining criticism of arms sales",
-      "russia": "Highly positive — continuing recent partnership emphasis",
-      "eu": "Cooperative — highlighting Moldova engagement"
+      "us": "Cautiously positive - emphasizing diplomatic engagement through UN Security Council role and maintaining communication channels",
+      "eu": "Cooperative - highlighting Moldova engagement and European outreach"
     }
   },
-  "last_updated": "2026-05-23T11:50:12.790706+00:00"
+  "last_updated": "2026-05-23T12:18:08.694634+00:00"
 }
