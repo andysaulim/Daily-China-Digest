@@ -17,6 +17,10 @@
       "China-Russia strategic partnership / 中俄战略伙伴关系": 4,
       "new stage of bilateral relations / 双边关系新阶段": 1,
       "multipolar world / 多极世界": 0
+    },
+    "2026-05-23": {
+      "new productive forces / 新质生产力": 2,
+      "Chinese-style modernization / 中国式现代化": 0
     }
   },
   "tone_history": {
@@ -38,7 +42,12 @@
       "us": "Cautiously positive - emphasizing agricultural cooperation while maintaining criticism of arms sales",
       "taiwan": "Hostile - slamming Lai's anniversary speech for advocating secessionism",
       "russia": "Highly positive - highlighting 19.7% trade growth and deepened partnership"
+    },
+    "2026-05-23": {
+      "us": "Cautiously positive — emphasizing agricultural cooperation while maintaining criticism of arms sales",
+      "russia": "Highly positive — continuing recent partnership emphasis",
+      "eu": "Cooperative — highlighting Moldova engagement"
     }
   },
-  "last_updated": "2026-05-22T13:48:25.149370+00:00"
+  "last_updated": "2026-05-23T11:50:12.790706+00:00"
 }
