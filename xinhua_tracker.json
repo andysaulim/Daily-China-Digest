@@ -26,6 +26,10 @@
     "2026-05-24": {
       "new productive forces / 新质生产力": 3,
       "China-Russia strategic partnership / 中俄战略伙伴关系": 0
+    },
+    "2026-05-25": {
+      "strategic partnership / 战略伙伴关系": 4,
+      "new productive forces / 新质生产力": 1
     }
   },
   "tone_history": {
@@ -53,5 +57,5 @@
       "eu": "Cooperative - highlighting Moldova engagement and European outreach"
     }
   },
-  "last_updated": "2026-05-24T12:43:41.785992+00:00"
+  "last_updated": "2026-05-25T13:50:36.433354+00:00"
 }
