@@ -30,6 +30,11 @@
     "2026-05-25": {
       "strategic partnership / 战略伙伴关系": 4,
       "new productive forces / 新质生产力": 1
+    },
+    "2026-05-26": {
+      "strategic partnership / 战略伙伴关系": 12,
+      "new productive forces / 新质生产力": 15,
+      "common prosperity / 共同富裕": 2
     }
   },
   "tone_history": {
@@ -55,7 +60,11 @@
     "2026-05-23": {
       "us": "Cautiously positive - emphasizing diplomatic engagement through UN Security Council role and maintaining communication channels",
       "eu": "Cooperative - highlighting Moldova engagement and European outreach"
+    },
+    "2026-05-26": {
+      "us": "Neutral to positive - emphasizing Pakistan's mediation role in US-Iran talks without direct criticism",
+      "japan": "Critical - MOFA defended Xi's reported criticism of Japan's 'remilitarisation' at Trump summit"
     }
   },
-  "last_updated": "2026-05-25T14:25:50.971818+00:00"
+  "last_updated": "2026-05-26T13:41:42.568863+00:00"
 }
