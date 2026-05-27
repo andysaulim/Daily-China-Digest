@@ -36,8 +36,8 @@
       "strategic partnership / 战略伙伴关系": 12
     },
     "2026-05-27": {
-      "strategic partnership / 战略伙伴关系": 20,
-      "new productive forces / 新质生产力": 26
+      "new productive forces / 新质生产力": 26,
+      "strategic partnership / 战略伙伴关系": 20
     }
   },
   "tone_history": {
@@ -69,10 +69,11 @@
       "japan": "Critical - MOFA defended Xi's reported criticism of Japan's 'remilitarisation' at Trump summit"
     },
     "2026-05-27": {
-      "us": "Cautiously cooperative - emphasizing diplomatic engagement and hoping for Iran-US negotiations breakthrough",
-      "japan": "Critical - implicit criticism of resurgent militarism through China-Pakistan joint statement",
-      "taiwan": "Hostile - Taiwan Affairs Office demanding immediate abandonment of independence platform"
+      "us": "Neutral - no direct commentary on bilateral relations in official statements",
+      "taiwan": "Critical - TAO spokesperson slammed separatist remarks and warned arms purchases will accelerate independence movement collapse",
+      "eu": "Cooperative - emphasized expanding trade ties with Serbia and Czech Republic",
+      "russia": "Positive - continued highlighting strategic partnership through youth games and bilateral exchanges"
     }
   },
-  "last_updated": "2026-05-27T14:07:13.431431+00:00"
+  "last_updated": "2026-05-27T14:42:13.421518+00:00"
 }
