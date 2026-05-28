@@ -38,6 +38,10 @@
     "2026-05-27": {
       "new productive forces / 新质生产力": 26,
       "strategic partnership / 战略伙伴关系": 20
+    },
+    "2026-05-28": {
+      "strategic partnership / 战略伙伴关系": 20,
+      "new productive forces / 新质生产力": 1
     }
   },
   "tone_history": {
@@ -73,7 +77,13 @@
       "taiwan": "Critical - TAO spokesperson slammed separatist remarks and warned arms purchases will accelerate independence movement collapse",
       "eu": "Cooperative - emphasized expanding trade ties with Serbia and Czech Republic",
       "russia": "Positive - continued highlighting strategic partnership through youth games and bilateral exchanges"
+    },
+    "2026-05-28": {
+      "japan": "Critical — MOFA expressed concern over Japan's intelligence apparatus development as destabilizing",
+      "taiwan": "Hostile — TAO warned arms purchases will accelerate independence movement collapse",
+      "eu": "Cooperative — emphasized expanding ties with Serbia and Czech Republic",
+      "russia": "Positive — highlighted China-Russia Youth Games and deepening law enforcement cooperation"
     }
   },
-  "last_updated": "2026-05-27T14:42:13.421518+00:00"
+  "last_updated": "2026-05-28T14:10:09.989126+00:00"
 }
