@@ -42,6 +42,11 @@
     "2026-05-28": {
       "strategic partnership / 战略伙伴关系": 20,
       "new productive forces / 新质生产力": 1
+    },
+    "2026-05-29": {
+      "strategic partnership / 战略伙伴关系": 56,
+      "new productive forces / 新质生产力": 48,
+      "China-Russia strategic partnership / 中俄战略伙伴关系": 4
     }
   },
   "tone_history": {
@@ -83,7 +88,12 @@
       "taiwan": "Hostile — TAO warned arms purchases will accelerate independence movement collapse",
       "eu": "Cooperative — emphasized expanding ties with Serbia and Czech Republic",
       "russia": "Positive — highlighted China-Russia Youth Games and deepening law enforcement cooperation"
+    },
+    "2026-05-29": {
+      "us": "Cooperative — emphasizing youth friendship programs and people-to-people exchanges",
+      "eu": "Positive — highlighting cooperation with European companies and Portuguese diplomatic engagement",
+      "russia": "Positive — continuing law enforcement cooperation and strategic partnership development"
     }
   },
-  "last_updated": "2026-05-28T14:10:09.989126+00:00"
+  "last_updated": "2026-05-29T12:56:39.905453+00:00"
 }
