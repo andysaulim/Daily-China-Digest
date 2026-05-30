@@ -47,6 +47,10 @@
       "strategic partnership / 战略伙伴关系": 56,
       "new productive forces / 新质生产力": 48,
       "China-Russia strategic partnership / 中俄战略伙伴关系": 4
+    },
+    "2026-05-30": {
+      "strategic partnership / 战略伙伴关系": 112,
+      "new productive forces / 新质生产力": 96
     }
   },
   "tone_history": {
@@ -93,7 +97,11 @@
       "us": "Cooperative — emphasizing youth friendship programs and people-to-people exchanges",
       "eu": "Positive — highlighting cooperation with European companies and Portuguese diplomatic engagement",
       "russia": "Positive — continuing law enforcement cooperation and strategic partnership development"
+    },
+    "2026-05-30": {
+      "us": "Positive — emphasizing youth friendship programs and people-to-people exchanges",
+      "canada": "Cooperative — highlighting trade partnership potential and diplomatic engagement"
     }
   },
-  "last_updated": "2026-05-29T12:56:39.905453+00:00"
+  "last_updated": "2026-05-30T11:33:54.515210+00:00"
 }

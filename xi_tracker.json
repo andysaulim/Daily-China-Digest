@@ -1,6 +1,13 @@
 {
   "appearances": [
     {
+      "date": "2026-05-30",
+      "activity": "Xi Jinping replied to letter from Chinese and US students in youth friendship program, emphasizing cultural exchanges and mutual understanding between countries.",
+      "source": "digest",
+      "url": "",
+      "recorded_at": "2026-05-30T11:33:54.514780+00:00"
+    },
+    {
       "date": "2026-05-29",
       "activity": "Xi exchanged congratulations with Austrian President on 55th anniversary of diplomatic ties and replied to letter from Chinese and US students in youth friendship program.",
       "source": "digest",
@@ -99,5 +106,5 @@
       "recorded_at": "2026-05-19T02:33:43.258271+00:00"
     }
   ],
-  "last_updated": "2026-05-29T12:56:39.905084+00:00"
+  "last_updated": "2026-05-30T11:33:54.514814+00:00"
 }
