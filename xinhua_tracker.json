@@ -51,6 +51,10 @@
     "2026-05-30": {
       "strategic partnership / 战略伙伴关系": 112,
       "new productive forces / 新质生产力": 96
+    },
+    "2026-05-31": {
+      "strategic partnership / 战略伙伴关系": 336,
+      "new productive forces / 新质生产力": 286
     }
   },
   "tone_history": {
@@ -101,7 +105,12 @@
     "2026-05-30": {
       "us": "Positive — emphasizing youth friendship programs and people-to-people exchanges",
       "canada": "Cooperative — highlighting trade partnership potential and diplomatic engagement"
+    },
+    "2026-05-31": {
+      "us": "Cooperative — emphasizing youth exchanges and stable agricultural trade relations with Iowa farmers",
+      "japan": "Critical — strong pushback on 'new militarism' narrative and opposition to Japan-Philippines coordination",
+      "eu": "Defensive — opposing EU cybersecurity act revisions affecting Chinese tech companies"
     }
   },
-  "last_updated": "2026-05-30T11:33:54.515210+00:00"
+  "last_updated": "2026-05-31T12:01:01.845435+00:00"
 }
