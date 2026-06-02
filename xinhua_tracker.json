@@ -59,6 +59,10 @@
     "2026-06-01": {
       "strategic partnership / 战略伙伴关系": 560,
       "new productive forces / 新质生产力": 473
+    },
+    "2026-06-02": {
+      "strategic partnership / 战略伙伴关系": 1116,
+      "new productive forces / 新质生产力": 945
     }
   },
   "tone_history": {
@@ -119,7 +123,13 @@
       "taiwan": "Hostile - strong condemnation of Czech Senate President's Taiwan visit with demands for immediate corrective measures",
       "eu": "Defensive - demanding Czech Republic take immediate measures to eliminate negative impact of Senate President's Taiwan visit",
       "russia": "Positive - continued emphasis on parliamentary cooperation and legislative exchanges"
+    },
+    "2026-06-02": {
+      "us": "Cooperative - emphasizing constructive military exchanges through Hawaii meeting",
+      "japan": "Critical - opposing Japan-Philippines maritime boundary negotiations affecting Chinese territorial claims",
+      "eu": "Positive - strengthening ties with UK through high-level diplomatic engagement",
+      "russia": "Positive - continuing parliamentary cooperation through legislative exchanges"
     }
   },
-  "last_updated": "2026-06-01T16:15:49.340933+00:00"
+  "last_updated": "2026-06-02T14:20:54.498494+00:00"
 }
