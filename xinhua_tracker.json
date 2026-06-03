@@ -63,6 +63,10 @@
     "2026-06-02": {
       "strategic partnership / 战略伙伴关系": 1116,
       "new productive forces / 新质生产力": 945
+    },
+    "2026-06-03": {
+      "strategic partnership / 战略伙伴关系": 1116,
+      "new productive forces / 新质生产力": 945
     }
   },
   "tone_history": {
@@ -129,7 +133,13 @@
       "japan": "Critical - opposing Japan-Philippines maritime boundary negotiations affecting Chinese territorial claims",
       "eu": "Positive - strengthening ties with UK through high-level diplomatic engagement",
       "russia": "Positive - continuing parliamentary cooperation through legislative exchanges"
+    },
+    "2026-06-03": {
+      "us": "Cooperative - emphasizing Cross-Strait peace as common interest despite military cooperation criticism",
+      "japan": "Critical - condemning Japan-Philippines maritime negotiations as illegal interference in Chinese territorial waters",
+      "taiwan": "Hostile - strong condemnation of independence activities and US military ties",
+      "russia": "Positive - continued parliamentary and legislative cooperation emphasis"
     }
   },
-  "last_updated": "2026-06-02T14:20:54.498494+00:00"
+  "last_updated": "2026-06-03T14:57:23.889415+00:00"
 }
