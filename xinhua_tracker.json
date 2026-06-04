@@ -67,6 +67,10 @@
     "2026-06-03": {
       "strategic partnership / 战略伙伴关系": 1116,
       "new productive forces / 新质生产力": 945
+    },
+    "2026-06-04": {
+      "strategic partnership / 战略伙伴关系": 1116,
+      "new productive forces / 新质生产力": 945
     }
   },
   "tone_history": {
@@ -139,7 +143,12 @@
       "japan": "Critical - condemning Japan-Philippines maritime negotiations as illegal interference in Chinese territorial waters",
       "taiwan": "Hostile - strong condemnation of independence activities and US military ties",
       "russia": "Positive - continued parliamentary and legislative cooperation emphasis"
+    },
+    "2026-06-04": {
+      "us": "Cooperative - emphasizing Cross-Strait peace as common interest despite military cooperation criticism",
+      "japan": "Critical - condemning Japan-Philippines maritime negotiations as illegal interference in Chinese territorial waters",
+      "taiwan": "Hostile - strong condemnation of independence activities and US military ties"
     }
   },
-  "last_updated": "2026-06-03T14:57:23.889415+00:00"
+  "last_updated": "2026-06-04T12:53:50.863659+00:00"
 }
