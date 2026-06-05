@@ -71,6 +71,10 @@
     "2026-06-04": {
       "strategic partnership / 战略伙伴关系": 1116,
       "new productive forces / 新质生产力": 945
+    },
+    "2026-06-05": {
+      "strategic partnership / 战略伙伴关系": 1116,
+      "new productive forces / 新质生产力": 945
     }
   },
   "tone_history": {
@@ -148,7 +152,12 @@
       "us": "Cooperative - emphasizing Cross-Strait peace as common interest despite military cooperation criticism",
       "japan": "Critical - condemning Japan-Philippines maritime negotiations as illegal interference in Chinese territorial waters",
       "taiwan": "Hostile - strong condemnation of independence activities and US military ties"
+    },
+    "2026-06-05": {
+      "us": "Defensive — rejecting Five Eyes espionage allegations while criticizing US blockade policies",
+      "japan": "Critical — condemning Japan's military expansion as whitewashing militarization efforts",
+      "taiwan": "Hostile — slamming DPP authorities for dollar diplomacy and independence activities"
     }
   },
-  "last_updated": "2026-06-04T12:53:50.863659+00:00"
+  "last_updated": "2026-06-05T12:51:46.039446+00:00"
 }
