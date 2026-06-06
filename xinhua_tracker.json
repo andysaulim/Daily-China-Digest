@@ -75,6 +75,10 @@
     "2026-06-05": {
       "strategic partnership / 战略伙伴关系": 1116,
       "new productive forces / 新质生产力": 945
+    },
+    "2026-06-06": {
+      "strategic partnership / 战略伙伴关系": 1116,
+      "new productive forces / 新质生产力": 945
     }
   },
   "tone_history": {
@@ -157,7 +161,11 @@
       "us": "Defensive — rejecting Five Eyes espionage allegations while criticizing US blockade policies",
       "japan": "Critical — condemning Japan's military expansion as whitewashing militarization efforts",
       "taiwan": "Hostile — slamming DPP authorities for dollar diplomacy and independence activities"
+    },
+    "2026-06-06": {
+      "us": "Defensive - rejecting BIS export control guidance as abuse disrupting global semiconductor supply chains",
+      "taiwan": "Hostile - maintaining high military alert posture following Dutch frigate transit through Taiwan Strait"
     }
   },
-  "last_updated": "2026-06-05T12:51:46.039446+00:00"
+  "last_updated": "2026-06-06T11:43:48.101400+00:00"
 }
