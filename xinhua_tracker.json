@@ -79,6 +79,10 @@
     "2026-06-06": {
       "strategic partnership / 战略伙伴关系": 1116,
       "new productive forces / 新质生产力": 945
+    },
+    "2026-06-07": {
+      "strategic partnership / 战略伙伴关系": 1116,
+      "new productive forces / 新质生产力": 945
     }
   },
   "tone_history": {
@@ -165,7 +169,13 @@
     "2026-06-06": {
       "us": "Defensive - rejecting BIS export control guidance as abuse disrupting global semiconductor supply chains",
       "taiwan": "Hostile - maintaining high military alert posture following Dutch frigate transit through Taiwan Strait"
+    },
+    "2026-06-07": {
+      "us": "Defensive — rejecting US Cuba sanctions as harmful unilateral blockade disrupting regional stability",
+      "taiwan": "Hostile — maintaining escalated patrol posture with largest vessel deployment east of Taiwan",
+      "japan": "Critical — condemning Japan-Philippines boundary negotiations as interference in Chinese territorial waters",
+      "russia": "Positive — continued economic forum cooperation through vice presidential attendance"
     }
   },
-  "last_updated": "2026-06-06T11:43:48.101400+00:00"
+  "last_updated": "2026-06-07T11:59:41.822169+00:00"
 }

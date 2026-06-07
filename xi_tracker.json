@@ -1,6 +1,13 @@
 {
   "appearances": [
     {
+      "date": "2026-06-07",
+      "activity": "Xi Jinping announced state visit to North Korea scheduled for June 8-9, his first Pyongyang trip since 2019.",
+      "source": "digest",
+      "url": "",
+      "recorded_at": "2026-06-07T11:59:41.821711+00:00"
+    },
+    {
       "date": "2026-06-06",
       "activity": "Xi Jinping announced state visit to North Korea June 8-9 for meetings with Kim Jong Un",
       "source": "digest",
@@ -134,5 +141,5 @@
       "recorded_at": "2026-05-19T02:33:43.258271+00:00"
     }
   ],
-  "last_updated": "2026-06-06T11:43:48.100991+00:00"
+  "last_updated": "2026-06-07T11:59:41.821750+00:00"
 }
