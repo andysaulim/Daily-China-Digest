@@ -1,6 +1,13 @@
 {
   "appearances": [
     {
+      "date": "2026-06-08",
+      "activity": "Xi Jinping arrived in Pyongyang for a state visit to North Korea, his first trip to the DPRK in seven years",
+      "source": "digest",
+      "url": "",
+      "recorded_at": "2026-06-08T14:21:04.701418+00:00"
+    },
+    {
       "date": "2026-06-07",
       "activity": "Xi Jinping announced state visit to North Korea scheduled for June 8-9, his first Pyongyang trip since 2019.",
       "source": "digest",
@@ -141,5 +148,5 @@
       "recorded_at": "2026-05-19T02:33:43.258271+00:00"
     }
   ],
-  "last_updated": "2026-06-07T11:59:41.821750+00:00"
+  "last_updated": "2026-06-08T14:21:04.701457+00:00"
 }
