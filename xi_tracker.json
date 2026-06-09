@@ -1,6 +1,13 @@
 {
   "appearances": [
     {
+      "date": "2026-06-09",
+      "activity": "Xi Jinping concluded his state visit to North Korea with meetings and banquet hosted by Kim Jong Un, emphasizing unwavering Chinese support for the DPRK",
+      "source": "digest",
+      "url": "",
+      "recorded_at": "2026-06-09T12:52:24.555510+00:00"
+    },
+    {
       "date": "2026-06-08",
       "activity": "Xi Jinping arrived in Pyongyang for a state visit to North Korea, his first trip to the DPRK in seven years",
       "source": "digest",
@@ -148,5 +155,5 @@
       "recorded_at": "2026-05-19T02:33:43.258271+00:00"
     }
   ],
-  "last_updated": "2026-06-08T14:21:04.701457+00:00"
+  "last_updated": "2026-06-09T12:52:24.555579+00:00"
 }
