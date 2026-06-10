@@ -91,6 +91,10 @@
     "2026-06-09": {
       "strategic partnership / 战略伙伴关系": 13952,
       "new productive forces / 新质生产力": 11813
+    },
+    "2026-06-10": {
+      "strategic partnership / 战略伙伴关系": 13952,
+      "new productive forces / 新质生产力": 11813
     }
   },
   "tone_history": {
@@ -183,7 +187,10 @@
       "taiwan": "Hostile — maintaining escalated patrol posture with largest vessel deployment east of Taiwan",
       "japan": "Critical — condemning Japan-Philippines boundary negotiations as interference in Chinese territorial waters",
       "russia": "Positive — continued economic forum cooperation through vice presidential attendance"
+    },
+    "2026-06-10": {
+      "taiwan": "Hostile — escalated rhetoric warning DPP authorities of consequences for provocative coast guard actions"
     }
   },
-  "last_updated": "2026-06-09T12:52:24.556032+00:00"
+  "last_updated": "2026-06-10T13:44:39.385473+00:00"
 }

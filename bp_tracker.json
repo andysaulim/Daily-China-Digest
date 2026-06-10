@@ -5,49 +5,49 @@
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
       "direction": "",
-      "updated_at": "2026-06-09T12:52:24.556452+00:00"
+      "updated_at": "2026-06-10T13:44:39.385973+00:00"
     },
     "Scarborough Shoal": {
-      "status": "activity",
-      "note": "China Coast Guard patrols Huangyan Dao according to People's Daily reporting",
-      "last_source_date": "2026-06-01",
+      "status": "elevated",
+      "note": "Philippines protests Chinese floating structure deployment, demands removal through diplomatic channels",
+      "last_source_date": "2026-06-10",
       "direction": "up",
-      "updated_at": "2026-06-09T12:52:24.556761+00:00"
+      "updated_at": "2026-06-10T13:44:39.386315+00:00"
     },
     "Second Thomas Shoal (Ayungin)": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
       "direction": "",
-      "updated_at": "2026-06-09T12:52:24.557055+00:00"
+      "updated_at": "2026-06-10T13:44:39.386606+00:00"
     },
     "Sandy Cay": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
       "direction": "",
-      "updated_at": "2026-06-09T12:52:24.557299+00:00"
+      "updated_at": "2026-06-10T13:44:39.386964+00:00"
     },
     "Mischief Reef": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
       "direction": "",
-      "updated_at": "2026-06-09T12:52:24.557531+00:00"
+      "updated_at": "2026-06-10T13:44:39.387284+00:00"
     },
     "Fiery Cross Reef": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
       "direction": "",
-      "updated_at": "2026-06-09T12:52:24.557823+00:00"
+      "updated_at": "2026-06-10T13:44:39.387600+00:00"
     },
     "Subi Reef": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
       "direction": "",
-      "updated_at": "2026-06-09T12:52:24.558057+00:00"
+      "updated_at": "2026-06-10T13:44:39.387930+00:00"
     },
     "Senkaku / Diaoyu Islands": {
       "status": "normal",
@@ -61,7 +61,7 @@
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
       "direction": "",
-      "updated_at": "2026-06-09T12:52:24.558610+00:00"
+      "updated_at": "2026-06-10T13:44:39.388252+00:00"
     },
     "Cuba SIGINT (Bejucal / Wajay)": {
       "status": "normal",
@@ -82,21 +82,21 @@
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
       "direction": "",
-      "updated_at": "2026-06-09T12:52:24.559305+00:00"
+      "updated_at": "2026-06-10T13:44:39.388641+00:00"
     },
     "Khalifa Port, UAE": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
       "direction": "",
-      "updated_at": "2026-06-09T12:52:24.559528+00:00"
+      "updated_at": "2026-06-10T13:44:39.388957+00:00"
     },
     "Ream Naval Base, Cambodia": {
       "status": "normal",
       "note": "No reporting yet",
       "last_source_date": "2026-05-20",
       "direction": "",
-      "updated_at": "2026-06-09T12:52:24.559804+00:00"
+      "updated_at": "2026-06-10T13:44:39.389262+00:00"
     },
     "Hambantota / Bay of Bengal": {
       "status": "normal",
@@ -110,8 +110,8 @@
       "note": "No reporting yet",
       "last_source_date": "2026-05-19",
       "direction": "",
-      "updated_at": "2026-06-09T12:52:24.560261+00:00"
+      "updated_at": "2026-06-10T13:44:39.389613+00:00"
     }
   },
-  "last_updated": "2026-06-09T12:52:24.560266+00:00"
+  "last_updated": "2026-06-10T13:44:39.389620+00:00"
 }
