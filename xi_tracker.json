@@ -1,6 +1,13 @@
 {
   "appearances": [
     {
+      "date": "2026-06-12",
+      "activity": "Xi concluded North Korea state visit with meetings and banquet emphasizing China-DPRK strategic partnership",
+      "source": "digest",
+      "url": "",
+      "recorded_at": "2026-06-12T13:39:55.163365+00:00"
+    },
+    {
       "date": "2026-06-11",
       "activity": "Xi concluded his state visit to North Korea with meetings and banquet hosted by Kim Jong Un, emphasizing unwavering Chinese support for the DPRK",
       "source": "digest",
@@ -162,5 +169,5 @@
       "recorded_at": "2026-05-19T02:33:43.258271+00:00"
     }
   ],
-  "last_updated": "2026-06-11T14:10:25.285878+00:00"
+  "last_updated": "2026-06-12T13:39:55.163405+00:00"
 }

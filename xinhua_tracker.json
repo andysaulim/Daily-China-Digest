@@ -99,6 +99,10 @@
     "2026-06-11": {
       "strategic partnership / 战略伙伴关系": 13952,
       "new productive forces / 新质生产力": 11813
+    },
+    "2026-06-12": {
+      "strategic partnership / 战略伙伴关系": 13952,
+      "new productive forces / 新质生产力": 11813
     }
   },
   "tone_history": {
@@ -198,7 +202,13 @@
     "2026-06-11": {
       "japan": "Critical — condemning Japan-Philippines maritime negotiations as interference in Chinese territorial waters",
       "taiwan": "Hostile — warning DPP authorities of consequences for provocative coast guard actions"
+    },
+    "2026-06-12": {
+      "us": "Defensive - continuing espionage detention amid broader bilateral tensions",
+      "japan": "Critical - condemning Japan-Philippines maritime boundary negotiations as interference",
+      "taiwan": "Hostile - maintaining elevated military alert posture with sanctions rhetoric",
+      "russia": "Positive - continued diplomatic coordination following Xi's Pyongyang visit"
     }
   },
-  "last_updated": "2026-06-11T14:10:25.286301+00:00"
+  "last_updated": "2026-06-12T13:39:55.163859+00:00"
 }
