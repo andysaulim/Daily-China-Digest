@@ -103,6 +103,10 @@
     "2026-06-12": {
       "strategic partnership / 战略伙伴关系": 13952,
       "new productive forces / 新质生产力": 11813
+    },
+    "2026-06-13": {
+      "strategic partnership / 战略伙伴关系": 65296,
+      "new productive forces / 新质生产力": 55285
     }
   },
   "tone_history": {
@@ -208,7 +212,11 @@
       "japan": "Critical - condemning Japan-Philippines maritime boundary negotiations as interference",
       "taiwan": "Hostile - maintaining elevated military alert posture with sanctions rhetoric",
       "russia": "Positive - continued diplomatic coordination following Xi's Pyongyang visit"
+    },
+    "2026-06-13": {
+      "us": "Defensive - condemning Pentagon military companies designation as discriminatory targeting of Chinese enterprises",
+      "taiwan": "Positive - welcoming enthusiastic Taiwanese participation at Straits Forum despite DPP obstacles"
     }
   },
-  "last_updated": "2026-06-12T13:39:55.163859+00:00"
+  "last_updated": "2026-06-13T12:03:55.882209+00:00"
 }
