@@ -107,6 +107,10 @@
     "2026-06-13": {
       "strategic partnership / 战略伙伴关系": 65296,
       "new productive forces / 新质生产力": 55285
+    },
+    "2026-06-14": {
+      "strategic partnership / 战略伙伴关系": 129476,
+      "new productive forces / 新质生产力": 109625
     }
   },
   "tone_history": {
@@ -216,7 +220,13 @@
     "2026-06-13": {
       "us": "Defensive - condemning Pentagon military companies designation as discriminatory targeting of Chinese enterprises",
       "taiwan": "Positive - welcoming enthusiastic Taiwanese participation at Straits Forum despite DPP obstacles"
+    },
+    "2026-06-14": {
+      "us": "Defensive - condemning Pentagon military companies designation as discriminatory targeting of Chinese enterprises",
+      "japan": "Critical - condemning Japan's militarism and historical revisionism through CGTN commentary",
+      "taiwan": "Hostile - maintaining DPP criticism and promoting reunification narrative through Straits Forum coverage",
+      "russia": "Positive - continuing coordination following Xi's recent Pyongyang visit"
     }
   },
-  "last_updated": "2026-06-13T12:03:55.882209+00:00"
+  "last_updated": "2026-06-14T12:08:49.464695+00:00"
 }
