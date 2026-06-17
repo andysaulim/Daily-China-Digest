@@ -766,8 +766,8 @@ def _robust_json_parse(raw: str) -> dict:
 # CLAUDE API CALL — Sonnet primary, Opus retry
 # ─────────────────────────────────────────────────────────────────────────────
 
-FAST_MODEL = "claude-sonnet-4-20250514"
-PRIMARY_MODEL = "claude-opus-4-20250514"
+FAST_MODEL = "claude-sonnet-4-6"
+PRIMARY_MODEL = "claude-opus-4-8"
 _JSON_PREFILL = '{"'
 
 
