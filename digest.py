@@ -109,6 +109,8 @@ JOURNALIST FLAGGING: Items whose byline matches the China-correspondent watch-li
 
 CHINESE-LANGUAGE SOURCES: Items marked "lang": "ZH" come from PRC, Hong Kong, Taiwan and overseas Chinese-language outlets and government sites (人民日报, 新华社, 环球时报, 外交部, 国台办, 国防部, 澎湃, 财新, 联合报, 明报, 联合早报, and the Chinese editions of the NYT, FT, WSJ, BBC, DW and VOA). Read them in the original. Translate the title into English for translated_title and every output headline. When you quote a Chinese-language source, give the English translation as the quote and put the verbatim Chinese in original_zh. A ZH item is often the only primary record of what a ministry said; prefer it over a wire paraphrase for official_line and xinhua_delta.
 
+EXPERT WATCH-LIST: items carrying "expert_flag": [names] are written by, or quote, analysts the readership follows (CSIS, Brookings, Carnegie, CFR, Hoover, MERICS, ASPI, Lowy, and the Chinese scholars at CICIR, CIIS, SIIS, Tsinghua CISS, Renmin and Fudan). Treat an expert's own byline as a Tier 2 candidate and name the author; treat an expert quoted in a news story as a social_statements candidate with their affiliation. Chinese-side experts (Wang Jisi, Jia Qingguo, Yan Xuetong, Wu Xinbo, Da Wei, Zhou Bo, Hu Xijin and peers) are how Beijing's strategic community signals; when a ZH think-tank item carries a named argument, surface it in opeds_today with china_based: true.
+
 OFFICIAL LINE — WHAT BEIJING IS SAYING: the official_line section records the PRC government's stated positions today in its own words: MOFA daily presser answers, TAO and MND spokesperson statements, MOFCOM notices, State Council decisions, PBOC announcements, Xi / Li Qiang / Wang Yi / He Lifeng remarks, embassy statements, and Xinhua or People's Daily signed commentaries that carry an official line. Every statement must be a verbatim quotation from the source text (translated if ZH, with original_zh). Do not summarise the government's view; quote it, then add one sentence of factual context on what prompted it.
 
 VOICE — ECONOMIST-STYLE, FACTS FIRST:
@@ -526,6 +528,8 @@ def _relevance_score(a: dict) -> int:
         score += 120
     if a.get("flagged_journalist"):
         score += 50
+    if a.get("expert_flag"):
+        score += 45
     if a.get("prestige_tier") == "A" or a.get("china_primary"):
         score += 40
     if a.get("journal_tier") == "A+":
@@ -566,8 +570,9 @@ def build_user_prompt(payload: dict, date_str: str, db_context: str = "") -> str
                 "source": a.get("source", ""),
                 "lang": a.get("lang", "EN"),
             }
-            for optional in ("prestige_tier", "china_primary", "journal_tier",
-                             "prestige_outlet", "flagged_journalist", "tags", "seen_before"):
+            for optional in ("prestige_tier", "china_primary", "china_based", "journal_tier",
+                             "prestige_outlet", "flagged_journalist", "expert_flag",
+                             "government_primary", "tags", "seen_before"):
                 if a.get(optional):
                     item[optional] = a[optional]
             result.append(item)
@@ -733,15 +738,15 @@ For EACH article, return:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 TIER 2: OP-EDS & PRESTIGE COMMENTARY → OUTPUT: opeds_today
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-{tier_json(payload.get("tier2", []), max_items=30)}
+{tier_json(payload.get("tier2", []), max_items=45)}
 
 ANTI-HALLUCINATION — OP-EDS: Only include op-eds/commentary that appear as actual articles in the Tier 2 input data above with a real URL. Do NOT fabricate think tank entries or authors. If no qualifying Tier 2 articles are present today, return an empty opeds_today array.
 
 Each article in the Tier 2 input has fields: prestige_tier ("A" = top tier, "B" = standard), china_primary (true for all Tier-A sources — already computed). Use these directly; do not override them.
 
-For EACH qualifying piece output: title (the article's original title from input, verbatim), url (copy verbatim from input — do not alter), source, prestige_tier (from input), authors (from article metadata if available, else null), china_primary (from input), relevance_score (1-10), central_argument (single sentence stating the thesis directly — not "this argues that..."), summary (2-3 sentences), policy_so_what (1 sentence, score >= 6 only).
+For EACH qualifying piece output: title (the article's original title from input, verbatim; translated_title if ZH), url (copy verbatim from input — do not alter), source, prestige_tier (from input), authors (from article metadata or the expert_flag field if available, else null), china_primary (from input), china_based (true for PRC think tanks and Chinese scholars; from input), relevance_score (1-10), central_argument (single sentence stating the thesis directly — not "this argues that..."), summary (2-3 sentences), policy_so_what (1 sentence, score >= 6 only).
 
-Inclusion thresholds: prestige_tier "A" if china_primary=true → always include. prestige_tier "B" or "A" without china_primary → include if relevance_score >= 7.
+Inclusion thresholds: prestige_tier "A" if china_primary=true → always include. prestige_tier "B" or "A" without china_primary → include if relevance_score >= 7. Any item with expert_flag → include if relevance_score >= 6. Aim for 6-10 pieces on a normal day, with at least one china_based piece whenever the input carries one; order US/allied pieces first, then china_based pieces under the same array.
 
 CSIS PRODUCTS (CSIS China, CSIS ChinaPower, CSIS AMTI, CSIS Hidden Reach, CSIS Big Data China): MANDATORY inclusion whenever present in input — these are our own in-house products.
 
@@ -765,7 +770,7 @@ TIER 4: XINHUA / PEOPLE'S DAILY / GLOBAL TIMES / MOFA (last 48h)
 DIGEST SYNTHESIS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-TARGET LENGTH — HARD MINIMUM 1,000 WORDS (5-minute read). Aim for 1,200-1,400 words.
+TARGET LENGTH: the SENT digest must land between 2,000 and 3,000 words (an 8 to 12 minute read), so aim for 2,400-3,000 in your draft; post-processing removes duplicates and unsourced items after you return. HARD MINIMUM 1,600. Do NOT exceed 3,200: past that you are padding. Reach the target by covering MORE stories and MORE official statements, not by inflating individual bodies. If your draft runs short, add items to official_line, overnight_items, indo_pacific, business_economy and opeds_today, in that order. The corpus below is large (often 300+ items); a thin digest on a heavy day is a failure of selection, not of supply.
 
 Return a digest object with:
 
@@ -787,7 +792,7 @@ Return a digest object with:
 
 - monitored_locations: array of 16 location status objects (8 gray-zone + 8 hidden-reach). GROUNDING: If today's articles report on a location, update from the article. If no article mentions a location, COPY the tracker's last-known note VERBATIM. Never replace a substantive tracker note with "No new reporting". Each: name, block ("gray_zone" or "hidden_reach"), status (normal/activity/elevated/alert), note (1-2 sentences), last_source_date, direction ("up"/"down"/""), csis_product (from tracker).
 
-- prc_government: array of PRC State Council / ministry actions from today's news. Each: ministry (English), ministry_chinese (e.g. 外交部, 国防部, 商务部, 中国人民银行), official (name + title), action (1-line headline), detail (1-2 sentences), source_label (e.g. "MOFA EN", "MOFCOM", "PBOC"), url.
+- prc_government: array of 3-8 PRC State Council / ministry ACTIONS from today's news (decisions, notices, regulations, investigations, approvals, data releases; the statements themselves go in official_line). Prefer the ZH government primary items (国务院, 商务部, 发改委, 央行, 海关) when they carry the notice. Each: ministry (English), ministry_chinese (e.g. 外交部, 国防部, 商务部, 中国人民银行), official (name + title), action (1-line headline), document (title of the notice / regulation / announcement if one was issued, else null), detail (1-2 sentences with the specific numbers, dates and thresholds), source_label (e.g. "MOFA EN", "MOFCOM", "PBOC"), url.
 
 - npc_politburo: array of NPC Standing Committee, Politburo Standing Committee, Two Sessions, Beidaihe, or Plenum activity from today's news. Each: body, action, detail (1-2 sentences), url. Empty array if no relevant activity.
 
@@ -795,11 +800,11 @@ Return a digest object with:
 
 - calendar_watch: array of 4-5 key upcoming events in next 14-30 days (MIN 4, MAX 5). Only use events from (a) today's articles with dates, (b) VERIFIED UPCOMING DATES, or (c) trade baselines. Each: month (3-letter), day (int), headline, detail (1-2 sentences).
 
-- overnight_items: 6 items MAX. Source diversity MANDATORY (max 3 from any single source). Topic diversity MANDATORY (each different topic). Each: url (copy verbatim from input — do not construct or alter), source, category, headline (under 100 chars), body_text (2-3 sentences, 50-70 words).
+- overnight_items: 6-8 items (8 MAX). Source diversity MANDATORY (max 3 from any single source). Topic diversity MANDATORY (each different topic). Each: url (copy verbatim from input — do not construct or alter), source, category, headline (under 100 chars), body_text (2-3 sentences, 50-80 words).
 
-- top_stories: 2-4 biggest HARD NEWS stories — aim for 3 typical, 2 slow days, 4 when multiple major stories. From wires/correspondents/PRC press/government — NOT op-eds or think tank commentary. TOPIC DIVERSITY MANDATORY. Each: url (copy verbatim from input — do not construct or alter), source, category_tag (Cross-Strait/US-China/PRC-Economy/PLA/Indo-Pacific/Technology/Sanctions/Energy/Diplomacy), headline, body (MAX 3 sentences, aim for 2 — facts: who/what/when/specifics), so_what (1 sentence — specific decision/meeting/timeline this affects, only if appears in today's articles or calendar_watch), pattern_note (1 sentence with historical precedent ONLY if precedent appears in today's articles or reference data; else null), src_line.
+- top_stories: 3-5 biggest HARD NEWS stories — aim for 4 typical, 3 slow days, 5 when multiple major stories. From wires/correspondents/PRC press/government — NOT op-eds or think tank commentary. TOPIC DIVERSITY MANDATORY. Each: url (copy verbatim from input — do not construct or alter), source, category_tag (Cross-Strait/US-China/PRC-Economy/PLA/Indo-Pacific/Technology/Sanctions/Energy/Diplomacy), headline, body (MAX 3 sentences, aim for 2 — facts: who/what/when/specifics), so_what (1 sentence — specific decision/meeting/timeline this affects, only if appears in today's articles or calendar_watch), pattern_note (1 sentence with historical precedent ONLY if precedent appears in today's articles or reference data; else null), src_line.
 
-- also_today: up to 6 remaining articles score >= 4. Each: url (copy verbatim from input), source, category, headline, body_text (1-2 sentences), color_bar_class (cb-navy=Cross-Strait, cb-red=PLA, cb-lt=Trade/Sanctions, cb-mid=Diplomacy, cb-tech=Technology, cb-biz=Economy).
+- also_today: up to 8 remaining articles score >= 4. Each: url (copy verbatim from input), source, category, headline, body_text (1-2 sentences), color_bar_class (cb-navy=Cross-Strait, cb-red=PLA, cb-lt=Trade/Sanctions, cb-mid=Diplomacy, cb-tech=Technology, cb-biz=Economy).
 
 - us_china_trade: US-China trade and sanctions architecture. Object with sub-blocks (NO REPETITION across sub-blocks):
   - tariff_tracker: object with headline_section_301_rate (current Section 301 average), section_232_rates (object: steel, aluminum, copper, autos, semiconductors), ieepa_fentanyl_rate ("20%"), section_122_surcharge ("10%, expires Jul 24 2026"), last_change (string), next_trigger (string). Use TRADE BASELINES above as default; only change if today's articles report new action.
@@ -807,11 +812,11 @@ Return a digest object with:
   - cfius: array of recent CFIUS reviews/divestiture orders from today's articles. Each: company, sector, action, date.
   - deals: array of NEW US-China deals or divestitures announced TODAY. Each: url, source, headline, value (or null), parties, detail (1 sentence).
 
-- business_economy: array up to 6 China business/economy items. Each: url (copy verbatim from input), source, headline, body_text (1-2 sentences with specific numbers), companies (array of names), sector (tech/auto/energy/finance/manufacturing/property/macro).
+- business_economy: array of 4-8 China business/economy items. Each: url (copy verbatim from input), source, headline, body_text (1-2 sentences with specific numbers), companies (array of names), sector (tech/auto/energy/finance/manufacturing/property/macro).
 
-- indo_pacific: array of 4-6 items covering Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN. Always include at least one Cross-Strait item even on slow days. Each: url (copy verbatim from input), source, headline, body_text (1-2 sentences), category (cross-strait, taiwan-elections, taiwan-arms, japan-senkaku, japan-history, philippines-scs, australia-aukus, india-lac, korea-china, vietnam-scs, asean), region_tag ("Cross-Strait" / "Japan-China" / "Philippines-China" / "Australia-China" / "India-China" / "Korea-China" / "Indo-Pacific").
+- indo_pacific: array of 5-8 items covering Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN. Always include at least one Cross-Strait item even on slow days. Each: url (copy verbatim from input), source, headline, body_text (1-2 sentences), category (cross-strait, taiwan-elections, taiwan-arms, japan-senkaku, japan-history, philippines-scs, australia-aukus, india-lac, korea-china, vietnam-scs, asean), region_tag ("Cross-Strait" / "Japan-China" / "Philippines-China" / "Australia-China" / "India-China" / "Korea-China" / "Indo-Pacific").
 
-- official_line: 4-8 items — WHAT BEIJING IS SAYING today, in its own words. Draw on the Tier 4 PRC primary items (especially lang "ZH" government sources: 外交部, 国台办, 国防部, 商务部, 国务院, 中国人民银行) and any Tier 1 article quoting a PRC official. Each: body (one of "MOFA", "TAO", "MND", "MOFCOM", "State Council", "PBOC", "NDRC", "Xi Jinping", "Premier", "Wang Yi", "Embassy", "Xinhua commentary", "People's Daily", "Global Times"), body_chinese (外交部 / 国台办 / 国防部 / 商务部 / 国务院 / 中国人民银行 / 习近平 / 李强 / 王毅 / 新华社 / 人民日报 / 环球时报 / 使馆), speaker (name, e.g. "Lin Jian"), role (title, e.g. "MOFA spokesperson"), topic (under 60 chars; what the statement is about), statement (VERBATIM quotation, English, max 70 words; if the source only paraphrases, prefix with "Per <source>:" and keep it short), original_zh (verbatim Chinese text if the source is ZH, else null), addressed_to (one of "US", "Taiwan", "Japan", "Philippines", "EU", "India", "Russia", "domestic", "other"), tone (one of "routine", "firm", "warning", "conciliatory"), context (1 sentence: what prompted the statement, only from today's articles), source, url (copy verbatim from input). ORDER by importance to a US policymaker. One statement per topic; the MOFA presser can supply at most 3.
+- official_line: 5-10 items — WHAT BEIJING IS SAYING today, in its own words. Draw on the Tier 4 PRC primary items (especially lang "ZH" government sources: 外交部, 国台办, 国防部, 商务部, 国务院, 中国人民银行) and any Tier 1 article quoting a PRC official. Each: body (one of "MOFA", "TAO", "MND", "MOFCOM", "State Council", "PBOC", "NDRC", "Xi Jinping", "Premier", "Wang Yi", "Embassy", "Xinhua commentary", "People's Daily", "Global Times"), body_chinese (外交部 / 国台办 / 国防部 / 商务部 / 国务院 / 中国人民银行 / 习近平 / 李强 / 王毅 / 新华社 / 人民日报 / 环球时报 / 使馆), speaker (name, e.g. "Lin Jian"), role (title, e.g. "MOFA spokesperson"), topic (under 60 chars; what the statement is about), statement (VERBATIM quotation, English, max 70 words; if the source only paraphrases, prefix with "Per <source>:" and keep it short), original_zh (verbatim Chinese text if the source is ZH, else null), addressed_to (one of "US", "Taiwan", "Japan", "Philippines", "EU", "India", "Russia", "domestic", "other"), tone (one of "routine", "firm", "warning", "conciliatory"), context (1 sentence: what prompted the statement, only from today's articles), source, url (copy verbatim from input). ORDER by importance to a US policymaker. One statement per topic; the MOFA presser can supply at most 3.
 
 - social_statements: 3-6 quotes from senior officials OTHER than the PRC government (the official_line section carries Beijing). ATTRIBUTION RULE: quote MUST be a statement made BY the named person in their OFFICIAL CAPACITY on a policy-relevant topic. Prioritize US officials (Trump, Rubio, Hegseth, Bessent, Lutnick, Greer, INDOPACOM, Select Committee members); Taiwan officials (Lai, Hsiao, Lin Chia-lung, Wellington Koo, MAC); Japan, Philippines, Australia, India, EU leaders and ministers; PRC officials only when a statement does not fit official_line.
 
@@ -883,11 +888,11 @@ def _count_digest_words(digest: dict) -> int:
 def _check_content_minimums(digest: dict) -> list[str]:
     failures = []
     word_count = _count_digest_words(digest)
-    if word_count < 1000:
-        failures.append(f"WORD COUNT: {word_count} words (hard minimum 1000)")
+    if word_count < 1600:
+        failures.append(f"WORD COUNT: {word_count} words (hard minimum 1600, target 2000-3000)")
     top = len(digest.get("top_stories") or [])
-    if top < 2:
-        failures.append(f"TOP STORIES: {top} (minimum 2)")
+    if top < 3:
+        failures.append(f"TOP STORIES: {top} (minimum 3)")
     overnight = len(digest.get("overnight_items") or [])
     if overnight < 3:
         failures.append(f"OVERNIGHT ITEMS: {overnight} (minimum 3)")
@@ -1109,15 +1114,16 @@ def generate_digest(payload: dict, db_context: str = "") -> dict:
             if attempt == 0 or digest is None:
                 digest = _call_claude(client, user_prompt, model=retry_model)
             else:
-                word_deficit = max(0, 1000 - _count_digest_words(digest))
+                word_deficit = max(0, 2000 - _count_digest_words(digest))
                 expansion_prompt = (
                     f"Your previous digest output failed content minimums:\n"
                     + "\n".join(f"  • {f}" for f in content_failures)
-                    + f"\n\nYou are ~{word_deficit} words short of the 1000-word minimum.\n"
+                    + f"\n\nYou are ~{word_deficit} words short of the 2,000-word target.\n"
                     + "\nHere is your previous output:\n"
                     + json.dumps(digest, ensure_ascii=False)[:8000]
                     + "\n\nRevise and return a COMPLETE updated digest JSON that fixes ALL failures. "
-                      "Add MORE items from available articles to reach 1000+ words — do not inflate existing bodies. "
+                      "Add MORE items from available articles (official_line, overnight_items, indo_pacific, "
+                      "business_economy, opeds_today) to reach 2,000+ words — do not inflate existing bodies. "
                       "Every URL must be copied from the input data. Return ONLY valid JSON."
                 )
                 # One copy of the previous output, inside the feedback where it

@@ -255,11 +255,20 @@ def render_html(digest: dict) -> str:
     sections_wire = []      # Business, Indo-Pacific, Also Today, On This Day
     sections_post = []      # Footer
 
-    # 0. View in browser
-    if web_url:
+    # 0. Read online · Print/PDF · Archive
+    pdf_url = digest.get("pdf_url", "")
+    archive_url = digest.get("archive_url", "")
+    if web_url or pdf_url or archive_url:
+        links = []
+        if web_url:
+            links.append(f'<a href="{_esc(web_url)}" style="color:#2980B9;text-decoration:none;">Read online</a>')
+        if pdf_url:
+            links.append(f'<a href="{_esc(pdf_url)}" style="color:#2980B9;text-decoration:none;">Print / PDF</a>')
+        if archive_url:
+            links.append(f'<a href="{_esc(archive_url)}" style="color:#2980B9;text-decoration:none;">Archive</a>')
         sections_pre.append(f"""
-<div style="background:#F0F0F0;padding:6px 32px;text-align:center;font-size:11px;color:#888;" class="sec">
-Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decoration:none;">Read online &#8594;</a>
+<div style="background:#F0F0F0;padding:6px 32px;text-align:center;font-size:11px;color:#888;" class="sec no-print">
+{" &nbsp;&middot;&nbsp; ".join(links)}
 </div>""")
 
     # 1. Header
@@ -974,6 +983,12 @@ body {{ margin:0; padding:0; background:#fff; font-family:Arial,sans-serif; colo
 @media only screen and (max-width: 600px) {{
   .container {{ width:100% !important; }}
   .sec {{ padding-left:16px !important; padding-right:16px !important; }}
+}}
+@media print {{
+  .no-print {{ display: none !important; }}
+  .sec {{ page-break-inside: avoid; }}
+  a {{ color: #1B2A4A !important; text-decoration: none !important; }}
+  body {{ background: #fff !important; }}
 }}
 </style>
 </head>

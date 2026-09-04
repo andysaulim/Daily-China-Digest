@@ -287,6 +287,54 @@ TIER2_FEEDS = {
     "Hudson China":            (_gnews("China+site:hudson.org"), "B"),
     "Heritage China":          (_gnews("China+site:heritage.org"), "B"),
 
+    # US university and specialist China centers
+    "Asia Society CCA":        (_gnews("site:asiasociety.org/center-china-analysis"), "A"),
+    "NBR China":               (_gnews("China+site:nbr.org"), "B"),
+    "Wilson Kissinger Inst":   (_gnews("China+site:wilsoncenter.org"), "B"),
+    "Harvard Fairbank":        (_gnews("site:fairbank.fas.harvard.edu+OR+site:belfercenter.org+China"), "B"),
+    "Stanford Hoover China":   (_gnews("site:hoover.org/research/china+OR+%22China+Leadership+Monitor%22"), "B"),
+    "UCSD 21CCC":              (_gnews("site:china.ucsd.edu"), "B"),
+    "Georgetown Initiative":   (_gnews("site:uscnpm.org+OR+site:georgetown.edu+%22U.S.-China%22"), "B"),
+    "CNAS China":              (_gnews("China+site:cnas.org"), "B"),
+    "CSBA China":              (_gnews("China+OR+PLA+site:csbaonline.org"), "B"),
+    "FDD China":               (_gnews("China+site:fdd.org"), "B"),
+    "Cato China":              (_gnews("China+site:cato.org"), "B"),
+    "Quincy China":            (_gnews("China+site:quincyinst.org"), "B"),
+    "Freeman Spogli":          (_gnews("China+site:fsi.stanford.edu"), "B"),
+    "Paulson Institute":       (_gnews("site:paulsoninstitute.org"), "B"),
+    "USCBC":                   (_gnews("site:uschina.org"), "B"),
+    "AmCham China":            (_gnews("site:amchamchina.org"), "B"),
+    "Interpret CSIS":          (_gnews("site:interpret.csis.org"), "A"),
+
+    # European, Asian and other allied China centers
+    "Chatham House China":     (_gnews("China+site:chathamhouse.org"), "B"),
+    "ECFR China":              (_gnews("China+site:ecfr.eu"), "B"),
+    "IFRI China":              (_gnews("China+site:ifri.org"), "B"),
+    "SWP China":               (_gnews("China+site:swp-berlin.org"), "B"),
+    "RUSI China":              (_gnews("China+site:rusi.org"), "B"),
+    "EU Chamber China":        (_gnews("site:europeanchamber.com.cn"), "B"),
+    "ORF China":               (_gnews("China+site:orfonline.org"), "B"),
+    "Takshashila China":       (_gnews("China+site:takshashila.org.in"), "B"),
+    "JIIA China":              (_gnews("China+site:jiia.or.jp"), "B"),
+    "ISDP China":              (_gnews("China+site:isdp.eu"), "B"),
+    "Sinolytics":              (_gnews("site:sinolytics.de"), "B"),
+    "Gavekal":                 (_gnews("site:gavekal.com+China"), "B"),
+
+    # China-based think tanks and university institutes (ZH; the model translates)
+    "中国现代国际关系研究院 CICIR (ZH)": (_gnews_zh("site:cicir.ac.cn"), "A"),
+    "中国国际问题研究院 CIIS (ZH)":     (_gnews_zh("site:ciis.org.cn"), "A"),
+    "上海国际问题研究院 SIIS (ZH)":     (_gnews_zh("site:siis.org.cn"), "A"),
+    "清华战略与安全研究中心 CISS (ZH)": (_gnews_zh("site:ciss.tsinghua.edu.cn"), "A"),
+    "人大重阳 RDCY (ZH)":             (_gnews_zh("site:rdcy.ruc.edu.cn"), "B"),
+    "全球化智库 CCG (ZH)":            (_gnews_zh("site:ccg.org.cn"), "B"),
+    "复旦美国研究中心 (ZH)":          (_gnews_zh("site:cas.fudan.edu.cn+OR+%E5%A4%8D%E6%97%A6%E5%A4%A7%E5%AD%A6%E7%BE%8E%E5%9B%BD%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83"), "B"),
+    "北大国际战略研究院 IISS-PKU (ZH)": (_gnews_zh("site:iiss.pku.edu.cn"), "B"),
+    "盘古智库 Pangoal (ZH)":          (_gnews_zh("site:pangoal.cn"), "B"),
+    "太和智库 Taihe (ZH)":            (_gnews_zh("site:taiheinstitute.org"), "B"),
+    "中国社科院 CASS (ZH)":           (_gnews_zh("site:cass.cn+%E5%9B%BD%E9%99%85"), "B"),
+    "中美聚焦 China-US Focus":        (_gnews("site:chinausfocus.com"), "B"),
+    "CGTN Think Tank":               (_gnews("site:cgtn.com+%22think+tank%22+OR+opinion+China+US"), "B"),
+
     # CRS / Congressional research
     "CRS China":               (_gnews("China+site:crsreports.congress.gov"), "B"),
     "GAO China":               (_gnews("China+site:gao.gov"), "B"),
@@ -491,6 +539,55 @@ PRESTIGE_OUTLET_SOURCES = {
 }
 
 
+# ── EXPERT WATCH-LIST ─────────────────────────────────────────────────────────
+# Analysts whose bylines or quotes the digest should surface by name: the
+# people the readership already reads. An article that quotes or is written by
+# one of them is tagged expert_flag and ranked up; the prompt names them in
+# Expert Analysts and Social Statements. Matched by name only; a mismatch is
+# harmless. Review twice a year.
+EXPERT_WATCHLIST = {
+    # CSIS
+    "Scott Kennedy", "Bonny Lin", "Jude Blanchette", "Victor Cha", "Gregory Poling",
+    "Matthew Funaiole", "Brian Hart", "Ilaria Mazzocco", "Henrietta Levin", "Bonnie Glaser",
+    # US think tanks and government alumni
+    "Ryan Hass", "Patricia Kim", "Jonathan Czin", "Cheng Li", "Rush Doshi", "Evan Medeiros",
+    "Susan Shirk", "Elizabeth Economy", "Oriana Skylar Mastro", "M. Taylor Fravel",
+    "Jessica Chen Weiss", "Yun Sun", "Andrew Nathan", "Minxin Pei", "David Shambaugh",
+    "Thomas Christensen", "Ely Ratner", "Matt Pottinger", "Kurt Campbell", "Daniel Rosen",
+    "Adam Segal", "Ian Johnson", "Zack Cooper", "Dan Wang", "Kevin Rudd", "Graham Allison",
+    "Michael Beckley", "Hal Brands", "Elbridge Colby", "Rick Waters", "Zongyuan Zoe Liu",
+    "Yasheng Huang", "Barry Naughton", "Nicholas Lardy", "Arthur Kroeber", "Logan Wright",
+    "Michael Pettis", "Victor Shih", "Yuen Yuen Ang", "Joseph Torigian", "Lyle Goldstein",
+    "Isaac Kardon", "Thomas Shugart", "Lonnie Henley", "Joel Wuthnow", "Phillip Saunders",
+    "Oriana Mastro", "Sheena Chestnut Greitens", "Jacob Stokes", "Lisa Curtis", "Emily Kilcrease",
+    "Gregory Allen", "Chris Miller", "Paul Triolo", "Kevin Xu", "Jordan Schneider",
+    "Emily Weinstein", "Matt Sheehan", "Kaiser Kuo", "Bill Bishop", "Dexter Roberts",
+    "Andrew Polk", "Trey McArver", "Chris Johnson", "Danny Russel", "Wendy Cutler",
+    "Craig Singleton", "Jonathan Ward", "Michael Sobolik", "Derek Scissors", "Zack Cooper",
+    "Mira Rapp-Hooper", "Ryan Fedasiuk", "Elsa Kania", "Lingling Wei", "Jeremy Wallace",
+    "Neil Thomas", "Lizzi Lee", "Kevin Slaten", "Brad Setser", "Gerard DiPippo",
+    "Jeffrey Ding", "Julian Gewirtz", "Melanie Hart", "Andrew Erickson", "Toshi Yoshihara",
+    "Michael Swaine", "Amy Celico", "Ali Wyne", "Thomas Wright", "Charles Edel", "Zack Cooper",
+    # Taiwan, Japan, Australia, Europe, India
+    "Lai I-chung", "Wen-Ti Sung", "Lev Nachman", "Kharis Templeman", "Chong-Pin Lin",
+    "Su Tzu-yun", "Ryo Sahashi", "Akio Takahara", "Bethany Allen", "Michael Shoebridge",
+    "Peter Jennings", "Rory Medcalf", "Richard McGregor", "Mikko Huotari", "Helena Legarda",
+    "Nis Grünberg", "Jacob Gunter", "Noah Barkin", "Alicia Garcia-Herrero", "Andrew Small",
+    "Reinhard Bütikofer", "Steve Tsang", "Kerry Brown", "George Magnus", "Charles Parton",
+    "Tanvi Madan", "C. Raja Mohan", "Manoj Kewalramani", "Harsh Pant",
+    # Chinese scholars and former officials frequently quoted in English and ZH press
+    "Wang Jisi", "Jia Qingguo", "Yan Xuetong", "Shi Yinhong", "Zhu Feng", "Wu Xinbo",
+    "Da Wei", "Cui Tiankai", "Fu Ying", "Ruan Zongze", "Zhao Minghao", "Wang Wen",
+    "Hu Xijin", "Jin Canrong", "Zheng Yongnian", "Wang Huiyao", "Henry Huiyao Wang",
+    "Zhou Bo", "Shen Dingli", "Xie Tao", "Liu Yawei", "Tao Wenzhao", "Wang Yiwei",
+    "Huang Jing", "Yu Jie", "Sun Yun", "Zhang Weiwei", "Li Cheng", "Wang Dong",
+    "Shi Yuzhi", "Ni Feng", "Yuan Zheng", "Lu Xiang", "Diao Daming", "Teng Jianqun",
+    "王缉思", "贾庆国", "阎学通", "时殷弘", "朱锋", "吴心伯", "达巍", "崔天凯", "傅莹",
+    "阮宗泽", "赵明昊", "王文", "胡锡进", "金灿荣", "郑永年", "王辉耀", "周波", "沈丁立",
+    "王义桅", "张维为", "刁大明", "倪峰", "袁征", "吕祥", "滕建群",
+}
+
+
 # ── INFRASTRUCTURE ────────────────────────────────────────────────────────────
 REQUEST_TIMEOUT = 8
 HEADERS = {"User-Agent": "CSISChinaDigest/1.0"}
@@ -657,6 +754,29 @@ def _flag_journalist(article: dict) -> dict:
     return article
 
 
+def _flag_expert(article: dict) -> dict:
+    """Tag articles written by or quoting a watch-list expert (see EXPERT_WATCHLIST)."""
+    text = f"{article.get('title', '')} {article.get('summary', '')}"
+    low = text.lower()
+    hits = []
+    for name in EXPERT_WATCHLIST:
+        needle = name if not name.isascii() else name.lower()
+        hay = text if not name.isascii() else low
+        if needle in hay:
+            hits.append(name)
+            if len(hits) >= 3:
+                break
+    if hits:
+        article["expert_flag"] = hits
+    return article
+
+
+def flag_experts(articles: list) -> list:
+    for a in articles:
+        _flag_expert(a)
+    return articles
+
+
 def _title_key(title: str) -> str:
     """Normalised headline for cross-feed dedup (the same wire story arrives via
     several Google News queries under different source labels)."""
@@ -735,7 +855,8 @@ def _fetch_feeds_parallel(feed_dict: dict, is_tiered: bool = False) -> dict:
 # ─────────────────────────────────────────────────────────────────────────────
 
 # Chinese-language sources are tagged lang="ZH"; the model translates titles.
-_CHINESE_LANG_SOURCES: set[str] = {s for s in list(TIER1_FEEDS) + list(TIER4_FEEDS) if "ZH)" in s}
+_CHINESE_LANG_SOURCES: set[str] = {s for s in list(TIER1_FEEDS) + list(TIER4_FEEDS) + list(TIER2_FEEDS)
+                                   if "ZH)" in s}
 
 
 def _cap_zh(articles: list) -> list:
@@ -768,6 +889,7 @@ def _collect_tier1() -> list:
                 continue
             article = _entry_to_article(entry, source, lang=lang)
             article = _flag_journalist(article)
+            article = _flag_expert(article)
             articles.append(article)
     return _cap_zh(_dedup(articles))
 
@@ -781,12 +903,15 @@ def _collect_tier2() -> list:
                 continue
             if not _is_china_related(entry):
                 continue
-            article = _entry_to_article(entry, source, extra={
+            lang = "ZH" if "(ZH)" in source else "EN"
+            article = _entry_to_article(entry, source, lang=lang, extra={
                 "prestige_tier": prestige,
                 "china_primary": prestige == "A",
+                "china_based": "(ZH)" in source or source in ("中美聚焦 China-US Focus", "CGTN Think Tank"),
             })
+            article = _flag_expert(article)
             articles.append(article)
-    return _dedup(articles)
+    return _cap_zh(_dedup(articles))
 
 
 def _collect_tier3() -> list:

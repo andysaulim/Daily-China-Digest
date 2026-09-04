@@ -1,8 +1,10 @@
 # China Daily Brief
 
-Automated daily intelligence briefing on the People's Republic of China for the CSIS Korea Chair. Sibling pipeline to [Daily-Korea-Digest](https://github.com/andysaulim/Daily-Korea-Digest), [Daily-Japan-Digest](https://github.com/andysaulim/Daily-Japan-Digest) and [Daily-Australia-Pacific-Islands-Digest](https://github.com/andysaulim/Daily-Australia-Pacific-Islands-Digest). Collects from 226 feeds (44 Chinese-language), canonicalises and fetches the articles, generates an analyst-grade digest via Claude, validates it, and delivers a styled HTML email at **6 AM ET**.
+Automated daily intelligence briefing on the People's Republic of China for the CSIS Korea Chair. Sibling pipeline to [Daily-Korea-Digest](https://github.com/andysaulim/Daily-Korea-Digest), [Daily-Japan-Digest](https://github.com/andysaulim/Daily-Japan-Digest) and [Daily-Australia-Pacific-Islands-Digest](https://github.com/andysaulim/Daily-Australia-Pacific-Islands-Digest). Collects from 268 feeds (55 Chinese-language), canonicalises and fetches the articles, generates an analyst-grade digest via Claude, validates it, and delivers a styled HTML email at **6 AM ET**.
 
-**Live archive:** `andysaulim.github.io/Daily-China-Digest` (planned)
+**Live archive:** [andysaulim.github.io/Daily-China-Digest](https://andysaulim.github.io/Daily-China-Digest) (latest issue at `index.html`, every issue at `archive.html`, each with a print-ready PDF). Every email carries "Read online", "Print / PDF" and "Archive" links. The archive is pushed to the `gh-pages` branch by the live workflow; GitHub Pages must be set to serve that branch once in repository settings.
+
+**Benchmark against Sinocism, Pekingnology, Trivium, The Wire China, ChinaTalk, China Watcher and the CSIS trackers:** [`BENCHMARK.md`](BENCHMARK.md).
 
 Operating notes, the failure history and the rules the code enforces are in [`CLAUDE.md`](CLAUDE.md). The full feed inventory is in [`SOURCES.md`](SOURCES.md) (generated).
 
@@ -25,12 +27,12 @@ Operating notes, the failure history and the rules the code enforces are in [`CL
 
 ```
 collect.py      resolve.py      fulltext.py     digest.py         run.py             render.py     send_email.py
-226 feeds  -->  Google News --> article text --> Claude Sonnet --> URL gate, dedup --> HTML email --> Gmail (BCC)
-44 ZH           -> real URLs    for the model    (Opus on retry)   validate, retry     + archive      + ledger
+268 feeds  -->  Google News --> article text --> Claude Sonnet --> URL gate, dedup --> HTML email --> Gmail (BCC)
+55 ZH           -> real URLs    for the model    (Opus on retry)   validate, retry     + archive/PDF  + ledger
 + markets                                                          trackers                          + metrics
 ```
 
-1. **Collect** — 226 RSS feeds in parallel across 4 tiers plus Xi, Hidden Reach and gray-zone trackers. Direct publisher feeds with a Google News fallback where one exists; Google News search (US, zh-CN, zh-TW, zh-HK editions) elsewhere. Market strip from Yahoo/Stooq; anything that fails is marked unavailable, never a stale number.
+1. **Collect** — 268 RSS feeds in parallel across 4 tiers plus Xi, Hidden Reach and gray-zone trackers. Direct publisher feeds with a Google News fallback where one exists; Google News search (US, zh-CN, zh-TW, zh-HK editions) elsewhere. Market strip from Yahoo/Stooq; anything that fails is marked unavailable, never a stale number.
 2. **Resolve** — Google News redirect links are decoded to the publisher URL (base64 path, then Google's batch API), cached in `url_cache.json`. This is the step whose absence emptied the June issues of links.
 3. **Enrich** — up to 160 canonical URLs are fetched in parallel; paragraph text (or the meta description behind a paywall) is appended to the summary so the model writes from the article, not the headline.
 4. **Digest** — Claude Sonnet 5 generates the structured JSON; Opus 5 takes the second regeneration. No assistant prefill (the 4.6+/5 models reject it). Cross-day memory of the last 14 days of headlines is injected.
@@ -45,14 +47,14 @@ collect.py      resolve.py      fulltext.py     digest.py         run.py        
 | Tier | Feeds | Window | Content |
 | --- | --- | --- | --- |
 | **1 — News** | 122 | 24h | Wires, correspondents, PRC English press, regional Asia, Taiwan, US and allied government, specialist newsletters, **37 Chinese-language outlets** |
-| **2 — Analysis** | 39 | 36h, dated only | CSIS (ChinaPower, AMTI direct feeds), Brookings, Carnegie, RAND, CFR, MERICS, ASPI Strategist, Jamestown, Lowy, War on the Rocks |
+| **2 — Analysis** | 81 | 36h, dated only | US: CSIS (ChinaPower, AMTI, Interpret), Brookings, Carnegie, RAND, CFR, Hoover, Asia Society CCA, NBR, Wilson, Harvard, Stanford, UCSD, Georgetown, CNAS, CSBA, FDD, Cato, Quincy, AEI, Hudson, Heritage, PIIE, Rhodium, Paulson, USCBC, AmCham. Allied: MERICS, Chatham House, ECFR, IFRI, SWP, RUSI, EU Chamber, ASPI, Lowy, ORF, Takshashila, JIIA, ISDP, Sinolytics, Gavekal. **China-based: CICIR, CIIS, SIIS, Tsinghua CISS, Renmin Chongyang, CCG, Fudan CAS, PKU IISS, Pangoal, Taihe, CASS, China-US Focus** |
 | **3 — Academic** | 18 | 72h, dated only | International Security, China Quarterly, Journal of Contemporary China and peers |
 | **4 — PRC primary** | 23 | 48h | Xinhua, People's Daily, Global Times, CGTN, MOFA/MND/TAO/MOFCOM/State Council/PBOC in Chinese, signed commentaries |
 | Trackers | 24 | 72h | Xi appearances, Hidden Reach sites, gray-zone features |
 
-**Chinese-language sources (44):** 人民日报 · 新华社 · 环球时报 · 央视 · 中国新闻网 · 求是 · 解放军报 · 澎湃 · 观察者网 · 经济日报 · 财新 · 第一财经 · 21世纪经济报道 · 经济观察报 · 界面 · 证券时报 · 明报 · 香港01 · 星岛 · 信报 · 中央社 · 联合报 · 自由时报 · 中国时报 · 上报 · 联合早报 · 端传媒 · 纽约时报中文网 · FT中文网 · 华尔街日报中文 · BBC中文 · 德国之声 · 美国之音 · 日经中文 · 路透中文 · 外交部 · 国务院 · 国防部 · 国台办 · 商务部 · 中国人民银行 · 新华时评. Titles and quotes are translated; the original Chinese is kept alongside official quotes.
+**Chinese-language sources (55):** 人民日报 · 新华社 · 环球时报 · 央视 · 中国新闻网 · 求是 · 解放军报 · 澎湃 · 观察者网 · 经济日报 · 财新 · 第一财经 · 21世纪经济报道 · 经济观察报 · 界面 · 证券时报 · 明报 · 香港01 · 星岛 · 信报 · 中央社 · 联合报 · 自由时报 · 中国时报 · 上报 · 联合早报 · 端传媒 · 纽约时报中文网 · FT中文网 · 华尔街日报中文 · BBC中文 · 德国之声 · 美国之音 · 日经中文 · 路透中文 · 外交部 · 国务院 · 国防部 · 国台办 · 商务部 · 中国人民银行 · 新华时评. Titles and quotes are translated; the original Chinese is kept alongside official quotes.
 
-**Prestige outlet rule:** WSJ, NYT, WaPo, Bloomberg, FT, The Economist, CNN, Reuters, AP, AFP, CNBC and Sinocism items carry a `prestige_outlet` flag; the validator names any that were collected and not used. **193 correspondents** are on the byline watch-list.
+**Prestige outlet rule:** WSJ, NYT, WaPo, Bloomberg, FT, The Economist, CNN, Reuters, AP, AFP, CNBC and Sinocism items carry a `prestige_outlet` flag; the validator names any that were collected and not used. **193 correspondents** are on the byline watch-list and **189 experts** (US, allied and Chinese scholars, with Chinese names) on the expert watch-list; an item written by or quoting one is ranked up and the author is named.
 
 ---
 
@@ -65,10 +67,10 @@ collect.py      resolve.py      fulltext.py     digest.py         run.py        
 | 3 | Δ Since Yesterday | What moved |
 | 4 | Morning Memo | Top 3 stories in one sentence each |
 | 5 | Key Stat | Single striking number from today's news |
-| 6 | Top Stories | 2–4 hard news stories with "So what" + pattern note |
-| 7 | Overnight Flash | Up to 6 secondary items |
+| 6 | Top Stories | 3–5 hard news stories with "So what" + pattern note |
+| 7 | Overnight Flash | 4–8 secondary items |
 | 8 | Xinhua / People's Daily Delta | Propaganda analysis, Xi appearances, doctrinal phrase tracking |
-| 9 | Expert Analysts | Op-eds and academic pieces that exist in today's feed |
+| 9 | Expert Analysts | 6–10 op-eds and academic pieces that exist in today's feed, US/allied first, then China-based think tanks and scholars |
 | 10 | **What Beijing Is Saying** | The PRC government's own words today: MOFA presser, TAO, MND, MOFCOM, State Council, PBOC, Xi / Li Qiang / Wang Yi. Verbatim quote, Chinese original, tone, who it is addressed to |
 | 11 | Social Statements | US, Taiwan, allied and other officials |
 | 12 | Satellite & Location Watch | 8 gray-zone + 8 Hidden Reach sites, carried forward from the tracker |
@@ -77,17 +79,19 @@ collect.py      resolve.py      fulltext.py     digest.py         run.py        
 | 15 | Congressional Watch | Select Committee on the CCP, SFRC, HFAC, USCC, CECC |
 | 16 | Business & Economy | Corporates, macro, property, tech |
 | 17 | Indo-Pacific | Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN |
-| 18 | Also Today | Up to 6 third-tier items |
+| 18 | Also Today | Up to 8 third-tier items |
 | 19 | On This Day | Verified event matching today's exact date |
 | 20 | Footer | Auto-generation disclaimer |
+
+Target length **2,000–3,000 words** (hard floor 1,600; ceiling 3,200).
 
 ---
 
 ## Validation Gates
 
 Blocking (regenerate, then hold):
-- Top stories 2–4, overnight ≥3, morning memo exactly 3 distinct items, RE line present
-- Word count ≥900 (target 1,200–1,500)
+- Top stories 3–5, overnight 4–8, morning memo exactly 3 distinct items, RE line present
+- Word count ≥1,600 (target 2,000–3,000)
 - ≥4 items deleted for URLs not in the input
 - Digest date ≠ today
 
@@ -149,7 +153,7 @@ If the repository goes 60 days without a commit, GitHub disables the schedule; t
 
 ```
 ├── run.py                   # Orchestration, post-processing, validation, ledger, metrics
-├── collect.py               # 226 feeds, market data, feed-health ledger
+├── collect.py               # 268 feeds, market data, feed-health ledger
 ├── resolve.py               # Google News redirect -> publisher URL (cached)
 ├── fulltext.py              # Article-body fetch for the model
 ├── digest.py                # System/user prompts, Claude call, regeneration

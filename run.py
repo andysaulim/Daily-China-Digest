@@ -72,15 +72,15 @@ _ARTICLE_SECTIONS = (
 )
 
 SECTION_CAPS = {
-    "top_stories":       (2, 4),
-    "overnight_items":   (3, 6),
+    "top_stories":       (3, 5),
+    "overnight_items":   (4, 8),
     "morning_memo":      (3, 3),
-    "also_today":        (0, 6),
-    "business_economy":  (0, 6),
-    "indo_pacific":      (0, 6),
-    "official_line":     (0, 8),
-    "social_statements": (0, 6),
-    "opeds_today":       (0, 8),
+    "also_today":        (0, 8),
+    "business_economy":  (0, 8),
+    "indo_pacific":      (0, 8),
+    "official_line":     (0, 10),
+    "social_statements": (0, 8),
+    "opeds_today":       (0, 12),
     "academic_today":    (0, 6),
     "prc_government":    (0, 8),
     "congressional_watch": (0, 6),
@@ -88,6 +88,14 @@ SECTION_CAPS = {
     "calendar_watch":    (0, 5),
     "on_this_day":       (0, 1),
 }
+
+# 1,600 hard, 2,000-3,000 target. The brief covers cross-Strait, US-China
+# trade and sanctions, the PLA, the economy, the Indo-Pacific and Beijing's
+# own words; 1,200 words cannot carry that and the reader has asked for the
+# longer read. Above 3,200 the model is padding.
+WORD_FLOOR_CRITICAL = 1600
+WORD_TARGET_LOW = 2000
+WORD_CEILING = 3200
 
 _TEXT_FIELDS = ("body", "body_text", "summary", "detail", "quote_text", "statement",
                 "context", "so_what", "pattern_note", "central_argument", "analyst_note",
@@ -674,12 +682,13 @@ def validate_digest(digest: dict, payload: dict | None = None, today=None,
         w.append("RE: LINE CRITICAL: missing or too short")
 
     word_count = _count_words(digest)
-    if word_count < 900:
-        w.append(f"WORD COUNT CRITICAL: ~{word_count} words (hard minimum 900)")
-    elif word_count < 1200:
-        w.append(f"WORD COUNT: ~{word_count} words (target 1200-1500)")
-    elif word_count > 2200:
-        w.append(f"WORD COUNT: ~{word_count} words, over the 2200 ceiling")
+    if word_count < WORD_FLOOR_CRITICAL:
+        w.append(f"WORD COUNT CRITICAL: ~{word_count} words (hard minimum {WORD_FLOOR_CRITICAL}, "
+                 f"target {WORD_TARGET_LOW}-3000)")
+    elif word_count < WORD_TARGET_LOW:
+        w.append(f"WORD COUNT: ~{word_count} words (target {WORD_TARGET_LOW}-3000)")
+    elif word_count > WORD_CEILING:
+        w.append(f"WORD COUNT: ~{word_count} words, over the {WORD_CEILING} ceiling")
 
     dropped = _PP_STATS.get("items_dropped_unsourced", 0)
     if dropped >= 4:
@@ -775,6 +784,50 @@ def validate_digest(digest: dict, payload: dict | None = None, today=None,
 # ARCHIVE, METRICS
 # ─────────────────────────────────────────────────────────────────────────────
 
+DEFAULT_WEB_URL = "https://andysaulim.github.io/Daily-China-Digest"
+
+
+def _web_base() -> str:
+    return (os.environ.get("WEB_URL") or DEFAULT_WEB_URL).rstrip("/")
+
+
+def _build_archive_index(archive: list) -> str:
+    """public/archive.html: every issue, newest first, with word count and links."""
+    from html import escape
+    rows = []
+    for a in archive:
+        d = a.get("date", "")
+        try:
+            label = datetime.strptime(d, "%Y-%m-%d").strftime("%A, %B %-d, %Y")
+        except ValueError:
+            label = d
+        re_line = escape(str(a.get("re_line") or ""))
+        wc = a.get("word_count") or ""
+        pdf = f' &middot; <a href="{d}.pdf" style="color:#2980B9;text-decoration:none;">PDF</a>' if a.get("pdf") else ""
+        rows.append(
+            f'<tr><td style="padding:10px 8px;border-bottom:1px solid #EBEBEB;white-space:nowrap;'
+            f'font-family:Arial,sans-serif;font-size:13px;color:#1B2A4A;font-weight:700;">'
+            f'<a href="{d}.html" style="color:#1B2A4A;text-decoration:none;">{label}</a>{pdf}</td>'
+            f'<td style="padding:10px 8px;border-bottom:1px solid #EBEBEB;font-family:Georgia,serif;'
+            f'font-size:13px;color:#444;">{re_line}</td>'
+            f'<td style="padding:10px 8px;border-bottom:1px solid #EBEBEB;font-family:Arial,sans-serif;'
+            f'font-size:11px;color:#888;text-align:right;white-space:nowrap;">{wc} words</td></tr>')
+    body = "\n".join(rows) or '<tr><td style="padding:12px;">No issues archived yet.</td></tr>'
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>China Daily Brief · Archive</title></head>
+<body style="margin:0;background:#F4F4F1;">
+<div style="max-width:760px;margin:0 auto;background:#fff;">
+<div style="background:#1B2A4A;color:#fff;padding:18px 32px 14px;">
+<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS Korea Chair</div>
+<h1 style="margin:0 0 4px 0;font-size:28px;font-weight:700;font-family:Georgia,serif;">China Daily Brief</h1>
+<div style="font-size:14px;color:rgba(255,255,255,0.85);font-family:Georgia,serif;">Archive &middot; {len(archive)} issues &middot; <a href="index.html" style="color:#D4AC0D;text-decoration:none;">Latest issue &#8594;</a></div>
+</div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding:8px 24px 24px;">{body}</table>
+<div style="padding:16px 32px;font-size:10px;color:#888;font-family:Arial,sans-serif;text-align:center;">Generated automatically; every item links to its source. Prepared by Andy Lim, CSIS Korea Chair.</div>
+</div></body></html>"""
+
+
 def _archive_html(html: str, digest: dict, date_str: str) -> None:
     PUBLIC_DIR.mkdir(exist_ok=True)
     (PUBLIC_DIR / f"{date_str}.html").write_text(html, encoding="utf-8")
@@ -786,18 +839,30 @@ def _archive_html(html: str, digest: dict, date_str: str) -> None:
             archive = json.loads(archive_index.read_text())
         except json.JSONDecodeError:
             archive = []
+
+    pdf_ok = False
+    try:
+        from pdf_export import export_pdf
+        pdf_ok = export_pdf(PUBLIC_DIR / f"{date_str}.html") is not None
+    except Exception as e:                                   # noqa: BLE001
+        print(f"   ⚠ PDF export unavailable: {e}")
+
     entry = {
         "date": date_str,
         "filename": f"{date_str}.html",
+        "re_line": digest.get("re_line", ""),
         "top_stories": len(digest.get("top_stories") or []),
         "overnight_items": len(digest.get("overnight_items") or []),
         "word_count": _count_words(digest),
         "sources": digest.get("source_count"),
+        "pdf": pdf_ok,
     }
     archive = [a for a in archive if a.get("date") != date_str]
     archive.insert(0, entry)
-    archive_index.write_text(json.dumps(archive[:120], indent=2))
-    print(f"📁 Archived to {date_str}.html")
+    archive = archive[:400]
+    archive_index.write_text(json.dumps(archive, indent=2))
+    (PUBLIC_DIR / "archive.html").write_text(_build_archive_index(archive), encoding="utf-8")
+    print(f"📁 Archived to {date_str}.html (+ archive.html, {len(archive)} issues)")
 
 
 def _write_metrics(record: dict) -> None:
@@ -963,7 +1028,10 @@ def run_pipeline(args: argparse.Namespace) -> int:
     # ─── Render ──────────────────────────────────────────────────────────
     print("\n🎨 Rendering HTML email...")
     from render import render_html
-    digest.setdefault("web_url", os.environ.get("WEB_URL", ""))
+    base = _web_base()
+    digest["web_url"] = f"{base}/{today_iso}.html"
+    digest["pdf_url"] = f"{base}/{today_iso}.pdf"
+    digest["archive_url"] = f"{base}/archive.html"
     html = render_html(digest)
     DIGEST_HTML.write_text(html, encoding="utf-8")
     print(f"   • Wrote {len(html):,} bytes to {DIGEST_HTML.name}")

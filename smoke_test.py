@@ -398,9 +398,30 @@ def test_render():
     check("html renders", len(html) > 20000, str(len(html)))
     check("official line section rendered", "What Beijing Is Saying" in html and "中方敦促美方" in html)
     check("disclaimer footer", "generated automatically" in html)
+    d["web_url"] = "https://example.org/2026-09-04.html"
+    d["pdf_url"] = "https://example.org/2026-09-04.pdf"
+    d["archive_url"] = "https://example.org/archive.html"
+    html2 = render.render_html(d)
+    check("online / print / archive links", all(s in html2 for s in ("Read online", "Print / PDF", "Archive")))
     check("no placeholder links", 'href="#"' not in html.replace('href="#top"', ""))
     check("unavailable market shows dash", "1.75%" not in html)
     check("repaired scmp link present", "scarborough" in html)
+
+
+def test_archive_and_pdf():
+    section("archive index + pdf export")
+    import run, pdf_export
+    html = run._build_archive_index([
+        {"date": "2026-09-04", "re_line": "Rare-earth curbs · PLA sorties", "word_count": 2310, "pdf": True},
+        {"date": "2026-09-03", "re_line": "Xi in Hanoi", "word_count": 2105, "pdf": False},
+    ])
+    check("archive index lists issues", "2026-09-04.html" in html and "2026-09-03.html" in html)
+    check("archive index links pdf only when present", html.count(".pdf") == 1)
+    check("archive index has latest link", "index.html" in html)
+    check("web base default", run._web_base().startswith("https://"))
+    check("pdf export degrades without browser", callable(pdf_export.export_pdf))
+    src = open("render.py", encoding="utf-8").read()
+    check("print stylesheet present", "@media print" in src and "no-print" in src)
 
 
 def test_health():
@@ -436,7 +457,7 @@ def test_workflow_and_docs():
 if __name__ == "__main__":
     for t in (test_resolve, test_fulltext, test_collect_registry, test_digest_module,
               test_run_postprocess_and_validate, test_ledger_roundtrip, test_render,
-              test_health, test_workflow_and_docs):
+              test_archive_and_pdf, test_health, test_workflow_and_docs):
         try:
             t()
         except Exception as e:                               # noqa: BLE001

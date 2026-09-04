@@ -5,6 +5,9 @@
 anthropic>=1.0.0
 feedparser>=6.0.0
 requests>=2.31.0
+# Print/PDF export of each issue (pdf_export.py). Chromium is installed by
+# the workflow; without it the export is skipped and the brief still sends.
+playwright>=1.40.0
 
 # httpx is NOT pinned here on purpose. anthropic 1.x brings its own backend
 # (httpx2) and digest.py resolves whichever is present at import time.

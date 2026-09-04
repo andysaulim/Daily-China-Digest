@@ -108,6 +108,13 @@ jobs:
         if: steps.guard.outputs.should_run != 'false'
         run: python smoke_test.py
 
+      # Chromium for the print/PDF export of each issue. Best effort: without
+      # it pdf_export.py skips and the brief still sends.
+      - name: Install Chromium (PDF export)
+        if: steps.guard.outputs.should_run == 'true'
+        continue-on-error: true
+        run: python -m playwright install --with-deps chromium
+
       - name: Run pipeline
         if: steps.guard.outputs.should_run == 'true'
         id: pipeline
@@ -180,6 +187,17 @@ jobs:
             sleep $((attempt * 3))
           done
           echo "::warning::Could not push state after 4 attempts"
+
+      # Archive to GitHub Pages (gh-pages branch, keep_files so old issues stay).
+      # Pages must be set to serve from the gh-pages branch once in repo settings.
+      - name: Deploy archive to GitHub Pages
+        if: steps.guard.outputs.should_run == 'true' && (github.event_name == 'schedule' || inputs.mode == 'live')
+        continue-on-error: true
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.GH_PAT || github.token }}
+          publish_dir: ./public
+          keep_files: true
 
       # Feed-health and URL-cache state is worth keeping even from a test run;
       # it never touches the archive, ledger or send marker.

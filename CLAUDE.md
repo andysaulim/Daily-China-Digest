@@ -8,8 +8,8 @@ three keep in `CLAUDE.md` / `AUDIT` / `CHANGES_MEMO`.
 
 ```
 collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-process
-226 feeds       Google News     article body     Sonnet 5,       URL gate, dedup,
-(44 ZH)         -> real URLs    for the model    Opus 5 retry    ledger, style
+268 feeds       Google News     article body     Sonnet 5,       URL gate, dedup,
+(55 ZH)         -> real URLs    for the model    Opus 5 retry    ledger, style
      -> validate (CRITICAL blocks) -> trackers -> render.py -> archive -> send_email.py
                                                                        -> ledger, last_sent.txt, metrics.jsonl
 ```
@@ -40,6 +40,15 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
 - **Chinese-language sources** are tagged `lang: ZH`, capped at 12 items per feed, exempt
   from the English keyword gate, and ranked up when they are a ministry's own words. The
   `official_line` section ("What Beijing Is Saying") quotes them verbatim with `original_zh`.
+- **Length.** 2,000 to 3,000 words; `WORD_FLOOR_CRITICAL` 1,600 blocks, 3,200 warns. Reach
+  the target by covering more items (official_line, overnight, indo_pacific, business,
+  opeds), never by inflating bodies.
+- **Experts and think tanks.** `EXPERT_WATCHLIST` (189 names, Chinese names included) tags
+  items with `expert_flag`; Tier 2 carries US, allied and China-based institutes, the latter
+  tagged `china_based`. The benchmark against the leading China newsletters is `BENCHMARK.md`.
+- **Archive.** Live runs write `public/<date>.html`, `<date>.pdf` (Playwright, best effort),
+  `index.html` (latest) and `archive.html` (all issues), and push `public/` to `gh-pages`.
+  Emails link to the online, PDF and archive pages. Test runs never touch the archive.
 
 ## What went wrong before (and the fix)
 
