@@ -10,8 +10,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-import httpx
 import anthropic
+
+# anthropic 1.x is built on httpx2, not httpx; on a fresh runner httpx is
+# not installed at all. Resolve whichever backend is present.
+try:                            # anthropic 1.x
+    import httpx2 as httpx
+except ImportError:             # anthropic 0.x
+    import httpx
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -985,10 +991,7 @@ def run_cost() -> float:
 # whose RemoteProtocolError is a different class from the httpx one. Catching
 # the wrong module's names means the stream retry never fires. Resolve at
 # import time and lean on anthropic's own APIConnectionError.
-try:                            # anthropic 1.x
-    import httpx2 as _http
-except ImportError:             # anthropic 0.x
-    _http = httpx
+_http = httpx
 
 _STREAM_ERRORS = (
     anthropic.APIConnectionError,

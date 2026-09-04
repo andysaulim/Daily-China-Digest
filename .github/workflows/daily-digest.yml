@@ -67,11 +67,15 @@ jobs:
       # Manual dispatch always runs.
       - name: Skip guard (once-a-day send)
         id: guard
+        env:
+          # Passed through the environment, never interpolated into the
+          # script: a commit message with quotes would otherwise break bash.
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
           TODAY=$(TZ=America/New_York date +%Y-%m-%d)
           LAST_SENT=$(tr -d '[:space:]' < last_sent.txt 2>/dev/null || true)
           if [ "${{ github.event_name }}" = "push" ]; then
-            if echo "${{ github.event.head_commit.message }}" | grep -q '\[test-send\]'; then
+            if printf '%s' "$COMMIT_MSG" | grep -q '\[test-send\]'; then
               echo "::notice::Branch push tagged [test-send]: running a test send."
               echo "should_run=true" >> "$GITHUB_OUTPUT"
             else

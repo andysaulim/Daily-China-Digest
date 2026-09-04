@@ -268,6 +268,13 @@ def test_digest_module():
     import digest, pipeline_health
     src = open("digest.py", encoding="utf-8").read()
     check("no assistant prefill", '"role": "assistant"' not in src and "_JSON_PREFILL" not in src)
+    # anthropic 1.x runners have httpx2 only; an unconditional httpx import
+    # crashed the first CI run of this pipeline while passing locally.
+    check("no unconditional httpx import", not re.search(r"^import httpx\s*$", src, re.M))
+    for mod in ("digest", "run", "collect", "render", "send_email", "resolve", "fulltext"):
+        msrc = open(f"{mod}.py", encoding="utf-8").read()
+        check(f"{mod}.py imports only installed deps",
+              not re.search(r"^(import|from) (httpx|playwright|bs4|lxml)\b", msrc, re.M), mod)
     check("FAST_MODEL known", digest.FAST_MODEL in pipeline_health.KNOWN_MODEL_IDS, digest.FAST_MODEL)
     check("PRIMARY_MODEL known", digest.PRIMARY_MODEL in pipeline_health.KNOWN_MODEL_IDS, digest.PRIMARY_MODEL)
     check("no date-suffixed model", not re.search(r"claude-[a-z]+-\d(-\d)?-\d{8}", digest.FAST_MODEL + digest.PRIMARY_MODEL))
