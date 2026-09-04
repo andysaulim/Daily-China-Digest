@@ -1,0 +1,1360 @@
+{
+ "21世纪经济报道 (21st Century Business Herald ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "AEI China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "AFP China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "AFRICOM China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "AMTI": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "AP China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "ASPI China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "ASPI Strategist (direct)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "AU DFAT China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Al Jazeera China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Asahi China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Asia Society Policy": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Asian Security": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Asian Survey": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Atlantic Council China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Axios China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "BBC Asia (direct)": {
+  "empty_runs": 0,
+  "last_count": 16,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "BBC China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "BBC中文 (BBC Chinese ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "BIS Entity List": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Bloomberg China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Brookings China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "CECC": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "CFR China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "CGTN": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "CNA China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "CNBC China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "CNN China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "CRS China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "CSIS AMTI": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "CSIS AMTI (direct)": {
+  "empty_runs": 0,
+  "last_count": 10,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "CSIS Big Data China": {
+  "empty_runs": 0,
+  "last_count": 33,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "CSIS China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "CSIS ChinaPower": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "CSIS ChinaPower (direct)": {
+  "empty_runs": 0,
+  "last_count": 10,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "CSIS Hidden Reach": {
+  "empty_runs": 0,
+  "last_count": 25,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Caixin Global": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Carnegie China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Carnegie China Center": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "China Daily": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "China Daily (direct)": {
+  "empty_runs": 0,
+  "fallback": "2026-09-04",
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "China Daily Front": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "China Digital Times": {
+  "empty_runs": 0,
+  "last_count": 15,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "China Information": {
+  "empty_runs": 0,
+  "last_count": 49,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "China Journal": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "China Leadership Monitor": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "China Media Project": {
+  "empty_runs": 0,
+  "last_count": 10,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "China Quarterly": {
+  "empty_runs": 0,
+  "last_count": 55,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "China Strategies Group": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "ChinaFile": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "ChinaPower imagery": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "ChinaTalk": {
+  "empty_runs": 0,
+  "last_count": 20,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Commerce China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Common prosperity": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "DOJ China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Economist China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "FBI China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "FT China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "FT中文网 (FT Chinese ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Focus Taiwan": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Foreign Affairs": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Foreign Affairs China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Foreign Policy China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "GAO China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "GMF China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Global Times": {
+  "empty_runs": 0,
+  "last_count": 50,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Guardian China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Guardian China (direct)": {
+  "empty_runs": 0,
+  "last_count": 20,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "HR Bata EG": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "HR Cuba SIGINT": {
+  "empty_runs": 0,
+  "last_count": 19,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "HR Djibouti": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "HR Hambantota": {
+  "empty_runs": 0,
+  "last_count": 90,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "HR Khalifa UAE": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "HR LAC ports": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "HR Polar Silk Road": {
+  "empty_runs": 0,
+  "last_count": 58,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "HR Ream Cambodia": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "HR Research Vessels": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "HR Shipyards": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Heritage China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Hong Kong Free Press": {
+  "empty_runs": 0,
+  "last_count": 30,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Hoover China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "House Armed Svc": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "House Foreign Affairs": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "House Select CCP": {
+  "empty_runs": 0,
+  "last_count": 1,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Hudson China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "IAEA China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "IISS China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "INDOPACOM": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "India MEA China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Int'l Organization": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Int'l Security": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Int'l Studies Quarterly": {
+  "empty_runs": 0,
+  "last_count": 30,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "J. Conflict Resolution": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "J. Contemporary China": {
+  "empty_runs": 0,
+  "last_count": 42,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "J. Strategic Studies": {
+  "empty_runs": 0,
+  "last_count": 19,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Jamestown (direct)": {
+  "empty_runs": 0,
+  "last_count": 10,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Jamestown China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Japan MOD China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Japan MOFA China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Japan Times China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Kyodo China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Li Qiang statements": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Liberty Times EN": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Lowy Institute China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Lowy Interpreter (direct)": {
+  "empty_runs": 0,
+  "last_count": 50,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "MERICS": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "MND Spokesperson": {
+  "empty_runs": 0,
+  "last_count": 35,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "MOFA Spokesperson": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Mainichi China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "NYT Asia (direct)": {
+  "empty_runs": 0,
+  "last_count": 20,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "NYT China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "New productive forces": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Nikkei Asia China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "OFAC China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "PD signed commentary": {
+  "empty_runs": 0,
+  "last_count": 12,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "PH Coast Guard": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "PH DFA": {
+  "empty_runs": 0,
+  "last_count": 22,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "PIIE China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "PLA Tracker": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "PRC Embassy US": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Pacific Affairs": {
+  "empty_runs": 0,
+  "last_count": 69,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Pacific Review": {
+  "empty_runs": 0,
+  "last_count": 37,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Pekingnology": {
+  "empty_runs": 0,
+  "last_count": 20,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Pentagon China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "People's Daily EN": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Politico China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "RAND China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "RT China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Reuters China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Rhodium Group": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "SCMP": {
+  "empty_runs": 0,
+  "last_count": 50,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "SCMP China": {
+  "empty_runs": 0,
+  "last_count": 50,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Sandy Cay": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Scarborough Shoal": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Second Thomas Shoal": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Security Studies": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Senate Armed Svc": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Senate Foreign Rel": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Senkaku": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Sinification": {
+  "empty_runs": 0,
+  "last_count": 20,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Sinocism": {
+  "empty_runs": 0,
+  "last_count": 20,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Sixth Tone": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Spratlys": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Stars and Stripes": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "State Dept China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "State Dept Press (direct)": {
+  "empty_runs": 0,
+  "fallback": "2026-09-04",
+  "last_count": 3,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Stimson China": {
+  "empty_runs": 0,
+  "last_count": 12,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Straits Times China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Survival IISS": {
+  "empty_runs": 0,
+  "last_count": 35,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "TASS China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Taipei Times": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Taipei Times (direct)": {
+  "empty_runs": 0,
+  "last_count": 48,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Taiwan Affairs Office": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Taiwan MAC": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Taiwan MND": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Taiwan MOFA": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Taiwan News": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Taiwan Presidential": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Taiwan Strait": {
+  "empty_runs": 0,
+  "last_count": 84,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "The Diplomat (direct)": {
+  "empty_runs": 0,
+  "last_count": 96,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "The Diplomat China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "The Wire China": {
+  "empty_runs": 0,
+  "last_count": 50,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Treasury China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Trivium China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "UN China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "UN Human Rights": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "USCC": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "USIP China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "USTR China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "WSJ China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "WaPo China": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Wang Yi statements": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "War on the Rocks (direct)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "War on the Rocks China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Washington Quarterly": {
+  "empty_runs": 0,
+  "last_count": 50,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "What's on Weibo": {
+  "empty_runs": 0,
+  "last_count": 5,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "White House China": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "World Politics": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Xi (Jamestown)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Xi Activity": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Xi Appearance": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Xi Politburo": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Xi Speech": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "Xi statements": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "Xinhua English": {
+  "empty_runs": 0,
+  "last_count": 20,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "上报 (UP Media ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "中国人民银行 (PBOC ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "中国新闻网 (China News ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "中国时报 (China Times ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "中央社 (CNA ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "人民日报 (People's Daily ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "人民日报国际 (People's Daily World ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "信报 (HKEJ ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "华尔街日报中文 (WSJ Chinese ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "商务部 (MOFCOM ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "国务院 (State Council ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "国台办 (TAO ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "国防部 (MND ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "外交部 (MOFA ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "外交部发言人 (MOFA presser ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "央视新闻 (CCTV ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "德国之声中文 (DW Chinese ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "新华社 (Xinhua ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "新华社时评 (Xinhua commentary ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "日经中文网 (Nikkei Chinese ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "明报 (Ming Pao ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "星岛日报 (Sing Tao ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "求是 (Qiushi ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "澎湃新闻 (The Paper ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "环球时报 (Global Times ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "界面新闻 (Jiemian ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "端传媒 (Initium ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "第一财经 (Yicai ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "纽约时报中文网 (NYT Chinese ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "经济日报 (Economic Daily ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "经济观察报 (Economic Observer ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "美国之音中文 (VOA Chinese ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "联合报 (UDN ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "联合早报 (Lianhe Zaobao ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "自由时报 (Liberty Times ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "观察者网 (Guancha ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "解放军报 (PLA Daily ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "证券时报 (Securities Times ZH)": {
+  "empty_runs": 0,
+  "last_count": 100,
+  "last_ok": "2026-09-04",
+  "last_seen": "2026-09-04"
+ },
+ "财新 (Caixin ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "路透中文 (Reuters Chinese ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ },
+ "香港01 (HK01 ZH)": {
+  "empty_runs": 1,
+  "last_count": 0,
+  "last_ok": null,
+  "last_seen": "2026-09-04"
+ }
+}
