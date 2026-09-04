@@ -79,8 +79,8 @@ jobs:
               echo "::notice::Branch push tagged [test-send]: running a test send."
               echo "should_run=true" >> "$GITHUB_OUTPUT"
             else
-              echo "::notice::Branch push without [test-send]: smoke tests only."
-              echo "should_run=smoke" >> "$GITHUB_OUTPUT"
+              echo "::notice::Branch push without [test-send]: smoke tests + dry collection run (no model, no email)."
+              echo "should_run=dry" >> "$GITHUB_OUTPUT"
             fi
           elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "should_run=true" >> "$GITHUB_OUTPUT"
@@ -116,7 +116,7 @@ jobs:
         run: python -m playwright install --with-deps chromium
 
       - name: Run pipeline
-        if: steps.guard.outputs.should_run == 'true'
+        if: steps.guard.outputs.should_run == 'true' || steps.guard.outputs.should_run == 'dry'
         id: pipeline
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -129,7 +129,10 @@ jobs:
           SEND_TO: ${{ inputs.send_to }}
           TEST_SEND_TO: ${{ vars.TEST_SEND_TO || 'alim@csis.org' }}
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
+          if [ "${{ github.event_name }}" = "push" ] && [ "${{ steps.guard.outputs.should_run }}" = "dry" ]; then
+            echo "::notice::DRY RUN (branch push): collection + URL resolution + article fetch, no model, no email."
+            python run.py --dry-run
+          elif [ "${{ github.event_name }}" = "push" ]; then
             echo "::notice::TEST SEND (branch push): full pipeline, email to $TEST_SEND_TO only."
             python run.py --send-to "$TEST_SEND_TO"
           elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$MODE" = "dry" ]; then
@@ -148,7 +151,7 @@ jobs:
           fi
 
       - name: Upload run outputs (artifact)
-        if: always() && steps.guard.outputs.should_run == 'true'
+        if: always() && steps.guard.outputs.should_run != 'false'
         uses: actions/upload-artifact@v4
         with:
           name: digest-output-${{ github.run_id }}
@@ -201,8 +204,8 @@ jobs:
 
       # Feed-health and URL-cache state is worth keeping even from a test run;
       # it never touches the archive, ledger or send marker.
-      - name: Commit feed health + URL cache (test runs)
-        if: steps.guard.outputs.should_run == 'true' && ((github.event_name == 'workflow_dispatch' && inputs.mode != 'live') || github.event_name == 'push')
+      - name: Commit feed health + URL cache (test and dry runs)
+        if: steps.guard.outputs.should_run != 'false' && ((github.event_name == 'workflow_dispatch' && inputs.mode != 'live') || github.event_name == 'push')
         continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"

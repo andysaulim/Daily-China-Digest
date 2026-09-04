@@ -251,7 +251,8 @@ TIER2_FEEDS = {
     "Brookings China":         (_gnews("China+site:brookings.edu"), "A"),
     "Carnegie China":          (_gnews("China+site:carnegieendowment.org"), "A"),
     "Carnegie China Center":   (_gnews("site:carnegieendowment.org/china"), "A"),
-    "RAND China":              ("https://www.rand.org/topics/china.xml", "A"),
+    "RAND China":              (_direct("RAND China", "https://www.rand.org/topics/china.xml",
+                                        "China+site:rand.org"), "A"),
     "CFR China":               (_gnews("China+site:cfr.org"), "A"),
     "Atlantic Council China":  (_gnews("China+site:atlanticcouncil.org"), "A"),
     "Hoover China":            (_gnews("China+site:hoover.org"), "A"),
@@ -464,7 +465,13 @@ CHINA_KEYWORDS = re.compile(
 # Filter out lifestyle/celebrity content (parallel to Korea's K-pop block)
 _LIFESTYLE_FILTER = re.compile(
     r"\b(celebrity|gossip|lifestyle|fashion\s*week|movie\s*review|album\s*review"
-    r"|red\s*carpet|paparazzi|reality\s*tv|netflix\s*series)\b",
+    r"|red\s*carpet|paparazzi|reality\s*tv|netflix\s*series"
+    # Sport: the first relaunch run collected five WaPo basketball stories
+    # because "China" was in the headline. Political sport (Olympics boycotts,
+    # athlete sanctions) still gets through on the policy keywords.
+    r"|world\s*cup|nba|wnba|basketball|soccer|football\s*match|tennis|golf"
+    r"|marathon|swimming|gymnastics|badminton|table\s*tennis|esports|premier\s*league"
+    r"|combat\s*sport|mma|ufc|boxing|box\s*office|k-?pop|concert)\b",
     re.IGNORECASE,
 )
 
@@ -627,15 +634,52 @@ def _clean_summary(summary: str, title: str = "") -> str:
 # HELPERS
 # ─────────────────────────────────────────────────────────────────────────────
 
+_GNEWS_WORKERS = 6            # Google News is fetched through its own small pool
+_GNEWS_PAUSE = 0.25           # seconds between Google News requests per worker
+_BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+               "(KHTML, like Gecko) Chrome/120.0 Safari/537.36")
+_throttled_gnews = 0
+
+
 def _parse_feed(url: str) -> list:
+    """Fetch and parse one feed. Google News gets a throttle-aware retry.
+
+    On the first relaunch run 83 of 154 English Google News queries came back
+    empty (HTTP 200, no entries) while 28 of 29 direct feeds worked: Google
+    throttles a burst of 200+ queries from one runner and answers with an
+    empty channel or an "unusual traffic" page rather than a 429. The old
+    runs' "88 articles from 10 sources" was the same thing. So: a small
+    dedicated pool, a pause between requests, and one retry with a browser
+    User-Agent after a back-off when a Google News feed returns nothing.
+    """
+    global _throttled_gnews
+    is_gn = "news.google.com" in url
     for attempt in range(3):
         try:
-            resp = requests.get(url, timeout=REQUEST_TIMEOUT, headers=HEADERS)
+            ua = _BROWSER_UA if (is_gn and attempt > 0) else HEADERS["User-Agent"]
+            resp = requests.get(url, timeout=REQUEST_TIMEOUT,
+                                headers={**HEADERS, "User-Agent": ua})
+            if resp.status_code == 429 or (is_gn and resp.status_code in (503,)):
+                _throttled_gnews += 1
+                if attempt < 2:
+                    time.sleep(4 * (attempt + 1))
+                    continue
+                print(f"  ⚠ Feed throttled ({resp.status_code}): {url[:80]}")
+                return []
             if resp.status_code in (401, 403):
                 print(f"  ⚠ Feed blocked ({resp.status_code}): {url[:80]}")
                 return []
             resp.raise_for_status()
-            return feedparser.parse(resp.content).entries
+            entries = feedparser.parse(resp.content).entries
+            if is_gn and not entries and attempt < 1:
+                body = resp.text[:2000].lower()
+                if "unusual traffic" in body or "<rss" not in body:
+                    _throttled_gnews += 1
+                time.sleep(3 + attempt * 3)
+                continue
+            if is_gn:
+                time.sleep(_GNEWS_PAUSE)
+            return entries
         except (requests.ConnectionError, requests.Timeout) as e:
             if attempt < 2:
                 time.sleep(2 * (attempt + 1))
@@ -825,9 +869,22 @@ def _fetch_feeds_parallel(feed_dict: dict, is_tiered: bool = False) -> dict:
                 entries, used_fallback = fb_entries, True
         return source, entries, tier_val, used_fallback
 
+    def _url_of(val):
+        return val[0] if is_tiered else val
+
     items = list(feed_dict.items())
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
-        futures = {pool.submit(_fetch_one, src, val): src for src, val in items}
+    gn_items = [(s, v) for s, v in items if "news.google.com" in _url_of(v)]
+    direct_items = [(s, v) for s, v in items if "news.google.com" not in _url_of(v)]
+
+    # Two pools: direct feeds wide open, Google News deliberately narrow.
+    futures = {}
+    direct_pool = ThreadPoolExecutor(max_workers=MAX_WORKERS)
+    gn_pool = ThreadPoolExecutor(max_workers=_GNEWS_WORKERS)
+    try:
+        for src, val in direct_items:
+            futures[direct_pool.submit(_fetch_one, src, val)] = src
+        for src, val in gn_items:
+            futures[gn_pool.submit(_fetch_one, src, val)] = src
         for future in as_completed(futures):
             src = futures[future]
             try:
@@ -846,6 +903,9 @@ def _fetch_feeds_parallel(feed_dict: dict, is_tiered: bool = False) -> dict:
                     "success": False,
                     "error_msg": str(e),
                 }
+    finally:
+        direct_pool.shutdown(wait=True)
+        gn_pool.shutdown(wait=True)
 
     return results
 
@@ -1462,7 +1522,8 @@ def _update_feed_health(health: dict) -> dict:
         print(f"  ⚠ feed_health.json not written: {e}")
 
     ok = sum(1 for v in health.values() if v.get("success"))
-    print(f"\n📶 Feed health: {ok}/{len(health)} feeds returned entries")
+    print(f"\n📶 Feed health: {ok}/{len(health)} feeds returned entries"
+          + (f" ({_throttled_gnews} Google News throttle responses seen)" if _throttled_gnews else ""))
     if major_empty:
         print(f"  ⚠ MAJOR feeds empty this run: {', '.join(sorted(major_empty))}")
     if fallback_used:
@@ -1473,6 +1534,7 @@ def _update_feed_health(health: dict) -> dict:
     return {
         "feeds_total": len(health),
         "feeds_ok": ok,
+        "gnews_throttled": _throttled_gnews,
         "major_empty": sorted(major_empty),
         "fallback_used": sorted(fallback_used),
         "dead": sorted(dead),

@@ -724,16 +724,7 @@ TIER 1: NEWS ARTICLES (last 24h; ordered by relevance, prestige first)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {tier_json(payload.get("tier1", []), max_items=100)}
 
-For EACH article, return:
-- url, source, translated_title (English title — translate if Chinese)
-- categories: array of: Cross-Strait / US-China / PRC-Economy / PLA / Indo-Pacific / Technology / Sanctions / Energy / Diplomacy
-- signal_type: omit this field
-- relevance_score: 1-10 (10 = essential for China policy analyst today)
-- summary: 1-2 sentences in clear policy-analyst prose
-- policy_so_what: For score >= 7 only. 1 sentence.
-- pattern_note: For ESCALATION or ANOMALY only. 1 sentence citing precedent ONLY if mentioned in today's articles or the reference databases. Do NOT cite from memory.
-- cross_strait_relevance: 1 sentence on Cross-Strait implications if relevant, else null
-- is_reaction_source: true if Global Times, Xinhua, People's Daily, China Daily
+Read every article. Rank them by relevance to a China policy analyst today (categories: Cross-Strait / US-China / PRC-Economy / PLA / Indo-Pacific / Technology / Sanctions / Energy / Diplomacy). Do NOT return a per-article list: the first relaunch run spent 64,000 output tokens and ten minutes echoing the corpus back. Output only the digest object described under DIGEST SYNTHESIS, placing each article in at most one section. Treat Global Times, Xinhua, People's Daily and China Daily as reaction sources, not primary reporting, unless they carry an official statement.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 TIER 2: OP-EDS & PRESTIGE COMMENTARY → OUTPUT: opeds_today
@@ -960,7 +951,7 @@ _EFFORT = "high"
 # than 16000: enriched summaries make the output materially larger, and the
 # June 15 run died on an unparseable (truncated) reply after a 310 s Sonnet
 # call. An unused ceiling costs nothing; hitting it costs a full retry.
-MAX_OUTPUT_TOKENS = 64000
+MAX_OUTPUT_TOKENS = 96000     # thinking tokens count against this; 128k is the model cap
 
 # NO ASSISTANT PREFILL. The previous code opened the reply with an assistant
 # turn containing '{"' to force JSON. Claude 4.6+ and the 5-series reject that
