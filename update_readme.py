@@ -28,9 +28,11 @@ def _count_words(digest: dict) -> int:
         elif isinstance(memo, str):
             words += len(memo.split())
     for key in ("top_stories", "overnight_items", "also_today",
-                "business_economy", "indo_pacific", "social_statements"):
+                "business_economy", "indo_pacific", "social_statements",
+                "official_line", "opeds_today", "academic_today",
+                "prc_government", "congressional_watch", "personnel_changes"):
         for item in (digest.get(key) or []):
-            for f in fields:
+            for f in fields + ("statement", "context", "central_argument", "analyst_note"):
                 if isinstance(item, dict) and item.get(f):
                     words += len(str(item[f]).split())
     return words
@@ -47,7 +49,7 @@ def _unique_sources(digest: dict) -> int:
     return len(sources)
 
 
-def update_readme() -> bool:
+def update_readme(metrics: dict | None = None) -> bool:
     """Update the 'Latest Run' table in README.md. Returns True on success."""
     if not README.exists():
         print("⚠ README.md not found — skipping update")
@@ -82,16 +84,35 @@ def update_readme() -> bool:
 
     xi_appeared = "Yes" if (digest.get("xinhua_delta") or {}).get("xi_appearance_today") else "No"
 
+    m = metrics or {}
+    collected = m.get("articles") or article_count
+    collected_sources = m.get("sources") or digest.get("source_count") or "—"
+    rs = m.get("resolve") or {}
+    if rs.get("gnews_total"):
+        resolved = f"{rs.get('resolved', 0) + rs.get('cached', 0)}/{rs['gnews_total']}"
+    else:
+        resolved = "—"
+    fulltext = (m.get("fulltext") or {}).get("enriched", "—")
+    cost = f"${m['cost_usd']:.2f}" if m.get("cost_usd") is not None else "—"
+    attempts = m.get("validation_attempts", "—")
+    health = m.get("health") or {}
+    alerts = len(health.get("alerts") or [])
+    official = len(digest.get("official_line") or [])
+
     new_table = (
         "| Metric | Value |\n"
         "| --- | --- |\n"
         f"| Last generated | {last_generated} |\n"
         f"| Digest date | {digest_date} |\n"
-        f"| Articles collected | {article_count} |\n"
-        f"| Unique sources | {unique_sources} |\n"
-        f"| Top stories | {top_count} |\n"
-        f"| Overnight items | {overnight_count} |\n"
+        f"| Articles collected | {collected} from {collected_sources} sources |\n"
+        f"| Sources cited in digest | {unique_sources} |\n"
+        f"| Google News URLs canonicalised | {resolved} |\n"
+        f"| Items enriched with article text | {fulltext} |\n"
+        f"| Top stories / overnight / official line | {top_count} / {overnight_count} / {official} |\n"
         f"| Word count | ~{word_count:,} |\n"
+        f"| Validation attempts | {attempts} |\n"
+        f"| Health alerts | {alerts} |\n"
+        f"| Estimated model cost | {cost} |\n"
         f"| Xi appeared | {xi_appeared} |\n"
     )
 

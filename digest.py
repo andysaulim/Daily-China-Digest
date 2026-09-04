@@ -34,6 +34,12 @@ SOURCE-OR-SKIP PRINCIPLE: For EVERY factual claim you write, you must be able to
 
 - ONLY use names, titles, figures, and claims that appear explicitly in the source articles provided. If an article says "the foreign minister" without naming them, use "the foreign minister" — do NOT fill in a name from your training data.
 
+- PROPER NOUNS: COPY, DO NOT RECALL. Ship names, PLA unit designations, company names, place names, ministry names, vessel hull numbers, shoal and reef names: use exactly the form in the source article.
+
+- BOILERPLATE SUMMARIES: some feed summaries are the outlet's homepage description ("The latest news and analysis from...") rather than the story. Treat such an item as headline-only. Never turn a homepage blurb into a claim about the article.
+
+- MARKET AND RATE DATA — NO FABRICATION: the MARKET DATA block carries pre-collected figures. Use those exact numbers and no others. Where a figure is marked unavailable, write no figure at all. NEVER write an index level or move (SSE, Hang Seng, CSI 300), an exchange rate (USD/CNY, USD/CNH), a bond yield, an LPR, a CDS spread or a GDP print unless it is in the MARKET DATA block or a source article in today's batch reports that specific figure. NEVER pair a training-data narrative ("global risk-off", "AI selloff", "property rout") with a percentage you did not read today. The Korea brief once published "KOSPI plunges 4.44% amid AI selloff" on a day with no such move; this rule exists to prevent that.
+
 - NEVER substitute a name from your memory when the source text is ambiguous. Your training data may be outdated — leaders change, officials rotate, titles shift. The source article is ground truth.
 
 - If two sources conflict on a fact, note both. If a source is vague, stay vague. Precision means knowing what you DON'T know.
@@ -56,7 +62,19 @@ SOURCE-OR-SKIP PRINCIPLE: For EVERY factual claim you write, you must be able to
 
 - ACADEMIC FABRICATION — HARD BLOCK: Same rule applies to academic_today. Do NOT include any journal article that does not appear in the Tier 3 input with a real URL. The authors field must come from the article metadata — do NOT populate it from training data or invent it. If the authors field is missing from the source, set it to null. A news outlet name (e.g. "Ratopati", "The Hindu") appearing as "author" means the source is a news article, not a journal paper — exclude it entirely from academic_today.
 
-- URL INTEGRITY — ZERO TOLERANCE: Every url field must be copied CHARACTER-FOR-CHARACTER from the input article's url field. Do NOT reconstruct, guess, shorten, or invent URLs. Do NOT write a URL based on knowing the publication's domain — only use the exact URL from the input. If an article in the input has no URL or an empty URL, set the url field to "" in your output. A missing URL is always better than a fabricated one.
+- URL INTEGRITY — ZERO TOLERANCE: Every url field must be copied CHARACTER-FOR-CHARACTER from the input article's url field. Do NOT reconstruct, guess, shorten, or invent URLs. Do NOT write a URL based on knowing the publication's domain — only use the exact URL from the input. If an article in the input has no URL or an empty URL, set the url field to "" in your output. A missing URL is always better than a fabricated one. Post-processing drops any item whose URL is not in the input, so an invented URL costs the reader the whole item.
+
+USING THE ARTICLE TEXT YOU ARE GIVEN:
+Many items carry real article text in their "summary" field, fetched from the publisher, not just a feed blurb. That text is the best material in this prompt. Mine it for the specific figure, the named official, the dated commitment, and the direct quote that turn a headline restatement into something worth reading.
+- Draw quotes, numbers, and detail from that summary text. Quote it accurately and do not stretch a paraphrase into quotation marks.
+- This EXPANDS what you may say; it does not relax SOURCE-OR-SKIP. Everything still has to be in the text in front of you. An item whose summary is a bare headline gets a short entry, not an invented one.
+- Where the summary carries only one or two sentences, that publisher is paywalled and you are seeing its meta description. Use it, and do not assume the rest of the article says what you would expect.
+
+HOLLOW ITEMS — DO NOT REPORT THAT NOTHING HAPPENED: never write an entry whose only content is that a routine event took place ("MOFA held its daily press briefing", "the spokesperson addressed several topics", "specific details were not provided"). If the source gives no substance, there is no item.
+
+DIRECT QUOTES — VERBATIM ONLY: a quote_text or key_quotes value MUST be a word-for-word quotation that literally appears, inside quotation marks or as reported speech, in the source article text provided. Do NOT reconstruct a quote from a paraphrase, translate a paraphrase into quote marks, or stitch two sentences together. If today's articles carry no verbatim quote from an official, social_statements is a shorter array.
+
+ALREADY COVERED: an ALREADY COVERED block may list headlines this brief ran in recent editions. Do not run the same article again. Cover a story that appears there only when today's articles carry a material new development, and lead with the development.
 
 QUALITY STANDARD — THE EXPERT TEST: Every entry must pass these tests:
 
@@ -77,25 +95,15 @@ HIDDEN REACH MONITORED LOCATIONS: Chancay (Peru, COSCO), Cuba SIGINT (Bejucal/Wa
 
 CROSS-STRAIT AS SPINE: Cross-Strait is the central axis of China policy analysis. Almost every other story (US-China, Japan-China, Philippines-China, Australia-AUKUS, India-China) routes back to it. When a story has Taiwan implications, surface them.
 
-PRESTIGE OUTLET RULE — MANDATORY INCLUSION: If ANY China-related article appears from WSJ, Washington Post, NYT, Bloomberg, Financial Times, The Economist, CNN, Reuters, or CNBC, it MUST be included in the digest — in top_stories if it's a major story, otherwise in overnight_items or also_today. These outlets assign China stories selectively; when they publish on China it is inherently noteworthy. Never drop a China story from these outlets.
+PRESTIGE OUTLET RULE — MANDATORY INCLUSION: Items from WSJ, Washington Post, NYT, Bloomberg, Financial Times, The Economist, CNN, Reuters, AP, AFP, CNBC and Sinocism are marked "prestige_outlet": true in the input data. Do not match outlet names by eye; use that flag. Every flagged item that qualifies on substance MUST appear somewhere in the digest — in top_stories if it's a major story, otherwise in overnight_items, business_economy, indo_pacific or also_today. These outlets assign China stories selectively; when they publish on China it is inherently noteworthy. Post-processing names every flagged story that was collected and not used.
 
 CSIS PRODUCTS — MANDATORY INCLUSION: If ANY same-day article appears from CSIS Trustee Chair, ChinaPower, AMTI, or Hidden Reach, it MUST appear in opeds_today or also_today. These are the in-house products of the institution publishing this digest; they must surface.
 
-JOURNALIST FLAGGING: The following reporters have special China expertise. When their bylines appear, treat the story as higher priority and note the journalist in your analysis:
+JOURNALIST FLAGGING: Items whose byline matches the China-correspondent watch-list (WSJ, NYT, WaPo, FT, Reuters, Bloomberg, AP, BBC, Economist, Nikkei, SCMP and the specialist newsletters) carry "flagged_journalist": "<name>" in the input. Treat a flagged story as higher priority and name the reporter in src_line. Do not add a byline that is not in the input.
 
-- Lingling Wei (WSJ Beijing chief)
-- Joe Leahy, Cheng Leng, Wenjie Ding (FT Beijing)
-- Keith Bradsher, Vivian Wang, David Pierson, Olivia Wang (NYT Beijing)
-- Lily Kuo, Christian Shepherd, Eva Dou (WaPo Beijing)
-- Brenda Goh, Yew Lun Tian, Laurie Chen (Reuters Beijing)
-- Stephen McDonell (BBC Beijing)
-- Stella Yifan Xie, Rebecca Feng, Liyan Qi (WSJ China)
-- Tom Hancock, Sarah Zheng (Bloomberg)
-- Bill Bishop (Sinocism — independent)
-- James Kynge, Sun Yu (FT China business)
-- Yoko Kubota (WSJ tech)
-- Helen Davidson (Guardian Taipei)
-- William Yang (DW Taipei)
+CHINESE-LANGUAGE SOURCES: Items marked "lang": "ZH" come from PRC, Hong Kong, Taiwan and overseas Chinese-language outlets and government sites (人民日报, 新华社, 环球时报, 外交部, 国台办, 国防部, 澎湃, 财新, 联合报, 明报, 联合早报, and the Chinese editions of the NYT, FT, WSJ, BBC, DW and VOA). Read them in the original. Translate the title into English for translated_title and every output headline. When you quote a Chinese-language source, give the English translation as the quote and put the verbatim Chinese in original_zh. A ZH item is often the only primary record of what a ministry said; prefer it over a wire paraphrase for official_line and xinhua_delta.
+
+OFFICIAL LINE — WHAT BEIJING IS SAYING: the official_line section records the PRC government's stated positions today in its own words: MOFA daily presser answers, TAO and MND spokesperson statements, MOFCOM notices, State Council decisions, PBOC announcements, Xi / Li Qiang / Wang Yi / He Lifeng remarks, embassy statements, and Xinhua or People's Daily signed commentaries that carry an official line. Every statement must be a verbatim quotation from the source text (translated if ZH, with original_zh). Do not summarise the government's view; quote it, then add one sentence of factual context on what prompted it.
 
 VOICE — ECONOMIST-STYLE, FACTS FIRST:
 
@@ -155,6 +163,77 @@ Return ONLY valid JSON. No markdown, no preamble, no commentary outside the JSON
 # ─────────────────────────────────────────────────────────────────────────────
 # REFERENCE BASELINES
 # ─────────────────────────────────────────────────────────────────────────────
+
+# The date the hand-written baselines below (leaders, trade stack, upcoming
+# dates) were last verified by a person. The pipeline computes their age on
+# every run, tells the model how old they are, and raises a health alert at
+# 60 and 120 days. An out-of-date baseline presented as current is worse than
+# no baseline: the Japan brief carried an expired Section 122 surcharge for a
+# month because nothing told the model it had lapsed.
+BASELINES_VERIFIED_AS_OF = "2026-05-20"
+
+
+def baseline_age_days(today=None) -> int:
+    from datetime import date as _date
+    today = today or datetime.now(ZoneInfo("America/New_York")).date()
+    try:
+        y, m, d = (int(x) for x in BASELINES_VERIFIED_AS_OF.split("-"))
+        return (today - _date(y, m, d)).days
+    except Exception:
+        return 9999
+
+
+def _baseline_staleness_note(today=None) -> str:
+    age = baseline_age_days(today)
+    if age <= 30:
+        return f"(hand-verified {BASELINES_VERIFIED_AS_OF}, {age} days ago)"
+    return (f"(hand-verified {BASELINES_VERIFIED_AS_OF}, {age} DAYS AGO — treat every "
+            f"dated item, expiry, rate and officeholder below as UNCONFIRMED. Where "
+            f"today's articles report the current state, use the article. Where they "
+            f"do not, describe the item as 'as of {BASELINES_VERIFIED_AS_OF}' or omit "
+            f"it. Never present an expired deadline as still pending.)")
+
+
+_MONTHS = {m: i + 1 for i, m in enumerate(
+    ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"])}
+_DATED_LINE_RE = re.compile(
+    r"^(?:Late\s+|Early\s+|Mid[- ]?)?([A-Z][a-z]{2})[a-z]*\.?\s+(\d{1,2})(?:\s*[-–]\s*(\d{1,2}))?\s+(\d{4})\s*:")
+# "Aug 2026 (estimated): ..." — month-only lines expire at month end.
+_MONTH_LINE_RE = re.compile(r"^(?:Late\s+|Early\s+|Mid[- ]?)?([A-Z][a-z]{2})[a-z]*\.?\s+(\d{4})\b")
+
+
+def _filter_upcoming(block: str, today=None) -> str:
+    """Drop VERIFIED UPCOMING lines whose date has already passed.
+
+    The block is a static string edited by hand, so left alone it would keep
+    offering May 2026 summits as 'upcoming' in September. Lines without a
+    parseable 'Mon D YYYY:' prefix (recurring fixtures, 'Late 2026') are kept.
+    """
+    from datetime import date as _date
+    today = today or datetime.now(ZoneInfo("America/New_York")).date()
+    kept = []
+    for line in block.splitlines():
+        s = line.strip()
+        m = _DATED_LINE_RE.match(s)
+        if m:
+            mon = _MONTHS.get(m.group(1).lower())
+            day = int(m.group(3) or m.group(2))     # end of a range, if any
+            year = int(m.group(4))
+            try:
+                if mon and _date(year, mon, day) < today:
+                    continue
+            except ValueError:
+                pass
+        else:
+            mm = _MONTH_LINE_RE.match(s)
+            if mm:
+                mon = _MONTHS.get(mm.group(1).lower())
+                year = int(mm.group(2))
+                if mon and (year, mon) < (today.year, today.month):
+                    continue
+        kept.append(line)
+    return "\n".join(kept)
+
 
 _POLITICAL_LEADERS = """\
 CURRENT POLITICAL LEADERS — REFERENCE (update from today's articles if changed):
@@ -412,25 +491,97 @@ def _build_xinhua_summary_block(payload: dict) -> str:
     return "\n".join(lines)
 
 
+_MANDATE_TERMS = (
+    "taiwan", "pla", "sanction", "export control", "entity list", "tariff", "xi jinping",
+    "politburo", "state council", "mofa", "coast guard", "south china sea", "senkaku",
+    "semiconductor", "huawei", "smic", "rare earth", "pboc", "yuan", "renminbi",
+    "philippines", "japan", "india", "russia", "pentagon", "congress", "select committee",
+    "cfius", "1260h", "ofac", "espionage", "hong kong", "xinjiang", "tibet",
+)
+
+
+_MANDATE_TERMS_ZH = (
+    "台湾", "台海", "解放军", "南海", "外交部", "发言人", "习近平", "国务院", "关税",
+    "制裁", "芯片", "半导体", "美国", "日本", "菲律宾", "印度", "俄罗斯", "国台办",
+    "国防部", "商务部", "央行", "人民币", "稀土", "出口管制", "钓鱼岛", "香港", "新疆",
+)
+
+
+def _relevance_score(a: dict) -> int:
+    """Order the corpus before the per-tier cut.
+
+    The Australia brief found that cutting the corpus in feed-completion order
+    silently dropped six wire services on a heavy day while off-beat items made
+    the prompt. Prestige and flagged-byline items must never fall outside the
+    window, because the prompt calls them mandatory.
+    """
+    score = 0
+    if a.get("prestige_outlet"):
+        score += 120
+    if a.get("flagged_journalist"):
+        score += 50
+    if a.get("prestige_tier") == "A" or a.get("china_primary"):
+        score += 40
+    if a.get("journal_tier") == "A+":
+        score += 40
+    elif a.get("journal_tier") == "A":
+        score += 20
+    haystack = f"{a.get('title', '')} {(a.get('summary') or '')[:400]}".lower()
+    hits = sum(1 for t in _MANDATE_TERMS if t in haystack)
+    if a.get("lang") == "ZH":
+        hits += sum(1 for t in _MANDATE_TERMS_ZH if t in haystack)
+        if a.get("government_primary"):
+            score += 35          # a ministry's own words feed official_line
+    score += min(hits, 4) * 10
+    if a.get("fulltext"):
+        score += 15              # fulltext.py got the body, so it can be mined
+    if a.get("url", "").startswith("https://news.google.com"):
+        score -= 25              # unresolved redirect: the model cannot copy it
+    if a.get("seen_before"):
+        score -= 60
+    return score
+
+
+def _prioritize(articles: list) -> list:
+    return sorted(articles, key=lambda a: -_relevance_score(a))
+
+
 def build_user_prompt(payload: dict, date_str: str, db_context: str = "") -> str:
     def tier_json(articles: list, max_items: int = 60) -> str:
-        trimmed = articles[:max_items]
+        trimmed = _prioritize(articles)[:max_items]
         result = []
         for a in trimmed:
             item = {
                 "title": a.get("title", ""),
                 "url": a.get("url", ""),
-                "summary": a.get("summary", "")[:800],
+                # 1800, not 800: fulltext.py appends real article text to
+                # summaries, and an 800-character cap would truncate it back off.
+                "summary": (a.get("summary") or "")[:1800],
                 "source": a.get("source", ""),
                 "lang": a.get("lang", "EN"),
-                "prestige_tier": a.get("prestige_tier"),
-                "china_primary": a.get("china_primary", False),
-                "journal_tier": a.get("journal_tier"),
             }
-            if a.get("tags"):
-                item["tags"] = a["tags"]
+            for optional in ("prestige_tier", "china_primary", "journal_tier",
+                             "prestige_outlet", "flagged_journalist", "tags", "seen_before"):
+                if a.get(optional):
+                    item[optional] = a[optional]
             result.append(item)
         return json.dumps(result, ensure_ascii=False, indent=1)
+
+    today_date = datetime.now(ZoneInfo("America/New_York")).date()
+    staleness = _baseline_staleness_note(today_date)
+    upcoming_block = _filter_upcoming(_VERIFIED_UPCOMING, today_date)
+
+    # Cross-day memory: headlines this brief already ran (published_ledger.json).
+    covered_block = ""
+    covered = payload.get("recent_coverage") or []
+    if covered:
+        lines = "\n".join(f"  • {c}" for c in covered[:80])
+        covered_block = f"""
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ALREADY COVERED IN RECENT EDITIONS (do not repeat without a new development)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{lines}"""
 
     # Market data block
     market_block = ""
@@ -443,7 +594,7 @@ MARKET DATA (pre-collected, include as-is in output)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {json.dumps(markets, indent=1)}
 
-Pass this data through directly as the market_indicators field in your output. Do NOT modify the values."""
+Pass this data through directly as the market_indicators field in your output. Do NOT modify the values. Any indicator marked "unavailable": true was not collected today: do not supply a number for it anywhere in the digest."""
 
     # Database context
     db_block = ""
@@ -514,7 +665,8 @@ Cross-reference these reports with Tier 4 (Xinhua / People's Daily) data."""
     if _has_xinhua_data(payload):
         tier4_block = (
             f"{_build_xinhua_summary_block(payload)}\n"
-            f"{tier_json(payload.get('tier4', []), max_items=30)}\n"
+            f"{tier_json(payload.get('tier4', []), max_items=45)}\n"
+            f"These Tier 4 items also feed official_line (see DIGEST SYNTHESIS).\n"
             f"{_XINHUA_FULL_INSTRUCTIONS}"
         )
     else:
@@ -528,13 +680,15 @@ CRITICAL — SOURCE GROUNDING: Every name, title, number, and fact you write MUS
 
 CRITICAL — SOURCE URLs: Every article, op-ed, academic paper, deal, and statement MUST include the original source URL from the input data. Use the exact URL provided in the feed data. Never use "#" or placeholder URLs.
 
+BASELINE AGE: the reference blocks below were {staleness}
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-POLITICAL LEADERS REFERENCE
+POLITICAL LEADERS REFERENCE {staleness.split(',')[0]})
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {_POLITICAL_LEADERS}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-US-CHINA TRADE & SANCTIONS BASELINES
+US-CHINA TRADE & SANCTIONS BASELINES {staleness.split(',')[0]})
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {_TRADE_BASELINES}
 
@@ -544,19 +698,20 @@ VERIFIED HISTORICAL DATES
 {_KEY_DATES}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-VERIFIED UPCOMING DATES
+VERIFIED UPCOMING DATES (past dates already removed; today is {date_str})
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-{_VERIFIED_UPCOMING}
+{upcoming_block}
 {market_block}
 {xi_block}
 {xinhua_block}
 {bp_block}
 {db_block}
+{covered_block}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TIER 1: NEWS ARTICLES (last 24h)
+TIER 1: NEWS ARTICLES (last 24h; ordered by relevance, prestige first)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-{tier_json(payload.get("tier1", []))}
+{tier_json(payload.get("tier1", []), max_items=100)}
 
 For EACH article, return:
 - url, source, translated_title (English title — translate if Chinese)
@@ -650,7 +805,9 @@ Return a digest object with:
 
 - indo_pacific: array of 4-6 items covering Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN. Always include at least one Cross-Strait item even on slow days. Each: url (copy verbatim from input), source, headline, body_text (1-2 sentences), category (cross-strait, taiwan-elections, taiwan-arms, japan-senkaku, japan-history, philippines-scs, australia-aukus, india-lac, korea-china, vietnam-scs, asean), region_tag ("Cross-Strait" / "Japan-China" / "Philippines-China" / "Australia-China" / "India-China" / "Korea-China" / "Indo-Pacific").
 
-- social_statements: 3-6 quotes from senior officials. ATTRIBUTION RULE: quote MUST be a statement made BY the named person in their OFFICIAL CAPACITY on a policy-relevant topic. Prioritize Xi Jinping, Li Qiang, Wang Yi, He Lifeng, Dong Jun, MOFA spokespersons; US officials (Trump, Rubio, Hegseth, Bessent, Lutnick, Greer); Taiwan officials (Lai, Hsiao, Lin Chia-lung, Wellington Koo); foreign leaders.
+- official_line: 4-8 items — WHAT BEIJING IS SAYING today, in its own words. Draw on the Tier 4 PRC primary items (especially lang "ZH" government sources: 外交部, 国台办, 国防部, 商务部, 国务院, 中国人民银行) and any Tier 1 article quoting a PRC official. Each: body (one of "MOFA", "TAO", "MND", "MOFCOM", "State Council", "PBOC", "NDRC", "Xi Jinping", "Premier", "Wang Yi", "Embassy", "Xinhua commentary", "People's Daily", "Global Times"), body_chinese (外交部 / 国台办 / 国防部 / 商务部 / 国务院 / 中国人民银行 / 习近平 / 李强 / 王毅 / 新华社 / 人民日报 / 环球时报 / 使馆), speaker (name, e.g. "Lin Jian"), role (title, e.g. "MOFA spokesperson"), topic (under 60 chars; what the statement is about), statement (VERBATIM quotation, English, max 70 words; if the source only paraphrases, prefix with "Per <source>:" and keep it short), original_zh (verbatim Chinese text if the source is ZH, else null), addressed_to (one of "US", "Taiwan", "Japan", "Philippines", "EU", "India", "Russia", "domestic", "other"), tone (one of "routine", "firm", "warning", "conciliatory"), context (1 sentence: what prompted the statement, only from today's articles), source, url (copy verbatim from input). ORDER by importance to a US policymaker. One statement per topic; the MOFA presser can supply at most 3.
+
+- social_statements: 3-6 quotes from senior officials OTHER than the PRC government (the official_line section carries Beijing). ATTRIBUTION RULE: quote MUST be a statement made BY the named person in their OFFICIAL CAPACITY on a policy-relevant topic. Prioritize US officials (Trump, Rubio, Hegseth, Bessent, Lutnick, Greer, INDOPACOM, Select Committee members); Taiwan officials (Lai, Hsiao, Lin Chia-lung, Wellington Koo, MAC); Japan, Philippines, Australia, India, EU leaders and ministers; PRC officials only when a statement does not fit official_line.
 
 Each: avatar_initials (2 letters), who (name), handle_context (title/role), platform_date (source · date), quote_text (direct quote), analyst_note (1 sentence factual context only from today's articles or reference data; no interpretation), badge_class (sb-p=policy, sb-r=security/red, sb-s=specialist/purple), url.
 
@@ -667,7 +824,16 @@ PLACEMENT PRIORITY (highest wins): top_stories > overnight_items > indo_pacific 
 - oped_count: qualifying Tier 2 count
 - academic_count: qualifying Tier 3 count
 
-Return ONLY valid JSON. No markdown fences, no preamble."""
+FINAL CHECKS before you return:
+1. Walk placement priority and delete every cross-section duplicate (same event, any source).
+2. Confirm morning_memo has exactly 3 distinct strings.
+3. Confirm every url is copied character-for-character from the input data above.
+4. Confirm every quote_text is a verbatim quotation present in the source text.
+5. Confirm nothing from ALREADY COVERED is repeated without a material new development.
+6. Confirm no market figure, rate or index level appears that is not in MARKET DATA or an article.
+7. Confirm zero emojis anywhere in the output.
+
+Return ONLY valid JSON. Begin your response with {{ and end it with }}. No code fences, no preamble, no commentary before or after the JSON."""
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -689,12 +855,12 @@ def _count_digest_words(digest: dict) -> int:
             words += len(mi.split())
 
     for section_key in ("top_stories", "overnight_items", "also_today", "business_economy",
-                       "opeds_today", "academic_today", "social_statements",
+                       "opeds_today", "academic_today", "social_statements", "official_line",
                        "indo_pacific", "congressional_watch", "prc_government"):
         for item in (digest.get(section_key) or []):
             if not isinstance(item, dict):
                 continue
-            for field in _TEXT_FIELDS:
+            for field in _TEXT_FIELDS + ("statement", "context"):
                 val = item.get(field, "")
                 if val:
                     words += len(str(val).split())
@@ -763,22 +929,79 @@ def _robust_json_parse(raw: str) -> dict:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# CLAUDE API CALL — Sonnet primary, Opus retry
+# CLAUDE API CALL — Sonnet first, Opus on retry
 # ─────────────────────────────────────────────────────────────────────────────
 
-FAST_MODEL = "claude-sonnet-4-6"
-PRIMARY_MODEL = "claude-opus-4-8"
-_JSON_PREFILL = '{"'
+# Sonnet handles the days that pass validation first time; Opus is reserved
+# for regeneration after a validation failure. These IDs are complete as
+# written: do NOT append a date suffix. Any change here must also be made in
+# pipeline_health.KNOWN_MODEL_IDS, which is what catches the next retirement
+# before the send fails.
+FAST_MODEL = "claude-sonnet-5"
+PRIMARY_MODEL = "claude-opus-5"
+
+# Adaptive thinking; budget_tokens is rejected on this generation. Effort
+# controls depth and spend.
+_THINKING = {"type": "adaptive"}
+_EFFORT = "high"
+
+# Streaming, so a large ceiling does not hit the HTTP timeout. 64000 rather
+# than 16000: enriched summaries make the output materially larger, and the
+# June 15 run died on an unparseable (truncated) reply after a 310 s Sonnet
+# call. An unused ceiling costs nothing; hitting it costs a full retry.
+MAX_OUTPUT_TOKENS = 64000
+
+# NO ASSISTANT PREFILL. The previous code opened the reply with an assistant
+# turn containing '{"' to force JSON. Claude 4.6+ and the 5-series reject that
+# with 400 "This model does not support assistant message prefill", which is
+# what killed every run from June 17 to August 17. The prompt asks for bare
+# JSON and _robust_json_parse strips fences or a stray preamble.
+
+# Per-call token ledger for metrics.jsonl / cost reporting.
+TOKEN_LEDGER: list[dict] = []
+
+# USD per million tokens. Update alongside FAST_MODEL / PRIMARY_MODEL.
+MODEL_PRICING = {
+    "claude-opus-5":     {"input": 5.00, "output": 25.00, "cache_write": 6.25, "cache_read": 0.50},
+    "claude-sonnet-5":   {"input": 2.00, "output": 10.00, "cache_write": 2.50, "cache_read": 0.20},
+    "claude-opus-4-8":   {"input": 5.00, "output": 25.00, "cache_write": 6.25, "cache_read": 0.50},
+    "claude-sonnet-4-6": {"input": 3.00, "output": 15.00, "cache_write": 3.75, "cache_read": 0.30},
+}
 
 
-def _stream_claude(client, messages: list, max_tokens: int = 16000,
-                  retries: int = 3, model: str | None = None) -> dict:
+def cost_of(entry: dict) -> float:
+    p = MODEL_PRICING.get(entry.get("model", ""), {"input": 5.0, "output": 25.0,
+                                                   "cache_write": 6.25, "cache_read": 0.5})
+    return (entry.get("input", 0) * p["input"] + entry.get("output", 0) * p["output"]
+            + entry.get("cache_write", 0) * p["cache_write"]
+            + entry.get("cache_read", 0) * p["cache_read"]) / 1_000_000
+
+
+def run_cost() -> float:
+    return round(sum(cost_of(e) for e in TOKEN_LEDGER), 4)
+
+
+# The SDK's HTTP backend changed under us: anthropic 1.x is built on httpx2,
+# whose RemoteProtocolError is a different class from the httpx one. Catching
+# the wrong module's names means the stream retry never fires. Resolve at
+# import time and lean on anthropic's own APIConnectionError.
+try:                            # anthropic 1.x
+    import httpx2 as _http
+except ImportError:             # anthropic 0.x
+    _http = httpx
+
+_STREAM_ERRORS = (
+    anthropic.APIConnectionError,
+    getattr(_http, "HTTPError", Exception),
+    getattr(_http, "StreamError", Exception),
+)
+
+
+def _stream_claude(client, messages: list, max_tokens: int = MAX_OUTPUT_TOKENS,
+                   retries: int = 3, model: str | None = None) -> dict:
+    """Stream a Claude call and return the parsed digest dict."""
     use_model = model or PRIMARY_MODEL
-    model_label = use_model.split("-")[1]
-
-    prefilled_messages = list(messages) + [
-        {"role": "assistant", "content": _JSON_PREFILL}
-    ]
+    model_label = use_model.split("-")[1] if "-" in use_model else use_model
 
     for attempt in range(retries):
         try:
@@ -787,12 +1010,16 @@ def _stream_claude(client, messages: list, max_tokens: int = 16000,
             with client.messages.stream(
                 model=use_model,
                 max_tokens=max_tokens,
+                thinking=_THINKING,
+                output_config={"effort": _EFFORT},
                 system=[{
                     "type": "text",
                     "text": SYSTEM_PROMPT,
+                    # Frozen system prompt caches cleanly; everything volatile
+                    # (date, articles, trackers) lives in the user prompt.
                     "cache_control": {"type": "ephemeral"},
                 }],
-                messages=prefilled_messages,
+                messages=messages,
             ) as stream:
                 for text in stream.text_stream:
                     collected.append(text)
@@ -800,10 +1027,14 @@ def _stream_claude(client, messages: list, max_tokens: int = 16000,
 
             if response.stop_reason == "max_tokens":
                 print(f"   ⚠ Response truncated ({response.usage.output_tokens} tokens)")
+            if response.stop_reason == "refusal":
+                detail = getattr(response, "stop_details", None)
+                raise RuntimeError(
+                    f"Claude declined the request (category: "
+                    f"{getattr(detail, 'category', 'unknown')})")
 
             elapsed = time.time() - t0
-            raw_text = _JSON_PREFILL + "".join(collected)
-
+            raw_text = "".join(collected)
             if not raw_text.strip():
                 raise ValueError("Empty response from Claude API")
 
@@ -814,25 +1045,35 @@ def _stream_claude(client, messages: list, max_tokens: int = 16000,
                 cache_info = f" / {cache_read} cache-hit"
             elif cache_create:
                 cache_info = f" / {cache_create} cache-write"
-
+            entry = {
+                "model": use_model,
+                "input": response.usage.input_tokens,
+                "output": response.usage.output_tokens,
+                "cache_write": cache_create,
+                "cache_read": cache_read,
+                "seconds": round(elapsed),
+            }
+            TOKEN_LEDGER.append(entry)
             print(f"   ⏱ {model_label} call: {elapsed:.0f}s "
-                  f"({response.usage.input_tokens} in / {response.usage.output_tokens} out{cache_info})")
+                  f"({response.usage.input_tokens} in / {response.usage.output_tokens} out"
+                  f"{cache_info} / ${cost_of(entry):.3f})")
 
             return _robust_json_parse(raw_text)
 
-        except (httpx.RemoteProtocolError, httpx.ReadError, httpx.StreamError) as e:
+        except _STREAM_ERRORS as e:
             if attempt < retries - 1:
                 wait = 5 * (attempt + 1)
                 print(f"   ⚠ Stream interrupted ({type(e).__name__}), retrying in {wait}s...")
                 time.sleep(wait)
             else:
                 raise
+    raise RuntimeError("stream retries exhausted")
 
 
-def _call_claude(client, user_prompt: str, max_tokens: int = 16000,
-                model: str | None = None) -> dict:
+def _call_claude(client, user_prompt: str, max_tokens: int = MAX_OUTPUT_TOKENS,
+                 model: str | None = None) -> dict:
     return _stream_claude(client, [{"role": "user", "content": user_prompt}],
-                         max_tokens, model=model)
+                          max_tokens, model=model)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -874,11 +1115,14 @@ def generate_digest(payload: dict, db_context: str = "") -> dict:
                     + json.dumps(digest, ensure_ascii=False)[:8000]
                     + "\n\nRevise and return a COMPLETE updated digest JSON that fixes ALL failures. "
                       "Add MORE items from available articles to reach 1000+ words — do not inflate existing bodies. "
-                      "Return ONLY valid JSON."
+                      "Every URL must be copied from the input data. Return ONLY valid JSON."
                 )
+                # One copy of the previous output, inside the feedback where it
+                # is labelled. The old code also echoed it as a truncated
+                # assistant turn, handing the model malformed JSON as its own
+                # prior message.
                 messages = [
                     {"role": "user", "content": user_prompt},
-                    {"role": "assistant", "content": json.dumps(digest, ensure_ascii=False)[:4000]},
                     {"role": "user", "content": expansion_prompt},
                 ]
                 digest = _stream_claude(client, messages, model=retry_model)
@@ -917,8 +1161,25 @@ def generate_digest(payload: dict, db_context: str = "") -> dict:
 
             return digest
 
-        except (anthropic.APIError, anthropic.APIConnectionError,
-               httpx.RemoteProtocolError, httpx.StreamError) as e:
+        except anthropic.BadRequestError:
+            # A 400 is a programming error (bad parameter, unsupported feature),
+            # not a transient fault. Retrying it four times, as the old loop
+            # did for two months of prefill 400s, only delays the failure.
+            raise
+        except (json.JSONDecodeError, ValueError) as e:
+            # June 15-16: the reply came back unparseable and the run crashed
+            # with no retry. A malformed reply is exactly what a second attempt
+            # (on Opus) is for.
+            digest = None
+            if attempt < MAX_ATTEMPTS - 1:
+                print(f"   ⚠ Unparseable reply ({str(e)[:120]}) — retrying")
+                time.sleep(2)
+            elif best_digest:
+                print("   ⚠ Final attempt unparseable — using best earlier attempt")
+                return best_digest
+            else:
+                raise
+        except _STREAM_ERRORS + (anthropic.APIStatusError,) as e:
             if attempt < MAX_ATTEMPTS - 1:
                 wait = 5 * (attempt + 1)
                 print(f"   ⚠ API error (retrying in {wait}s): {e}")
@@ -926,4 +1187,44 @@ def generate_digest(payload: dict, db_context: str = "") -> dict:
             else:
                 raise
 
-    return digest or {}
+    return digest or best_digest or {}
+
+
+def regenerate_digest(payload: dict, previous_digest: dict, warnings: list[str],
+                      attempt: int = 0, db_context: str = "") -> dict:
+    """Re-generate with validator feedback.
+
+    The first retry stays on FAST_MODEL; the second escalates to PRIMARY_MODEL.
+    Most validation failures are a section over its cap, a duplicate topic, or
+    an item whose URL is not in the input, which Sonnet fixes when told exactly
+    what broke.
+    """
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        raise RuntimeError("Missing ANTHROPIC_API_KEY environment variable.")
+    client = anthropic.Anthropic(api_key=api_key)
+    date_str = datetime.now(ZoneInfo("America/New_York")).strftime("%A, %B %-d, %Y")
+    user_prompt = build_user_prompt(payload, date_str, db_context=db_context)
+
+    feedback = (
+        "Your previous digest failed pre-send validation:\n"
+        + "\n".join(f"  - {w}" for w in warnings)
+        + "\n\nHere is your previous output:\n"
+        + json.dumps(previous_digest, ensure_ascii=False)[:9000]
+        + "\n\nReturn a COMPLETE corrected digest JSON that fixes every failure above.\n"
+        "Reminders that are easy to break while fixing something else:\n"
+        "- Section caps are hard limits in both directions; morning_memo is exactly 3.\n"
+        "- Every url must be copied character-for-character from the input data; "
+        "items with URLs not in the input are deleted before sending.\n"
+        "- One topic = one entry across the whole digest.\n"
+        "- No source more than 3 times across top_stories + overnight_items.\n"
+        "- Zero emojis. Quotes verbatim only.\n"
+        "Return ONLY valid JSON. Begin with { and end with }."
+    )
+    messages = [
+        {"role": "user", "content": user_prompt},
+        {"role": "user", "content": feedback},
+    ]
+    model = FAST_MODEL if attempt == 0 else PRIMARY_MODEL
+    print(f"   ↻ Regenerating on {model} with {len(warnings)} validator finding(s)")
+    return _stream_claude(client, messages, model=model)

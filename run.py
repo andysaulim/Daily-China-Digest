@@ -1,16 +1,31 @@
 """
 China Daily Brief — Pipeline Entry Point
-Orchestrates collect → digest → validate → render → send → archive.
+Orchestrates collect → resolve → enrich → digest → post-process → validate
+(regenerate on failure) → trackers → render → archive → send → ledger → metrics.
+
+Posture, carried over from the Korea, Japan and Australia briefs after each of
+them learned it the hard way:
+
+  * SOURCE-OR-SKIP is enforced in code, not only in the prompt. An item whose
+    URL is not in the collected corpus is repaired by headline match or
+    deleted. Nothing unsourced ships.
+  * The send is fail-closed. A CRITICAL validation finding regenerates (Sonnet,
+    then Opus); if it persists the brief is rendered for review, NOT sent, and
+    the run exits non-zero so the failure alert fires. The previous version
+    printed the failures and sent anyway.
+  * Trackers, the published ledger and last_sent.txt are written only after
+    validation passes and (for the ledger and marker) only after the email
+    actually went out, so a failed run cannot poison state or block a retry.
 """
 import argparse
 import json
 import os
+import re
 import sys
 import time
 import traceback
-import requests as _requests
-from concurrent.futures import ThreadPoolExecutor as _ThreadPoolExecutor, as_completed as _as_completed
-from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -24,274 +39,746 @@ COLLECTED_JSON = ROOT / "collected.json"
 DIGEST_JSON = ROOT / "digest.json"
 DIGEST_HTML = ROOT / "digest.html"
 PUBLIC_DIR = ROOT / "public"
+LEDGER_JSON = ROOT / "published_ledger.json"
+LAST_SENT_TXT = ROOT / "last_sent.txt"
+METRICS_JSONL = ROOT / "metrics.jsonl"
+
+_LEDGER_WINDOW_DAYS = 14
+MAX_VALIDATION_RETRIES = 2
+
+ET = ZoneInfo("America/New_York")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SECTION MAPS
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Every list section whose items carry a url. Placement priority order: an item
+# that appears twice is kept in the earlier section.
+_DEDUPE_ORDER = (
+    "top_stories", "overnight_items", "indo_pacific", "business_economy",
+    "also_today", "official_line", "opeds_today", "academic_today",
+    "social_statements", "prc_government", "congressional_watch",
+    "npc_politburo", "personnel_changes",
+)
+_ALL_ITEM_SECTIONS = _DEDUPE_ORDER
+
+# Sections where an item is an article and therefore MUST carry a URL from the
+# corpus. The remaining sections (statements, personnel, committee activity)
+# may legitimately summarise something reported inside another article.
+_ARTICLE_SECTIONS = (
+    "top_stories", "overnight_items", "indo_pacific", "business_economy",
+    "also_today", "opeds_today", "academic_today",
+)
+
+SECTION_CAPS = {
+    "top_stories":       (2, 4),
+    "overnight_items":   (3, 6),
+    "morning_memo":      (3, 3),
+    "also_today":        (0, 6),
+    "business_economy":  (0, 6),
+    "indo_pacific":      (0, 6),
+    "official_line":     (0, 8),
+    "social_statements": (0, 6),
+    "opeds_today":       (0, 8),
+    "academic_today":    (0, 6),
+    "prc_government":    (0, 8),
+    "congressional_watch": (0, 6),
+    "personnel_changes": (0, 6),
+    "calendar_watch":    (0, 5),
+    "on_this_day":       (0, 1),
+}
+
+_TEXT_FIELDS = ("body", "body_text", "summary", "detail", "quote_text", "statement",
+                "context", "so_what", "pattern_note", "central_argument", "analyst_note",
+                "headline", "action", "policy_so_what", "policy_implication", "topic")
+
+_STOP_WORDS = frozenset({
+    "the", "a", "an", "in", "on", "of", "to", "for", "and", "is", "at", "by", "as",
+    "with", "from", "that", "this", "its", "it", "are", "was", "be", "has", "have",
+    "after", "over", "into", "amid", "says", "said", "china", "chinese", "beijing",
+    "chinas", "us", "new", "will", "more", "than", "not", "but", "about",
+})
+
+_EMOJI_RE = re.compile(
+    "[\U0001F300-\U0001FAFF\U00002600-\U000027BF\U0001F1E6-\U0001F1FF\U0001F900-\U0001F9FF]")
+
+_HOLLOW_RE = re.compile(
+    r"(held (its|a|the) (daily|regular|routine) (press )?(briefing|conference)|"
+    r"specific (topics|details) were not (detailed|provided|disclosed)|"
+    r"no (further|additional) details were (provided|available|given)|"
+    r"addressed (a range of|several|various) (topics|issues|questions)|"
+    r"details (remain|were) (unclear|unavailable))",
+    re.IGNORECASE,
+)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SMALL HELPERS
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _count_words(digest: dict) -> int:
+    """Count readable words across all text fields."""
+    words = 0
+    for mi in (digest.get("morning_memo") or []):
+        if isinstance(mi, dict):
+            words += sum(len(v.split()) for v in mi.values() if isinstance(v, str))
+        elif isinstance(mi, str):
+            words += len(mi.split())
+    for key in _ALL_ITEM_SECTIONS:
+        for item in (digest.get(key) or []):
+            if not isinstance(item, dict):
+                continue
+            for field in _TEXT_FIELDS:
+                val = item.get(field, "")
+                if val:
+                    words += len(str(val).split())
+    delta = digest.get("xinhua_delta") or {}
+    for field in ("bottom_line", "doctrinal_shift", "peoples_daily_front_page"):
+        val = delta.get(field, "")
+        if val:
+            words += len(str(val).split())
+    for field in ("editor_note",):
+        if digest.get(field):
+            words += len(str(digest[field]).split())
+    return words
+
+
+def _item_url(item: dict) -> str:
+    return (item.get("url") or "").strip() if isinstance(item, dict) else ""
+
+
+def _primary_title(item: dict) -> str:
+    if not isinstance(item, dict):
+        return ""
+    for f in ("headline", "title", "topic", "action", "quote_text", "statement"):
+        v = item.get(f)
+        if v and isinstance(v, str):
+            return v.strip()
+    return ""
+
+
+def _norm_title(text: str) -> str:
+    t = re.sub(r"[^a-z0-9一-鿿 ]+", " ", (text or "").lower())
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def _headline_tokens(text: str) -> set[str]:
+    return {w for w in re.split(r"\W+", (text or "").lower())
+            if len(w) > 3 and w not in _STOP_WORDS}
+
+
+def _all_text(digest: dict):
+    """Yield (location, text) for every string field the reader will see."""
+    for i, m in enumerate(digest.get("morning_memo") or []):
+        if isinstance(m, str):
+            yield f"morning_memo[{i}]", m
+    for key in ("re_line", "editor_note"):
+        if isinstance(digest.get(key), str):
+            yield key, digest[key]
+    for section in _ALL_ITEM_SECTIONS:
+        for i, item in enumerate(digest.get(section) or []):
+            if isinstance(item, dict):
+                for f in _TEXT_FIELDS:
+                    if isinstance(item.get(f), str):
+                        yield f"{section}[{i}].{f}", item[f]
+    delta = digest.get("xinhua_delta") or {}
+    for f in ("bottom_line", "doctrinal_shift", "propaganda_focus"):
+        if isinstance(delta.get(f), str):
+            yield f"xinhua_delta.{f}", delta[f]
+
+
+def _corpus(payload: dict) -> list:
+    out = []
+    for key in ("tier1", "tier2", "tier3", "tier4",
+                "xi_tracker_articles", "hidden_reach_articles", "gray_zone_articles"):
+        out.extend(a for a in (payload.get(key) or []) if isinstance(a, dict))
+    return out
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# POST-PROCESSING: the code-level SOURCE-OR-SKIP
+# ─────────────────────────────────────────────────────────────────────────────
+
+_PP_STATS: dict = {}
+
+
+def _strip_style(digest: dict) -> list[str]:
+    """Remove emojis; turn em-dashes into plain punctuation. Reports counts."""
+    log = []
+    emoji_n = dash_n = 0
+
+    def _fix(s: str):
+        nonlocal emoji_n, dash_n
+        if not isinstance(s, str):
+            return s
+        n = len(_EMOJI_RE.findall(s))
+        if n:
+            emoji_n += n
+            s = _EMOJI_RE.sub("", s)
+        d = s.count("—")
+        if d:
+            dash_n += d
+            s = re.sub(r"\s*—\s*", ", ", s)
+        return s
+
+    for i, m in enumerate(digest.get("morning_memo") or []):
+        if isinstance(m, str):
+            digest["morning_memo"][i] = _fix(m)
+    for key in ("re_line", "editor_note"):
+        if isinstance(digest.get(key), str):
+            digest[key] = _fix(digest[key])
+    for section in _ALL_ITEM_SECTIONS:
+        for item in (digest.get(section) or []):
+            if isinstance(item, dict):
+                for f in _TEXT_FIELDS:
+                    if isinstance(item.get(f), str):
+                        item[f] = _fix(item[f])
+    delta = digest.get("xinhua_delta") or {}
+    for f in ("bottom_line", "doctrinal_shift"):
+        if isinstance(delta.get(f), str):
+            delta[f] = _fix(delta[f])
+    if emoji_n:
+        log.append(f"    - style: stripped {emoji_n} emoji(s)")
+    if dash_n:
+        log.append(f"    - style: replaced {dash_n} em-dash(es)")
+    return log
+
+
+def _repair_and_gate_urls(digest: dict, payload: dict) -> list[str]:
+    """Exact-URL allowlist with headline repair; unsourced article items are deleted.
+
+    The previous sanitiser allowed any URL whose *domain* had been collected,
+    so a hallucinated reuters.com path passed, and it blanked everything else
+    to "" while leaving the item in place. Both are wrong: the reader got an
+    unverifiable item either way.
+    """
+    log = []
+    corpus = _corpus(payload)
+    valid_urls = {a.get("url", "") for a in corpus if a.get("url")}
+    gnews_to_real = {a.get("gnews_url"): a.get("url") for a in corpus if a.get("gnews_url")}
+    index = [(a.get("url", ""), _headline_tokens(a.get("title", "")),
+              _norm_title(a.get("title", "")))
+             for a in corpus if a.get("url")]
+    repaired = dropped = kept_unsourced = 0
+
+    def _match(item: dict):
+        title = _primary_title(item)
+        nt = _norm_title(title)
+        if nt:
+            for cand_url, _, cand_nt in index:
+                if cand_nt and cand_nt == nt:
+                    return cand_url, 1.0
+        tokens = _headline_tokens(title)
+        if len(tokens) < 3:
+            return None, 0.0
+        best_url, best = None, 0.0
+        for cand_url, cand_tokens, _ in index:
+            if not cand_tokens:
+                continue
+            score = len(tokens & cand_tokens) / min(len(tokens), len(cand_tokens))
+            if score > best:
+                best_url, best = cand_url, score
+        return best_url, best
+
+    def _process(section: str, items: list) -> list:
+        nonlocal repaired, dropped, kept_unsourced
+        out = []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            url = _item_url(item)
+            if url in gnews_to_real:
+                item["url"] = url = gnews_to_real[url]
+            if url and url in valid_urls:
+                out.append(item)
+                continue
+            cand, score = _match(item)
+            if cand and score >= 0.6:
+                item["url"] = cand
+                repaired += 1
+                log.append(f"    - {section}: '{_primary_title(item)[:50]}' -> repaired URL ({score:.0%})")
+                out.append(item)
+                continue
+            if section in _ARTICLE_SECTIONS:
+                dropped += 1
+                log.append(f"    - {section}: DROPPED unsourced item '{_primary_title(item)[:60]}'"
+                           + (f" (url {url[:50]})" if url else " (no url)"))
+                continue
+            # Non-article sections: keep the item but never ship an unknown URL.
+            if url:
+                item["url"] = ""
+            kept_unsourced += 1
+            out.append(item)
+        return out
+
+    for section in _ALL_ITEM_SECTIONS:
+        if isinstance(digest.get(section), list):
+            digest[section] = _process(section, digest[section])
+    trade = digest.get("us_china_trade") or {}
+    if isinstance(trade, dict):
+        for key in ("cfius", "deals"):
+            if isinstance(trade.get(key), list):
+                trade[key] = _process(f"us_china_trade.{key}", trade[key]) if key == "deals" \
+                    else trade[key]
+    for loc in (digest.get("monitored_locations") or []):
+        pass  # tracker-driven; no URLs to gate
+
+    _PP_STATS.update({"urls_repaired": repaired, "items_dropped_unsourced": dropped,
+                      "unsourced_kept_nonarticle": kept_unsourced})
+    if repaired or dropped:
+        log.insert(0, f"    - urls: {repaired} repaired by headline, {dropped} unsourced item(s) deleted")
+    return log
+
+
+def _dedupe_within(digest: dict) -> list[str]:
+    """One topic = one entry. Same URL or a near-identical headline across sections."""
+    log = []
+    seen_urls: dict[str, str] = {}
+    seen_sigs: list[tuple[str, set, str]] = []
+    removed = 0
+
+    # Statements ABOUT a story are not duplicates of it: official_line and
+    # social_statements quote the same articles the top stories cite, on
+    # purpose. They are deduplicated only against themselves.
+    _QUOTE_SECTIONS = ("official_line", "social_statements")
+
+    for section in _DEDUPE_ORDER:
+        items = digest.get(section)
+        if not isinstance(items, list):
+            continue
+        kept = []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            url = _item_url(item)
+            title = _primary_title(item)
+            toks = _headline_tokens(title)
+            dup_reason = None
+            if section in _QUOTE_SECTIONS:
+                q = _norm_title(item.get("statement") or item.get("quote_text") or "")
+                for prev_sec, prev_toks, prev_title in seen_sigs:
+                    if prev_sec == section and q and q == _norm_title(prev_title):
+                        dup_reason = f"same quote already in {section}"
+                        break
+                if not dup_reason:
+                    kept.append(item)
+                    seen_sigs.append((section, set(),
+                                      item.get("statement") or item.get("quote_text") or title))
+                else:
+                    removed += 1
+                    log.append(f"    - {section}: removed '{title[:50]}' ({dup_reason})")
+                continue
+            if url and url in seen_urls:
+                dup_reason = f"same URL as {seen_urls[url]}"
+            elif len(toks) >= 4:
+                for prev_sec, prev_toks, prev_title in seen_sigs:
+                    if not prev_toks or prev_sec in _QUOTE_SECTIONS:
+                        continue
+                    overlap = len(toks & prev_toks) / min(len(toks), len(prev_toks))
+                    if overlap >= 0.6 and (section != prev_sec or section in _ARTICLE_SECTIONS):
+                        dup_reason = f"near-duplicate of {prev_sec}: '{prev_title[:40]}'"
+                        break
+            if dup_reason:
+                removed += 1
+                log.append(f"    - {section}: removed '{title[:50]}' ({dup_reason})")
+                continue
+            kept.append(item)
+            if url:
+                seen_urls.setdefault(url, section)
+            seen_sigs.append((section, toks, title))
+        digest[section] = kept
+    _PP_STATS["duplicates_removed"] = removed
+    return log
+
+
+def _drop_hollow_items(digest: dict) -> list[str]:
+    log = []
+    n = 0
+    for section in ("overnight_items", "also_today", "prc_government", "official_line",
+                    "business_economy", "indo_pacific"):
+        items = digest.get(section)
+        if not isinstance(items, list):
+            continue
+        kept = []
+        for item in items:
+            text = " ".join(str(item.get(f, "")) for f in ("headline", "body", "body_text",
+                                                             "detail", "statement", "context")
+                            if isinstance(item, dict))
+            body = " ".join(str(item.get(f, "")) for f in ("body", "body_text", "detail", "statement")
+                            if isinstance(item, dict))
+            if _HOLLOW_RE.search(text) and len(body.split()) < 45:
+                n += 1
+                log.append(f"    - {section}: dropped hollow item '{_primary_title(item)[:50]}'")
+                continue
+            kept.append(item)
+        digest[section] = kept
+    _PP_STATS["hollow_dropped"] = n
+    return log
+
+
+_MONTH_NUM = {m: i + 1 for i, m in enumerate(
+    ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"])}
+
+
+def _drop_stale_calendar(digest: dict, today) -> list[str]:
+    log = []
+    items = digest.get("calendar_watch")
+    if not isinstance(items, list):
+        return log
+    kept = []
+    for it in items:
+        if not isinstance(it, dict):
+            continue
+        mon = str(it.get("month", "")).strip().lower()[:3]
+        day = it.get("day")
+        try:
+            if mon in _MONTH_NUM and day:
+                from datetime import date as _date
+                year = today.year
+                d = _date(year, _MONTH_NUM[mon], int(day))
+                # A January entry seen in December is next year's.
+                if d < today - timedelta(days=60):
+                    d = _date(year + 1, _MONTH_NUM[mon], int(day))
+                if d < today:
+                    log.append(f"    - calendar_watch: dropped past date "
+                               f"'{(it.get('headline') or '')[:50]}' ({mon.upper()} {day})")
+                    continue
+        except (ValueError, TypeError):
+            pass
+        kept.append(it)
+    digest["calendar_watch"] = kept
+    return log
+
+
+_OTD_RE = re.compile(r"([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})")
+
+
+def _drop_offdate_on_this_day(digest: dict, today) -> list[str]:
+    """on_this_day must match today's month and day; the model still reaches
+    for famous anniversaries a week off."""
+    log = []
+    items = digest.get("on_this_day")
+    if not isinstance(items, list):
+        return log
+    kept = []
+    for it in items:
+        m = _OTD_RE.search(str(it.get("date", "")) if isinstance(it, dict) else "")
+        if m:
+            mon = _MONTH_NUM.get(m.group(1).lower()[:3])
+            if mon and (mon != today.month or int(m.group(2)) != today.day):
+                log.append(f"    - on_this_day: dropped off-date entry '{it.get('date')}'")
+                continue
+        kept.append(it)
+    digest["on_this_day"] = kept
+    return log
+
+
+_SOURCE_SUFFIX_RE = re.compile(r"\s*(\(direct\)|China|Asia|ZH\)|EN)\s*$", re.IGNORECASE)
+
+
+def _normalize_source(src: str) -> str:
+    s = (src or "").strip()
+    s = re.sub(r"\s*\(.*?\)\s*", " ", s)
+    s = _SOURCE_SUFFIX_RE.sub("", s).strip().lower()
+    return s or (src or "").lower()
+
+
+def _enforce_source_diversity(digest: dict, cap: int = 3) -> list[str]:
+    """No outlet more than `cap` times across top_stories + overnight_items.
+    Excess overnight items move to also_today when there is room."""
+    log = []
+    counts: dict[str, int] = {}
+    for section in ("top_stories", "overnight_items"):
+        items = digest.get(section)
+        if not isinstance(items, list):
+            continue
+        kept = []
+        for item in items:
+            key = _normalize_source(item.get("source", "") if isinstance(item, dict) else "")
+            counts[key] = counts.get(key, 0) + 1
+            if key and counts[key] > cap and section == "overnight_items":
+                also = digest.setdefault("also_today", [])
+                if isinstance(also, list) and len(also) < 6:
+                    also.append({**item, "body_text": item.get("body_text") or item.get("body", ""),
+                                 "category": item.get("category", "")})
+                    log.append(f"    - source cap: moved '{_primary_title(item)[:40]}' "
+                               f"({item.get('source')}) to also_today")
+                else:
+                    log.append(f"    - source cap: dropped '{_primary_title(item)[:40]}' "
+                               f"({item.get('source')})")
+                continue
+            kept.append(item)
+        digest[section] = kept
+    return log
+
+
+# ── Cross-day memory ─────────────────────────────────────────────────────────
+
+def _load_ledger() -> list:
+    try:
+        data = json.loads(LEDGER_JSON.read_text(encoding="utf-8"))
+        return data.get("entries", []) if isinstance(data, dict) else []
+    except Exception:
+        return []
+
+
+def _ledger_recent(entries: list, today, window: int = _LEDGER_WINDOW_DAYS):
+    """URLs, normalised titles and display headlines published in the window,
+    excluding today's own entries so a same-day rerun is not starved."""
+    cutoff = today - timedelta(days=window)
+    urls, titles, headlines = set(), set(), []
+    for e in entries:
+        try:
+            d = datetime.strptime(str(e.get("date", "")), "%Y-%m-%d").date()
+        except Exception:
+            continue
+        if d < cutoff or d >= today:
+            continue
+        if e.get("url"):
+            urls.add(e["url"])
+        if e.get("title"):
+            titles.add(e["title"])
+        if e.get("headline"):
+            headlines.append(f"{d.strftime('%b %-d')}: {e['headline']}")
+    return urls, titles, headlines
+
+
+def _dedupe_cross_day(digest: dict, prev_urls: set, prev_titles: set) -> list[str]:
+    """Drop items already published in a recent edition (same URL or identical
+    headline). Follow-up coverage with a new article still comes through."""
+    log = []
+    removed = 0
+    for section in _ARTICLE_SECTIONS:
+        items = digest.get(section)
+        if not isinstance(items, list):
+            continue
+        kept = []
+        for it in items:
+            u, t = _item_url(it), _norm_title(_primary_title(it))
+            if (u and u in prev_urls) or (t and t in prev_titles):
+                removed += 1
+                log.append(f"    - {section}: already published '{_primary_title(it)[:50]}'")
+                continue
+            kept.append(it)
+        digest[section] = kept
+    _PP_STATS["cross_day_removed"] = removed
+    return log
+
+
+def _record_ledger(digest: dict, today_iso: str) -> None:
+    entries = _load_ledger()
+    for section in _ARTICLE_SECTIONS:
+        for it in (digest.get(section) or []):
+            if not isinstance(it, dict):
+                continue
+            u, t = _item_url(it), _primary_title(it)
+            if u or t:
+                entries.append({"date": today_iso, "url": u, "title": _norm_title(t),
+                                "headline": t[:120]})
+    cutoff = datetime.strptime(today_iso, "%Y-%m-%d").date() - timedelta(days=_LEDGER_WINDOW_DAYS)
+    pruned = []
+    for e in entries:
+        try:
+            if datetime.strptime(str(e.get("date", "")), "%Y-%m-%d").date() >= cutoff:
+                pruned.append(e)
+        except Exception:
+            continue
+    LEDGER_JSON.write_text(json.dumps({"entries": pruned}, ensure_ascii=False, indent=1),
+                           encoding="utf-8")
+    print(f"   ✓ Published ledger updated ({len(pruned)} entries, last {_LEDGER_WINDOW_DAYS}d)")
+
+
+def _postprocess_digest(digest: dict, payload: dict, prev_urls: set, prev_titles: set,
+                        today) -> tuple[dict, list[str]]:
+    _PP_STATS.clear()
+    log = []
+    if payload.get("market_indicators") and not digest.get("market_indicators"):
+        digest["market_indicators"] = payload["market_indicators"]
+    log += _strip_style(digest)
+    log += _repair_and_gate_urls(digest, payload)
+    log += _dedupe_cross_day(digest, prev_urls, prev_titles)
+    log += _dedupe_within(digest)
+    log += _drop_hollow_items(digest)
+    log += _drop_stale_calendar(digest, today)
+    log += _drop_offdate_on_this_day(digest, today)
+    log += _enforce_source_diversity(digest)
+    digest["source_count"] = len({a.get("source") for a in _corpus(payload) if a.get("source")})
+    return digest, log
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# LIVE URL CHECK (advisory)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _check_url(url: str, timeout: float = 5.0) -> tuple[str, bool, str]:
+    """HEAD-check a URL. Only 404 and 410 count as dead: 403, 405, 429 and 451
+    are normal for paywalled publishers and bot-protected servers."""
+    import requests
+    try:
+        resp = requests.head(url, timeout=timeout, allow_redirects=True,
+                             headers={"User-Agent": "Mozilla/5.0 CSIS-China-Brief-Validator/1.0"})
+        if resp.status_code in (404, 410):
+            return (url, False, f"HTTP {resp.status_code}")
+        return (url, True, "")
+    except Exception as e:                                   # noqa: BLE001
+        return (url, False, type(e).__name__)
+
+
+def _validate_urls(urls: list[str], limit: int = 40) -> list[tuple[str, str]]:
+    broken = []
+    urls = [u for u in urls if u.startswith("http") and "news.google.com" not in u][:limit]
+    if not urls:
+        return broken
+    try:
+        with ThreadPoolExecutor(max_workers=10) as pool:
+            futures = {pool.submit(_check_url, u): u for u in urls}
+            for fut in as_completed(futures, timeout=40):
+                url, ok, reason = fut.result()
+                if not ok and reason.startswith("HTTP"):
+                    broken.append((url, reason))
+    except Exception:
+        pass
+    return broken
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # VALIDATION GATE
 # ─────────────────────────────────────────────────────────────────────────────
 
-PRESTIGE_SOURCES = {
-    "WSJ China", "NYT China", "WaPo China", "Bloomberg China", "FT China",
-    "Economist China", "CNN China", "Reuters China", "CNBC China",
-}
-
-ENTERTAINMENT_BLOCK = ("celebrity", "lifestyle", "fashion", "drama", "boyband",
-                      "girlband", "concert tour")
+PRESTIGE_NAMES = ("WSJ", "NYT", "WaPo", "Bloomberg", "FT", "Economist", "CNN", "Reuters",
+                  "CNBC", "AP ", "AFP")
 
 
-def _count_words(digest: dict) -> int:
-    """Count readable words across all text fields."""
-    text_fields = ("body", "body_text", "summary", "detail", "quote_text",
-                   "so_what", "pattern_note", "central_argument", "analyst_note",
-                   "headline", "action")
-    words = 0
+def validate_digest(digest: dict, payload: dict | None = None, today=None,
+                    check_links: bool = True) -> list[str]:
+    """Pre-send quality gate. Returns findings; anything containing CRITICAL blocks the send."""
+    w: list[str] = []
+    today = today or datetime.now(ET).date()
 
-    for mi in (digest.get("morning_memo") or []):
-        if isinstance(mi, dict):
-            for v in mi.values():
-                if isinstance(v, str):
-                    words += len(v.split())
-        elif isinstance(mi, str):
-            words += len(mi.split())
-
-    for key in ("top_stories", "overnight_items", "also_today", "business_economy",
-                "indo_pacific", "social_statements", "opeds_today", "academic_today",
-                "prc_government", "congressional_watch", "personnel_changes"):
-        for item in (digest.get(key) or []):
-            if not isinstance(item, dict):
-                continue
-            for field in text_fields:
-                val = item.get(field, "")
-                if val:
-                    words += len(str(val).split())
-
-    delta = digest.get("xinhua_delta") or {}
-    for field in ("bottom_line", "doctrinal_shift"):
-        val = delta.get(field, "")
-        if val:
-            words += len(str(val).split())
-
-    return words
-
-
-def _validate_digest(digest: dict) -> list[str]:
-    """Run pre-send quality checks. Returns list of failures (empty = pass)."""
-    failures = []
-
-    word_count = _count_words(digest)
-    if word_count < 1000:
-        failures.append(f"WORD COUNT: {word_count} words (minimum 1000)")
-
-    top_count = len(digest.get("top_stories") or [])
-    if top_count < 2:
-        failures.append(f"TOP STORIES: {top_count} (minimum 2)")
-    if top_count > 4:
-        failures.append(f"TOP STORIES: {top_count} (maximum 4)")
-
-    overnight_count = len(digest.get("overnight_items") or [])
-    if overnight_count < 3:
-        failures.append(f"OVERNIGHT ITEMS: {overnight_count} (minimum 3)")
+    for section, (min_ct, max_ct) in SECTION_CAPS.items():
+        items = digest.get(section) or []
+        label = section.upper().replace("_", " ")
+        if min_ct and len(items) < min_ct:
+            w.append(f"{label} CRITICAL: only {len(items)} (min {min_ct})")
+        elif len(items) > max_ct:
+            w.append(f"{label} CRITICAL: {len(items)} items (max {max_ct})")
 
     memo = digest.get("morning_memo") or []
-    if len(memo) != 3:
-        failures.append(f"MORNING MEMO: {len(memo)} items (must be exactly 3)")
+    texts = [str(m).strip() for m in memo]
+    if len(texts) >= 2 and len(set(texts)) < len(texts):
+        w.append("MORNING MEMO CRITICAL: duplicate items, all 3 must be distinct")
 
-    # Source diversity check
-    all_items = (digest.get("top_stories") or []) + (digest.get("overnight_items") or [])
-    source_counts = {}
-    for item in all_items:
-        src = (item.get("source") or "").strip()
-        if src:
-            source_counts[src] = source_counts.get(src, 0) + 1
-    for src, count in source_counts.items():
-        if count > 3:
-            failures.append(f"SOURCE DIVERSITY: '{src}' appears {count} times "
-                          f"in top + overnight (max 3)")
+    re_line = digest.get("re_line")
+    if not re_line or len(str(re_line).strip()) < 10:
+        w.append("RE: LINE CRITICAL: missing or too short")
 
-    # Date integrity
+    word_count = _count_words(digest)
+    if word_count < 900:
+        w.append(f"WORD COUNT CRITICAL: ~{word_count} words (hard minimum 900)")
+    elif word_count < 1200:
+        w.append(f"WORD COUNT: ~{word_count} words (target 1200-1500)")
+    elif word_count > 2200:
+        w.append(f"WORD COUNT: ~{word_count} words, over the 2200 ceiling")
+
+    dropped = _PP_STATS.get("items_dropped_unsourced", 0)
+    if dropped >= 4:
+        w.append(f"UNSOURCED CRITICAL: {dropped} items had URLs not in the input and were deleted; "
+                 f"copy urls verbatim from the input data")
+    elif dropped:
+        w.append(f"UNSOURCED: {dropped} item(s) deleted for URLs not in the input")
+
+    if len(digest.get("calendar_watch") or []) < 3:
+        w.append("CALENDAR: fewer than 3 upcoming events after date filtering")
+
     digest_date = digest.get("digest_date", "")
-    today_str = datetime.now(ZoneInfo("America/New_York")).strftime("%A, %B %-d, %Y")
+    today_str = today.strftime("%A, %B %-d, %Y")
     if digest_date and digest_date != today_str:
-        failures.append(f"DATE MISMATCH: digest_date='{digest_date}' vs today='{today_str}'")
+        w.append(f"DATE MISMATCH CRITICAL: digest_date='{digest_date}' vs today='{today_str}'")
+    for field in ("re_line", "digest_date"):
+        if str(digest.get(field)).strip() == "None":
+            w.append(f'NONE STRING: "{field}" contains literal "None"')
 
-    # Placeholder URL check
-    for key in ("top_stories", "overnight_items", "also_today"):
-        for item in (digest.get(key) or []):
-            url = (item.get("url") or "").strip()
-            if url in ("#", "None", "null", ""):
-                continue  # missing URL is OK; will be handled by render
-            if "example.com" in url or "placeholder" in url.lower():
-                failures.append(f"PLACEHOLDER URL in {key}: {url}")
-
-    return failures
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# ARCHIVE TO GITHUB PAGES
-# ─────────────────────────────────────────────────────────────────────────────
-
-def _resolve_google_url(url: str) -> str:
-    """Follow a Google News redirect URL to get the real article URL."""
-    try:
-        resp = _requests.get(
-            url, allow_redirects=True, timeout=6,
-            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
-        )
-        final = resp.url
-        return final if final and not final.startswith("https://news.google.com") else url
-    except Exception:
-        return url
-
-
-def _resolve_payload_urls(payload: dict) -> dict:
-    """Resolve all Google News RSS redirect URLs in collected payload before Claude sees them.
-
-    Google News RSS URLs (news.google.com/rss/articles/CBMi...) are blocked by email
-    clients as invalid addresses. Resolving them at payload time means Claude copies
-    real article URLs verbatim, eliminating the problem at the source.
-    """
-    all_gnews: dict = {}
-    for tier in ("tier1", "tier2", "tier3", "tier4"):
-        for art in (payload.get(tier) or []):
-            u = art.get("url", "")
-            if u and "news.google.com" in u:
-                all_gnews[u] = u
-
-    if not all_gnews:
-        return payload
-
-    print(f"   ↻ Pre-resolving {len(all_gnews)} Google News URLs in payload...")
-    with _ThreadPoolExecutor(max_workers=20) as pool:
-        futures = {pool.submit(_resolve_google_url, u): u for u in all_gnews}
-        for future in _as_completed(futures):
-            original = futures[future]
-            all_gnews[original] = future.result()
-
-    resolved = sum(1 for v in all_gnews.values() if "news.google.com" not in v)
-    print(f"   ✓ {resolved}/{len(all_gnews)} resolved to real article URLs")
-
-    for tier in ("tier1", "tier2", "tier3", "tier4"):
-        for art in (payload.get(tier) or []):
-            u = art.get("url", "")
-            if u in all_gnews:
-                art["url"] = all_gnews[u]
-
-    return payload
-
-
-_URL_SECTIONS = (
-    "top_stories", "overnight_items", "also_today", "business_economy",
-    "indo_pacific", "opeds_today", "academic_today", "social_statements",
-    "prc_government", "congressional_watch", "npc_politburo", "personnel_changes",
-)
-
-
-def _sanitise_urls(digest: dict, collected_urls: set) -> dict:
-    """Null out hallucinated URLs; resolve Google News redirects for real ones.
-
-    URL is kept if it exactly matches a collected URL OR its hostname matches
-    any hostname seen in the collected payload (domain-level allowlist). Only
-    URLs from completely unknown domains are stripped as hallucinations.
-    """
-    from urllib.parse import urlparse as _up
-
-    # Build domain allowlist from collected URLs
-    collected_domains: set = set()
-    for u in collected_urls:
-        try:
-            h = _up(u).hostname or ""
-            if h.startswith("www."):
-                h = h[4:]
-            if h:
-                collected_domains.add(h)
-        except Exception:
-            pass
-
-    def _url_allowed(url: str) -> bool:
-        if url in collected_urls:
-            return True
-        try:
-            h = _up(url).hostname or ""
-            if h.startswith("www."):
-                h = h[4:]
-            return bool(h) and h in collected_domains
-        except Exception:
-            return False
-
-    google_urls = {}
-
-    for section in _URL_SECTIONS:
+    seen_urls: dict[str, str] = {}
+    bad_urls = thin = 0
+    source_counts: dict[str, int] = {}
+    for section in _ALL_ITEM_SECTIONS:
         for item in (digest.get(section) or []):
             if not isinstance(item, dict):
                 continue
-            url = item.get("url", "")
-            if not url or not url.startswith("http"):
-                item["url"] = ""
-                continue
-            if not _url_allowed(url):
-                item["url"] = ""  # unknown domain — hallucinated
-            elif "news.google.com" in url:
-                google_urls[url] = url  # will resolve below
+            url = _item_url(item)
+            if url and (url == "#" or not url.startswith("http")):
+                bad_urls += 1
+            if url.startswith("http"):
+                seen_urls.setdefault(url, section)
+            body = (item.get("body") or item.get("body_text") or item.get("statement")
+                    or item.get("detail") or item.get("summary") or "").strip()
+            if section in _ARTICLE_SECTIONS and len(body) < 20:
+                thin += 1
+            if section in ("top_stories", "overnight_items", "also_today"):
+                key = _normalize_source(item.get("source", ""))
+                if key:
+                    source_counts[key] = source_counts.get(key, 0) + 1
+    if bad_urls:
+        w.append(f"BAD URLS: {bad_urls} placeholder or invalid URL(s)")
+    if thin:
+        w.append(f"THIN BODIES: {thin} article item(s) with under 20 characters")
+    for src, n in source_counts.items():
+        if n > 7:
+            w.append(f"SOURCE DIVERSITY: '{src}' appears {n} times across top sections")
 
-    # Also handle cfius / deals inside us_china_trade
-    trade = digest.get("us_china_trade") or {}
-    for key in ("cfius", "deals"):
-        for item in (trade.get(key) or []):
-            if not isinstance(item, dict):
-                continue
-            url = item.get("url", "")
-            if not url or not url.startswith("http"):
-                item["url"] = ""
-                continue
-            if not _url_allowed(url):
-                item["url"] = ""
-            elif "news.google.com" in url:
-                google_urls[url] = url
-
-    if google_urls:
-        print(f"   ↻ Resolving {len(google_urls)} Google News redirect(s)...")
-        with _ThreadPoolExecutor(max_workers=10) as pool:
-            futures = {pool.submit(_resolve_google_url, u): u for u in google_urls}
-            for future in _as_completed(futures):
-                original = futures[future]
-                google_urls[original] = future.result()
-
-        # Apply resolved URLs back
-        for section in _URL_SECTIONS:
+    # Verbatim-quote check: a quote must appear in some collected summary.
+    if payload:
+        haystack = " ".join((a.get("summary") or "") + " " + (a.get("title") or "")
+                            for a in _corpus(payload)).lower()
+        haystack = re.sub(r"\s+", " ", haystack)
+        unverifiable = 0
+        for section, field in (("social_statements", "quote_text"), ("official_line", "statement")):
             for item in (digest.get(section) or []):
-                if isinstance(item, dict) and item.get("url") in google_urls:
-                    item["url"] = google_urls[item["url"]]
-        for key in ("cfius", "deals"):
-            for item in ((digest.get("us_china_trade") or {}).get(key) or []):
-                if isinstance(item, dict) and item.get("url") in google_urls:
-                    item["url"] = google_urls[item["url"]]
+                q = str(item.get(field, "") if isinstance(item, dict) else "").strip().strip('"“”')
+                if len(q) < 25:
+                    continue
+                probe = re.sub(r"\s+", " ", q.lower())[:60]
+                if probe not in haystack and not (item.get("original_zh") and
+                                                  str(item.get("original_zh"))[:20] in haystack):
+                    unverifiable += 1
+        if unverifiable:
+            w.append(f"QUOTES: {unverifiable} quote(s) not found verbatim in collected text "
+                     f"(translation or paraphrase); flagged for review")
 
-    # Strip any remaining news.google.com URLs — resolution failed, broken in email clients
-    for section in _URL_SECTIONS:
-        for item in (digest.get(section) or []):
-            if isinstance(item, dict) and "news.google.com" in (item.get("url") or ""):
-                item["url"] = ""
-    for key in ("cfius", "deals"):
-        for item in ((digest.get("us_china_trade") or {}).get(key) or []):
-            if isinstance(item, dict) and "news.google.com" in (item.get("url") or ""):
-                item["url"] = ""
+    xd = digest.get("xinhua_delta")
+    if not isinstance(xd, dict):
+        w.append("XINHUA DELTA: missing (non-blocking)")
 
-    return digest
+    if len(digest.get("monitored_locations") or []) != 16:
+        w.append(f"LOCATIONS: {len(digest.get('monitored_locations') or [])} monitored_locations (expected 16)")
+
+    # Prestige coverage: name the dropped stories, not just the outlets.
+    if payload:
+        used = set(seen_urls)
+        dropped_p = [a for a in (payload.get("tier1") or [])
+                     if a.get("prestige_outlet") and a.get("url") and a["url"] not in used]
+        if dropped_p:
+            shown = "; ".join(f"{a.get('source', '?')}: {(a.get('title') or '')[:60]}"
+                              for a in dropped_p[:5])
+            more = f" (+{len(dropped_p) - 5} more)" if len(dropped_p) > 5 else ""
+            w.append(f"PRESTIGE: {len(dropped_p)} collected but unused: {shown}{more}")
+
+    if check_links and seen_urls:
+        for url, reason in _validate_urls(list(seen_urls))[:5]:
+            w.append(f"BROKEN URL ({reason}): {url[:80]} in {seen_urls.get(url, '?')}")
+
+    return w
 
 
-def _archive_html(html: str, digest: dict) -> None:
-    """Write the dated HTML to public/ for GitHub Pages."""
+# ─────────────────────────────────────────────────────────────────────────────
+# ARCHIVE, METRICS
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _archive_html(html: str, digest: dict, date_str: str) -> None:
     PUBLIC_DIR.mkdir(exist_ok=True)
-    date_str = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
-
-    dated_file = PUBLIC_DIR / f"{date_str}.html"
-    dated_file.write_text(html, encoding="utf-8")
-
-    # Latest pointer
-    latest_file = PUBLIC_DIR / "index.html"
-    latest_file.write_text(html, encoding="utf-8")
-
-    # Append to archive index
+    (PUBLIC_DIR / f"{date_str}.html").write_text(html, encoding="utf-8")
+    (PUBLIC_DIR / "index.html").write_text(html, encoding="utf-8")
     archive_index = PUBLIC_DIR / "archive.json"
     archive = []
     if archive_index.exists():
@@ -299,20 +786,26 @@ def _archive_html(html: str, digest: dict) -> None:
             archive = json.loads(archive_index.read_text())
         except json.JSONDecodeError:
             archive = []
-
     entry = {
         "date": date_str,
         "filename": f"{date_str}.html",
         "top_stories": len(digest.get("top_stories") or []),
         "overnight_items": len(digest.get("overnight_items") or []),
         "word_count": _count_words(digest),
+        "sources": digest.get("source_count"),
     }
-    # Replace today's entry if it already exists
     archive = [a for a in archive if a.get("date") != date_str]
     archive.insert(0, entry)
     archive_index.write_text(json.dumps(archive[:120], indent=2))
+    print(f"📁 Archived to {date_str}.html")
 
-    print(f"📁 Archived to {dated_file.name}")
+
+def _write_metrics(record: dict) -> None:
+    try:
+        with METRICS_JSONL.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    except OSError as e:
+        print(f"⚠ metrics.jsonl not written: {e}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -320,161 +813,231 @@ def _archive_html(html: str, digest: dict) -> None:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def run_pipeline(args: argparse.Namespace) -> int:
-    """Execute the full pipeline. Returns exit code."""
+    now = datetime.now(ET)
+    today = now.date()
+    today_iso = today.isoformat()
     print(f"\n{'=' * 64}")
-    print(f"  CHINA DAILY BRIEF — {datetime.now(ZoneInfo('America/New_York')).strftime('%A, %B %-d, %Y at %I:%M %p ET')}")
+    print(f"  CHINA DAILY BRIEF — {now.strftime('%A, %B %-d, %Y at %I:%M %p ET')}")
     print(f"{'=' * 64}\n")
-
     pipeline_start = time.time()
+    test_mode = bool(args.send_to)
+    metrics: dict = {"date": today_iso, "started": now.isoformat(), "test_mode": test_mode}
 
     # ─── Collect ─────────────────────────────────────────────────────────
     if args.from_cache and COLLECTED_JSON.exists():
         print("📂 Loading cached collection from disk...")
         payload = json.loads(COLLECTED_JSON.read_text(encoding="utf-8"))
-        print(f"   • Loaded {sum(len(v) for k, v in payload.items() if isinstance(v, list))} articles")
     else:
         print("🌐 Collecting from RSS feeds...")
         from collect import collect_all
         payload = collect_all()
-        COLLECTED_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2),
-                                 encoding="utf-8")
-        total = sum(len(v) for k, v in payload.items() if isinstance(v, list))
-        unique_sources = set()
-        for tier in ("tier1", "tier2", "tier3", "tier4"):
-            for art in payload.get(tier, []):
-                src = art.get("source")
-                if src:
-                    unique_sources.add(src)
-        print(f"   • {total} articles from {len(unique_sources)} unique sources")
+        COLLECTED_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    corpus = _corpus(payload)
+    unique_sources = {a.get("source") for a in corpus if a.get("source")}
+    print(f"   • {len(corpus)} articles from {len(unique_sources)} unique sources")
+    metrics["articles"] = len(corpus)
+    metrics["sources"] = len(unique_sources)
+
+    # ─── Resolve Google News redirects, fetch article text ───────────────
+    print("\n🔗 Canonicalising Google News URLs...")
+    try:
+        from resolve import resolve_payload
+        payload = resolve_payload(payload)
+    except Exception as e:                                   # noqa: BLE001
+        print(f"   ⚠ URL resolution failed (non-fatal): {e}")
+    metrics["resolve"] = payload.get("resolve_stats")
+
+    print("\n📄 Fetching article text...")
+    try:
+        from fulltext import enrich_payload
+        payload = enrich_payload(payload)
+    except Exception as e:                                   # noqa: BLE001
+        print(f"   ⚠ Full-text enrichment failed (non-fatal): {e}")
+    metrics["fulltext"] = payload.get("fulltext_stats")
+
+    # ─── Cross-day memory ────────────────────────────────────────────────
+    prev_urls, prev_titles, prev_headlines = _ledger_recent(_load_ledger(), today)
+    payload["recent_coverage"] = prev_headlines
+    for a in corpus:
+        if (a.get("url") in prev_urls) or (_norm_title(a.get("title", "")) in prev_titles):
+            a["seen_before"] = True
+    if prev_headlines:
+        print(f"\n🧠 Cross-day memory: {len(prev_headlines)} headlines from the last "
+              f"{_LEDGER_WINDOW_DAYS} days")
+
+    COLLECTED_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
     if args.dry_run:
         print(f"\n✅ Dry run complete. Cached to {COLLECTED_JSON.name}")
+        _write_metrics({**metrics, "dry_run": True})
         return 0
 
-    # ─── Pre-resolve Google News redirect URLs in payload ────────────────
-    print("\n🔗 Pre-resolving Google News URLs in payload...")
-    payload = _resolve_payload_urls(payload)
-
-    # ─── Database context (Hidden Reach / AMTI updates if available) ─────
+    # ─── Database context ────────────────────────────────────────────────
     db_context = ""
     try:
         from databases import build_db_context
         db_context = build_db_context()
-        if db_context:
-            print(f"📊 Database context loaded ({len(db_context)} chars)")
-    except Exception as e:
+    except Exception as e:                                   # noqa: BLE001
         print(f"⚠ Database context unavailable: {e}")
 
-    # ─── Digest ──────────────────────────────────────────────────────────
+    # ─── Generate → post-process → validate (retry with feedback) ────────
     print("\n🤖 Generating digest...")
-    from digest import generate_digest
+    from digest import generate_digest, regenerate_digest, TOKEN_LEDGER, run_cost
     digest = generate_digest(payload, db_context=db_context)
+    digest, pp_log = _postprocess_digest(digest, payload, prev_urls, prev_titles, today)
+    for line in pp_log:
+        print(line)
+    DIGEST_JSON.write_text(json.dumps(digest, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    # ─── Sanitise URLs (strip hallucinated, resolve Google News redirects) ─
-    print("\n🔗 Sanitising URLs...")
-    collected_urls: set = set()
-    for tier in ("tier1", "tier2", "tier3", "tier4",
-                 "xi_tracker_articles", "hidden_reach_articles", "gray_zone_articles"):
-        for art in (payload.get(tier) or []):
-            u = art.get("url", "")
-            if u:
-                collected_urls.add(u)
-    digest = _sanitise_urls(digest, collected_urls)
-    print(f"   ✓ URL sanitisation complete ({len(collected_urls)} collected URLs as reference)")
+    validation_passed = False
+    findings: list[str] = []
+    attempts = 0
+    for attempt in range(1 + MAX_VALIDATION_RETRIES):
+        attempts = attempt + 1
+        print(f"\n🔍 Validating digest (attempt {attempts}/{1 + MAX_VALIDATION_RETRIES})...")
+        findings = validate_digest(digest, payload=payload, today=today,
+                                   check_links=not args.no_link_check)
+        critical = [f for f in findings if "CRITICAL" in f]
+        advisory = [f for f in findings if f not in critical]
+        if not critical:
+            print("   ✓ Validation passed" + (" with advisories:" if advisory else ""))
+            for f in advisory:
+                print(f"     - {f}")
+            validation_passed = True
+            break
+        print("   ✖ BLOCKING:")
+        for f in critical:
+            print(f"     - {f}")
+        if advisory:
+            print("   ⚠ also, not blocking:")
+            for f in advisory:
+                print(f"     - {f}")
+        if attempt < MAX_VALIDATION_RETRIES:
+            try:
+                digest = regenerate_digest(payload, digest, critical, attempt=attempt,
+                                           db_context=db_context)
+            except Exception as e:                           # noqa: BLE001
+                print(f"   ⚠ Regeneration failed: {e}")
+                break
+            digest, pp_log = _postprocess_digest(digest, payload, prev_urls, prev_titles, today)
+            for line in pp_log:
+                print(line)
+            DIGEST_JSON.write_text(json.dumps(digest, ensure_ascii=False, indent=2),
+                                   encoding="utf-8")
+        else:
+            print("\n   ✖ CRITICAL findings after all retries. The brief will NOT be sent.")
+            print("     HTML is still rendered for review (digest.html).")
 
-    DIGEST_JSON.write_text(json.dumps(digest, ensure_ascii=False, indent=2),
-                          encoding="utf-8")
+    metrics.update({
+        "validation_attempts": attempts,
+        "validation_passed": validation_passed,
+        "critical": [f for f in findings if "CRITICAL" in f],
+        "advisory_count": len([f for f in findings if "CRITICAL" not in f]),
+        "postprocess": dict(_PP_STATS),
+        "word_count": _count_words(digest),
+        "sections": {k: len(digest.get(k) or []) for k in SECTION_CAPS},
+        "tokens": list(TOKEN_LEDGER),
+        "cost_usd": run_cost(),
+    })
 
-    # ─── Update persistent trackers ──────────────────────────────────────
+    # ─── Health checks (never block) ─────────────────────────────────────
+    print("\n🩺 Health checks...")
     try:
-        from xi_tracker import update_from_digest as update_xi
-        update_xi(digest)
-    except Exception as e:
-        print(f"⚠ Xi tracker update failed (non-fatal): {e}")
+        import pipeline_health
+        report = pipeline_health.check(payload, digest)
+        pipeline_health.print_report(report)
+        metrics["health"] = report
+    except Exception as e:                                   # noqa: BLE001
+        print(f"   ⚠ Health check failed: {e}")
 
-    try:
-        from xinhua_tracker import update_from_digest as update_xinhua
-        update_xinhua(digest)
-    except Exception as e:
-        print(f"⚠ Xinhua tracker update failed (non-fatal): {e}")
-
-    try:
-        from bp_tracker import update_from_digest as update_bp
-        update_bp(digest)
-    except Exception as e:
-        print(f"⚠ BP tracker update failed (non-fatal): {e}")
-
-    # ─── Validate ────────────────────────────────────────────────────────
-    print("\n🔍 Validating digest...")
-    failures = _validate_digest(digest)
-    if failures:
-        print("⚠ Validation failures:")
-        for f in failures:
-            print(f"   • {f}")
-        if not args.force_send:
-            print("\n   Use --force-send to override validation gate.")
-            # Non-fatal: continue to render so Sau can review
-    else:
-        print("   ✓ All validation checks passed")
+    # ─── Trackers: only after validation, never on a test send ───────────
+    if validation_passed and not args.no_track and not test_mode:
+        for name, mod in (("Xi", "xi_tracker"), ("Xinhua", "xinhua_tracker"), ("BP", "bp_tracker")):
+            try:
+                module = __import__(mod)
+                module.update_from_digest(digest)
+            except Exception as e:                           # noqa: BLE001
+                print(f"⚠ {name} tracker update failed (non-fatal): {e}")
 
     # ─── Render ──────────────────────────────────────────────────────────
     print("\n🎨 Rendering HTML email...")
     from render import render_html
+    digest.setdefault("web_url", os.environ.get("WEB_URL", ""))
     html = render_html(digest)
     DIGEST_HTML.write_text(html, encoding="utf-8")
     print(f"   • Wrote {len(html):,} bytes to {DIGEST_HTML.name}")
+    metrics["html_bytes"] = len(html)
 
-    # ─── Archive ─────────────────────────────────────────────────────────
-    if not args.no_archive:
-        _archive_html(html, digest)
+    # ─── Archive + README (real, validated runs only) ────────────────────
+    archived = False
+    if validation_passed and not args.no_archive and not test_mode:
+        _archive_html(html, digest, today_iso)
+        archived = True
+        try:
+            from update_readme import update_readme
+            update_readme(metrics)
+        except Exception as e:                               # noqa: BLE001
+            print(f"⚠ README update failed (non-fatal): {e}")
 
-    # ─── Update README ───────────────────────────────────────────────────
-    try:
-        from update_readme import update_readme
-        update_readme()
-    except Exception as e:
-        print(f"⚠ README update failed (non-fatal): {e}")
-
-    # ─── Send ────────────────────────────────────────────────────────────
+    # ─── Send (fail-closed) ──────────────────────────────────────────────
+    sent = False
+    exit_code = 0
     if args.no_send:
         print("\n📭 --no-send: skipping email send.")
+    elif not validation_passed and not args.force_send:
+        print("\n⛔ Send BLOCKED by validation. Use --force-send to override.")
+        exit_code = 2
     else:
-        print("\n📧 Sending email...")
         from send_email import send_digest
-        sent = send_digest(html)
-        if not sent:
-            print("   ⚠ Send failed or skipped")
+        recipients = None
+        subject = None
+        if test_mode:
+            recipients = [r.strip() for r in args.send_to.split(",") if r.strip()]
+            subject = (f"China Daily Brief — {now.strftime('%a %b %-d %Y')} (test run)")
+            print(f"\n📧 Test send to {', '.join(recipients)}...")
+        else:
+            print("\n📧 Sending email...")
+        sent = send_digest(html, subject=subject, recipients=recipients)
+        if sent and not test_mode:
+            _record_ledger(digest, today_iso)
+            LAST_SENT_TXT.write_text(today_iso + "\n", encoding="utf-8")
+        elif not sent:
+            print("   ❌ Send failed; the run is marked failed so the alert and the next "
+                  "catch-up cron can act.")
+            exit_code = 3
 
     elapsed = time.time() - pipeline_start
+    metrics.update({"sent": sent, "archived": archived, "seconds": round(elapsed),
+                    "exit_code": exit_code})
+    _write_metrics(metrics)
     print(f"\n{'=' * 64}")
-    print(f"  ✅ Pipeline complete in {elapsed:.0f}s")
+    status = "✅ Pipeline complete" if exit_code == 0 else f"⚠ Pipeline finished with exit code {exit_code}"
+    print(f"  {status} in {elapsed:.0f}s — est. cost ${run_cost():.2f}")
     print(f"{'=' * 64}\n")
-
-    return 0
+    return exit_code
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="China Daily Brief — orchestration entry point"
-    )
-    parser.add_argument("--dry-run", action="store_true",
-                       help="Collect only; skip digest/render/send")
-    parser.add_argument("--from-cache", action="store_true",
-                       help="Reuse cached collected.json (skip collection)")
-    parser.add_argument("--no-send", action="store_true",
-                       help="Generate HTML but don't email")
-    parser.add_argument("--no-archive", action="store_true",
-                       help="Skip writing to public/ archive")
+    parser = argparse.ArgumentParser(description="China Daily Brief — orchestration entry point")
+    parser.add_argument("--dry-run", action="store_true", help="Collect + resolve + enrich only")
+    parser.add_argument("--from-cache", action="store_true", help="Reuse cached collected.json")
+    parser.add_argument("--no-send", action="store_true", help="Generate HTML but don't email")
+    parser.add_argument("--no-archive", action="store_true", help="Skip writing to public/")
+    parser.add_argument("--no-track", action="store_true", help="Do not update tracker JSON")
+    parser.add_argument("--no-link-check", action="store_true", help="Skip live URL HEAD checks")
     parser.add_argument("--force-send", action="store_true",
-                       help="Send even if validation gates fail")
+                        help="Send even if validation has CRITICAL findings")
+    parser.add_argument("--send-to", default="",
+                        help="Test run: email only these comma-separated addresses; no archive, "
+                             "ledger, marker or tracker writes")
     args = parser.parse_args()
-
     try:
         return run_pipeline(args)
     except KeyboardInterrupt:
         print("\n\n⚠ Interrupted by user")
         return 130
-    except Exception as e:
+    except Exception as e:                                   # noqa: BLE001
         print(f"\n❌ Pipeline failed: {e}")
         traceback.print_exc()
         return 1

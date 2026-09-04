@@ -22,8 +22,41 @@ from datetime import datetime, timezone, timedelta
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _gnews(query: str) -> str:
-    """Build a Google News RSS search URL."""
+    """Build a Google News RSS search URL (US English edition)."""
     return f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+
+
+def _gnews_zh(query: str) -> str:
+    """Google News RSS search, Simplified Chinese edition. Used for PRC-language
+    primary sources (人民日报, 新华社, 财新 ...). Titles are translated by the model."""
+    return f"https://news.google.com/rss/search?q={query}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
+
+
+def _gnews_tw(query: str) -> str:
+    """Google News RSS search, Traditional Chinese (Taiwan) edition."""
+    return f"https://news.google.com/rss/search?q={query}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+
+
+def _gnews_hk(query: str) -> str:
+    """Google News RSS search, Traditional Chinese (Hong Kong) edition."""
+    return f"https://news.google.com/rss/search?q={query}&hl=zh-HK&gl=HK&ceid=HK:zh-Hant"
+
+
+# Cap per Chinese-language feed so 30 ZH feeds cannot crowd the English wires
+# out of the prompt window; relevance ordering in digest.py does the rest.
+ZH_PER_SOURCE_CAP = 12
+
+
+# Direct publisher RSS with a Google News fallback (pattern from the Japan brief).
+# Direct feeds carry real permalinks and full summaries, but a feed URL can rot
+# or 403. Registering the fallback means a bad direct-feed guess degrades to the
+# previous Google News behaviour instead of silently dropping the source.
+_FALLBACK: dict[str, str] = {}
+
+
+def _direct(source: str, direct_url: str, gnews_query: str) -> str:
+    _FALLBACK[source] = _gnews(gnews_query)
+    return direct_url
 
 
 # ── TIER 1: NEWS (24h window) ─────────────────────────────────────────────────
@@ -38,14 +71,23 @@ TIER1_FEEDS = {
     "AFP China":          _gnews("China+site:afp.com"),
     "Bloomberg China":    _gnews("China+site:bloomberg.com"),
     "BBC China":          _gnews("China+site:bbc.com"),
+    "BBC Asia (direct)":  _direct("BBC Asia (direct)", "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+                                  "China+OR+Taiwan+site:bbc.com/news/world/asia"),
+    "NYT Asia (direct)":  _direct("NYT Asia (direct)", "https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml",
+                                  "China+site:nytimes.com/section/world/asia"),
+    "Guardian China (direct)": _direct("Guardian China (direct)", "https://www.theguardian.com/world/china/rss",
+                                       "site:theguardian.com/world/china"),
     "CNN China":          _gnews("China+site:cnn.com"),
     "CNBC China":         _gnews("China+site:cnbc.com"),
     "Economist China":    _gnews("China+site:economist.com"),
     "Guardian China":     _gnews("China+site:theguardian.com"),
     "Al Jazeera China":   _gnews("China+site:aljazeera.com"),
+    "Politico China":     _gnews("China+site:politico.com"),
+    "Axios China":        _gnews("China+site:axios.com"),
 
     # ── Regional Asia ──────────────────────────────────────────────────────
     "SCMP":               "https://www.scmp.com/rss/91/feed",
+    "SCMP China":         _direct("SCMP China", "https://www.scmp.com/rss/4/feed", "site:scmp.com/news/china"),
     "Nikkei Asia China":  _gnews("China+site:asia.nikkei.com"),
     "Japan Times China":  _gnews("China+site:japantimes.co.jp"),
     "Kyodo China":        _gnews("China+site:english.kyodonews.net"),
@@ -54,9 +96,13 @@ TIER1_FEEDS = {
     "CNA China":          _gnews("China+site:channelnewsasia.com"),
     "Straits Times China": _gnews("China+site:straitstimes.com"),
     "The Diplomat China": _gnews("site:thediplomat.com+China"),
+    "The Diplomat (direct)": _direct("The Diplomat (direct)", "https://thediplomat.com/feed/",
+                                     "site:thediplomat.com+China+OR+Taiwan+OR+PLA"),
 
     # ── Taiwan press (English) ─────────────────────────────────────────────
     "Taipei Times":       _gnews("site:taipeitimes.com"),
+    "Taipei Times (direct)": _direct("Taipei Times (direct)", "https://www.taipeitimes.com/xml/index.rss",
+                                     "site:taipeitimes.com/News/front"),
     "Focus Taiwan":       _gnews("Taiwan+OR+China+site:focustaiwan.tw"),
     "Taiwan News":        _gnews("site:taiwannews.com.tw"),
     "Liberty Times EN":   _gnews("Taiwan+site:englishnews.ltn.com.tw"),
@@ -64,12 +110,17 @@ TIER1_FEEDS = {
     # ── PRC English-language press (Tier 4 covers Chinese-language primary) ───
     "Caixin Global":      _gnews("China+site:caixinglobal.com"),
     "China Daily":        _gnews("site:chinadaily.com.cn"),
+    "China Daily (direct)": _direct("China Daily (direct)", "http://www.chinadaily.com.cn/rss/china-rss.xml",
+                                    "site:chinadaily.com.cn/a"),
     "Sixth Tone":         _gnews("China+site:sixthtone.com"),
     "Hong Kong Free Press": "https://hongkongfp.com/feed/",
 
     # ── US Government — China-relevant ─────────────────────────────────────
     "White House China":  _gnews("China+site:whitehouse.gov"),
     "State Dept China":   _gnews("China+site:state.gov"),
+    "State Dept Press (direct)": _direct("State Dept Press (direct)",
+                                         "https://www.state.gov/rss-feed/press-releases/feed/",
+                                         "China+OR+Taiwan+OR+PRC+site:state.gov/releases"),
     "Pentagon China":     _gnews("China+site:defense.gov"),
     "Treasury China":     _gnews("China+site:treasury.gov"),
     "OFAC China":         _gnews("China+site:ofac.treasury.gov"),
@@ -121,9 +172,65 @@ TIER1_FEEDS = {
     "ChinaFile":          _gnews("site:chinafile.com"),
     "China Digital Times": "https://chinadigitaltimes.net/feed/",
     "What's on Weibo":    "https://www.whatsonweibo.com/feed/",
-    "China Media Project": _gnews("site:chinamediaproject.org"),
+    "China Media Project": _direct("China Media Project", "https://chinamediaproject.org/feed/",
+                                   "site:chinamediaproject.org"),
     "Trivium China":      _gnews("site:triviumchina.com"),
-    "MacroPolo":          _gnews("site:macropolo.org"),
+    "The Wire China":     _direct("The Wire China", "https://www.thewirechina.com/feed/",
+                                  "site:thewirechina.com"),
+    "Pekingnology":       _direct("Pekingnology", "https://www.pekingnology.com/feed",
+                                  "site:pekingnology.com"),
+    "Sinification":       _direct("Sinification", "https://www.sinification.com/feed",
+                                  "site:sinification.com"),
+    "ChinaTalk":          _direct("ChinaTalk", "https://www.chinatalk.media/feed",
+                                  "site:chinatalk.media"),
+    # MacroPolo (Paulson Institute) wound down in 2024; feed removed.
+
+    # ── Chinese-language press (tagged lang=ZH, titles translated by the model) ──
+    # PRC party / state media
+    "人民日报 (People's Daily ZH)": _direct("人民日报 (People's Daily ZH)",
+                                           "http://www.people.com.cn/rss/politics.xml",
+                                           "site:people.com.cn"),
+    "人民日报国际 (People's Daily World ZH)": _gnews_zh("site:world.people.com.cn"),
+    "新华社 (Xinhua ZH)":          _gnews_zh("site:news.cn"),
+    "环球时报 (Global Times ZH)":  _gnews_zh("site:huanqiu.com"),
+    "央视新闻 (CCTV ZH)":          _gnews_zh("site:news.cctv.com"),
+    "中国新闻网 (China News ZH)":  _gnews_zh("site:chinanews.com.cn"),
+    "求是 (Qiushi ZH)":            _gnews_zh("site:qstheory.cn"),
+    "解放军报 (PLA Daily ZH)":     _gnews_zh("site:81.cn"),
+    "澎湃新闻 (The Paper ZH)":     _gnews_zh("site:thepaper.cn"),
+    "观察者网 (Guancha ZH)":       _gnews_zh("site:guancha.cn"),
+    "经济日报 (Economic Daily ZH)": _gnews_zh("site:ce.cn"),
+    # PRC financial press
+    "财新 (Caixin ZH)":            _gnews_zh("site:caixin.com"),
+    "第一财经 (Yicai ZH)":         _gnews_zh("site:yicai.com"),
+    "21世纪经济报道 (21st Century Business Herald ZH)": _gnews_zh("site:21jingji.com"),
+    "经济观察报 (Economic Observer ZH)": _gnews_zh("site:eeo.com.cn"),
+    "界面新闻 (Jiemian ZH)":       _gnews_zh("site:jiemian.com"),
+    "证券时报 (Securities Times ZH)": _gnews_zh("site:stcn.com"),
+    # Hong Kong
+    "明报 (Ming Pao ZH)":          _gnews_hk("site:mingpao.com+%E4%B8%AD%E5%9C%8B"),
+    "香港01 (HK01 ZH)":            _gnews_hk("site:hk01.com+%E4%B8%AD%E5%9C%8B+OR+%E5%85%A7%E5%9C%B0"),
+    "星岛日报 (Sing Tao ZH)":      _gnews_hk("site:stheadline.com+%E4%B8%AD%E5%9C%8B"),
+    "信报 (HKEJ ZH)":              _gnews_hk("site:hkej.com+%E4%B8%AD%E5%9C%8B"),
+    # Taiwan
+    "中央社 (CNA ZH)":             _gnews_tw("site:cna.com.tw+%E4%B8%AD%E5%9C%8B+OR+%E5%85%A9%E5%B2%B8"),
+    "联合报 (UDN ZH)":             _gnews_tw("site:udn.com+%E4%B8%AD%E5%9C%8B+OR+%E5%85%A9%E5%B2%B8"),
+    "自由时报 (Liberty Times ZH)": _gnews_tw("site:ltn.com.tw+%E4%B8%AD%E5%9C%8B+OR+%E5%85%A9%E5%B2%B8"),
+    "中国时报 (China Times ZH)":   _gnews_tw("site:chinatimes.com+%E4%B8%AD%E5%9C%8B+OR+%E5%85%A9%E5%B2%B8"),
+    "上报 (UP Media ZH)":          _gnews_tw("site:upmedia.mg+%E4%B8%AD%E5%9C%8B"),
+    # Singapore / overseas Chinese-language
+    "联合早报 (Lianhe Zaobao ZH)": _gnews_zh("site:zaobao.com.sg+%E4%B8%AD%E5%9B%BD"),
+    "端传媒 (Initium ZH)":         _gnews_hk("site:theinitium.com"),
+    # International outlets' Chinese editions (often carry detail the English
+    # edition does not, and the reverse)
+    "纽约时报中文网 (NYT Chinese ZH)": _gnews_zh("site:cn.nytimes.com"),
+    "FT中文网 (FT Chinese ZH)":    _gnews_zh("site:ftchinese.com"),
+    "华尔街日报中文 (WSJ Chinese ZH)": _gnews_zh("site:cn.wsj.com"),
+    "BBC中文 (BBC Chinese ZH)":    _gnews_zh("site:bbc.com/zhongwen"),
+    "德国之声中文 (DW Chinese ZH)": _gnews_zh("site:dw.com/zh"),
+    "美国之音中文 (VOA Chinese ZH)": _gnews_zh("site:voachinese.com"),
+    "日经中文网 (Nikkei Chinese ZH)": _gnews_zh("site:cn.nikkei.com"),
+    "路透中文 (Reuters Chinese ZH)": _gnews_zh("site:cn.reuters.com"),
 }
 
 
@@ -132,7 +239,11 @@ TIER2_FEEDS = {
     # CSIS in-house — highest priority
     "CSIS China":              (_gnews("China+site:csis.org"), "A"),
     "CSIS ChinaPower":         (_gnews("site:chinapower.csis.org"), "A"),
+    "CSIS ChinaPower (direct)": (_direct("CSIS ChinaPower (direct)", "https://chinapower.csis.org/feed/",
+                                         "site:chinapower.csis.org"), "A"),
     "CSIS AMTI":               (_gnews("site:amti.csis.org"), "A"),
+    "CSIS AMTI (direct)":      (_direct("CSIS AMTI (direct)", "https://amti.csis.org/feed/",
+                                        "site:amti.csis.org"), "A"),
     "CSIS Hidden Reach":       (_gnews("site:features.csis.org+China+OR+Hidden+Reach"), "A"),
     "CSIS Big Data China":     (_gnews("site:bigdatachina.csis.org"), "A"),
 
@@ -148,7 +259,16 @@ TIER2_FEEDS = {
     # China-focused specialist
     "MERICS":                  (_gnews("site:merics.org"), "A"),
     "ASPI China":              (_gnews("China+site:aspi.org.au"), "A"),
+    "ASPI Strategist (direct)": (_direct("ASPI Strategist (direct)", "https://www.aspistrategist.org.au/feed/",
+                                         "China+OR+Taiwan+site:aspistrategist.org.au"), "A"),
     "Jamestown China":         (_gnews("site:jamestown.org+China+OR+Taiwan"), "A"),
+    "Jamestown (direct)":      (_direct("Jamestown (direct)", "https://jamestown.org/feed/",
+                                        "site:jamestown.org+China"), "A"),
+    "Lowy Interpreter (direct)": (_direct("Lowy Interpreter (direct)",
+                                          "https://www.lowyinstitute.org/the-interpreter/rss.xml",
+                                          "China+site:lowyinstitute.org/the-interpreter"), "B"),
+    "War on the Rocks (direct)": (_direct("War on the Rocks (direct)", "https://warontherocks.com/feed/",
+                                          "China+OR+Taiwan+site:warontherocks.com"), "B"),
     "China Leadership Monitor": (_gnews("site:prcleader.org"), "A"),
     "China Strategies Group":  (_gnews("site:chinastrategiesgroup.com"), "B"),
 
@@ -215,8 +335,21 @@ TIER4_FEEDS = {
     "China Daily Front":   _gnews("site:chinadaily.com.cn/front"),
     "CGTN":                _gnews("site:cgtn.com"),
 
+    # PRC government, Chinese-language primary (what Beijing is saying, in its
+    # own words). Tagged lang=ZH; the model quotes verbatim with the original.
+    "外交部 (MOFA ZH)":            _gnews_zh("site:fmprc.gov.cn"),
+    "外交部发言人 (MOFA presser ZH)": _gnews_zh("%E5%A4%96%E4%BA%A4%E9%83%A8%E5%8F%91%E8%A8%80%E4%BA%BA+%E4%BE%8B%E8%A1%8C%E8%AE%B0%E8%80%85%E4%BC%9A"),
+    "国务院 (State Council ZH)":   _gnews_zh("site:gov.cn+%E5%9B%BD%E5%8A%A1%E9%99%A2"),
+    "国防部 (MND ZH)":             _gnews_zh("site:mod.gov.cn+OR+%E5%9B%BD%E9%98%B2%E9%83%A8%E5%8F%91%E8%A8%80%E4%BA%BA"),
+    "国台办 (TAO ZH)":             _gnews_zh("%E5%9B%BD%E5%8F%B0%E5%8A%9E+%E5%8F%91%E8%A8%80%E4%BA%BA"),
+    "商务部 (MOFCOM ZH)":          _gnews_zh("site:mofcom.gov.cn+OR+%E5%95%86%E5%8A%A1%E9%83%A8%E5%8F%91%E8%A8%80%E4%BA%BA"),
+    "中国人民银行 (PBOC ZH)":      _gnews_zh("%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C+%E5%85%AC%E5%91%8A+OR+%E5%88%A9%E7%8E%87"),
+    "新华社时评 (Xinhua commentary ZH)": _gnews_zh("%E6%96%B0%E5%8D%8E%E6%97%B6%E8%AF%84+OR+%E9%92%9F%E5%A3%B0+OR+%E4%BB%BB%E4%BB%B2%E5%B9%B3"),
+
     # PRC primary indirect — relayed by wires
-    "MOFA Spokesperson":   _gnews("%22Mao+Ning%22+OR+%22Lin+Jian%22+OR+%22Wang+Wenbin%22+spokesperson"),
+    "MOFA Spokesperson":   _gnews("%22Mao+Ning%22+OR+%22Lin+Jian%22+OR+%22Guo+Jiakun%22+spokesperson"),
+    "PRC Embassy US":      _gnews("site:us.china-embassy.gov.cn+OR+%22Chinese+Embassy%22+spokesperson+Liu+Pengyu"),
+    "MND Spokesperson":    _gnews("%22Ministry+of+National+Defense%22+China+spokesperson+OR+%22Zhang+Xiaogang%22+OR+%22Jiang+Bin%22"),
     "Xi statements":       _gnews("%22Xi+Jinping%22+said+OR+statement+OR+remarks+OR+address"),
     "Wang Yi statements":  _gnews("%22Wang+Yi%22+China+foreign+minister+OR+%22Politburo%22"),
     "Li Qiang statements": _gnews("%22Li+Qiang%22+premier+OR+%22State+Council%22"),
@@ -289,31 +422,72 @@ _LIFESTYLE_FILTER = re.compile(
 
 
 # ── PRESTIGE JOURNALIST FLAGGING ──────────────────────────────────────────────
+# China / Taiwan / Hong Kong correspondents and beat reporters whose bylines
+# raise an item's priority. Matched against the fetched article text (where a
+# "By <name>" line usually survives), so a wrong or rotated name simply never
+# fires; it cannot introduce an error. Review twice a year.
 PRESTIGE_JOURNALISTS = {
-    # WSJ Beijing/HK
-    "Lingling Wei", "Stella Yifan Xie", "Rebecca Feng", "Brian Spegele",
-    "Liza Lin", "Jing Yang",
-    # NYT Beijing/HK
-    "Keith Bradsher", "Vivian Wang", "David Pierson", "Chris Buckley",
-    "Amy Qin", "Joy Dong",
-    # WaPo Beijing
-    "Lily Kuo", "Christian Shepherd", "Vic Chiang",
-    # FT Beijing/HK
-    "Joe Leahy", "Cheng Leng", "Edward White", "Wenjie Ding",
-    "Demetri Sevastopulo", "Kathrin Hille",
-    # Reuters Beijing
-    "Brenda Goh", "Laurie Chen", "Ryan Woo", "Casey Hall",
-    # Bloomberg Beijing
-    "Tom Hancock", "Lucille Liu", "Cindy Wang", "Jenni Marsh",
-    # BBC
-    "Stephen McDonell", "Laura Bicker", "John Sudworth",
-    # AP/AFP
-    "Ken Moritsugu", "Huizhong Wu", "Sam McNeil",
-    # Specialists
-    "Bill Bishop",  # Sinocism
-    "Ana Swanson",  # NYT trade
+    # WSJ
+    "Lingling Wei", "Stella Yifan Xie", "Rebecca Feng", "Brian Spegele", "Liza Lin",
+    "Jing Yang", "Raffaele Huang", "Clarence Leong", "Yoko Kubota", "Josh Chin",
+    "Chun Han Wong", "Wenxin Fan", "Jonathan Cheng", "Liyan Qi", "Jason Douglas",
+    "Joyu Wang", "Austin Ramzy", "Elaine Yu", "Dan Strumpf",
+    # NYT
+    "Keith Bradsher", "Vivian Wang", "David Pierson", "Chris Buckley", "Amy Chang Chien",
+    "Alexandra Stevenson", "Daisuke Wakabayashi", "Meaghan Tobin", "Claire Fu",
+    "Berry Wang", "Li Yuan", "Ana Swanson", "Edward Wong", "Tiffany May", "Olivia Wang",
+    "Zixu Wang", "Joy Dong", "Siyi Zhao", "John Liu", "Amy Qin", "Tripp Mickle",
+    # Washington Post
+    "Lily Kuo", "Christian Shepherd", "Katrina Northrop", "Vic Chiang", "Eva Dou",
+    "Ellen Nakashima", "Cate Cadell", "Pei-Lin Wu", "Shibani Mahtani",
+    # Financial Times
+    "Joe Leahy", "Cheng Leng", "Ryan McMorrow", "Edward White", "Wenjie Ding", "Sun Yu",
+    "Demetri Sevastopulo", "Kathrin Hille", "Thomas Hale", "Eleanor Olcott",
+    "William Langley", "Nian Liu", "Zijing Wu", "Arjun Neil Alim", "Chan Ho-him",
+    "Gloria Li", "James Kynge", "Kana Inagaki", "Tim Bradshaw", "Andy Lin",
+    # Reuters
+    "Brenda Goh", "Laurie Chen", "Ryan Woo", "Casey Hall", "Yew Lun Tian", "Ethan Wang",
+    "Joe Cash", "Kevin Yao", "Ellen Zhang", "Liz Lee", "Antoni Slodkowski", "Greg Torode",
+    "James Pomfret", "Farah Master", "Ben Blanchard", "Yimou Lee", "Michael Martina",
+    "David Brunnstrom", "Trevor Hunnicutt", "Karen Freifeld", "Alexandra Alper",
+    "Fanny Potkin", "Che Pan", "Eduardo Baptista", "Xiuhao Chen", "Jessie Pang",
+    "Clare Jim", "Summer Zhen", "Kane Wu", "Selena Li", "Andrew Hayley",
+    # Bloomberg
+    "Tom Hancock", "Lucille Liu", "Cindy Wang", "Jenni Marsh", "Sarah Zheng",
+    "Philip Glamann", "Jing Li", "Rebecca Choong Wilkins", "Jenny Leonard", "Josh Xiao",
+    "Colum Murphy", "Yuan Gao", "Debby Wu", "Mackenzie Hawkins", "Ian Marlow",
+    "Peter Martin", "James Mayger", "Josh Wingrove", "Alan Wong", "Katia Dmitrieva",
+    "Fran Wang", "Annie Lee", "Chris Anstey", "Shawn Donnan",
+    # AP / AFP
+    "Ken Moritsugu", "Huizhong Wu", "Simina Mistreanu", "Didi Tang", "Dake Kang",
+    "Emily Wang Fujiyama", "Christopher Bodeen", "Johnson Lai", "Kanis Leung",
+    "Jim Gomez", "Mari Yamaguchi", "Sam McNeil", "Peter Catterall", "Matthew Walsh",
+    # BBC / Guardian / Economist / CNN / CNBC / NPR / Politico / Axios
+    "Stephen McDonell", "Laura Bicker", "Tessa Wong", "Kelly Ng", "Fan Wang",
+    "Rupert Wingfield-Hayes", "Helen Davidson", "Amy Hawkins", "Chi Hui Lin",
+    "Gady Epstein", "Alice Su", "David Rennie", "Nectar Gan", "Simone McCarthy",
+    "Steven Jiang", "Joyce Jiang", "Will Ripley", "Ivan Watson", "Evelyn Cheng",
+    "Emily Feng", "John Ruwitch", "Phelim Kine", "Bethany Allen",
+    # Nikkei / Japan Times / Kyodo / SCMP / Caixin / Straits Times
+    "Cissy Zhou", "Tsukasa Hadano", "Katsuji Nakazawa", "Finbarr Bermingham",
+    "Dewey Sim", "Amber Wang", "Kinling Lo", "Laura Zhou", "Shi Jiangtao", "Kandy Wong",
+    "Minnie Chan", "Lawrence Chung", "Danson Cheong", "Aw Cheng Wei", "Tan Dawn Wei",
+    # Specialists / newsletters
+    "Bill Bishop", "Kaiser Kuo", "Jordan Schneider", "Zichen Wang",
+    "Thomas des Garets Geddes", "Andrew Polk", "Trey McArver", "David Barboza",
+    "Dexter Roberts", "Isaac Stone Fish", "Cindy Yu", "Sophia Yan",
     # Taiwan-focused
-    "Joyu Wang", "Yimou Lee", "Ben Blanchard",
+    "Chris Horton", "Fabian Hamacher", "Ann Wang", "Thompson Chau", "Ralph Jennings",
+}
+
+
+# ── PRESTIGE OUTLETS (item-level flag; the prompt's mandatory-inclusion rule
+# keys on this flag, and the validator names any flagged story that was
+# collected but never used) ───────────────────────────────────────────────────
+PRESTIGE_OUTLET_SOURCES = {
+    "WSJ China", "NYT China", "NYT Asia (direct)", "WaPo China", "FT China",
+    "Reuters China", "AP China", "AFP China", "Bloomberg China", "Economist China",
+    "CNN China", "CNBC China", "Sinocism",
 }
 
 
@@ -321,10 +495,35 @@ PRESTIGE_JOURNALISTS = {
 REQUEST_TIMEOUT = 8
 HEADERS = {"User-Agent": "CSISChinaDigest/1.0"}
 MAX_WORKERS = 25
+FEED_HEALTH_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "feed_health.json")
+DEAD_FEED_RUNS = 5          # consecutive empty runs before a feed is reported dead
 
 _source_health: dict[str, dict] = {}
 MAJOR_FEEDS = {"Reuters China", "AP China", "WSJ China", "FT China",
-               "Bloomberg China", "SCMP"}
+               "Bloomberg China", "SCMP", "NYT China", "Xinhua English"}
+
+
+# Google News occasionally returns the outlet's homepage meta description as the
+# summary ("The latest news and analysis from ...") instead of the story blurb.
+# Passed through, that text misleads the model about what the article says.
+_BOILERPLATE_RE = re.compile(
+    r"^(the latest|breaking news|get the latest|read the latest|news, analysis|"
+    r"stay informed|subscribe|sign up|your (daily|trusted) source|all the latest|"
+    r"comprehensive up-to-date|we use cookies|find out more)",
+    re.IGNORECASE,
+)
+
+
+def _clean_summary(summary: str, title: str = "") -> str:
+    s = (summary or "").strip()
+    if not s:
+        return ""
+    if _BOILERPLATE_RE.search(s):
+        return ""
+    # A summary that merely repeats the title carries no information.
+    if title and s.lower().rstrip(".") == title.lower().rstrip("."):
+        return ""
+    return s
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -387,6 +586,11 @@ def _entry_to_article(entry, source: str, lang: str = "EN",
 
     summary = re.sub(r"<[^>]+>", " ", raw_summary)
     summary = re.sub(r"\s+", " ", summary).strip()
+    # Google News search entries put "<title> - <source>" in the title and the
+    # same string again in the summary; strip the outlet suffix from the title.
+    if "news.google.com" in raw_link:
+        title = re.sub(r"\s+-\s+[^-]{2,60}$", "", title).strip() or title
+    summary = _clean_summary(summary, title)
 
     pub_date = None
     for attr in ("published_parsed", "updated_parsed"):
@@ -409,6 +613,8 @@ def _entry_to_article(entry, source: str, lang: str = "EN",
         "lang": lang,
         "pub_date": pub_date,
     }
+    if source in PRESTIGE_OUTLET_SOURCES:
+        article["prestige_outlet"] = True
     if tags:
         article["tags"] = tags
     if extra:
@@ -416,13 +622,20 @@ def _entry_to_article(entry, source: str, lang: str = "EN",
     return article
 
 
-def _is_recent(entry, hours: int = 48) -> bool:
+def _is_recent(entry, hours: int = 48, strict: bool = False) -> bool:
+    """True if the entry was published inside the window.
+
+    strict=True rejects entries with no parseable date. Used for the analysis
+    and academic tiers, where the Korea brief found that undated think-tank
+    pages (an old AEI essay, a 2021 THAAD paper) were surfacing as today's
+    commentary: a missing date fools a date filter but not a reader.
+    """
     cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
     for attr in ("published_parsed", "updated_parsed"):
         parsed = getattr(entry, attr, None)
         if parsed:
             return datetime(*parsed[:6], tzinfo=timezone.utc) >= cutoff
-    return True
+    return not strict
 
 
 def _is_china_related(entry) -> bool:
@@ -444,13 +657,28 @@ def _flag_journalist(article: dict) -> dict:
     return article
 
 
+def _title_key(title: str) -> str:
+    """Normalised headline for cross-feed dedup (the same wire story arrives via
+    several Google News queries under different source labels)."""
+    t = re.sub(r"[^a-z0-9一-鿿 ]+", " ", (title or "").lower())
+    return re.sub(r"\s+", " ", t).strip()[:120]
+
+
 def _dedup(articles: list) -> list:
-    seen = set()
+    seen_urls: set = set()
+    seen_titles: set = set()
     out = []
     for a in articles:
-        if a["url"] and a["url"] not in seen:
-            seen.add(a["url"])
-            out.append(a)
+        url = a.get("url") or ""
+        tk = _title_key(a.get("title", ""))
+        if not url or url in seen_urls:
+            continue
+        if tk and len(tk) > 25 and tk in seen_titles:
+            continue
+        seen_urls.add(url)
+        if tk:
+            seen_titles.add(tk)
+        out.append(a)
     return out
 
 
@@ -470,7 +698,12 @@ def _fetch_feeds_parallel(feed_dict: dict, is_tiered: bool = False) -> dict:
             url = url_or_tuple
             tier_val = None
         entries = _parse_feed(url)
-        return source, entries, tier_val
+        used_fallback = False
+        if not entries and source in _FALLBACK:
+            fb_entries = _parse_feed(_FALLBACK[source])
+            if fb_entries:
+                entries, used_fallback = fb_entries, True
+        return source, entries, tier_val, used_fallback
 
     items = list(feed_dict.items())
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
@@ -478,11 +711,12 @@ def _fetch_feeds_parallel(feed_dict: dict, is_tiered: bool = False) -> dict:
         for future in as_completed(futures):
             src = futures[future]
             try:
-                source, entries, tier_val = future.result()
+                source, entries, tier_val, used_fallback = future.result()
                 results[source] = (entries, tier_val)
                 _source_health[source] = {
                     "articles": len(entries),
                     "success": len(entries) > 0,
+                    "used_fallback": used_fallback,
                     "error_msg": None,
                 }
             except Exception as e:
@@ -500,8 +734,22 @@ def _fetch_feeds_parallel(feed_dict: dict, is_tiered: bool = False) -> dict:
 # TIER COLLECTORS
 # ─────────────────────────────────────────────────────────────────────────────
 
-# Reserved for future Chinese-language source additions (lang="ZH" tagging)
-_CHINESE_LANG_SOURCES: set[str] = set()
+# Chinese-language sources are tagged lang="ZH"; the model translates titles.
+_CHINESE_LANG_SOURCES: set[str] = {s for s in list(TIER1_FEEDS) + list(TIER4_FEEDS) if "ZH)" in s}
+
+
+def _cap_zh(articles: list) -> list:
+    """Keep at most ZH_PER_SOURCE_CAP newest items per Chinese-language feed."""
+    counts: dict[str, int] = {}
+    out = []
+    for a in sorted(articles, key=lambda x: x.get("pub_date") or "", reverse=True):
+        if a.get("lang") == "ZH":
+            src = a.get("source", "")
+            counts[src] = counts.get(src, 0) + 1
+            if counts[src] > ZH_PER_SOURCE_CAP:
+                continue
+        out.append(a)
+    return out
 
 
 def _collect_tier1() -> list:
@@ -512,14 +760,16 @@ def _collect_tier1() -> list:
         for entry in entries:
             if not _is_recent(entry, hours=24):
                 continue
-            if not _is_china_related(entry):
+            # PRC-language state media is China-related by construction; the
+            # English keyword gate would drop most of it.
+            if lang != "ZH" and not _is_china_related(entry):
                 continue
             if _is_lifestyle(entry):
                 continue
             article = _entry_to_article(entry, source, lang=lang)
             article = _flag_journalist(article)
             articles.append(article)
-    return _dedup(articles)
+    return _cap_zh(_dedup(articles))
 
 
 def _collect_tier2() -> list:
@@ -527,7 +777,7 @@ def _collect_tier2() -> list:
     results = _fetch_feeds_parallel(TIER2_FEEDS, is_tiered=True)
     for source, (entries, prestige) in results.items():
         for entry in entries:
-            if not _is_recent(entry, hours=36):
+            if not _is_recent(entry, hours=36, strict=True):
                 continue
             if not _is_china_related(entry):
                 continue
@@ -544,7 +794,7 @@ def _collect_tier3() -> list:
     results = _fetch_feeds_parallel(TIER3_FEEDS, is_tiered=True)
     for source, (entries, tier) in results.items():
         for entry in entries:
-            if not _is_recent(entry, hours=72):
+            if not _is_recent(entry, hours=72, strict=True):
                 continue
             if not _is_china_related(entry):
                 continue
@@ -564,12 +814,15 @@ def _collect_tier4() -> list:
     articles = []
     results = _fetch_feeds_parallel(TIER4_FEEDS)
     for source, (entries, _) in results.items():
+        lang = "ZH" if source in _CHINESE_LANG_SOURCES else "EN"
         for entry in entries:
             if not _is_recent(entry, hours=48):
                 continue
-            article = _entry_to_article(entry, source, lang="EN")
+            article = _entry_to_article(entry, source, lang=lang)
+            if lang == "ZH":
+                article["government_primary"] = True
             articles.append(article)
-    return _dedup(articles)
+    return _cap_zh(_dedup(articles))
 
 
 def _collect_xi_tracker() -> list:
@@ -840,6 +1093,15 @@ def _collect_markets() -> dict:
     return result
 
 
+# Market figures that could not be fetched are reported as unavailable. The
+# previous fallbacks (10Y CGB 1.75%, LPR 3.0/3.5, CDS 70 bps, GDP 4.5% Q1 2026)
+# were hard-coded numbers injected into the prompt as "pre-collected data" and
+# rendered in the market strip without an as-of date. On the August 17 run all
+# three used the fallback, so the strip would have shown invented figures. The
+# Australia brief's rule applies: a blank beats a fabricated number.
+_UNAVAILABLE = {"value": "—", "change_pct": 0, "as_of": "", "unavailable": True}
+
+
 def _fetch_10y_cgb() -> dict:
     """Fetch China 10-year government bond yield."""
     try:
@@ -858,8 +1120,8 @@ def _fetch_10y_cgb() -> dict:
                         "as_of": datetime.now(timezone.utc).strftime("%b %d")}
     except Exception as e:
         print(f"  ⚠ 10Y CGB fetch error: {e}")
-    print("  ⚠ 10Y CGB: using fallback (1.75%)")
-    return {"value": "1.75%", "as_of": ""}
+    print("  ⚠ 10Y CGB: not collected (shown as unavailable, never a stale number)")
+    return _UNAVAILABLE.copy()
 
 
 def _fetch_pboc_lpr() -> dict:
@@ -875,8 +1137,8 @@ def _fetch_pboc_lpr() -> dict:
                         "as_of": datetime.now(timezone.utc).strftime("%b %d")}
     except Exception as e:
         print(f"  ⚠ PBOC LPR fetch error: {e}")
-    print("  ⚠ PBOC LPR: using fallback (1Y 3.0% / 5Y 3.5%, held since May 2025)")
-    return {"lpr_1y": "3.0%", "lpr_5y": "3.5%", "as_of": ""}
+    print("  ⚠ PBOC LPR: not collected (shown as unavailable, never a stale number)")
+    return {"lpr_1y": "—", "lpr_5y": "—", "as_of": "", "unavailable": True}
 
 
 def _fetch_china_cds() -> dict:
@@ -905,8 +1167,8 @@ def _fetch_china_cds() -> dict:
                 return {"value": f"{spread:.0f}", "change_bps": round(change, 1), "as_of": as_of}
     except Exception as e:
         print(f"  ⚠ China CDS fetch error: {e}")
-    print("  ⚠ China 5Y CDS: using fallback (70 bps)")
-    return {"value": "70", "change_bps": 0, "as_of": ""}
+    print("  ⚠ China 5Y CDS: not collected (shown as unavailable, never a stale number)")
+    return {"value": "—", "change_bps": 0, "as_of": "", "unavailable": True}
 
 
 def _fetch_china_gdp() -> dict:
@@ -922,8 +1184,8 @@ def _fetch_china_gdp() -> dict:
                         "source": "Reuters/NBS"}
     except Exception:
         pass
-    print("  ⚠ China GDP: using fallback (4.5%)")
-    return {"value": "4.5%", "period": "Q1 2026", "source": "NBS"}
+    print("  ⚠ China GDP: not collected (shown as unavailable, never a stale number)")
+    return {"value": "—", "period": "", "source": "", "unavailable": True}
 
 
 def _fetch_china_macro() -> dict | None:
@@ -1008,6 +1270,8 @@ def collect_all() -> dict:
     elapsed = time.time() - t0
     print(f"\n⏱ Collection completed in {elapsed:.1f}s")
 
+    feed_report = _update_feed_health(_source_health)
+
     payload = {
         "tier1": tier1,
         "tier2": tier2,
@@ -1019,9 +1283,75 @@ def collect_all() -> dict:
         "market_indicators": markets,
         "xinhua_summary": prop_summary,
         "source_health": _source_health,
+        "feed_report": feed_report,
         "collected_at": datetime.now(timezone.utc).isoformat(),
     }
     return payload
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FEED HEALTH LEDGER
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _update_feed_health(health: dict) -> dict:
+    """Persist per-feed consecutive-empty counts and report dead feeds.
+
+    A feed returning zero entries is non-fatal by design, which is also why
+    nobody notices when it has been returning zero for a month. This ledger
+    (feed_health.json, committed by the workflow) turns silent rot into a
+    named list in the run log and the README.
+    """
+    ledger = {}
+    try:
+        with open(FEED_HEALTH_FILE, "r", encoding="utf-8") as f:
+            ledger = json.load(f)
+        if not isinstance(ledger, dict):
+            ledger = {}
+    except (OSError, json.JSONDecodeError):
+        ledger = {}
+
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    dead, fallback_used, major_empty = [], [], []
+    for source, info in health.items():
+        rec = ledger.get(source) or {"empty_runs": 0, "last_ok": None, "last_count": 0}
+        if info.get("success"):
+            rec["empty_runs"] = 0
+            rec["last_ok"] = today
+        else:
+            rec["empty_runs"] = int(rec.get("empty_runs", 0)) + 1
+        rec["last_count"] = int(info.get("articles", 0))
+        rec["last_seen"] = today
+        if info.get("used_fallback"):
+            rec["fallback"] = today
+            fallback_used.append(source)
+        ledger[source] = rec
+        if rec["empty_runs"] >= DEAD_FEED_RUNS:
+            dead.append(f"{source} ({rec['empty_runs']} runs)")
+        if source in MAJOR_FEEDS and not info.get("success"):
+            major_empty.append(source)
+
+    try:
+        with open(FEED_HEALTH_FILE, "w", encoding="utf-8") as f:
+            json.dump(ledger, f, ensure_ascii=False, indent=1, sort_keys=True)
+    except OSError as e:
+        print(f"  ⚠ feed_health.json not written: {e}")
+
+    ok = sum(1 for v in health.values() if v.get("success"))
+    print(f"\n📶 Feed health: {ok}/{len(health)} feeds returned entries")
+    if major_empty:
+        print(f"  ⚠ MAJOR feeds empty this run: {', '.join(sorted(major_empty))}")
+    if fallback_used:
+        print(f"  ↻ Direct feed empty, Google News fallback used: {', '.join(sorted(fallback_used))}")
+    if dead:
+        print(f"  ✖ Dead feeds (≥{DEAD_FEED_RUNS} consecutive empty runs): {', '.join(sorted(dead))}")
+
+    return {
+        "feeds_total": len(health),
+        "feeds_ok": ok,
+        "major_empty": sorted(major_empty),
+        "fallback_used": sorted(fallback_used),
+        "dead": sorted(dead),
+    }
 
 
 if __name__ == "__main__":

@@ -1,2 +1,23 @@
+# Python
 __pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+.DS_Store
+.idea/
+.vscode/
 .claude/
+
+# Pipeline runtime artifacts (regenerated every run; uploaded as a workflow artifact)
+collected.json
+digest.json
+digest.html
+preview.html
+*.log
+
+# Test fixtures and backups
+test_digest.json
+*_backup*.py
+render_v*.py
+published_ledger.smoke.json

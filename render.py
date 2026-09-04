@@ -202,6 +202,11 @@ def _word_count(d: dict) -> int:
         for f in ("who", "handle_context", "platform_date", "quote_text", "analyst_note"):
             w += _w(s.get(f, ""))
 
+    # Official line
+    for o in (d.get("official_line") or []):
+        for f in ("topic", "speaker", "role", "statement", "context"):
+            w += _w(o.get(f, ""))
+
     # Public sentiment
     ps = d.get("public_sentiment") or {}
     cs = ps.get("censorship_signals") or {}
@@ -832,6 +837,49 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 
     # 14. Public Sentiment — removed (low signal-to-noise)
 
+    # 14b. What Beijing Is Saying — the PRC government's own words today.
+    # Sits ahead of Social Statements (which carries everyone else) so the
+    # reader gets the official line before the reactions to it.
+    official = digest.get("official_line") or []
+    if official:
+        tone_color = {"warning": "#C0392B", "firm": "#B7770D", "conciliatory": "#27AE60",
+                      "routine": "#7F8C8D"}
+        oh = ""
+        for o in official[:8]:
+            body = _esc(o.get("body", ""))
+            body_zh = _esc(o.get("body_chinese", ""))
+            speaker = _esc(o.get("speaker", ""))
+            role = _esc(o.get("role", ""))
+            topic = _esc(o.get("topic", ""))
+            stmt = _esc(o.get("statement", ""))
+            zh = _esc(o.get("original_zh") or "")
+            ctx = _esc(o.get("context", ""))
+            tone = str(o.get("tone", "routine") or "routine").lower()
+            to = _esc(o.get("addressed_to", ""))
+            tc = tone_color.get(tone, "#7F8C8D")
+            url = o.get("url", "")
+            src = _esc(_clean_src(o.get("source", "")))
+            src_link = ("<div style='font-size:10px;color:#888;margin-top:4px;'>" +
+                        _link_or_text(src or "source", url, style="color:#888;text-decoration:underline;") +
+                        "</div>") if url and url.startswith("http") else (
+                        f"<div style='font-size:10px;color:#888;margin-top:4px;'>{src}</div>" if src else "")
+            head = f"{body_zh} · {body}" if body_zh else body
+            who = f"{speaker} <span style='font-size:11px;color:#888;font-weight:400;'>· {role}</span>" if speaker else role
+            oh += f"""<div style="margin-bottom:14px;padding:12px;background:#FAFAF5;border-radius:4px;border-left:3px solid {tc};">
+<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td style="font-size:12px;color:#1B2A4A;font-weight:700;letter-spacing:0.3px;">{head}</td>
+<td align="right" style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:{tc};font-weight:700;">{_esc(tone)}{(" · to " + to) if to else ""}</td>
+</tr></table>
+<div style="font-size:13px;font-weight:600;color:#1B2A4A;margin:4px 0 2px;font-family:Georgia,serif;">{topic}</div>
+{"<div style='font-size:12px;color:#555;'>" + who + "</div>" if (speaker or role) else ""}
+<blockquote style="margin:6px 0;padding:8px 12px;background:#fff;border-left:3px solid {tc};font-style:italic;font-size:13px;line-height:1.5;color:#333;font-family:Georgia,serif;">&ldquo;{stmt}&rdquo;</blockquote>
+{"<div style='font-size:12px;color:#666;line-height:1.5;margin:2px 0 0 12px;'>" + zh + "</div>" if zh else ""}
+{"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Context:</strong> " + ctx + "</div>" if ctx else ""}
+{src_link}
+</div>"""
+        sections_analysis.append(
+            f'<div {_SEC}>{_sec_label("What Beijing Is Saying", "#C0392B")}{oh}</div>')
+
     # 15. Social Statements
     stmts = digest.get("social_statements") or []
     if stmts:
@@ -889,11 +937,14 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
     # 18. Sanctions Status footer — REMOVED. Will return when trade tracker is wired
     # with verifiable BIS/OFAC/DoD running totals. Placeholder text was misleading.
 
-    # Footer
+    # Footer (with the auto-generation disclaimer the Japan brief carries)
     sections_post.append(f"""
 <div style="padding:20px 32px;background:#1B2A4A;text-align:center;" class="sec">
 <div style="font-size:9px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.45);font-family:Arial,sans-serif;line-height:2;">
 CSIS Korea Chair &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_time}
+</div>
+<div style="font-size:10px;color:rgba(255,255,255,0.55);font-family:Arial,sans-serif;line-height:1.6;max-width:520px;margin:8px auto 0;">
+This brief is generated automatically from {_esc(str(digest.get("source_count") or "the day's"))} collected sources and may contain errors. Every item links to its source; check the source before citing. Prepared by Andy Lim, CSIS Korea Chair.
 </div>
 <a href="#top" style="font-size:10px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:1px;">&#8593; Back to top</a>
 </div>""")
