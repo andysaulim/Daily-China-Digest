@@ -226,7 +226,7 @@ def _word_count(d: dict) -> int:
 def _chapter(label: str) -> str:
     """Chapter divider — dark navy band with gold rule, white letterspaced label."""
     return f"""
-<div style="padding:12px 32px;background:#1B2A4A;text-align:center;" class="sec">
+<div style="padding:12px 32px;background:#1B2A4A;text-align:center;" class="sec dark-sec">
 <div style="height:1px;background:rgba(212,172,13,0.4);margin-bottom:10px;"></div>
 <span style="font-size:9px;font-family:Arial,sans-serif;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:5px;font-weight:700;">{label}</span>
 <div style="height:1px;background:rgba(212,172,13,0.4);margin-top:10px;"></div>
@@ -259,7 +259,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 
     # 1. Header
     sections_pre.append(f"""
-<div style="background:#1B2A4A;color:#fff;padding:18px 32px 14px;" class="sec">
+<div style="background:#1B2A4A;color:#ffffff;padding:18px 32px 14px;" class="sec dark-sec">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
 <td style="vertical-align:top;">
 <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS Korea Chair</div>
@@ -287,66 +287,66 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
         lpr = m.get("pboc_lpr") or {}
         gdp = m.get("gdp_yoy") or {}
         sections_pre.append(f"""
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1B2A4A;color:#fff;border-bottom:1px solid rgba(255,255,255,0.1);">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="dark-sec" style="background:#1B2A4A;color:#ffffff;border-bottom:1px solid rgba(255,255,255,0.1);">
 <tr>
-<td width="33%" align="center" style="padding:12px 8px 10px;">
-<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;opacity:0.55;">SSE Composite</div>
+<td width="33%" align="center" style="padding:12px 8px 10px;background:#1B2A4A;">
+<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,0.6);">SSE Composite</div>
 <div style="font-size:20px;font-weight:700;margin:2px 0;">{_esc(str(sse.get("value", "—")))}</div>
 <div style="font-size:11px;">{_arrow(sse.get("change_pct", 0))}</div>
 <div style="font-size:9px;opacity:0.4;margin-top:2px;">as of {now.strftime("%b %-d")}</div>
 </td>
-<td width="34%" align="center" style="padding:12px 8px 10px;border-left:1px solid rgba(255,255,255,0.12);border-right:1px solid rgba(255,255,255,0.12);">
-<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;opacity:0.55;">Hang Seng</div>
+<td width="34%" align="center" style="padding:12px 8px 10px;border-left:1px solid rgba(255,255,255,0.12);border-right:1px solid rgba(255,255,255,0.12);background:#1B2A4A;">
+<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,0.6);">Hang Seng</div>
 <div style="font-size:20px;font-weight:700;margin:2px 0;">{_esc(str(hsi.get("value", "—")))}</div>
 <div style="font-size:11px;">{_arrow(hsi.get("change_pct", 0))}</div>
 <div style="font-size:9px;opacity:0.4;margin-top:2px;">as of {now.strftime("%b %-d")}</div>
 </td>
-<td width="33%" align="center" style="padding:12px 8px 10px;">
-<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;opacity:0.55;">USD/CNY</div>
+<td width="33%" align="center" style="padding:12px 8px 10px;background:#1B2A4A;">
+<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,0.6);">USD/CNY</div>
 <div style="font-size:20px;font-weight:700;margin:2px 0;">{_esc(str(cny.get("value", "—")))}</div>
 <div style="font-size:11px;">{_arrow(cny.get("change_pct", 0))}</div>
 <div style="font-size:9px;opacity:0.4;margin-top:2px;">as of {now.strftime("%b %-d")}</div>
 </td>
 </tr>
 </table>
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#162340;color:#fff;border-bottom:1px solid rgba(255,255,255,0.08);">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="mid-sec" style="background:#162340;color:#ffffff;border-bottom:1px solid rgba(255,255,255,0.08);">
 <tr>
-<td width="25%" align="center" style="padding:8px;">
+<td width="25%" align="center" style="padding:8px;background:#162340;">
 <div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">USD/CNH</div>
 <div style="font-size:15px;font-weight:700;">{_esc(str(cnh.get("value", "—")))}</div>
 <div style="font-size:10px;">{_arrow(cnh.get("change_pct", 0))}</div>
 </td>
-<td width="25%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">Brent</div>
+<td width="25%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);background:#162340;">
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);">Brent</div>
 <div style="font-size:15px;font-weight:700;">${_esc(str(brent.get("value", "—")))}</div>
 <div style="font-size:10px;">{_arrow(brent.get("change_pct", 0))}</div>
 </td>
-<td width="25%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">10Y CGB</div>
+<td width="25%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);background:#162340;">
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);">10Y CGB</div>
 <div style="font-size:15px;font-weight:700;">{_esc(str(cgb.get("value", "—")))}</div>
 <div style="font-size:10px;">{_cds_arrow(cgb.get("change_bps", 0))}</div>
 </td>
-<td width="25%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">China 5Y CDS</div>
+<td width="25%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);background:#162340;">
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);">China 5Y CDS</div>
 <div style="font-size:15px;font-weight:700;">{_esc(str(cds.get("value", "—")))} bps</div>
 <div style="font-size:10px;">{_cds_arrow(cds.get("change_bps", 0))}</div>
 </td>
 </tr>
 </table>
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#0F1B30;color:#fff;border-bottom:1px solid rgba(255,255,255,0.08);">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="deep-sec" style="background:#0F1B30;color:#ffffff;border-bottom:1px solid rgba(255,255,255,0.08);">
 <tr>
-<td width="33%" align="center" style="padding:8px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">PBOC 1Y LPR</div>
+<td width="33%" align="center" style="padding:8px;background:#0F1B30;">
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);">PBOC 1Y LPR</div>
 <div style="font-size:15px;font-weight:700;">{_esc(str(lpr.get("lpr_1y", "—")))}</div>
 <div style="font-size:10px;opacity:0.6;">{_esc(str(lpr.get("last_change", "")))}</div>
 </td>
-<td width="34%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);border-right:1px solid rgba(255,255,255,0.1);">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">PBOC 5Y LPR</div>
+<td width="34%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);border-right:1px solid rgba(255,255,255,0.1);background:#0F1B30;">
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);">PBOC 5Y LPR</div>
 <div style="font-size:15px;font-weight:700;">{_esc(str(lpr.get("lpr_5y", "—")))}</div>
 <div style="font-size:10px;opacity:0.5;">benchmark</div>
 </td>
-<td width="33%" align="center" style="padding:8px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">GDP YoY</div>
+<td width="33%" align="center" style="padding:8px;background:#0F1B30;">
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.6);">GDP YoY</div>
 <div style="font-size:15px;font-weight:700;">{_esc(str(gdp.get("value", "—")))}</div>
 <div style="font-size:10px;opacity:0.6;">{_esc(str(gdp.get("source", "NBS")))}{" · " + _esc(str(gdp.get("period", ""))) if gdp.get("period") else ""}</div>
 </td>
@@ -365,7 +365,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
                           f'font-size:11px;color:rgba(255,255,255,0.85);'
                           f'font-family:Arial,sans-serif;">{_esc(it)}</span>')
         sections_pre.append(f"""
-<div style="padding:10px 32px;background:#0a0f1e;color:#fff;border-bottom:1px solid rgba(255,255,255,0.08);" class="sec">
+<div style="padding:10px 32px;background:#0a0f1e;color:#ffffff;border-bottom:1px solid rgba(255,255,255,0.08);" class="sec delta-sec">
 <span style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,0.55);margin-right:8px;vertical-align:middle;">Δ Since Yesterday</span>
 {chip_html}
 </div>""")
@@ -442,12 +442,12 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
     stat = digest.get("key_stat") or {}
     if stat and stat.get("number"):
         sections_today.append(f"""
-<div style="padding:12px 32px;background:#1B2A4A;color:#fff;border-bottom:1px solid #E0E0E0;text-align:center;" class="sec">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;opacity:0.6;margin-bottom:2px;">Stat of the Day</div>
-<div class="key-stat-num" style="font-size:32px;font-weight:700;font-family:Georgia,serif;">{_esc(str(stat.get("number", "")))}</div>
-<div style="font-size:12px;opacity:0.85;margin-top:2px;">{_esc(stat.get("label", ""))}</div>
-<div style="font-size:11px;opacity:0.65;margin-top:4px;font-style:italic;">{_esc(stat.get("context", ""))}</div>
-{"<div style='font-size:10px;opacity:0.45;margin-top:4px;'>Source: " + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
+<div style="padding:12px 32px;background:#1B2A4A;color:#ffffff;border-bottom:1px solid #E0E0E0;text-align:center;" class="sec dark-sec">
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.6);margin-bottom:2px;">Stat of the Day</div>
+<div class="key-stat-num" style="font-size:32px;font-weight:700;font-family:Georgia,serif;color:#ffffff;">{_esc(str(stat.get("number", "")))}</div>
+<div style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:2px;">{_esc(stat.get("label", ""))}</div>
+<div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:4px;font-style:italic;">{_esc(stat.get("context", ""))}</div>
+{"<div style='font-size:10px;color:rgba(255,255,255,0.45);margin-top:4px;'>Source: " + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
 </div>""")
 
     # 7. Satellite & Location Watch — CONSOLIDATED, only sites with real evidence today
@@ -891,7 +891,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 
     # Footer
     sections_post.append(f"""
-<div style="padding:20px 32px;background:#1B2A4A;text-align:center;" class="sec">
+<div style="padding:20px 32px;background:#1B2A4A;text-align:center;" class="sec dark-sec">
 <div style="font-size:9px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.45);font-family:Arial,sans-serif;line-height:2;">
 CSIS Korea Chair &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_time}
 </div>
@@ -912,25 +912,42 @@ CSIS Korea Chair &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_
 
     body_html = "\n".join(s for s in sections if s)
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
 <title>China Daily Brief</title>
 <style>
-body {{ margin:0; padding:0; background:#fff; font-family:Arial,sans-serif; color:#333; }}
-.container {{ max-width:680px; margin:0 auto; background:#fff; }}
+:root {{ color-scheme: light; }}
+body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; color:#333333; -webkit-text-size-adjust:100%; }}
+.container {{ max-width:680px; margin:0 auto; background:#ffffff; }}
+/* Lock dark sections — prevent iOS Mail light-mode override */
+.dark-sec {{ background-color:#1B2A4A !important; color:#ffffff !important; }}
+.dark-sec * {{ color:#ffffff !important; }}
+.dark-sec a {{ color:#D4AC0D !important; }}
+.mid-sec {{ background-color:#162340 !important; color:#ffffff !important; }}
+.deep-sec {{ background-color:#0F1B30 !important; color:#ffffff !important; }}
+.delta-sec {{ background-color:#0a0f1e !important; color:#ffffff !important; }}
 @media only screen and (max-width: 600px) {{
   .container {{ width:100% !important; }}
   .sec {{ padding-left:16px !important; padding-right:16px !important; }}
+  h1 {{ font-size:22px !important; }}
+  .key-stat-num {{ font-size:26px !important; }}
+  .market-val {{ font-size:16px !important; }}
 }}
 </style>
 </head>
-<body>
+<body style="margin:0;padding:0;background:#ffffff;">
 <a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;">
+<tr><td align="center">
 <div class="container">
 {body_html}
 </div>
+</td></tr>
+</table>
 </body>
 </html>"""
 

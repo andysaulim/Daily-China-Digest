@@ -1,0 +1,291 @@
+{
+  "digest_date": "2026-05-21",
+  "re_line": "US-China tariff truce holds at 90 days; PLA Eastern Theater Command activates exercise; Xi chairs Politburo Standing Committee on AI governance",
+  "morning_memo": [
+    "The 90-day US-China tariff truce entered its third week with no indication either side is moving toward extension talks — Treasury Secretary Bessent is scheduled to meet PBOC Governor Pan Gongsheng in Geneva on Friday, the first principal-level contact since the Shanghai communiqué.",
+    "PLA Eastern Theater Command launched an unannounced 72-hour exercise in waters east of Taiwan, deploying three carrier strike group elements and activating J-20 sorties from Longtian Air Base — INDOPACOM issued a routine observation notice at 0400 ET.",
+    "Xi Jinping chaired a Politburo Standing Committee session on AI governance, state media reporting he called for 'the right to speak' on global AI rules — the session preceded China's submission to the UN AI Advisory Body due Friday."
+  ],
+  "market_indicators": {
+    "sse_composite": {"value": "3,412.8", "change_pct": 0.34},
+    "hang_seng": {"value": "22,104.5", "change_pct": -0.67},
+    "usd_cny": {"value": "7.2341", "change_pct": 0.08},
+    "usd_cnh": {"value": "7.2389", "change_pct": 0.09},
+    "brent": {"value": "81.24", "change_pct": -1.12},
+    "cgb_10y": {"value": "2.31%", "change_bps": -2},
+    "china_cds": {"value": "61", "change_bps": 1},
+    "pboc_lpr": {"lpr_1y": "3.10%", "lpr_5y": "3.60%", "last_change": "Feb 2025"},
+    "gdp_yoy": {"value": "5.3%", "source": "NBS", "period": "Q1 2026"}
+  },
+  "delta_since_yesterday": {
+    "items": [
+      "PBOC held 7-day reverse repo rate at 1.50%",
+      "PLA Eastern Theater exercise activated — 3 CSG elements",
+      "USTR confirmed Geneva talks Friday",
+      "Hang Seng -0.67% on property sector drag",
+      "Brent -1.12% on OPEC supply signal"
+    ]
+  },
+  "key_stat": {
+    "number": "$439B",
+    "label": "US goods trade deficit with China in 2025",
+    "context": "Down from $523B in 2024 following Section 301 tariff expansions and IEEPA measures — still the largest bilateral deficit globally.",
+    "source": "BEA / USTR"
+  },
+  "top_stories": [
+    {
+      "category_tag": "US-CHINA",
+      "headline": "Bessent and Pan to Meet in Geneva as Tariff Truce Clock Ticks",
+      "body": "Treasury Secretary Scott Bessent will meet PBOC Governor Pan Gongsheng on Friday in Geneva — the first principal-level economic contact since the 90-day tariff truce announced in Shanghai. Neither side has indicated readiness to extend the pause, which expires July 12.",
+      "so_what": "The Geneva meeting is a temperature check, not a negotiation — watch for whether Bessent signals willingness to discuss structural issues (IP, subsidies) or keeps the agenda narrow.",
+      "pattern_note": "Same playbook as the 2019 G20 Osaka truce: a pause buys time but no structural resolution. Beijing is unlikely to offer concessions before the CPPCC economic work conference in June.",
+      "src_line": "WSJ / Reuters",
+      "url": "https://www.wsj.com/articles/bessent-pan-geneva-tariff-truce"
+    },
+    {
+      "category_tag": "CROSS-STRAIT",
+      "headline": "PLA Eastern Theater Command Activates Unannounced 72-Hour Exercise East of Taiwan",
+      "body": "The PLA Eastern Theater Command launched a maritime and air exercise involving elements of the South Sea Fleet and East Sea Fleet, with J-20 sorties tracked departing Longtian Air Base. Taiwan's MND said it had scrambled six F-16Vs and activated its alert posture.",
+      "so_what": "The timing — days after Taiwan's new defense budget passed the Legislative Yuan — fits the pattern of using exercises as messaging tools. No live-fire zones declared, keeping it below escalation thresholds.",
+      "pattern_note": "Third unannounced exercise in 2026, up from two in all of 2025. The cadence is increasing without triggering US formal responses.",
+      "src_line": "Reuters / Taiwan MND",
+      "url": "https://www.reuters.com/world/asia-pacific/pla-eastern-theater-exercise-taiwan"
+    },
+    {
+      "category_tag": "TECHNOLOGY",
+      "headline": "Xi Chairs PSC Session on AI Governance, Calls for China's 'Right to Speak' on Global Rules",
+      "body": "Xinhua reported Xi Jinping chaired a Politburo Standing Committee study session focused on AI governance, calling on China to 'actively participate in and lead' international AI rulemaking. The session came ahead of China's formal submission to the UN AI Advisory Body.",
+      "so_what": "This is a norm-setting play. China is positioning its AI governance framework — built around state oversight, 'algorithm ethics,' and 'beneficial to humanity' rhetoric — as an alternative to the EU AI Act model.",
+      "pattern_note": "Pattern of using UN/multilateral forums to legitimize Beijing's domestic regulatory model internationally. Watch for this framing in the July G20 Digital Economy track.",
+      "src_line": "Xinhua / FT",
+      "url": "https://www.ft.com/content/xi-ai-governance-psc"
+    }
+  ],
+  "overnight_items": [
+    {
+      "category": "Trade",
+      "headline": "Commerce Adds 23 Chinese Chipmakers to Entity List",
+      "body_text": "The Bureau of Industry and Security added 23 Chinese semiconductor firms including three SMIC affiliates to the Entity List, citing attempts to circumvent HBM memory controls.",
+      "source": "Commerce / BIS",
+      "url": "https://www.commerce.gov/bis/entity-list-may-2026"
+    },
+    {
+      "category": "Cross-Strait",
+      "headline": "Taiwan Passes $19.4B Defense Budget, Highest Since 1996",
+      "body_text": "Taiwan's Legislative Yuan passed a NT$600B defense budget for FY2026 — the largest in three decades — including procurement of 66 F-16Vs, extended-range cruise missiles, and Harpoon coastal defense systems.",
+      "source": "Reuters / Taiwan MND",
+      "url": "https://www.reuters.com/taiwan-defense-budget-2026"
+    },
+    {
+      "category": "PLA",
+      "headline": "PLAN Launches Third Type 003 Carrier, Fujian Hull Spotted at Jiangnan Shipyard",
+      "body_text": "Commercial satellite imagery confirms a third Fujian-class hull at Jiangnan Shipyard in Shanghai, suggesting the PLAN's third carrier program is further advanced than publicly acknowledged.",
+      "source": "AMTI / Naval News",
+      "url": "https://amti.csis.org/type-003-third-carrier"
+    },
+    {
+      "category": "Economy",
+      "headline": "China's April Industrial Output Beats Estimates at +6.7% YoY",
+      "body_text": "NBS reported April industrial output grew 6.7% year-on-year, beating the 6.1% consensus estimate, driven by EV, solar panel, and shipbuilding sectors.",
+      "source": "NBS / Bloomberg",
+      "url": "https://www.bloomberg.com/china-industrial-output-april"
+    },
+    {
+      "category": "Diplomacy",
+      "headline": "Wang Yi Meets EU Foreign Policy Chief Kallas in Brussels",
+      "body_text": "Chinese Foreign Minister Wang Yi met EU foreign policy chief Kaja Kallas in Brussels, with both sides describing talks as 'frank' — diplomatic shorthand for disagreement — on Ukraine, trade overcapacity, and Taiwan.",
+      "source": "AFP / EU External Action",
+      "url": "https://www.eeas.europa.eu/wang-yi-kallas-2026"
+    },
+    {
+      "category": "Technology",
+      "headline": "Huawei Reports Record Q1 Revenue on Domestic AI Chip Demand",
+      "body_text": "Huawei posted Q1 2026 revenue of ¥179.2B ($24.7B), up 22% year-on-year, driven by surging domestic demand for its Ascend 910C AI chips as US export controls push Chinese firms toward domestic alternatives.",
+      "source": "Huawei / CNBC",
+      "url": "https://www.cnbc.com/huawei-q1-2026-revenue"
+    }
+  ],
+  "opeds_today": [
+    {
+      "title": "The Taiwan Contingency Planning Gap in Washington",
+      "source": "Foreign Affairs",
+      "authors": "Bonny Lin, Ivan Kanapathy",
+      "central_argument": "US contingency planning for a Taiwan scenario has not kept pace with PLA capability improvements since 2022. The gap between stated deterrence posture and executable military options is wider than official assessments acknowledge.",
+      "summary": "Lin and Kanapathy draw on unclassified war-game outputs and INDOPACOM testimony to argue that US deterrence credibility over Taiwan depends on closing three specific gaps: pre-positioned logistics, allied interoperability, and sub-threshold signaling capacity. The article is notable for its frank assessment of how little the 2025 Pacific Deterrence Initiative funding has moved the needle.",
+      "policy_so_what": "Directly relevant to the Senate Armed Services markup next week — Lin is expected to testify.",
+      "url": "https://www.foreignaffairs.com/taiwan-contingency-planning-gap"
+    },
+    {
+      "title": "China's Industrial Policy Is Working — and That's the Problem",
+      "source": "CSIS",
+      "authors": "Scott Kennedy",
+      "central_argument": "Beijing's state-directed industrial policy in EVs, solar, and batteries has produced globally competitive firms — not despite market distortions but partly because of them. Western responses that ignore this dynamic will be ineffective.",
+      "summary": "Kennedy argues that the conventional framing of Chinese industrial policy as purely subsidy-driven misses the role of domestic competition among state-backed champions. The policy challenge for Washington is not just overcapacity but the emergence of genuinely competitive Chinese technology firms across multiple sectors simultaneously.",
+      "policy_so_what": "Implications for the Section 301 review and proposed reciprocal tariff architecture.",
+      "url": "https://www.csis.org/analysis/china-industrial-policy-working"
+    },
+    {
+      "title": "After the Truce: What Structural US-China Trade Deal Would Actually Require",
+      "source": "Peterson Institute for International Economics",
+      "authors": "Chad Bown, Mary Lovely",
+      "central_argument": "A durable US-China trade deal requires addressing subsidies, state-owned enterprise advantages, and IP enforcement — none of which the 90-day tariff pause touches. The truce buys time but not resolution.",
+      "summary": "Bown and Lovely provide a detailed accounting of the structural gaps a real deal would need to close, drawing on the Phase One agreement's failures as a baseline. They estimate that achieving meaningful structural reforms would require 3–5 years of sustained negotiation even under favorable political conditions in both capitals.",
+      "policy_so_what": "Baseline reading ahead of the Bessent-Pan Geneva meeting.",
+      "url": "https://www.piie.com/us-china-trade-deal-structural-requirements"
+    }
+  ],
+  "academic_today": [
+    {
+      "title": "Coercive Gradualism and PLA Gray-Zone Operations in the Taiwan Strait",
+      "source": "International Security",
+      "journal_tier": "A+",
+      "authors": "Taylor Fravel, Dennis Blasko",
+      "summary": "Drawing on PLA operational doctrine documents and a systematic coding of maritime and airspace incidents 2020-2025, Fravel and Blasko argue that PLA gray-zone activity follows a doctrine of coercive gradualism — deliberately calibrated escalation designed to shift baselines without triggering formal responses.",
+      "url": "https://direct.mit.edu/isec/article/coercive-gradualism-pla"
+    }
+  ],
+  "business_economy": [
+    {
+      "headline": "CATL Announces $5B US Battery Plant Pause Amid Tariff Uncertainty",
+      "body_text": "CATL has paused planning for a proposed $5B battery manufacturing facility in South Carolina pending clarity on the tariff truce outcome — the pause affects approximately 4,000 projected jobs.",
+      "source": "Bloomberg",
+      "sector": "EV / Battery",
+      "url": "https://www.bloomberg.com/catl-us-plant-pause"
+    },
+    {
+      "headline": "Chinese EV Exports Hit Record 620,000 Units in April",
+      "body_text": "China exported a record 620,000 EVs in April, up 38% year-on-year, with BYD, SAIC, and Chery leading volumes. EU anti-subsidy duties (17-38%) have redirected exports toward Southeast Asia, Middle East, and Latin America.",
+      "source": "CAAM / Reuters",
+      "sector": "EV / Trade",
+      "url": "https://www.reuters.com/china-ev-exports-april-2026"
+    },
+    {
+      "headline": "Alibaba Cloud Launches 100B Parameter Model Trained Without Nvidia H100s",
+      "body_text": "Alibaba Cloud announced Qwen-3 Ultra, a 100-billion parameter model trained exclusively on domestic Ascend 910C chips — the first major Chinese foundation model claiming full independence from US AI hardware.",
+      "source": "Alibaba / FT",
+      "sector": "Technology / AI",
+      "url": "https://www.ft.com/alibaba-qwen3-ascend"
+    }
+  ],
+  "indo_pacific": [
+    {
+      "region_tag": "Philippines-China",
+      "headline": "Philippines Protests PLAN Vessel in Exclusive Economic Zone Near Palawan",
+      "body_text": "Manila filed a formal diplomatic protest after a PLAN survey vessel was observed operating in the Philippine EEZ approximately 80 nautical miles west of Palawan — the third such incident in 2026.",
+      "source": "Philippine DFA / AFP",
+      "url": "https://www.reuters.com/philippines-plan-eez-protest"
+    },
+    {
+      "region_tag": "Japan-China",
+      "headline": "Japan and US Announce Joint AUKUS-Style Submarine Technology Sharing Framework",
+      "body_text": "Tokyo and Washington announced a bilateral submarine technology cooperation framework that would give Japan access to advanced propulsion and combat systems — a step toward deeper trilateral integration with AUKUS.",
+      "source": "Japan MOFA / Defense News",
+      "url": "https://www.defensenews.com/japan-us-submarine-framework"
+    },
+    {
+      "region_tag": "India-China",
+      "headline": "India and China Complete Border Patrol Resumption Along LAC in Ladakh",
+      "body_text": "Indian and Chinese military commanders confirmed completion of patrolling resumption arrangements along three contested segments of the Line of Actual Control in Eastern Ladakh, following the October 2024 disengagement agreement.",
+      "source": "Indian MEA / Times of India",
+      "url": "https://www.reuters.com/india-china-lac-patrolling-2026"
+    }
+  ],
+  "also_today": [
+    {
+      "category": "Diplomacy",
+      "headline": "China and Brazil Sign 12 Bilateral Agreements During Lula's Beijing Visit",
+      "body_text": "Brazilian President Lula concluded a three-day state visit to Beijing with 12 agreements spanning trade, infrastructure, and agricultural cooperation — China is Brazil's largest trading partner.",
+      "source": "Xinhua / Reuters",
+      "url": "https://www.reuters.com/lula-beijing-agreements-2026"
+    },
+    {
+      "category": "Technology",
+      "headline": "China Imposes Export Restrictions on Gallium and Germanium Compounds",
+      "body_text": "Beijing announced new export licensing requirements for six gallium and germanium compounds used in semiconductor manufacturing — the third round of critical mineral export controls since July 2023.",
+      "source": "MOFCOM / Bloomberg",
+      "url": "https://www.bloomberg.com/china-gallium-germanium-export-controls"
+    },
+    {
+      "category": "Economy",
+      "headline": "PBOC Injects 700B Yuan in Medium-Term Lending Facility",
+      "body_text": "The People's Bank of China injected ¥700 billion ($96.6B) through the medium-term lending facility at 2.30%, matching the existing rate — a signal of steady rather than easing monetary policy.",
+      "source": "PBOC / Reuters",
+      "url": "https://www.reuters.com/pboc-mlf-injection-may-2026"
+    }
+  ],
+  "prc_government": [
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "action": "Premier Li Qiang chairs executive meeting on property market stabilization",
+      "detail": "The State Council executive meeting endorsed a package of measures including expanded 'white list' funding for stalled residential projects and eased land use rules for residential conversion — the fifth property support package since mid-2024.",
+      "official": "Li Qiang",
+      "url": "https://www.gov.cn/state-council-property-2026",
+      "source_label": "gov.cn"
+    },
+    {
+      "ministry": "MOFA",
+      "ministry_chinese": "外交部",
+      "action": "Spokesperson Lin Jian condemns US Entity List additions as 'unilateral bullying'",
+      "detail": "MOFA spokesperson Lin Jian called the BIS Entity List additions 'illegal unilateral coercive measures' and said China would take 'necessary countermeasures to protect the legitimate rights of Chinese enterprises.'",
+      "official": "Lin Jian",
+      "url": "https://www.mfa.gov.cn/spokesperson-lin-jian-may21",
+      "source_label": "mfa.gov.cn"
+    }
+  ],
+  "congressional_watch": [
+    {
+      "committee": "House Select Committee on the CCP",
+      "action": "Launches investigation into Chinese investment in US agricultural land",
+      "detail": "Chairman John Moolenaar announced a formal investigation into Chinese state-linked entities acquiring agricultural land near US military installations, citing USDA data showing a 900% increase since 2015.",
+      "url": "https://selectcommitteeontheccp.house.gov/agricultural-land-investigation"
+    }
+  ],
+  "monitored_locations": [
+    {
+      "name": "Second Thomas Shoal (Ayungin)",
+      "status": "elevated",
+      "block": "gray_zone",
+      "direction": "up",
+      "note": "CCG vessel BN 3303 maintained station within 500m of BRP Sierra Madre for 9th consecutive day. Water cannon used against Philippine resupply vessel May 19.",
+      "last_source_date": "2026-05-20",
+      "csis_product": "AMTI"
+    },
+    {
+      "name": "Fiery Cross Reef",
+      "status": "activity",
+      "block": "gray_zone",
+      "direction": "",
+      "note": "New hangar construction in southwestern quadrant visible on Planet Labs imagery from May 18. Estimated 4 new hardened aircraft shelters.",
+      "last_source_date": "2026-05-18",
+      "csis_product": "AMTI"
+    },
+    {
+      "name": "Taiwan Strait Median Line",
+      "status": "alert",
+      "block": "gray_zone",
+      "direction": "up",
+      "note": "6 PLAAF sorties crossed median line during ongoing Eastern Theater exercise. Taiwan MND scrambled F-16Vs. No weapons release.",
+      "last_source_date": "2026-05-21",
+      "csis_product": "China Power Project"
+    },
+    {
+      "name": "Djibouti PLA Support Base",
+      "status": "normal",
+      "block": "hidden_reach"
+    }
+  ],
+  "on_this_day": [
+    {
+      "date": "May 21, 1989",
+      "event": "Martial law declared in Beijing as Tiananmen Square protests enter sixth week",
+      "relevance": "Premier Li Peng signed the martial law order on May 20, 1989. Military units began moving toward Beijing on May 21 despite resistance from residents who blocked convoy routes — the beginning of the final phase that culminated in the June 4 crackdown."
+    }
+  ],
+  "xinhua_delta": {
+    "xi_appearance_today": true,
+    "xi_activity": "Chaired Politburo Standing Committee study session on AI governance",
+    "days_since_last_appearance": 0
+  },
+  "web_url": ""
+}

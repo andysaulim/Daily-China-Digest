@@ -589,7 +589,12 @@ TIER 3: ACADEMIC JOURNALS → OUTPUT: academic_today
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {tier_json(payload.get("tier3", []), max_items=20)}
 
-ANTI-HALLUCINATION — ACADEMIC: Only include journal articles that appear in the Tier 3 input data above with a real URL. Do NOT fabricate journal articles, authors, or journal names. News outlets (Reuters, AFP, Ratopati, etc.) are NEVER journal authors — if a source is not a recognized academic journal, skip it.
+ANTI-HALLUCINATION — ACADEMIC: Strict inclusion test — ALL THREE conditions must be true:
+1. The article appears in the Tier 3 input above with a real URL (not news.google.com)
+2. The URL domain belongs to an academic publisher or university press (e.g. mitpressjournals.org, cambridge.org, tandfonline.com, jstor.org, oxfordacademics.com, wiley.com, sagepub.com, brill.com) — NOT a news outlet
+3. The source field matches a recognized journal name (not a newspaper, think tank blog, or government site)
+
+If a Tier 3 item has a news outlet URL (reuters.com, bbc.com, theguardian.com, wsj.com, ft.com, thehill.com, politico.com, scmp.com, nikkei.com, hindustantimes.com, etc.) it is a news article that bled into the feed via keyword match — EXCLUDE IT from academic_today entirely. Congressional hearings, think tank reports, and news analysis pieces are NOT journal articles.
 
 For EACH qualifying piece output: title (the article's original title from input, verbatim), url (copy verbatim from input — do not alter), source (journal name from input), journal_tier (from input: A+/A/B), authors (from article metadata if available, else null), china_relevance_score (1-10), framework, summary (2-3 sentences), policy_implication (1 sentence).
 
