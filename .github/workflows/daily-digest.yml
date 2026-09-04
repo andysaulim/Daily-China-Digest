@@ -15,6 +15,12 @@ on:
     - cron: '17 12 * * *'   # 8:17 AM ET  catch-up 3
     - cron: '17 13 * * *'   # 9:17 AM ET  catch-up 4
     - cron: '17 14 * * *'   # 10:17 AM ET final backstop
+  # A push to a feature branch whose commit message contains [test-send] runs
+  # the full pipeline and emails the test recipient only (no archive, ledger,
+  # marker or tracker writes). This is how a branch gets a real end-to-end
+  # test before merge when the dispatch API is not available to the caller.
+  push:
+    branches-ignore: [main]
   workflow_dispatch:
     inputs:
       mode:
@@ -64,7 +70,15 @@ jobs:
         run: |
           TODAY=$(TZ=America/New_York date +%Y-%m-%d)
           LAST_SENT=$(tr -d '[:space:]' < last_sent.txt 2>/dev/null || true)
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "${{ github.event_name }}" = "push" ]; then
+            if echo "${{ github.event.head_commit.message }}" | grep -q '\[test-send\]'; then
+              echo "::notice::Branch push tagged [test-send]: running a test send."
+              echo "should_run=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "::notice::Branch push without [test-send]: smoke tests only."
+              echo "should_run=smoke" >> "$GITHUB_OUTPUT"
+            fi
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "should_run=true" >> "$GITHUB_OUTPUT"
           elif [ "$LAST_SENT" = "$TODAY" ]; then
             echo "::notice::Today's edition ($TODAY) already sent, skipping catch-up."
@@ -74,20 +88,20 @@ jobs:
           fi
 
       - name: Setup Python 3.12
-        if: steps.guard.outputs.should_run == 'true'
+        if: steps.guard.outputs.should_run != 'false'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: 'pip'
 
       - name: Install dependencies
-        if: steps.guard.outputs.should_run == 'true'
+        if: steps.guard.outputs.should_run != 'false'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Offline smoke tests
-        if: steps.guard.outputs.should_run == 'true'
+        if: steps.guard.outputs.should_run != 'false'
         run: python smoke_test.py
 
       - name: Run pipeline
@@ -102,8 +116,12 @@ jobs:
           WEB_URL: ${{ vars.WEB_URL }}
           MODE: ${{ inputs.mode }}
           SEND_TO: ${{ inputs.send_to }}
+          TEST_SEND_TO: ${{ vars.TEST_SEND_TO || 'alim@csis.org' }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$MODE" = "dry" ]; then
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "::notice::TEST SEND (branch push): full pipeline, email to $TEST_SEND_TO only."
+            python run.py --send-to "$TEST_SEND_TO"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$MODE" = "dry" ]; then
             echo "::notice::DRY RUN: collection + URL resolution + article fetch only."
             python run.py --dry-run
           elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$MODE" = "test" ]; then
@@ -162,7 +180,7 @@ jobs:
       # Feed-health and URL-cache state is worth keeping even from a test run;
       # it never touches the archive, ledger or send marker.
       - name: Commit feed health + URL cache (test runs)
-        if: steps.guard.outputs.should_run == 'true' && github.event_name == 'workflow_dispatch' && inputs.mode != 'live'
+        if: steps.guard.outputs.should_run == 'true' && ((github.event_name == 'workflow_dispatch' && inputs.mode != 'live') || github.event_name == 'push')
         continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"

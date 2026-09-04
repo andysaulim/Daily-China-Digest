@@ -323,7 +323,7 @@ Email not rendering? <a href="{_esc(web_url)}" style="color:#2980B9;text-decorat
 </td>
 <td width="25%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);">
 <div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">Brent</div>
-<div style="font-size:15px;font-weight:700;">${_esc(str(brent.get("value", "—")))}</div>
+<div style="font-size:15px;font-weight:700;">{("$" + _esc(str(brent.get("value")))) if brent.get("value") and str(brent.get("value")) != "—" else "—"}</div>
 <div style="font-size:10px;">{_arrow(brent.get("change_pct", 0))}</div>
 </td>
 <td width="25%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);">
