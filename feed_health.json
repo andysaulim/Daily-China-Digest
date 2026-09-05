@@ -19,7 +19,7 @@
  },
  "AFRICOM China": {
   "empty_runs": 0,
-  "last_count": 62,
+  "last_count": 64,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-05"
  },
@@ -72,7 +72,7 @@
   "last_seen": "2026-09-05"
  },
  "Asia Society CCA": {
-  "empty_runs": 2,
+  "empty_runs": 3,
   "last_count": 0,
   "last_ok": null,
   "last_seen": "2026-09-05"
@@ -97,7 +97,7 @@
  },
  "Atlantic Council China": {
   "empty_runs": 0,
-  "last_count": 100,
+  "last_count": 97,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-05"
  },
@@ -126,7 +126,7 @@
   "last_seen": "2026-09-05"
  },
  "BIS Entity List": {
-  "empty_runs": 3,
+  "empty_runs": 4,
   "last_count": 0,
   "last_ok": null,
   "last_seen": "2026-09-05"
@@ -192,14 +192,14 @@
   "last_seen": "2026-09-05"
  },
  "CRS China": {
-  "empty_runs": 3,
+  "empty_runs": 4,
   "last_count": 0,
   "last_ok": null,
   "last_seen": "2026-09-05"
  },
  "CSBA China": {
   "empty_runs": 0,
-  "last_count": 54,
+  "last_count": 100,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-05"
  },
@@ -289,7 +289,7 @@
   "last_seen": "2026-09-05"
  },
  "China Daily Front": {
-  "empty_runs": 3,
+  "empty_runs": 4,
   "last_count": 0,
   "last_ok": null,
   "last_seen": "2026-09-05"
@@ -326,7 +326,7 @@
  },
  "China Quarterly": {
   "empty_runs": 0,
-  "last_count": 56,
+  "last_count": 55,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-05"
  },
@@ -536,7 +536,7 @@
  },
  "HR Research Vessels": {
   "empty_runs": 0,
-  "last_count": 91,
+  "last_count": 93,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-05"
  },
@@ -721,7 +721,7 @@
   "last_seen": "2026-09-05"
  },
  "Liberty Times EN": {
-  "empty_runs": 3,
+  "empty_runs": 4,
   "last_count": 0,
   "last_ok": null,
   "last_seen": "2026-09-05"
@@ -993,7 +993,7 @@
  },
  "Sinolytics": {
   "empty_runs": 0,
-  "last_count": 26,
+  "last_count": 15,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-05"
  },
@@ -1017,7 +1017,7 @@
  },
  "Stars and Stripes": {
   "empty_runs": 0,
-  "last_count": 74,
+  "last_count": 100,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-05"
  },
@@ -1276,7 +1276,7 @@
  },
  "Xi Speech": {
   "empty_runs": 0,
-  "last_count": 54,
+  "last_count": 100,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-05"
  },
@@ -1300,7 +1300,7 @@
  },
  "上海国际问题研究院 SIIS (ZH)": {
   "empty_runs": 0,
-  "last_count": 5,
+  "last_count": 4,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-05"
  },
@@ -1437,7 +1437,7 @@
   "last_seen": "2026-09-05"
  },
  "太和智库 Taihe (ZH)": {
-  "empty_runs": 2,
+  "empty_runs": 3,
   "last_count": 0,
   "last_ok": null,
   "last_seen": "2026-09-05"
@@ -1599,7 +1599,7 @@
   "last_seen": "2026-09-05"
  },
  "路透中文 (Reuters Chinese ZH)": {
-  "empty_runs": 3,
+  "empty_runs": 4,
   "last_count": 0,
   "last_ok": null,
   "last_seen": "2026-09-05"
