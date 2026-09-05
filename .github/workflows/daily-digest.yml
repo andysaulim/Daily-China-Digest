@@ -80,7 +80,15 @@ jobs:
           COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
           TODAY=$(TZ=America/New_York date +%Y-%m-%d)
-          LAST_SENT=$(tr -d '[:space:]' < last_sent.txt 2>/dev/null || true)
+          # Read the send marker from the LIVE branch tip, not the checkout.
+          # A scheduled run checks out the SHA that triggered it; when the
+          # concurrency group holds it behind an in-flight run, that SHA
+          # predates the marker the earlier run pushed, so the guard read a
+          # stale last_sent.txt and today's edition went out twice (runs 119
+          # and 120, Sep 5 2026, fifteen minutes apart, different content).
+          git fetch -q origin "${GITHUB_REF_NAME}" 2>/dev/null || true
+          LAST_SENT=$(git show "origin/${GITHUB_REF_NAME}:last_sent.txt" 2>/dev/null | tr -d '[:space:]' || true)
+          [ -n "$LAST_SENT" ] || LAST_SENT=$(tr -d '[:space:]' < last_sent.txt 2>/dev/null || true)
           if [ "${{ github.event_name }}" = "push" ]; then
             if printf '%s' "$COMMIT_MSG" | grep -q '\[test-send\]'; then
               echo "::notice::Branch push tagged [test-send]: running a test send."

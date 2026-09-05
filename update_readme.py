@@ -16,26 +16,10 @@ DIGEST_JSON = ROOT / "digest.json"
 
 
 def _count_words(digest: dict) -> int:
-    """Approximate readable word count across all text fields."""
-    fields = ("body", "body_text", "summary", "detail", "quote_text",
-              "so_what", "pattern_note", "headline", "action")
-    words = 0
-    for memo in (digest.get("morning_memo") or []):
-        if isinstance(memo, dict):
-            for v in memo.values():
-                if isinstance(v, str):
-                    words += len(v.split())
-        elif isinstance(memo, str):
-            words += len(memo.split())
-    for key in ("top_stories", "overnight_items", "also_today",
-                "business_economy", "indo_pacific", "social_statements",
-                "official_line", "opeds_today", "academic_today",
-                "prc_government", "congressional_watch", "personnel_changes"):
-        for item in (digest.get(key) or []):
-            for f in fields + ("statement", "context", "central_argument", "analyst_note"):
-                if isinstance(item, dict) and item.get(f):
-                    words += len(str(item[f]).split())
-    return words
+    """The one word counter (wordcount.py). This module kept its own until
+    Sep 5 2026 and published ~1,456 words in the README for a 2,469-word issue."""
+    import wordcount
+    return wordcount.count_words(digest)
 
 
 def _unique_sources(digest: dict) -> int:

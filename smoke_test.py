@@ -416,6 +416,23 @@ def test_digest_module():
         check(f"prompt no longer requests {gone}", gone not in prompt)
 
 
+def test_delta_quote_dedup():
+    section("delta quote dedup (no quote in two panels)")
+    import run
+    d = {"official_line": [{"statement": "China and Nepal are a community of shared destiny linked by "
+                                         "mountains and rivers, and China is also a disaster-affected "
+                                         "party in this cross-border calamity."}],
+         "xinhua_delta": {"key_quotes": [
+             {"quote": "China and Nepal are a community of shared destiny linked by mountains and "
+                       "rivers; China is also a disaster-affected party in this cross-border calamity."},
+             {"quote": "The door to talks remains open, but not on another country's terms."}]}}
+    log = run._dedupe_delta_quote(d)
+    check("duplicate quote dropped from the delta", len(d["xinhua_delta"]["key_quotes"]) == 1, str(log))
+    check("distinct quote kept", "door to talks" in d["xinhua_delta"]["key_quotes"][0]["quote"])
+    check("dedup logged", bool(log))
+    check("no-op without a delta", run._dedupe_delta_quote({"official_line": []}) == [])
+
+
 def test_run_postprocess_and_validate():
     section("run.py post-process + validator")
     import run
@@ -749,6 +766,9 @@ def test_word_count_is_one_definition():
         {"official_line": [{"statement": "one two three four", "context": "five six"}]})
     check("official_line prose is counted", only_official == 6, str(only_official))
     check("editor_note is counted", wordcount.count_words({"editor_note": "a b c"}) == 3)
+    import update_readme
+    check("update_readme uses the one counter",
+          update_readme._count_words({"editor_note": "a b c"}) == 3)
 
 
 def test_state_merge():
@@ -835,6 +855,12 @@ def test_health():
 def test_workflow_and_docs():
     section("workflow + docs")
     wf = open(".github/workflows/daily-digest.yml", encoding="utf-8").read()
+    # The once-a-day guard must read the send marker from the live branch tip:
+    # a queued scheduled run checks out a SHA that predates the marker the
+    # run ahead of it pushed, which is how Sep 5 2026 went out twice.
+    check("guard reads last_sent from the live branch tip",
+          'git show "origin/${GITHUB_REF_NAME}:last_sent.txt"' in wf)
+    check("guard fetches the branch before reading", 'git fetch -q origin "${GITHUB_REF_NAME}"' in wf)
     check("guard step", "last_sent.txt" in wf)
     check("failure alert", "Send failure alert" in wf)
     check("staggered crons", wf.count("- cron:") >= 4)
