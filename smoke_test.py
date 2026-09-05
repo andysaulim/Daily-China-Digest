@@ -533,6 +533,40 @@ def test_render():
                              "url": "https://x/o"}]})
     check("korea section rendered", "The Korea Angle" in hk)
     check("korea so-what framed for Seoul", "For Seoul:" in hk)
+    # xinhua_delta was generated, word-counted and never rendered on every run
+    # since the file was written, exactly as editor_note and china_macro were.
+    hx = render.render_html({
+        "digest_date": "2026-09-05", "editor_note": "J. E. Watch: x.",
+        "top_stories": [{"headline": "T", "body": "B", "url": "https://x/a", "source": "R"}],
+        "official_line": [{"body": "MOFA", "statement": "Q", "topic": "T",
+                           "source": "MOFA", "url": "https://x/m"}],
+        "xinhua_delta": {
+            "bottom_line": "People's Daily led on export controls.",
+            "xi_activity": "Chaired a Politburo study session.",
+            "propaganda_focus": ["new productive forces"],
+            "doctrinal_shift": "A revised Taiwan formulation dropping 'peaceful'.",
+            "notable_omissions": "No mention of the Sept 3 anniversary.",
+            "key_phrase_changes": [{"phrase": "new productive forces", "delta_label": "up from x2"}],
+            "key_quotes": [{"quote": "The door to talks remains open.",
+                            "speaker": "Lin Jian", "source_article": "MOFA presser"}],
+            "output_volume": "Heavy, 32 articles", "watch_flag": True}})
+    check("propaganda delta rendered", "Propaganda Delta" in hx)
+    check("doctrinal phrase movement rendered", "Doctrinal Phrase Movement" in hx)
+    check("doctrinal shift rendered", "Doctrinal Shift" in hx)
+    check("notable omissions rendered", "Notable Omissions" in hx)
+    check("delta quote rendered", "The door to talks remains open." in hx)
+    check("watch flag rendered", "WATCH" in hx)
+    check("propaganda delta leads the Beijing block",
+          0 < hx.find("Propaganda Delta") < hx.find("What Beijing Is Saying"))
+    check("propaganda delta carries the mobile light-mode class",
+          'class="sec dark-sec"' in hx)
+    check("empty delta renders nothing",
+          "Propaganda Delta" not in render.render_html(
+              {"digest_date": "2026-09-05", "editor_note": "J. E. Watch: x.",
+               "xinhua_delta": {"silence_today": False},
+               "top_stories": [{"headline": "T", "body": "B", "url": "https://x/a",
+                                "source": "R"}]}))
+
     check("korea sits under the top stories, above the wire",
           0 < hk.find("Top Stories") < hk.find("The Korea Angle") < hk.find("Overnight Flash"))
     # Format order: the frame and the news come before the data strip.

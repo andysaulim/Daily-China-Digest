@@ -62,6 +62,11 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
   Angle, overnight, THEN the market strip, Beijing's words and actions, the wire, and What
   We Are Watching to close. News before numbers; the frame before the news. `editor_note`
   was generated and word-counted but never rendered until Sep 4 2026.
+- **Three fields were generated and never rendered.** `editor_note` (fixed Sep 4 2026),
+  `china_macro` and `xinhua_delta` (both fixed Sep 5 2026) were produced on every run, counted
+  toward the word total, and dropped by the renderer. `render.py`'s own docstring had promised
+  the Xinhua Delta panel since the file was written. Before adding a field to the prompt,
+  check that something renders it; `wordcount.py` counting it is not the same thing.
 - **The Bottom Line is gated.** `editor_note` must reach a JUDGMENT, cite the evidence and
   close with a `Watch:` sentence. Under 25 words, or opening with "Today's brief covers",
   is CRITICAL; outside 55-130 words or missing `Watch:` is a warning. It renders above every

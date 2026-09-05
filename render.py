@@ -644,6 +644,102 @@ def render_html(digest: dict) -> str:
 
     # 14. Public Sentiment — removed (low signal-to-noise)
 
+    # 14a. Propaganda Delta — reading Xinhua, People's Daily and Global Times.
+    # The module docstring has promised this panel since the file was written and
+    # it was never built: xinhua_delta is generated on every run, counted toward
+    # the word total (wordcount.DELTA_FIELDS) and dropped by the renderer, the
+    # third field to have that happen after editor_note and china_macro. It is
+    # the section no wire service carries — doctrinal phrase movement and what
+    # Beijing conspicuously stopped saying — so it leads the Beijing block.
+    xd = digest.get("xinhua_delta") or {}
+    if isinstance(xd, dict) and any(xd.get(k) for k in
+                                    ("bottom_line", "propaganda_focus", "xi_activity",
+                                     "peoples_daily_front_page", "key_phrase_changes",
+                                     "doctrinal_shift", "notable_omissions",
+                                     "global_times_editorial", "key_quotes")):
+        def _line(label, value, color="rgba(255,255,255,0.9)"):
+            if not value:
+                return ""
+            if isinstance(value, (list, tuple)):
+                value = ", ".join(str(v) for v in value if v)
+                if not value:
+                    return ""
+            return (f'<div style="margin-bottom:8px;">'
+                    f'<span style="font-size:9px;text-transform:uppercase;'
+                    f'letter-spacing:1.2px;color:rgba(255,255,255,0.45);">{label}</span>'
+                    f'<div style="font-size:12px;line-height:1.5;color:{color};'
+                    f'margin-top:2px;">{_esc(str(value))}</div></div>')
+
+        body = ""
+        bl = str(xd.get("bottom_line") or "").strip()
+        if bl:
+            body += (f'<div style="font-size:14px;line-height:1.55;color:#ffffff;'
+                     f'font-family:Georgia,serif;margin-bottom:14px;'
+                     f'padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.15);">'
+                     f'{_esc(bl)}</div>')
+
+        # Doctrinal phrase movement — the distinctive part, so it renders as chips.
+        chips = ""
+        for ph in (xd.get("key_phrase_changes") or [])[:5]:
+            if not isinstance(ph, dict):
+                continue
+            phrase = _esc(str(ph.get("phrase", "")))
+            lbl = _esc(str(ph.get("delta_label", "")))
+            if not phrase:
+                continue
+            up = "\u2191" in lbl or "new" in lbl.lower()
+            down = "\u2193" in lbl
+            col = "#E8B84B" if up else "#7FB3D5" if down else "rgba(255,255,255,0.75)"
+            chips += (f'<span style="display:inline-block;margin:0 5px 5px 0;'
+                      f'padding:3px 9px;background:rgba(255,255,255,0.07);'
+                      f'border:1px solid rgba(255,255,255,0.14);border-radius:12px;'
+                      f'font-size:11px;color:{col};">{phrase}'
+                      f'{(" &middot; " + lbl) if lbl else ""}</span>')
+        if chips:
+            body += (f'<div style="margin-bottom:10px;">'
+                     f'<div style="font-size:9px;text-transform:uppercase;'
+                     f'letter-spacing:1.2px;color:rgba(255,255,255,0.45);'
+                     f'margin-bottom:5px;">Doctrinal Phrase Movement</div>{chips}</div>')
+
+        body += _line("Xi Today", xd.get("xi_activity"))
+        body += _line("People&#39;s Daily Front Page", xd.get("peoples_daily_front_page"))
+        body += _line("Propaganda Focus", xd.get("propaganda_focus"))
+        body += _line("Global Times Editorial", xd.get("global_times_editorial"))
+        # A doctrinal shift or a conspicuous silence is the highest-value signal
+        # in the whole panel, so it is coloured, not buried in the run of lines.
+        body += _line("Doctrinal Shift", xd.get("doctrinal_shift"), color="#E8B84B")
+        body += _line("Notable Omissions", xd.get("notable_omissions"), color="#E8B84B")
+
+        for q in (xd.get("key_quotes") or [])[:1]:
+            if not isinstance(q, dict) or not q.get("quote"):
+                continue
+            attrib = " &middot; ".join(x for x in (_esc(str(q.get("speaker") or "")),
+                                                   _esc(str(q.get("source_article") or ""))) if x)
+            attrib_html = ('<div style="font-size:10px;color:rgba(255,255,255,0.5);'
+                           f'margin-top:5px;">{attrib}</div>') if attrib else ""
+            body += (f'<div style="margin-top:12px;padding:10px 12px;'
+                     f'background:rgba(255,255,255,0.05);border-left:3px solid #E8B84B;">'
+                     f'<div style="font-size:13px;line-height:1.55;color:#ffffff;'
+                     f'font-family:Georgia,serif;font-style:italic;">'
+                     f'&ldquo;{_esc(str(q.get("quote")))}&rdquo;</div>'
+                     f'{attrib_html}</div>')
+
+        vol = _esc(str(xd.get("output_volume") or ""))
+        flag = ('<span style="display:inline-block;margin-left:8px;padding:2px 8px;'
+                'border-radius:3px;font-size:9px;font-weight:700;letter-spacing:0.5px;'
+                'background:#C0392B;color:#ffffff;">WATCH</span>'
+                if xd.get("watch_flag") else "")
+        foot = (f'<div style="margin-top:12px;padding-top:10px;'
+                f'border-top:1px solid rgba(255,255,255,0.12);font-size:10px;'
+                f'color:rgba(255,255,255,0.45);">{vol}{flag}</div>' if (vol or flag) else "")
+
+        if body:
+            sections_analysis.append(f"""
+<div style="padding:20px 32px;background:#14213D;border-bottom:1px solid rgba(255,255,255,0.1);" class="sec dark-sec">
+<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#E8B84B;font-family:Arial,sans-serif;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #E8B84B;">Propaganda Delta</div>
+{body}{foot}
+</div>""")
+
     # 14b. What Beijing Is Saying — the PRC government's own words today.
     # Sits ahead of Social Statements (which carries everyone else) so the
     # reader gets the official line before the reactions to it.

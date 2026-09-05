@@ -71,7 +71,7 @@ collect.py      resolve.py      fulltext.py     digest.py         run.py        
 | 7 | Key Stat | Single striking number from today's news |
 | 8 | Market Strip | SSE · Hang Seng · USD/CNY · USD/CNH · Brent · 10Y CGB · China 5Y CDS · PBOC 1Y/5Y LPR · GDP · CPI · PPI · Mfg PMI · Retail sales. Only indicators that actually resolved are shown; anything missing is named once in a footnote, never rendered as a dash. Below the news, not above it |
 | 9 | Δ Since Yesterday | What moved |
-| 10 | Xinhua / People's Daily Delta | Propaganda analysis, Xi appearances, doctrinal phrase tracking |
+| 10 | **Propaganda Delta** | Reading Xinhua, People's Daily and Global Times: doctrinal phrase movement as chips, Xi's day, the front page, the Global Times line, a doctrinal shift or conspicuous omission when there is one, and one quote. Generated as `xinhua_delta` |
 | 11 | **What Beijing Is Saying** | The PRC government's own words today: MOFA presser, TAO, MND, MOFCOM, State Council, PBOC, Xi / Li Qiang / Wang Yi. Verbatim quote, Chinese original, tone, who it is addressed to |
 | 12 | **What Beijing Did** | Ministry actions with the document and thresholds, personnel changes, NPC/Politburo activity |
 | 13 | Expert Analysts | 4–6 op-eds and academic pieces from today's feed, US/allied first, then China-based think tanks and scholars |
