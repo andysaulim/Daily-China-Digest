@@ -465,6 +465,15 @@ def test_state_merge():
     check("workflow never rebases state", "git rebase" not in wf)
     check("both state steps merge", wf.count("merge_state.py") == 2, str(wf.count("merge_state.py")))
     check("state steps set a git identity", wf.count('git config user.name') == 2)
+    # Merging correctly is not enough: the commit must also be re-parented onto
+    # the remote tip, or every push is rejected non-fast-forward while the merge
+    # log looks perfect. That is exactly how run 115 failed.
+    check("both state steps re-parent onto the remote tip",
+          wf.count("git reset -q --mixed") == 2, str(wf.count("git reset -q --mixed")))
+    for name in ("feed_health.json", "url_cache.json", "metrics.jsonl"):
+        check(f"remote copy of {name} is the merge base",
+              wf.count(f'origin/$BRANCH" -- feed_health.json') >= 1 or
+              wf.count(f'origin/${{BRANCH}}" -- feed_health.json') >= 1)
 
 
 def test_email_size_guard():

@@ -191,8 +191,9 @@ jobs:
             # silently. Uncommit, rebase our tree onto the remote's copies of
             # the shared files, merge ours in, and re-commit.
             echo "Push rejected, remerging onto origin/${BRANCH} (attempt ${attempt})"
-            git reset -q --soft HEAD~1
             git fetch origin "${BRANCH}" || true
+            # Re-parent onto the remote tip, keeping this run's working tree.
+            git reset -q --mixed "origin/${BRANCH}" 2>/dev/null || true
             git checkout -q "origin/${BRANCH}" -- feed_health.json url_cache.json metrics.jsonl 2>/dev/null || true
             python merge_state.py "$SNAP"
             git add xi_tracker.json xinhua_tracker.json bp_tracker.json \
@@ -232,7 +233,13 @@ jobs:
           cp feed_health.json url_cache.json metrics.jsonl "$SNAP"/ 2>/dev/null || true
           for attempt in 1 2 3 4; do
             git fetch origin "$BRANCH" || true
-            # Base on whatever is on the remote now, then merge our run onto it.
+            # Re-parent onto the remote tip. Without this the commit hangs off
+            # the stale checkout and every push is rejected non-fast-forward,
+            # which is what happened on run 115 even though the merge itself
+            # was correct. --mixed moves HEAD and the index but keeps the
+            # working tree, so this run's regenerated files survive.
+            git reset -q --mixed "origin/$BRANCH" 2>/dev/null || true
+            # Base the state files on the remote copies, then merge ours in.
             git checkout -q "origin/$BRANCH" -- feed_health.json url_cache.json metrics.jsonl 2>/dev/null || true
             python merge_state.py "$SNAP"
             git add feed_health.json url_cache.json metrics.jsonl 2>/dev/null || true
@@ -243,8 +250,7 @@ jobs:
             if git push origin "HEAD:$BRANCH"; then
               echo "State pushed on attempt ${attempt}"; exit 0
             fi
-            echo "Push rejected, remerging (attempt ${attempt})"
-            git reset -q --soft HEAD~1
+            echo "Push rejected, remerging onto the new remote tip (attempt ${attempt})"
             sleep $((attempt * 3))
           done
           echo "::warning::state push failed after 4 attempts; this run's feed health was not recorded"
