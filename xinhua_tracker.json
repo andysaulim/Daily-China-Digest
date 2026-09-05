@@ -1,16 +1,13 @@
 {
   "daily_counts": {
-    "2026-09-05": {
-      "Community of Common Destiny / 人类命运共同体": 1
-    }
+    "2026-09-05": {}
   },
   "tone_history": {
     "2026-09-05": {
-      "us": "Mixed — conciliatory gestures (CEO delegation, AI-safety talks) alongside a quiet rare-earth shipment halt and a firm 'no military expansion' rebuttal.",
-      "japan": "Conditionally conciliatory — MOFA welcomes the Diet friendship group's visit if it upholds the four political documents.",
-      "taiwan": "Dual-track — pressure via the Gwangju Biennale boycott alongside a conciliatory TAO push for Xiamen-Kinmen integration.",
-      "eu": "Firm — Chinese embassy in London calls UK farm-tech espionage claims 'baseless slander.'"
+      "us": "Guarded ahead of the Sept 24 summit — MOFA declined to confirm any agriculture/non-tariff-barrier joint statement while rare-earth suppliers quietly held some US shipments.",
+      "taiwan": "Firm — TAO pressed the Xiamen-Kinmen bridge issue against Taipei's denial, and Beijing boycotted the Gwangju Biennale over a Taiwan exhibit naming.",
+      "russia": "Conciliatory/routine — Xi sent a congratulatory letter to the 8th China-Russia Energy Business Forum."
     }
   },
-  "last_updated": "2026-09-05T13:38:23.656470+00:00"
+  "last_updated": "2026-09-05T13:49:53.756440+00:00"
 }
