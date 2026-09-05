@@ -58,10 +58,10 @@ ET = ZoneInfo("America/New_York")
 # Every list section whose items carry a url. Placement priority order: an item
 # that appears twice is kept in the earlier section.
 _DEDUPE_ORDER = (
-    "top_stories", "korea_china", "overnight_items", "indo_pacific",
-    "business_economy", "also_today", "official_line", "opeds_today",
-    "academic_today", "social_statements", "prc_government",
-    "congressional_watch", "npc_politburo", "personnel_changes",
+    "top_stories", "us_china", "china_world", "business_economy",
+    "overnight_items", "also_today", "official_line", "opeds_today",
+    "social_statements", "prc_government", "npc_politburo",
+    "personnel_changes",
 )
 _ALL_ITEM_SECTIONS = _DEDUPE_ORDER
 
@@ -69,27 +69,24 @@ _ALL_ITEM_SECTIONS = _DEDUPE_ORDER
 # corpus. The remaining sections (statements, personnel, committee activity)
 # may legitimately summarise something reported inside another article.
 _ARTICLE_SECTIONS = (
-    "top_stories", "korea_china", "overnight_items", "indo_pacific",
-    "business_economy", "also_today", "opeds_today", "academic_today",
+    "top_stories", "us_china", "china_world", "business_economy",
+    "overnight_items", "also_today", "opeds_today",
 )
 
 SECTION_CAPS = {
     "top_stories":       (3, 5),
+    "us_china":          (0, 6),
+    "china_world":       (0, 7),
+    "business_economy":  (0, 6),
     "overnight_items":   (4, 8),
     "morning_memo":      (3, 3),
-    "korea_china":       (0, 3),
     "also_today":        (0, 8),
-    "business_economy":  (0, 6),
-    "indo_pacific":      (0, 7),
     "official_line":     (3, 6),
-    "social_statements": (0, 6),
-    "opeds_today":       (0, 6),
-    "academic_today":    (0, 4),
+    "social_statements": (0, 4),
+    "opeds_today":       (0, 5),
     "prc_government":    (0, 5),
-    "congressional_watch": (0, 4),
     "personnel_changes": (0, 5),
     "calendar_watch":    (0, 5),
-    "on_this_day":       (0, 1),
 }
 
 # 1,600 hard floor, 2,000-2,500 target, 2,700 ceiling: an eight to ten minute
@@ -106,16 +103,20 @@ WORD_TARGET_HIGH = 2500
 WORD_CEILING = 2700
 
 # Sections the length trim may cut from, in the order the editorial rule says
-# to cut: the tail first, never the top stories or Beijing's own words. Each
-# entry is (section, floor) — the trim stops at the floor even if still long.
+# to cut: the wire first, the relationship sections last, never the top
+# stories or Beijing's own words. Each entry is (section, floor) — the trim
+# stops at the floor even if still long. Within a section the trim drops the
+# LOWEST-RANKED item (by the collector's relevance score for its URL), not the
+# last one: run 118 cut Xi's New Delhi visit because it happened to be listed
+# after a Volvo sales story.
 _TRIM_ORDER = (
     ("also_today", 0),
-    ("academic_today", 0),
     ("opeds_today", 2),
     ("social_statements", 2),
+    ("overnight_items", 4),
     ("business_economy", 3),
-    ("overnight_items", 5),
-    ("indo_pacific", 4),
+    ("china_world", 4),
+    ("us_china", 3),
 )
 
 # Gmail truncates a message body over 102 KB and shows "[Message clipped] View
@@ -372,10 +373,27 @@ def _enforce_section_caps(digest: dict) -> list[str]:
     return log
 
 
-def _trim_to_length(digest: dict) -> list[str]:
+def _rank_by_url(payload: dict | None) -> dict:
+    """url -> the collector's relevance score, so the trim can drop the weakest."""
+    if not payload:
+        return {}
+    try:
+        from digest import _relevance_score
+    except Exception:                                        # noqa: BLE001
+        return {}
+    out = {}
+    for tier in ("tier1", "tier2", "tier3", "tier4"):
+        for a in payload.get(tier) or []:
+            u = (a.get("url") or "").strip()
+            if u:
+                out[u] = _relevance_score(a)
+    return out
+
+
+def _trim_to_length(digest: dict, rank: dict | None = None) -> list[str]:
     """Cut tail items until the digest is inside the length target.
 
-    The prompt asks for 1,500-1,900 words and the model reliably overshoots
+    The prompt asks for 2,000-2,500 words and the model reliably overshoots
     (run 116: 2,322 after a regeneration that was itself meant to fix length).
     Being over the ceiling was only an advisory, so nothing ever brought it
     down. Trimming here is deterministic, free, and follows the same rule the
@@ -387,13 +405,24 @@ def _trim_to_length(digest: dict) -> list[str]:
     if start <= WORD_TARGET_HIGH:
         return log
 
+    rank = rank or {}
+
+    def _weakest(items):
+        """Index of the item to drop: lowest collector score, ties go to the tail."""
+        best_i, best_score = len(items) - 1, None
+        for i, it in enumerate(items):
+            sc = rank.get((it.get("url") or "").strip(), 0) if isinstance(it, dict) else 0
+            if best_score is None or sc < best_score or (sc == best_score and i > best_i):
+                best_i, best_score = i, sc
+        return best_i
+
     removed = 0
     for section, floor in _TRIM_ORDER:
         items = digest.get(section)
         if not isinstance(items, list):
             continue
         while len(items) > floor and _count_words(digest) > WORD_TARGET_HIGH:
-            dropped = items.pop()
+            dropped = items.pop(_weakest(items))
             removed += 1
             log.append(f"    - length: dropped from {section}: "
                        f"'{_primary_title(dropped)[:50]}'")
@@ -477,7 +506,7 @@ def _drop_hollow_items(digest: dict) -> list[str]:
     log = []
     n = 0
     for section in ("overnight_items", "also_today", "prc_government", "official_line",
-                    "business_economy", "indo_pacific", "korea_china"):
+                    "business_economy", "us_china", "china_world"):
         items = digest.get(section)
         if not isinstance(items, list):
             continue
@@ -533,26 +562,6 @@ def _drop_stale_calendar(digest: dict, today) -> list[str]:
 
 
 _OTD_RE = re.compile(r"([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})")
-
-
-def _drop_offdate_on_this_day(digest: dict, today) -> list[str]:
-    """on_this_day must match today's month and day; the model still reaches
-    for famous anniversaries a week off."""
-    log = []
-    items = digest.get("on_this_day")
-    if not isinstance(items, list):
-        return log
-    kept = []
-    for it in items:
-        m = _OTD_RE.search(str(it.get("date", "")) if isinstance(it, dict) else "")
-        if m:
-            mon = _MONTH_NUM.get(m.group(1).lower()[:3])
-            if mon and (mon != today.month or int(m.group(2)) != today.day):
-                log.append(f"    - on_this_day: dropped off-date entry '{it.get('date')}'")
-                continue
-        kept.append(it)
-    digest["on_this_day"] = kept
-    return log
 
 
 _SOURCE_SUFFIX_RE = re.compile(r"\s*(\(direct\)|China|Asia|ZH\)|EN)\s*$", re.IGNORECASE)
@@ -682,12 +691,11 @@ def _postprocess_digest(digest: dict, payload: dict, prev_urls: set, prev_titles
     log += _dedupe_within(digest)
     log += _drop_hollow_items(digest)
     log += _drop_stale_calendar(digest, today)
-    log += _drop_offdate_on_this_day(digest, today)
     log += _enforce_source_diversity(digest)
     # Caps first (a slice), then length (drops tail items). Both run after the
     # filters above so they measure what will actually ship.
     log += _enforce_section_caps(digest)
-    log += _trim_to_length(digest)
+    log += _trim_to_length(digest, rank=_rank_by_url(payload))
     digest["source_count"] = len({a.get("source") for a in _corpus(payload) if a.get("source")})
     return digest, log
 
@@ -856,9 +864,13 @@ def validate_digest(digest: dict, payload: dict | None = None, today=None,
     if not isinstance(xd, dict):
         w.append("XINHUA DELTA: missing (non-blocking)")
 
-    if not (digest.get("korea_china") or []):
-        w.append("KOREA: no China-Korea item today (empty is allowed; flagged so a "
-                 "run of empty days is visible)")
+    cw = [it for it in (digest.get("china_world") or []) if isinstance(it, dict)]
+    regions = {str(it.get("region") or "") for it in cw}
+    if cw and "Cross-Strait" not in regions:
+        w.append("CHINA & WORLD: no Cross-Strait item (the prompt requires one)")
+    if cw and len(regions) < 2:
+        w.append(f"CHINA & WORLD: single region ({', '.join(sorted(regions))}); "
+                 f"the section should span more than one")
 
     # Prestige coverage: name the dropped stories, not just the outlets.
     if payload:

@@ -61,13 +61,13 @@ SOURCE-OR-SKIP PRINCIPLE: For EVERY factual claim you write, you must be able to
 
 - ARITHMETIC & TOTALS: When this prompt provides a PRE-CALCULATED total, percentage, or sum, use it EXACTLY as given. Do NOT recalculate — LLMs make arithmetic errors. Only adjust a pre-calculated value if today's articles introduce a NEW data point not already in the baseline.
 
-- DATES: For calendar_watch and on_this_day, only use dates that appear in (a) today's source articles, (b) the VERIFIED CHINA DATES list, or (c) the baseline references in this prompt. Do NOT generate dates from memory.
+- DATES: For calendar_watch and pattern_note, only use dates that appear in (a) today's source articles, (b) the VERIFIED CHINA DATES list, or (c) the baseline references in this prompt. Do NOT generate dates from memory.
 
-- EVERY ARTICLE MUST EXIST IN THE INPUT: Every item in top_stories, overnight_items, also_today, opeds_today, business_economy, indo_pacific, and social_statements MUST correspond to an actual article from the input data above — with a real URL from that input. Do NOT generate articles from your training data. Do NOT present old events as today's news. Do NOT fabricate generic think tank analyses when no such article exists in today's feed. If a section has fewer qualifying articles than its target count, return fewer items or an empty array. An empty section is ALWAYS better than a fabricated entry.
+- EVERY ARTICLE MUST EXIST IN THE INPUT: Every item in top_stories, us_china, china_world, overnight_items, also_today, opeds_today, business_economy, and social_statements MUST correspond to an actual article from the input data above — with a real URL from that input. Do NOT generate articles from your training data. Do NOT present old events as today's news. Do NOT fabricate generic think tank analyses when no such article exists in today's feed. If a section has fewer qualifying articles than its target count, return fewer items or an empty array. An empty section is ALWAYS better than a fabricated entry.
 
 - THINK TANK FABRICATION — HARD BLOCK: You have a strong tendency to fabricate generic-sounding think tank articles from CSIS, CFR, Brookings, Carnegie, RAND, MERICS, etc. when the feed is thin. These fabrications follow a telltale pattern: vague titles ("examines evolving security environment", "argues for export control modernization", "analyzes expanding dimensions"), no specific data points, and no real URL. STOP. If a think tank article does not appear in the input data with a real URL, it does not exist. Do NOT create it.
 
-- ACADEMIC FABRICATION — HARD BLOCK: Same rule applies to academic_today. Do NOT include any journal article that does not appear in the Tier 3 input with a real URL. The authors field must come from the article metadata — do NOT populate it from training data or invent it. If the authors field is missing from the source, set it to null. A news outlet name (e.g. "Ratopati", "The Hindu") appearing as "author" means the source is a news article, not a journal paper — exclude it entirely from academic_today.
+- ACADEMIC FABRICATION — HARD BLOCK: Same rule applies to a Tier 3 journal piece placed in opeds_today. Do NOT include any journal article that does not appear in the Tier 3 input with a real URL. The authors field must come from the article metadata — do NOT populate it from training data or invent it. If the authors field is missing from the source, set it to null. A news outlet name (e.g. "Ratopati", "The Hindu") appearing as "author" means the source is a news article, not a journal paper — exclude it entirely.
 
 - URL INTEGRITY — ZERO TOLERANCE: Every url field must be copied CHARACTER-FOR-CHARACTER from the input article's url field. Do NOT reconstruct, guess, shorten, or invent URLs. Do NOT write a URL based on knowing the publication's domain — only use the exact URL from the input. If an article in the input has no URL or an empty URL, set the url field to "" in your output. A missing URL is always better than a fabricated one. Post-processing drops any item whose URL is not in the input, so an invented URL costs the reader the whole item.
 
@@ -102,7 +102,7 @@ HIDDEN REACH MONITORED LOCATIONS: Chancay (Peru, COSCO), Cuba SIGINT (Bejucal/Wa
 
 CROSS-STRAIT AS SPINE: Cross-Strait is the central axis of China policy analysis. Almost every other story (US-China, Japan-China, Philippines-China, Australia-AUKUS, India-China) routes back to it. When a story has Taiwan implications, surface them.
 
-PRESTIGE OUTLET RULE — MANDATORY INCLUSION: Items from WSJ, Washington Post, NYT, Bloomberg, Financial Times, The Economist, CNN, Reuters, AP, AFP, CNBC and Sinocism are marked "prestige_outlet": true in the input data. Do not match outlet names by eye; use that flag. Every flagged item that qualifies on substance MUST appear somewhere in the digest — in top_stories if it's a major story, otherwise in overnight_items, business_economy, indo_pacific or also_today. These outlets assign China stories selectively; when they publish on China it is inherently noteworthy. Post-processing names every flagged story that was collected and not used.
+PRESTIGE OUTLET RULE — MANDATORY INCLUSION: Items from WSJ, Washington Post, NYT, Bloomberg, Financial Times, The Economist, CNN, Reuters, AP, AFP, CNBC and Sinocism are marked "prestige_outlet": true in the input data. Do not match outlet names by eye; use that flag. Every flagged item that qualifies on substance MUST appear somewhere in the digest — in top_stories if it's a major story, otherwise in us_china, china_world, business_economy, overnight_items or also_today. These outlets assign China stories selectively; when they publish on China it is inherently noteworthy. Post-processing names every flagged story that was collected and not used.
 
 CSIS PRODUCTS — MANDATORY INCLUSION: If ANY same-day article appears from CSIS Trustee Chair, ChinaPower, AMTI, or Hidden Reach, it MUST appear in opeds_today or also_today. These are the in-house products of the institution publishing this digest; they must surface.
 
@@ -366,7 +366,7 @@ Do NOT conflate. Stack rates ADDITIVELY when discussing total tariff burden on a
 
 
 _KEY_DATES = """\
-VERIFIED CHINA DATES (use ONLY these for on_this_day unless today's articles contain a sourced historical reference):
+VERIFIED CHINA DATES (use ONLY these for pattern_note precedents unless today's articles contain a sourced historical reference):
 
 Jan 1 1979: US-PRC diplomatic recognition (Carter administration)
 Jan 13 2024: Lai Ching-te elected Taiwan President (DPP third consecutive term)
@@ -617,7 +617,7 @@ CSIS DATABASE CONTEXT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {db_context}
 
-Use this for on_this_day, calendar_watch, and pattern_note fields."""
+Use this for calendar_watch and pattern_note fields."""
 
     # Xi appearance tracker
     xi_block = ""
@@ -732,7 +732,7 @@ Inclusion thresholds: prestige_tier "A" if china_primary=true → always include
 CSIS PRODUCTS (CSIS China, CSIS ChinaPower, CSIS AMTI, CSIS Hidden Reach, CSIS Big Data China): MANDATORY inclusion whenever present in input — these are our own in-house products.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TIER 3: ACADEMIC JOURNALS → OUTPUT: academic_today
+TIER 3: ACADEMIC JOURNALS → OUTPUT: opeds_today (only a piece a policymaker would act on this week)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {tier_json(payload.get("tier3", []), max_items=20)}
 
@@ -741,7 +741,7 @@ ANTI-HALLUCINATION — ACADEMIC: Strict inclusion test — ALL THREE conditions 
 2. The URL domain belongs to an academic publisher or university press (e.g. mitpressjournals.org, cambridge.org, tandfonline.com, jstor.org, oxfordacademics.com, wiley.com, sagepub.com, brill.com) — NOT a news outlet
 3. The source field matches a recognized journal name (not a newspaper, think tank blog, or government site)
 
-If a Tier 3 item has a news outlet URL (reuters.com, bbc.com, theguardian.com, wsj.com, ft.com, thehill.com, politico.com, scmp.com, nikkei.com, hindustantimes.com, etc.) it is a news article that bled into the feed via keyword match — EXCLUDE IT from academic_today entirely. Congressional hearings, think tank reports, and news analysis pieces are NOT journal articles.
+If a Tier 3 item has a news outlet URL (reuters.com, bbc.com, theguardian.com, wsj.com, ft.com, thehill.com, politico.com, scmp.com, nikkei.com, hindustantimes.com, etc.) it is a news article that bled into the feed via keyword match — EXCLUDE IT entirely. Congressional hearings, think tank reports, and news analysis pieces are NOT journal articles.
 
 For EACH qualifying piece output: title (the article's original title from input, verbatim), url (copy verbatim from input — do not alter), source (journal name from input), journal_tier (from input: A+/A/B), authors (from article metadata if available, else null), china_relevance_score (1-10), framework, summary (2-3 sentences), policy_implication (1 sentence).
 
@@ -762,7 +762,9 @@ This is a hard editorial constraint, not a suggestion, and the constraint runs i
 
 Spend the extra words on MORE ITEMS, not on longer ones. Per-item limits are unchanged and are enforced: top_stories bodies stay at 2-3 sentences, overnight items at 2, also_today at ONE sentence. A brief that covers fourteen things crisply beats one that covers eight at length. If you find yourself writing a fourth sentence in a body, you are writing the wrong thing — add another item instead.
 
-Selection is still the product. When two items say the same thing, keep the better-sourced one and drop the other. When an item would only be there to fill a section, leave the section short: an honest short section beats a padded one. If you are over length, cut from also_today and academic_today first, then op-eds — never from top_stories, korea_china or official_line.
+EVERY IMPORTANT STORY MAKES IT. Any input item carrying "prestige_outlet": true or "flagged_journalist" is a story the readership will have seen the headline of by 7 AM; if it is absent from this brief, the brief looks behind. Place every such item somewhere — its relationship section if it fits, overnight_items if it does not, also_today as a single line at minimum — unless it duplicates an item you have already placed. The post-send report names every prestige item you left out; the goal is a report that names none.
+
+Selection is still the product. When two items say the same thing, keep the better-sourced one and drop the other. When an item would only be there to fill a section, leave the section short: an honest short section beats a padded one. If you are over length, cut from also_today first, then op-eds and social_statements — never from top_stories, us_china, china_world or official_line.
 
 Return a digest object with:
 
@@ -780,29 +782,25 @@ Return a digest object with:
 
 - morning_memo: EXACTLY 3 items. Each one sentence summarizing one of today's top China stories. What a China desk officer tells their boss in the elevator. Lead with the verb. Sourced from today's actual articles.
 
-- on_this_day: array with at most 1 historical China event matching TODAY's EXACT calendar date (month + day). Use VERIFIED CHINA DATES list ONLY. Empty array if no verified event falls on today's date. Each: date (e.g. "October 1, 1949"), event (1 sentence), relevance (1 sentence connecting to current situation).
-
 - key_stat: a single striking statistic from TODAY's articles — must be different from yesterday. Object: number (e.g. "$2.3B", "53%", "12"), label (under 60 chars), context (1 sentence), source (article it came from).
 
 - prc_government: array of 3-5 PRC State Council / ministry ACTIONS from today's news (decisions, notices, regulations, investigations, approvals, data releases; the statements themselves go in official_line). Prefer the ZH government primary items (国务院, 商务部, 发改委, 央行, 海关) when they carry the notice. Each: ministry (English), ministry_chinese (e.g. 外交部, 国防部, 商务部, 中国人民银行), official (name + title), action (1-line headline), document (title of the notice / regulation / announcement if one was issued, else null), detail (1-2 sentences with the specific numbers, dates and thresholds), source_label (e.g. "MOFA EN", "MOFCOM", "PBOC"), url.
 
 - npc_politburo: array of NPC Standing Committee, Politburo Standing Committee, Two Sessions, Beidaihe, or Plenum activity from today's news. Each: body, action, detail (1-2 sentences), url. Empty array if no relevant activity.
 
-- congressional_watch: array of US Congressional activity on China (Select Committee on the CCP, SFRC, HFAC, USCC, CECC). Each: committee, action (1 line), detail (1-2 sentences), members (key names if relevant), url. Empty if nothing today.
-
 - calendar_watch: array of 4-5 key upcoming events in next 14-30 days (MIN 4, MAX 5). Only use events from (a) today's articles with dates, (b) VERIFIED UPCOMING DATES, or (c) trade baselines. Each: month (3-letter), day (int), headline, detail (1-2 sentences).
 
 - overnight_items: 5-7 items (7 MAX). Source diversity MANDATORY (max 3 from any single source). Topic diversity MANDATORY (each different topic). Each: url (copy verbatim from input — do not construct or alter), source, category, headline (under 100 chars), body_text (2 sentences, 40-55 words).
 
-- korea_china: 1-3 items on the China-Korea relationship, THE standing question for this reader. This brief is produced for the CSIS Korea Chair, so a China development that touches the Korean Peninsula outranks a comparable one that does not. In scope: PRC-ROK trade, investment, supply chain and export-control exposure; PRC-DPRK diplomacy, trade and sanctions enforcement; China's handling of THAAD-style coercion or its successors; PRC commentary on the US-ROK or US-ROK-Japan alliance; Chinese readouts of meetings with Seoul or Pyongyang; ROK or DPRK reaction to Chinese action; Korean semiconductor, battery, shipbuilding or steel competition with China. Each: url (copy verbatim from input), source, headline, body_text (2 sentences with the specifics), so_what (1 sentence — what this changes for Seoul or for US-ROK policy, drawn only from today's articles). Return an EMPTY ARRAY on a day with no genuine China-Korea development. Do not stretch an unrelated item into this section and do not duplicate an item you have placed in top_stories or indo_pacific; a real empty day is fine and far better than a manufactured one.
+- us_china: 4-6 items — THE US-CHINA RELATIONSHIP TODAY, in one format. Trade and tariffs, export controls and the Entity List, sanctions and SDN designations, CFIUS and outbound investment, diplomacy (calls, visits, readouts), military (INDOPACOM, PLA-US encounters, arms sales), Congress (Select Committee on the CCP, SFRC, HFAC, USCC, CECC, bills and letters). Anything Washington did to or with Beijing, or Beijing to Washington. Each: url (copy verbatim from input), source, headline, body_text (2 sentences with the specifics: the rate, the entity, the date, the name), instrument (EXACTLY one of "Tariff", "Export Controls", "Entity List", "Sanctions", "CFIUS", "Investment", "Diplomacy", "Military", "Congress", "Legal"). Use TRADE BASELINES above only as background for reading today's items; never restate a baseline rate as news. Do not duplicate an item already placed in top_stories.
+
+- china_world: 5-7 items — CHINA AND THE REST OF THE WORLD, everyone except the United States. Every region is in scope: Cross-Strait, Japan, Korea (ROK and DPRK), India, ASEAN (Philippines, Vietnam, Indonesia, Malaysia, Singapore), Australia and the Pacific, Russia and Central Asia, Europe and the UK, the Middle East and Iran, Africa, Latin America, and multilateral (BRICS, SCO, UN, WTO, G20). Rules: ALWAYS include at least one Cross-Strait item, even on a slow day. Korea and Japan are the readership's home region: when there is a genuine China-Korea or China-Japan development, it goes here, and a China development that touches the Korean Peninsula outranks a comparable one elsewhere. Beyond that, order by importance to a US policymaker, and cover more than one region — a section that is all Taiwan or all Russia has been selected badly. Each: url (copy verbatim from input), source, headline, body_text (2 sentences), region (EXACTLY one of "Cross-Strait", "Japan", "Korea", "India", "ASEAN", "Australia-Pacific", "Russia-Central Asia", "Europe", "Middle East", "Africa", "Latin America", "Multilateral"). Do not duplicate an item already placed in top_stories or us_china.
 
 - top_stories: 3-5 biggest HARD NEWS stories — aim for 4 typical, 5 only when the day genuinely carries five. From wires/correspondents/PRC press/government — NOT op-eds or think tank commentary. TOPIC DIVERSITY MANDATORY. Each: url (copy verbatim from input — do not construct or alter), source, category_tag (Cross-Strait/US-China/PRC-Economy/PLA/Indo-Pacific/Technology/Sanctions/Energy/Diplomacy), headline, body (MAX 3 sentences, aim for 2 — facts: who/what/when/specifics), so_what (1 sentence — specific decision/meeting/timeline this affects, only if appears in today's articles or calendar_watch), pattern_note (1 sentence with historical precedent ONLY if precedent appears in today's articles or reference data; else null), src_line.
 
 - also_today: up to 6 remaining articles score >= 5. ONE LINE EACH: body_text is a single sentence, max 25 words. This is a scan-and-click list, not a section of summaries. Each: url (copy verbatim from input), source, category, headline, body_text (1-2 sentences), color_bar_class (cb-navy=Cross-Strait, cb-red=PLA, cb-lt=Trade/Sanctions, cb-mid=Diplomacy, cb-tech=Technology, cb-biz=Economy).
 
 - business_economy: array of 3-5 China business/economy items. Each: url (copy verbatim from input), source, headline, body_text (1-2 sentences with specific numbers), companies (array of names), sector (tech/auto/energy/finance/manufacturing/property/macro).
-
-- indo_pacific: array of 4-6 items covering Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN. Always include at least one Cross-Strait item even on slow days. Each: url (copy verbatim from input), source, headline, body_text (1-2 sentences), category (cross-strait, taiwan-elections, taiwan-arms, japan-senkaku, japan-history, philippines-scs, australia-aukus, india-lac, korea-china, vietnam-scs, asean), region_tag ("Cross-Strait" / "Japan-China" / "Philippines-China" / "Australia-China" / "India-China" / "Korea-China" / "Indo-Pacific").
 
 - official_line: 4-6 items — WHAT BEIJING IS SAYING today, in its own words. This is the section no other English-language brief carries, so it stays even on a short day; cut elsewhere first. Draw on the Tier 4 PRC primary items (especially lang "ZH" government sources: 外交部, 国台办, 国防部, 商务部, 国务院, 中国人民银行) and any Tier 1 article quoting a PRC official. Each: body (one of "MOFA", "TAO", "MND", "MOFCOM", "State Council", "PBOC", "NDRC", "Xi Jinping", "Premier", "Wang Yi", "Embassy", "Xinhua commentary", "People's Daily", "Global Times"), body_chinese (外交部 / 国台办 / 国防部 / 商务部 / 国务院 / 中国人民银行 / 习近平 / 李强 / 王毅 / 新华社 / 人民日报 / 环球时报 / 使馆), speaker (name, e.g. "Lin Jian"), role (title, e.g. "MOFA spokesperson"), topic (under 60 chars; what the statement is about), statement (VERBATIM quotation, English, max 70 words; if the source only paraphrases, prefix with "Per <source>:" and keep it short), original_zh (verbatim Chinese text if the source is ZH, else null), addressed_to (one of "US", "Taiwan", "Japan", "Philippines", "EU", "India", "Russia", "domestic", "other"), tone (one of "routine", "firm", "warning", "conciliatory"), context (1 sentence: what prompted the statement, only from today's articles), source, url (copy verbatim from input). ORDER by importance to a US policymaker. One statement per topic; the MOFA presser can supply at most 3.
 
@@ -812,12 +810,11 @@ Each: avatar_initials (2 letters), who (name), handle_context (title/role), plat
 
 - personnel_changes: array of PRC and Taiwan personnel changes from today's news — Politburo, Central Committee, ministerial, PLA theater commands, ambassadors, SOE leadership, provincial party secretaries. Each: position, name, action (appointed/resigned/dismissed/nominated/confirmed/rotated), detail (1-2 sentences), predecessor (if relevant).
 
-- opeds_today: qualifying Tier 2 pieces, ordered by prestige then score
-- academic_today: qualifying Tier 3 pieces, ordered by journal_tier then score
+- opeds_today: up to 5 qualifying Tier 2 or Tier 3 pieces, ordered by prestige then score. This is the ONLY analysis section, and it is for named arguments from the watch-listed experts and institutes, not for a survey of the day's commentary. A Tier 3 journal piece qualifies only if it says something a policymaker would act on this week; otherwise leave it out.
 - xinhua_delta: the Tier 4 object built per instructions above
 - timeline_candidates: list of urls flagged for any CSIS bilateral event database (Cross-Strait incidents, NK-Russia, China-Russia, BRICS expansion events)
 
-PLACEMENT PRIORITY (highest wins): top_stories > korea_china > overnight_items > indo_pacific > business_economy > also_today. Each article appears in exactly ONE section — deduplicate by URL AND topic.
+PLACEMENT PRIORITY (highest wins): top_stories > us_china > china_world > business_economy > overnight_items > also_today. overnight_items is the residual tier for important items that fit none of the relationship sections; also_today is the one-line wire. Each article appears in exactly ONE section — deduplicate by URL AND topic.
 
 - story_count: total Tier 1 articles processed
 - oped_count: qualifying Tier 2 count
@@ -827,6 +824,7 @@ FINAL CHECKS before you return:
 1. Walk placement priority and delete every cross-section duplicate (same event, any source).
 2. Confirm morning_memo has exactly 3 distinct strings.
 3. Confirm every url is copied character-for-character from the input data above.
+3b. Confirm china_world carries at least one "Cross-Strait" item and more than one region, and that no prestige_outlet / flagged_journalist input item is missing from every section.
 4. Confirm every quote_text is a verbatim quotation present in the source text.
 5. Confirm nothing from ALREADY COVERED is repeated without a material new development.
 6. Confirm no market figure, rate or index level appears that is not in MARKET DATA or an article.
@@ -911,8 +909,12 @@ def _robust_json_parse(raw: str) -> dict:
 # written: do NOT append a date suffix. Any change here must also be made in
 # pipeline_health.KNOWN_MODEL_IDS, which is what catches the next retirement
 # before the send fails.
-FAST_MODEL = "claude-sonnet-5"
-PRIMARY_MODEL = "claude-opus-5"
+# DIGEST_FAST_MODEL / DIGEST_PRIMARY_MODEL override these for one run (the
+# workflow's `model` dispatch input sets the first), so a new model can be
+# tried on a test send without editing code. Both must be in
+# pipeline_health.KNOWN_MODEL_IDS; the smoke test checks the defaults.
+FAST_MODEL = os.environ.get("DIGEST_FAST_MODEL") or "claude-sonnet-5"
+PRIMARY_MODEL = os.environ.get("DIGEST_PRIMARY_MODEL") or "claude-opus-5"
 
 # Adaptive thinking; budget_tokens is rejected on this generation. Effort
 # controls depth and spend.
@@ -1085,7 +1087,7 @@ def generate_digest(payload: dict, db_context: str = "") -> dict:
                     + "\nHere is your previous output:\n"
                     + json.dumps(digest, ensure_ascii=False)[:8000]
                     + "\n\nRevise and return a COMPLETE updated digest JSON that fixes ALL failures. "
-                      "Add MORE items from available articles (official_line, overnight_items, indo_pacific, "
+                      "Add MORE items from available articles (official_line, us_china, china_world, overnight_items, "
                       "business_economy, opeds_today) to reach 2,000+ words — do not inflate existing bodies. "
                       "Every URL must be copied from the input data. Return ONLY valid JSON."
                 )

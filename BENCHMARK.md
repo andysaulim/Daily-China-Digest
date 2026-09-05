@@ -74,7 +74,7 @@ a small number of items, a hard stop.** None of them lead with a data strip.
   State Council and the PBOC verbatim, in Chinese, with tone and addressee.
   No English-language daily carries this. It is the single best reason to open
   the brief, which is why it keeps its space when the length is cut.
-- **Breadth with grounding.** 268 feeds, 55 Chinese-language. Every article
+- **Breadth with grounding.** 269 feeds, 56 Chinese-language. Every article
   item's URL is checked against the collected corpus in code and deleted if it
   is not there; quotes are checked against fetched article text; market figures
   that were not collected show a dash. The human-authored benchmarks rely on

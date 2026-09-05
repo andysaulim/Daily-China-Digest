@@ -105,7 +105,9 @@ TIER1_FEEDS = {
                                      "site:taipeitimes.com/News/front"),
     "Focus Taiwan":       _gnews("Taiwan+OR+China+site:focustaiwan.tw"),
     "Taiwan News":        _gnews("site:taiwannews.com.tw"),
-    "Liberty Times EN":   _gnews("Taiwan+site:englishnews.ltn.com.tw"),
+    # Liberty Times' English site is unindexed and Taipei Times (same group) is
+    # already in twice; this slot now carries Taiwan's OFFICIAL voice instead.
+    "Taiwan Officials (MAC/MOFA/MND)": _gnews("Taiwan+%22Mainland+Affairs+Council%22+OR+%22Presidential+Office%22+OR+%22Defense+Ministry%22+China+OR+PLA"),
 
     # ── PRC English-language press (Tier 4 covers Chinese-language primary) ───
     "Caixin Global":      _gnews("China+site:caixinglobal.com"),
@@ -125,7 +127,12 @@ TIER1_FEEDS = {
     "Treasury China":     _gnews("China+site:treasury.gov"),
     "OFAC China":         _gnews("China+site:ofac.treasury.gov"),
     "Commerce China":     _gnews("China+site:commerce.gov"),
-    "BIS Entity List":    _gnews("China+site:bis.doc.gov"),
+    # BIS left bis.doc.gov for bis.gov, so the old site: filter went permanently
+    # empty. Entity List rules are published in the Federal Register, which has
+    # a real feed; the fallback catches wire coverage of every addition.
+    "BIS Entity List":    _direct("BIS Entity List",
+                                  "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=industry-and-security-bureau",
+                                  "%22Entity+List%22+China+OR+Chinese+Commerce+OR+BIS"),
     "USTR China":         _gnews("China+site:ustr.gov"),
     "USCC":               _gnews("site:uscc.gov"),
     "CECC":               _gnews("site:cecc.gov"),
@@ -230,7 +237,9 @@ TIER1_FEEDS = {
     "德国之声中文 (DW Chinese ZH)": _gnews_zh("site:dw.com/zh"),
     "美国之音中文 (VOA Chinese ZH)": _gnews_zh("site:voachinese.com"),
     "日经中文网 (Nikkei Chinese ZH)": _gnews_zh("site:cn.nikkei.com"),
-    "路透中文 (Reuters Chinese ZH)": _gnews_zh("site:cn.reuters.com"),
+    # Reuters shut its Chinese-language service; cn.reuters.com no longer updates.
+    "韩联社中文 (Yonhap Chinese ZH)": _gnews_zh("site:cn.yna.co.kr+%E4%B8%AD%E5%9B%BD"),
+    "法广中文 (RFI Chinese ZH)":     _gnews_zh("site:rfi.fr/cn+%E4%B8%AD%E5%9B%BD"),
 }
 
 
@@ -337,7 +346,8 @@ TIER2_FEEDS = {
     "CGTN Think Tank":               (_gnews("site:cgtn.com+%22think+tank%22+OR+opinion+China+US"), "B"),
 
     # CRS / Congressional research
-    "CRS China":               (_gnews("China+site:crsreports.congress.gov"), "B"),
+    # crsreports.congress.gov is a PDF repository Google News never indexes.
+    "CRS China":               (_gnews("%22Congressional+Research+Service%22+China+OR+Taiwan+OR+site:everycrsreport.com+China"), "B"),
     "GAO China":               (_gnews("China+site:gao.gov"), "B"),
 
     # Generalist with strong China coverage
@@ -381,7 +391,7 @@ TIER4_FEEDS = {
     "Xinhua English":      "http://www.xinhuanet.com/english/rss/worldrss.xml",
     "People's Daily EN":   _gnews("site:en.people.cn"),
     "Global Times":        "https://www.globaltimes.cn/rss/outbrain.xml",
-    "China Daily Front":   _gnews("site:chinadaily.com.cn/front"),
+    "China Daily Opinion": _gnews("site:chinadaily.com.cn/opinion"),
     "CGTN":                _gnews("site:cgtn.com"),
 
     # PRC government, Chinese-language primary (what Beijing is saying, in its
@@ -1080,7 +1090,7 @@ def _collect_gray_zone() -> list:
 # ─────────────────────────────────────────────────────────────────────────────
 
 _DIRECT_PROP_SOURCES = {"Xinhua English", "People's Daily EN", "Global Times",
-                        "China Daily", "China Daily Front", "CGTN"}
+                        "China Daily", "China Daily Opinion", "CGTN"}
 
 _PROP_TITLE_PATTERNS = re.compile(
     r"Xinhua|People's Daily|Global Times|Foreign Ministry spokesperson|"
@@ -1615,6 +1625,9 @@ def _update_feed_health(health: dict) -> dict:
             dead.append(f"{source} ({rec['empty_runs']} runs)")
         if source in MAJOR_FEEDS and not info.get("success"):
             major_empty.append(source)
+    # A feed that was renamed or removed must not linger: only the feeds this
+    # run actually attempted (i.e. the current registry) stay in the ledger.
+    ledger = {k: v for k, v in ledger.items() if k in health}
 
     try:
         with open(FEED_HEALTH_FILE, "w", encoding="utf-8") as f:

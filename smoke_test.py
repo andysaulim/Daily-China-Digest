@@ -66,6 +66,18 @@ def make_payload():
              "url": "https://www.wsj.com/tech/nvidia-china-chip-2026",
              "summary": "Nvidia is designing a chip for China that complies with the new rules.",
              "source": "WSJ China", "lang": "EN", "prestige_outlet": True},
+            {"title": "Commerce adds two gallium refiners to Entity List",
+             "url": "https://www.reuters.com/world/us-china-chips-1",
+             "summary": "The notice names two Guangxi refiners and takes effect Sept 12.",
+             "source": "Reuters China", "lang": "EN", "prestige_outlet": True},
+            {"title": "PLA sorties cross the median line again",
+             "url": "https://www.reuters.com/world/taiwan-strait-2",
+             "summary": "Taiwan's MND counted 22 aircraft; nine crossed the line.",
+             "source": "Reuters China", "lang": "EN", "prestige_outlet": True},
+            {"title": "Seoul summons PRC envoy over fishing incident",
+             "url": "https://www.reuters.com/world/korea-china-3",
+             "summary": "The coast guard detained a Chinese vessel; Beijing protested.",
+             "source": "Reuters China", "lang": "EN"},
             {"title": "外交部发言人林剑主持例行记者会",
              "url": "https://www.fmprc.gov.cn/fyrbt_673021/202609/t20260903_1.shtml",
              "summary": "林剑：中方敦促美方停止以任何形式向台湾提供武器。台湾问题是中国核心利益中的核心。",
@@ -184,16 +196,26 @@ def make_digest():
              "prestige_tier": "A", "china_primary": True, "relevance_score": 9,
              "central_argument": "Rare earths are now the main lever.", "summary": "CSIS analysis of the controls."},
         ],
-        "academic_today": [],
-        "prc_government": [], "npc_politburo": [], "congressional_watch": [], "personnel_changes": [],
-        "business_economy": [], "indo_pacific": [],
+        "prc_government": [], "npc_politburo": [], "personnel_changes": [],
+        "business_economy": [],
+        "us_china": [{"url": "https://www.reuters.com/world/us-china-chips-1",
+                      "source": "Reuters", "instrument": "Export Controls",
+                      "headline": "Commerce adds two gallium refiners to Entity List",
+                      "body_text": "The notice names two Guangxi refiners. It takes effect Sept 12."}],
+        "china_world": [{"url": "https://www.reuters.com/world/taiwan-strait-2",
+                         "source": "Reuters", "region": "Cross-Strait",
+                         "headline": "PLA sorties cross the median line again",
+                         "body_text": "Taiwan's MND counted 22 aircraft. Nine crossed the line."},
+                        {"url": "https://www.reuters.com/world/korea-china-3",
+                         "source": "Reuters", "region": "Korea",
+                         "headline": "Seoul summons PRC envoy over fishing incident",
+                         "body_text": "The coast guard detained a Chinese vessel. Beijing protested."}],
         "calendar_watch": [
             {"month": "Oct", "day": 1, "headline": "PRC National Day", "detail": "77th anniversary."},
             {"month": "Oct", "day": 1, "headline": "Rare-earth curbs take effect", "detail": "MOFCOM measures."},
             {"month": "Aug", "day": 1, "headline": "PLA Day (past)", "detail": "Should be dropped."},
             {"month": "Oct", "day": 25, "headline": "UNGA 2758 anniversary", "detail": "55th."},
         ],
-        "on_this_day": [{"date": "September 8, 1951", "event": "Wrong-day event", "relevance": "x"}],
         "xinhua_delta": {"xi_appearance_today": True, "bottom_line": "Xi hosted Vietnam's party chief — routine."},
         "monitored_locations": [{"name": f"loc{i}", "block": "gray_zone", "status": "normal",
                                  "note": "n", "last_source_date": "", "direction": "",
@@ -244,6 +266,44 @@ def test_collect_registry():
             if name in ("tier2", "tier3"):
                 check(f"tiered tuple {src}", isinstance(val, tuple) and len(val) == 2)
             all_feeds.setdefault(src, []).append(name)
+
+    # The five feeds run 118 reported dead had never returned an item (last_ok
+    # null since the ledger began): wrong domain (BIS moved off bis.doc.gov),
+    # unindexed repositories (CRS PDFs, Liberty Times' English site), a
+    # non-existent path (chinadaily.com.cn/front) and a closed service
+    # (Reuters Chinese). Each was rerouted or replaced; none may come back.
+    for gone in ("Liberty Times EN", "China Daily Front", "路透中文 (Reuters Chinese ZH)"):
+        check(f"dead feed retired: {gone}", gone not in all_feeds)
+    for live in ("Taiwan Officials (MAC/MOFA/MND)", "BIS Entity List", "CRS China",
+                 "China Daily Opinion", "韩联社中文 (Yonhap Chinese ZH)",
+                 "法广中文 (RFI Chinese ZH)"):
+        check(f"replacement registered: {live}", live in all_feeds)
+    every_url = " ".join((v[0] if isinstance(v, tuple) else v) for d in
+                         (collect.TIER1_FEEDS, collect.TIER2_FEEDS, collect.TIER3_FEEDS,
+                          collect.TIER4_FEEDS) for v in d.values())
+    for dead_host in ("bis.doc.gov", "cn.reuters.com", "crsreports.congress.gov",
+                      "chinadaily.com.cn%2Ffront", "chinadaily.com.cn/front",
+                      "englishnews.ltn.com.tw"):
+        check(f"no feed still points at {dead_host}", dead_host not in every_url)
+    check("BIS Entity List has a Google News fallback", "BIS Entity List" in collect._FALLBACK)
+    check("China Daily Opinion counted as direct propaganda",
+          "China Daily Opinion" in collect._DIRECT_PROP_SOURCES)
+    check("feed count 269", len(all_feeds) == 269, str(len(all_feeds)))
+    check("ZH feed count 56", sum("ZH" in k for k in all_feeds) == 56,
+          str(sum("ZH" in k for k in all_feeds)))
+    # Ledger hygiene: every key in feed_health.json must be a registered feed.
+    import json as _json
+    try:
+        ledger = _json.load(open(collect.FEED_HEALTH_FILE, encoding="utf-8"))
+    except Exception:
+        ledger = {}
+    stray = [k for k in ledger if k not in all_feeds]
+    check("feed_health.json carries no retired feeds", not stray, str(stray[:5]))
+    import merge_state
+    aged = merge_state.merge_feed_health(
+        {"Live": {"last_seen": "2026-09-05"}},
+        {"Old": {"last_seen": "2026-06-01"}, "Live": {"last_seen": "2026-09-04"}})
+    check("stale ledger keys age out of the merge", "Old" not in aged and "Live" in aged)
     dupes = [s for s, tiers in all_feeds.items() if len(tiers) > 1]
     check("no source name in two tiers", not dupes, str(dupes))
     total = sum(len(d) for d in (collect.TIER1_FEEDS, collect.TIER2_FEEDS, collect.TIER3_FEEDS,
@@ -325,10 +385,19 @@ def test_digest_module():
     check("extra words buy items, not longer bodies",
           "MORE ITEMS, not on longer ones" in prompt)
     # The Korea Chair's own question must have a guaranteed home.
-    check("korea_china briefed", "- korea_china:" in prompt)
-    check("korea_china may be empty", "Return an EMPTY ARRAY" in prompt)
-    check("korea_china protected from the length cut",
-          "never from top_stories, korea_china or official_line" in prompt)
+    # The brief is organised by relationship: US-China, China & the World.
+    check("us_china briefed", "- us_china:" in prompt)
+    check("us_china tagged by instrument", '"Export Controls", "Entity List", "Sanctions", "CFIUS"' in prompt)
+    check("china_world briefed", "- china_world:" in prompt)
+    check("china_world requires a Cross-Strait item", "ALWAYS include at least one Cross-Strait item" in prompt)
+    check("china_world gives Korea and Japan standing weight",
+          "Korea and Japan are the readership's home region" in prompt)
+    check("relationship sections protected from the length cut",
+          "never from top_stories, us_china, china_world or official_line" in prompt)
+    check("every prestige story must be placed", "EVERY IMPORTANT STORY MAKES IT" in prompt)
+    for gone in ("- indo_pacific:", "- korea_china:", "- congressional_watch:",
+                 "- academic_today:", "- on_this_day:"):
+        check(f"prompt no longer requests {gone.strip('- :')}", gone not in prompt)
     # The TRACKERS chapter is gone; the prompt must not still ask for its fields.
     for gone in ("monitored_locations", "imagery_report", "us_china_trade",
                  "tariff_tracker", "entity_list_tracker"):
@@ -353,7 +422,6 @@ def test_run_postprocess_and_validate():
           any(o.get("url", "").startswith("http://www.news.cn") for o in d["overnight_items"]), joined)
     check("hollow presser item dropped", not any("daily press briefing" in h for h in on_heads), joined)
     check("past calendar entry dropped", all(c["headline"] != "PLA Day (past)" for c in d["calendar_watch"]), joined)
-    check("off-date on_this_day dropped", d["on_this_day"] == [], joined)
     check("em-dash replaced", "—" not in d["xinhua_delta"]["bottom_line"])
     check("source_count set", d.get("source_count", 0) >= 5)
     check("official_line kept with corpus URL", len(d["official_line"]) == 2)
@@ -460,15 +528,15 @@ def test_render():
         "top_stories": [{"headline": "T", "body": "B", "url": "https://x/a", "source": "R"}],
         "prc_government": [{"ministry": "MOFCOM", "action": "A", "detail": "D",
                             "url": "https://x/g"}],
-        "congressional_watch": [{"committee": "Select Cmte", "action": "A",
-                                 "detail": "D", "url": "https://x/c"}],
+        "us_china": [{"instrument": "Congress", "source": "Politico", "headline": "A",
+                      "body_text": "D", "url": "https://x/c"}],
         "also_today": [{"headline": "W", "body_text": "B", "source": "S", "url": "https://x/w"}],
         "calendar_watch": [{"month": "Sep", "day": 12, "headline": "Xi in New Delhi",
                             "detail": "D"}]})
     check("ministry actions kept, next to Beijing's words",
           "What Beijing Did" in hmoved)
-    check("congressional watch moved into the wire",
-          0 < hmoved.find("WIRE") < hmoved.find("Congressional Watch"))
+    check("congress folded into US-China, above the wire",
+          0 < hmoved.find("US&ndash;China") < hmoved.find("WIRE"))
     check("calendar closes the brief as the forward look",
           hmoved.find("What We Are Watching") > hmoved.find("Also Today") > 0)
 
@@ -521,20 +589,34 @@ def test_render():
     check("strip suppressed when nothing resolves",
           "SSE Composite" not in _strip({"sse_composite": {"value": "—", "unavailable": True}}))
 
-    # The Korea Chair's own question.
+    # Relationship sections: US-China and China & the World sit under the top
+    # stories; Korea lives inside China & the World rather than on its own.
     hk = render.render_html({
         "digest_date": "2026-09-05", "editor_note": "J. E. Watch: x.",
         "market_indicators": live,
         "top_stories": [{"headline": "T", "body": "B", "url": "https://x/a", "source": "R"}],
-        "korea_china": [{"headline": "PRC curbs gallium to ROK fabs", "body_text": "B",
-                         "so_what": "Seoul faces a second-source scramble.",
-                         "source": "Yonhap", "url": "https://x/k"}],
+        "us_china": [{"instrument": "Export Controls", "source": "Reuters",
+                      "headline": "Commerce adds gallium refiners", "body_text": "B",
+                      "url": "https://x/u"}],
+        "china_world": [{"region": "Korea", "source": "Yonhap",
+                         "headline": "PRC curbs gallium to ROK fabs", "body_text": "B",
+                         "url": "https://x/k"},
+                        {"region": "Cross-Strait", "source": "Reuters",
+                         "headline": "PLA sorties", "body_text": "B", "url": "https://x/t"}],
+        "business_economy": [{"sector": "tech", "source": "Caixin", "headline": "E",
+                              "body_text": "B", "url": "https://x/e", "companies": ["SMIC"]}],
         "overnight_items": [{"headline": "O", "body_text": "B", "source": "AP",
                              "url": "https://x/o"}]})
-    check("korea section rendered", "The Korea Angle" in hk)
-    check("korea so-what framed for Seoul", "For Seoul:" in hk)
-    check("korea sits under the top stories, above the wire",
-          0 < hk.find("Top Stories") < hk.find("The Korea Angle") < hk.find("Overnight Flash"))
+    check("us-china section rendered", "US&ndash;China" in hk)
+    check("instrument tag rendered", "EXPORT CONTROLS" in hk.upper())
+    check("china & the world rendered", "China &amp; the World" in hk)
+    check("region tags rendered", "KOREA" in hk.upper() and "CROSS-STRAIT" in hk.upper())
+    check("economy & business rendered", "Economy &amp; Business" in hk)
+    check("no standalone korea section", "The Korea Angle" not in hk)
+    check("reading order: top stories, US-China, world, economy, then the wire",
+          0 < hk.find("Top Stories") < hk.find("US&ndash;China") < hk.find("China &amp; the World")
+          < hk.find("Economy &amp; Business") < hk.find("Overnight Flash"))
+    check("overnight now leads the wire", hk.find("WIRE") < hk.find("Overnight Flash"))
     # Format order: the frame and the news come before the data strip.
     i_note, i_top, i_mkt = html.find("The Bottom Line"), html.find("Top Stories"), html.find("SSE Composite")
     check("editor_note rendered as The Bottom Line", i_note > 0)
@@ -565,7 +647,10 @@ def _long_digest(seed=3):
     d["also_today"] = [{"headline": u(9), "body_text": u(120), "source": "WSJ China"} for _ in range(6)]
     d["overnight_items"] = [{"headline": u(9), "body_text": u(120), "source": "Taipei Times"} for _ in range(7)]
     d["business_economy"] = [{"headline": u(9), "body_text": u(120), "source": "Reuters China"} for _ in range(5)]
-    d["indo_pacific"] = [{"headline": u(9), "body_text": u(120), "source": "SCMP"} for _ in range(6)]
+    d["china_world"] = [{"headline": u(9), "body_text": u(120), "source": "SCMP",
+                         "region": "Cross-Strait", "url": f"https://ex.com/w{i}"} for i in range(7)]
+    d["us_china"] = [{"headline": u(9), "body_text": u(120), "source": "Reuters",
+                      "instrument": "Tariff", "url": f"https://ex.com/u{i}"} for i in range(6)]
     return d
 
 
@@ -589,6 +674,35 @@ def test_length_trim_and_caps():
     after = wordcount.count_words(d)
     check("trim reaches the target band", after <= run.WORD_TARGET_HIGH, f"{before} -> {after}")
     check("trim reports what it cut", run._PP_STATS.get("items_trimmed_for_length", 0) > 0)
+    # The trim drops the LOWEST-ranked item in a section, never simply the
+    # last one. Run 118 cut Xi's expected New Delhi visit because it happened
+    # to be listed after a Volvo sales story.
+    import random as _r
+    _r.seed(7)
+    _w = "tariff gallium refinery notice licence deadline ministry vessel envoy summit".split()
+    _body = lambda n: " ".join(_r.choice(_w) for _ in range(n))
+    rd = {"top_stories": [{"headline": "Top", "body": _body(80), "url": "https://x/top"}],
+          "also_today": [], "opeds_today": [], "social_statements": [],
+          "overnight_items": [{"headline": f"On {i}", "body_text": _body(60),
+                               "url": f"https://x/on{i}"} for i in range(4)],
+          "business_economy": [{"headline": f"Biz {i}", "body_text": _body(60),
+                                "url": f"https://x/b{i}"} for i in range(3)],
+          "us_china": [{"headline": f"US {i}", "body_text": _body(60),
+                        "url": f"https://x/u{i}"} for i in range(3)],
+          "china_world": [{"headline": f"Filler {i}", "body_text": _body(300),
+                           "url": f"https://x/f{i}"} for i in range(5)]
+                         + [{"headline": "Xi expected in New Delhi", "body_text": _body(300),
+                             "url": "https://x/xi"}]}
+    rk = {f"https://x/f{i}": 0 for i in range(5)}
+    rk["https://x/xi"] = 170
+    run._PP_STATS.clear()
+    rlog = run._trim_to_length(rd, rank=rk)
+    check("rank-aware trim ran", any("dropped from china_world" in l for l in rlog))
+    check("highest-ranked item survives though listed last",
+          any(it["headline"] == "Xi expected in New Delhi" for it in rd["china_world"]))
+    check("lowest-ranked item dropped first",
+          any("Filler" in l for l in rlog if "dropped from china_world" in l))
+
     for sec, floor in run._TRIM_ORDER:
         # A section that started below its floor was never the trim's doing.
         if isinstance(started.get(sec), int) and started[sec] >= floor:

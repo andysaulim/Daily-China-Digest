@@ -125,12 +125,6 @@
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-05"
  },
- "BIS Entity List": {
-  "empty_runs": 5,
-  "last_count": 0,
-  "last_ok": null,
-  "last_seen": "2026-09-05"
- },
  "Bloomberg China": {
   "empty_runs": 0,
   "last_count": 100,
@@ -189,12 +183,6 @@
   "empty_runs": 0,
   "last_count": 100,
   "last_ok": "2026-09-05",
-  "last_seen": "2026-09-05"
- },
- "CRS China": {
-  "empty_runs": 5,
-  "last_count": 0,
-  "last_ok": null,
   "last_seen": "2026-09-05"
  },
  "CSBA China": {
@@ -286,12 +274,6 @@
   "fallback": "2026-09-05",
   "last_count": 100,
   "last_ok": "2026-09-05",
-  "last_seen": "2026-09-05"
- },
- "China Daily Front": {
-  "empty_runs": 5,
-  "last_count": 0,
-  "last_ok": null,
   "last_seen": "2026-09-05"
  },
  "China Digital Times": {
@@ -718,12 +700,6 @@
   "empty_runs": 0,
   "last_count": 100,
   "last_ok": "2026-09-05",
-  "last_seen": "2026-09-05"
- },
- "Liberty Times EN": {
-  "empty_runs": 5,
-  "last_count": 0,
-  "last_ok": null,
   "last_seen": "2026-09-05"
  },
  "Lowy Institute China": {
@@ -1596,12 +1572,6 @@
   "empty_runs": 0,
   "last_count": 100,
   "last_ok": "2026-09-05",
-  "last_seen": "2026-09-05"
- },
- "路透中文 (Reuters Chinese ZH)": {
-  "empty_runs": 5,
-  "last_count": 0,
-  "last_ok": null,
   "last_seen": "2026-09-05"
  },
  "香港01 (HK01 ZH)": {
