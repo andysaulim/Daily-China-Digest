@@ -350,8 +350,16 @@ def test_digest_module():
     up = digest._filter_upcoming(digest._VERIFIED_UPCOMING, TODAY)
     check("past upcoming dates removed", "May 14-15 2026" not in up and "Jul 24 2026" not in up and "Aug 2026" not in up)
     check("future upcoming dates kept", "Oct 1 2026" in up and "Recurring" in up)
-    check("baseline age computed", digest.baseline_age_days(TODAY) > 0)
-    check("stale note when old", "UNCONFIRMED" in digest._baseline_staleness_note(TODAY))
+    # Age is measured from BASELINES_VERIFIED_AS_OF, which was bumped to today
+    # on Sep 5 2026, so test both branches on explicit dates rather than the
+    # live constant: fresh now, stale 200 days out.
+    from datetime import timedelta as _td
+    check("baseline age computed", digest.baseline_age_days(TODAY) >= 0)
+    check("fresh note when recently verified",
+          "UNCONFIRMED" not in digest._baseline_staleness_note(TODAY)
+          if digest.baseline_age_days(TODAY) <= 30 else True)
+    check("stale note when old", "UNCONFIRMED" in digest._baseline_staleness_note(TODAY + _td(days=200)))
+    check("verified date is not in the future", digest.baseline_age_days(TODAY) >= 0)
     parsed = digest._robust_json_parse('```json\n{"a": 1}\n```')
     check("fence-stripped parse", parsed == {"a": 1})
     parsed = digest._robust_json_parse('Here is the JSON: {"b": [1,2]} thanks')
