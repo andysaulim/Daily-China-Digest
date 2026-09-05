@@ -422,6 +422,32 @@ def test_render():
     check("repaired scmp link present", "scarborough" in html)
 
 
+def test_state_merge():
+    section("merge_state.py (concurrent-run state)")
+    import merge_state
+    fh = merge_state.merge_feed_health(
+        {"Reuters China": {"last_seen": "2026-09-05", "last_count": 100, "empty_runs": 0},
+         "Only Mine": {"last_seen": "2026-09-05", "last_count": 7}},
+        {"Reuters China": {"last_seen": "2026-09-04", "last_count": 0, "empty_runs": 2},
+         "Only Theirs": {"last_seen": "2026-09-04", "last_count": 3}})
+    check("newer measurement wins", fh["Reuters China"]["last_count"] == 100)
+    check("remote-only feed kept", fh["Only Theirs"]["last_count"] == 3)
+    check("local-only feed kept", fh["Only Mine"]["last_count"] == 7)
+    check("older local does not clobber newer remote",
+          merge_state.merge_feed_health({"A": {"last_seen": "2026-09-01", "last_count": 0}},
+                                        {"A": {"last_seen": "2026-09-04", "last_count": 50}}
+                                        )["A"]["last_count"] == 50)
+    uc = merge_state.merge_url_cache({"g1": "https://a", "g2": "https://b"},
+                                     {"g1": "https://a", "g3": "https://c"})
+    check("url cache is a union", uc == {"g1": "https://a", "g2": "https://b", "g3": "https://c"}, str(uc))
+    mm = merge_state.merge_metrics(['{"d":2}'], ['{"d":1}', '{"d":2}'])
+    check("metrics union without duplicates", mm == ['{"d":1}', '{"d":2}'], str(mm))
+    wf = open(".github/workflows/daily-digest.yml", encoding="utf-8").read()
+    check("workflow never rebases state", "git rebase" not in wf)
+    check("both state steps merge", wf.count("merge_state.py") == 2, str(wf.count("merge_state.py")))
+    check("state steps set a git identity", wf.count('git config user.name') == 2)
+
+
 def test_email_size_guard():
     section("email size guard (Gmail clipping)")
     import run
@@ -490,8 +516,8 @@ def test_workflow_and_docs():
 if __name__ == "__main__":
     for t in (test_resolve, test_fulltext, test_collect_registry, test_digest_module,
               test_run_postprocess_and_validate, test_ledger_roundtrip, test_render,
-              test_email_size_guard, test_archive_and_pdf, test_health,
-              test_workflow_and_docs):
+              test_state_merge, test_email_size_guard, test_archive_and_pdf,
+              test_health, test_workflow_and_docs):
         try:
             t()
         except Exception as e:                               # noqa: BLE001
