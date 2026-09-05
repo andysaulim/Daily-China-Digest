@@ -422,6 +422,25 @@ def test_render():
     check("repaired scmp link present", "scarborough" in html)
 
 
+def test_word_count_is_one_definition():
+    section("wordcount.py (single length definition)")
+    import wordcount, run, digest, render
+    payload = make_payload()
+    d, _ = run._postprocess_digest(make_digest(), payload, set(), set(), TODAY)
+    a, b, c = run._count_words(d), digest._count_digest_words(d), render._word_count(d)
+    check("validator, prompt target and header agree", a == b == c, f"run={a} digest={b} render={c}")
+    check("count is non-trivial", a > 100, str(a))
+    check("empty digest counts zero", wordcount.count_words({}) == 0)
+    check("None-safe", wordcount.count_words(None) == 0)
+    check("list fields counted", wordcount.count_words({"opeds_today": [{"authors": ["a b", "c"]}]}) == 3)
+    # official_line carries a lot of prose; it must be inside the definition, or
+    # the model writes to a target the gate does not measure (run 114: 1,787 vs 2,253).
+    only_official = wordcount.count_words(
+        {"official_line": [{"statement": "one two three four", "context": "five six"}]})
+    check("official_line prose is counted", only_official == 6, str(only_official))
+    check("editor_note is counted", wordcount.count_words({"editor_note": "a b c"}) == 3)
+
+
 def test_state_merge():
     section("merge_state.py (concurrent-run state)")
     import merge_state
@@ -516,7 +535,8 @@ def test_workflow_and_docs():
 if __name__ == "__main__":
     for t in (test_resolve, test_fulltext, test_collect_registry, test_digest_module,
               test_run_postprocess_and_validate, test_ledger_roundtrip, test_render,
-              test_state_merge, test_email_size_guard, test_archive_and_pdf,
+              test_word_count_is_one_definition, test_state_merge,
+              test_email_size_guard, test_archive_and_pdf,
               test_health, test_workflow_and_docs):
         try:
             t()

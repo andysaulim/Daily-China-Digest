@@ -12,6 +12,8 @@ from zoneinfo import ZoneInfo
 
 import anthropic
 
+import wordcount
+
 # anthropic 1.x is built on httpx2, not httpx; on a fresh runner httpx is
 # not installed at all. Resolve whichever backend is present.
 try:                            # anthropic 1.x
@@ -851,33 +853,8 @@ _TEXT_FIELDS = ("body", "body_text", "summary", "detail", "quote_text",
 
 
 def _count_digest_words(digest: dict) -> int:
-    words = 0
-    for mi in (digest.get("morning_memo") or []):
-        if isinstance(mi, dict):
-            for v in mi.values():
-                if isinstance(v, str):
-                    words += len(v.split())
-        elif isinstance(mi, str):
-            words += len(mi.split())
-
-    for section_key in ("top_stories", "overnight_items", "also_today", "business_economy",
-                       "opeds_today", "academic_today", "social_statements", "official_line",
-                       "indo_pacific", "congressional_watch", "prc_government"):
-        for item in (digest.get(section_key) or []):
-            if not isinstance(item, dict):
-                continue
-            for field in _TEXT_FIELDS + ("statement", "context"):
-                val = item.get(field, "")
-                if val:
-                    words += len(str(val).split())
-
-    delta = digest.get("xinhua_delta") or {}
-    for field in ("bottom_line", "doctrinal_shift"):
-        val = delta.get(field, "")
-        if val:
-            words += len(str(val).split())
-
-    return words
+    """Same definition the validator enforces. See wordcount.py."""
+    return wordcount.count_words(digest)
 
 
 def _check_content_minimums(digest: dict) -> list[str]:

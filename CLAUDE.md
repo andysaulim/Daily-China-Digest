@@ -43,6 +43,9 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
 - **Length.** 1,500 to 1,900 words; `WORD_FLOOR_CRITICAL` 1,200 blocks, 2,100 warns. Reach
   the target by SELECTION, not by inflating bodies or padding sections; cut from
   `also_today` and `overnight_items` first, never from `top_stories` or `official_line`.
+- **One word counter.** `wordcount.count_words` is the only definition; `digest.py`,
+  `run.py` and `render.py` all delegate to it. They used to disagree by 26 percent
+  (run 114: 1,787 vs 2,253), so the model wrote to a target the gate did not measure.
 - **Gmail clipping.** Gmail truncates a body over 102 KB. `run.check_email_size` warns at
   78 KB and BLOCKS the send at 96 KB, measured in encoded UTF-8 bytes (Chinese costs three
   bytes a character). A clipped brief is a broken brief.

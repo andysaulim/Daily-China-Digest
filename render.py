@@ -14,6 +14,8 @@ import re as _re
 from datetime import datetime, timezone
 from urllib.parse import urlparse as _urlparse
 
+import wordcount
+
 
 def _clean_src(raw: str) -> str:
     if not raw:
@@ -104,128 +106,9 @@ def _sec_label(label: str, color: str = "#1B2A4A") -> str:
 
 
 def _word_count(d: dict) -> int:
-    """Count words in ALL visible text — headlines, bodies, notes, every section."""
-    w = 0
-
-    def _w(s):
-        return len(str(s).split()) if s else 0
-
-    # Header
-    w += _w(d.get("re_line"))
-
-    # Morning memo
-    for mi in (d.get("morning_memo") or []):
-        w += _w(mi) if isinstance(mi, str) else _w(mi.get("text", "")) if isinstance(mi, dict) else 0
-
-    # Δ Since Yesterday
-    for item in ((d.get("delta_since_yesterday") or {}).get("items") or []):
-        w += _w(item)
-
-    # Top stories — headline + body + so_what + pattern + src_line
-    for s in (d.get("top_stories") or []):
-        for f in ("headline", "body", "so_what", "pattern_note", "src_line"):
-            w += _w(s.get(f, ""))
-
-    # Lists with headline + body_text
-    for key in ("overnight_items", "also_today", "business_economy", "indo_pacific"):
-        for it in (d.get(key) or []):
-            w += _w(it.get("headline", ""))
-            w += _w(it.get("body_text", ""))
-
-    # Op-eds + academic — title + summary + analytical
-    for o in (d.get("opeds_today") or []):
-        for f in ("title", "summary", "central_argument", "policy_so_what", "authors"):
-            w += _w(o.get(f, ""))
-    for a in (d.get("academic_today") or []):
-        for f in ("title", "summary", "authors"):
-            w += _w(a.get(f, ""))
-
-    # PRC government / Congress / NPC / Personnel
-    for g in (d.get("prc_government") or []):
-        for f in ("action", "detail", "official", "ministry"):
-            w += _w(g.get(f, ""))
-    for c in (d.get("congressional_watch") or []):
-        for f in ("committee", "action", "detail"):
-            w += _w(c.get(f, ""))
-    for n in (d.get("npc_politburo") or []):
-        for f in ("body", "action", "detail"):
-            w += _w(n.get(f, ""))
-    for p in (d.get("personnel_changes") or []):
-        for f in ("name", "position", "detail", "predecessor"):
-            w += _w(p.get(f, ""))
-
-    # Calendar + on this day
-    for c in (d.get("calendar_watch") or []):
-        for f in ("headline", "detail"):
-            w += _w(c.get(f, ""))
-    for o in (d.get("on_this_day") or []):
-        for f in ("event", "relevance"):
-            w += _w(o.get(f, ""))
-
-    # Monitored locations
-    for loc in (d.get("monitored_locations") or []):
-        for f in ("name", "note", "csis_product"):
-            w += _w(loc.get(f, ""))
-
-    # Key stat
-    ks = d.get("key_stat") or {}
-    for f in ("label", "context", "source"):
-        w += _w(ks.get(f, ""))
-
-    # Xinhua Delta — full coverage
-    xd = d.get("xinhua_delta") or {}
-    for f in ("bottom_line", "doctrinal_shift", "output_volume",
-              "xi_activity", "notable_omissions",
-              "peoples_daily_front_page", "global_times_editorial",
-              "baseline_period"):
-        w += _w(xd.get(f, ""))
-    for p in (xd.get("propaganda_focus") or []):
-        w += _w(p)
-    for q in (xd.get("key_quotes") or []):
-        if isinstance(q, dict):
-            w += _w(q.get("quote", ""))
-            w += _w(q.get("source_article", ""))
-    for v in (xd.get("tone_shifts") or {}).values():
-        w += _w(v)
-    sc = xd.get("xinhua_commentary") or {}
-    w += _w(sc.get("topic", ""))
-    w += _w(sc.get("key_argument", ""))
-    mofa_p = xd.get("mofa_presser") or {}
-    if isinstance(mofa_p, dict):
-        w += _w(mofa_p.get("key_qa", ""))
-    for p in (xd.get("key_phrase_changes") or []):
-        w += _w(p.get("phrase", ""))
-        w += _w(p.get("delta_label", ""))
-
-    # Social statements
-    for s in (d.get("social_statements") or []):
-        for f in ("who", "handle_context", "platform_date", "quote_text", "analyst_note"):
-            w += _w(s.get(f, ""))
-
-    # Official line
-    for o in (d.get("official_line") or []):
-        for f in ("topic", "speaker", "role", "statement", "context"):
-            w += _w(o.get(f, ""))
-
-    # Public sentiment
-    ps = d.get("public_sentiment") or {}
-    cs = ps.get("censorship_signals") or {}
-    for t in (cs.get("blocked_terms") or []):
-        w += _w(t)
-    cf = ps.get("capital_flow_proxies") or {}
-    for f in ("stock_connect_net", "cny_pressure", "gold_signal"):
-        w += _w(cf.get(f, ""))
-    for p in (ps.get("protest_tracker") or []):
-        for f in ("location", "type", "date"):
-            w += _w(p.get(f, ""))
-    tp = ps.get("taiwan_polling") or {}
-    w += _w(tp.get("finding", ""))
-    w += _w(ps.get("discourse_flag", ""))
-
-    # Sanctions status footer
-    w += _w((d.get("sanctions_status") or {}).get("line", ""))
-
-    return w
+    """The count shown in the header. Shares wordcount.py with the prompt target
+    and the validator so the reader is not shown a fourth number."""
+    return wordcount.count_words(d)
 
 
 def _chapter(label: str) -> str:

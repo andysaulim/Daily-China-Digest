@@ -29,6 +29,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import wordcount
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PATHS
@@ -151,30 +153,10 @@ _HOLLOW_RE = re.compile(
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _count_words(digest: dict) -> int:
-    """Count readable words across all text fields."""
-    words = 0
-    for mi in (digest.get("morning_memo") or []):
-        if isinstance(mi, dict):
-            words += sum(len(v.split()) for v in mi.values() if isinstance(v, str))
-        elif isinstance(mi, str):
-            words += len(mi.split())
-    for key in _ALL_ITEM_SECTIONS:
-        for item in (digest.get(key) or []):
-            if not isinstance(item, dict):
-                continue
-            for field in _TEXT_FIELDS:
-                val = item.get(field, "")
-                if val:
-                    words += len(str(val).split())
-    delta = digest.get("xinhua_delta") or {}
-    for field in ("bottom_line", "doctrinal_shift", "peoples_daily_front_page"):
-        val = delta.get(field, "")
-        if val:
-            words += len(str(val).split())
-    for field in ("editor_note",):
-        if digest.get(field):
-            words += len(str(digest[field]).split())
-    return words
+    """Words the reader sees. Defined once in wordcount.py so the prompt target,
+    this gate and the rendered header cannot drift apart (they did: run 114
+    counted 1,787 here and 2,253 in the validator for the same digest)."""
+    return wordcount.count_words(digest)
 
 
 def _item_url(item: dict) -> str:
