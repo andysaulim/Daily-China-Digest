@@ -7,7 +7,10 @@ Mirrors Daily-Korea-Digest visual language exactly:
 - Arial/Georgia stack (NOT v3.1 Libre Baskerville)
 - Status pills (rounded), status badges (small rounded)
 - Colored left-borders for category coding
-- Dark Xinhua Delta panel mirroring KCNA Delta dark theme
+- Sections organised by relationship: Top Stories, US-China, China & the World,
+  Economy & Business; one data band; the BEIJING chapter (Propaganda Delta,
+  What Beijing Is Saying, What Beijing Did, Voices, What Others Are Saying);
+  the WIRE (Overnight Flash, Also Today); What We Are Watching to close
 """
 
 import re as _re
@@ -96,6 +99,25 @@ def _link_or_text(text: str, url: str,
 
 _SEC = 'style="padding:20px 32px;border-bottom:1px solid #EBEBEB;" class="sec"'
 _SEC_ALERT = 'style="padding:20px 32px;border-top:3px solid #C0392B;border-bottom:1px solid #EBEBEB;" class="sec"'
+
+def _item_card(tag: str, source: str, headline: str, url: str, body: str = "",
+               so_what: str = "", so_what_label: str = "So what",
+               headline_size: str = "13px") -> str:
+    """The one card every news section uses. Tag and source in grey small-caps,
+    navy headline, body, optional so-what. Colour belongs to the section label,
+    not to the item, so a page of twelve regions reads as one page."""
+    tag_line = " &middot; ".join(x for x in (_esc(tag), _esc(_clean_src(source))) if x)
+    sw = (f"<div style='font-size:12px;line-height:1.5;color:#555;font-style:italic;"
+          f"margin-top:4px;'><strong style='color:#1B2A4A;font-style:normal;'>"
+          f"{_esc(so_what_label)}:</strong> {_esc(so_what)}</div>") if so_what else ""
+    return (f'<div style="margin-bottom:11px;padding-left:12px;border-left:3px solid #1B2A4A;">'
+            f'<div style="font-size:9px;color:#6B7280;text-transform:uppercase;'
+            f'letter-spacing:1px;font-weight:600;margin-bottom:2px;">{tag_line}</div>'
+            f'<div style="font-size:{headline_size};font-weight:600;color:#1B2A4A;'
+            f'line-height:1.4;">{_link_or_text(_esc(headline), url)}</div>'
+            f'{("<div style=" + chr(34) + "font-size:12px;line-height:1.5;color:#555;margin-top:2px;" + chr(34) + ">" + _esc(body) + "</div>") if body else ""}'
+            f'{sw}</div>')
+
 
 def _sec_label(label: str, color: str = "#1B2A4A") -> str:
     """Section label — small-caps with rule, no background pill."""
@@ -373,63 +395,59 @@ def render_html(digest: dict) -> str:
 </div>"""
         sections_today.append(f'<div {_SEC}>{_sec_label("Top Stories")}{sh}</div>')
 
-    # 4a. The Korea Angle. This brief is produced for the CSIS Korea Chair and
-    # until now carried no guaranteed China-Korea content at all: "korea-china"
-    # was one optional category tag inside indo_pacific, so on most days the
-    # single question this desk exists to answer went unaddressed. It sits
-    # directly under the top stories because for this reader it often IS the
-    # top story.
-    korea = digest.get("korea_china") or []
-    if korea:
-        kh = ""
-        for k in korea:
-            h = _esc(k.get("headline", ""))
-            bt = _esc(k.get("body_text", ""))
-            sw = _esc(k.get("so_what", ""))
-            src = _esc(_clean_src(k.get("source", "")))
-            url = k.get("url", "")
-            kh += f"""
-<div style="margin-bottom:10px;padding-left:12px;border-left:3px solid #0E7C7B;">
-<div style="font-size:9px;color:#0E7C7B;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:2px;">{src}</div>
-<div style="font-size:14px;font-weight:700;color:#1B2A4A;line-height:1.4;">{_link_or_text(h, url)}</div>
-<div style="font-size:12px;line-height:1.5;color:#555;margin-top:3px;">{bt}</div>
-{"<div style='font-size:12px;line-height:1.5;color:#555;font-style:italic;margin-top:4px;'><strong style='color:#0E7C7B;font-style:normal;'>For Seoul:</strong> " + sw + "</div>" if sw else ""}
-</div>"""
-        sections_today.append(
-            f'<div {_SEC}>{_sec_label("The Korea Angle", color="#0E7C7B")}{kh}</div>')
+    # 4a. US–China. One format for the whole relationship: trade, export
+    # controls, sanctions, CFIUS, diplomacy, military, Congress. This replaces
+    # the tracker tables (a tariff stack, an entity-list count, a CFIUS list
+    # and a deals list, four sub-formats in one section) that were hard to read
+    # and rebuilt from stale baselines. Each item is news, tagged by instrument.
+    usc = digest.get("us_china") or []
+    if usc:
+        uh = "".join(_item_card(it.get("instrument", ""), it.get("source", ""),
+                                it.get("headline", ""), it.get("url", ""),
+                                it.get("body_text", ""), headline_size="14px")
+                     for it in usc if isinstance(it, dict))
+        sections_today.append(f'<div {_SEC}>{_sec_label("US&ndash;China")}{uh}</div>')
 
-    # 4b. Overnight Flash
+    # 4b. China & the World. Everyone except the United States, region-tagged,
+    # with a Cross-Strait item guaranteed by the prompt and Korea and Japan
+    # given standing weight for this readership. Replaces Indo-Pacific (Asia
+    # only) and the standalone Korea section: for a brief read by NSC, State,
+    # Pentagon and Select Committee staff a Korea-only section reads parochial,
+    # while a China-Korea story here sits beside the Russia and EU items it
+    # competes with for attention.
+    cw = digest.get("china_world") or []
+    if cw:
+        wh = "".join(_item_card(it.get("region", ""), it.get("source", ""),
+                                it.get("headline", ""), it.get("url", ""),
+                                it.get("body_text", ""), headline_size="14px")
+                     for it in cw if isinstance(it, dict))
+        sections_today.append(f'<div {_SEC}>{_sec_label("China &amp; the World")}{wh}</div>')
+
+    # 4c. Overnight Flash. The residual tier: important items that fit none of
+    # the relationship sections. It leads the wire rather than sitting under
+    # the top stories, because the sections above it are organised by
+    # relationship and this one is organised by time.
     overnight = digest.get("overnight_items") or []
     if overnight:
-        cat_colors = {"Cross-Strait": "#8E44AD", "PLA": "#C0392B"}
-        fh = ""
-        for it in overnight:
-            cat_raw = _str(it.get("category", ""))
-            cat = _esc(cat_raw)
-            h = _esc(it.get("headline", ""))
-            b = _esc(it.get("body_text", ""))
-            src = _esc(_clean_src(it.get("source", "")))
-            url = it.get("url", "")
-            bar = cat_colors.get(cat_raw, "#1B2A4A")
-            fh += f"""
-<div style="margin-bottom:10px;padding-left:12px;border-left:3px solid {bar};">
-<div style="font-size:9px;color:#888;text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:2px;">{cat} &middot; {src}</div>
-<div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(h, url)}</div>
-<div style="font-size:12px;line-height:1.4;color:#555;">{b}</div>
-</div>"""
-        sections_today.append(f'<div {_SEC_ALERT}>{_sec_label("&#9889; Overnight Flash", color="#C0392B")}{fh}</div>')
+        fh = "".join(_item_card(_str(it.get("category", "")), it.get("source", ""),
+                                it.get("headline", ""), it.get("url", ""),
+                                it.get("body_text", ""))
+                     for it in overnight if isinstance(it, dict))
+        sections_wire.append(f'<div {_SEC}>{_sec_label("Overnight Flash")}{fh}</div>')
 
-    # 5. Key Stat
+    # 5. Key Stat. Rendered as the first row of the market band, so the page
+    # has one dark data band instead of two.
     stat = digest.get("key_stat") or {}
     if stat and stat.get("number"):
-        sections_today.append(f"""
-<div style="padding:12px 32px;background:#1B2A4A;color:#ffffff;border-bottom:1px solid #E0E0E0;text-align:center;" class="sec dark-sec">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.6);margin-bottom:2px;">Stat of the Day</div>
-<div class="key-stat-num" style="font-size:32px;font-weight:700;font-family:Georgia,serif;color:#ffffff;">{_esc(str(stat.get("number", "")))}</div>
-<div style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:2px;">{_esc(stat.get("label", ""))}</div>
-<div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:4px;font-style:italic;">{_esc(stat.get("context", ""))}</div>
-{"<div style='font-size:10px;color:rgba(255,255,255,0.45);margin-top:4px;'>Source: " + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
-</div>""")
+        stat_html = f"""
+<div style="padding:14px 32px 12px;background:#1B2A4A;color:#ffffff;text-align:center;border-bottom:1px solid rgba(255,255,255,0.12);" class="sec dark-sec">
+<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.55);margin-bottom:2px;">Stat of the Day</div>
+<div class="key-stat-num" style="font-size:30px;font-weight:700;font-family:Georgia,serif;color:#ffffff;line-height:1.1;">{_esc(str(stat.get("number", "")))}</div>
+<div style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:3px;">{_esc(stat.get("label", ""))}</div>
+<div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:3px;font-style:italic;">{_esc(stat.get("context", ""))}</div>
+{"<div style='font-size:9px;color:rgba(255,255,255,0.4);margin-top:3px;'>Source: " + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
+</div>"""
+        sections_markets.insert(0, stat_html)
 
     # 8. PRC Government (2x2 + personnel + NPC + calendar)
     prc_gov = digest.get("prc_government") or []
@@ -548,99 +566,44 @@ def render_html(digest: dict) -> str:
         if cal_html:
             sections_close.append(f'<div {_SEC}>{_sec_label("What We Are Watching")}{cal_html}</div>')
 
-    # 10. Business & Economy
+    # 10. Economy & Business — inside China.
     biz = digest.get("business_economy") or []
     if biz:
         bh = ""
-        for b in biz[:6]:
-            h = _esc(b.get("headline", ""))
-            bt = _esc(b.get("body_text", ""))
-            url = b.get("url", "")
-            src = _esc(b.get("source", ""))
-            sec = _esc(b.get("sector", ""))
-            comps = b.get("companies", [])
-            cs = ", ".join(_esc(c) for c in comps) if comps else ""
-            bh += f"""<div style="margin-bottom:10px;padding-left:12px;border-left:3px solid #D4AC0D;">
-<div style="font-size:11px;color:#888;text-transform:uppercase;">{sec} · {src}{(' · ' + cs) if cs else ''}</div>
-<div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(h, url)}</div>
-<div style="font-size:12px;line-height:1.4;color:#555;">{bt}</div>
-</div>"""
-        sections_wire.append(f'<div {_SEC}>{_sec_label("Business &amp; Economy")}{bh}</div>')
+        for b in biz:
+            if not isinstance(b, dict):
+                continue
+            comps = [str(c) for c in (b.get("companies") or [])[:3]]
+            tag = " / ".join(x for x in (str(b.get("sector") or ""), ", ".join(comps)) if x)
+            bh += _item_card(tag, b.get("source", ""), b.get("headline", ""),
+                             b.get("url", ""), b.get("body_text", ""))
+        sections_today.append(f'<div {_SEC}>{_sec_label("Economy &amp; Business")}{bh}</div>')
 
-    # 11. Indo-Pacific
-    ip = digest.get("indo_pacific") or []
-    if ip:
-        rc = {"Cross-Strait": "#8E44AD", "Japan-China": "#2C3E50", "Philippines-China": "#2C3E50",
-              "Australia-China": "#2C3E50", "India-China": "#2C3E50", "Korea-China": "#2C3E50",
-              "Trilateral": "#2C3E50", "Indo-Pacific": "#7F8C8D"}
-        ih = ""
-        for it in ip[:6]:
-            r = it.get("region_tag", "Indo-Pacific")
-            bar = rc.get(r, "#7F8C8D")
-            h = _esc(it.get("headline", ""))
-            bt = _esc(it.get("body_text", ""))
-            url = it.get("url", "")
-            src = _esc(_clean_src(it.get("source", "")))
-            ih += f"""<div style="margin-bottom:10px;padding-left:12px;border-left:3px solid {bar};">
-<div style="font-size:11px;color:{bar};text-transform:uppercase;font-weight:600;">{_esc(r)} · {src}</div>
-<div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(h, url)}</div>
-<div style="font-size:12px;line-height:1.4;color:#555;">{bt}</div>
-</div>"""
-        sections_wire.append(f'<div {_SEC}>{_sec_label("Indo-Pacific")}{ih}</div>')
-
-    # 12. Congressional Watch
-    cw = digest.get("congressional_watch") or []
-    if cw:
-        ch = ""
-        for c in cw:
-            comm = _esc(c.get("committee", ""))
-            act = _esc(c.get("action", ""))
-            det = _esc(c.get("detail", ""))
-            url = c.get("url", "")
-            ch += f"""<div style="margin-bottom:10px;padding-left:12px;border-left:3px solid #2C3E50;">
-<div style="font-size:11px;color:#7F8C8D;font-weight:600;text-transform:uppercase;">{comm}</div>
-<div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(act, url)}</div>
-<div style="font-size:12px;line-height:1.4;color:#555;">{det}</div>
-</div>"""
-        sections_wire.append(f'<div {_SEC}>{_sec_label("Congressional Watch")}{ch}</div>')
-
-    # 13. Expert Analysts
+    # 13. Voices — the only analysis section. Op-eds and think-tank arguments
+    # from the watch-listed experts, US and China-based. Academic journal
+    # pieces no longer have a section of their own: a daily brief is not the
+    # place for them unless one says something a policymaker acts on this week,
+    # in which case the prompt lets it in here.
     opeds = digest.get("opeds_today") or []
-    academics = digest.get("academic_today") or []
-    if opeds or academics:
+    if opeds:
         body = ""
-        if opeds:
-            body += '<div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#1B2A4A;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid #E8E8E8;">Op-Eds &amp; Think Tank Commentary</div>'
-            for o in opeds[:6]:
-                title = _esc(o.get("title") or o.get("headline", ""))
-                src = _esc(o.get("source", ""))
-                auth = _esc(o.get("authors", ""))
-                ca = _esc(o.get("central_argument", ""))
-                sm = _esc(o.get("summary", ""))
-                ps = _esc(o.get("policy_so_what", ""))
-                url = o.get("url", "")
-                body += f"""<div style="margin-bottom:14px;padding:12px 14px;background:#fff;border-radius:2px;border-left:3px solid #1B2A4A;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
-<div style="font-size:10px;color:#888;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px;">{src}{(' · ' + auth) if auth else ''}</div>
-<div style="font-size:14px;font-weight:700;color:#1B2A4A;font-family:Georgia,serif;line-height:1.35;margin-bottom:6px;">{_link_or_text(title, url, style="color:#1B2A4A;text-decoration:none;")}</div>
-{"<div style='font-size:12px;color:#444;font-style:italic;line-height:1.45;margin-bottom:5px;padding-left:8px;border-left:2px solid #D5D5D5;'>" + ca + "</div>" if ca else ""}
-{"<div style='font-size:11px;line-height:1.5;color:#666;'>" + sm + "</div>" if sm else ""}
-{"<div style='font-size:11px;color:#2980B9;margin-top:4px;font-weight:600;'>" + ps + "</div>" if ps else ""}
+        for o in opeds[:5]:
+            title = _esc(o.get("title") or o.get("headline", ""))
+            src = _esc(o.get("source", ""))
+            auth = _esc(o.get("authors", ""))
+            ca = _esc(o.get("central_argument", ""))
+            ps = _esc(o.get("policy_so_what", ""))
+            url = o.get("url", "")
+            cb = ('<span style="margin-left:6px;padding:1px 6px;border-radius:3px;font-size:9px;'
+                  'background:#EEF2F7;color:#1B2A4A;letter-spacing:0.5px;">CHINA-BASED</span>'
+                  if o.get("china_based") else "")
+            body += f"""<div style="margin-bottom:12px;padding:12px 14px;background:#fff;border-left:3px solid #D4AC0D;border-bottom:1px solid #F0F0F0;">
+<div style="font-size:9px;color:#6B7280;text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:3px;">{src}{(' &middot; ' + auth) if auth else ''}{cb}</div>
+<div style="font-size:14px;font-weight:700;color:#1B2A4A;font-family:Georgia,serif;line-height:1.35;margin-bottom:5px;">{_link_or_text(title, url, style="color:#1B2A4A;text-decoration:none;")}</div>
+{"<div style='font-size:12px;color:#444;line-height:1.5;'>" + ca + "</div>" if ca else ""}
+{"<div style='font-size:11px;color:#555;margin-top:4px;font-style:italic;'><strong style='color:#1B2A4A;font-style:normal;'>For policy:</strong> " + ps + "</div>" if ps else ""}
 </div>"""
-        if academics:
-            body += '<div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#8E44AD;margin:14px 0 8px 0;padding-bottom:4px;border-bottom:1px solid #E8E8E8;">Academic Journals</div>'
-            for a in academics[:4]:
-                title = _esc(a.get("title", ""))
-                src = _esc(a.get("source", ""))
-                tier = _esc(a.get("journal_tier", ""))
-                auth = _esc(a.get("authors", ""))
-                sm = _esc(a.get("summary", ""))
-                url = a.get("url", "")
-                body += f"""<div style="margin-bottom:12px;padding:12px 14px;background:#fff;border-radius:2px;border-left:3px solid #8E44AD;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
-<div style="font-size:10px;color:#8E44AD;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px;">{src} · {tier}{(' · ' + auth) if auth else ''}</div>
-<div style="font-size:13px;font-weight:700;color:#1B2A4A;font-family:Georgia,serif;line-height:1.35;margin-bottom:5px;">{_link_or_text(title, url, style="color:#1B2A4A;text-decoration:none;")}</div>
-<div style="font-size:12px;line-height:1.5;color:#555;">{sm}</div>
-</div>"""
-        sections_analysis.append(f'<div {_SEC}>{_sec_label("Expert Analysts")}{body}</div>')
+        sections_analysis.append(f'<div {_SEC}>{_sec_label("Voices")}{body}</div>')
 
     # 14. Public Sentiment — removed (low signal-to-noise)
 
@@ -787,7 +750,7 @@ def render_html(digest: dict) -> str:
     stmts = digest.get("social_statements") or []
     if stmts:
         sh = ""
-        for s in stmts[:6]:
+        for s in stmts[:4]:
             who = _esc(s.get("who", ""))
             ctx = _esc(s.get("handle_context", ""))
             pd = _esc(s.get("platform_date", ""))
@@ -803,39 +766,16 @@ def render_html(digest: dict) -> str:
 {"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Note:</strong> " + nt + "</div>" if nt else ""}
 {src_link}
 </div>"""
-        sections_analysis.append(f'<div {_SEC}>{_sec_label("Social Statements")}{sh}</div>')
+        sections_analysis.append(f'<div {_SEC}>{_sec_label("What Others Are Saying")}{sh}</div>')
 
-    # 16. Also Today
+    # 16. Also Today — the one-line wire.
     also = digest.get("also_today") or []
     if also:
-        wc_ = {"Cross-Strait": "#8E44AD", "PLA": "#C0392B"}
-        ah = ""
-        for a in also[:6]:
-            cr_ = _str(a.get("category", ""))
-            c = _esc(cr_)
-            h = _esc(a.get("headline", ""))
-            b = _esc(a.get("body_text", ""))
-            url = a.get("url", "")
-            src = _esc(_clean_src(a.get("source", "")))
-            bar = wc_.get(cr_, "#7F8C8D")
-            ah += f"""<div style="margin-bottom:10px;padding-left:12px;border-left:3px solid {bar};">
-<div style="font-size:10px;color:#888;text-transform:uppercase;">{c} &middot; {src}</div>
-<div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(h, url)}</div>
-<div style="font-size:12px;line-height:1.4;color:#555;">{b}</div>
-</div>"""
-        sections_wire.append(f'<div {_SEC}>{_sec_label("Also Today / The Wire")}{ah}</div>')
-
-    # 17. On This Day
-    otd = digest.get("on_this_day") or []
-    if otd:
-        oh = ""
-        for it in otd[:1]:
-            oh += f"""<div style="padding:12px 14px;background:#FAFAF5;border-radius:4px;border-left:3px solid #7F8C8D;">
-<div style="font-size:11px;color:#7F8C8D;text-transform:uppercase;letter-spacing:0.5px;font-weight:600;">{_esc(it.get("date", ""))}</div>
-<div style="font-size:14px;font-weight:600;color:#1B2A4A;font-family:Georgia,serif;margin:4px 0;">{_esc(it.get("event", ""))}</div>
-<div style="font-size:12px;color:#555;font-style:italic;line-height:1.5;">{_esc(it.get("relevance", ""))}</div>
-</div>"""
-        sections_wire.append(f'<div {_SEC}>{_sec_label("On This Day")}{oh}</div>')
+        ah = "".join(_item_card(_str(a.get("category", "")), a.get("source", ""),
+                                a.get("headline", ""), a.get("url", ""),
+                                a.get("body_text", ""))
+                     for a in also[:8] if isinstance(a, dict))
+        sections_wire.append(f'<div {_SEC}>{_sec_label("Also Today")}{ah}</div>')
 
     # 18. Sanctions Status footer — REMOVED. Will return when trade tracker is wired
     # with verifiable BIS/OFAC/DoD running totals. Placeholder text was misleading.
@@ -852,17 +792,15 @@ This brief is generated automatically from {_esc(str(digest.get("source_count") 
 <a href="#top" style="font-size:10px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:1px;">&#8593; Back to top</a>
 </div>""")
 
-    # Assemble with chapter dividers. The TRACKERS chapter is gone: the satellite
-    # watch and the tariff/entity-list tables were standing furniture rebuilt from
-    # baselines rather than reporting, and the baselines go stale (108 days, as of
-    # run 118) while still rendering as current fact. What was real reporting in
-    # that chapter moved to where it belongs — ministry actions next to Beijing's
-    # own words, Congressional Watch into the wire, the calendar to the close.
+    # Assembly. Organised by RELATIONSHIP, not by time: the frame, the biggest
+    # stories, then US–China, China & the World, Economy & Business; the data
+    # band; Beijing's propaganda, words and actions; the voices; the wire; and
+    # the forward look to close. Two chapter dividers, not four.
     sections = (
         sections_pre +
         sections_today +
         sections_markets +
-        sections_analysis +
+        ([_chapter("BEIJING")] if sections_analysis else []) + sections_analysis +
         ([_chapter("WIRE")] if sections_wire else []) + sections_wire +
         sections_close +
         sections_post

@@ -34,6 +34,13 @@ on:
         description: 'Recipient(s) for a test run, comma-separated.'
         type: string
         default: ''
+      model:
+        description: >-
+          Optional model ID for the first-pass draft on this run only (e.g.
+          claude-fable-5-1). Blank keeps digest.FAST_MODEL. Must be in
+          pipeline_health.KNOWN_MODEL_IDS.
+        type: string
+        default: ''
 
 permissions:
   contents: write
@@ -126,6 +133,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
           WEB_URL: ${{ vars.WEB_URL }}
           MODE: ${{ inputs.mode }}
+          DIGEST_FAST_MODEL: ${{ inputs.model }}
           SEND_TO: ${{ inputs.send_to }}
           TEST_SEND_TO: ${{ vars.TEST_SEND_TO || 'alim@csis.org' }}
         run: |

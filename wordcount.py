@@ -26,11 +26,10 @@ TEXT_FIELDS = (
 
 # Every section rendered as a list of items.
 ITEM_SECTIONS = (
-    "top_stories", "korea_china", "overnight_items", "indo_pacific",
-    "business_economy",
-    "also_today", "official_line", "opeds_today", "academic_today",
-    "social_statements", "prc_government", "congressional_watch",
-    "npc_politburo", "personnel_changes", "calendar_watch", "on_this_day",
+    "top_stories", "us_china", "china_world", "business_economy",
+    "overnight_items", "also_today", "official_line", "opeds_today",
+    "social_statements", "prc_government", "npc_politburo",
+    "personnel_changes", "calendar_watch",
 )
 
 # Top-level prose.
@@ -95,7 +94,7 @@ if __name__ == "__main__":
         "official_line": [{"statement": "l m", "context": "n"}],      # 3
         "xinhua_delta": {"bottom_line": "o p"},                       # 2
         "key_stat": {"label": "q", "context": "r"},                   # 2
-        "korea_china": [{"headline": "s t", "so_what": "u"}],          # 3
+        "china_world": [{"headline": "s t", "body_text": "u"}],        # 3
     }
     assert count_words(d) == 26, count_words(d)
     assert count_words({}) == 0

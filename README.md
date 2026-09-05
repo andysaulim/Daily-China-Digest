@@ -63,30 +63,30 @@ collect.py      resolve.py      fulltext.py     digest.py         run.py        
 | # | Section | Description |
 | - | - | - |
 | 1 | Header | Date · RE line |
-| 2 | **The Bottom Line** | 70–100 words: the judgment, the evidence for it, and a `Watch:` line naming what would confirm or break it in the next two weeks. The lead, directly under the header. Generated as `editor_note`, and gated — a blank or a one-line recap blocks the send |
-| 3 | Morning Memo | Top 3 stories in one sentence each |
+| 2 | **The Bottom Line** | 70–100 words: the judgment, the evidence for it, and a `Watch:` line naming what would confirm or break it. The lead, directly under the header. Generated as `editor_note`, and gated — a blank or a one-line recap blocks the send |
+| 3 | Today at a Glance | Top 3 stories in one sentence each |
 | 4 | Top Stories | 3–5 hard news stories with "So what" + pattern note |
-| 5 | **The Korea Angle** | 0–3 China–Korea items with a "For Seoul" line: PRC–ROK trade and export-control exposure, PRC–DPRK diplomacy and sanctions enforcement, PRC commentary on the alliance, Korean industry competition. The standing question for the desk this brief is written for. Empty on a genuine no-news day, never padded |
-| 6 | Overnight Flash | 4–8 secondary items |
-| 7 | Key Stat | Single striking number from today's news |
-| 8 | Market Strip | SSE · Hang Seng · USD/CNY · USD/CNH · Brent · 10Y CGB · China 5Y CDS · PBOC 1Y/5Y LPR · GDP · CPI · PPI · Mfg PMI · Retail sales. Only indicators that actually resolved are shown; anything missing is named once in a footnote, never rendered as a dash. Below the news, not above it |
+| 5 | **US–China** | 4–6 items, one format, each tagged by instrument: Tariff · Export Controls · Entity List · Sanctions · CFIUS · Investment · Diplomacy · Military · Congress · Legal. Replaces the tracker tables |
+| 6 | **China & the World** | 5–7 items, everyone except the US, each tagged by region: Cross-Strait (always one) · Japan · Korea · India · ASEAN · Australia-Pacific · Russia-Central Asia · Europe · Middle East · Africa · Latin America · Multilateral. Korea and Japan carry standing weight for this readership |
+| 7 | Economy & Business | 3–6 items inside China: macro, corporates, property, tech |
+| 8 | Stat of the Day + Market Strip | One dark data band. SSE · Hang Seng · USD/CNY · USD/CNH · Brent · 10Y CGB · 5Y CDS · LPR · GDP · CPI · PPI · Mfg PMI · Retail. Only indicators that resolved are shown; anything missing is named once in a footnote |
 | 9 | Δ Since Yesterday | What moved |
-| 10 | **Propaganda Delta** | Reading Xinhua, People's Daily and Global Times: doctrinal phrase movement as chips, Xi's day, the front page, the Global Times line, a doctrinal shift or conspicuous omission when there is one, and one quote. Generated as `xinhua_delta` |
-| 11 | **What Beijing Is Saying** | The PRC government's own words today: MOFA presser, TAO, MND, MOFCOM, State Council, PBOC, Xi / Li Qiang / Wang Yi. Verbatim quote, Chinese original, tone, who it is addressed to |
-| 12 | **What Beijing Did** | Ministry actions with the document and thresholds, personnel changes, NPC/Politburo activity |
-| 13 | Expert Analysts | 4–6 op-eds and academic pieces from today's feed, US/allied first, then China-based think tanks and scholars |
-| 14 | Social Statements | US, Taiwan, allied and other officials |
-| 15 | Congressional Watch | Select Committee on the CCP, SFRC, HFAC, USCC, CECC |
-| 16 | Business & Economy | Corporates, macro, property, tech |
-| 17 | Indo-Pacific | Cross-Strait, Japan, Philippines, Australia, India, Vietnam, ASEAN |
-| 18 | Also Today | Up to 8 third-tier items, one line each |
-| 19 | On This Day | Verified event matching today's exact date |
-| 20 | **What We Are Watching** | 4–5 dated events in the next 14–30 days. Closes the brief |
-| 21 | Footer | Auto-generation disclaimer |
+| — | **BEIJING** | chapter |
+| 10 | **Propaganda Delta** | Reading Xinhua, People's Daily and Global Times: doctrinal phrase movement, Xi's day, the front page, the Global Times line, a doctrinal shift or conspicuous omission, one quote. Generated as `xinhua_delta` |
+| 11 | **What Beijing Is Saying** | The PRC government's own words: MOFA presser, TAO, MND, MOFCOM, State Council, PBOC, Xi / Li Qiang / Wang Yi. Verbatim quote, Chinese original, tone, addressee |
+| 12 | What Beijing Did | Ministry actions with the document and thresholds, personnel changes, NPC/Politburo activity |
+| 13 | Voices | Up to 5 op-eds and think-tank arguments from the watch-listed experts, US and China-based. The only analysis section |
+| 14 | What Others Are Saying | Up to 4 quotes from US, Taiwan and allied officials |
+| — | **WIRE** | chapter |
+| 15 | Overnight Flash | 4–8 secondary items that fit none of the relationship sections |
+| 16 | Also Today | Up to 8 one-line items |
+| 17 | **What We Are Watching** | 4–5 dated events in the next 14–30 days. Closes the brief |
+| 18 | Footer | Auto-generation disclaimer |
 
-Removed Sep 2026: the TRACKERS chapter (Satellite & Location Watch, the US–China tariff
-table, the BIS Entity List table). Those were standing furniture rebuilt from baselines
-rather than from reporting, and they rendered 108-day-old figures as current fact.
+Removed Sep 2026: the TRACKERS chapter (satellite watch, tariff table, entity-list table:
+standing furniture rebuilt from stale baselines), Indo-Pacific (folded into China & the
+World), Congressional Watch (folded into US–China), Academic Journals and On This Day
+(analysis and filler a daily brief does not need).
 
 Target length **2,000–2,500 words**, an eight to ten minute read (hard floor 1,600; ceiling 2,700). The rendered email is also checked against Gmail's 102 KB clipping limit: over 96 KB the send is blocked. See [`BENCHMARK.md`](BENCHMARK.md) for why.
 
@@ -103,7 +103,7 @@ Blocking (regenerate, then hold):
 - Digest date ≠ today
 
 Advisory (logged, sent):
-- Prestige stories collected but unused (named), quotes not found verbatim in fetched text, broken links (404/410 only), source over 7 appearances, calendar under 3 events, market indicators unavailable, no China–Korea item today, Bottom Line outside 55–130 words or missing its `Watch:` line
+- Prestige stories collected but unused (named), quotes not found verbatim in fetched text, broken links (404/410 only), source over 7 appearances, calendar under 3 events, market indicators unavailable, China & the World missing its Cross-Strait item or spanning one region, Bottom Line outside 55–130 words or missing its `Watch:` line
 
 Health checks (`pipeline_health.py`, never block): model IDs in the known set, tier floors, unique sources ≥20, Google News resolution ≥50 percent, dead feeds (5 empty runs), baseline age (60/120 days), send cadence.
 

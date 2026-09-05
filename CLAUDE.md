@@ -44,8 +44,8 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
   band moved up from 1,500-1,900 after run 118 hit 1,898 only because the trim deleted 17
   items, among them Xi's expected New Delhi visit and Japan's record defence budget. The
   extra words buy MORE ITEMS: section caps rose, per-item body limits did not. Cut from
-  `also_today` and `academic_today` first, never from `top_stories`, `korea_china` or
-  `official_line`.
+  `also_today` first, then op-eds and social statements, never from `top_stories`, `us_china`,
+  `china_world` or `official_line`.
 - **Length is enforced in code, not by regeneration.** `run._enforce_section_caps` slices any
   section over its cap (a counting mistake, not an editorial one) and `run._trim_to_length`
   drops tail items until the digest is at or under `WORD_TARGET_HIGH` (2,500), cutting in
@@ -58,9 +58,9 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
 - **Gmail clipping.** Gmail truncates a body over 102 KB. `run.check_email_size` warns at
   78 KB and BLOCKS the send at 96 KB, measured in encoded UTF-8 bytes (Chinese costs three
   bytes a character). A clipped brief is a broken brief.
-- **Format order.** Header, The Bottom Line (`editor_note`), memo, top stories, The Korea
-  Angle, overnight, THEN the market strip, Beijing's words and actions, the wire, and What
-  We Are Watching to close. News before numbers; the frame before the news. `editor_note`
+- **Format order.** Header, The Bottom Line (`editor_note`), memo, top stories, US-China,
+  China & the World, Economy & Business, THEN the data band, the BEIJING chapter, the WIRE,
+  and What We Are Watching to close. News before numbers; the frame before the news. `editor_note`
   was generated and word-counted but never rendered until Sep 4 2026.
 - **Three fields were generated and never rendered.** `editor_note` (fixed Sep 4 2026),
   `china_macro` and `xinhua_delta` (both fixed Sep 5 2026) were produced on every run, counted
@@ -71,9 +71,16 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
   close with a `Watch:` sentence. Under 25 words, or opening with "Today's brief covers",
   is CRITICAL; outside 55-130 words or missing `Watch:` is a warning. It renders above every
   section and until Sep 5 2026 nothing checked it at all.
-- **The Korea Angle.** `korea_china` (0-3 items) is the standing section for the reader this
-  brief is written for. It may be empty on a genuine no-news day — a warning, never a block —
-  but it is never filled with a stretched item, and the length trim never touches it.
+- **Organised by relationship.** After the top stories: `us_china` (4-6, tagged by instrument),
+  `china_world` (5-7, tagged by region, Cross-Strait guaranteed, Korea and Japan weighted for
+  the readership), `business_economy`. Then the data band, the BEIJING chapter, the WIRE
+  (`overnight_items` is the residual tier, `also_today` the one-liners), and the calendar to
+  close. `indo_pacific`, `congressional_watch`, `academic_today`, `on_this_day` and the
+  short-lived `korea_china` are gone; do not re-add a section without a renderer for it.
+- **Every important story makes it.** The prompt requires every `prestige_outlet` /
+  `flagged_journalist` input item to be placed somewhere (`also_today` at minimum) unless it
+  duplicates a placed item; the post-send report names any left out. The length trim drops
+  the LOWEST-ranked item in a section (collector relevance score by URL), never the last one.
 - **No trackers.** The TRACKERS chapter (satellite/location watch, tariff table, entity-list
   table) was removed Sep 5 2026: it was standing furniture rebuilt from `_TRADE_BASELINES`
   and `bp_tracker.json` rather than from reporting, and it rendered 108-day-old baselines as
@@ -120,6 +127,9 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
   `_KEY_DATES` and the correspondent list; bump `BASELINES_VERIFIED_AS_OF`.
 - **After a model change:** update `FAST_MODEL`, `PRIMARY_MODEL`, `MODEL_PRICING`,
   `pipeline_health.KNOWN_MODEL_IDS`, run the smoke test, then a `test` dispatch to yourself.
+  To TRY a model first, use the workflow's `model` dispatch input (sets `DIGEST_FAST_MODEL`
+  for that run only); `cost_of` prices an unknown ID at Opus rates, so the estimate is an
+  upper bound until `MODEL_PRICING` carries it.
 
 ## Running
 
