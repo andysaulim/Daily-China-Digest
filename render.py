@@ -114,7 +114,7 @@ def _word_count(d: dict) -> int:
 def _chapter(label: str) -> str:
     """Chapter divider — dark navy band with gold rule, white letterspaced label."""
     return f"""
-<div style="padding:12px 32px;background:#1B2A4A;text-align:center;" class="sec">
+<div style="padding:12px 32px;background:#1B2A4A;text-align:center;" class="sec dark-sec">
 <div style="height:1px;background:rgba(212,172,13,0.4);margin-bottom:10px;"></div>
 <span style="font-size:9px;font-family:Arial,sans-serif;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:5px;font-weight:700;">{label}</span>
 <div style="height:1px;background:rgba(212,172,13,0.4);margin-top:10px;"></div>
@@ -157,7 +157,7 @@ def render_html(digest: dict) -> str:
 
     # 1. Header
     sections_pre.append(f"""
-<div style="background:#1B2A4A;color:#fff;padding:18px 32px 14px;" class="sec">
+<div style="background:#1B2A4A;color:#ffffff;padding:18px 32px 14px;" class="sec dark-sec">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
 <td style="vertical-align:top;">
 <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS Korea Chair</div>
@@ -221,7 +221,7 @@ def render_html(digest: dict) -> str:
                 cells += (f'<td width="{w}%" align="center" '
                           f'style="padding:{pad};{border}vertical-align:top;">{t}</td>')
             return (f'<table width="100%" cellpadding="0" cellspacing="0" border="0" '
-                    f'style="background:{bg};color:#fff;'
+                    f'class="dark-sec" style="background:{bg};color:#ffffff;'
                     f'border-bottom:1px solid rgba(255,255,255,0.1);">'
                     f'<tr>{cells}</tr></table>')
 
@@ -301,7 +301,8 @@ def render_html(digest: dict) -> str:
                  + _row(third, "#0F1B30", "9px 8px"))
         if strip:
             if missing:
-                strip += (f'<div style="background:#0a0f1e;color:rgba(255,255,255,0.4);'
+                strip += (f'<div class="delta-sec" style="background:#0a0f1e;'
+                          f'color:rgba(255,255,255,0.4);'
                           f'padding:5px 32px;font-size:9px;letter-spacing:0.4px;'
                           f'border-bottom:1px solid rgba(255,255,255,0.08);">'
                           f'Not fetched today: {_esc(", ".join(missing))} '
@@ -320,7 +321,7 @@ def render_html(digest: dict) -> str:
                           f'font-size:11px;color:rgba(255,255,255,0.85);'
                           f'font-family:Arial,sans-serif;">{_esc(it)}</span>')
         sections_markets.append(f"""
-<div style="padding:10px 32px;background:#0a0f1e;color:#fff;border-bottom:1px solid rgba(255,255,255,0.08);" class="sec">
+<div style="padding:10px 32px;background:#0a0f1e;color:#ffffff;border-bottom:1px solid rgba(255,255,255,0.08);" class="sec delta-sec">
 <span style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,0.55);margin-right:8px;vertical-align:middle;">Δ Since Yesterday</span>
 {chip_html}
 </div>""")
@@ -422,12 +423,12 @@ def render_html(digest: dict) -> str:
     stat = digest.get("key_stat") or {}
     if stat and stat.get("number"):
         sections_today.append(f"""
-<div style="padding:12px 32px;background:#1B2A4A;color:#fff;border-bottom:1px solid #E0E0E0;text-align:center;" class="sec">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;opacity:0.6;margin-bottom:2px;">Stat of the Day</div>
-<div class="key-stat-num" style="font-size:32px;font-weight:700;font-family:Georgia,serif;">{_esc(str(stat.get("number", "")))}</div>
-<div style="font-size:12px;opacity:0.85;margin-top:2px;">{_esc(stat.get("label", ""))}</div>
-<div style="font-size:11px;opacity:0.65;margin-top:4px;font-style:italic;">{_esc(stat.get("context", ""))}</div>
-{"<div style='font-size:10px;opacity:0.45;margin-top:4px;'>Source: " + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
+<div style="padding:12px 32px;background:#1B2A4A;color:#ffffff;border-bottom:1px solid #E0E0E0;text-align:center;" class="sec dark-sec">
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.6);margin-bottom:2px;">Stat of the Day</div>
+<div class="key-stat-num" style="font-size:32px;font-weight:700;font-family:Georgia,serif;color:#ffffff;">{_esc(str(stat.get("number", "")))}</div>
+<div style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:2px;">{_esc(stat.get("label", ""))}</div>
+<div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:4px;font-style:italic;">{_esc(stat.get("context", ""))}</div>
+{"<div style='font-size:10px;color:rgba(255,255,255,0.45);margin-top:4px;'>Source: " + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
 </div>""")
 
     # 8. PRC Government (2x2 + personnel + NPC + calendar)
@@ -745,7 +746,7 @@ def render_html(digest: dict) -> str:
 
     # Footer (with the auto-generation disclaimer the Japan brief carries)
     sections_post.append(f"""
-<div style="padding:20px 32px;background:#1B2A4A;text-align:center;" class="sec">
+<div style="padding:20px 32px;background:#1B2A4A;text-align:center;" class="sec dark-sec">
 <div style="font-size:9px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.45);font-family:Arial,sans-serif;line-height:2;">
 CSIS Korea Chair &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_time}
 </div>
@@ -773,17 +774,30 @@ This brief is generated automatically from {_esc(str(digest.get("source_count") 
 
     body_html = "\n".join(s for s in sections if s)
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
 <title>China Daily Brief</title>
 <style>
-body {{ margin:0; padding:0; background:#fff; font-family:Arial,sans-serif; color:#333; }}
-.container {{ max-width:680px; margin:0 auto; background:#fff; }}
+:root {{ color-scheme: light; }}
+body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; color:#333333; -webkit-text-size-adjust:100%; }}
+.container {{ max-width:680px; margin:0 auto; background:#ffffff; }}
+/* Lock dark sections — prevent iOS Mail light-mode override */
+.dark-sec {{ background-color:#1B2A4A !important; color:#ffffff !important; }}
+.dark-sec * {{ color:#ffffff !important; }}
+.dark-sec a {{ color:#D4AC0D !important; }}
+.mid-sec {{ background-color:#162340 !important; color:#ffffff !important; }}
+.deep-sec {{ background-color:#0F1B30 !important; color:#ffffff !important; }}
+.delta-sec {{ background-color:#0a0f1e !important; color:#ffffff !important; }}
 @media only screen and (max-width: 600px) {{
   .container {{ width:100% !important; }}
   .sec {{ padding-left:16px !important; padding-right:16px !important; }}
+  h1 {{ font-size:22px !important; }}
+  .key-stat-num {{ font-size:26px !important; }}
+  .market-val {{ font-size:16px !important; }}
 }}
 @media print {{
   .no-print {{ display: none !important; }}
@@ -793,11 +807,15 @@ body {{ margin:0; padding:0; background:#fff; font-family:Arial,sans-serif; colo
 }}
 </style>
 </head>
-<body>
+<body style="margin:0;padding:0;background:#ffffff;">
 <a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;">
+<tr><td align="center">
 <div class="container">
 {body_html}
 </div>
+</td></tr>
+</table>
 </body>
 </html>"""
 

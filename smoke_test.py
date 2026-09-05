@@ -496,6 +496,12 @@ def test_render():
     check("live tiles still render", "SSE Composite" in hd and "Hang Seng" in hd)
     check("missing indicators named once", "Not fetched today" in hd)
     check("honesty line kept", "never carried forward" in hd)
+    # PR #11's mobile light-mode fix works through .dark-sec / .delta-sec; the
+    # rewritten strip has to carry them or the rows go unreadable on phones.
+    check("market rows carry the mobile light-mode class",
+          'class="dark-sec" style="background:#1B2A4A' in hd)
+    check("missing-line carries the mobile light-mode class",
+          'class="delta-sec" style="background:#0a0f1e' in hd)
 
     live = dict(dead)
     live.update({"cgb_10y": {"value": "1.78%", "change_bps": 2.0},

@@ -975,6 +975,21 @@ def _collect_tier2() -> list:
 
 
 def _collect_tier3() -> list:
+    # News outlet domains that can bleed into Google News journal keyword searches
+    _NEWS_DOMAINS = {
+        "reuters.com", "apnews.com", "bbc.com", "bbc.co.uk", "theguardian.com",
+        "nytimes.com", "wsj.com", "ft.com", "bloomberg.com", "economist.com",
+        "washingtonpost.com", "politico.com", "axios.com", "thehill.com",
+        "scmp.com", "straitstimes.com", "nikkei.com", "afp.com", "aljazeera.com",
+        "cnn.com", "nbcnews.com", "abcnews.go.com", "cbsnews.com", "npr.org",
+        "voanews.com", "rfa.org", "radiofreeasia.org", "kyodonews.net",
+        "hindustantimes.com", "theprint.in", "ndtv.com", "dawn.com",
+        "ratopati.com", "thehindu.com", "timesofindia.com", "deccanherald.com",
+        "news.com.au", "smh.com.au", "theaustralian.com.au", "abc.net.au",
+        "globalnews.ca", "cbc.ca", "lemonde.fr", "spiegel.de",
+        "xinhuanet.com", "globaltimes.cn", "chinadaily.com.cn", "cgtn.com",
+        "en.people.cn", "state.gov", "defense.gov", "congress.gov",
+    }
     articles = []
     results = _fetch_feeds_parallel(TIER3_FEEDS, is_tiered=True)
     for source, (entries, tier) in results.items():
@@ -983,6 +998,17 @@ def _collect_tier3() -> list:
                 continue
             if not _is_china_related(entry):
                 continue
+            # Reject articles from known news domains — they bled in via keyword match
+            url = entry.get("link", "")
+            try:
+                from urllib.parse import urlparse as _up
+                domain = _up(url).hostname or ""
+                if domain.startswith("www."):
+                    domain = domain[4:]
+                if any(domain == nd or domain.endswith("." + nd) for nd in _NEWS_DOMAINS):
+                    continue
+            except Exception:
+                pass
             text = f"{entry.get('title', '')} {entry.get('summary', entry.get('description', ''))}".lower()
             academic_signals = ("journal", "paper", "study", "research", "analysis",
                                 "findings", "abstract", "doi", "vol.", "issue",
