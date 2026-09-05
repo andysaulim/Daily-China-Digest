@@ -8,8 +8,8 @@ three keep in `CLAUDE.md` / `AUDIT` / `CHANGES_MEMO`.
 
 ```
 collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-process
-268 feeds       Google News     article body     Sonnet 5,       URL gate, dedup,
-(55 ZH)         -> real URLs    for the model    Opus 5 retry    ledger, style
+269 feeds       Google News     article body     Sonnet 5,       URL gate, dedup,
+(56 ZH)         -> real URLs    for the model    Opus 5 retry    ledger, style
      -> validate (CRITICAL blocks) -> trackers -> render.py -> archive -> send_email.py
                                                                        -> ledger, last_sent.txt, metrics.jsonl
 ```

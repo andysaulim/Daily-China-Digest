@@ -266,6 +266,44 @@ def test_collect_registry():
             if name in ("tier2", "tier3"):
                 check(f"tiered tuple {src}", isinstance(val, tuple) and len(val) == 2)
             all_feeds.setdefault(src, []).append(name)
+
+    # The five feeds run 118 reported dead had never returned an item (last_ok
+    # null since the ledger began): wrong domain (BIS moved off bis.doc.gov),
+    # unindexed repositories (CRS PDFs, Liberty Times' English site), a
+    # non-existent path (chinadaily.com.cn/front) and a closed service
+    # (Reuters Chinese). Each was rerouted or replaced; none may come back.
+    for gone in ("Liberty Times EN", "China Daily Front", "路透中文 (Reuters Chinese ZH)"):
+        check(f"dead feed retired: {gone}", gone not in all_feeds)
+    for live in ("Taiwan Officials (MAC/MOFA/MND)", "BIS Entity List", "CRS China",
+                 "China Daily Opinion", "韩联社中文 (Yonhap Chinese ZH)",
+                 "法广中文 (RFI Chinese ZH)"):
+        check(f"replacement registered: {live}", live in all_feeds)
+    every_url = " ".join((v[0] if isinstance(v, tuple) else v) for d in
+                         (collect.TIER1_FEEDS, collect.TIER2_FEEDS, collect.TIER3_FEEDS,
+                          collect.TIER4_FEEDS) for v in d.values())
+    for dead_host in ("bis.doc.gov", "cn.reuters.com", "crsreports.congress.gov",
+                      "chinadaily.com.cn%2Ffront", "chinadaily.com.cn/front",
+                      "englishnews.ltn.com.tw"):
+        check(f"no feed still points at {dead_host}", dead_host not in every_url)
+    check("BIS Entity List has a Google News fallback", "BIS Entity List" in collect._FALLBACK)
+    check("China Daily Opinion counted as direct propaganda",
+          "China Daily Opinion" in collect._DIRECT_PROP_SOURCES)
+    check("feed count 269", len(all_feeds) == 269, str(len(all_feeds)))
+    check("ZH feed count 56", sum("ZH" in k for k in all_feeds) == 56,
+          str(sum("ZH" in k for k in all_feeds)))
+    # Ledger hygiene: every key in feed_health.json must be a registered feed.
+    import json as _json
+    try:
+        ledger = _json.load(open(collect.FEED_HEALTH_FILE, encoding="utf-8"))
+    except Exception:
+        ledger = {}
+    stray = [k for k in ledger if k not in all_feeds]
+    check("feed_health.json carries no retired feeds", not stray, str(stray[:5]))
+    import merge_state
+    aged = merge_state.merge_feed_health(
+        {"Live": {"last_seen": "2026-09-05"}},
+        {"Old": {"last_seen": "2026-06-01"}, "Live": {"last_seen": "2026-09-04"}})
+    check("stale ledger keys age out of the merge", "Old" not in aged and "Live" in aged)
     dupes = [s for s, tiers in all_feeds.items() if len(tiers) > 1]
     check("no source name in two tiers", not dupes, str(dupes))
     total = sum(len(d) for d in (collect.TIER1_FEEDS, collect.TIER2_FEEDS, collect.TIER3_FEEDS,
