@@ -40,9 +40,15 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
 - **Chinese-language sources** are tagged `lang: ZH`, capped at 12 items per feed, exempt
   from the English keyword gate, and ranked up when they are a ministry's own words. The
   `official_line` section ("What Beijing Is Saying") quotes them verbatim with `original_zh`.
-- **Length.** 2,000 to 3,000 words; `WORD_FLOOR_CRITICAL` 1,600 blocks, 3,200 warns. Reach
-  the target by covering more items (official_line, overnight, indo_pacific, business,
-  opeds), never by inflating bodies.
+- **Length.** 1,500 to 1,900 words; `WORD_FLOOR_CRITICAL` 1,200 blocks, 2,100 warns. Reach
+  the target by SELECTION, not by inflating bodies or padding sections; cut from
+  `also_today` and `overnight_items` first, never from `top_stories` or `official_line`.
+- **Gmail clipping.** Gmail truncates a body over 102 KB. `run.check_email_size` warns at
+  78 KB and BLOCKS the send at 96 KB, measured in encoded UTF-8 bytes (Chinese costs three
+  bytes a character). A clipped brief is a broken brief.
+- **Format order.** Header, The Bottom Line (`editor_note`), memo, top stories, overnight,
+  THEN the market strip. News before numbers; the frame before the news. `editor_note` was
+  generated and word-counted but never rendered until Sep 4 2026.
 - **Experts and think tanks.** `EXPERT_WATCHLIST` (189 names, Chinese names included) tags
   items with `expert_flag`; Tier 2 carries US, allied and China-based institutes, the latter
   tagged `china_based`. The benchmark against the leading China newsletters is `BENCHMARK.md`.

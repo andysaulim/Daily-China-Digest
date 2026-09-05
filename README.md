@@ -62,36 +62,38 @@ collect.py      resolve.py      fulltext.py     digest.py         run.py        
 
 | # | Section | Description |
 | - | - | - |
-| 1 | Header | Date · RE line · editor's note |
-| 2 | Market Strip | SSE · Hang Seng · USD/CNY · USD/CNH · 10Y CGB · Brent · PBOC LPR · China 5Y CDS · GDP (dash when not collected) |
-| 3 | Δ Since Yesterday | What moved |
-| 4 | Morning Memo | Top 3 stories in one sentence each |
-| 5 | Key Stat | Single striking number from today's news |
-| 6 | Top Stories | 3–5 hard news stories with "So what" + pattern note |
-| 7 | Overnight Flash | 4–8 secondary items |
-| 8 | Xinhua / People's Daily Delta | Propaganda analysis, Xi appearances, doctrinal phrase tracking |
-| 9 | Expert Analysts | 6–10 op-eds and academic pieces that exist in today's feed, US/allied first, then China-based think tanks and scholars |
-| 10 | **What Beijing Is Saying** | The PRC government's own words today: MOFA presser, TAO, MND, MOFCOM, State Council, PBOC, Xi / Li Qiang / Wang Yi. Verbatim quote, Chinese original, tone, who it is addressed to |
-| 11 | Social Statements | US, Taiwan, allied and other officials |
-| 12 | Satellite & Location Watch | 8 gray-zone + 8 Hidden Reach sites, carried forward from the tracker |
-| 13 | PRC Government | Ministry actions, personnel, NPC/Politburo, calendar watch |
-| 14 | US–China Trade & Sanctions | Section 301 / 232 / IEEPA / Section 122 / Entity List / SDN / 1260H / CFIUS |
-| 15 | Congressional Watch | Select Committee on the CCP, SFRC, HFAC, USCC, CECC |
-| 16 | Business & Economy | Corporates, macro, property, tech |
-| 17 | Indo-Pacific | Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN |
-| 18 | Also Today | Up to 8 third-tier items |
-| 19 | On This Day | Verified event matching today's exact date |
-| 20 | Footer | Auto-generation disclaimer |
+| 1 | Header | Date · RE line |
+| 2 | **The Bottom Line** | 45–70 words connecting the day's items. The lead, directly under the header: what moved and what ties it together. Generated as `editor_note` |
+| 3 | Morning Memo | Top 3 stories in one sentence each |
+| 4 | Top Stories | 3–4 hard news stories with "So what" + pattern note |
+| 5 | Overnight Flash | 4–7 secondary items |
+| 6 | Key Stat | Single striking number from today's news |
+| 7 | Market Strip | SSE · Hang Seng · USD/CNY · USD/CNH · 10Y CGB · Brent · PBOC LPR · China 5Y CDS · GDP (dash when not collected). Below the news, not above it |
+| 8 | Δ Since Yesterday | What moved |
+| 9 | Xinhua / People's Daily Delta | Propaganda analysis, Xi appearances, doctrinal phrase tracking |
+| 10 | Expert Analysts | 4–6 op-eds and academic pieces from today's feed, US/allied first, then China-based think tanks and scholars |
+| 11 | **What Beijing Is Saying** | The PRC government's own words today: MOFA presser, TAO, MND, MOFCOM, State Council, PBOC, Xi / Li Qiang / Wang Yi. Verbatim quote, Chinese original, tone, who it is addressed to |
+| 12 | Social Statements | US, Taiwan, allied and other officials |
+| 13 | Satellite & Location Watch | 8 gray-zone + 8 Hidden Reach sites, carried forward from the tracker |
+| 14 | PRC Government | Ministry actions with the document and thresholds, personnel, NPC/Politburo, calendar watch |
+| 15 | US–China Trade & Sanctions | Section 301 / 232 / IEEPA / Section 122 / Entity List / SDN / 1260H / CFIUS |
+| 16 | Congressional Watch | Select Committee on the CCP, SFRC, HFAC, USCC, CECC |
+| 17 | Business & Economy | Corporates, macro, property, tech |
+| 18 | Indo-Pacific | Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN |
+| 19 | Also Today | Up to 6 third-tier items, one line each |
+| 20 | On This Day | Verified event matching today's exact date |
+| 21 | Footer | Auto-generation disclaimer |
 
-Target length **2,000–3,000 words** (hard floor 1,600; ceiling 3,200).
+Target length **1,500–1,900 words**, a six to seven minute read (hard floor 1,200; ceiling 2,100). The rendered email is also checked against Gmail's 102 KB clipping limit: over 96 KB the send is blocked. See [`BENCHMARK.md`](BENCHMARK.md) for why.
 
 ---
 
 ## Validation Gates
 
 Blocking (regenerate, then hold):
-- Top stories 3–5, overnight 4–8, morning memo exactly 3 distinct items, RE line present
-- Word count ≥1,600 (target 2,000–3,000)
+- Top stories 3–4, overnight 4–7, morning memo exactly 3 distinct items, RE line present
+- Word count ≥1,200 (target 1,500–1,900)
+- Rendered email ≥96 KB (Gmail clips at 102 KB)
 - ≥4 items deleted for URLs not in the input
 - Digest date ≠ today
 

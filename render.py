@@ -248,7 +248,8 @@ def render_html(digest: dict) -> str:
     read_min = max(1, round(wc / 250))
     web_url = digest.get("web_url", "")
     # Chapter buckets — assembled with chapter dividers at end
-    sections_pre = []       # View-in-browser, header, markets, Δ Since Yesterday
+    sections_pre = []       # View-in-browser, header, bottom line
+    sections_markets = []   # Market strip + Δ Since Yesterday (render below the news)
     sections_today = []     # Morning Memo, Top Stories, Overnight Flash, Key Stat
     sections_analysis = []  # Xinhua Delta, Expert Analysts, Public Sentiment, Social Statements
     sections_trackers = []  # Satellite Watch, PRC Gov, US-China Trade, Congressional Watch
@@ -288,7 +289,22 @@ def render_html(digest: dict) -> str:
 {"<div style='margin-top:12px;padding-top:12px;border-top:1px solid #D4AC0D;font-size:13px;color:rgba(255,255,255,0.9);font-family:Georgia,serif;'><strong style='color:#D4AC0D;font-family:Arial,sans-serif;font-size:11px;letter-spacing:1px;'>RE:</strong>&nbsp; " + re_line + "</div>" if re_line else ""}
 </div>""")
 
-    # 2. Market strip (3 rows)
+    # 1b. The Bottom Line — the day's frame, in the model's own editor_note.
+    # This field was generated and word-counted on every run since May and never
+    # rendered, so the reader got twenty sections of facts and no lead. Every
+    # digest worth reading (Axios "1 big thing", Politico's lead, Bloomberg's
+    # opener) puts one of these above everything else.
+    editor_note = _esc(str(digest.get("editor_note") or "").strip())
+    if editor_note:
+        sections_pre.append(f"""
+<div style="padding:16px 32px;background:#FAFAF5;border-bottom:1px solid #EBEBEB;" class="sec">
+<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#C0392B;font-family:Arial,sans-serif;margin-bottom:6px;">The Bottom Line</div>
+<div style="font-size:15px;line-height:1.55;color:#1B2A4A;font-family:Georgia,serif;">{editor_note}</div>
+</div>""")
+
+    # 2. Market strip (3 rows). Goes in its own bucket so it renders BELOW the
+    # news: a reader opening this on a phone at 6 AM should see what happened
+    # before they see nine index tiles. No serious morning brief leads with data.
     m = digest.get("market_indicators") or {}
     if m:
         sse = m.get("sse_composite") or {}
@@ -300,7 +316,7 @@ def render_html(digest: dict) -> str:
         cds = m.get("china_cds") or {}
         lpr = m.get("pboc_lpr") or {}
         gdp = m.get("gdp_yoy") or {}
-        sections_pre.append(f"""
+        sections_markets.append(f"""
 <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1B2A4A;color:#fff;border-bottom:1px solid rgba(255,255,255,0.1);">
 <tr>
 <td width="33%" align="center" style="padding:12px 8px 10px;">
@@ -378,7 +394,7 @@ def render_html(digest: dict) -> str:
                           f'border:1px solid rgba(255,255,255,0.12);border-radius:14px;'
                           f'font-size:11px;color:rgba(255,255,255,0.85);'
                           f'font-family:Arial,sans-serif;">{_esc(it)}</span>')
-        sections_pre.append(f"""
+        sections_markets.append(f"""
 <div style="padding:10px 32px;background:#0a0f1e;color:#fff;border-bottom:1px solid rgba(255,255,255,0.08);" class="sec">
 <span style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,0.55);margin-right:8px;vertical-align:middle;">Δ Since Yesterday</span>
 {chip_html}
@@ -964,6 +980,7 @@ This brief is generated automatically from {_esc(str(digest.get("source_count") 
     sections = (
         sections_pre +
         sections_today +
+        sections_markets +
         sections_analysis +
         ([_chapter("TRACKERS")] if sections_trackers else []) + sections_trackers +
         ([_chapter("WIRE")] if sections_wire else []) + sections_wire +

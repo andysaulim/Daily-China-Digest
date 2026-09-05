@@ -302,6 +302,15 @@ def test_digest_module():
     for needle in ("OFFICIAL LINE", "VERBATIM ONLY", "HOLLOW ITEMS", "MARKET AND RATE DATA",
                    "USING THE ARTICLE TEXT", "CHINESE-LANGUAGE SOURCES", "PROPER NOUNS"):
         check(f"system prompt has {needle}", needle in digest.SYSTEM_PROMPT)
+    # Length discipline must agree between the prompt and the validator, or the
+    # model writes to one target and the gate measures against another.
+    import run
+    check("prompt states the 1,500-1,900 target", "1,500 and 1,900" in prompt)
+    check("prompt floor matches validator floor", "HARD MINIMUM 1,200" in prompt,
+          f"validator floor {run.WORD_FLOOR_CRITICAL}")
+    check("prompt ceiling matches validator ceiling", "exceed 2,100" in prompt,
+          f"validator ceiling {run.WORD_CEILING}")
+    check("editor_note briefed as the lead", "THE BOTTOM LINE" in prompt)
 
 
 def test_run_postprocess_and_validate():
@@ -398,6 +407,11 @@ def test_render():
     check("html renders", len(html) > 20000, str(len(html)))
     check("official line section rendered", "What Beijing Is Saying" in html and "中方敦促美方" in html)
     check("disclaimer footer", "generated automatically" in html)
+    # Format order: the frame and the news come before the data strip.
+    i_note, i_top, i_mkt = html.find("The Bottom Line"), html.find("Top Stories"), html.find("SSE Composite")
+    check("editor_note rendered as The Bottom Line", i_note > 0)
+    check("bottom line above top stories", 0 < i_note < i_top, f"{i_note} vs {i_top}")
+    check("market strip below the news", i_top < i_mkt, f"top {i_top} vs markets {i_mkt}")
     d["web_url"] = "https://example.org/2026-09-04.html"
     d["pdf_url"] = "https://example.org/2026-09-04.pdf"
     d["archive_url"] = "https://example.org/archive.html"
@@ -406,6 +420,25 @@ def test_render():
     check("no placeholder links", 'href="#"' not in html.replace('href="#top"', ""))
     check("unavailable market shows dash", "1.75%" not in html)
     check("repaired scmp link present", "scarborough" in html)
+
+
+def test_email_size_guard():
+    section("email size guard (Gmail clipping)")
+    import run
+    check("headroom below the warn line", run.check_email_size("x" * 50_000) == [])
+    warn = run.check_email_size("x" * (run.EMAIL_BYTES_WARN + 100))
+    check("warns before Gmail clips", warn and "CRITICAL" not in warn[0], str(warn))
+    crit = run.check_email_size("x" * (run.EMAIL_BYTES_CRITICAL + 100))
+    check("blocks before Gmail clips", crit and "CRITICAL" in crit[0], str(crit))
+    check("critical threshold under Gmail's limit", run.EMAIL_BYTES_CRITICAL < run.GMAIL_CLIP_BYTES)
+    # Multibyte safety: the Chinese in official_line costs 3 bytes per char, so
+    # the guard must measure encoded bytes, not str length.
+    zh = "中" * 40_000                       # 40k chars, 120k bytes
+    check("counts UTF-8 bytes, not characters",
+          "CRITICAL" in (run.check_email_size(zh) or [""])[0])
+    check("word ceiling leaves byte headroom",
+          run.WORD_CEILING * 30 < run.EMAIL_BYTES_CRITICAL,
+          f"{run.WORD_CEILING} words x ~30 B/word vs {run.EMAIL_BYTES_CRITICAL}")
 
 
 def test_archive_and_pdf():
@@ -457,7 +490,8 @@ def test_workflow_and_docs():
 if __name__ == "__main__":
     for t in (test_resolve, test_fulltext, test_collect_registry, test_digest_module,
               test_run_postprocess_and_validate, test_ledger_roundtrip, test_render,
-              test_archive_and_pdf, test_health, test_workflow_and_docs):
+              test_email_size_guard, test_archive_and_pdf, test_health,
+              test_workflow_and_docs):
         try:
             t()
         except Exception as e:                               # noqa: BLE001

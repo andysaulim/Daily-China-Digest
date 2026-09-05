@@ -72,30 +72,55 @@ _ARTICLE_SECTIONS = (
 )
 
 SECTION_CAPS = {
-    "top_stories":       (3, 5),
-    "overnight_items":   (4, 8),
+    "top_stories":       (3, 4),
+    "overnight_items":   (4, 7),
     "morning_memo":      (3, 3),
-    "also_today":        (0, 8),
-    "business_economy":  (0, 8),
-    "indo_pacific":      (0, 8),
-    "official_line":     (0, 10),
-    "social_statements": (0, 8),
-    "opeds_today":       (0, 12),
-    "academic_today":    (0, 6),
-    "prc_government":    (0, 8),
-    "congressional_watch": (0, 6),
-    "personnel_changes": (0, 6),
+    "also_today":        (0, 6),
+    "business_economy":  (0, 5),
+    "indo_pacific":      (0, 6),
+    "official_line":     (0, 6),
+    "social_statements": (0, 6),
+    "opeds_today":       (0, 6),
+    "academic_today":    (0, 4),
+    "prc_government":    (0, 5),
+    "congressional_watch": (0, 5),
+    "personnel_changes": (0, 5),
     "calendar_watch":    (0, 5),
     "on_this_day":       (0, 1),
 }
 
-# 1,600 hard, 2,000-3,000 target. The brief covers cross-Strait, US-China
-# trade and sanctions, the PLA, the economy, the Indo-Pacific and Beijing's
-# own words; 1,200 words cannot carry that and the reader has asked for the
-# longer read. Above 3,200 the model is padding.
-WORD_FLOOR_CRITICAL = 1600
-WORD_TARGET_LOW = 2000
-WORD_CEILING = 3200
+# 1,200 hard floor, 1,500-1,900 target, 2,100 ceiling: a six to seven minute
+# read. The first relaunch issue ran 2,833 words and 80 KB, which is a
+# reference document rather than a morning brief, and close enough to Gmail's
+# clipping limit to be a real risk (see EMAIL_BYTES_* below). Coverage comes
+# from selection, not from length: the sections that matter (top stories,
+# official_line) keep their space and the tail absorbs the cut.
+WORD_FLOOR_CRITICAL = 1200
+WORD_TARGET_LOW = 1500
+WORD_CEILING = 2100
+
+# Gmail truncates a message body over 102 KB and shows "[Message clipped] View
+# entire message", which on this brief would cut the tail sections off mid-item
+# for every Gmail reader, silently. The June-era issues never came close; the
+# relaunch issue hit 79,924 bytes at 2,833 words (~28 bytes/word), and the
+# Chinese text in official_line costs three bytes per character. So: warn with
+# room to spare, and block the send outright before Gmail can mangle it.
+GMAIL_CLIP_BYTES = 102_400
+EMAIL_BYTES_WARN = 78_000
+EMAIL_BYTES_CRITICAL = 96_000
+
+
+def check_email_size(html: str) -> list[str]:
+    """Guard against Gmail clipping the message body."""
+    n = len(html.encode("utf-8"))
+    pct = 100 * n / GMAIL_CLIP_BYTES
+    if n >= EMAIL_BYTES_CRITICAL:
+        return [f"EMAIL SIZE CRITICAL: {n:,} bytes ({pct:.0f}% of Gmail's "
+                f"{GMAIL_CLIP_BYTES:,}-byte clipping limit); Gmail would truncate the "
+                f"brief mid-item. Shorten the digest."]
+    if n >= EMAIL_BYTES_WARN:
+        return [f"EMAIL SIZE: {n:,} bytes ({pct:.0f}% of Gmail's clipping limit)"]
+    return []
 
 _TEXT_FIELDS = ("body", "body_text", "summary", "detail", "quote_text", "statement",
                 "context", "so_what", "pattern_note", "central_argument", "analyst_note",
@@ -684,11 +709,12 @@ def validate_digest(digest: dict, payload: dict | None = None, today=None,
     word_count = _count_words(digest)
     if word_count < WORD_FLOOR_CRITICAL:
         w.append(f"WORD COUNT CRITICAL: ~{word_count} words (hard minimum {WORD_FLOOR_CRITICAL}, "
-                 f"target {WORD_TARGET_LOW}-3000)")
+                 f"target {WORD_TARGET_LOW}-1900)")
     elif word_count < WORD_TARGET_LOW:
-        w.append(f"WORD COUNT: ~{word_count} words (target {WORD_TARGET_LOW}-3000)")
+        w.append(f"WORD COUNT: ~{word_count} words (target {WORD_TARGET_LOW}-1900)")
     elif word_count > WORD_CEILING:
-        w.append(f"WORD COUNT: ~{word_count} words, over the {WORD_CEILING} ceiling")
+        w.append(f"WORD COUNT: ~{word_count} words, over the {WORD_CEILING} ceiling; "
+                 f"cut also_today and overnight_items")
 
     dropped = _PP_STATS.get("items_dropped_unsourced", 0)
     if dropped >= 4:
@@ -1034,8 +1060,20 @@ def run_pipeline(args: argparse.Namespace) -> int:
     digest["archive_url"] = f"{base}/archive.html"
     html = render_html(digest)
     DIGEST_HTML.write_text(html, encoding="utf-8")
-    print(f"   • Wrote {len(html):,} bytes to {DIGEST_HTML.name}")
-    metrics["html_bytes"] = len(html)
+    html_bytes = len(html.encode("utf-8"))
+    print(f"   • Wrote {html_bytes:,} bytes to {DIGEST_HTML.name} "
+          f"({100 * html_bytes / GMAIL_CLIP_BYTES:.0f}% of Gmail's clipping limit)")
+    metrics["html_bytes"] = html_bytes
+
+    size_findings = check_email_size(html)
+    for f in size_findings:
+        print(f"   {'✖' if 'CRITICAL' in f else '⚠'} {f}")
+    if any("CRITICAL" in f for f in size_findings):
+        # A clipped brief is a broken brief, so this blocks the send exactly as
+        # a validation failure does. The rendered HTML is still on disk.
+        validation_passed = False
+        findings += size_findings
+    metrics["size_findings"] = size_findings
 
     # ─── Archive + README (real, validated runs only) ────────────────────
     archived = False
