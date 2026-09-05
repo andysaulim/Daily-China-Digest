@@ -879,7 +879,7 @@ def test_workflow_and_docs():
 
 if __name__ == "__main__":
     for t in (test_resolve, test_fulltext, test_collect_registry, test_digest_module,
-              test_run_postprocess_and_validate, test_ledger_roundtrip, test_render,
+              test_delta_quote_dedup, test_run_postprocess_and_validate, test_ledger_roundtrip, test_render,
               test_length_trim_and_caps, test_word_count_is_one_definition, test_state_merge,
               test_email_size_guard, test_archive_and_pdf,
               test_health, test_workflow_and_docs):
