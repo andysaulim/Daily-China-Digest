@@ -422,6 +422,60 @@ def test_render():
     check("repaired scmp link present", "scarborough" in html)
 
 
+def _long_digest(seed=3):
+    """A digest well over the length target, with distinct wording so the
+    dedup pass does not remove items before the trim can be observed."""
+    import random
+    random.seed(seed)
+    W = ("tariff quota licence semiconductor shipyard ministry provincial export briefing customs "
+         "subsidy chipmaker refinery terminal patrol delegation communique tribunal sanction entity "
+         "rollout inspection audit permit summit dredger cable satellite reactor turbine lithography "
+         "arbitration provisional dossier tonnage berth manifest consortium moratorium tranche").split()
+    u = lambda n: " ".join(random.choices(W, k=n))
+    d = make_digest()
+    d["opeds_today"] = [{"title": u(8), "summary": u(120), "source": "CSIS China"} for _ in range(6)]
+    d["also_today"] = [{"headline": u(9), "body_text": u(120), "source": "WSJ China"} for _ in range(6)]
+    d["overnight_items"] = [{"headline": u(9), "body_text": u(120), "source": "Taipei Times"} for _ in range(7)]
+    d["business_economy"] = [{"headline": u(9), "body_text": u(120), "source": "Reuters China"} for _ in range(5)]
+    d["indo_pacific"] = [{"headline": u(9), "body_text": u(120), "source": "SCMP"} for _ in range(6)]
+    return d
+
+
+def test_length_trim_and_caps():
+    section("length trim + section caps")
+    import run, wordcount
+    # Over-cap is a counting mistake: slice it, never pay for a regeneration.
+    d = make_digest()
+    d["opeds_today"] = [{"title": f"p{i}", "summary": "a b c"} for i in range(9)]
+    run._enforce_section_caps(d)
+    check("over-cap section sliced to the cap",
+          len(d["opeds_today"]) == run.SECTION_CAPS["opeds_today"][1], str(len(d["opeds_today"])))
+
+    d = _long_digest()
+    before = wordcount.count_words(d)
+    check("fixture starts over the ceiling", before > run.WORD_CEILING, str(before))
+    run._PP_STATS.clear()
+    run._enforce_section_caps(d)
+    run._trim_to_length(d)
+    after = wordcount.count_words(d)
+    check("trim reaches the target band", after <= run.WORD_TARGET_HIGH, f"{before} -> {after}")
+    check("trim reports what it cut", run._PP_STATS.get("items_trimmed_for_length", 0) > 0)
+    for sec, floor in run._TRIM_ORDER:
+        if sec in d:
+            check(f"{sec} floor of {floor} respected", len(d[sec]) >= floor, str(len(d[sec])))
+    check("top_stories never trimmed", len(d["top_stories"]) == 3, str(len(d["top_stories"])))
+    check("official_line never trimmed", len(d["official_line"]) == 2, str(len(d["official_line"])))
+
+    # A digest already in band must not be touched.
+    d2 = make_digest()
+    n_before = wordcount.count_words(d2)
+    sections_before = {k: len(v) for k, v in d2.items() if isinstance(v, list)}
+    run._trim_to_length(d2)
+    check("short digest left alone",
+          wordcount.count_words(d2) == n_before and
+          {k: len(v) for k, v in d2.items() if isinstance(v, list)} == sections_before)
+
+
 def test_word_count_is_one_definition():
     section("wordcount.py (single length definition)")
     import wordcount, run, digest, render
@@ -544,7 +598,7 @@ def test_workflow_and_docs():
 if __name__ == "__main__":
     for t in (test_resolve, test_fulltext, test_collect_registry, test_digest_module,
               test_run_postprocess_and_validate, test_ledger_roundtrip, test_render,
-              test_word_count_is_one_definition, test_state_merge,
+              test_length_trim_and_caps, test_word_count_is_one_definition, test_state_merge,
               test_email_size_guard, test_archive_and_pdf,
               test_health, test_workflow_and_docs):
         try:

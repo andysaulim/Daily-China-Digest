@@ -99,7 +99,20 @@ SECTION_CAPS = {
 # official_line) keep their space and the tail absorbs the cut.
 WORD_FLOOR_CRITICAL = 1200
 WORD_TARGET_LOW = 1500
+WORD_TARGET_HIGH = 1900
 WORD_CEILING = 2100
+
+# Sections the length trim may cut from, in the order the editorial rule says
+# to cut: the tail first, never the top stories or Beijing's own words. Each
+# entry is (section, floor) — the trim stops at the floor even if still long.
+_TRIM_ORDER = (
+    ("also_today", 0),
+    ("overnight_items", 4),
+    ("opeds_today", 2),
+    ("business_economy", 2),
+    ("indo_pacific", 3),
+    ("academic_today", 0),
+)
 
 # Gmail truncates a message body over 102 KB and shows "[Message clipped] View
 # entire message", which on this brief would cut the tail sections off mid-item
@@ -343,6 +356,64 @@ def _repair_and_gate_urls(digest: dict, payload: dict) -> list[str]:
                       "unsourced_kept_nonarticle": kept_unsourced})
     if repaired or dropped:
         log.insert(0, f"    - urls: {repaired} repaired by headline, {dropped} unsourced item(s) deleted")
+    return log
+
+
+def _enforce_section_caps(digest: dict) -> list[str]:
+    """Truncate any section over its maximum.
+
+    Being over a cap is a counting mistake, not an editorial one, and the model
+    cannot fix it more cheaply than a slice can. Run 116 spent a whole $0.80
+    regeneration because it returned 7 op-eds against a cap of 6, then came
+    back with the same length problem it started with. Under-cap still
+    regenerates: too few items is a real content shortfall.
+    """
+    log = []
+    for section, (_min_ct, max_ct) in SECTION_CAPS.items():
+        items = digest.get(section)
+        if isinstance(items, list) and len(items) > max_ct:
+            log.append(f"    - {section}: trimmed {len(items)} -> {max_ct} (cap)")
+            digest[section] = items[:max_ct]
+    return log
+
+
+def _trim_to_length(digest: dict) -> list[str]:
+    """Cut tail items until the digest is inside the length target.
+
+    The prompt asks for 1,500-1,900 words and the model reliably overshoots
+    (run 116: 2,322 after a regeneration that was itself meant to fix length).
+    Being over the ceiling was only an advisory, so nothing ever brought it
+    down. Trimming here is deterministic, free, and follows the same rule the
+    prompt states: cut from also_today and overnight first, never from
+    top_stories or official_line.
+    """
+    log = []
+    start = _count_words(digest)
+    if start <= WORD_TARGET_HIGH:
+        return log
+
+    removed = 0
+    for section, floor in _TRIM_ORDER:
+        items = digest.get(section)
+        if not isinstance(items, list):
+            continue
+        while len(items) > floor and _count_words(digest) > WORD_TARGET_HIGH:
+            dropped = items.pop()
+            removed += 1
+            log.append(f"    - length: dropped from {section}: "
+                       f"'{_primary_title(dropped)[:50]}'")
+        if _count_words(digest) <= WORD_TARGET_HIGH:
+            break
+
+    end = _count_words(digest)
+    if removed:
+        log.insert(0, f"    - length: {start} -> {end} words "
+                      f"({removed} tail item(s) cut to reach {WORD_TARGET_HIGH})")
+    elif end > WORD_CEILING:
+        log.append(f"    - length: {end} words, over the ceiling but the tail "
+                   f"sections are already at their floors")
+    _PP_STATS["words_before_trim"] = start
+    _PP_STATS["items_trimmed_for_length"] = removed
     return log
 
 
@@ -618,6 +689,10 @@ def _postprocess_digest(digest: dict, payload: dict, prev_urls: set, prev_titles
     log += _drop_stale_calendar(digest, today)
     log += _drop_offdate_on_this_day(digest, today)
     log += _enforce_source_diversity(digest)
+    # Caps first (a slice), then length (drops tail items). Both run after the
+    # filters above so they measure what will actually ship.
+    log += _enforce_section_caps(digest)
+    log += _trim_to_length(digest)
     digest["source_count"] = len({a.get("source") for a in _corpus(payload) if a.get("source")})
     return digest, log
 

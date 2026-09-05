@@ -43,6 +43,12 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
 - **Length.** 1,500 to 1,900 words; `WORD_FLOOR_CRITICAL` 1,200 blocks, 2,100 warns. Reach
   the target by SELECTION, not by inflating bodies or padding sections; cut from
   `also_today` and `overnight_items` first, never from `top_stories` or `official_line`.
+- **Length is enforced in code, not by regeneration.** `run._enforce_section_caps` slices any
+  section over its cap (a counting mistake, not an editorial one) and `run._trim_to_length`
+  drops tail items until the digest is at or under `WORD_TARGET_HIGH` (1,900), cutting in
+  `_TRIM_ORDER` and stopping at each section's floor. `top_stories` and `official_line` are
+  never trimmed. Run 116 paid $0.80 for a regeneration triggered by 7 op-eds against a cap
+  of 6, and still shipped 2,322 words.
 - **One word counter.** `wordcount.count_words` is the only definition; `digest.py`,
   `run.py` and `render.py` all delegate to it. They used to disagree by 26 percent
   (run 114: 1,787 vs 2,253), so the model wrote to a target the gate did not measure.
