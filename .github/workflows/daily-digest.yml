@@ -2,14 +2,44 @@ name: Daily China Digest
 
 on:
   schedule:
-    # 10:00 UTC = 6:00 AM ET (DST, Mar–Nov) / 5:00 AM ET (standard, Nov–Mar)
-    - cron: '0 10 * * *'
+    # GitHub's scheduled crons are best-effort: a slot is routinely delayed or
+    # dropped outright. Several staggered attempts across the delivery window,
+    # off the congested :00/:30 marks. The once-a-day guard below (last_sent.txt,
+    # written only after a successful send) makes every attempt after the first
+    # a no-op, and the concurrency group serialises any overlap, so recipients
+    # get exactly ONE email, on the earliest slot GitHub honours.
+    # Times are UTC; ET shown for daylight time (subtract 1 h in standard time).
+    - cron: '7 10 * * *'    # 6:07 AM ET  primary
+    - cron: '37 10 * * *'   # 6:37 AM ET  catch-up 1
+    - cron: '17 11 * * *'   # 7:17 AM ET  catch-up 2
+    - cron: '17 12 * * *'   # 8:17 AM ET  catch-up 3
+    - cron: '17 13 * * *'   # 9:17 AM ET  catch-up 4
+    - cron: '17 14 * * *'   # 10:17 AM ET final backstop
+  # A push to a feature branch whose commit message contains [test-send] runs
+  # the full pipeline and emails the test recipient only (no archive, ledger,
+  # marker or tracker writes). This is how a branch gets a real end-to-end
+  # test before merge when the dispatch API is not available to the caller.
+  push:
+    branches-ignore: [main]
   workflow_dispatch:
+    inputs:
+      mode:
+        description: >-
+          live: full send to DIGEST_TO and archive. test: full pipeline, email only
+          to send_to, no archive/ledger/tracker writes. dry: collection only.
+        type: choice
+        options: [test, live, dry]
+        default: test
+      send_to:
+        description: 'Recipient(s) for a test run, comma-separated.'
+        type: string
+        default: ''
 
 permissions:
   contents: write
   pages: write
   id-token: write
+  actions: read
 
 concurrency:
   group: china-digest
@@ -18,40 +48,244 @@ concurrency:
 jobs:
   build-and-send:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # URL resolution (up to 4 min), article fetch, a Sonnet pass and up to two
+    # regenerations (one on Opus) can reach 20 minutes. A timeout kill is the
+    # worst failure here: the run is marked failed, which a catch-up cron reads
+    # as licence to try again from scratch.
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GH_PAT || github.token }}
           fetch-depth: 0
 
+      # Idempotency guard: on a scheduled run, skip if today's edition (ET) was
+      # already SENT. Keyed on the send marker, not the archive, so a build
+      # that archived but failed to email is never mistaken for a send.
+      # Manual dispatch always runs.
+      - name: Skip guard (once-a-day send)
+        id: guard
+        env:
+          # Passed through the environment, never interpolated into the
+          # script: a commit message with quotes would otherwise break bash.
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          TODAY=$(TZ=America/New_York date +%Y-%m-%d)
+          LAST_SENT=$(tr -d '[:space:]' < last_sent.txt 2>/dev/null || true)
+          if [ "${{ github.event_name }}" = "push" ]; then
+            if printf '%s' "$COMMIT_MSG" | grep -q '\[test-send\]'; then
+              echo "::notice::Branch push tagged [test-send]: running a test send."
+              echo "should_run=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "::notice::Branch push without [test-send]: smoke tests + dry collection run (no model, no email)."
+              echo "should_run=dry" >> "$GITHUB_OUTPUT"
+            fi
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          elif [ "$LAST_SENT" = "$TODAY" ]; then
+            echo "::notice::Today's edition ($TODAY) already sent, skipping catch-up."
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Setup Python 3.12
+        if: steps.guard.outputs.should_run != 'false'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: 'pip'
 
       - name: Install dependencies
+        if: steps.guard.outputs.should_run != 'false'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Offline smoke tests
+        if: steps.guard.outputs.should_run != 'false'
+        run: python smoke_test.py
+
+      # Chromium for the print/PDF export of each issue. Best effort: without
+      # it pdf_export.py skips and the brief still sends.
+      - name: Install Chromium (PDF export)
+        if: steps.guard.outputs.should_run == 'true'
+        continue-on-error: true
+        run: python -m playwright install --with-deps chromium
+
       - name: Run pipeline
+        if: steps.guard.outputs.should_run == 'true' || steps.guard.outputs.should_run == 'dry'
+        id: pipeline
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS }}
           DIGEST_TO: ${{ secrets.DIGEST_TO }}
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
           WEB_URL: ${{ vars.WEB_URL }}
-        run: python run.py
+          MODE: ${{ inputs.mode }}
+          SEND_TO: ${{ inputs.send_to }}
+          TEST_SEND_TO: ${{ vars.TEST_SEND_TO || 'alim@csis.org' }}
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && [ "${{ steps.guard.outputs.should_run }}" = "dry" ]; then
+            echo "::notice::DRY RUN (branch push): collection + URL resolution + article fetch, no model, no email."
+            python run.py --dry-run
+          elif [ "${{ github.event_name }}" = "push" ]; then
+            echo "::notice::TEST SEND (branch push): full pipeline, email to $TEST_SEND_TO only."
+            python run.py --send-to "$TEST_SEND_TO"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$MODE" = "dry" ]; then
+            echo "::notice::DRY RUN: collection + URL resolution + article fetch only."
+            python run.py --dry-run
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$MODE" = "test" ]; then
+            if [ -z "$SEND_TO" ]; then
+              echo "::notice::TEST RUN with no send_to: collect + digest + render, no email."
+              python run.py --no-send --no-archive --no-track
+            else
+              echo "::notice::TEST RUN: full pipeline, email to $SEND_TO only, no archive."
+              python run.py --send-to "$SEND_TO"
+            fi
+          else
+            python run.py
+          fi
 
+      - name: Upload run outputs (artifact)
+        if: always() && steps.guard.outputs.should_run != 'false'
+        uses: actions/upload-artifact@v4
+        with:
+          name: digest-output-${{ github.run_id }}
+          path: |
+            collected.json
+            digest.json
+            digest.html
+            metrics.jsonl
+          if-no-files-found: ignore
+          retention-days: 14
+
+      # Post-send steps use continue-on-error so an archive/README push failure
+      # cannot mark a delivered edition as failed (which would trigger the
+      # failure alert and, without the guard, a duplicate send).
       - name: Commit tracker state + archive
+        if: steps.guard.outputs.should_run == 'true' && (github.event_name == 'schedule' || inputs.mode == 'live')
+        continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add xi_tracker.json xinhua_tracker.json bp_tracker.json public/ README.md 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "Daily China Digest run $(date -u +%Y-%m-%d)"
-          git push || echo "Nothing to push"
+          git add xi_tracker.json xinhua_tracker.json bp_tracker.json \
+                  published_ledger.json last_sent.txt url_cache.json feed_health.json \
+                  metrics.jsonl public/ README.md 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "Nothing to commit"; exit 0
+          fi
+          git commit -q -m "Daily China Digest run $(date -u +%Y-%m-%d) [skip ci]"
+          BRANCH="${GITHUB_REF_NAME}"
+          SNAP=$(mktemp -d)
+          cp feed_health.json url_cache.json metrics.jsonl "$SNAP"/ 2>/dev/null || true
+          for attempt in 1 2 3 4; do
+            if git push origin "HEAD:${BRANCH}"; then
+              echo "Pushed on attempt ${attempt}"; exit 0
+            fi
+            # Do NOT rebase: feed_health/url_cache/metrics are regenerated by
+            # every run, so a rebase conflicts, aborts, and the state is lost
+            # silently. Uncommit, rebase our tree onto the remote's copies of
+            # the shared files, merge ours in, and re-commit.
+            echo "Push rejected, remerging onto origin/${BRANCH} (attempt ${attempt})"
+            git fetch origin "${BRANCH}" || true
+            # Re-parent onto the remote tip, keeping this run's working tree.
+            git reset -q --mixed "origin/${BRANCH}" 2>/dev/null || true
+            git checkout -q "origin/${BRANCH}" -- feed_health.json url_cache.json metrics.jsonl 2>/dev/null || true
+            python merge_state.py "$SNAP"
+            git add xi_tracker.json xinhua_tracker.json bp_tracker.json \
+                    published_ledger.json last_sent.txt url_cache.json feed_health.json \
+                    metrics.jsonl public/ README.md 2>/dev/null || true
+            git commit -q -m "Daily China Digest run $(date -u +%Y-%m-%d) [skip ci]" || true
+            sleep $((attempt * 3))
+          done
+          echo "::warning::Could not push state after 4 attempts"
+
+      # Archive to GitHub Pages (gh-pages branch, keep_files so old issues stay).
+      # Pages must be set to serve from the gh-pages branch once in repo settings.
+      - name: Deploy archive to GitHub Pages
+        if: steps.guard.outputs.should_run == 'true' && (github.event_name == 'schedule' || inputs.mode == 'live')
+        continue-on-error: true
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.GH_PAT || github.token }}
+          publish_dir: ./public
+          keep_files: true
+
+      # Feed-health and URL-cache state is worth keeping even from a test run;
+      # it never touches the archive, ledger or send marker.
+      # Two runs on this branch regenerate the same three state files, so a
+      # plain rebase hits an add/add conflict, aborts, and the push then says
+      # "Everything up-to-date" while that run's state is silently dropped
+      # (run 112, 2026-09-04). Merge onto the remote copies instead of rebasing.
+      - name: Commit feed health + URL cache (test and dry runs)
+        if: steps.guard.outputs.should_run != 'false' && ((github.event_name == 'workflow_dispatch' && inputs.mode != 'live') || github.event_name == 'push')
+        continue-on-error: true
+        run: |
+          set -u
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BRANCH="${GITHUB_REF_NAME}"
+          SNAP=$(mktemp -d)
+          cp feed_health.json url_cache.json metrics.jsonl "$SNAP"/ 2>/dev/null || true
+          for attempt in 1 2 3 4; do
+            git fetch origin "$BRANCH" || true
+            # Re-parent onto the remote tip. Without this the commit hangs off
+            # the stale checkout and every push is rejected non-fast-forward,
+            # which is what happened on run 115 even though the merge itself
+            # was correct. --mixed moves HEAD and the index but keeps the
+            # working tree, so this run's regenerated files survive.
+            git reset -q --mixed "origin/$BRANCH" 2>/dev/null || true
+            # Base the state files on the remote copies, then merge ours in.
+            git checkout -q "origin/$BRANCH" -- feed_health.json url_cache.json metrics.jsonl 2>/dev/null || true
+            python merge_state.py "$SNAP"
+            git add feed_health.json url_cache.json metrics.jsonl 2>/dev/null || true
+            if git diff --staged --quiet; then
+              echo "No state change to push"; exit 0
+            fi
+            git commit -q -m "Feed health + URL cache from test run $(date -u +%Y-%m-%d) [skip ci]"
+            if git push origin "HEAD:$BRANCH"; then
+              echo "State pushed on attempt ${attempt}"; exit 0
+            fi
+            echo "Push rejected, remerging onto the new remote tip (attempt ${attempt})"
+            sleep $((attempt * 3))
+          done
+          echo "::warning::state push failed after 4 attempts; this run's feed health was not recorded"
+
+      - name: Send failure alert
+        if: failure() && steps.guard.outputs.should_run == 'true'
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import os, smtplib
+          from email.mime.text import MIMEText
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d %I:%M %p ET")
+          sender = os.environ.get("GMAIL_USER", "")
+          pw = "".join(os.environ.get("GMAIL_APP_PASS", "").split())
+          if not sender or not pw:
+              print("No Gmail credentials; alert not sent"); raise SystemExit(0)
+          # Alerts go to the operator, never to the distribution list.
+          to = os.environ.get("ALERT_TO") or sender
+          body = (f"The China Daily Brief pipeline failed or held the send at {now}.\n\n"
+                  f"Run: {os.environ['RUN_URL']}\n\n"
+                  "Exit code 2 = validation held the brief (see the BLOCKING list in the log; "
+                  "digest.html is in the run artifact for review). Exit code 3 = SMTP failed. "
+                  "Anything else = crash.\n\nThe next catch-up cron will retry automatically.")
+          msg = MIMEText(body)
+          msg["Subject"] = f"China Daily Brief FAILED, {now}"
+          msg["From"] = sender
+          msg["To"] = to
+          with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=15) as s:
+              s.login(sender, pw)
+              s.sendmail(sender, [a.strip() for a in to.split(",") if a.strip()], msg.as_string())
+          print("Failure alert sent")
+          PY
