@@ -58,10 +58,10 @@ ET = ZoneInfo("America/New_York")
 # Every list section whose items carry a url. Placement priority order: an item
 # that appears twice is kept in the earlier section.
 _DEDUPE_ORDER = (
-    "top_stories", "overnight_items", "indo_pacific", "business_economy",
-    "also_today", "official_line", "opeds_today", "academic_today",
-    "social_statements", "prc_government", "congressional_watch",
-    "npc_politburo", "personnel_changes",
+    "top_stories", "korea_china", "overnight_items", "indo_pacific",
+    "business_economy", "also_today", "official_line", "opeds_today",
+    "academic_today", "social_statements", "prc_government",
+    "congressional_watch", "npc_politburo", "personnel_changes",
 )
 _ALL_ITEM_SECTIONS = _DEDUPE_ORDER
 
@@ -69,49 +69,53 @@ _ALL_ITEM_SECTIONS = _DEDUPE_ORDER
 # corpus. The remaining sections (statements, personnel, committee activity)
 # may legitimately summarise something reported inside another article.
 _ARTICLE_SECTIONS = (
-    "top_stories", "overnight_items", "indo_pacific", "business_economy",
-    "also_today", "opeds_today", "academic_today",
+    "top_stories", "korea_china", "overnight_items", "indo_pacific",
+    "business_economy", "also_today", "opeds_today", "academic_today",
 )
 
 SECTION_CAPS = {
-    "top_stories":       (3, 4),
-    "overnight_items":   (4, 7),
+    "top_stories":       (3, 5),
+    "overnight_items":   (4, 8),
     "morning_memo":      (3, 3),
-    "also_today":        (0, 6),
-    "business_economy":  (0, 5),
-    "indo_pacific":      (0, 6),
-    "official_line":     (0, 6),
+    "korea_china":       (0, 3),
+    "also_today":        (0, 8),
+    "business_economy":  (0, 6),
+    "indo_pacific":      (0, 7),
+    "official_line":     (3, 6),
     "social_statements": (0, 6),
     "opeds_today":       (0, 6),
     "academic_today":    (0, 4),
     "prc_government":    (0, 5),
-    "congressional_watch": (0, 5),
+    "congressional_watch": (0, 4),
     "personnel_changes": (0, 5),
     "calendar_watch":    (0, 5),
     "on_this_day":       (0, 1),
 }
 
-# 1,200 hard floor, 1,500-1,900 target, 2,100 ceiling: a six to seven minute
-# read. The first relaunch issue ran 2,833 words and 80 KB, which is a
-# reference document rather than a morning brief, and close enough to Gmail's
-# clipping limit to be a real risk (see EMAIL_BYTES_* below). Coverage comes
-# from selection, not from length: the sections that matter (top stories,
-# official_line) keep their space and the tail absorbs the cut.
-WORD_FLOOR_CRITICAL = 1200
-WORD_TARGET_LOW = 1500
-WORD_TARGET_HIGH = 1900
-WORD_CEILING = 2100
+# 1,600 hard floor, 2,000-2,500 target, 2,700 ceiling: an eight to ten minute
+# read. Run 118 landed 1,898 words only because the trim deleted 17 items to
+# get there, and the casualties included Xi's expected New Delhi visit and
+# Japan's record defence budget. Cutting real stories to protect a number is
+# the wrong trade for the flagship brief, so the band moved up to fit the
+# reporting rather than the reporting down to fit the band. What did not
+# change: the extra words buy MORE ITEMS, never longer bodies. Section caps
+# rose with the band; per-item body limits did not.
+WORD_FLOOR_CRITICAL = 1600
+WORD_TARGET_LOW = 2000
+WORD_TARGET_HIGH = 2500
+WORD_CEILING = 2700
 
 # Sections the length trim may cut from, in the order the editorial rule says
 # to cut: the tail first, never the top stories or Beijing's own words. Each
 # entry is (section, floor) — the trim stops at the floor even if still long.
 _TRIM_ORDER = (
     ("also_today", 0),
-    ("overnight_items", 4),
-    ("opeds_today", 2),
-    ("business_economy", 2),
-    ("indo_pacific", 3),
     ("academic_today", 0),
+    ("opeds_today", 2),
+    ("social_statements", 2),
+    ("business_economy", 3),
+    ("overnight_items", 5),
+    ("indo_pacific", 4),
 )
 
 # Gmail truncates a message body over 102 KB and shows "[Message clipped] View
@@ -343,15 +347,6 @@ def _repair_and_gate_urls(digest: dict, payload: dict) -> list[str]:
     for section in _ALL_ITEM_SECTIONS:
         if isinstance(digest.get(section), list):
             digest[section] = _process(section, digest[section])
-    trade = digest.get("us_china_trade") or {}
-    if isinstance(trade, dict):
-        for key in ("cfius", "deals"):
-            if isinstance(trade.get(key), list):
-                trade[key] = _process(f"us_china_trade.{key}", trade[key]) if key == "deals" \
-                    else trade[key]
-    for loc in (digest.get("monitored_locations") or []):
-        pass  # tracker-driven; no URLs to gate
-
     _PP_STATS.update({"urls_repaired": repaired, "items_dropped_unsourced": dropped,
                       "unsourced_kept_nonarticle": kept_unsourced})
     if repaired or dropped:
@@ -482,7 +477,7 @@ def _drop_hollow_items(digest: dict) -> list[str]:
     log = []
     n = 0
     for section in ("overnight_items", "also_today", "prc_government", "official_line",
-                    "business_economy", "indo_pacific"):
+                    "business_economy", "indo_pacific", "korea_china"):
         items = digest.get(section)
         if not isinstance(items, list):
             continue
@@ -585,7 +580,7 @@ def _enforce_source_diversity(digest: dict, cap: int = 3) -> list[str]:
             counts[key] = counts.get(key, 0) + 1
             if key and counts[key] > cap and section == "overnight_items":
                 also = digest.setdefault("also_today", [])
-                if isinstance(also, list) and len(also) < 6:
+                if isinstance(also, list) and len(also) < SECTION_CAPS["also_today"][1]:
                     also.append({**item, "body_text": item.get("body_text") or item.get("body", ""),
                                  "category": item.get("category", "")})
                     log.append(f"    - source cap: moved '{_primary_title(item)[:40]}' "
@@ -763,12 +758,31 @@ def validate_digest(digest: dict, payload: dict | None = None, today=None,
     if not re_line or len(str(re_line).strip()) < 10:
         w.append("RE: LINE CRITICAL: missing or too short")
 
+    # The Bottom Line renders above everything and is the only thing many
+    # readers read. It was generated but never rendered until Sep 4 2026, and it
+    # has never been checked at all — so a blank or a one-line recap shipped
+    # silently. It is now the one prose field with a gate of its own.
+    note = str(digest.get("editor_note") or "").strip()
+    n_words = len(note.split())
+    if n_words < 25:
+        w.append(f"BOTTOM LINE CRITICAL: editor_note is {n_words} words "
+                 f"(needs 70-100; it renders above every section)")
+    elif not (55 <= n_words <= 130):
+        w.append(f"BOTTOM LINE: editor_note is {n_words} words (target 70-100)")
+    if note and "watch:" not in note.lower():
+        w.append("BOTTOM LINE: no 'Watch:' sentence naming what would confirm "
+                 "or break the judgment")
+    if note and re.match(r"^\s*(today|this morning)('s)?\s+(brief|digest|edition)",
+                         note, re.IGNORECASE):
+        w.append("BOTTOM LINE CRITICAL: editor_note opens with throat-clearing "
+                 "instead of a judgment")
+
     word_count = _count_words(digest)
     if word_count < WORD_FLOOR_CRITICAL:
         w.append(f"WORD COUNT CRITICAL: ~{word_count} words (hard minimum {WORD_FLOOR_CRITICAL}, "
-                 f"target {WORD_TARGET_LOW}-1900)")
+                 f"target {WORD_TARGET_LOW}-{WORD_TARGET_HIGH})")
     elif word_count < WORD_TARGET_LOW:
-        w.append(f"WORD COUNT: ~{word_count} words (target {WORD_TARGET_LOW}-1900)")
+        w.append(f"WORD COUNT: ~{word_count} words (target {WORD_TARGET_LOW}-{WORD_TARGET_HIGH})")
     elif word_count > WORD_CEILING:
         w.append(f"WORD COUNT: ~{word_count} words, over the {WORD_CEILING} ceiling; "
                  f"cut also_today and overnight_items")
@@ -842,8 +856,9 @@ def validate_digest(digest: dict, payload: dict | None = None, today=None,
     if not isinstance(xd, dict):
         w.append("XINHUA DELTA: missing (non-blocking)")
 
-    if len(digest.get("monitored_locations") or []) != 16:
-        w.append(f"LOCATIONS: {len(digest.get('monitored_locations') or [])} monitored_locations (expected 16)")
+    if not (digest.get("korea_china") or []):
+        w.append("KOREA: no China-Korea item today (empty is allowed; flagged so a "
+                 "run of empty days is visible)")
 
     # Prestige coverage: name the dropped stories, not just the outlets.
     if payload:
@@ -1101,7 +1116,9 @@ def run_pipeline(args: argparse.Namespace) -> int:
 
     # ─── Trackers: only after validation, never on a test send ───────────
     if validation_passed and not args.no_track and not test_mode:
-        for name, mod in (("Xi", "xi_tracker"), ("Xinhua", "xinhua_tracker"), ("BP", "bp_tracker")):
+        # bp_tracker persisted monitored_locations, a section that no longer
+        # exists. Left on disk in case the satellite watch ever returns.
+        for name, mod in (("Xi", "xi_tracker"), ("Xinhua", "xinhua_tracker")):
             try:
                 module = __import__(mod)
                 module.update_from_digest(digest)

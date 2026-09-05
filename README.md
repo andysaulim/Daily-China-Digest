@@ -63,42 +63,47 @@ collect.py      resolve.py      fulltext.py     digest.py         run.py        
 | # | Section | Description |
 | - | - | - |
 | 1 | Header | Date · RE line |
-| 2 | **The Bottom Line** | 45–70 words connecting the day's items. The lead, directly under the header: what moved and what ties it together. Generated as `editor_note` |
+| 2 | **The Bottom Line** | 70–100 words: the judgment, the evidence for it, and a `Watch:` line naming what would confirm or break it in the next two weeks. The lead, directly under the header. Generated as `editor_note`, and gated — a blank or a one-line recap blocks the send |
 | 3 | Morning Memo | Top 3 stories in one sentence each |
-| 4 | Top Stories | 3–4 hard news stories with "So what" + pattern note |
-| 5 | Overnight Flash | 4–7 secondary items |
-| 6 | Key Stat | Single striking number from today's news |
-| 7 | Market Strip | SSE · Hang Seng · USD/CNY · USD/CNH · 10Y CGB · Brent · PBOC LPR · China 5Y CDS · GDP (dash when not collected). Below the news, not above it |
-| 8 | Δ Since Yesterday | What moved |
-| 9 | Xinhua / People's Daily Delta | Propaganda analysis, Xi appearances, doctrinal phrase tracking |
-| 10 | Expert Analysts | 4–6 op-eds and academic pieces from today's feed, US/allied first, then China-based think tanks and scholars |
+| 4 | Top Stories | 3–5 hard news stories with "So what" + pattern note |
+| 5 | **The Korea Angle** | 0–3 China–Korea items with a "For Seoul" line: PRC–ROK trade and export-control exposure, PRC–DPRK diplomacy and sanctions enforcement, PRC commentary on the alliance, Korean industry competition. The standing question for the desk this brief is written for. Empty on a genuine no-news day, never padded |
+| 6 | Overnight Flash | 4–8 secondary items |
+| 7 | Key Stat | Single striking number from today's news |
+| 8 | Market Strip | SSE · Hang Seng · USD/CNY · USD/CNH · Brent · 10Y CGB · China 5Y CDS · PBOC 1Y/5Y LPR · GDP · CPI · PPI · Mfg PMI · Retail sales. Only indicators that actually resolved are shown; anything missing is named once in a footnote, never rendered as a dash. Below the news, not above it |
+| 9 | Δ Since Yesterday | What moved |
+| 10 | Xinhua / People's Daily Delta | Propaganda analysis, Xi appearances, doctrinal phrase tracking |
 | 11 | **What Beijing Is Saying** | The PRC government's own words today: MOFA presser, TAO, MND, MOFCOM, State Council, PBOC, Xi / Li Qiang / Wang Yi. Verbatim quote, Chinese original, tone, who it is addressed to |
-| 12 | Social Statements | US, Taiwan, allied and other officials |
-| 13 | Satellite & Location Watch | 8 gray-zone + 8 Hidden Reach sites, carried forward from the tracker |
-| 14 | PRC Government | Ministry actions with the document and thresholds, personnel, NPC/Politburo, calendar watch |
-| 15 | US–China Trade & Sanctions | Section 301 / 232 / IEEPA / Section 122 / Entity List / SDN / 1260H / CFIUS |
-| 16 | Congressional Watch | Select Committee on the CCP, SFRC, HFAC, USCC, CECC |
-| 17 | Business & Economy | Corporates, macro, property, tech |
-| 18 | Indo-Pacific | Cross-Strait, Japan, Philippines, Australia, India, Korea, Vietnam, ASEAN |
-| 19 | Also Today | Up to 6 third-tier items, one line each |
-| 20 | On This Day | Verified event matching today's exact date |
+| 12 | **What Beijing Did** | Ministry actions with the document and thresholds, personnel changes, NPC/Politburo activity |
+| 13 | Expert Analysts | 4–6 op-eds and academic pieces from today's feed, US/allied first, then China-based think tanks and scholars |
+| 14 | Social Statements | US, Taiwan, allied and other officials |
+| 15 | Congressional Watch | Select Committee on the CCP, SFRC, HFAC, USCC, CECC |
+| 16 | Business & Economy | Corporates, macro, property, tech |
+| 17 | Indo-Pacific | Cross-Strait, Japan, Philippines, Australia, India, Vietnam, ASEAN |
+| 18 | Also Today | Up to 8 third-tier items, one line each |
+| 19 | On This Day | Verified event matching today's exact date |
+| 20 | **What We Are Watching** | 4–5 dated events in the next 14–30 days. Closes the brief |
 | 21 | Footer | Auto-generation disclaimer |
 
-Target length **1,500–1,900 words**, a six to seven minute read (hard floor 1,200; ceiling 2,100). The rendered email is also checked against Gmail's 102 KB clipping limit: over 96 KB the send is blocked. See [`BENCHMARK.md`](BENCHMARK.md) for why.
+Removed Sep 2026: the TRACKERS chapter (Satellite & Location Watch, the US–China tariff
+table, the BIS Entity List table). Those were standing furniture rebuilt from baselines
+rather than from reporting, and they rendered 108-day-old figures as current fact.
+
+Target length **2,000–2,500 words**, an eight to ten minute read (hard floor 1,600; ceiling 2,700). The rendered email is also checked against Gmail's 102 KB clipping limit: over 96 KB the send is blocked. See [`BENCHMARK.md`](BENCHMARK.md) for why.
 
 ---
 
 ## Validation Gates
 
 Blocking (regenerate, then hold):
-- Top stories 3–4, overnight 4–7, morning memo exactly 3 distinct items, RE line present
-- Word count ≥1,200 (target 1,500–1,900)
+- Top stories 3–5, overnight 4–8, official line ≥3, morning memo exactly 3 distinct items, RE line present
+- The Bottom Line present, ≥25 words, and not opening with "Today's brief covers"
+- Word count ≥1,600 (target 2,000–2,500)
 - Rendered email ≥96 KB (Gmail clips at 102 KB)
 - ≥4 items deleted for URLs not in the input
 - Digest date ≠ today
 
 Advisory (logged, sent):
-- Prestige stories collected but unused (named), quotes not found verbatim in fetched text, broken links (404/410 only), source over 7 appearances, calendar under 3 events, market indicators unavailable
+- Prestige stories collected but unused (named), quotes not found verbatim in fetched text, broken links (404/410 only), source over 7 appearances, calendar under 3 events, market indicators unavailable, no China–Korea item today, Bottom Line outside 55–130 words or missing its `Watch:` line
 
 Health checks (`pipeline_health.py`, never block): model IDs in the known set, tier floors, unique sources ≥20, Google News resolution ≥50 percent, dead feeds (5 empty runs), baseline age (60/120 days), send cadence.
 

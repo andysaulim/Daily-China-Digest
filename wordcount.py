@@ -26,7 +26,8 @@ TEXT_FIELDS = (
 
 # Every section rendered as a list of items.
 ITEM_SECTIONS = (
-    "top_stories", "overnight_items", "indo_pacific", "business_economy",
+    "top_stories", "korea_china", "overnight_items", "indo_pacific",
+    "business_economy",
     "also_today", "official_line", "opeds_today", "academic_today",
     "social_statements", "prc_government", "congressional_watch",
     "npc_politburo", "personnel_changes", "calendar_watch", "on_this_day",
@@ -82,10 +83,6 @@ def count_words(digest: dict) -> int:
         for field in ("label", "context"):
             words += _w(ks.get(field))
 
-    for loc in (digest.get("monitored_locations") or []):
-        if isinstance(loc, dict):
-            words += _w(loc.get("note"))
-
     return words
 
 
@@ -98,9 +95,9 @@ if __name__ == "__main__":
         "official_line": [{"statement": "l m", "context": "n"}],      # 3
         "xinhua_delta": {"bottom_line": "o p"},                       # 2
         "key_stat": {"label": "q", "context": "r"},                   # 2
-        "monitored_locations": [{"note": "s t"}],                     # 2
+        "korea_china": [{"headline": "s t", "so_what": "u"}],          # 3
     }
-    assert count_words(d) == 25, count_words(d)
+    assert count_words(d) == 26, count_words(d)
     assert count_words({}) == 0
     assert count_words(None) == 0
     # A list-valued field (authors, members) must be counted, not stringified.

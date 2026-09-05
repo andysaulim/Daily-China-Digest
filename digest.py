@@ -56,7 +56,6 @@ SOURCE-OR-SKIP PRINCIPLE: For EVERY factual claim you write, you must be able to
 
 - HISTORICAL CLAIMS: Do NOT cite specific historical dates or precedents from memory. pattern_note and analyst_note fields should ONLY reference precedents that are mentioned in today's source articles or the reference baselines provided in this prompt. If no relevant precedent appears in the provided data, set the field to null rather than inventing one. A wrong date is worse than no date.
 
-- FACILITY STATUS: For monitored_locations, if today's articles contain a new report about a facility (satellite imagery, AMTI / Hidden Reach analysis, news article), update that facility's status and note from the article. If no article mentions a facility today, CARRY FORWARD the last known status and note from the LOCATIONS HISTORY tracker — do NOT blank it to "No new reporting". The tracker preserves context from prior reports so readers always see the most recent known status. Only set note to "No new reporting" if a facility has NEVER had a report in the tracker history.
 
 - OMISSIONS & STREAKS: Do NOT claim "X absent for N days" or "no mention of Y for N days" unless the XINHUA RHETORIC HISTORY tracker data provided in this prompt supports the specific count. If no tracker history is available, do not fabricate streak counts.
 
@@ -161,7 +160,6 @@ DEDUPLICATION — CRITICAL (ZERO TOLERANCE):
 
 - Pick the BEST source for each topic and place it in the HIGHEST appropriate section.
 
-- SAME POLICY across sections: If a tariff rate is mentioned in tariff_tracker, do NOT repeat in trade_policy. Tariff rates belong ONLY in tariff_tracker. Section 301 investigations, export controls, CFIUS reviews belong ONLY in trade_policy.
 
 - LIFESTYLE / ENTERTAINMENT — HARD BLOCK: NEVER include celebrity, lifestyle, fashion, entertainment, or cultural-only content in any section. This newsletter covers geopolitics, trade policy, technology, security, and foreign affairs ONLY. Cultural content qualifies ONLY if it has clear policy or security implications (e.g. Hollywood-China censorship, TikTok divestiture).
 
@@ -660,19 +658,9 @@ Cross-reference these reports with Tier 4 (Xinhua / People's Daily) data."""
     except Exception:
         pass
 
-    # Monitored locations history
+    # The monitored-locations history block is gone with the satellite watch.
+    # Feeding it to the model briefed a section the schema no longer requests.
     bp_block = ""
-    try:
-        from bp_tracker import build_context_block as bp_context
-        bp_history = bp_context()
-        if bp_history:
-            bp_block = f"""
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-{bp_history}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
-    except Exception:
-        pass
 
     # Tier 4 block — gate on actual data
     if _has_xinhua_data(payload):
@@ -763,11 +751,13 @@ TIER 4: XINHUA / PEOPLE'S DAILY / GLOBAL TIMES / MOFA (last 48h)
 DIGEST SYNTHESIS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-TARGET LENGTH: the SENT digest must land between 1,500 and 1,900 words, a six to seven minute read, so aim for 1,700-2,000 in your draft; post-processing removes duplicates and unsourced items after you return. HARD MINIMUM 1,200. Do NOT exceed 2,100.
+TARGET LENGTH: the SENT digest must land between 2,000 and 2,500 words, an eight to ten minute read, so aim for 2,300-2,700 in your draft; post-processing removes duplicates and unsourced items after you return. HARD MINIMUM 1,600. Do NOT exceed 2,700.
 
-This is a hard editorial constraint, not a suggestion. The reader opens this at 6 AM on a phone alongside three other briefs. A 3,000-word digest is a reference document nobody finishes; a 1,700-word one gets read. Length discipline is what separates the briefs people keep subscribing to (Axios China, Bloomberg's Next China, the Economist's Espresso) from the ones they archive unread.
+This is a hard editorial constraint, not a suggestion, and the constraint runs in BOTH directions. Under 2,000 words this stops being a flagship brief and becomes a headline list; over 2,500 it becomes a reference document nobody finishes.
 
-So: cover FEWER items, each one properly. Selection is the product. When two items say the same thing, keep the better-sourced one and drop the other. When an item would only be there to fill a section, leave the section short. An honest short section beats a padded one. If you are over length, cut from also_today and overnight_items first, never from top_stories or official_line.
+Spend the extra words on MORE ITEMS, not on longer ones. Per-item limits are unchanged and are enforced: top_stories bodies stay at 2-3 sentences, overnight items at 2, also_today at ONE sentence. A brief that covers fourteen things crisply beats one that covers eight at length. If you find yourself writing a fourth sentence in a body, you are writing the wrong thing — add another item instead.
+
+Selection is still the product. When two items say the same thing, keep the better-sourced one and drop the other. When an item would only be there to fill a section, leave the section short: an honest short section beats a padded one. If you are over length, cut from also_today and academic_today first, then op-eds — never from top_stories, korea_china or official_line.
 
 Return a digest object with:
 
@@ -775,7 +765,11 @@ Return a digest object with:
 
 - re_line: one-line RE: summary (max 120 chars, key themes separated by ·)
 
-- editor_note: THE BOTTOM LINE, and the most important field in the digest. It renders directly under the header, above everything else, and it is the only part many readers will read. 2-3 sentences, 45-70 words. State what actually happened today and what connects the day's items, drawing ONLY on items you are placing in this digest. Name the specific thing (the ministry, the figure, the deadline), not the category. No throat-clearing ("Today's brief covers..."), no editorializing, no telling the reader what to think, no forecasting. Written well it reads like the first paragraph of a good wire lead: a desk officer who reads only this sentence knows what moved.
+- editor_note: THE BOTTOM LINE, and the most important field in the digest. It renders directly under the header, above everything else, and for many readers it is the ONLY thing they read. 3-4 sentences, 70-100 words, drawing ONLY on items you are placing in this digest. It has three jobs, in this order:
+  1. THE JUDGMENT, first sentence. Not a recap of the lead story — an assessment of what today means. "Beijing paired X with Y" / "The gap between what MOFCOM said and what it did on X widened" / "Three separate items today point the same direction on X." If your first sentence could be pasted onto any other day's brief, it is wrong. If it merely restates your top story's headline, it is wrong.
+  2. THE EVIDENCE, one or two sentences. The two or three specific things that support the judgment — the ministry, the figure, the date, the name. Concrete nouns and numbers only.
+  3. THE WATCH, final sentence, beginning "Watch:" — the single named thing in the next two weeks that would confirm or break the judgment. It must be a real, dated or scheduled item drawn from calendar_watch, today's articles or the verified dates. If nothing qualifies, omit the sentence rather than invent one.
+  Never: throat-clearing ("Today's brief covers..."), a list of section names, hedging stacked on hedging ("could potentially suggest"), or a forecast dressed as a fact. You are allowed to reach a conclusion — that is the point of the field — but it must be a conclusion the day's own items support.
 
 - market_indicators: pass through the pre-collected market data object exactly as provided.
 
@@ -784,10 +778,6 @@ Return a digest object with:
 - on_this_day: array with at most 1 historical China event matching TODAY's EXACT calendar date (month + day). Use VERIFIED CHINA DATES list ONLY. Empty array if no verified event falls on today's date. Each: date (e.g. "October 1, 1949"), event (1 sentence), relevance (1 sentence connecting to current situation).
 
 - key_stat: a single striking statistic from TODAY's articles — must be different from yesterday. Object: number (e.g. "$2.3B", "53%", "12"), label (under 60 chars), context (1 sentence), source (article it came from).
-
-- imagery_report: if AMTI / Hidden Reach / CSIS / Planet Labs published satellite imagery analysis today, return object with: source, date, label, headline, body (2-3 sentences), source_links (array), affected_locations (array of location names from monitored_locations). Null if no imagery today.
-
-- monitored_locations: array of 16 location status objects (8 gray-zone + 8 hidden-reach). GROUNDING: If today's articles report on a location, update from the article. If no article mentions a location, COPY the tracker's last-known note VERBATIM. Never replace a substantive tracker note with "No new reporting". Each: name, block ("gray_zone" or "hidden_reach"), status (normal/activity/elevated/alert), note (1-2 sentences), last_source_date, direction ("up"/"down"/""), csis_product (from tracker).
 
 - prc_government: array of 3-5 PRC State Council / ministry ACTIONS from today's news (decisions, notices, regulations, investigations, approvals, data releases; the statements themselves go in official_line). Prefer the ZH government primary items (国务院, 商务部, 发改委, 央行, 海关) when they carry the notice. Each: ministry (English), ministry_chinese (e.g. 外交部, 国防部, 商务部, 中国人民银行), official (name + title), action (1-line headline), document (title of the notice / regulation / announcement if one was issued, else null), detail (1-2 sentences with the specific numbers, dates and thresholds), source_label (e.g. "MOFA EN", "MOFCOM", "PBOC"), url.
 
@@ -799,15 +789,11 @@ Return a digest object with:
 
 - overnight_items: 5-7 items (7 MAX). Source diversity MANDATORY (max 3 from any single source). Topic diversity MANDATORY (each different topic). Each: url (copy verbatim from input — do not construct or alter), source, category, headline (under 100 chars), body_text (2 sentences, 40-55 words).
 
-- top_stories: 3-4 biggest HARD NEWS stories — aim for 3 typical, 4 only when the day genuinely carries four. From wires/correspondents/PRC press/government — NOT op-eds or think tank commentary. TOPIC DIVERSITY MANDATORY. Each: url (copy verbatim from input — do not construct or alter), source, category_tag (Cross-Strait/US-China/PRC-Economy/PLA/Indo-Pacific/Technology/Sanctions/Energy/Diplomacy), headline, body (MAX 3 sentences, aim for 2 — facts: who/what/when/specifics), so_what (1 sentence — specific decision/meeting/timeline this affects, only if appears in today's articles or calendar_watch), pattern_note (1 sentence with historical precedent ONLY if precedent appears in today's articles or reference data; else null), src_line.
+- korea_china: 1-3 items on the China-Korea relationship, THE standing question for this reader. This brief is produced for the CSIS Korea Chair, so a China development that touches the Korean Peninsula outranks a comparable one that does not. In scope: PRC-ROK trade, investment, supply chain and export-control exposure; PRC-DPRK diplomacy, trade and sanctions enforcement; China's handling of THAAD-style coercion or its successors; PRC commentary on the US-ROK or US-ROK-Japan alliance; Chinese readouts of meetings with Seoul or Pyongyang; ROK or DPRK reaction to Chinese action; Korean semiconductor, battery, shipbuilding or steel competition with China. Each: url (copy verbatim from input), source, headline, body_text (2 sentences with the specifics), so_what (1 sentence — what this changes for Seoul or for US-ROK policy, drawn only from today's articles). Return an EMPTY ARRAY on a day with no genuine China-Korea development. Do not stretch an unrelated item into this section and do not duplicate an item you have placed in top_stories or indo_pacific; a real empty day is fine and far better than a manufactured one.
+
+- top_stories: 3-5 biggest HARD NEWS stories — aim for 4 typical, 5 only when the day genuinely carries five. From wires/correspondents/PRC press/government — NOT op-eds or think tank commentary. TOPIC DIVERSITY MANDATORY. Each: url (copy verbatim from input — do not construct or alter), source, category_tag (Cross-Strait/US-China/PRC-Economy/PLA/Indo-Pacific/Technology/Sanctions/Energy/Diplomacy), headline, body (MAX 3 sentences, aim for 2 — facts: who/what/when/specifics), so_what (1 sentence — specific decision/meeting/timeline this affects, only if appears in today's articles or calendar_watch), pattern_note (1 sentence with historical precedent ONLY if precedent appears in today's articles or reference data; else null), src_line.
 
 - also_today: up to 6 remaining articles score >= 5. ONE LINE EACH: body_text is a single sentence, max 25 words. This is a scan-and-click list, not a section of summaries. Each: url (copy verbatim from input), source, category, headline, body_text (1-2 sentences), color_bar_class (cb-navy=Cross-Strait, cb-red=PLA, cb-lt=Trade/Sanctions, cb-mid=Diplomacy, cb-tech=Technology, cb-biz=Economy).
-
-- us_china_trade: US-China trade and sanctions architecture. Object with sub-blocks (NO REPETITION across sub-blocks):
-  - tariff_tracker: object with headline_section_301_rate (current Section 301 average), section_232_rates (object: steel, aluminum, copper, autos, semiconductors), ieepa_fentanyl_rate ("20%"), section_122_surcharge ("10%, expires Jul 24 2026"), last_change (string), next_trigger (string). Use TRADE BASELINES above as default; only change if today's articles report new action.
-  - entity_list_tracker: object with total_count (string, verify from articles), recent_adds_7day (array of {{entity_name, sector, date}}), most_recent_add (string).
-  - cfius: array of recent CFIUS reviews/divestiture orders from today's articles. Each: company, sector, action, date.
-  - deals: array of NEW US-China deals or divestitures announced TODAY. Each: url, source, headline, value (or null), parties, detail (1 sentence).
 
 - business_economy: array of 3-5 China business/economy items. Each: url (copy verbatim from input), source, headline, body_text (1-2 sentences with specific numbers), companies (array of names), sector (tech/auto/energy/finance/manufacturing/property/macro).
 
@@ -826,7 +812,7 @@ Each: avatar_initials (2 letters), who (name), handle_context (title/role), plat
 - xinhua_delta: the Tier 4 object built per instructions above
 - timeline_candidates: list of urls flagged for any CSIS bilateral event database (Cross-Strait incidents, NK-Russia, China-Russia, BRICS expansion events)
 
-PLACEMENT PRIORITY (highest wins): top_stories > overnight_items > indo_pacific > us_china_trade > business_economy > also_today. Each article appears in exactly ONE section — deduplicate by URL AND topic.
+PLACEMENT PRIORITY (highest wins): top_stories > korea_china > overnight_items > indo_pacific > business_economy > also_today. Each article appears in exactly ONE section — deduplicate by URL AND topic.
 
 - story_count: total Tier 1 articles processed
 - oped_count: qualifying Tier 2 count
@@ -860,8 +846,8 @@ def _count_digest_words(digest: dict) -> int:
 def _check_content_minimums(digest: dict) -> list[str]:
     failures = []
     word_count = _count_digest_words(digest)
-    if word_count < 1200:
-        failures.append(f"WORD COUNT: {word_count} words (hard minimum 1200, target 1500-1900)")
+    if word_count < 1600:
+        failures.append(f"WORD COUNT: {word_count} words (hard minimum 1600, target 2000-2500)")
     top = len(digest.get("top_stories") or [])
     if top < 3:
         failures.append(f"TOP STORIES: {top} (minimum 3)")
@@ -1086,16 +1072,16 @@ def generate_digest(payload: dict, db_context: str = "") -> dict:
             if attempt == 0 or digest is None:
                 digest = _call_claude(client, user_prompt, model=retry_model)
             else:
-                word_deficit = max(0, 1500 - _count_digest_words(digest))
+                word_deficit = max(0, 2000 - _count_digest_words(digest))
                 expansion_prompt = (
                     f"Your previous digest output failed content minimums:\n"
                     + "\n".join(f"  • {f}" for f in content_failures)
-                    + f"\n\nYou are ~{word_deficit} words short of the 1,500-word target.\n"
+                    + f"\n\nYou are ~{word_deficit} words short of the 2,000-word target.\n"
                     + "\nHere is your previous output:\n"
                     + json.dumps(digest, ensure_ascii=False)[:8000]
                     + "\n\nRevise and return a COMPLETE updated digest JSON that fixes ALL failures. "
                       "Add MORE items from available articles (official_line, overnight_items, indo_pacific, "
-                      "business_economy, opeds_today) to reach 1,500+ words — do not inflate existing bodies. "
+                      "business_economy, opeds_today) to reach 2,000+ words — do not inflate existing bodies. "
                       "Every URL must be copied from the input data. Return ONLY valid JSON."
                 )
                 # One copy of the previous output, inside the feedback where it

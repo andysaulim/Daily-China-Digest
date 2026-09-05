@@ -3,7 +3,7 @@
 Written September 4, 2026, during the relaunch, to answer a direct question:
 is this the best format, and how does it compare to Politico, China Watcher
 and Bloomberg? Short answer: the structure was sound and the length was wrong.
-The brief has been cut from a 2,000-3,000 word target to **1,500-1,900**, the
+The brief targets **2,000-2,500 words**, the
 frame has been moved to the top, and the market data has been moved off the
 first screen.
 
@@ -45,7 +45,7 @@ a small number of items, a hard stop.** None of them lead with a data strip.
 
 ## What changed
 
-1. **Length: 1,500-1,900 words**, hard floor 1,200, ceiling 2,100. A six to
+1. **Length: 2,000-2,500 words**, hard floor 1,600, ceiling 2,700. An eight to
    seven minute read. The prompt now says selection is the product and tells
    the model to cut from `also_today` and `overnight_items` first, never from
    the top stories or Beijing's own words.
@@ -133,7 +133,7 @@ quoting them is caught. A flagged item is ranked up and the author is named.
 On sourcing, the brief now reads wider than any single benchmark and reads the
 PRC-language primary record, which most English products do not. On grounding
 it is more defensible than a human newsletter, because every claim is checked
-against a collected source. At 1,500-1,900 words with a lead at the top it is
+against a collected source. At 2,000-2,500 words with a lead at the top it is
 now shaped like the products people actually finish rather than the one they
 archive. What it still lacks is the thing only a person supplies: a reported
 lead, and a last read before it goes out.

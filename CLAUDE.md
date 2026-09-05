@@ -40,12 +40,15 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
 - **Chinese-language sources** are tagged `lang: ZH`, capped at 12 items per feed, exempt
   from the English keyword gate, and ranked up when they are a ministry's own words. The
   `official_line` section ("What Beijing Is Saying") quotes them verbatim with `original_zh`.
-- **Length.** 1,500 to 1,900 words; `WORD_FLOOR_CRITICAL` 1,200 blocks, 2,100 warns. Reach
-  the target by SELECTION, not by inflating bodies or padding sections; cut from
-  `also_today` and `overnight_items` first, never from `top_stories` or `official_line`.
+- **Length.** 2,000 to 2,500 words; `WORD_FLOOR_CRITICAL` 1,600 blocks, 2,700 warns. The
+  band moved up from 1,500-1,900 after run 118 hit 1,898 only because the trim deleted 17
+  items, among them Xi's expected New Delhi visit and Japan's record defence budget. The
+  extra words buy MORE ITEMS: section caps rose, per-item body limits did not. Cut from
+  `also_today` and `academic_today` first, never from `top_stories`, `korea_china` or
+  `official_line`.
 - **Length is enforced in code, not by regeneration.** `run._enforce_section_caps` slices any
   section over its cap (a counting mistake, not an editorial one) and `run._trim_to_length`
-  drops tail items until the digest is at or under `WORD_TARGET_HIGH` (1,900), cutting in
+  drops tail items until the digest is at or under `WORD_TARGET_HIGH` (2,500), cutting in
   `_TRIM_ORDER` and stopping at each section's floor. `top_stories` and `official_line` are
   never trimmed. Run 116 paid $0.80 for a regeneration triggered by 7 op-eds against a cap
   of 6, and still shipped 2,322 words.
@@ -55,9 +58,31 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
 - **Gmail clipping.** Gmail truncates a body over 102 KB. `run.check_email_size` warns at
   78 KB and BLOCKS the send at 96 KB, measured in encoded UTF-8 bytes (Chinese costs three
   bytes a character). A clipped brief is a broken brief.
-- **Format order.** Header, The Bottom Line (`editor_note`), memo, top stories, overnight,
-  THEN the market strip. News before numbers; the frame before the news. `editor_note` was
-  generated and word-counted but never rendered until Sep 4 2026.
+- **Format order.** Header, The Bottom Line (`editor_note`), memo, top stories, The Korea
+  Angle, overnight, THEN the market strip, Beijing's words and actions, the wire, and What
+  We Are Watching to close. News before numbers; the frame before the news. `editor_note`
+  was generated and word-counted but never rendered until Sep 4 2026.
+- **The Bottom Line is gated.** `editor_note` must reach a JUDGMENT, cite the evidence and
+  close with a `Watch:` sentence. Under 25 words, or opening with "Today's brief covers",
+  is CRITICAL; outside 55-130 words or missing `Watch:` is a warning. It renders above every
+  section and until Sep 5 2026 nothing checked it at all.
+- **The Korea Angle.** `korea_china` (0-3 items) is the standing section for the reader this
+  brief is written for. It may be empty on a genuine no-news day — a warning, never a block —
+  but it is never filled with a stretched item, and the length trim never touches it.
+- **No trackers.** The TRACKERS chapter (satellite/location watch, tariff table, entity-list
+  table) was removed Sep 5 2026: it was standing furniture rebuilt from `_TRADE_BASELINES`
+  and `bp_tracker.json` rather than from reporting, and it rendered 108-day-old baselines as
+  current fact. `_TRADE_BASELINES` stays in the PROMPT as background. Ministry actions moved
+  to "What Beijing Did", Congressional Watch to the wire, the calendar to the close.
+- **The market strip renders only what resolved.** No dead tiles: an indicator with no value
+  is omitted and named once in a footnote. Five of nine tiles were bare em dashes on run 118.
+  `china_macro` (CPI, PPI, manufacturing PMI, retail sales) was collected on every run since
+  the pipeline was built and never rendered anywhere; it now fills the strip.
+- **Market parsers must name what they match.** Every headline-scraped figure (LPR, GDP, CPI,
+  PPI, PMI, retail) is accepted only when the indicator names ITSELF first, no other percentage
+  sits between the name and the number, the value is in a sane band, and the text is not a
+  forecast. The old LPR parser took the first two decimals in a headline, so "LPR held at
+  3.00% as growth slowed to 4.8%" would have published a 5-year LPR of 4.80%.
 - **Experts and think tanks.** `EXPERT_WATCHLIST` (189 names, Chinese names included) tags
   items with `expert_flag`; Tier 2 carries US, allied and China-based institutes, the latter
   tagged `china_based`. The benchmark against the leading China newsletters is `BENCHMARK.md`.

@@ -107,7 +107,14 @@ def make_digest():
     return {
         "digest_date": TODAY_STR,
         "re_line": "Rare-earth curbs · 41 PLA aircraft · Scarborough warning",
-        "editor_note": "Export controls and the Strait dominate.",
+        "editor_note": (
+            "Beijing paired an export-control tightening with a conciliatory "
+            "MOFA line on tariffs, widening the gap between what it says and "
+            "what it does. MOFCOM added two more gallium refiners to the "
+            "licensing list on Thursday, the third such notice since June, while "
+            "Lin Jian called for talks without preconditions. The PLA activity "
+            "around the median line continued at the same tempo. "
+            "Watch: the Sept 12 MOFCOM licensing deadline."),
         "market_indicators": {},
         "morning_memo": ["Beijing restricts two more rare-earth compounds from October 1.",
                          "PLA sends 41 aircraft across the median line in one day.",
@@ -305,12 +312,27 @@ def test_digest_module():
     # Length discipline must agree between the prompt and the validator, or the
     # model writes to one target and the gate measures against another.
     import run
-    check("prompt states the 1,500-1,900 target", "1,500 and 1,900" in prompt)
-    check("prompt floor matches validator floor", "HARD MINIMUM 1,200" in prompt,
+    check("prompt states the 2,000-2,500 target", "2,000 and 2,500" in prompt)
+    check("prompt floor matches validator floor", "HARD MINIMUM 1,600" in prompt,
           f"validator floor {run.WORD_FLOOR_CRITICAL}")
-    check("prompt ceiling matches validator ceiling", "exceed 2,100" in prompt,
+    check("prompt ceiling matches validator ceiling", "exceed 2,700" in prompt,
           f"validator ceiling {run.WORD_CEILING}")
     check("editor_note briefed as the lead", "THE BOTTOM LINE" in prompt)
+    # The Bottom Line has to reach a judgment and name what to watch, or it is
+    # just a recap of the top story in a coloured box.
+    check("bottom line demands a judgment", "THE JUDGMENT" in prompt)
+    check("bottom line demands a watch item", 'beginning "Watch:"' in prompt)
+    check("extra words buy items, not longer bodies",
+          "MORE ITEMS, not on longer ones" in prompt)
+    # The Korea Chair's own question must have a guaranteed home.
+    check("korea_china briefed", "- korea_china:" in prompt)
+    check("korea_china may be empty", "Return an EMPTY ARRAY" in prompt)
+    check("korea_china protected from the length cut",
+          "never from top_stories, korea_china or official_line" in prompt)
+    # The TRACKERS chapter is gone; the prompt must not still ask for its fields.
+    for gone in ("monitored_locations", "imagery_report", "us_china_trade",
+                 "tariff_tracker", "entity_list_tracker"):
+        check(f"prompt no longer requests {gone}", gone not in prompt)
 
 
 def test_run_postprocess_and_validate():
@@ -338,9 +360,28 @@ def test_run_postprocess_and_validate():
 
     findings = run.validate_digest(d, payload=payload, today=TODAY, check_links=False)
     critical = [f for f in findings if "CRITICAL" in f]
-    # The fixture is deliberately tiny, so the two size floors fire; nothing else may.
-    unexpected = [f for f in critical if not (f.startswith("WORD COUNT") or f.startswith("OVERNIGHT ITEMS"))]
-    check("size floors fire on tiny fixture", len(critical) == 2, str(critical))
+    # The fixture is deliberately tiny, so the three size floors fire; nothing else may.
+    unexpected = [f for f in critical if not (f.startswith("WORD COUNT")
+                                             or f.startswith("OVERNIGHT ITEMS")
+                                             or f.startswith("OFFICIAL LINE"))]
+    # The Bottom Line gate: it renders above every section and was never checked.
+    def _bl(note):
+        probe = json.loads(json.dumps(d))
+        probe["editor_note"] = note
+        return run.validate_digest(probe, payload=payload, today=TODAY, check_links=False)
+    good = d["editor_note"]
+    check("bottom line passes when well formed",
+          not [f for f in _bl(good) if f.startswith("BOTTOM LINE")], str(_bl(good)[:1]))
+    check("empty bottom line is CRITICAL",
+          any("BOTTOM LINE CRITICAL" in f for f in _bl("")))
+    check("one-line recap is CRITICAL",
+          any("BOTTOM LINE CRITICAL" in f for f in _bl("Export controls dominate.")))
+    check("throat-clearing is CRITICAL",
+          any("BOTTOM LINE CRITICAL" in f for f in
+              _bl("Today's brief covers " + "word " * 80 + "Watch: the deadline.")))
+    check("missing Watch line is flagged",
+          any("Watch:" in f for f in _bl(good.replace("Watch: the Sept 12 MOFCOM licensing deadline.", ""))))
+    check("size floors fire on tiny fixture", len(critical) == 3, str(critical))
     check("no other critical findings on good fixture", not unexpected, str(unexpected))
     check("word count computed", run._count_words(d) > 150, str(run._count_words(d)))
     check("official_line counted in words", run._count_words({"official_line": d["official_line"]}) > 20)
@@ -404,9 +445,90 @@ def test_render():
     d, _ = run._postprocess_digest(make_digest(), payload, set(), set(), TODAY)
     d["market_indicators"] = payload["market_indicators"]
     html = render.render_html(d)
-    check("html renders", len(html) > 20000, str(len(html)))
+    check("html renders", len(html) > 15000, str(len(html)))
     check("official line section rendered", "What Beijing Is Saying" in html and "中方敦促美方" in html)
     check("disclaimer footer", "generated automatically" in html)
+
+    # The TRACKERS chapter is retired. Its standing furniture (satellite watch,
+    # tariff and entity-list tables) was rebuilt from baselines rather than
+    # reporting and went stale in place; what was real reporting moved.
+    check("trackers chapter gone", "TRACKERS" not in html)
+    check("satellite watch gone", "Satellite" not in html)
+    check("tariff table gone", "US Tariff Architecture" not in html)
+    hmoved = render.render_html({
+        "digest_date": "2026-09-05", "editor_note": "J. E. Watch: x.",
+        "top_stories": [{"headline": "T", "body": "B", "url": "https://x/a", "source": "R"}],
+        "prc_government": [{"ministry": "MOFCOM", "action": "A", "detail": "D",
+                            "url": "https://x/g"}],
+        "congressional_watch": [{"committee": "Select Cmte", "action": "A",
+                                 "detail": "D", "url": "https://x/c"}],
+        "also_today": [{"headline": "W", "body_text": "B", "source": "S", "url": "https://x/w"}],
+        "calendar_watch": [{"month": "Sep", "day": 12, "headline": "Xi in New Delhi",
+                            "detail": "D"}]})
+    check("ministry actions kept, next to Beijing's words",
+          "What Beijing Did" in hmoved)
+    check("congressional watch moved into the wire",
+          0 < hmoved.find("WIRE") < hmoved.find("Congressional Watch"))
+    check("calendar closes the brief as the forward look",
+          hmoved.find("What We Are Watching") > hmoved.find("Also Today") > 0)
+
+    # The market strip renders what resolved and nothing else. Five of nine
+    # tiles were bare em dashes on run 118, which reads as broken rather than
+    # as honest.
+    def _strip(mi):
+        return render.render_html({"digest_date": "2026-09-05",
+                                   "editor_note": "J. E. Watch: x.",
+                                   "market_indicators": mi,
+                                   "top_stories": [{"headline": "H", "body": "B",
+                                                    "url": "https://x/a", "source": "R"}]})
+    dead = {"sse_composite": {"value": "3,412.55", "change_pct": 0.4},
+            "hang_seng": {"value": "18,220.10", "change_pct": -0.3},
+            "usd_cny": {"value": "7.1204", "change_pct": 0.02},
+            "usd_cnh": {"value": "7.1310", "change_pct": 0.03},
+            "brent": {"value": "72.40", "change_pct": -1.1},
+            "cgb_10y": {"value": "—", "unavailable": True},
+            "china_cds": {"value": "—", "unavailable": True},
+            "pboc_lpr": {"lpr_1y": "—", "lpr_5y": "—", "unavailable": True},
+            "gdp_yoy": {"value": "—", "unavailable": True}}
+    hd = _strip(dead)
+    for label in ("10Y CGB", "China 5Y CDS", "PBOC 1Y LPR", "GDP YoY"):
+        check(f"no dead tile for {label}", f">{label}</div>" not in hd)
+    check("live tiles still render", "SSE Composite" in hd and "Hang Seng" in hd)
+    check("missing indicators named once", "Not fetched today" in hd)
+    check("honesty line kept", "never carried forward" in hd)
+
+    live = dict(dead)
+    live.update({"cgb_10y": {"value": "1.78%", "change_bps": 2.0},
+                 "china_cds": {"value": "58", "change_bps": -1.5},
+                 "pboc_lpr": {"lpr_1y": "3.00%", "lpr_5y": "3.50%"},
+                 "gdp_yoy": {"value": "4.8%", "source": "NBS", "period": "Q2"},
+                 "china_macro": {"cpi_yoy": "+0.3%", "ppi_yoy": "-2.1%",
+                                 "pmi_mfg": "50.4", "retail": "+4.1%"}})
+    hl = _strip(live)
+    for label in ("10Y CGB", "China 5Y CDS", "PBOC 1Y LPR", "PBOC 5Y LPR", "GDP YoY"):
+        check(f"{label} renders when sourced", label in hl)
+    # collect._fetch_china_macro has run on every build since the pipeline was
+    # written and nothing ever displayed its output.
+    for label in ("CPI YoY", "PPI YoY", "Mfg PMI", "Retail Sales YoY"):
+        check(f"macro tile {label} surfaced", label in hl)
+    check("no missing-line when nothing is missing", "Not fetched today" not in hl)
+    check("strip suppressed when nothing resolves",
+          "SSE Composite" not in _strip({"sse_composite": {"value": "—", "unavailable": True}}))
+
+    # The Korea Chair's own question.
+    hk = render.render_html({
+        "digest_date": "2026-09-05", "editor_note": "J. E. Watch: x.",
+        "market_indicators": live,
+        "top_stories": [{"headline": "T", "body": "B", "url": "https://x/a", "source": "R"}],
+        "korea_china": [{"headline": "PRC curbs gallium to ROK fabs", "body_text": "B",
+                         "so_what": "Seoul faces a second-source scramble.",
+                         "source": "Yonhap", "url": "https://x/k"}],
+        "overnight_items": [{"headline": "O", "body_text": "B", "source": "AP",
+                             "url": "https://x/o"}]})
+    check("korea section rendered", "The Korea Angle" in hk)
+    check("korea so-what framed for Seoul", "For Seoul:" in hk)
+    check("korea sits under the top stories, above the wire",
+          0 < hk.find("Top Stories") < hk.find("The Korea Angle") < hk.find("Overnight Flash"))
     # Format order: the frame and the news come before the data strip.
     i_note, i_top, i_mkt = html.find("The Bottom Line"), html.find("Top Stories"), html.find("SSE Composite")
     check("editor_note rendered as The Bottom Line", i_note > 0)
@@ -452,6 +574,7 @@ def test_length_trim_and_caps():
           len(d["opeds_today"]) == run.SECTION_CAPS["opeds_today"][1], str(len(d["opeds_today"])))
 
     d = _long_digest()
+    started = {k: len(v) for k, v in d.items() if isinstance(v, list)}
     before = wordcount.count_words(d)
     check("fixture starts over the ceiling", before > run.WORD_CEILING, str(before))
     run._PP_STATS.clear()
@@ -461,7 +584,8 @@ def test_length_trim_and_caps():
     check("trim reaches the target band", after <= run.WORD_TARGET_HIGH, f"{before} -> {after}")
     check("trim reports what it cut", run._PP_STATS.get("items_trimmed_for_length", 0) > 0)
     for sec, floor in run._TRIM_ORDER:
-        if sec in d:
+        # A section that started below its floor was never the trim's doing.
+        if isinstance(started.get(sec), int) and started[sec] >= floor:
             check(f"{sec} floor of {floor} respected", len(d[sec]) >= floor, str(len(d[sec])))
     check("top_stories never trimmed", len(d["top_stories"]) == 3, str(len(d["top_stories"])))
     check("official_line never trimmed", len(d["official_line"]) == 2, str(len(d["official_line"])))

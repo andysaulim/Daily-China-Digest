@@ -1287,6 +1287,13 @@ def _collect_markets() -> dict:
 _UNAVAILABLE = {"value": "—", "change_pct": 0, "as_of": "", "unavailable": True}
 
 
+# Forecasts, previews and analyst views carry numbers that never happened.
+_FORECAST_RX = re.compile(
+    r"analysts?\s+(?:see|expect|predict|forecast)|expected\s+to|"
+    r"forecast\w*|poll\s+shows|preview|project\w*\s+to|likely\s+to",
+    re.IGNORECASE)
+
+
 def _fetch_10y_cgb() -> dict:
     """Fetch China 10-year government bond yield."""
     try:
@@ -1311,15 +1318,29 @@ def _fetch_10y_cgb() -> dict:
 
 def _fetch_pboc_lpr() -> dict:
     """Fetch PBOC Loan Prime Rate (1Y and 5Y). Fixed monthly on the 20th."""
+    # Each tenor must be named next to its own figure. The previous version took
+    # the first two decimals in the text, so "LPR held at 3.00% as growth slowed
+    # to 4.8%" published a 5-year LPR of 4.80% as fact.
+    pat_1y = re.compile(r"(?:one[-\s]?year|1[-\s]?year|1Y)\s*(?:LPR|loan\s+prime\s+rate)?"
+                        r"[^.%\d]{0,40}?(\d\.\d{1,2})\s*(?:%|percent)", re.IGNORECASE)
+    pat_5y = re.compile(r"(?:five[-\s]?year|5[-\s]?year|5Y)\s*(?:LPR|loan\s+prime\s+rate)?"
+                        r"[^.%\d]{0,40}?(\d\.\d{1,2})\s*(?:%|percent)", re.IGNORECASE)
     try:
-        url = _gnews("%22Loan+Prime+Rate%22+OR+%22LPR%22+China+%22kept+unchanged%22+OR+%22cut%22")
+        url = _gnews("%22loan+prime+rate%22+China+PBOC")
         entries = _parse_feed(url)
-        for entry in entries[:5]:
+        for entry in entries[:6]:
             text = f"{entry.get('title', '')} {entry.get('summary', '')}"
-            ms = re.findall(r"(\d\.\d{2})\s*(?:%|percent)", text)
-            if len(ms) >= 2:
-                return {"lpr_1y": f"{ms[0]}%", "lpr_5y": f"{ms[1]}%",
-                        "as_of": datetime.now(timezone.utc).strftime("%b %d")}
+            if _FORECAST_RX.search(text):
+                continue
+            m1, m5 = pat_1y.search(text), pat_5y.search(text)
+            if not (m1 and m5):
+                continue
+            v1, v5 = float(m1.group(1)), float(m5.group(1))
+            # LPR has sat in a narrow band for years and 5Y is always above 1Y.
+            if not (2.0 <= v1 <= 5.0 and 2.0 <= v5 <= 6.0 and v5 > v1):
+                continue
+            return {"lpr_1y": f"{v1:.2f}%", "lpr_5y": f"{v5:.2f}%",
+                    "as_of": datetime.now(timezone.utc).strftime("%b %d")}
     except Exception as e:
         print(f"  ⚠ PBOC LPR fetch error: {e}")
     print("  ⚠ PBOC LPR: not collected (shown as unavailable, never a stale number)")
@@ -1358,15 +1379,36 @@ def _fetch_china_cds() -> dict:
 
 def _fetch_china_gdp() -> dict:
     """Fetch latest China GDP growth (quarterly year-on-year)."""
+    # "GDP" must appear within a short window of the figure. The old pattern
+    # matched any "N.N% year-on-year" in the text, which on a CPI or trade story
+    # returned that number as China's GDP growth.
+    # GDP must lead the figure ("GDP grew 4.8%", "GDP growth of 4.8%"), or the
+    # figure must sit immediately against it ("4.8% GDP growth"). A loose reverse
+    # window read "exports up 6.2% year-on-year, adding to GDP" as 6.2% GDP.
+    pat = re.compile(r"GDP\s+(?:growth\s+)?(?:of\s+|at\s+|was\s+|came\s+in\s+at\s+)?"
+                     r"(?:grew|rose|expanded|increased|slowed\s+to|climbed)?\s*"
+                     r"(?:by\s+|to\s+|of\s+)?(\d\.\d)\s*(?:%|percent)"
+                     r"|(\d\.\d)\s*(?:%|percent)\s+GDP\b", re.IGNORECASE)
+    qtr = re.compile(r"\b(Q[1-4])\b|\b(first|second|third|fourth)\s+quarter", re.IGNORECASE)
     try:
-        url = _gnews("China+GDP+%22year-on-year%22+OR+%22year+on+year%22+%22Q%22")
+        url = _gnews("China+GDP+growth+%22year-on-year%22+quarter")
         entries = _parse_feed(url)
-        for entry in entries[:5]:
+        for entry in entries[:6]:
             text = f"{entry.get('title', '')} {entry.get('summary', '')}"
-            m = re.search(r"(\d\.\d)\s*(?:%|percent).*?(?:year-on-year|year on year|YoY)", text, re.IGNORECASE)
-            if m:
-                return {"value": f"{m.group(1)}%", "period": "latest Q",
-                        "source": "Reuters/NBS"}
+            if _FORECAST_RX.search(text):
+                continue
+            if not re.search(r"year[-\s]on[-\s]year|YoY", text, re.IGNORECASE):
+                continue
+            m = pat.search(text)
+            if not m:
+                continue
+            val = float(m.group(1) or m.group(2))
+            if not 0.0 <= val <= 15.0:
+                continue
+            qm = qtr.search(text)
+            period = (qm.group(0).upper() if qm and qm.group(1)
+                      else qm.group(0).title() if qm else "latest quarter")
+            return {"value": f"{val:.1f}%", "period": period, "source": "NBS via wires"}
     except Exception:
         pass
     print("  ⚠ China GDP: not collected (shown as unavailable, never a stale number)")
@@ -1374,33 +1416,66 @@ def _fetch_china_gdp() -> dict:
 
 
 def _fetch_china_macro() -> dict | None:
-    """Fetch additional macro indicators (CPI, PPI, PMI, retail) — best-effort."""
-    indicators = {}
-    queries = {
-        "cpi_yoy":     "China+CPI+%22year-on-year%22+%22consumer+prices%22",
-        "ppi_yoy":     "China+PPI+%22year-on-year%22+%22producer+prices%22",
-        "pmi_mfg":     "China+%22manufacturing+PMI%22+OR+%22Caixin+manufacturing%22",
-        "retail":      "China+%22retail+sales%22+%22year-on-year%22",
+    """CPI, PPI, manufacturing PMI and retail sales — best-effort, high precision.
+
+    These four have been collected on every run since the pipeline was built and
+    were never rendered anywhere; they now fill the market strip, so the parsing
+    has to be worth trusting. Each figure is accepted only when the indicator is
+    NAMED next to it and the value is inside a plausible band. Matching a bare
+    "N.N%" anywhere in a headline is how you publish the retail-sales number as
+    CPI on a story that mentions both.
+    """
+    # (google-news query, patterns that must match around the figure, sane range)
+    specs = {
+        "cpi_yoy": (
+            "China+CPI+%22consumer+prices%22+%22year-on-year%22",
+            r"(?:CPI|consumer\s+pric\w+)[^.%;]{0,40}?(-?\d\.\d)\s*(?:%|percent)",
+            (-10.0, 25.0)),
+        "ppi_yoy": (
+            "China+PPI+%22producer+prices%22+%22year-on-year%22",
+            r"(?:PPI|producer\s+pric\w+|factory[-\s]gate)[^.%;]{0,40}?(-?\d\.\d)\s*(?:%|percent)",
+            (-20.0, 25.0)),
+        "retail": (
+            "China+%22retail+sales%22+%22year-on-year%22",
+            r"retail\s+sales[^.%;]{0,40}?(-?\d\.\d)\s*(?:%|percent)",
+            (-30.0, 40.0)),
+        "pmi_mfg": (
+            "China+%22manufacturing+PMI%22+OR+%22Caixin+manufacturing%22",
+            r"(?:manufacturing\s+PMI|PMI[^.]{0,20}manufacturing|Caixin[^.]{0,25}manufacturing)"
+            r"[^.\d;]{0,30}?(\d{2}\.\d)",
+            (30.0, 70.0)),
     }
-    for key, q in queries.items():
+    indicators = {}
+    for key, (q, pattern, (lo, hi)) in specs.items():
+        rx = re.compile(pattern, re.IGNORECASE)
         try:
             entries = _parse_feed(_gnews(q))
-            for entry in entries[:3]:
-                text = f"{entry.get('title', '')} {entry.get('summary', '')}"
-                if key in ("cpi_yoy", "ppi_yoy", "retail"):
-                    m = re.search(r"(-?\d\.\d)\s*(?:%|percent)", text)
-                    if m:
-                        v = float(m.group(1))
-                        sign = "+" if v >= 0 else "-"
-                        indicators[key] = f"{sign}{abs(v):.1f}%"
-                        break
-                elif key == "pmi_mfg":
-                    m = re.search(r"\b(4[0-9]|5[0-9])\.\d\b", text)
-                    if m:
-                        indicators[key] = m.group(0)
-                        break
         except Exception:
             continue
+        for entry in entries[:4]:
+            text = f"{entry.get('title', '')} {entry.get('summary', '')}"
+            # A forecast is not a print. "Analysts expect CPI at 0.4%" is a view.
+            if _FORECAST_RX.search(text):
+                continue
+            if key != "pmi_mfg" and not re.search(r"year[-\s]on[-\s]year|YoY", text, re.IGNORECASE):
+                continue
+            m = rx.search(text)
+            if not m:
+                continue
+            raw = next((g for g in m.groups() if g), None)
+            if raw is None:
+                continue
+            try:
+                v = float(raw)
+            except ValueError:
+                continue
+            if not lo <= v <= hi:
+                continue
+            if key == "pmi_mfg":
+                indicators[key] = f"{v:.1f}"
+            else:
+                indicators[key] = f"{'+' if v >= 0 else '-'}{abs(v):.1f}%"
+            break
     return indicators if indicators else None
 
 

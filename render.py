@@ -134,9 +134,9 @@ def render_html(digest: dict) -> str:
     sections_pre = []       # View-in-browser, header, bottom line
     sections_markets = []   # Market strip + Δ Since Yesterday (render below the news)
     sections_today = []     # Morning Memo, Top Stories, Overnight Flash, Key Stat
-    sections_analysis = []  # Xinhua Delta, Expert Analysts, Public Sentiment, Social Statements
-    sections_trackers = []  # Satellite Watch, PRC Gov, US-China Trade, Congressional Watch
-    sections_wire = []      # Business, Indo-Pacific, Also Today, On This Day
+    sections_analysis = []  # Beijing's words and actions, experts, social statements
+    sections_wire = []      # Business, Indo-Pacific, Congressional Watch, Also Today
+    sections_close = []     # What We Are Watching (the forward look closes the brief)
     sections_post = []      # Footer
 
     # 0. Read online · Print/PDF · Archive
@@ -185,86 +185,128 @@ def render_html(digest: dict) -> str:
 <div style="font-size:15px;line-height:1.55;color:#1B2A4A;font-family:Georgia,serif;">{editor_note}</div>
 </div>""")
 
-    # 2. Market strip (3 rows). Goes in its own bucket so it renders BELOW the
-    # news: a reader opening this on a phone at 6 AM should see what happened
-    # before they see nine index tiles. No serious morning brief leads with data.
+    # 2. Market strip. Built from what actually resolved, never from a fixed
+    # grid. The old strip hard-coded nine tiles across three tables; four of the
+    # nine indicators (10Y CGB, PBOC LPR, China 5Y CDS, GDP) have failed to fetch
+    # on every recent run, so five of nine cells rendered as a bare em dash and
+    # the section read as broken rather than as honest. Now: a tile appears only
+    # when it has a number, the rows reflow to fill, and anything missing is named
+    # once in a footnote. The market-honesty rule is unchanged — a figure that was
+    # not fetched is still never invented — it just no longer costs the layout.
     m = digest.get("market_indicators") or {}
     if m:
-        sse = m.get("sse_composite") or {}
-        hsi = m.get("hang_seng") or {}
-        cny = m.get("usd_cny") or {}
-        cnh = m.get("usd_cnh") or {}
-        brent = m.get("brent") or {}
-        cgb = m.get("cgb_10y") or {}
-        cds = m.get("china_cds") or {}
+        def _has(d):
+            """A resolved indicator: present, not flagged unavailable, not a dash."""
+            if not isinstance(d, dict) or d.get("unavailable"):
+                return False
+            v = d.get("value")
+            return v not in (None, "", "—", "-")
+
+        def _tile(label, value, sub, big=False):
+            vs = "20px" if big else "15px"
+            sub_html = (f'<div style="font-size:{"11px" if big else "10px"};'
+                        f'opacity:0.75;margin-top:2px;">{sub}</div>' if sub else "")
+            return (f'<div style="font-size:{"9px" if big else "10px"};'
+                    f'text-transform:uppercase;letter-spacing:1.1px;opacity:0.55;">{label}</div>'
+                    f'<div style="font-size:{vs};font-weight:700;margin:2px 0;">{value}</div>'
+                    f'{sub_html}')
+
+        def _row(tiles, bg, pad):
+            if not tiles:
+                return ""
+            w = 100 // len(tiles)
+            cells = ""
+            for i, t in enumerate(tiles):
+                border = ('border-left:1px solid rgba(255,255,255,0.12);' if i else "")
+                cells += (f'<td width="{w}%" align="center" '
+                          f'style="padding:{pad};{border}vertical-align:top;">{t}</td>')
+            return (f'<table width="100%" cellpadding="0" cellspacing="0" border="0" '
+                    f'style="background:{bg};color:#fff;'
+                    f'border-bottom:1px solid rgba(255,255,255,0.1);">'
+                    f'<tr>{cells}</tr></table>')
+
+        as_of = now.strftime("%b %-d")
+        missing = []
+
+        # Row 1 — the headline markets, at full size.
+        hero = []
+        for key, label in (("sse_composite", "SSE Composite"),
+                           ("hang_seng", "Hang Seng"),
+                           ("usd_cny", "USD/CNY")):
+            d = m.get(key) or {}
+            if _has(d):
+                hero.append(_tile(label, _esc(str(d.get("value"))),
+                                  f'{_arrow(d.get("change_pct", 0))}'
+                                  f'<div style="font-size:9px;opacity:0.45;margin-top:2px;">'
+                                  f'as of {as_of}</div>', big=True))
+            else:
+                missing.append(label)
+
+        # Row 2 — rates, credit and commodities.
+        second = []
+        d = m.get("usd_cnh") or {}
+        if _has(d):
+            second.append(_tile("USD/CNH", _esc(str(d.get("value"))), _arrow(d.get("change_pct", 0))))
+        else:
+            missing.append("USD/CNH")
+        d = m.get("brent") or {}
+        if _has(d):
+            second.append(_tile("Brent", "$" + _esc(str(d.get("value"))), _arrow(d.get("change_pct", 0))))
+        else:
+            missing.append("Brent")
+        d = m.get("cgb_10y") or {}
+        if _has(d):
+            second.append(_tile("10Y CGB", _esc(str(d.get("value"))), _cds_arrow(d.get("change_bps", 0))))
+        else:
+            missing.append("10Y CGB")
+        d = m.get("china_cds") or {}
+        if _has(d):
+            second.append(_tile("China 5Y CDS", _esc(str(d.get("value"))) + " bps",
+                                _cds_arrow(d.get("change_bps", 0))))
+        else:
+            missing.append("China 5Y CDS")
         lpr = m.get("pboc_lpr") or {}
-        gdp = m.get("gdp_yoy") or {}
-        sections_markets.append(f"""
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1B2A4A;color:#fff;border-bottom:1px solid rgba(255,255,255,0.1);">
-<tr>
-<td width="33%" align="center" style="padding:12px 8px 10px;">
-<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;opacity:0.55;">SSE Composite</div>
-<div style="font-size:20px;font-weight:700;margin:2px 0;">{_esc(str(sse.get("value", "—")))}</div>
-<div style="font-size:11px;">{_arrow(sse.get("change_pct", 0))}</div>
-<div style="font-size:9px;opacity:0.4;margin-top:2px;">as of {now.strftime("%b %-d")}</div>
-</td>
-<td width="34%" align="center" style="padding:12px 8px 10px;border-left:1px solid rgba(255,255,255,0.12);border-right:1px solid rgba(255,255,255,0.12);">
-<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;opacity:0.55;">Hang Seng</div>
-<div style="font-size:20px;font-weight:700;margin:2px 0;">{_esc(str(hsi.get("value", "—")))}</div>
-<div style="font-size:11px;">{_arrow(hsi.get("change_pct", 0))}</div>
-<div style="font-size:9px;opacity:0.4;margin-top:2px;">as of {now.strftime("%b %-d")}</div>
-</td>
-<td width="33%" align="center" style="padding:12px 8px 10px;">
-<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.2px;opacity:0.55;">USD/CNY</div>
-<div style="font-size:20px;font-weight:700;margin:2px 0;">{_esc(str(cny.get("value", "—")))}</div>
-<div style="font-size:11px;">{_arrow(cny.get("change_pct", 0))}</div>
-<div style="font-size:9px;opacity:0.4;margin-top:2px;">as of {now.strftime("%b %-d")}</div>
-</td>
-</tr>
-</table>
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#162340;color:#fff;border-bottom:1px solid rgba(255,255,255,0.08);">
-<tr>
-<td width="25%" align="center" style="padding:8px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">USD/CNH</div>
-<div style="font-size:15px;font-weight:700;">{_esc(str(cnh.get("value", "—")))}</div>
-<div style="font-size:10px;">{_arrow(cnh.get("change_pct", 0))}</div>
-</td>
-<td width="25%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">Brent</div>
-<div style="font-size:15px;font-weight:700;">{("$" + _esc(str(brent.get("value")))) if brent.get("value") and str(brent.get("value")) != "—" else "—"}</div>
-<div style="font-size:10px;">{_arrow(brent.get("change_pct", 0))}</div>
-</td>
-<td width="25%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">10Y CGB</div>
-<div style="font-size:15px;font-weight:700;">{_esc(str(cgb.get("value", "—")))}</div>
-<div style="font-size:10px;">{_cds_arrow(cgb.get("change_bps", 0))}</div>
-</td>
-<td width="25%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">China 5Y CDS</div>
-<div style="font-size:15px;font-weight:700;">{_esc(str(cds.get("value", "—")))} bps</div>
-<div style="font-size:10px;">{_cds_arrow(cds.get("change_bps", 0))}</div>
-</td>
-</tr>
-</table>
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#0F1B30;color:#fff;border-bottom:1px solid rgba(255,255,255,0.08);">
-<tr>
-<td width="33%" align="center" style="padding:8px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">PBOC 1Y LPR</div>
-<div style="font-size:15px;font-weight:700;">{_esc(str(lpr.get("lpr_1y", "—")))}</div>
-<div style="font-size:10px;opacity:0.6;">{_esc(str(lpr.get("last_change", "")))}</div>
-</td>
-<td width="34%" align="center" style="padding:8px;border-left:1px solid rgba(255,255,255,0.1);border-right:1px solid rgba(255,255,255,0.1);">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">PBOC 5Y LPR</div>
-<div style="font-size:15px;font-weight:700;">{_esc(str(lpr.get("lpr_5y", "—")))}</div>
-<div style="font-size:10px;opacity:0.5;">benchmark</div>
-</td>
-<td width="33%" align="center" style="padding:8px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">GDP YoY</div>
-<div style="font-size:15px;font-weight:700;">{_esc(str(gdp.get("value", "—")))}</div>
-<div style="font-size:10px;opacity:0.6;">{_esc(str(gdp.get("source", "NBS")))}{" · " + _esc(str(gdp.get("period", ""))) if gdp.get("period") else ""}</div>
-</td>
-</tr>
-</table>""")
+        if not lpr.get("unavailable"):
+            for fld, label in (("lpr_1y", "PBOC 1Y LPR"), ("lpr_5y", "PBOC 5Y LPR")):
+                v = lpr.get(fld)
+                if v not in (None, "", "—", "-"):
+                    second.append(_tile(label, _esc(str(v)), _esc(str(lpr.get("last_change", "")))))
+                else:
+                    missing.append(label)
+        else:
+            missing.extend(["PBOC 1Y LPR", "PBOC 5Y LPR"])
+
+        # Row 3 — the macro prints. collect._fetch_china_macro has gathered CPI,
+        # PPI, manufacturing PMI and retail sales on every run since the pipeline
+        # was built and nothing has ever rendered them, the same way editor_note
+        # was generated and dropped. They are the numbers a China desk actually
+        # asks for, and they are the ones that fill this strip.
+        third = []
+        d = m.get("gdp_yoy") or {}
+        if _has(d):
+            sub = " · ".join(x for x in (_esc(str(d.get("source") or "NBS")),
+                                         _esc(str(d.get("period") or ""))) if x)
+            third.append(_tile("GDP YoY", _esc(str(d.get("value"))), sub))
+        else:
+            missing.append("GDP")
+        macro = m.get("china_macro") or {}
+        for fld, label in (("cpi_yoy", "CPI YoY"), ("ppi_yoy", "PPI YoY"),
+                           ("pmi_mfg", "Mfg PMI"), ("retail", "Retail Sales YoY")):
+            v = macro.get(fld)
+            if v not in (None, "", "—", "-"):
+                third.append(_tile(label, _esc(str(v)), ""))
+
+        strip = (_row(hero, "#1B2A4A", "12px 8px 10px")
+                 + _row(second, "#162340", "9px 8px")
+                 + _row(third, "#0F1B30", "9px 8px"))
+        if strip:
+            if missing:
+                strip += (f'<div style="background:#0a0f1e;color:rgba(255,255,255,0.4);'
+                          f'padding:5px 32px;font-size:9px;letter-spacing:0.4px;'
+                          f'border-bottom:1px solid rgba(255,255,255,0.08);">'
+                          f'Not fetched today: {_esc(", ".join(missing))} '
+                          f'&middot; shown only when sourced, never carried forward</div>')
+            sections_markets.append(strip)
 
     # 2c. Δ Since Yesterday Bar — single-row chip strip of key deltas
     delta = digest.get("delta_since_yesterday") or {}
@@ -330,6 +372,31 @@ def render_html(digest: dict) -> str:
 </div>"""
         sections_today.append(f'<div {_SEC}>{_sec_label("Top Stories")}{sh}</div>')
 
+    # 4a. The Korea Angle. This brief is produced for the CSIS Korea Chair and
+    # until now carried no guaranteed China-Korea content at all: "korea-china"
+    # was one optional category tag inside indo_pacific, so on most days the
+    # single question this desk exists to answer went unaddressed. It sits
+    # directly under the top stories because for this reader it often IS the
+    # top story.
+    korea = digest.get("korea_china") or []
+    if korea:
+        kh = ""
+        for k in korea:
+            h = _esc(k.get("headline", ""))
+            bt = _esc(k.get("body_text", ""))
+            sw = _esc(k.get("so_what", ""))
+            src = _esc(_clean_src(k.get("source", "")))
+            url = k.get("url", "")
+            kh += f"""
+<div style="margin-bottom:10px;padding-left:12px;border-left:3px solid #0E7C7B;">
+<div style="font-size:9px;color:#0E7C7B;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:2px;">{src}</div>
+<div style="font-size:14px;font-weight:700;color:#1B2A4A;line-height:1.4;">{_link_or_text(h, url)}</div>
+<div style="font-size:12px;line-height:1.5;color:#555;margin-top:3px;">{bt}</div>
+{"<div style='font-size:12px;line-height:1.5;color:#555;font-style:italic;margin-top:4px;'><strong style='color:#0E7C7B;font-style:normal;'>For Seoul:</strong> " + sw + "</div>" if sw else ""}
+</div>"""
+        sections_today.append(
+            f'<div {_SEC}>{_sec_label("The Korea Angle", color="#0E7C7B")}{kh}</div>')
+
     # 4b. Overnight Flash
     overnight = digest.get("overnight_items") or []
     if overnight:
@@ -361,95 +428,6 @@ def render_html(digest: dict) -> str:
 <div style="font-size:12px;opacity:0.85;margin-top:2px;">{_esc(stat.get("label", ""))}</div>
 <div style="font-size:11px;opacity:0.65;margin-top:4px;font-style:italic;">{_esc(stat.get("context", ""))}</div>
 {"<div style='font-size:10px;opacity:0.45;margin-top:4px;'>Source: " + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
-</div>""")
-
-    # 7. Satellite & Location Watch — CONSOLIDATED, only sites with real evidence today
-    locations = digest.get("monitored_locations") or []
-    if locations:
-        badge_styles = {
-            "activity": ("#D4AC0D", "#FDF6E3", "Active"),
-            "elevated": ("#E67E22", "#FFF3E0", "Elevated"),
-            "alert": ("#C0392B", "#FBE9E7", "Alert"),
-        }
-        # Filter: only sites with real evidence (non-normal status)
-        active = [l for l in locations if l.get("status") not in ("normal", None, "")]
-        total = len(locations)
-        gz_baseline = sum(1 for l in locations
-                          if l.get("block") == "gray_zone" and l.get("status") == "normal")
-        hr_baseline = sum(1 for l in locations
-                          if l.get("block") == "hidden_reach" and l.get("status") == "normal")
-
-        if active:
-            loc_cards = ""
-            for i in range(0, len(active), 2):
-                rc = ""
-                for j in range(i, min(i + 2, len(active))):
-                    loc = active[j]
-                    nm = _esc(loc.get("name", ""))
-                    st = loc.get("status", "activity")
-                    note = _esc(loc.get("note", ""))
-                    last = _esc(loc.get("last_source_date", ""))
-                    dirn = loc.get("direction", "")
-                    csis = _esc(loc.get("csis_product", ""))
-                    block = loc.get("block", "")
-                    block_label = ("Gray-Zone" if block == "gray_zone"
-                                   else "Hidden Reach" if block == "hidden_reach"
-                                   else "")
-                    block_color = ("#2C3E50" if block == "gray_zone"
-                                   else "#16A085" if block == "hidden_reach"
-                                   else "#7F8C8D")
-                    bc, bb, bl = badge_styles.get(st, ("#7F8C8D", "#F5F5F5", "Monitor"))
-                    if dirn == "up":
-                        bl += " &#9650;"
-                    elif dirn == "down":
-                        bl += " &#9660;"
-                    badge = (f'<span style="display:inline-block;padding:2px 8px;'
-                             f'border-radius:3px;font-size:9px;font-weight:700;color:#fff;'
-                             f'background:{bc};letter-spacing:0.5px;">{bl}</span>')
-                    block_tag = (f'<div style="font-size:9px;color:{block_color};'
-                                 f'text-transform:uppercase;letter-spacing:0.6px;'
-                                 f'font-weight:600;margin-bottom:3px;">{block_label}</div>'
-                                 if block_label else "")
-                    nh = (f'<div style="font-size:11px;line-height:1.4;color:#555;'
-                          f'margin-top:4px;">{note}</div>' if note else "")
-                    lh = (f'<div style="font-size:9px;color:#999;margin-top:3px;">'
-                          f'&#9201; {last}</div>' if last else "")
-                    ch = (f'<div style="font-size:9px;color:#aaa;margin-top:2px;'
-                          f'font-family:monospace;">{csis}</div>' if csis else "")
-                    rc += f"""<td style="width:50%;padding:4px;vertical-align:top;">
-<div style="background:{bb};border-radius:4px;padding:10px 12px;border-left:3px solid {bc};">
-{block_tag}
-<div style="font-size:12px;font-weight:700;color:#1B2A4A;margin-bottom:4px;">{nm}</div>
-<div style="margin-bottom:2px;">{badge}</div>
-{nh}
-{lh}
-{ch}
-</div>
-</td>"""
-                if len(active) - i == 1:
-                    rc += '<td style="width:50%;padding:4px;"></td>'
-                loc_cards += f"<tr>{rc}</tr>"
-
-            baseline_footer = (f'<div style="font-size:10px;color:#999;margin-top:10px;'
-                               f'padding-top:8px;border-top:1px solid #EEE;font-style:italic;">'
-                               f'{gz_baseline} other Gray-Zone sites and {hr_baseline} Hidden Reach sites '
-                               f'tracked at baseline · See <a href="https://amti.csis.org" '
-                               f'style="color:#888;">CSIS AMTI</a>, '
-                               f'<a href="https://chinapower.csis.org" style="color:#888;">China Power</a>, '
-                               f'and <a href="https://features.csis.org/hiddenreach/" '
-                               f'style="color:#888;">Hidden Reach</a></div>')
-
-            sections_trackers.append(f"""<div {_SEC}>
-{_sec_label("Satellite &amp; Location Watch")}
-<div style="font-size:11px;color:#888;font-style:italic;margin-top:-8px;margin-bottom:12px;">{len(active)} of {total} monitored sites flagged</div>
-<table width="100%" cellpadding="0" cellspacing="0" border="0">{loc_cards}</table>
-{baseline_footer}
-</div>""")
-        else:
-            sections_trackers.append(f"""<div {_SEC}>
-{_sec_label("Satellite &amp; Location Watch")}
-<div style="font-size:12px;color:#555;">All {total} monitored sites at baseline today. No new satellite imagery or activity flags.</div>
-<div style="font-size:10px;color:#aaa;margin-top:6px;">Tracked: CSIS AMTI · China Power Project · Hidden Reach</div>
 </div>""")
 
     # 8. PRC Government (2x2 + personnel + NPC + calendar)
@@ -554,100 +532,20 @@ def render_html(digest: dict) -> str:
 </td>
 </tr>
 </table>"""
-            cal_html = f"""<div style="margin-top:20px;">
-<div style="padding:8px 0;border-bottom:1px solid #1B2A4A;margin-bottom:4px;">
-<span style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#1B2A4A;">Upcoming</span>
-</div>
-{ci}
-</div>"""
+            cal_html = ci
 
         ds = _esc(str(digest.get("digest_date", "")))
-        sections_trackers.append(f"""
+        if gov_grid or pers_html or npc_html:
+            sections_analysis.append(f"""
 <div {_SEC}>
-{_sec_label("PRC Government")}
+{_sec_label("What Beijing Did")}
 <div style="font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-top:-10px;margin-bottom:14px;">State Council + Ministries{(" · " + ds) if ds else ""}</div>
-{gov_grid}{pers_html}{npc_html}{cal_html}
+{gov_grid}{pers_html}{npc_html}
 </div>""")
-
-    # 9. US-China Trade
-    trade = digest.get("us_china_trade") or {}
-    if trade:
-        body = ""
-        tt = trade.get("tariff_tracker") or {}
-        if tt:
-            h301 = _esc(str(tt.get("headline_section_301_rate", "")))
-            ieepa = _esc(str(tt.get("ieepa_fentanyl_rate", "")))
-            s122 = _esc(str(tt.get("section_122_surcharge", "")))
-            lc = _esc(str(tt.get("last_change", "")))
-            nt = _esc(str(tt.get("next_trigger", "")))
-            s232 = tt.get("section_232_rates", {})
-            sr = ""
-            for sec, rate in s232.items():
-                sr += f"""<tr style="border-bottom:1px solid #F0E0E0;">
-<td style="padding:4px 6px 4px 0;font-size:11px;font-weight:600;color:#1B2A4A;">{_esc(sec.title())}</td>
-<td style="padding:4px 6px;font-size:13px;font-weight:700;color:#C0392B;text-align:center;">{_esc(str(rate))}</td>
-<td style="padding:4px 6px;font-size:9px;color:#888;text-transform:uppercase;">Section 232</td>
-</tr>"""
-            nl = f'<div style="margin-top:4px;font-size:10px;color:#2980B9;">Next trigger: {nt}</div>' if nt else ""
-            body += f"""<div style="margin-bottom:16px;padding:12px 14px;background:#FFF5F5;border-radius:4px;border:1px solid #F0D0D0;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#C0392B;font-weight:600;margin-bottom:6px;">US Tariff Architecture · China</div>
-<div style="margin-bottom:6px;">
-<span style="font-size:11px;color:#666;">Section 301:</span> <span style="font-size:14px;font-weight:700;color:#C0392B;">{h301}</span> ·
-<span style="font-size:11px;color:#666;">IEEPA fentanyl:</span> <span style="font-size:14px;font-weight:700;color:#C0392B;">{ieepa}</span> ·
-<span style="font-size:11px;color:#666;">Section 122:</span> <span style="font-size:14px;font-weight:700;color:#E67E22;">{s122}</span>
-</div>
-{'<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;border-top:1px solid #F0E0E0;">' + sr + '</table>' if sr else ''}
-<div style="margin-top:8px;font-size:10px;color:#999;">{lc}</div>
-{nl}
-</div>"""
-
-        el = trade.get("entity_list_tracker") or {}
-        if el:
-            tot = _esc(str(el.get("total_count", "")))
-            adds = el.get("recent_adds_7day", [])
-            recent = _esc(str(el.get("most_recent_add", "")))
-            ah = ""
-            for a in adds[:5]:
-                if isinstance(a, dict):
-                    en = _esc(a.get("entity_name", ""))
-                    sec = _esc(a.get("sector", ""))
-                    dt = _esc(a.get("date", ""))
-                    ah += f"""<tr style="border-bottom:1px solid #E8EDF3;">
-<td style="padding:4px 6px 4px 0;font-size:11px;font-weight:600;color:#1B2A4A;">{en}</td>
-<td style="padding:4px 6px;font-size:10px;color:#666;">{sec}</td>
-<td style="padding:4px 0 4px 6px;font-size:10px;color:#888;text-align:right;">{dt}</td>
-</tr>"""
-            at = f'<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;">{ah}</table>' if ah else ""
-            body += f"""<div style="margin-bottom:16px;padding:12px 14px;background:#F0F7FF;border-radius:4px;border:1px solid #D6E9F8;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#1B2A4A;font-weight:600;margin-bottom:6px;">BIS Entity List · China</div>
-<div style="margin-bottom:4px;">
-<span style="font-size:22px;font-weight:700;color:#1B2A4A;">{tot}</span>
-<span style="font-size:11px;color:#888;"> PRC-located entities</span>
-</div>
-<div style="font-size:11px;color:#666;">Most recent: {recent}</div>
-{at}
-</div>"""
-
-
-        cf = trade.get("cfius") or []
-        if cf:
-            cr = ""
-            for c in cf[:4]:
-                co = _esc(c.get("company", ""))
-                sec = _esc(c.get("sector", ""))
-                act = _esc(c.get("action", ""))
-                dt = _esc(c.get("date", ""))
-                cr += f"""<div style="margin-bottom:6px;padding-left:10px;border-left:2px solid #8E44AD;">
-<div style="font-size:12px;font-weight:600;color:#1B2A4A;">{co} <span style="color:#888;font-weight:400;font-size:11px;">· {sec}</span></div>
-<div style="font-size:11px;color:#555;">{act} <span style="color:#888;font-size:10px;">({dt})</span></div>
-</div>"""
-            body += f"""<div style="margin-bottom:16px;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#8E44AD;font-weight:600;margin-bottom:6px;">CFIUS Actions</div>
-{cr}
-</div>"""
-
-        if body:
-            sections_trackers.append(f'<div {_SEC}>{_sec_label("US-China Trade &amp; Sanctions")}{body}</div>')
+        # The calendar is a forward look, so it closes the brief rather than
+        # sitting halfway down inside a government section.
+        if cal_html:
+            sections_close.append(f'<div {_SEC}>{_sec_label("What We Are Watching")}{cal_html}</div>')
 
     # 10. Business & Economy
     biz = digest.get("business_economy") or []
@@ -703,7 +601,7 @@ def render_html(digest: dict) -> str:
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(act, url)}</div>
 <div style="font-size:12px;line-height:1.4;color:#555;">{det}</div>
 </div>"""
-        sections_trackers.append(f'<div {_SEC}>{_sec_label("Congressional Watch")}{ch}</div>')
+        sections_wire.append(f'<div {_SEC}>{_sec_label("Congressional Watch")}{ch}</div>')
 
     # 13. Expert Analysts
     opeds = digest.get("opeds_today") or []
@@ -857,16 +755,19 @@ This brief is generated automatically from {_esc(str(digest.get("source_count") 
 <a href="#top" style="font-size:10px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:1px;">&#8593; Back to top</a>
 </div>""")
 
-    # Assemble with chapter dividers — Option B: existing dark bands serve as natural
-    # transitions within TODAY (Key Stat closes) and into ANALYSIS (Xinhua Delta opens).
-    # TRACKERS and WIRE get explicit chapter dividers.
+    # Assemble with chapter dividers. The TRACKERS chapter is gone: the satellite
+    # watch and the tariff/entity-list tables were standing furniture rebuilt from
+    # baselines rather than reporting, and the baselines go stale (108 days, as of
+    # run 118) while still rendering as current fact. What was real reporting in
+    # that chapter moved to where it belongs — ministry actions next to Beijing's
+    # own words, Congressional Watch into the wire, the calendar to the close.
     sections = (
         sections_pre +
         sections_today +
         sections_markets +
         sections_analysis +
-        ([_chapter("TRACKERS")] if sections_trackers else []) + sections_trackers +
         ([_chapter("WIRE")] if sections_wire else []) + sections_wire +
+        sections_close +
         sections_post
     )
 
