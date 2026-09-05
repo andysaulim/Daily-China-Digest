@@ -178,7 +178,7 @@ Return ONLY valid JSON. No markdown, no preamble, no commentary outside the JSON
 # 60 and 120 days. An out-of-date baseline presented as current is worse than
 # no baseline: the Japan brief carried an expired Section 122 surcharge for a
 # month because nothing told the model it had lapsed.
-BASELINES_VERIFIED_AS_OF = "2026-05-20"
+BASELINES_VERIFIED_AS_OF = "2026-09-05"
 
 
 def baseline_age_days(today=None) -> int:
@@ -244,125 +244,102 @@ def _filter_upcoming(block: str, today=None) -> str:
 
 
 _POLITICAL_LEADERS = """\
-CURRENT POLITICAL LEADERS — REFERENCE (update from today's articles if changed):
+CURRENT POLITICAL LEADERS — REFERENCE, verified Sep 5 2026 (update from today's articles if changed):
 
-PRC TOP LEADERSHIP (as of early 2026):
+PRC TOP LEADERSHIP:
 - CCP General Secretary, President, CMC Chairman: Xi Jinping (习近平) — since 2012
 - Premier of State Council: Li Qiang (李强) — since March 2023
 - NPC Standing Committee Chairman: Zhao Leji (赵乐际)
-- CPPCC Chairman: Wang Huning (王沪宁) — top political theorist
-- Top Five / Party affairs: Cai Qi (蔡奇)
+- CPPCC Chairman: Wang Huning (王沪宁)
+- Secretariat / Party affairs: Cai Qi (蔡奇)
 - First-Ranked Vice Premier: Ding Xuexiang (丁薛祥)
-- Vice Premier (US-China econ point person, CFEAC Director): He Lifeng (何立峰)
+- Vice Premier, US-China economic point person (CFEAC Office Director): He Lifeng (何立峰)
 - Foreign Minister, Politburo, CFAC Office Director: Wang Yi (王毅)
 - Defense Minister: Dong Jun (董军)
-- CMC Vice Chairmen: Zhang Youxia (张又侠), He Weidong (何卫东) — verify He Weidong status, was under investigation in 2024-2025
-- MSS Minister: Chen Yixin (陈一新) — verify, may have rotated
-- International Department head: Liu Jianchao (刘建超) — sometimes mentioned as potential FM successor
+- CMC Vice Chairmen: Zhang Youxia (张又侠), Zhang Shengmin (张升民, since Oct 2025). He Weidong (何卫东) and Miao Hua (苗华) were EXPELLED from the party and PLA in Oct 2025 at the Fourth Plenum; never describe them as serving.
+- MSS Minister: Chen Yixin (陈一新) — since Oct 2022
+- CCP International Department head: Liu Haixing (刘海星) — since Sep 30 2025. Liu Jianchao (刘建超) has not been seen since Jul 2025 and is under investigation.
+- Ambassador to the US: Xie Feng (谢锋)
 
-MOFA SPOKESPERSONS (rotating, verify from today's articles):
-- Mao Ning (毛宁)
-- Lin Jian (林剑)
-- Wang Wenbin (汪文斌) — verify current rotation status
+MOFA SPOKESPERSONS (three, rotating): Mao Ning (毛宁), Lin Jian (林剑), Guo Jiakun (郭嘉昆, since Jan 2025). Wang Wenbin left the podium in 2024 (ambassador to Cambodia); do not attribute 2026 briefings to him.
 
 TAIWAN LEADERSHIP:
 - President: Lai Ching-te (賴清德) — DPP, inaugurated May 20 2024
 - Vice President: Hsiao Bi-khim (蕭美琴)
+- Premier: Cho Jung-tai (卓榮泰)
 - Foreign Minister: Lin Chia-lung (林佳龍)
 - Defense Minister: Wellington Koo (顧立雄)
-- NSC Secretary-General: Joseph Wu (吳釗燮) — was previously FM
-- Premier: Cho Jung-tai (卓榮泰)
+- NSC Secretary-General: Joseph Wu (吳釗燮)
 - MAC Chairman: Chiu Chui-cheng (邱垂正)
+- Local (nine-in-one) elections: Nov 28 2026
 
 US LEADERSHIP (Trump 2nd term, inaugurated Jan 2025):
-- President: Donald Trump
-- Vice President: JD Vance
-- SecState: Marco Rubio
-- SecDef: Pete Hegseth
-- Treasury Sec: Scott Bessent
-- Commerce Sec: Howard Lutnick
-- USTR: Jamieson Greer
-- NSA: Mike Waltz
-- DNI: Tulsi Gabbard
-- INDOPACOM Commander: verify current — was Adm. Samuel Paparo
+- President: Donald Trump; Vice President: JD Vance
+- Secretary of State AND National Security Advisor (dual-hatted since May 2025): Marco Rubio. Mike Waltz is NOT NSA (UN ambassador). Deputy NSA: Mike Needham (since May 2026).
+- SecDef: Pete Hegseth; Treasury: Scott Bessent; Commerce: Howard Lutnick; USTR: Jamieson Greer; DNI: Tulsi Gabbard
+- BIS Under Secretary: Jeffrey Kessler
+- Ambassador to China: David Perdue
+- INDOPACOM Commander: Adm. Samuel Paparo (since May 2024)
 
-KEY US CONGRESSIONAL FIGURES on China:
-- House Select Committee on the CCP: Chair John Moolenaar (R-MI), Ranking Raja Krishnamoorthi (D-IL)
+KEY US CONGRESSIONAL FIGURES on China (119th Congress):
+- House Select Committee on the CCP: Chair John Moolenaar (R-MI), Ranking Member Ro Khanna (D-CA, since Jan 2026; Raja Krishnamoorthi stepped down)
 - Senate Foreign Relations: Chair Jim Risch (R-ID), Ranking Jeanne Shaheen (D-NH)
 - House Foreign Affairs: Chair Brian Mast (R-FL)
-- CECC: Co-Chairs Chris Smith (R-NJ) + Jeff Merkley (D-OR)
-- USCC Chair: verify current
+- CECC: Chair Sen. Dan Sullivan (R-AK), Co-Chair Rep. Chris Smith (R-NJ)
+- USCC (2026 report cycle): Chair Randall Schriver, Vice Chair Mike Kuiken
+- US midterm elections: Nov 3 2026
+
+ALLIES THIS BRIEF WEIGHTS:
+- ROK: President Lee Jae-myung (since Jun 2025); Foreign Minister Cho Hyun; Unification Minister Chung Dong-young
+- Japan: Prime Minister Sanae Takaichi (since Oct 2025)
 
 If today's articles name a different officeholder for any position, USE THE NAME FROM THE ARTICLE."""
 
 
 _TRADE_BASELINES = """\
-BASELINE TRADE & SANCTIONS POLICY (as of early 2026 — carry forward unless today's articles report a change):
+BASELINE TRADE & SANCTIONS POLICY — verified Sep 5 2026 (carry forward unless today's articles report a change):
 
-US-CHINA TARIFF STACK — current rates applied to Chinese goods (different products subject to different combinations):
+WHAT CHANGED IN 2026 — read this first:
+- Feb 20 2026: the Supreme Court (Learning Resources v. Trump, 6-3) held IEEPA authorises no tariffs. BOTH the "reciprocal" tariffs AND the China/Canada/Mexico "fentanyl" tariffs were struck down. The President terminated them; CBP stopped collecting Feb 24 2026. No IEEPA tariff is in force. Never describe the fentanyl tariff as active.
+- Feb 24 2026: a 10% Section 122 balance-of-payments surcharge on all countries replaced them for the statutory 150 days.
+- Mar 11 2026: USTR opened Section 301 "structural excess capacity" investigations into 16 economies (China, EU, Japan, Korea, Taiwan, Vietnam, Mexico, India and others); hearing May 5 2026.
+- May 14-15 2026: Trump-Xi summit in Beijing (after Busan, Oct 30 2025). Agreed: restore prior US tariff levels on China through Section 301 rather than raise them; a Board of Trade and a Board of Investment; China to buy at least $17B/yr of US farm goods through 2028; 200 Boeing aircraft; reciprocal cuts on ~$30B of goods each. Export controls, AI and cyber were NOT resolved.
+- Jul 24 2026: Section 122 EXPIRED by operation of law (Congress did not extend). At the same moment new Section 301 duties of 10% or 12.5% took effect on products from ~80 economies (~99% of imports), with NO statutory expiry. Verify China's exact stack from today's articles.
+- Sep 24 2026: Xi state visit to Washington scheduled.
 
-SECTION 301 (Trump 2018, expanded Biden 2024, expanded again Trump 2.0):
-- List 1 (industrial intermediates, $34B trade): 25%, ACTIVE since Jul 2018
-- List 2 (industrial inputs, $16B): 25%, ACTIVE since Aug 2018
-- List 3 ($200B, broad consumer/industrial): 25%, ACTIVE since 2018-2019
-- List 4A (consumer goods, $300B): 7.5%, ACTIVE
-- Biden 2024 additions: EVs raised to 100%, lithium batteries 25%, semiconductors 50%, solar cells 50%, syringes/needles 50%, steel/aluminum tied to Section 232
-- Trump 2.0 additions (2025-2026): track from today's articles
+SECTION 301 — China-specific (USTR, "unfair trade practices"):
+- 2018-19 lists still in force: List 1 ($34B) 25%; List 2 ($16B) 25%; List 3 ($200B) 25%; List 4A ($300B) 7.5%
+- Biden 2024 additions: EVs 100%, lithium batteries 25%, semiconductors 50%, solar cells 50%, syringes 50%, certain steel/aluminum 25%
+- Trump 2.0: the Jul 24 2026 excess-capacity duties above; track any China-specific rate from today's articles.
 
-SECTION 232 — applies to all countries including China:
-- Steel & Aluminum: 50% universal, ACTIVE since Mar 2025 (all country exemptions eliminated)
-- Copper: 50%, ACTIVE since Mar 2025
-- Automobiles: 25%, ACTIVE
-- Semiconductors (narrow): 25%, ACTIVE since Jan 15 2026
-
-IEEPA FENTANYL TARIFF — China-specific:
-- 20% across-the-board on Chinese-origin goods, layered on top of other duties
-- Justification: fentanyl precursor exports
-- ACTIVE — Trump executive order
-
-IEEPA RECIPROCAL TARIFFS — STATUS: STRUCK DOWN:
-- Feb 20 2026: Supreme Court struck down all IEEPA tariffs (6-3 ruling)
-- White House immediately imposed 10% Section 122 surcharge on ALL countries (effective Feb 24 2026, expires Jul 24 2026 unless Congress extends)
-- USTR launched Section 301 investigations Mar 11 2026 against 16 trading partners as potential replacement legal basis
-
-SECTION 122 SURCHARGE:
-- 10% global surcharge, effective Feb 24 2026, expires Jul 24 2026 (150-day statutory limit)
-- Applies to China same as all other countries
+SECTION 232 — national-security tariffs, apply to ALL countries including China:
+- Steel & aluminum: 25% from Mar 12 2025, raised to 50% Jun 4 2025 (exemptions ended)
+- Copper: 50% from Aug 1 2025
+- Automobiles: 25% from Apr 3 2025 (parts May 3 2025)
+- Semiconductors (narrow): 25% on certain advanced logic chips (e.g. NVIDIA H200, AMD MI325X class) from Jan 15 2026; data-centre and R&D imports exempt
+- Other 232 actions (heavy trucks, lumber/furniture, pharmaceuticals) apply globally and are not China-specific
 
 BIS EXPORT CONTROLS:
-- Entity List: 600+ Chinese entities (verify count from today's articles)
-- Advanced semiconductor rules: Oct 2022 + Oct 2023 + Dec 2024 expansions covering AI chips, HBM, advanced manufacturing equipment, EUV-relevant
-- Validated End User (VEU) status: most major Chinese fabs lost VEU status; operating on annual licenses with restrictive conditions
-- Connected Vehicles Rule (Commerce, Jan 2025): bans certain Chinese-origin hardware/software in US vehicles
+- Entity List: China is the largest single destination on the list; do NOT state a total unless today's articles give one.
+- Advanced-computing rules: Oct 2022, Oct 2023, Dec 2024 expansions (AI chips, HBM, SME, EUV-relevant items)
+- Affiliates ("50%") Rule, Sep 29 2025: extended Entity List restrictions to majority-owned subsidiaries; SUSPENDED for one year from Nov 10 2025 under the Busan deal — due to lapse around Nov 10 2026 unless extended (verify).
+- China's reciprocal Oct 9 2025 rare-earth export-control expansion was likewise suspended for a year from Nov 10 2025 (verify status).
+- Connected Vehicles Rule (Commerce, Jan 2025): bans certain PRC-origin hardware/software in US vehicles
 
-OFAC SDN PROGRAM:
-- Running designations on Chinese entities/individuals (Xinjiang, Hong Kong, Russia-related, narcotics, cyber, NPWMD)
-- Track 7-day adds from today's articles
-
-DOD SECTION 1260H "CHINESE MILITARY COMPANIES" LIST:
-- Annual list of Chinese companies with PLA ties, restricts DoD procurement
-- Notable adds: SMIC, CATL, Tencent
-- Track today's articles for new adds/removals
-
-CFIUS:
-- Reviews of inbound Chinese investment in US tech, real estate, critical infrastructure
-- Recent divestiture orders: track from today's articles
-
-OUTBOUND INVESTMENT SCREENING (Treasury):
-- EO 14105 (Sept 2023, implemented Jan 2025): restricts US investment in PRC semiconductors, quantum, AI
-- Program activity: track notifications and prohibited transactions
-
-ICTS RULE (Commerce):
-- Information and Communications Technology Services rule — covers connected vehicles, drones, smart devices
+OFAC SDN: running designations (Xinjiang, Hong Kong, Russia-related, narcotics, cyber, NPWMD). Track adds from today's articles.
+DOD SECTION 1260H list: annual; notable entries SMIC, CATL, Tencent (Jan 2025). Track adds/removals from today's articles.
+CFIUS: inbound review of PRC investment; divestiture orders from today's articles only.
+OUTBOUND INVESTMENT: EO 14105 program (Treasury, in force since Jan 2 2025) restricting US investment in PRC semiconductors, quantum and AI; Congress moved to codify it in the FY2026 NDAA (verify scope from articles).
+ICTS RULE (Commerce): connected vehicles, drones, smart devices.
 
 USE THESE BASELINES EXACTLY unless today's articles report a NEW policy action or status change. Do NOT invent trade policy items from memory.
 
-CRITICAL ACCURACY NOTE — Section 301 vs IEEPA vs Section 232: These are DIFFERENT statutory authorities with DIFFERENT scope:
-(1) Section 301: targeted tariffs on Chinese goods only, USTR-administered, justified by "unfair trade practices"
-(2) IEEPA: presidential national-emergency tariffs, can apply globally (e.g. fentanyl on China specifically) or reciprocally
-(3) Section 232: national security tariffs on specific products (steel, aluminum, autos, semiconductors), apply globally
-(4) Section 122: temporary global surcharge, 150-day limit
-Do NOT conflate. Stack rates ADDITIVELY when discussing total tariff burden on a specific product."""
+CRITICAL ACCURACY NOTE — four different statutes:
+(1) Section 301: USTR, targeted (China lists; the Jul 2026 excess-capacity duties), "unfair trade practices"
+(2) IEEPA: presidential emergency powers — STRUCK DOWN for tariffs Feb 20 2026; none in force
+(3) Section 232: national security, product-specific, global
+(4) Section 122: 150-day balance-of-payments surcharge — EXPIRED Jul 24 2026
+Do NOT conflate. Stack rates ADDITIVELY when discussing total burden on a specific product."""
 
 
 _KEY_DATES = """\
@@ -370,54 +347,58 @@ VERIFIED CHINA DATES (use ONLY these for pattern_note precedents unless today's 
 
 Jan 1 1979: US-PRC diplomatic recognition (Carter administration)
 Jan 13 2024: Lai Ching-te elected Taiwan President (DPP third consecutive term)
+Jan 28 1979: Deng Xiaoping arrives in the US (visit through Feb 5)
+Feb 17 1979: Sino-Vietnamese War begins
+Feb 20 2026: Supreme Court strikes down IEEPA tariffs (Learning Resources v. Trump)
 Feb 21 1972: Nixon-Mao meeting, Beijing — start of US-PRC opening
-Feb 28 1947: Taiwan 2-28 Incident (KMT massacre, foundational to Taiwanese identity)
-Mar 5 1953: Stalin death (Sino-Soviet relations turning point)
-Apr 1 2001: EP-3 incident (US Navy EP-3E vs PLAAF J-8 collision over Hainan)
-Apr 12 1979: Taiwan Relations Act signed
-May 7 1999: NATO bombing of Chinese embassy in Belgrade
+Feb 28 1947: Taiwan 2-28 Incident
+Mar 5 1953: Stalin death
+Apr 1 2001: EP-3 incident, Hainan
+Apr 10 1979: Taiwan Relations Act signed into law
+May 7 1999: NATO bombing of the Chinese embassy in Belgrade
+May 14-15 2026: Trump-Xi summit, Beijing
 Jun 4 1989: Tiananmen Square crackdown
-Jul 1 1921: CCP founding (claimed date)
-Jul 1 1997: Hong Kong handover from UK to PRC
+Jul 1 1921: CCP founding (official date)
+Jul 1 1997: Hong Kong handover
 Jul 12 2016: SCS Arbitration ruling against China (PCA, Philippines case)
 Aug 8 2008: Beijing Olympics opening
-Sep 18 1931: Mukden Incident (Japan invades Manchuria)
-Sep 21 2021: Xi launches Global Development Initiative
-Sep 30 2017: Solomon Islands switches recognition from Taiwan to PRC
+Sep 16 2019: Solomon Islands switches recognition from Taiwan to the PRC (Kiribati follows Sep 20)
+Sep 18 1931: Mukden Incident
+Sep 21 2021: Xi launches the Global Development Initiative at UNGA
 Oct 1 1949: PRC founding
-Oct 25 1971: UN General Assembly Resolution 2758 (PRC seat replaces ROC)
+Oct 20-23 2025: Fourth Plenum of the 20th CC — 15th Five-Year Plan recommendations; He Weidong and Miao Hua expelled; Zhang Shengmin made CMC vice chairman
+Oct 25 1971: UNGA Resolution 2758
+Oct 30 2025: Trump-Xi meeting, Busan — one-year truce (fentanyl tariff cut, rare-earth and Affiliates Rule suspensions)
 Nov 12 2014: Xi-Obama Beijing summit, US-China climate agreement
-Dec 11 2001: China accedes to WTO
+Dec 11 2001: China accedes to the WTO
 Dec 13 1937: Nanjing Massacre begins
-Dec 26 1893: Mao Zedong birth (CCP holiday context)
-Mar 4 1979: Sino-Vietnamese War begins
-Aug 17 1982: US-PRC Joint Communique on Taiwan arms sales
-Jan 30 1979: Deng Xiaoping US visit (post-recognition)"""
+Dec 26 1893: Mao Zedong birth
+Aug 17 1982: US-PRC Joint Communique on Taiwan arms sales"""
 
 
 _VERIFIED_UPCOMING = """\
 VERIFIED UPCOMING DATES (use these + any dated events from today's articles):
 
-May 14-15 2026: Trump-Xi summit in Beijing — rescheduled from March. Major US-China bilateral.
-May 20-23 2026: APEC Ministers Responsible for Trade Meeting (MRT) — Suzhou, China.
-May 20 2026: Lai Ching-te's 2-year anniversary in office (Taiwan).
-Jun 4 2026: Tiananmen 37th anniversary — sensitive date, watch for censorship spikes and dissident commemorations abroad.
-Jul 1 2026: Hong Kong handover 29th anniversary; CCP founding 105th anniversary.
-Jul 12 2026: SCS Arbitration ruling 10th anniversary — Philippines marks the date.
-Jul 24 2026: Section 122 surcharge expiry — 150-day statutory limit; Congress must extend or surcharge lapses.
-Aug 1 2026: PLA founding anniversary (建军节) — typically accompanied by military parades and Xi appearances.
-Aug 2026 (estimated): Beidaihe leadership retreat — informal, dates not announced. Key decisions emerge.
-Sep 9 2026: Mao Zedong death anniversary.
-Oct 1 2026: PRC National Day, 77th anniversary — military parade in major years, expected display of new platforms.
-Oct 25 2026: UN Resolution 2758 — 55th anniversary, contested interpretation flashpoint.
-Late 2026: Fourth Plenum of 20th CC expected — economic reform agenda.
-Dec 13 2026: Nanjing Massacre Day of National Memory (国家公祭日).
-Recurring monthly: Politburo Standing Committee meetings (irregular but tracked).
+Sep 9 2026: Mao Zedong death anniversary (50th).
+Sep 18 2026: Mukden Incident 95th anniversary — Japan-China flashpoint date.
+Sep 22 2026: UN General Assembly high-level week opens, New York.
+Sep 24 2026: Xi Jinping state visit to Washington — first Chinese leader visit to the US since 2015; reciprocates Trump's May Beijing visit. Watch for the Board of Trade / Board of Investment follow-through, ag purchases, Boeing, export controls.
+Oct 1 2026: PRC National Day, 77th anniversary.
+Oct 2026: Fifth Plenum of the 20th Central Committee, Beijing — announced by the Jul 30 2026 Politburo; party discipline and the run-up to the 21st Party Congress (2027).
+Oct 25 2026: UN Resolution 2758 — 55th anniversary, contested-interpretation flashpoint.
+Nov 3 2026: US midterm elections.
+Nov 10 2026: (approximate) one-year suspensions from the Busan deal lapse unless extended — BIS Affiliates Rule and China's Oct 2025 rare-earth controls (verify).
+Nov 18-19 2026: APEC Economic Leaders' Meeting, Shenzhen — China hosts; Trump attendance and any Trump-Xi meeting to be confirmed.
+Nov 28 2026: Taiwan nine-in-one local elections — 22 mayors and magistrates, ~11,000 offices; read as a mid-term on Lai.
+Dec 13 2026: Nanjing Massacre National Memorial Day (国家公祭日).
+Dec 14-15 2026: G20 Leaders' Summit, Doral (Miami) — US hosts; Xi attendance to be confirmed.
+Jan 2027: BIS advanced-computing rule anniversaries; Section 232 semiconductor tariff first anniversary (Jan 15).
+Mar 5 2027: (approximate) NPC annual session opens — Two Sessions; second year of the 15th Five-Year Plan.
+Recurring monthly: Politburo meetings (usually late month); NBS monthly data (CPI/PPI ~10th, activity data ~15th); PBOC LPR on the 20th.
 Recurring bi-monthly: NPC Standing Committee sessions.
-Recurring quarterly: NBS data releases (GDP, PMI, trade balance).
-Recurring: USCC public hearings (typically monthly).
-Recurring: House Select Committee on the CCP hearings.
-Recurring: IAEA Board of Governors meets Mar, Jun, Sep, Nov — China nuclear program agenda item."""
+Recurring quarterly: NBS GDP (mid-Jan, mid-Apr, mid-Jul, mid-Oct).
+Recurring: USCC public hearings; House Select Committee on the CCP hearings.
+Recurring: IAEA Board of Governors meets Mar, Jun, Sep, Nov."""
 
 
 # ─────────────────────────────────────────────────────────────────────────────
