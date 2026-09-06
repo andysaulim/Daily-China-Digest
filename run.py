@@ -441,6 +441,39 @@ def _trim_to_length(digest: dict, rank: dict | None = None) -> list[str]:
     return log
 
 
+
+def _dedupe_delta_quote(digest: dict) -> list[str]:
+    """Drop a Propaganda Delta quote that What Beijing Is Saying already carries.
+
+    Sep 5 2026: Guo Jiakun's Nepal line ran verbatim in both panels. The
+    official_line item is the better home (speaker, role, original Chinese,
+    context), so the delta loses the duplicate.
+    """
+    xd = digest.get("xinhua_delta")
+    quotes = xd.get("key_quotes") if isinstance(xd, dict) else None
+    if not quotes:
+        return []
+    def _toks(t):
+        return set(re.sub(r"[^\w]+", " ", str(t or "")).lower().split())
+    said = [_toks(it.get("statement")) for it in (digest.get("official_line") or [])
+            if isinstance(it, dict) and it.get("statement")]
+    def _same(a, b):
+        # Translations of one quote differ by a comma or a conjunction, so
+        # compare token sets rather than strings.
+        if len(a) < 8 or len(b) < 8:
+            return False
+        return len(a & b) / min(len(a), len(b)) >= 0.85
+    kept, log = [], []
+    for q in quotes:
+        qn = _toks(q.get("quote") if isinstance(q, dict) else q)
+        if any(_same(qn, sline) for sline in said):
+            log.append("    - delta: dropped quote already in official_line: "
+                       f"'{str(q.get('quote') if isinstance(q, dict) else q)[:50]}'")
+            continue
+        kept.append(q)
+    xd["key_quotes"] = kept
+    return log
+
 def _dedupe_within(digest: dict) -> list[str]:
     """One topic = one entry. Same URL or a near-identical headline across sections."""
     log = []
@@ -689,6 +722,7 @@ def _postprocess_digest(digest: dict, payload: dict, prev_urls: set, prev_titles
     log += _repair_and_gate_urls(digest, payload)
     log += _dedupe_cross_day(digest, prev_urls, prev_titles)
     log += _dedupe_within(digest)
+    log += _dedupe_delta_quote(digest)
     log += _drop_hollow_items(digest)
     log += _drop_stale_calendar(digest, today)
     log += _enforce_source_diversity(digest)

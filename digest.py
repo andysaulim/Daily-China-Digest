@@ -445,7 +445,7 @@ _XINHUA_FULL_INSTRUCTIONS = (
     "- output_volume: string assessment vs normal (e.g. \"Heavy — 32 articles (avg: 18)\", \"Light — 8 articles\"). Use XINHUA OUTPUT SUMMARY above for actual count.\n"
     "- silence_today: boolean — true if complete output blackout (rare)\n"
     "- watch_flag: boolean — true if output contains escalation-level rhetoric, unusual Xi absence (14+ days), Taiwan-specific aggressive framing, or new doctrinal language\n"
-    "- bottom_line: 1-2 sentences MAX. State the single most important Xinhua/PD/GT takeaway and what to watch. Ruthlessly concise."
+    "- bottom_line: 1-2 sentences MAX, about the PROPAGANDA OUTPUT ITSELF: a framing choice, a phrase that appeared or vanished, a tone shift, a conspicuous silence. NEVER a restatement of the day's news lead, which the reader has already seen above; if the official media said nothing notable, say that in one sentence. Ruthlessly concise."
 )
 
 
@@ -763,7 +763,7 @@ Return a digest object with:
 
 - morning_memo: EXACTLY 3 items. Each one sentence summarizing one of today's top China stories. What a China desk officer tells their boss in the elevator. Lead with the verb. Sourced from today's actual articles.
 
-- key_stat: a single striking statistic from TODAY's articles — must be different from yesterday. Object: number (e.g. "$2.3B", "53%", "12"), label (under 60 chars), context (1 sentence), source (article it came from).
+- key_stat: a single striking statistic from TODAY's articles — must be different from yesterday. Object: number (e.g. "$2.3B", "53%", "12"), label (under 60 chars), context (1 sentence that adds a fact no item body already states: the comparison, the base, the prior print; never a sentence copied from a story you have placed), source (article it came from).
 
 - prc_government: array of 3-5 PRC State Council / ministry ACTIONS from today's news (decisions, notices, regulations, investigations, approvals, data releases; the statements themselves go in official_line). Prefer the ZH government primary items (国务院, 商务部, 发改委, 央行, 海关) when they carry the notice. Each: ministry (English), ministry_chinese (e.g. 外交部, 国防部, 商务部, 中国人民银行), official (name + title), action (1-line headline), document (title of the notice / regulation / announcement if one was issued, else null), detail (1-2 sentences with the specific numbers, dates and thresholds), source_label (e.g. "MOFA EN", "MOFCOM", "PBOC"), url.
 
