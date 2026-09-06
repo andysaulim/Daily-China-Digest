@@ -19,7 +19,7 @@
  },
  "AFRICOM China": {
   "empty_runs": 0,
-  "last_count": 54,
+  "last_count": 55,
   "last_ok": "2026-09-06",
   "last_seen": "2026-09-06"
  },
@@ -308,7 +308,7 @@
  },
  "China Journal": {
   "empty_runs": 0,
-  "last_count": 68,
+  "last_count": 69,
   "last_ok": "2026-09-06",
   "last_seen": "2026-09-06"
  },
@@ -494,7 +494,7 @@
  },
  "HR Cuba SIGINT": {
   "empty_runs": 0,
-  "last_count": 22,
+  "last_count": 21,
   "last_ok": "2026-09-06",
   "last_seen": "2026-09-06"
  },
@@ -512,7 +512,7 @@
  },
  "HR Khalifa UAE": {
   "empty_runs": 0,
-  "last_count": 100,
+  "last_count": 45,
   "last_ok": "2026-09-06",
   "last_seen": "2026-09-06"
  },
@@ -524,7 +524,7 @@
  },
  "HR Polar Silk Road": {
   "empty_runs": 0,
-  "last_count": 51,
+  "last_count": 50,
   "last_ok": "2026-09-06",
   "last_seen": "2026-09-06"
  },
@@ -656,7 +656,7 @@
  },
  "J. Conflict Resolution": {
   "empty_runs": 0,
-  "last_count": 25,
+  "last_count": 26,
   "last_ok": "2026-09-06",
   "last_seen": "2026-09-06"
  },
@@ -698,7 +698,7 @@
  },
  "Japan MOFA China": {
   "empty_runs": 0,
-  "last_count": 100,
+  "last_count": 64,
   "last_ok": "2026-09-06",
   "last_seen": "2026-09-06"
  },
@@ -848,7 +848,7 @@
  },
  "Paulson Institute": {
   "empty_runs": 0,
-  "last_count": 100,
+  "last_count": 59,
   "last_ok": "2026-09-06",
   "last_seen": "2026-09-06"
  },
@@ -1270,7 +1270,7 @@
  },
  "Xi Politburo": {
   "empty_runs": 0,
-  "last_count": 100,
+  "last_count": 36,
   "last_ok": "2026-09-06",
   "last_seen": "2026-09-06"
  },
@@ -1420,7 +1420,7 @@
  },
  "复旦美国研究中心 (ZH)": {
   "empty_runs": 0,
-  "last_count": 32,
+  "last_count": 33,
   "last_ok": "2026-09-06",
   "last_seen": "2026-09-06"
  },
