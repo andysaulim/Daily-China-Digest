@@ -1,13 +1,20 @@
 {
   "daily_counts": {
-    "2026-09-05": {}
+    "2026-09-05": {},
+    "2026-09-06": {
+      "Community of Common Destiny / 人类命运共同体": 1
+    }
   },
   "tone_history": {
     "2026-09-05": {
       "us": "Guarded ahead of the Sept 24 summit — MOFA declined to confirm any agriculture/non-tariff-barrier joint statement while rare-earth suppliers quietly held some US shipments.",
       "taiwan": "Firm — TAO pressed the Xiamen-Kinmen bridge issue against Taipei's denial, and Beijing boycotted the Gwangju Biennale over a Taiwan exhibit naming.",
       "russia": "Conciliatory/routine — Xi sent a congratulatory letter to the 8th China-Russia Energy Business Forum."
+    },
+    "2026-09-06": {
+      "us": "Guarded — MOFA declined again to confirm any agriculture/non-tariff-barrier joint statement ahead of the Sept. 24 summit.",
+      "russia": "Conciliatory — Xi held bilateral talks with Putin at the SCO summit in Kyrgyzstan (Aug. 30-Sept. 3), and Moscow signaled openness to a Trump-Xi-Putin trilateral on Sept. 6."
     }
   },
-  "last_updated": "2026-09-05T13:49:53.756440+00:00"
+  "last_updated": "2026-09-06T13:50:48.537956+00:00"
 }

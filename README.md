@@ -14,18 +14,18 @@ Operating notes, the failure history and the rules the code enforces are in [`CL
 
 | Metric | Value |
 | --- | --- |
-| Last generated | Sep 5, 2026 at 9:49 AM ET |
-| Digest date | Saturday, September 5, 2026 |
-| Articles collected | 655 from 91 sources |
-| Sources cited in digest | 6 |
-| Google News URLs canonicalised | 601/601 |
-| Items enriched with article text | 129 |
-| Top stories / overnight / official line | 5 / 4 / 5 |
-| Word count | ~1,456 |
+| Last generated | Sep 6, 2026 at 9:50 AM ET |
+| Digest date | Sunday, September 6, 2026 |
+| Articles collected | 522 from 79 sources |
+| Sources cited in digest | 12 |
+| Google News URLs canonicalised | 485/485 |
+| Items enriched with article text | 139 |
+| Top stories / overnight / official line | 4 / 6 / 4 |
+| Word count | ~1,547 |
 | Validation attempts | 1 |
 | Health alerts | 1 |
-| Estimated model cost | $0.74 |
-| Xi appeared | Yes |
+| Estimated model cost | $0.92 |
+| Xi appeared | No |
 
 ## How It Works
 
