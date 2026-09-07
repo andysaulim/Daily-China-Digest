@@ -194,19 +194,6 @@ def render_html(digest: dict) -> str:
 {"<div style='margin-top:12px;padding-top:12px;border-top:1px solid #D4AC0D;font-size:13px;color:rgba(255,255,255,0.9);font-family:Georgia,serif;'><strong style='color:#D4AC0D;font-family:Arial,sans-serif;font-size:11px;letter-spacing:1px;'>RE:</strong>&nbsp; " + re_line + "</div>" if re_line else ""}
 </div>""")
 
-    # 1b. The Bottom Line — the day's frame, in the model's own editor_note.
-    # This field was generated and word-counted on every run since May and never
-    # rendered, so the reader got twenty sections of facts and no lead. Every
-    # digest worth reading (Axios "1 big thing", Politico's lead, Bloomberg's
-    # opener) puts one of these above everything else.
-    editor_note = _esc(str(digest.get("editor_note") or "").strip())
-    if editor_note:
-        sections_pre.append(f"""
-<div style="padding:16px 32px;background:#FAFAF5;border-bottom:1px solid #EBEBEB;" class="sec">
-<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#C0392B;font-family:Arial,sans-serif;margin-bottom:6px;">The Bottom Line</div>
-<div style="font-size:15px;line-height:1.55;color:#1B2A4A;font-family:Georgia,serif;">{editor_note}</div>
-</div>""")
-
     # 2. Market strip. Built from what actually resolved, never from a fixed
     # grid. The old strip hard-coded nine tiles across three tables; four of the
     # nine indicators (10Y CGB, PBOC LPR, China 5Y CDS, GDP) have failed to fetch
@@ -381,7 +368,6 @@ def render_html(digest: dict) -> str:
             # Suppress body if it duplicates the headline (Google News RSS quirk)
             b = _esc(b_raw) if b_raw.strip() and b_raw.strip() != s.get("headline", "").strip() else ""
             sw = _esc(s.get("so_what", ""))
-            pn = _esc(s.get("pattern_note", ""))
             sl = _esc(_clean_src(s.get("src_line", s.get("source", ""))))
             url = s.get("url", "")
             sh += f"""
@@ -390,7 +376,6 @@ def render_html(digest: dict) -> str:
 <h3 style="margin:0 0 8px 0;font-size:16px;line-height:1.4;color:#1B2A4A;font-family:Georgia,serif;font-weight:700;">{_link_or_text(h, url, style="color:#1B2A4A;text-decoration:none;")}</h3>
 {"<p style='margin:0 0 10px 0;font-size:13px;line-height:1.55;color:#444;'>" + b + "</p>" if b else ""}
 {"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#555;font-style:italic;'><strong style='color:#1B2A4A;font-style:normal;'>So what:</strong> " + _link_or_text(sw, url, style="color:#555;text-decoration:underline;") + "</p>" if sw else ""}
-{"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#777;font-style:italic;'><strong style='color:#555;font-style:normal;'>Pattern:</strong> " + pn + "</p>" if pn else ""}
 <div style="font-size:10px;color:#aaa;margin-top:6px;text-transform:uppercase;letter-spacing:0.5px;">{sl}</div>
 </div>"""
         sections_today.append(f'<div {_SEC}>{_sec_label("Top Stories")}{sh}</div>')
@@ -579,129 +564,7 @@ def render_html(digest: dict) -> str:
                              b.get("url", ""), b.get("body_text", ""))
         sections_today.append(f'<div {_SEC}>{_sec_label("Economy &amp; Business")}{bh}</div>')
 
-    # 13. Voices — the only analysis section. Op-eds and think-tank arguments
-    # from the watch-listed experts, US and China-based. Academic journal
-    # pieces no longer have a section of their own: a daily brief is not the
-    # place for them unless one says something a policymaker acts on this week,
-    # in which case the prompt lets it in here.
-    opeds = digest.get("opeds_today") or []
-    if opeds:
-        body = ""
-        for o in opeds[:5]:
-            title = _esc(o.get("title") or o.get("headline", ""))
-            src = _esc(o.get("source", ""))
-            auth = _esc(o.get("authors", ""))
-            ca = _esc(o.get("central_argument", ""))
-            ps = _esc(o.get("policy_so_what", ""))
-            url = o.get("url", "")
-            cb = ('<span style="margin-left:6px;padding:1px 6px;border-radius:3px;font-size:9px;'
-                  'background:#EEF2F7;color:#1B2A4A;letter-spacing:0.5px;">CHINA-BASED</span>'
-                  if o.get("china_based") else "")
-            body += f"""<div style="margin-bottom:12px;padding:12px 14px;background:#fff;border-left:3px solid #D4AC0D;border-bottom:1px solid #F0F0F0;">
-<div style="font-size:9px;color:#6B7280;text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:3px;">{src}{(' &middot; ' + auth) if auth else ''}{cb}</div>
-<div style="font-size:14px;font-weight:700;color:#1B2A4A;font-family:Georgia,serif;line-height:1.35;margin-bottom:5px;">{_link_or_text(title, url, style="color:#1B2A4A;text-decoration:none;")}</div>
-{"<div style='font-size:12px;color:#444;line-height:1.5;'>" + ca + "</div>" if ca else ""}
-{"<div style='font-size:11px;color:#555;margin-top:4px;font-style:italic;'><strong style='color:#1B2A4A;font-style:normal;'>For policy:</strong> " + ps + "</div>" if ps else ""}
-</div>"""
-        sections_analysis.append(f'<div {_SEC}>{_sec_label("Voices")}{body}</div>')
-
     # 14. Public Sentiment — removed (low signal-to-noise)
-
-    # 14a. Propaganda Delta — reading Xinhua, People's Daily and Global Times.
-    # The module docstring has promised this panel since the file was written and
-    # it was never built: xinhua_delta is generated on every run, counted toward
-    # the word total (wordcount.DELTA_FIELDS) and dropped by the renderer, the
-    # third field to have that happen after editor_note and china_macro. It is
-    # the section no wire service carries — doctrinal phrase movement and what
-    # Beijing conspicuously stopped saying — so it leads the Beijing block.
-    xd = digest.get("xinhua_delta") or {}
-    if isinstance(xd, dict) and any(xd.get(k) for k in
-                                    ("bottom_line", "propaganda_focus", "xi_activity",
-                                     "peoples_daily_front_page", "key_phrase_changes",
-                                     "doctrinal_shift", "notable_omissions",
-                                     "global_times_editorial", "key_quotes")):
-        def _line(label, value, color="rgba(255,255,255,0.9)"):
-            if not value:
-                return ""
-            if isinstance(value, (list, tuple)):
-                value = ", ".join(str(v) for v in value if v)
-                if not value:
-                    return ""
-            return (f'<div style="margin-bottom:8px;">'
-                    f'<span style="font-size:9px;text-transform:uppercase;'
-                    f'letter-spacing:1.2px;color:rgba(255,255,255,0.45);">{label}</span>'
-                    f'<div style="font-size:12px;line-height:1.5;color:{color};'
-                    f'margin-top:2px;">{_esc(str(value))}</div></div>')
-
-        body = ""
-        bl = str(xd.get("bottom_line") or "").strip()
-        if bl:
-            body += (f'<div style="font-size:14px;line-height:1.55;color:#ffffff;'
-                     f'font-family:Georgia,serif;margin-bottom:14px;'
-                     f'padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.15);">'
-                     f'{_esc(bl)}</div>')
-
-        # Doctrinal phrase movement — the distinctive part, so it renders as chips.
-        chips = ""
-        for ph in (xd.get("key_phrase_changes") or [])[:5]:
-            if not isinstance(ph, dict):
-                continue
-            phrase = _esc(str(ph.get("phrase", "")))
-            lbl = _esc(str(ph.get("delta_label", "")))
-            if not phrase:
-                continue
-            up = "\u2191" in lbl or "new" in lbl.lower()
-            down = "\u2193" in lbl
-            col = "#E8B84B" if up else "#7FB3D5" if down else "rgba(255,255,255,0.75)"
-            chips += (f'<span style="display:inline-block;margin:0 5px 5px 0;'
-                      f'padding:3px 9px;background:rgba(255,255,255,0.07);'
-                      f'border:1px solid rgba(255,255,255,0.14);border-radius:12px;'
-                      f'font-size:11px;color:{col};">{phrase}'
-                      f'{(" &middot; " + lbl) if lbl else ""}</span>')
-        if chips:
-            body += (f'<div style="margin-bottom:10px;">'
-                     f'<div style="font-size:9px;text-transform:uppercase;'
-                     f'letter-spacing:1.2px;color:rgba(255,255,255,0.45);'
-                     f'margin-bottom:5px;">Doctrinal Phrase Movement</div>{chips}</div>')
-
-        body += _line("Xi Today", xd.get("xi_activity"))
-        body += _line("People&#39;s Daily Front Page", xd.get("peoples_daily_front_page"))
-        body += _line("Propaganda Focus", xd.get("propaganda_focus"))
-        body += _line("Global Times Editorial", xd.get("global_times_editorial"))
-        # A doctrinal shift or a conspicuous silence is the highest-value signal
-        # in the whole panel, so it is coloured, not buried in the run of lines.
-        body += _line("Doctrinal Shift", xd.get("doctrinal_shift"), color="#E8B84B")
-        body += _line("Notable Omissions", xd.get("notable_omissions"), color="#E8B84B")
-
-        for q in (xd.get("key_quotes") or [])[:1]:
-            if not isinstance(q, dict) or not q.get("quote"):
-                continue
-            attrib = " &middot; ".join(x for x in (_esc(str(q.get("speaker") or "")),
-                                                   _esc(str(q.get("source_article") or ""))) if x)
-            attrib_html = ('<div style="font-size:10px;color:rgba(255,255,255,0.5);'
-                           f'margin-top:5px;">{attrib}</div>') if attrib else ""
-            body += (f'<div style="margin-top:12px;padding:10px 12px;'
-                     f'background:rgba(255,255,255,0.05);border-left:3px solid #E8B84B;">'
-                     f'<div style="font-size:13px;line-height:1.55;color:#ffffff;'
-                     f'font-family:Georgia,serif;font-style:italic;">'
-                     f'&ldquo;{_esc(str(q.get("quote")))}&rdquo;</div>'
-                     f'{attrib_html}</div>')
-
-        vol = _esc(str(xd.get("output_volume") or ""))
-        flag = ('<span style="display:inline-block;margin-left:8px;padding:2px 8px;'
-                'border-radius:3px;font-size:9px;font-weight:700;letter-spacing:0.5px;'
-                'background:#C0392B;color:#ffffff;">WATCH</span>'
-                if xd.get("watch_flag") else "")
-        foot = (f'<div style="margin-top:12px;padding-top:10px;'
-                f'border-top:1px solid rgba(255,255,255,0.12);font-size:10px;'
-                f'color:rgba(255,255,255,0.45);">{vol}{flag}</div>' if (vol or flag) else "")
-
-        if body:
-            sections_analysis.append(f"""
-<div style="padding:20px 32px;background:#14213D;border-bottom:1px solid rgba(255,255,255,0.1);" class="sec dark-sec">
-<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#E8B84B;font-family:Arial,sans-serif;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #E8B84B;">Propaganda Delta</div>
-{body}{foot}
-</div>""")
 
     # 14b. What Beijing Is Saying — the PRC government's own words today.
     # Sits ahead of Social Statements (which carries everyone else) so the
@@ -818,7 +681,10 @@ This brief is generated automatically from {_esc(str(digest.get("source_count") 
 <style>
 :root {{ color-scheme: light; }}
 body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; color:#333333; -webkit-text-size-adjust:100%; }}
-.container {{ max-width:680px; margin:0 auto; background:#ffffff; }}
+.container {{ max-width:680px; margin:0 auto; background:#ffffff; text-align:left; }}
+/* The wrapper <td align="center"> centres the container for Outlook, which
+   ignores margin:auto. Without the reset above it also centred every line
+   of text in the brief. */
 /* Lock dark sections — prevent iOS Mail light-mode override */
 .dark-sec {{ background-color:#1B2A4A !important; color:#ffffff !important; }}
 .dark-sec * {{ color:#ffffff !important; }}
@@ -827,7 +693,7 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
 .deep-sec {{ background-color:#0F1B30 !important; color:#ffffff !important; }}
 .delta-sec {{ background-color:#0a0f1e !important; color:#ffffff !important; }}
 @media only screen and (max-width: 600px) {{
-  .container {{ width:100% !important; }}
+  .container {{ width:100% !important; text-align:left !important; }}
   .sec {{ padding-left:16px !important; padding-right:16px !important; }}
   h1 {{ font-size:22px !important; }}
   .key-stat-num {{ font-size:26px !important; }}

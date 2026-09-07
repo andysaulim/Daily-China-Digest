@@ -1,6 +1,6 @@
 # China Daily Brief
 
-Automated daily intelligence briefing on the People's Republic of China for the CSIS Korea Chair. Sibling pipeline to [Daily-Korea-Digest](https://github.com/andysaulim/Daily-Korea-Digest), [Daily-Japan-Digest](https://github.com/andysaulim/Daily-Japan-Digest) and [Daily-Australia-Pacific-Islands-Digest](https://github.com/andysaulim/Daily-Australia-Pacific-Islands-Digest). Collects from 269 feeds (56 Chinese-language), canonicalises and fetches the articles, generates an analyst-grade digest via Claude, validates it, and delivers a styled HTML email at **6 AM ET**.
+Automated daily topline of the major China news for the CSIS Korea Chair. Reported, attributed, no analysis section. Formerly described as an intelligence briefing on the People's Republic of China for the CSIS Korea Chair. Sibling pipeline to [Daily-Korea-Digest](https://github.com/andysaulim/Daily-Korea-Digest), [Daily-Japan-Digest](https://github.com/andysaulim/Daily-Japan-Digest) and [Daily-Australia-Pacific-Islands-Digest](https://github.com/andysaulim/Daily-Australia-Pacific-Islands-Digest). Collects from 269 feeds (56 Chinese-language), canonicalises and fetches the articles, generates an analyst-grade digest via Claude, validates it, and delivers a styled HTML email at **6 AM ET**.
 
 **Live archive:** [andysaulim.github.io/Daily-China-Digest](https://andysaulim.github.io/Daily-China-Digest) (latest issue at `index.html`, every issue at `archive.html`, each with a print-ready PDF). Every email carries "Read online", "Print / PDF" and "Archive" links. The archive is pushed to the `gh-pages` branch by the live workflow; GitHub Pages must be set to serve that branch once in repository settings.
 
@@ -67,7 +67,6 @@ collect.py      resolve.py      fulltext.py     digest.py         run.py        
 | # | Section | Description |
 | - | - | - |
 | 1 | Header | Date · RE line |
-| 2 | **The Bottom Line** | 70–100 words: the judgment, the evidence for it, and a `Watch:` line naming what would confirm or break it. The lead, directly under the header. Generated as `editor_note`, and gated — a blank or a one-line recap blocks the send |
 | 3 | Today at a Glance | Top 3 stories in one sentence each |
 | 4 | Top Stories | 3–5 hard news stories with "So what" + pattern note |
 | 5 | **US–China** | 4–6 items, one format, each tagged by instrument: Tariff · Export Controls · Entity List · Sanctions · CFIUS · Investment · Diplomacy · Military · Congress · Legal. Replaces the tracker tables |
@@ -79,7 +78,6 @@ collect.py      resolve.py      fulltext.py     digest.py         run.py        
 | 10 | **Propaganda Delta** | Reading Xinhua, People's Daily and Global Times: doctrinal phrase movement, Xi's day, the front page, the Global Times line, a doctrinal shift or conspicuous omission, one quote. Generated as `xinhua_delta` |
 | 11 | **What Beijing Is Saying** | The PRC government's own words: MOFA presser, TAO, MND, MOFCOM, State Council, PBOC, Xi / Li Qiang / Wang Yi. Verbatim quote, Chinese original, tone, addressee |
 | 12 | What Beijing Did | Ministry actions with the document and thresholds, personnel changes, NPC/Politburo activity |
-| 13 | Voices | Up to 5 op-eds and think-tank arguments from the watch-listed experts, US and China-based. The only analysis section |
 | 14 | What Others Are Saying | Up to 4 quotes from US, Taiwan and allied officials |
 | — | **WIRE** | chapter |
 | 15 | Overnight Flash | 4–8 secondary items that fit none of the relationship sections |

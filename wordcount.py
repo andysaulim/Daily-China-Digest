@@ -27,17 +27,14 @@ TEXT_FIELDS = (
 # Every section rendered as a list of items.
 ITEM_SECTIONS = (
     "top_stories", "us_china", "china_world", "business_economy",
-    "overnight_items", "also_today", "official_line", "opeds_today",
+    "overnight_items", "also_today", "official_line",
     "social_statements", "prc_government", "npc_politburo",
     "personnel_changes", "calendar_watch",
 )
 
 # Top-level prose.
-SCALAR_FIELDS = ("re_line", "editor_note")
+SCALAR_FIELDS = ("re_line",)
 
-# xinhua_delta is a dict, not a list.
-DELTA_FIELDS = ("bottom_line", "doctrinal_shift", "peoples_daily_front_page",
-                "global_times_editorial", "xi_activity", "notable_omissions")
 
 
 def _w(value) -> int:
@@ -72,10 +69,6 @@ def count_words(digest: dict) -> int:
                 else:
                     words += _w(val)
 
-    delta = digest.get("xinhua_delta")
-    if isinstance(delta, dict):
-        for field in DELTA_FIELDS:
-            words += _w(delta.get(field))
 
     ks = digest.get("key_stat")
     if isinstance(ks, dict):
@@ -88,17 +81,15 @@ def count_words(digest: dict) -> int:
 if __name__ == "__main__":
     d = {
         "re_line": "one two three",                                   # 3
-        "editor_note": "four five",                                   # 2
         "morning_memo": ["a b", "c d", "e f"],                        # 6
         "top_stories": [{"headline": "g h", "body": "i j k"}],        # 5
         "official_line": [{"statement": "l m", "context": "n"}],      # 3
-        "xinhua_delta": {"bottom_line": "o p"},                       # 2
         "key_stat": {"label": "q", "context": "r"},                   # 2
-        "china_world": [{"headline": "s t", "body_text": "u"}],        # 3
+        "china_world": [{"headline": "s t", "body_text": "u"}],       # 3
     }
-    assert count_words(d) == 26, count_words(d)
+    assert count_words(d) == 22, count_words(d)
     assert count_words({}) == 0
     assert count_words(None) == 0
     # A list-valued field (authors, members) must be counted, not stringified.
-    assert count_words({"opeds_today": [{"authors": ["a b", "c"]}]}) == 3
+    assert count_words({"social_statements": [{"who": "a b", "quote_text": "c"}]}) == 3
     print("wordcount.py self-test passed")

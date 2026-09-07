@@ -59,7 +59,7 @@ ET = ZoneInfo("America/New_York")
 # that appears twice is kept in the earlier section.
 _DEDUPE_ORDER = (
     "top_stories", "us_china", "china_world", "business_economy",
-    "overnight_items", "also_today", "official_line", "opeds_today",
+    "overnight_items", "also_today", "official_line",
     "social_statements", "prc_government", "npc_politburo",
     "personnel_changes",
 )
@@ -70,22 +70,24 @@ _ALL_ITEM_SECTIONS = _DEDUPE_ORDER
 # may legitimately summarise something reported inside another article.
 _ARTICLE_SECTIONS = (
     "top_stories", "us_china", "china_world", "business_economy",
-    "overnight_items", "also_today", "opeds_today",
+    "overnight_items", "also_today",
 )
 
+# A topline of the day's major news: the caps buy ITEMS. The words freed by
+# dropping the Bottom Line, Voices and the Propaganda Delta (451 words on Sep 7,
+# 16 percent of the brief) went back into coverage, not into longer bodies.
 SECTION_CAPS = {
-    "top_stories":       (3, 5),
-    "us_china":          (0, 6),
-    "china_world":       (0, 7),
-    "business_economy":  (0, 6),
-    "overnight_items":   (4, 8),
+    "top_stories":       (4, 6),
+    "us_china":          (3, 8),
+    "china_world":       (4, 9),
+    "business_economy":  (3, 7),
+    "overnight_items":   (5, 10),
     "morning_memo":      (3, 3),
-    "also_today":        (0, 8),
-    "official_line":     (3, 6),
+    "also_today":        (0, 12),
+    "official_line":     (3, 5),
     "social_statements": (0, 4),
-    "opeds_today":       (0, 5),
     "prc_government":    (0, 5),
-    "personnel_changes": (0, 5),
+    "personnel_changes": (0, 4),
     "calendar_watch":    (0, 5),
 }
 
@@ -109,14 +111,19 @@ WORD_CEILING = 2700
 # LOWEST-RANKED item (by the collector's relevance score for its URL), not the
 # last one: run 118 cut Xi's New Delhi visit because it happened to be listed
 # after a Volvo sales story.
+# Cut the EXPENSIVE items first. also_today one-liners run ~22 words and buy a
+# whole story each; a china_world item costs ~45. Cutting the wire first, as the
+# order did until Sep 7, spent the most coverage per word saved and emptied the
+# wire completely on a heavy day. For a topline brief breadth is the product, so
+# the wire is nearly the last thing to go and keeps a floor of four.
 _TRIM_ORDER = (
-    ("also_today", 0),
-    ("opeds_today", 2),
-    ("social_statements", 2),
-    ("overnight_items", 4),
+    ("social_statements", 0),
+    ("personnel_changes", 0),
     ("business_economy", 3),
-    ("china_world", 4),
-    ("us_china", 3),
+    ("overnight_items", 5),
+    ("also_today", 4),
+    ("china_world", 5),
+    ("us_china", 4),
 )
 
 # Gmail truncates a message body over 102 KB and shows "[Message clipped] View
@@ -206,7 +213,7 @@ def _all_text(digest: dict):
     for i, m in enumerate(digest.get("morning_memo") or []):
         if isinstance(m, str):
             yield f"morning_memo[{i}]", m
-    for key in ("re_line", "editor_note"):
+    for key in ("re_line",):
         if isinstance(digest.get(key), str):
             yield key, digest[key]
     for section in _ALL_ITEM_SECTIONS:
@@ -215,10 +222,6 @@ def _all_text(digest: dict):
                 for f in _TEXT_FIELDS:
                     if isinstance(item.get(f), str):
                         yield f"{section}[{i}].{f}", item[f]
-    delta = digest.get("xinhua_delta") or {}
-    for f in ("bottom_line", "doctrinal_shift", "propaganda_focus"):
-        if isinstance(delta.get(f), str):
-            yield f"xinhua_delta.{f}", delta[f]
 
 
 def _corpus(payload: dict) -> list:
@@ -258,7 +261,7 @@ def _strip_style(digest: dict) -> list[str]:
     for i, m in enumerate(digest.get("morning_memo") or []):
         if isinstance(m, str):
             digest["morning_memo"][i] = _fix(m)
-    for key in ("re_line", "editor_note"):
+    for key in ("re_line",):
         if isinstance(digest.get(key), str):
             digest[key] = _fix(digest[key])
     for section in _ALL_ITEM_SECTIONS:
@@ -267,10 +270,6 @@ def _strip_style(digest: dict) -> list[str]:
                 for f in _TEXT_FIELDS:
                     if isinstance(item.get(f), str):
                         item[f] = _fix(item[f])
-    delta = digest.get("xinhua_delta") or {}
-    for f in ("bottom_line", "doctrinal_shift"):
-        if isinstance(delta.get(f), str):
-            delta[f] = _fix(delta[f])
     if emoji_n:
         log.append(f"    - style: stripped {emoji_n} emoji(s)")
     if dash_n:
@@ -439,6 +438,8 @@ def _trim_to_length(digest: dict, rank: dict | None = None) -> list[str]:
     _PP_STATS["words_before_trim"] = start
     _PP_STATS["items_trimmed_for_length"] = removed
     return log
+
+
 
 
 def _dedupe_within(digest: dict) -> list[str]:
@@ -766,25 +767,6 @@ def validate_digest(digest: dict, payload: dict | None = None, today=None,
     if not re_line or len(str(re_line).strip()) < 10:
         w.append("RE: LINE CRITICAL: missing or too short")
 
-    # The Bottom Line renders above everything and is the only thing many
-    # readers read. It was generated but never rendered until Sep 4 2026, and it
-    # has never been checked at all — so a blank or a one-line recap shipped
-    # silently. It is now the one prose field with a gate of its own.
-    note = str(digest.get("editor_note") or "").strip()
-    n_words = len(note.split())
-    if n_words < 25:
-        w.append(f"BOTTOM LINE CRITICAL: editor_note is {n_words} words "
-                 f"(needs 70-100; it renders above every section)")
-    elif not (55 <= n_words <= 130):
-        w.append(f"BOTTOM LINE: editor_note is {n_words} words (target 70-100)")
-    if note and "watch:" not in note.lower():
-        w.append("BOTTOM LINE: no 'Watch:' sentence naming what would confirm "
-                 "or break the judgment")
-    if note and re.match(r"^\s*(today|this morning)('s)?\s+(brief|digest|edition)",
-                         note, re.IGNORECASE):
-        w.append("BOTTOM LINE CRITICAL: editor_note opens with throat-clearing "
-                 "instead of a judgment")
-
     word_count = _count_words(digest)
     if word_count < WORD_FLOOR_CRITICAL:
         w.append(f"WORD COUNT CRITICAL: ~{word_count} words (hard minimum {WORD_FLOOR_CRITICAL}, "
@@ -859,10 +841,6 @@ def validate_digest(digest: dict, payload: dict | None = None, today=None,
         if unverifiable:
             w.append(f"QUOTES: {unverifiable} quote(s) not found verbatim in collected text "
                      f"(translation or paraphrase); flagged for review")
-
-    xd = digest.get("xinhua_delta")
-    if not isinstance(xd, dict):
-        w.append("XINHUA DELTA: missing (non-blocking)")
 
     cw = [it for it in (digest.get("china_world") or []) if isinstance(it, dict)]
     regions = {str(it.get("region") or "") for it in cw}

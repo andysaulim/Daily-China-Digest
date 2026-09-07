@@ -40,7 +40,7 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
 - **Chinese-language sources** are tagged `lang: ZH`, capped at 12 items per feed, exempt
   from the English keyword gate, and ranked up when they are a ministry's own words. The
   `official_line` section ("What Beijing Is Saying") quotes them verbatim with `original_zh`.
-- **Length.** 2,000 to 2,500 words; `WORD_FLOOR_CRITICAL` 1,600 blocks, 2,700 warns. The
+- **Length.** 2,000 to 2,500 words, spent on items not on prose; `WORD_FLOOR_CRITICAL` 1,600 blocks, 2,700 warns. The
   band moved up from 1,500-1,900 after run 118 hit 1,898 only because the trim deleted 17
   items, among them Xi's expected New Delhi visit and Japan's record defence budget. The
   extra words buy MORE ITEMS: section caps rose, per-item body limits did not. Cut from
@@ -67,10 +67,6 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
   toward the word total, and dropped by the renderer. `render.py`'s own docstring had promised
   the Xinhua Delta panel since the file was written. Before adding a field to the prompt,
   check that something renders it; `wordcount.py` counting it is not the same thing.
-- **The Bottom Line is gated.** `editor_note` must reach a JUDGMENT, cite the evidence and
-  close with a `Watch:` sentence. Under 25 words, or opening with "Today's brief covers",
-  is CRITICAL; outside 55-130 words or missing `Watch:` is a warning. It renders above every
-  section and until Sep 5 2026 nothing checked it at all.
 - **Organised by relationship.** After the top stories: `us_china` (4-6, tagged by instrument),
   `china_world` (5-7, tagged by region, Cross-Strait guaranteed, Korea and Japan weighted for
   the readership), `business_economy`. Then the data band, the BEIJING chapter, the WIRE
@@ -118,6 +114,27 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
 | Aug 17 | Schedule silently disabled by GitHub | 60 days without a commit | Runs commit state daily; check Actions tab shows the schedule enabled after a long gap |
 | Every run | Market strip showed 10Y CGB 1.75 percent, LPR 3.0/3.5, CDS 70 bps as data | Hard-coded fallbacks | Unavailable, shown as dash |
 | Every run | Model wrote 3-sentence bodies from a headline | Google News feeds carry no summary | `fulltext.py` fetches article text; summaries sent at 1,800 chars |
+
+- **No analysis. It is a topline of the day's news.** Removed Sep 7 2026: the Bottom
+  Line (`editor_note`), Voices (`opeds_today` / `academic_today`), the Propaganda Delta
+  (`xinhua_delta`) and `pattern_note` on every top story. That was 451 words, 16 percent
+  of the Sep 7 edition, spent telling the reader what the news meant. The words went back
+  into ITEMS: caps rose across every news section and a test issue now carries 55 items in
+  2,478 words against 38 in 2,734. The prompt forbids "signals", "suggests", "underscores",
+  "comes amid". The single surviving forward-looking line is `so_what`, on top stories only,
+  and only when it names a decision or date that appears in today's articles.
+- **What Beijing said and did stays.** `official_line` and `prc_government` are primary
+  sources, not commentary: a ministry's own words are news. They were never the analysis.
+- **The brief was centred for months.** The wrapper is `<td align="center">` so Outlook
+  centres the container; that HTML attribute also centres every descendant that does not
+  override it, so every headline and body rendered centred. `.container` now carries
+  `text-align:left`, in the base rule and the mobile override both. A smoke check budgets
+  centred elements to the chrome plus one per memo item.
+- **The length trim cuts the EXPENSIVE items first.** An `also_today` one-liner costs ~22
+  words and buys a whole story; a `china_world` item costs ~45. Cutting the wire first, as
+  the order did until Sep 7, spent the most coverage per word saved and emptied the wire on
+  a heavy day. Order is now social_statements, personnel, business, overnight, then the
+  wire (floor 4), then the relationship sections.
 
 ## Recurring maintenance
 

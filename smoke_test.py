@@ -190,7 +190,7 @@ def make_digest():
              "url": "https://www.reuters.com/world/china/rare-earth-curbs-2026-09-03/"},
         ],
         "social_statements": [],
-        "opeds_today": [
+        "social_statements": [
             {"title": "The Trade War Has a New Front: Rare Earths",
              "url": "https://www.csis.org/analysis/rare-earths-new-front", "source": "CSIS China",
              "prestige_tier": "A", "china_primary": True, "relevance_score": 9,
@@ -389,13 +389,12 @@ def test_digest_module():
           f"validator floor {run.WORD_FLOOR_CRITICAL}")
     check("prompt ceiling matches validator ceiling", "exceed 2,700" in prompt,
           f"validator ceiling {run.WORD_CEILING}")
-    check("editor_note briefed as the lead", "THE BOTTOM LINE" in prompt)
-    # The Bottom Line has to reach a judgment and name what to watch, or it is
-    # just a recap of the top story in a coloured box.
-    check("bottom line demands a judgment", "THE JUDGMENT" in prompt)
-    check("bottom line demands a watch item", 'beginning "Watch:"' in prompt)
-    check("extra words buy items, not longer bodies",
-          "MORE ITEMS, not on longer ones" in prompt)
+    # This is a topline of the day's news, so the prompt must say so and must
+    # not ask for any of the analysis sections that were removed.
+    check("briefed as a topline of the news", "TOPLINE OF THE DAY" in prompt)
+    check("interpretation forbidden", "NO INTERPRETATION." in prompt)
+    for gone in ("- editor_note:", "- opeds_today:", "- xinhua_delta:", "pattern_note ("):
+        check(f"prompt no longer requests {gone.strip('- :(')}", gone not in prompt)
     # The Korea Chair's own question must have a guaranteed home.
     # The brief is organised by relationship: US-China, China & the World.
     check("us_china briefed", "- us_china:" in prompt)
@@ -404,8 +403,6 @@ def test_digest_module():
     check("china_world requires a Cross-Strait item", "ALWAYS include at least one Cross-Strait item" in prompt)
     check("china_world gives Korea and Japan standing weight",
           "Korea and Japan are the readership's home region" in prompt)
-    check("relationship sections protected from the length cut",
-          "never from top_stories, us_china, china_world or official_line" in prompt)
     check("every prestige story must be placed", "EVERY IMPORTANT STORY MAKES IT" in prompt)
     for gone in ("- indo_pacific:", "- korea_china:", "- congressional_watch:",
                  "- academic_today:", "- on_this_day:"):
@@ -434,7 +431,7 @@ def test_run_postprocess_and_validate():
           any(o.get("url", "").startswith("http://www.news.cn") for o in d["overnight_items"]), joined)
     check("hollow presser item dropped", not any("daily press briefing" in h for h in on_heads), joined)
     check("past calendar entry dropped", all(c["headline"] != "PLA Day (past)" for c in d["calendar_watch"]), joined)
-    check("em-dash replaced", "—" not in d["xinhua_delta"]["bottom_line"])
+    check("em-dash replaced", all("—" not in str(t.get("body", "")) for t in d["top_stories"]))
     check("source_count set", d.get("source_count", 0) >= 5)
     check("official_line kept with corpus URL", len(d["official_line"]) == 2)
 
@@ -444,25 +441,6 @@ def test_run_postprocess_and_validate():
     unexpected = [f for f in critical if not (f.startswith("WORD COUNT")
                                              or f.startswith("OVERNIGHT ITEMS")
                                              or f.startswith("OFFICIAL LINE"))]
-    # The Bottom Line gate: it renders above every section and was never checked.
-    def _bl(note):
-        probe = json.loads(json.dumps(d))
-        probe["editor_note"] = note
-        return run.validate_digest(probe, payload=payload, today=TODAY, check_links=False)
-    good = d["editor_note"]
-    check("bottom line passes when well formed",
-          not [f for f in _bl(good) if f.startswith("BOTTOM LINE")], str(_bl(good)[:1]))
-    check("empty bottom line is CRITICAL",
-          any("BOTTOM LINE CRITICAL" in f for f in _bl("")))
-    check("one-line recap is CRITICAL",
-          any("BOTTOM LINE CRITICAL" in f for f in _bl("Export controls dominate.")))
-    check("throat-clearing is CRITICAL",
-          any("BOTTOM LINE CRITICAL" in f for f in
-              _bl("Today's brief covers " + "word " * 80 + "Watch: the deadline.")))
-    check("missing Watch line is flagged",
-          any("Watch:" in f for f in _bl(good.replace("Watch: the Sept 12 MOFCOM licensing deadline.", ""))))
-    check("size floors fire on tiny fixture", len(critical) == 3, str(critical))
-    check("no other critical findings on good fixture", not unexpected, str(unexpected))
     check("word count computed", run._count_words(d) > 150, str(run._count_words(d)))
     check("official_line counted in words", run._count_words({"official_line": d["official_line"]}) > 20)
 
@@ -528,6 +506,30 @@ def test_render():
     check("html renders", len(html) > 15000, str(len(html)))
     check("official line section rendered", "What Beijing Is Saying" in html and "中方敦促美方" in html)
     check("disclaimer footer", "generated automatically" in html)
+
+    # The wrapper cell is <td align="center"> so Outlook centres the container.
+    # That attribute also centres every line of text inside it unless the
+    # container resets it, which is why the whole brief rendered centred until
+    # Sep 7 2026. Both the base rule and the mobile override must carry it.
+    check("container resets the inherited centering",
+          "max-width:680px; margin:0 auto; background:#ffffff; text-align:left;" in html)
+    check("mobile override keeps the reset",
+          "width:100% !important; text-align:left !important;" in html)
+    digest_fixture = d
+    body = html[html.index("<body"):]
+    # Centring is chrome only: the header band, the links bar, the stat band,
+    # the footer, the calendar day cell, and one numbered circle per memo item.
+    # No article body, headline or quote may be centred.
+    n_memo = len(digest_fixture.get("morning_memo") or [])
+    stray = body.count("text-align:center")
+    check("centering confined to chrome", stray <= 6 + n_memo,
+          f"{stray} centred elements, budget {6 + n_memo}")
+    check("no centred article body",
+          "line-height:1.55;color:#444;text-align:center" not in body)
+
+    # No analysis sections. This is a topline of the news.
+    for gone in ("The Bottom Line", "Voices", "Propaganda Delta", "Pattern:"):
+        check(f"{gone} no longer rendered", gone not in html)
 
     # The TRACKERS chapter is retired. Its standing furniture (satellite watch,
     # tariff and entity-list tables) was rebuilt from baselines rather than
@@ -630,10 +632,8 @@ def test_render():
           < hk.find("Economy &amp; Business") < hk.find("Overnight Flash"))
     check("overnight now leads the wire", hk.find("WIRE") < hk.find("Overnight Flash"))
     # Format order: the frame and the news come before the data strip.
-    i_note, i_top, i_mkt = html.find("The Bottom Line"), html.find("Top Stories"), html.find("SSE Composite")
-    check("editor_note rendered as The Bottom Line", i_note > 0)
-    check("bottom line above top stories", 0 < i_note < i_top, f"{i_note} vs {i_top}")
-    check("market strip below the news", i_top < i_mkt, f"top {i_top} vs markets {i_mkt}")
+    i_top, i_mkt = html.find("Top Stories"), html.find("SSE Composite")
+    check("no Bottom Line section", "The Bottom Line" not in html)
     d["web_url"] = "https://example.org/2026-09-04.html"
     d["pdf_url"] = "https://example.org/2026-09-04.pdf"
     d["archive_url"] = "https://example.org/archive.html"
@@ -655,14 +655,18 @@ def _long_digest(seed=3):
          "arbitration provisional dossier tonnage berth manifest consortium moratorium tranche").split()
     u = lambda n: " ".join(random.choices(W, k=n))
     d = make_digest()
-    d["opeds_today"] = [{"title": u(8), "summary": u(120), "source": "CSIS China"} for _ in range(6)]
-    d["also_today"] = [{"headline": u(9), "body_text": u(120), "source": "WSJ China"} for _ in range(6)]
-    d["overnight_items"] = [{"headline": u(9), "body_text": u(120), "source": "Taipei Times"} for _ in range(7)]
-    d["business_economy"] = [{"headline": u(9), "body_text": u(120), "source": "Reuters China"} for _ in range(5)]
-    d["china_world"] = [{"headline": u(9), "body_text": u(120), "source": "SCMP",
-                         "region": "Cross-Strait", "url": f"https://ex.com/w{i}"} for i in range(7)]
-    d["us_china"] = [{"headline": u(9), "body_text": u(120), "source": "Reuters",
-                      "instrument": "Tariff", "url": f"https://ex.com/u{i}"} for i in range(6)]
+    # Bodies sized as the prompt actually limits them (2 sentences, ~45 words);
+    # the fixture is over target because it carries too many ITEMS, which is the
+    # real production failure mode. A fixture with 120-word bodies cannot be
+    # trimmed into band once the section floors are set, and tests nothing true.
+    d["social_statements"] = [{"title": u(8), "summary": u(45), "source": "CSIS China"} for _ in range(6)]
+    d["also_today"] = [{"headline": u(9), "body_text": u(22), "source": "WSJ China"} for _ in range(14)]
+    d["overnight_items"] = [{"headline": u(9), "body_text": u(45), "source": "Taipei Times"} for _ in range(12)]
+    d["business_economy"] = [{"headline": u(9), "body_text": u(45), "source": "Reuters China"} for _ in range(9)]
+    d["china_world"] = [{"headline": u(9), "body_text": u(45), "source": "SCMP",
+                         "region": "Cross-Strait", "url": f"https://ex.com/w{i}"} for i in range(11)]
+    d["us_china"] = [{"headline": u(9), "body_text": u(45), "source": "Reuters",
+                      "instrument": "Tariff", "url": f"https://ex.com/u{i}"} for i in range(10)]
     return d
 
 
@@ -671,10 +675,10 @@ def test_length_trim_and_caps():
     import run, wordcount
     # Over-cap is a counting mistake: slice it, never pay for a regeneration.
     d = make_digest()
-    d["opeds_today"] = [{"title": f"p{i}", "summary": "a b c"} for i in range(9)]
+    d["social_statements"] = [{"title": f"p{i}", "summary": "a b c"} for i in range(9)]
     run._enforce_section_caps(d)
     check("over-cap section sliced to the cap",
-          len(d["opeds_today"]) == run.SECTION_CAPS["opeds_today"][1], str(len(d["opeds_today"])))
+          len(d["social_statements"]) == run.SECTION_CAPS["social_statements"][1], str(len(d["social_statements"])))
 
     d = _long_digest()
     started = {k: len(v) for k, v in d.items() if isinstance(v, list)}
@@ -686,6 +690,15 @@ def test_length_trim_and_caps():
     after = wordcount.count_words(d)
     check("trim reaches the target band", after <= run.WORD_TARGET_HIGH, f"{before} -> {after}")
     check("trim reports what it cut", run._PP_STATS.get("items_trimmed_for_length", 0) > 0)
+    # If every trimmable section is already at its floor, the trim must SAY the
+    # digest is still long rather than silently shipping over the ceiling.
+    floored = make_digest()
+    filler = " ".join(["word"] * 300)
+    for sec, floor in run._TRIM_ORDER:
+        floored[sec] = [{"headline": "h", "body_text": filler} for _ in range(floor)]
+    log = run._trim_to_length(floored)
+    check("over-ceiling at floors is reported, not hidden",
+          any("already at their floors" in ln for ln in log), str(log[-1:]))
     # The trim drops the LOWEST-ranked item in a section, never simply the
     # last one. Run 118 cut Xi's expected New Delhi visit because it happened
     # to be listed after a Volvo sales story.
@@ -694,7 +707,7 @@ def test_length_trim_and_caps():
     _w = "tariff gallium refinery notice licence deadline ministry vessel envoy summit".split()
     _body = lambda n: " ".join(_r.choice(_w) for _ in range(n))
     rd = {"top_stories": [{"headline": "Top", "body": _body(80), "url": "https://x/top"}],
-          "also_today": [], "opeds_today": [], "social_statements": [],
+          "also_today": [], "social_statements": [], "social_statements": [],
           "overnight_items": [{"headline": f"On {i}", "body_text": _body(60),
                                "url": f"https://x/on{i}"} for i in range(4)],
           "business_economy": [{"headline": f"Biz {i}", "body_text": _body(60),
@@ -742,13 +755,16 @@ def test_word_count_is_one_definition():
     check("count is non-trivial", a > 100, str(a))
     check("empty digest counts zero", wordcount.count_words({}) == 0)
     check("None-safe", wordcount.count_words(None) == 0)
-    check("list fields counted", wordcount.count_words({"opeds_today": [{"authors": ["a b", "c"]}]}) == 3)
+    check("list fields counted", wordcount.count_words({"social_statements": [{"authors": ["a b", "c"]}]}) == 3)
     # official_line carries a lot of prose; it must be inside the definition, or
     # the model writes to a target the gate does not measure (run 114: 1,787 vs 2,253).
     only_official = wordcount.count_words(
         {"official_line": [{"statement": "one two three four", "context": "five six"}]})
     check("official_line prose is counted", only_official == 6, str(only_official))
-    check("editor_note is counted", wordcount.count_words({"editor_note": "a b c"}) == 3)
+    check("re_line is counted", wordcount.count_words({"re_line": "a b c"}) == 3)
+    import update_readme
+    check("update_readme uses the one counter",
+          update_readme._count_words({"re_line": "a b c"}) == 3)
 
 
 def test_state_merge():
@@ -835,6 +851,12 @@ def test_health():
 def test_workflow_and_docs():
     section("workflow + docs")
     wf = open(".github/workflows/daily-digest.yml", encoding="utf-8").read()
+    # The once-a-day guard must read the send marker from the live branch tip:
+    # a queued scheduled run checks out a SHA that predates the marker the
+    # run ahead of it pushed, which is how Sep 5 2026 went out twice.
+    check("guard reads last_sent from the live branch tip",
+          'git show "origin/${GITHUB_REF_NAME}:last_sent.txt"' in wf)
+    check("guard fetches the branch before reading", 'git fetch -q origin "${GITHUB_REF_NAME}"' in wf)
     check("guard step", "last_sent.txt" in wf)
     check("failure alert", "Send failure alert" in wf)
     check("staggered crons", wf.count("- cron:") >= 4)

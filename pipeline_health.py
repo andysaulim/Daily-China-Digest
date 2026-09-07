@@ -106,9 +106,6 @@ def check(payload: dict | None = None, digest: dict | None = None) -> dict:
 
     # ── Digest ──────────────────────────────────────────────────────────
     if digest:
-        locs = digest.get("monitored_locations") or []
-        if len(locs) != 16:
-            warnings.append(f"LOCATIONS: {len(locs)} monitored_locations (expected 16)")
         xd = digest.get("xinhua_delta") or {}
         if xd.get("silence_today") and "scraper" in str(xd.get("bottom_line", "")).lower():
             warnings.append("XINHUA: tier-4 collection returned nothing; check Xinhua / "
