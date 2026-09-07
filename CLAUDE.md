@@ -40,15 +40,26 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
 - **Chinese-language sources** are tagged `lang: ZH`, capped at 12 items per feed, exempt
   from the English keyword gate, and ranked up when they are a ministry's own words. The
   `official_line` section ("What Beijing Is Saying") quotes them verbatim with `original_zh`.
-- **Length.** 2,000 to 2,500 words, spent on items not on prose; `WORD_FLOOR_CRITICAL` 1,600 blocks, 2,700 warns. The
+- **Length.** 2,000 to 3,000 words, spent on items not on prose; `WORD_FLOOR_CRITICAL` 1,600 blocks, 3,000 is the ceiling. The
   band moved up from 1,500-1,900 after run 118 hit 1,898 only because the trim deleted 17
   items, among them Xi's expected New Delhi visit and Japan's record defence budget. The
   extra words buy MORE ITEMS: section caps rose, per-item body limits did not. Cut from
   `also_today` first, then op-eds and social statements, never from `top_stories`, `us_china`,
   `china_world` or `official_line`.
+- **The band moved to 2,000-3,000 on Sep 8 2026.** At maximum section caps and the
+  prompt's own body limits the brief tops out near 3,771 words, so 3,000 is reachable
+  and the trim is a genuine backstop rather than the binding constraint. Measured: a
+  max-length issue renders at 69,923 bytes, 68 percent of Gmail's clipping limit, with
+  26 KB of headroom. The Sep 7 issue was trimmed from 2,859 words by cutting 9 items to
+  reach 2,500; under the new band those 9 items would have shipped.
+- **`cost_report.py` reads `metrics.jsonl`.** Korea and Australia both had one; this
+  pipeline recorded per-call tokens and a run total from the start and never read them
+  back. It delegates to `digest.MODEL_PRICING` and `digest.cost_of` rather than carrying
+  its own price table, because a second table drifts (see the four word counters).
+  Currently $0.63 a live issue, about $19 a month.
 - **Length is enforced in code, not by regeneration.** `run._enforce_section_caps` slices any
   section over its cap (a counting mistake, not an editorial one) and `run._trim_to_length`
-  drops tail items until the digest is at or under `WORD_TARGET_HIGH` (2,500), cutting in
+  drops tail items until the digest is at or under `WORD_TARGET_HIGH` (3,000), cutting in
   `_TRIM_ORDER` and stopping at each section's floor. `top_stories` and `official_line` are
   never trimmed. Run 116 paid $0.80 for a regeneration triggered by 7 op-eds against a cap
   of 6, and still shipped 2,322 words.

@@ -283,7 +283,9 @@ def test_collect_registry():
                           collect.TIER4_FEEDS) for v in d.values())
     for dead_host in ("bis.doc.gov", "cn.reuters.com", "crsreports.congress.gov",
                       "chinadaily.com.cn%2Ffront", "chinadaily.com.cn/front",
-                      "englishnews.ltn.com.tw"):
+                      "englishnews.ltn.com.tw",
+                      # never returned an item in 7 runs; deep path / unindexed domain
+                      "center-china-analysis", "taiheinstitute.org"):
         check(f"no feed still points at {dead_host}", dead_host not in every_url)
     check("BIS Entity List has a Google News fallback", "BIS Entity List" in collect._FALLBACK)
     check("China Daily Opinion counted as direct propaganda",
@@ -384,10 +386,10 @@ def test_digest_module():
     # Length discipline must agree between the prompt and the validator, or the
     # model writes to one target and the gate measures against another.
     import run
-    check("prompt states the 2,000-2,500 target", "2,000 and 2,500" in prompt)
+    check("prompt states the 2,000-3,000 target", "2,000 and 3,000" in prompt)
     check("prompt floor matches validator floor", "HARD MINIMUM 1,600" in prompt,
           f"validator floor {run.WORD_FLOOR_CRITICAL}")
-    check("prompt ceiling matches validator ceiling", "exceed 2,700" in prompt,
+    check("prompt ceiling matches validator ceiling", "exceed 3,000" in prompt,
           f"validator ceiling {run.WORD_CEILING}")
     # This is a topline of the day's news, so the prompt must say so and must
     # not ask for any of the analysis sections that were removed.
@@ -655,17 +657,19 @@ def _long_digest(seed=3):
          "arbitration provisional dossier tonnage berth manifest consortium moratorium tranche").split()
     u = lambda n: " ".join(random.choices(W, k=n))
     d = make_digest()
-    # Bodies sized as the prompt actually limits them (2 sentences, ~45 words);
-    # the fixture is over target because it carries too many ITEMS, which is the
-    # real production failure mode. A fixture with 120-word bodies cannot be
-    # trimmed into band once the section floors are set, and tests nothing true.
+    # Item counts sit just over the caps and bodies run ~60 words against the
+    # prompt's ~45, which is the real production failure mode: the caps slice the
+    # counts for free, and the trim then has to absorb the overlong bodies. A
+    # fixture that is over only on COUNT is fully handled by the caps and never
+    # reaches the trim; one with 120-word bodies cannot be trimmed into band once
+    # the section floors are set. Neither tests anything true.
     d["social_statements"] = [{"title": u(8), "summary": u(45), "source": "CSIS China"} for _ in range(6)]
-    d["also_today"] = [{"headline": u(9), "body_text": u(22), "source": "WSJ China"} for _ in range(14)]
-    d["overnight_items"] = [{"headline": u(9), "body_text": u(45), "source": "Taipei Times"} for _ in range(12)]
-    d["business_economy"] = [{"headline": u(9), "body_text": u(45), "source": "Reuters China"} for _ in range(9)]
-    d["china_world"] = [{"headline": u(9), "body_text": u(45), "source": "SCMP",
+    d["also_today"] = [{"headline": u(9), "body_text": u(30), "source": "WSJ China"} for _ in range(14)]
+    d["overnight_items"] = [{"headline": u(9), "body_text": u(60), "source": "Taipei Times"} for _ in range(12)]
+    d["business_economy"] = [{"headline": u(9), "body_text": u(60), "source": "Reuters China"} for _ in range(9)]
+    d["china_world"] = [{"headline": u(9), "body_text": u(60), "source": "SCMP",
                          "region": "Cross-Strait", "url": f"https://ex.com/w{i}"} for i in range(11)]
-    d["us_china"] = [{"headline": u(9), "body_text": u(45), "source": "Reuters",
+    d["us_china"] = [{"headline": u(9), "body_text": u(60), "source": "Reuters",
                       "instrument": "Tariff", "url": f"https://ex.com/u{i}"} for i in range(10)]
     return d
 
@@ -714,9 +718,9 @@ def test_length_trim_and_caps():
                                 "url": f"https://x/b{i}"} for i in range(3)],
           "us_china": [{"headline": f"US {i}", "body_text": _body(60),
                         "url": f"https://x/u{i}"} for i in range(3)],
-          "china_world": [{"headline": f"Filler {i}", "body_text": _body(300),
+          "china_world": [{"headline": f"Filler {i}", "body_text": _body(450),
                            "url": f"https://x/f{i}"} for i in range(5)]
-                         + [{"headline": "Xi expected in New Delhi", "body_text": _body(300),
+                         + [{"headline": "Xi expected in New Delhi", "body_text": _body(450),
                              "url": "https://x/xi"}]}
     rk = {f"https://x/f{i}": 0 for i in range(5)}
     rk["https://x/xi"] = 170
@@ -848,6 +852,37 @@ def test_health():
     check("resolve collapse alert", any("RESOLVE" in a for a in rep["alerts"]), str(rep))
 
 
+def test_cost_report():
+    section("cost_report.py (spend visibility)")
+    import cost_report, digest
+    # One price table, not two: the Australia port carries its own and can drift.
+    check("delegates to digest.MODEL_PRICING",
+          "MODEL_PRICING" in cost_report.__doc__ or hasattr(cost_report, "MODEL_PRICING") is False)
+    check("uses digest.cost_of", cost_report.cost_of is digest.cost_of)
+    rows = [
+        {"date": "2026-09-05", "test_mode": False, "word_count": 2469, "seconds": 648,
+         "validation_attempts": 1,
+         "tokens": [{"model": "claude-sonnet-5", "input": 100000, "output": 50000,
+                     "cache_write": 0, "cache_read": 0, "seconds": 600}]},
+        {"date": "2026-09-06", "test_mode": True, "word_count": 2400, "seconds": 700,
+         "validation_attempts": 2,
+         "tokens": [{"model": "claude-opus-5", "input": 10000, "output": 5000,
+                     "cache_write": 0, "cache_read": 0, "seconds": 100}]},
+    ]
+    s2 = cost_report.summarise(rows)
+    check("splits live and test", s2["live_runs"] == 1 and s2["test_runs"] == 1)
+    check("counts regenerations", s2["regenerations"] == 1, str(s2["regenerations"]))
+    expected = digest.cost_of(rows[0]["tokens"][0])
+    check("live cost matches digest.cost_of", abs(s2["live"] - expected) < 1e-9,
+          f"{s2['live']} vs {expected}")
+    check("per-model breakdown", set(s2["per_model"]) == {"claude-sonnet-5", "claude-opus-5"})
+    check("renders without a crash", "Runs" in cost_report._fmt(rows, s2, 30))
+    check("empty window is not a crash", "No runs recorded" in cost_report._fmt([], cost_report.summarise([]), 30))
+    # A run recorded before per-call tokens existed still contributes its total.
+    legacy = cost_report.summarise([{"date": "2026-09-01", "test_mode": False, "cost_usd": 1.25}])
+    check("legacy cost_usd still counted", abs(legacy["total"] - 1.25) < 1e-9, str(legacy["total"]))
+
+
 def test_workflow_and_docs():
     section("workflow + docs")
     wf = open(".github/workflows/daily-digest.yml", encoding="utf-8").read()
@@ -878,7 +913,7 @@ if __name__ == "__main__":
               test_run_postprocess_and_validate, test_ledger_roundtrip, test_render,
               test_length_trim_and_caps, test_word_count_is_one_definition, test_state_merge,
               test_email_size_guard, test_archive_and_pdf,
-              test_health, test_workflow_and_docs):
+              test_health, test_cost_report, test_workflow_and_docs):
         try:
             t()
         except Exception as e:                               # noqa: BLE001

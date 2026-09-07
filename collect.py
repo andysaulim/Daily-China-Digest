@@ -298,7 +298,11 @@ TIER2_FEEDS = {
     "Heritage China":          (_gnews("China+site:heritage.org"), "B"),
 
     # US university and specialist China centers
-    "Asia Society CCA":        (_gnews("site:asiasociety.org/center-china-analysis"), "A"),
+    # site:asiasociety.org/center-china-analysis is a deep path Google News does
+    # not index (0 items in 7 runs). The sibling Asia Society Policy feed works
+    # because it carries a keyword; the Center for China Analysis is a named
+    # shop, so query the name and let the domain filter go.
+    "Asia Society CCA":        (_gnews("%22Center+for+China+Analysis%22+OR+%22Asia+Society%22+China+report"), "A"),
     "NBR China":               (_gnews("China+site:nbr.org"), "B"),
     "Wilson Kissinger Inst":   (_gnews("China+site:wilsoncenter.org"), "B"),
     "Harvard Fairbank":        (_gnews("site:fairbank.fas.harvard.edu+OR+site:belfercenter.org+China"), "B"),
@@ -340,7 +344,9 @@ TIER2_FEEDS = {
     "复旦美国研究中心 (ZH)":          (_gnews_zh("site:cas.fudan.edu.cn+OR+%E5%A4%8D%E6%97%A6%E5%A4%A7%E5%AD%A6%E7%BE%8E%E5%9B%BD%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83"), "B"),
     "北大国际战略研究院 IISS-PKU (ZH)": (_gnews_zh("site:iiss.pku.edu.cn"), "B"),
     "盘古智库 Pangoal (ZH)":          (_gnews_zh("site:pangoal.cn"), "B"),
-    "太和智库 Taihe (ZH)":            (_gnews_zh("site:taiheinstitute.org"), "B"),
+    # taiheinstitute.org is not in Google News' zh index (0 items in 7 runs);
+    # CICIR's site: filter works, so this is the domain, not the query form.
+    "太和智库 Taihe (ZH)":            (_gnews_zh("%E5%A4%AA%E5%92%8C%E6%99%BA%E5%BA%93"), "B"),
     "中国社科院 CASS (ZH)":           (_gnews_zh("site:cass.cn+%E5%9B%BD%E9%99%85"), "B"),
     "中美聚焦 China-US Focus":        (_gnews("site:chinausfocus.com"), "B"),
     "CGTN Think Tank":               (_gnews("site:cgtn.com+%22think+tank%22+OR+opinion+China+US"), "B"),

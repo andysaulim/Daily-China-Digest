@@ -688,9 +688,9 @@ do NOT want to be told what it means. There is no analysis section in this brief
 no editor's note, no op-eds, no commentary, no propaganda read. Report, attribute,
 move on.
 
-TARGET LENGTH: the SENT digest must land between 2,000 and 2,500 words, so aim for
-2,300-2,700 in your draft; post-processing removes duplicates and unsourced items
-after you return. HARD MINIMUM 1,600. Do NOT exceed 2,700.
+TARGET LENGTH: the SENT digest must land between 2,000 and 3,000 words, so aim for
+2,600-3,000 in your draft; post-processing removes duplicates and unsourced items
+after you return. HARD MINIMUM 1,600. Do NOT exceed 3,000.
 
 Spend every word on MORE ITEMS, never on longer ones. Per-item limits are enforced:
 top_stories bodies 2-3 sentences, us_china and china_world 2, overnight 2,
@@ -797,7 +797,7 @@ def _check_content_minimums(digest: dict) -> list[str]:
     failures = []
     word_count = _count_digest_words(digest)
     if word_count < 1600:
-        failures.append(f"WORD COUNT: {word_count} words (hard minimum 1600, target 2000-2500)")
+        failures.append(f"WORD COUNT: {word_count} words (hard minimum 1600, target 2000-3000)")
     top = len(digest.get("top_stories") or [])
     if top < 3:
         failures.append(f"TOP STORIES: {top} (minimum 3)")

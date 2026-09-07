@@ -90,7 +90,7 @@ standing furniture rebuilt from stale baselines), Indo-Pacific (folded into Chin
 World), Congressional Watch (folded into US–China), Academic Journals and On This Day
 (analysis and filler a daily brief does not need).
 
-Target length **2,000–2,500 words**, an eight to ten minute read (hard floor 1,600; ceiling 2,700). The rendered email is also checked against Gmail's 102 KB clipping limit: over 96 KB the send is blocked. See [`BENCHMARK.md`](BENCHMARK.md) for why.
+Target length **2,000–3,000 words**, a ten to twelve minute read (hard floor 1,600; ceiling 3,000). The rendered email is also checked against Gmail's 102 KB clipping limit: over 96 KB the send is blocked. See [`BENCHMARK.md`](BENCHMARK.md) for why.
 
 ---
 
@@ -99,7 +99,7 @@ Target length **2,000–2,500 words**, an eight to ten minute read (hard floor 1
 Blocking (regenerate, then hold):
 - Top stories 3–5, overnight 4–8, official line ≥3, morning memo exactly 3 distinct items, RE line present
 - The Bottom Line present, ≥25 words, and not opening with "Today's brief covers"
-- Word count ≥1,600 (target 2,000–2,500)
+- Word count ≥1,600 (target 2,000–3,000)
 - Rendered email ≥96 KB (Gmail clips at 102 KB)
 - ≥4 items deleted for URLs not in the input
 - Digest date ≠ today
