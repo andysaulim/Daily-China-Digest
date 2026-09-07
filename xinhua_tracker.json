@@ -3,6 +3,10 @@
     "2026-09-05": {},
     "2026-09-06": {
       "Community of Common Destiny / 人类命运共同体": 1
+    },
+    "2026-09-07": {
+      "Community of Common Destiny / 人类命运共同体": 1,
+      "new productive forces / 新质生产力": 1
     }
   },
   "tone_history": {
@@ -16,7 +20,13 @@
       "japan": "Firm/wary — Japan's Aug 2026 defense white paper reiterated China as an 'unprecedented strategic challenge,' per Chinese-language commentary.",
       "taiwan": "Firm — TAO's non-denial and 'vanguard of anti-China forces' framing of a Taiwanese NGO worker's Shanghai border screening.",
       "russia": "Routine/conciliatory — coverage of a possible Trump-Xi-Putin trilateral and continued positive framing of China-Russia energy ties."
+    },
+    "2026-09-07": {
+      "us": "Guarded but conciliatory — MOFA confirmed 'ongoing communication' on AI safety without confirming summit-adjacent dialogue dates.",
+      "japan": "Firm — new MOFCOM anti-dumping case and a PLA Rocket Force study naming Japan a 'major danger signal.'",
+      "taiwan": "Firm/warning — Mao Ning's remarks framing Palau's Taiwan ties as a vested-interest 'money grab.'",
+      "eu": "Conciliatory — Wang Wentao urged Finland to push the EU and China to 'move toward each other.'"
     }
   },
-  "last_updated": "2026-09-06T14:06:51.009024+00:00"
+  "last_updated": "2026-09-07T16:01:06.163705+00:00"
 }
