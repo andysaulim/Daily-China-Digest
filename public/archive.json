@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-09-07",
+    "filename": "2026-09-07.html",
+    "re_line": "RE: Taiwan patrols \u00b7 Belgium chip-spy arrest \u00b7 Manila warns on Korea drills \u00b7 Bank injection stumbles \u00b7 MOFCOM hits Japan",
+    "top_stories": 5,
+    "overnight_items": 6,
+    "word_count": 2420,
+    "sources": 99,
+    "pdf": true
+  },
+  {
+    "date": "2026-09-06",
+    "filename": "2026-09-06.html",
+    "re_line": "Bank recapitalization \u00b7 Inspur chip evasion \u00b7 Xi's pre-summit diplomacy \u00b7 PLA Miyako Strait reach",
+    "top_stories": 4,
+    "overnight_items": 6,
+    "word_count": 2484,
+    "sources": 78,
+    "pdf": true
+  },
+  {
     "date": "2026-09-05",
     "filename": "2026-09-05.html",
     "re_line": "Xi's Sept 24 DC visit prep \u00b7 rare-earth shipments quietly held \u00b7 PLA-PACOM theater commanders meet \u00b7 Tibet flood censorship",
