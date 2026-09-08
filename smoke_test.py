@@ -906,6 +906,22 @@ def test_workflow_and_docs():
     check("staggered crons", wf.count("- cron:") >= 4)
     check("test mode input", "send_to" in wf and "smoke_test.py" in wf)
     check("state files committed", all(f in wf for f in ("published_ledger.json", "url_cache.json", "feed_health.json")))
+    # README "Latest Run" must quote the numbers the gate used, and must not
+    # keep its own copy of the section list. Both drifted before: the Sep 7 2026
+    # issue was gated and archived at 2,420 words and published as ~1,312, and
+    # "sources cited" still scanned a list naming the long-removed indo_pacific.
+    import update_readme as _ur
+    import wordcount as _wc
+    check("README section list comes from wordcount", _ur._sections() is _wc.ITEM_SECTIONS)
+    check("README section list has no removed sections", "indo_pacific" not in _ur._sections())
+    check("README section list covers the relationship sections",
+          all(k in _ur._sections() for k in ("us_china", "china_world", "official_line")))
+    _d = {"top_stories": [{"headline": "a b c", "source": "Reuters"}],
+          "us_china": [{"headline": "d e", "source": "Xinhua"}],
+          "china_world": [{"headline": "f", "source": "Reuters"}]}
+    check("README counts sources across all sections", _ur._unique_sources(_d) == 2)
+    _src = open("update_readme.py", encoding="utf-8").read()
+    check("README prefers the gated word count", 'metrics or {}).get("word_count")' in _src)
     req = open("requirements.txt", encoding="utf-8").read()
     check("anthropic 1.x floor", "anthropic>=1" in req)
     try:

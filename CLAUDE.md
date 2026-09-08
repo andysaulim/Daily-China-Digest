@@ -69,8 +69,15 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
   never trimmed. Run 116 paid $0.80 for a regeneration triggered by 7 op-eds against a cap
   of 6, and still shipped 2,322 words.
 - **One word counter.** `wordcount.count_words` is the only definition; `digest.py`,
-  `run.py` and `render.py` all delegate to it. They used to disagree by 26 percent
-  (run 114: 1,787 vs 2,253), so the model wrote to a target the gate did not measure.
+  `run.py`, `render.py` and `update_readme.py` all delegate to it. They used to disagree by
+  26 percent (run 114: 1,787 vs 2,253), so the model wrote to a target the gate did not
+  measure. `update_readme.py` was the fifth counter and outlived the others: the Sep 7 2026
+  issue was gated and archived at 2,420 words and published in the README table as ~1,312.
+  It now quotes `metrics["word_count"]`, the number the gate actually used, rather than
+  reloading `digest.json` and recounting. **The section list is one definition too**
+  (`wordcount.ITEM_SECTIONS`): `update_readme._unique_sources` kept a hand-copied list that
+  still named the long-removed `indo_pacific` and never gained `us_china`, `china_world` or
+  `official_line`, so "sources cited" reported 8 for a 99-source issue.
 - **Gmail clipping.** Gmail truncates a body over 102 KB. `run.check_email_size` warns at
   78 KB and BLOCKS the send at 96 KB, measured in encoded UTF-8 bytes (Chinese costs three
   bytes a character). A clipped brief is a broken brief.
