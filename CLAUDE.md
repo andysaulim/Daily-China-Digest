@@ -27,8 +27,13 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
   fails, `digest.html` is rendered for review, nothing is sent, exit code 2, alert email.
 - **State is written only on success.** Trackers after validation; `published_ledger.json`
   and `last_sent.txt` only after SMTP succeeds. Test runs (`--send-to`) write none of them.
-- **Once-a-day guard.** The workflow skips a scheduled run when `last_sent.txt` is today (ET).
-  Six staggered crons cover GitHub's dropped slots. Manual dispatch always runs.
+- **Once-a-day guard.** The workflow skips a run when `last_sent.txt` is today (ET). Six
+  staggered crons cover GitHub's dropped slots, but they slip TOGETHER when the whole queue
+  slips (Sep 7 2026: every slot deferred ~5.5 h; Sep 8: none fired through 13:30 UTC), so an
+  external scheduler POSTs `workflow_dispatch` as an independent trigger (`EXTERNAL_CRON.md`).
+  An unforced LIVE dispatch therefore obeys the same guard, which is what lets that cron fire
+  every hour of the window and still send once; `force: true` is the manual escape hatch, and
+  a recurring caller must never set it. Test and dry dispatches always run: they write no state.
 - **No assistant prefill, no dated model IDs.** `FAST_MODEL`/`PRIMARY_MODEL` must be in
   `pipeline_health.KNOWN_MODEL_IDS`; the smoke test checks both.
 - **Market honesty.** A figure that could not be fetched is `unavailable`, shown as a dash,
@@ -40,21 +45,39 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
 - **Chinese-language sources** are tagged `lang: ZH`, capped at 12 items per feed, exempt
   from the English keyword gate, and ranked up when they are a ministry's own words. The
   `official_line` section ("What Beijing Is Saying") quotes them verbatim with `original_zh`.
-- **Length.** 2,000 to 2,500 words, spent on items not on prose; `WORD_FLOOR_CRITICAL` 1,600 blocks, 2,700 warns. The
+- **Length.** 2,000 to 3,000 words, spent on items not on prose; `WORD_FLOOR_CRITICAL` 1,600 blocks, 3,000 is the ceiling. The
   band moved up from 1,500-1,900 after run 118 hit 1,898 only because the trim deleted 17
   items, among them Xi's expected New Delhi visit and Japan's record defence budget. The
   extra words buy MORE ITEMS: section caps rose, per-item body limits did not. Cut from
   `also_today` first, then op-eds and social statements, never from `top_stories`, `us_china`,
   `china_world` or `official_line`.
+- **The band moved to 2,000-3,000 on Sep 8 2026.** At maximum section caps and the
+  prompt's own body limits the brief tops out near 3,771 words, so 3,000 is reachable
+  and the trim is a genuine backstop rather than the binding constraint. Measured: a
+  max-length issue renders at 69,923 bytes, 68 percent of Gmail's clipping limit, with
+  26 KB of headroom. The Sep 7 issue was trimmed from 2,859 words by cutting 9 items to
+  reach 2,500; under the new band those 9 items would have shipped.
+- **`cost_report.py` reads `metrics.jsonl`.** Korea and Australia both had one; this
+  pipeline recorded per-call tokens and a run total from the start and never read them
+  back. It delegates to `digest.MODEL_PRICING` and `digest.cost_of` rather than carrying
+  its own price table, because a second table drifts (see the four word counters).
+  Currently $0.63 a live issue, about $19 a month.
 - **Length is enforced in code, not by regeneration.** `run._enforce_section_caps` slices any
   section over its cap (a counting mistake, not an editorial one) and `run._trim_to_length`
-  drops tail items until the digest is at or under `WORD_TARGET_HIGH` (2,500), cutting in
+  drops tail items until the digest is at or under `WORD_TARGET_HIGH` (3,000), cutting in
   `_TRIM_ORDER` and stopping at each section's floor. `top_stories` and `official_line` are
   never trimmed. Run 116 paid $0.80 for a regeneration triggered by 7 op-eds against a cap
   of 6, and still shipped 2,322 words.
 - **One word counter.** `wordcount.count_words` is the only definition; `digest.py`,
-  `run.py` and `render.py` all delegate to it. They used to disagree by 26 percent
-  (run 114: 1,787 vs 2,253), so the model wrote to a target the gate did not measure.
+  `run.py`, `render.py` and `update_readme.py` all delegate to it. They used to disagree by
+  26 percent (run 114: 1,787 vs 2,253), so the model wrote to a target the gate did not
+  measure. `update_readme.py` was the fifth counter and outlived the others: the Sep 7 2026
+  issue was gated and archived at 2,420 words and published in the README table as ~1,312.
+  It now quotes `metrics["word_count"]`, the number the gate actually used, rather than
+  reloading `digest.json` and recounting. **The section list is one definition too**
+  (`wordcount.ITEM_SECTIONS`): `update_readme._unique_sources` kept a hand-copied list that
+  still named the long-removed `indo_pacific` and never gained `us_china`, `china_world` or
+  `official_line`, so "sources cited" reported 8 for a 99-source issue.
 - **Gmail clipping.** Gmail truncates a body over 102 KB. `run.check_email_size` warns at
   78 KB and BLOCKS the send at 96 KB, measured in encoded UTF-8 bytes (Chinese costs three
   bytes a character). A clipped brief is a broken brief.

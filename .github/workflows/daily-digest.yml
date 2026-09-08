@@ -41,6 +41,14 @@ on:
           pipeline_health.KNOWN_MODEL_IDS.
         type: string
         default: ''
+      force:
+        description: >-
+          Send a live edition even if today's was already sent. Leave OFF for
+          any recurring caller: an unforced live dispatch obeys the same
+          once-a-day guard as a scheduled run, which is what makes an external
+          cron safe to point at this workflow every hour.
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -71,7 +79,9 @@ jobs:
       # Idempotency guard: on a scheduled run, skip if today's edition (ET) was
       # already SENT. Keyed on the send marker, not the archive, so a build
       # that archived but failed to email is never mistaken for a send.
-      # Manual dispatch always runs.
+      # A workflow_dispatch runs unconditionally only when it cannot double-send:
+      # mode test/dry (no state writes) or force=true. An unforced LIVE dispatch
+      # obeys the same guard, so a recurring external caller is idempotent.
       - name: Skip guard (once-a-day send)
         id: guard
         env:
@@ -97,7 +107,10 @@ jobs:
               echo "::notice::Branch push without [test-send]: smoke tests + dry collection run (no model, no email)."
               echo "should_run=dry" >> "$GITHUB_OUTPUT"
             fi
-          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] \
+               && { [ "${{ inputs.force }}" = "true" ] || [ "${{ inputs.mode }}" != "live" ]; }; then
+            # Forced, or a test/dry run: neither writes send state, so neither
+            # can double-send. This is the manual escape hatch.
             echo "should_run=true" >> "$GITHUB_OUTPUT"
           elif [ "$LAST_SENT" = "$TODAY" ]; then
             echo "::notice::Today's edition ($TODAY) already sent, skipping catch-up."

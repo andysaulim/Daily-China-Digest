@@ -101,8 +101,8 @@ SECTION_CAPS = {
 # rose with the band; per-item body limits did not.
 WORD_FLOOR_CRITICAL = 1600
 WORD_TARGET_LOW = 2000
-WORD_TARGET_HIGH = 2500
-WORD_CEILING = 2700
+WORD_TARGET_HIGH = 3000
+WORD_CEILING = 3000
 
 # Sections the length trim may cut from, in the order the editorial rule says
 # to cut: the wire first, the relationship sections last, never the top

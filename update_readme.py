@@ -22,10 +22,18 @@ def _count_words(digest: dict) -> int:
     return wordcount.count_words(digest)
 
 
+def _sections() -> tuple[str, ...]:
+    """The section list, from the one place that defines it. A hand-copied list
+    here drifted: it still named indo_pacific, removed months earlier, and never
+    gained us_china, china_world or official_line, so "sources cited" counted a
+    fraction of the issue. Same failure as the four word counters."""
+    import wordcount
+    return wordcount.ITEM_SECTIONS
+
+
 def _unique_sources(digest: dict) -> int:
     sources = set()
-    for key in ("top_stories", "overnight_items", "also_today",
-                "business_economy", "indo_pacific", "social_statements"):
+    for key in _sections():
         for item in (digest.get(key) or []):
             src = (item.get("source") if isinstance(item, dict) else "") or ""
             if src.strip():
@@ -55,16 +63,16 @@ def update_readme(metrics: dict | None = None) -> bool:
     # Article count: prefer story_count from digest, else sum sections
     article_count = digest.get("story_count")
     if not article_count:
-        article_count = sum(
-            len(digest.get(k) or [])
-            for k in ("top_stories", "overnight_items", "also_today",
-                     "business_economy", "indo_pacific")
-        )
+        article_count = sum(len(digest.get(k) or []) for k in _sections())
 
     unique_sources = _unique_sources(digest)
     top_count = len(digest.get("top_stories") or [])
     overnight_count = len(digest.get("overnight_items") or [])
-    word_count = _count_words(digest)
+    # Prefer the count the validator gated on and the archive recorded. Reading
+    # digest.json back and recounting is a second path to the same number, and a
+    # second path is how they diverge: the Sep 7 2026 issue was gated and
+    # archived at 2,420 words and published in this table as ~1,312.
+    word_count = (metrics or {}).get("word_count") or _count_words(digest)
 
     xi_appeared = "Yes" if (digest.get("xinhua_delta") or {}).get("xi_appearance_today") else "No"
 

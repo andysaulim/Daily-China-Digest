@@ -181,7 +181,7 @@ Routing rules:
 | AEI China (B) | EN | GN en-US | `China site:aei.org` |  |
 | Hudson China (B) | EN | GN en-US | `China site:hudson.org` |  |
 | Heritage China (B) | EN | GN en-US | `China site:heritage.org` |  |
-| Asia Society CCA (A) | EN | GN en-US | `site:asiasociety.org/center-china-analysis` |  |
+| Asia Society CCA (A) | EN | GN en-US | `"Center for China Analysis" OR "Asia Society" China report` |  |
 | NBR China (B) | EN | GN en-US | `China site:nbr.org` |  |
 | Wilson Kissinger Inst (B) | EN | GN en-US | `China site:wilsoncenter.org` |  |
 | Harvard Fairbank (B) | EN | GN en-US | `site:fairbank.fas.harvard.edu OR site:belfercenter.org China` |  |
@@ -219,7 +219,7 @@ Routing rules:
 | 复旦美国研究中心 (ZH) (B) | ZH | GN zh-CN | `site:cas.fudan.edu.cn OR 复旦大学美国研究中心` |  |
 | 北大国际战略研究院 IISS-PKU (ZH) (B) | ZH | GN zh-CN | `site:iiss.pku.edu.cn` |  |
 | 盘古智库 Pangoal (ZH) (B) | ZH | GN zh-CN | `site:pangoal.cn` |  |
-| 太和智库 Taihe (ZH) (B) | ZH | GN zh-CN | `site:taiheinstitute.org` |  |
+| 太和智库 Taihe (ZH) (B) | ZH | GN zh-CN | `太和智库` |  |
 | 中国社科院 CASS (ZH) (B) | ZH | GN zh-CN | `site:cass.cn 国际` |  |
 | 中美聚焦 China-US Focus (B) | EN | GN en-US | `site:chinausfocus.com` |  |
 | CGTN Think Tank (B) | EN | GN en-US | `site:cgtn.com "think tank" OR opinion China US` |  |
