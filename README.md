@@ -6,7 +6,7 @@ Automated daily topline of the major China news for the CSIS Korea Chair. Report
 
 **Benchmark against Sinocism, Pekingnology, Trivium, The Wire China, ChinaTalk, China Watcher and the CSIS trackers:** [`BENCHMARK.md`](BENCHMARK.md).
 
-Operating notes, the failure history and the rules the code enforces are in [`CLAUDE.md`](CLAUDE.md). The full feed inventory is in [`SOURCES.md`](SOURCES.md) (generated).
+GitHub's scheduler is best effort and has deferred or dropped the whole day's slots more than once; an independent trigger is set up per [`EXTERNAL_CRON.md`](EXTERNAL_CRON.md). Operating notes, the failure history and the rules the code enforces are in [`CLAUDE.md`](CLAUDE.md). The full feed inventory is in [`SOURCES.md`](SOURCES.md) (generated).
 
 ---
 

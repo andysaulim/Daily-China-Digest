@@ -893,6 +893,15 @@ def test_workflow_and_docs():
           'git show "origin/${GITHUB_REF_NAME}:last_sent.txt"' in wf)
     check("guard fetches the branch before reading", 'git fetch -q origin "${GITHUB_REF_NAME}"' in wf)
     check("guard step", "last_sent.txt" in wf)
+    # An external cron POSTs workflow_dispatch on a schedule of its own. If a
+    # live dispatch skipped the once-a-day guard the way it used to, that cron
+    # plus any GitHub slot that did fire would send the edition twice. An
+    # unforced live dispatch must be as idempotent as a scheduled run.
+    check("force input exists", "force:" in wf)
+    check("unforced live dispatch obeys the once-a-day guard",
+          '[ "${{ inputs.force }}" = "true" ] || [ "${{ inputs.mode }}" != "live" ]' in wf)
+    check("dispatch no longer runs unconditionally",
+          'elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then' not in wf)
     check("failure alert", "Send failure alert" in wf)
     check("staggered crons", wf.count("- cron:") >= 4)
     check("test mode input", "send_to" in wf and "smoke_test.py" in wf)

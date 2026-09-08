@@ -27,8 +27,13 @@ collect.py  ->  resolve.py  ->  fulltext.py  ->  digest.py  ->  run.py post-proc
   fails, `digest.html` is rendered for review, nothing is sent, exit code 2, alert email.
 - **State is written only on success.** Trackers after validation; `published_ledger.json`
   and `last_sent.txt` only after SMTP succeeds. Test runs (`--send-to`) write none of them.
-- **Once-a-day guard.** The workflow skips a scheduled run when `last_sent.txt` is today (ET).
-  Six staggered crons cover GitHub's dropped slots. Manual dispatch always runs.
+- **Once-a-day guard.** The workflow skips a run when `last_sent.txt` is today (ET). Six
+  staggered crons cover GitHub's dropped slots, but they slip TOGETHER when the whole queue
+  slips (Sep 7 2026: every slot deferred ~5.5 h; Sep 8: none fired through 13:30 UTC), so an
+  external scheduler POSTs `workflow_dispatch` as an independent trigger (`EXTERNAL_CRON.md`).
+  An unforced LIVE dispatch therefore obeys the same guard, which is what lets that cron fire
+  every hour of the window and still send once; `force: true` is the manual escape hatch, and
+  a recurring caller must never set it. Test and dry dispatches always run: they write no state.
 - **No assistant prefill, no dated model IDs.** `FAST_MODEL`/`PRIMARY_MODEL` must be in
   `pipeline_health.KNOWN_MODEL_IDS`; the smoke test checks both.
 - **Market honesty.** A figure that could not be fetched is `unavailable`, shown as a dash,
