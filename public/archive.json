@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-08",
+    "filename": "2026-09-08.html",
+    "re_line": "China exports +25% \u00b7 Japan chip-chemical dispute \u00b7 Huawei NY trial opens \u00b7 Taiwan elections \u00b7 Belgian espionage trial",
+    "top_stories": 5,
+    "overnight_items": 8,
+    "word_count": 2193,
+    "sources": 111,
+    "pdf": true
+  },
+  {
     "date": "2026-09-07",
     "filename": "2026-09-07.html",
     "re_line": "RE: Taiwan patrols \u00b7 Belgium chip-spy arrest \u00b7 Manila warns on Korea drills \u00b7 Bank injection stumbles \u00b7 MOFCOM hits Japan",
