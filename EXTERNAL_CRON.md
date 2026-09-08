@@ -84,7 +84,12 @@ curl -sS -X POST \
 - Method: `POST`
 - Headers: the three above (`Authorization`, `Accept`, `X-GitHub-Api-Version`)
 - Body: `{"ref":"main","inputs":{"mode":"live"}}`
-- Schedule: every hour at :05, from 10:00 to 15:00 UTC
+- Schedule: every hour at :05, from 10:00 to 16:00 UTC, timezone **UTC**
+  (`5 10-16 * * *`). Seven attempts. The window is deliberately wider than
+  the delivery target so it covers both DST states: 10:05 UTC is 6:05 AM in
+  daylight time but 5:05 AM in standard time, and the tail keeps a 6 AM ET
+  first attempt year round. Extra attempts cost nothing once the dispatch is
+  idempotent, which is the point of the guard change.
 - Enable failure notifications to your email, and treat 204 as the only success
 
 **Cloudflare Worker** (free tier, if you would rather not hand a third party
@@ -115,7 +120,7 @@ with `wrangler.toml`:
 
 ```toml
 [triggers]
-crons = ["5 10-15 * * *"]
+crons = ["5 10-16 * * *"]
 ```
 
 Note `User-Agent`: GitHub's API rejects requests without one, and some
