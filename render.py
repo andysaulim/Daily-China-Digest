@@ -186,12 +186,12 @@ def render_html(digest: dict) -> str:
 <div style="background:#DE2910;color:#ffffff;padding:18px 32px 14px;" class="sec dark-sec">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
 <td style="vertical-align:top;">
-<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.85);font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Teams</div>
+<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#FFFFFF;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Teams</div>
 <h1 style="margin:0 0 4px 0;font-size:26px;font-weight:700;font-family:Georgia,serif;color:#fff;letter-spacing:0.3px;">China Daily Brief</h1>
 <div style="font-size:16px;font-weight:400;color:rgba(255,255,255,0.85);font-family:Georgia,serif;">{_esc(date_str)}</div>
 </td>
 <td style="vertical-align:top;text-align:right;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.55);margin-bottom:3px;">{gen_time}</div>
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.92);margin-bottom:3px;">{gen_time}</div>
 <div style="font-size:10px;color:rgba(255,255,255,0.4);">{wc:,} words &middot; {read_min} min read</div>
 </td>
 </tr></table>
@@ -219,7 +219,7 @@ def render_html(digest: dict) -> str:
             vs = "20px" if big else "15px"
             sub_html = (f'<div style="font-size:{"11px" if big else "10px"};'
                         f'opacity:0.75;margin-top:2px;">{sub}</div>' if sub else "")
-            return (f'<div style="font-size:{"9px" if big else "10px"};'
+            return (f'<div style="font-size:{"11px" if big else "10px"};'
                     f'text-transform:uppercase;letter-spacing:1.1px;opacity:0.55;">{label}</div>'
                     f'<div style="font-size:{vs};font-weight:700;margin:2px 0;">{value}</div>'
                     f'{sub_html}')
@@ -335,7 +335,7 @@ def render_html(digest: dict) -> str:
                           f'font-family:Arial,sans-serif;">{_esc(it)}</span>')
         sections_markets.append(f"""
 <div style="padding:10px 32px;background:#0a0f1e;color:#ffffff;border-bottom:1px solid rgba(255,255,255,0.08);" class="sec delta-sec">
-<span style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,0.55);margin-right:8px;vertical-align:middle;">Δ Since Yesterday</span>
+<span style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,0.92);margin-right:8px;vertical-align:middle;">Δ Since Yesterday</span>
 {chip_html}
 </div>""")
 
@@ -428,7 +428,7 @@ def render_html(digest: dict) -> str:
     if stat and stat.get("number"):
         stat_html = f"""
 <div style="padding:14px 32px 12px;background:#DE2910;color:#ffffff;text-align:center;border-bottom:1px solid rgba(255,255,255,0.12);" class="sec dark-sec">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.55);margin-bottom:2px;">Stat of the Day</div>
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.92);margin-bottom:2px;">Stat of the Day</div>
 <div class="key-stat-num" style="font-size:26px;font-weight:700;font-family:Georgia,serif;color:#ffffff;line-height:1.1;">{_esc(str(stat.get("number", "")))}</div>
 <div style="font-size:13px;color:rgba(255,255,255,0.85);margin-top:3px;">{_esc(stat.get("label", ""))}</div>
 <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:3px;font-style:italic;">{_esc(stat.get("context", ""))}</div>
@@ -651,7 +651,7 @@ def render_html(digest: dict) -> str:
 <div style="font-size:10px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.45);font-family:Arial,sans-serif;line-height:2;">
 CSIS China Teams &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_time}
 </div>
-<div style="font-size:10px;color:rgba(255,255,255,0.55);font-family:Arial,sans-serif;line-height:1.6;max-width:520px;margin:8px auto 0;">
+<div style="font-size:10px;color:rgba(255,255,255,0.92);font-family:Arial,sans-serif;line-height:1.6;max-width:520px;margin:8px auto 0;">
 This brief is generated automatically from {_esc(str(digest.get("source_count") or "the day's"))} collected sources and may contain errors. Every item links to its source; check the source before citing. Prepared by Andy Lim, CSIS China Teams.
 </div>
 <a href="#top" style="font-size:10px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:1px;">&#8593; Back to top</a>
