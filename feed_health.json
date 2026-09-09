@@ -380,7 +380,7 @@
  },
  "EU Chamber China": {
   "empty_runs": 0,
-  "last_count": 2,
+  "last_count": 3,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -494,7 +494,7 @@
  },
  "HR Cuba SIGINT": {
   "empty_runs": 0,
-  "last_count": 24,
+  "last_count": 23,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -542,7 +542,7 @@
  },
  "HR Shipyards": {
   "empty_runs": 0,
-  "last_count": 85,
+  "last_count": 86,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -583,7 +583,7 @@
   "last_seen": "2026-09-09"
  },
  "House Select CCP": {
-  "empty_runs": 8,
+  "empty_runs": 9,
   "last_count": 0,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-09"
@@ -829,14 +829,14 @@
   "last_seen": "2026-09-09"
  },
  "PRC Embassy US": {
-  "empty_runs": 5,
+  "empty_runs": 6,
   "last_count": 0,
   "last_ok": "2026-09-08",
   "last_seen": "2026-09-09"
  },
  "Pacific Affairs": {
   "empty_runs": 0,
-  "last_count": 87,
+  "last_count": 89,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -1005,7 +1005,7 @@
  },
  "Stanford Hoover China": {
   "empty_runs": 0,
-  "last_count": 20,
+  "last_count": 21,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -1042,7 +1042,7 @@
  },
  "Survival IISS": {
   "empty_runs": 0,
-  "last_count": 29,
+  "last_count": 28,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -1108,7 +1108,7 @@
  },
  "Taiwan Strait": {
   "empty_runs": 0,
-  "last_count": 97,
+  "last_count": 98,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
