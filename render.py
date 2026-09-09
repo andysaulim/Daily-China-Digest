@@ -921,6 +921,14 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
 .deep-sec {{ background-color:#0F1B30 !important; color:#ffffff !important; }}
 .delta-sec {{ background-color:#0a0f1e !important; color:#ffffff !important; }}
 @media only screen and (max-width: 600px) {{
+  /* The notice and the links will not sit side by side on a phone. The other
+     three briefs stack them; this one kept them in one row, so the pills were
+     squeezed against the right edge. No width:100% here — a cell set to
+     display:block already fills its row, and 100% plus horizontal padding is
+     measured content-box, which pushes the table wider than the screen. */
+  .util-row .util-cell {{ display:block !important; text-align:center !important;
+    padding:5px 8px !important; white-space:normal !important; }}
+  .util-row .util-cell a {{ margin:2px !important; }}
   /* The masthead had no mobile rule at all, so its two columns stayed side by
      side on a phone: the nameplate squeezed into a narrow column while the
      meta line held its own width on the right. The other three briefs stack
