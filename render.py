@@ -119,6 +119,50 @@ def _item_card(tag: str, source: str, headline: str, url: str, body: str = "",
             f'{sw}</div>')
 
 
+INK  = "#1A222E"
+MUTE = "#6B7280"
+PRC_RED = "#DE2910"
+
+
+def _subhead(text: str) -> str:
+    """A group label inside a section.
+
+    Also Today ran every category together, so it read as one
+    undifferentiated stream. One heading per subject beats a category
+    repeated in grey on every row.
+    """
+    return (f'<div style="font-family:Arial,sans-serif;font-size:11px;font-weight:700;'
+            f'text-transform:uppercase;letter-spacing:1.5px;color:#55607A;'
+            f'margin:18px 0 9px;padding-bottom:5px;border-bottom:1px solid #E4E7EB;">'
+            f'{text}</div>')
+
+
+def _compact_row(cat: str, headline: str, url: str, src: str, body: str = "") -> str:
+    """One scannable line: category, headline, source.
+
+    Used where a section carries breadth rather than depth. The headline sits
+    on its own line with the note and source under it — run together they
+    wrapped into a single grey paragraph and the eye could not find where the
+    headline stopped.
+    """
+    under = " &middot; ".join(x for x in (body, src) if x)
+    line = (f'<td style="padding:8px 0;vertical-align:top;border-bottom:1px solid #EEF0F3;">'
+            f'<div style="font-family:Georgia,serif;font-size:14px;font-weight:600;'
+            f'line-height:1.4;color:{INK};">{_link_or_text(headline, url)}</div>'
+            + (f'<div style="font-family:Arial,sans-serif;font-size:11px;line-height:1.5;'
+               f'color:{MUTE};margin-top:2px;">{under}</div>' if under else "")
+            + '</td>')
+    if not cat:
+        # Under a group heading the category is already stated, so the column
+        # would be an empty indent on every row.
+        return f'<tr>{line}</tr>'
+    return (f'<tr>'
+            f'<td style="padding:7px 10px 7px 0;vertical-align:top;white-space:nowrap;'
+            f'font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.5px;'
+            f'text-transform:uppercase;color:{PRC_RED};border-bottom:1px solid #EEF0F3;">{cat}</td>'
+            f'{line}</tr>')
+
+
 def _sec_label(label: str, color: str = "#1B2A4A") -> str:
     """Section label — small-caps with rule, no background pill."""
     return (f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
@@ -197,6 +241,10 @@ def render_html(digest: dict) -> str:
 </tr></table>
 {"<div style='margin-top:12px;padding-top:12px;border-top:1px solid #D4AC0D;font-size:13px;color:rgba(255,255,255,0.9);font-family:Georgia,serif;'><strong style='color:#D4AC0D;font-family:Arial,sans-serif;font-size:11px;letter-spacing:1px;'>RE:</strong>&nbsp; " + re_line + "</div>" if re_line else ""}
 </div>""")
+
+    # Placeholder for the jump row, resolved at the end once every section is
+    # known and its anchors can be checked.
+    sections_pre.append("%%NAV%%")
 
     # 2. Market strip. Built from what actually resolved, never from a fixed
     # grid. The old strip hard-coded nine tiles across three tables; four of the
@@ -380,7 +428,7 @@ def render_html(digest: dict) -> str:
 {"<p style='margin:0 0 10px 0;font-size:13px;line-height:1.55;color:#444;'>" + b + "</p>" if b else ""}
 <div style="font-size:10px;color:#aaa;margin-top:6px;text-transform:uppercase;letter-spacing:0.5px;">{sl}</div>
 </div>"""
-        sections_today.append(f'<div {_SEC}>{_sec_label("Top Stories")}{sh}</div>')
+        sections_today.append(f'<div {_SEC}><a name="top-stories"></a>{_sec_label("Top Stories")}{sh}</div>')
 
     # 4a. US–China. One format for the whole relationship: trade, export
     # controls, sanctions, CFIUS, diplomacy, military, Congress. This replaces
@@ -393,7 +441,7 @@ def render_html(digest: dict) -> str:
                                 it.get("headline", ""), it.get("url", ""),
                                 it.get("body_text", ""), headline_size="14px")
                      for it in usc if isinstance(it, dict))
-        sections_today.append(f'<div {_SEC}>{_sec_label("US&ndash;China")}{uh}</div>')
+        sections_today.append(f'<div {_SEC}><a name="us-china"></a>{_sec_label("US&ndash;China")}{uh}</div>')
 
     # 4b. China & the World. Everyone except the United States, region-tagged,
     # with a Cross-Strait item guaranteed by the prompt and Korea and Japan
@@ -408,7 +456,7 @@ def render_html(digest: dict) -> str:
                                 it.get("headline", ""), it.get("url", ""),
                                 it.get("body_text", ""), headline_size="14px")
                      for it in cw if isinstance(it, dict))
-        sections_today.append(f'<div {_SEC}>{_sec_label("China &amp; the World")}{wh}</div>')
+        sections_today.append(f'<div {_SEC}><a name="world"></a>{_sec_label("China &amp; the World")}{wh}</div>')
 
     # 4c. Overnight Flash. The residual tier: important items that fit none of
     # the relationship sections. It leads the wire rather than sitting under
@@ -416,25 +464,57 @@ def render_html(digest: dict) -> str:
     # relationship and this one is organised by time.
     overnight = digest.get("overnight_items") or []
     if overnight:
-        fh = "".join(_item_card(_str(it.get("category", "")), it.get("source", ""),
-                                it.get("headline", ""), it.get("url", ""),
-                                it.get("body_text", ""))
-                     for it in overnight if isinstance(it, dict))
-        sections_wire.append(f'<div {_SEC}>{_sec_label("Overnight Flash")}{fh}</div>')
+        # A scan list, not a second Top Stories. One rule down the left, one
+        # line per item, so the eye runs vertically instead of stopping at a
+        # card border every three lines. The cards above carry the weight;
+        # this section carries the breadth.
+        fh = ""
+        for it in overnight:
+            if not isinstance(it, dict):
+                continue
+            cat = _esc(_str(it.get("category", "")))
+            h = _esc(it.get("headline", ""))
+            b = _esc(it.get("body_text", ""))
+            src = _esc(_clean_src(it.get("source", "")))
+            url = it.get("url", "")
+            tail = (f'<span style="color:{MUTE};"> &mdash; {b}</span>' if b else "")
+            fh += (f'<tr>'
+                   f'<td style="padding:7px 10px 7px 0;vertical-align:top;white-space:nowrap;'
+                   f'font-family:Arial,sans-serif;font-size:10px;font-weight:700;'
+                   f'letter-spacing:0.5px;text-transform:uppercase;color:{PRC_RED};'
+                   f'border-bottom:1px solid #EEF0F3;">{cat}</td>'
+                   f'<td style="padding:7px 0;vertical-align:top;font-family:Georgia,serif;'
+                   f'font-size:13px;line-height:1.45;color:{INK};'
+                   f'border-bottom:1px solid #EEF0F3;">'
+                   f'{_link_or_text(h, url)}{tail}'
+                   f'<span style="font-family:Arial,sans-serif;font-size:11px;color:{MUTE};">'
+                   f' &middot; {src}</span></td>'
+                   f'</tr>')
+        fh = (f'<table width="100%" cellpadding="0" cellspacing="0" border="0" '
+              f'class="flash-table" style="border-top:2px solid {PRC_RED};">{fh}</table>')
+        sections_wire.append(
+            f'<div {_SEC}><a name="overnight"></a>{_sec_label("Overnight")}{fh}</div>')
 
     # 5. Key Stat. Rendered as the first row of the market band, so the page
     # has one dark data band instead of two.
     stat = digest.get("key_stat") or {}
     if stat and stat.get("number"):
+        # A light panel, not a second red band. Sitting on the same ground as
+        # the masthead it read as more chrome, and centring it took the number
+        # out of the column every other section reads down.
         stat_html = f"""
-<div style="padding:14px 32px 12px;background:#DE2910;color:#ffffff;text-align:center;border-bottom:1px solid rgba(255,255,255,0.12);" class="sec dark-sec">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.92);margin-bottom:2px;">Stat of the Day</div>
-<div class="key-stat-num" style="font-size:26px;font-weight:700;font-family:Georgia,serif;color:#ffffff;line-height:1.1;">{_esc(str(stat.get("number", "")))}</div>
-<div style="font-size:13px;color:rgba(255,255,255,0.85);margin-top:3px;">{_esc(stat.get("label", ""))}</div>
-<div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:3px;font-style:italic;">{_esc(stat.get("context", ""))}</div>
-{"<div style='font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;'>Source: " + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
+<div {_SEC}>
+  <a name="key-stat"></a>{_sec_label("Stat of the Day")}
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FDF4F2;border-left:3px solid {PRC_RED};border-radius:3px;">
+    <tr><td style="padding:14px 16px;">
+      <div class="key-stat-num" style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:{PRC_RED};line-height:1;">{_esc(str(stat.get("number", "")))}</div>
+      <div style="font-family:Georgia,serif;font-size:14px;color:{INK};margin-top:5px;line-height:1.4;">{_esc(stat.get("label", ""))}</div>
+      {"<div style='font-family:Georgia,serif;font-size:13px;color:#4A5260;margin-top:4px;line-height:1.5;'>" + _esc(stat.get("context", "")) + "</div>" if stat.get("context") else ""}
+      {"<div style='font-family:Arial,sans-serif;font-size:11px;color:#55607A;margin-top:7px;'>" + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
+    </td></tr>
+  </table>
 </div>"""
-        sections_markets.insert(0, stat_html)
+        sections_today.append(stat_html)
 
     # 8. PRC Government (2x2 + personnel + NPC + calendar)
     prc_gov = digest.get("prc_government") or []
@@ -544,14 +624,14 @@ def render_html(digest: dict) -> str:
         if gov_grid or pers_html or npc_html:
             sections_analysis.append(f"""
 <div {_SEC}>
-{_sec_label("What Beijing Did")}
+<a name="beijing"></a>{_sec_label("What Beijing Did")}
 <div style="font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-top:-10px;margin-bottom:14px;">State Council + Ministries{(" · " + ds) if ds else ""}</div>
 {gov_grid}{pers_html}{npc_html}
 </div>""")
         # The calendar is a forward look, so it closes the brief rather than
         # sitting halfway down inside a government section.
         if cal_html:
-            sections_close.append(f'<div {_SEC}>{_sec_label("What We Are Watching")}{cal_html}</div>')
+            sections_close.append(f'<div {_SEC}><a name="upcoming"></a>{_sec_label("What We Are Watching")}{cal_html}</div>')
 
     # 10. Economy & Business — inside China.
     biz = digest.get("business_economy") or []
@@ -564,7 +644,7 @@ def render_html(digest: dict) -> str:
             tag = " / ".join(x for x in (str(b.get("sector") or ""), ", ".join(comps)) if x)
             bh += _item_card(tag, b.get("source", ""), b.get("headline", ""),
                              b.get("url", ""), b.get("body_text", ""))
-        sections_today.append(f'<div {_SEC}>{_sec_label("Economy &amp; Business")}{bh}</div>')
+        sections_today.append(f'<div {_SEC}><a name="business"></a>{_sec_label("Economy &amp; Business")}{bh}</div>')
 
     # 14. Public Sentiment — removed (low signal-to-noise)
 
@@ -609,7 +689,7 @@ def render_html(digest: dict) -> str:
 {src_link}
 </div>"""
         sections_analysis.append(
-            f'<div {_SEC}>{_sec_label("What Beijing Is Saying", "#C0392B")}{oh}</div>')
+            f'<div {_SEC}><a name="saying"></a>{_sec_label("What Beijing Is Saying", "#C0392B")}{oh}</div>')
 
     # 15. Social Statements
     stmts = digest.get("social_statements") or []
@@ -631,16 +711,35 @@ def render_html(digest: dict) -> str:
 {"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Note:</strong> " + nt + "</div>" if nt else ""}
 {src_link}
 </div>"""
-        sections_analysis.append(f'<div {_SEC}>{_sec_label("What Others Are Saying")}{sh}</div>')
+        sections_analysis.append(f'<div {_SEC}><a name="analysis"></a>{_sec_label("What Others Are Saying")}{sh}</div>')
 
     # 16. Also Today — the one-line wire.
     also = digest.get("also_today") or []
     if also:
-        ah = "".join(_item_card(_str(a.get("category", "")), a.get("source", ""),
-                                a.get("headline", ""), a.get("url", ""),
-                                a.get("body_text", ""))
-                     for a in also[:8] if isinstance(a, dict))
-        sections_wire.append(f'<div {_SEC}>{_sec_label("Also Today")}{ah}</div>')
+        # Grouped by subject. Ungrouped it was a run of identical bars whose
+        # only distinguishing mark was a category repeated in grey on every
+        # row, so a reader looking for the trade item had to read all of them.
+        _groups = {}
+        for a in also[:8]:
+            if not isinstance(a, dict):
+                continue
+            key = _str(a.get("category", "")).strip() or "Other"
+            _groups.setdefault(key.title(), []).append(a)
+        ah = ""
+        _multi = len(_groups) > 1
+        for _cat, _items in _groups.items():
+            rows = "".join(
+                _compact_row(cat="" if _multi else _esc(_cat),
+                             headline=_esc(i.get("headline", "")),
+                             url=i.get("url", ""),
+                             src=_esc(_clean_src(i.get("source", ""))),
+                             body=_esc(i.get("body_text", "")))
+                for i in _items)
+            ah += ((_subhead(_esc(_cat)) if _multi else "")
+                   + f'<table width="100%" cellpadding="0" cellspacing="0" '
+                     f'border="0" class="flash-table">{rows}</table>')
+        sections_wire.append(
+            f'<div {_SEC}><a name="wire"></a>{_sec_label("The Wire")}{ah}</div>')
 
     # 18. Sanctions Status footer — REMOVED. Will return when trade tracker is wired
     # with verifiable BIS/OFAC/DoD running totals. Placeholder text was misleading.
@@ -688,7 +787,33 @@ def render_html(digest: dict) -> str:
         sections_post
     )
 
+    # ── Jump row ──────────────────────────────────────────────────────────
+    # The brief is too long to scan end to end and the only link in it was
+    # "back to top". Label and anchor are paired here and each pair is kept
+    # only when the section actually emitted its anchor, so a quiet day that
+    # drops sections simply gets fewer links rather than dead ones.
+    _NAV = [("Top Stories", "top-stories"), ("US-China", "us-china"),
+            ("The World", "world"), ("Beijing", "beijing"),
+            ("Markets", "business"), ("Statements", "saying"),
+            ("Analysis", "analysis"), ("Overnight", "overnight"),
+            ("The Wire", "wire"), ("Upcoming", "upcoming")]
     body_html = "\n".join(s for s in sections if s)
+    _links = [f'<a href="#{_a}" style="color:{PRC_RED};text-decoration:underline;'
+              f'text-underline-offset:2px;white-space:nowrap;">{_l}</a>'
+              for _l, _a in _NAV if f'a name="{_a}"' in body_html]
+    _nav_html = ""
+    if len(_links) >= 4:
+        # Named and underlined. Unlabelled and unadorned it reads as a
+        # subtitle rather than a menu, and goes unused.
+        _nav_html = ('<div class="nav-row sec" style="background:#F7F8FA;'
+                     'border-bottom:1px solid #E4E7EB;padding:9px 32px;'
+                     'text-align:center;font-family:Arial,sans-serif;'
+                     'font-size:11px;line-height:1.9;color:#6B7280;">'
+                     '<span style="font-size:10px;font-weight:700;'
+                     'text-transform:uppercase;letter-spacing:1.5px;'
+                     'color:#6B7280;">In this issue &nbsp;</span>'
+                     + ' &nbsp;&middot;&nbsp; '.join(_links) + '</div>')
+    body_html = body_html.replace("%%NAV%%", _nav_html)
     return f"""<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>

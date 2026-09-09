@@ -555,7 +555,7 @@ def test_render():
     check("congress folded into US-China, above the wire",
           0 < hmoved.find("US&ndash;China") < hmoved.find("WIRE"))
     check("calendar closes the brief as the forward look",
-          hmoved.find("What We Are Watching") > hmoved.find("Also Today") > 0)
+          hmoved.find("What We Are Watching") > hmoved.find("The Wire") > 0)
 
     # The market strip renders what resolved and nothing else. Five of nine
     # tiles were bare em dashes on run 118, which reads as broken rather than
@@ -632,8 +632,8 @@ def test_render():
     check("no standalone korea section", "The Korea Angle" not in hk)
     check("reading order: top stories, US-China, world, economy, then the wire",
           0 < hk.find("Top Stories") < hk.find("US&ndash;China") < hk.find("China &amp; the World")
-          < hk.find("Economy &amp; Business") < hk.find("Overnight Flash"))
-    check("overnight now leads the wire", hk.find("WIRE") < hk.find("Overnight Flash"))
+          < hk.find("Economy &amp; Business") < hk.find('a name="overnight"'))
+    check("overnight now leads the wire", hk.find("WIRE") < hk.find('a name="overnight"'))
     # Format order: the frame and the news come before the data strip.
     i_top, i_mkt = html.find("Top Stories"), html.find("SSE Composite")
     check("no Bottom Line section", "The Bottom Line" not in html)
