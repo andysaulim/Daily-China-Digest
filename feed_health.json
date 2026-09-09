@@ -19,7 +19,7 @@
  },
  "AFRICOM China": {
   "empty_runs": 0,
-  "last_count": 60,
+  "last_count": 62,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -566,7 +566,7 @@
  },
  "Hoover China": {
   "empty_runs": 0,
-  "last_count": 96,
+  "last_count": 93,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -583,7 +583,7 @@
   "last_seen": "2026-09-09"
  },
  "House Select CCP": {
-  "empty_runs": 4,
+  "empty_runs": 8,
   "last_count": 0,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-09"
@@ -800,7 +800,7 @@
  },
  "PD signed commentary": {
   "empty_runs": 0,
-  "last_count": 16,
+  "last_count": 17,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -829,14 +829,14 @@
   "last_seen": "2026-09-09"
  },
  "PRC Embassy US": {
-  "empty_runs": 1,
+  "empty_runs": 5,
   "last_count": 0,
   "last_ok": "2026-09-08",
   "last_seen": "2026-09-09"
  },
  "Pacific Affairs": {
   "empty_runs": 0,
-  "last_count": 86,
+  "last_count": 87,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -1108,7 +1108,7 @@
  },
  "Taiwan Strait": {
   "empty_runs": 0,
-  "last_count": 95,
+  "last_count": 97,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
