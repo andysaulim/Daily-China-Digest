@@ -302,26 +302,33 @@ def render_html(digest: dict) -> str:
     </table>
     """)
 
-    # 1. Header
+    # ── 1. Header ────────────────────────────────────────────────────────
+    # The house masthead, identical in all four briefs. Only the band colour,
+    # the chair name and the title differ. Left column: chair, title, date.
+    # Right column, bottom-aligned: the issue meta. Then a rule and the RE
+    # line across the full width.
+    #
+    # It is written out rather than shared because these are four repositories
+    # with no common package — so it is copied verbatim, and any change has to
+    # be made in all four.
     sections_pre.append(f"""
-<!-- PRC flag red. It carries white type at 4.74:1, so unlike the gold it
-     works as a ground, and it sits far enough from Japan's hinomaru
-     #BC002D to read as a different publication. Gold stays as the accent
-     inside the brief, which is the flag's own pairing. -->
-<div style="background:#DE2910;color:#ffffff;padding:18px 32px 14px;" class="sec dark-sec">
-<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-<td class="mast-main" style="vertical-align:top;">
-<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#FFFFFF;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Programs</div>
-<h1 style="margin:0 0 4px 0;font-size:26px;font-weight:700;font-family:Georgia,serif;color:#fff;letter-spacing:0.3px;">China Daily Brief</h1>
-<div style="font-size:16px;font-weight:400;color:rgba(255,255,255,0.85);font-family:Georgia,serif;">{_esc(date_str)}</div>
-</td>
-<td class="mast-meta" style="vertical-align:top;text-align:right;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.92);margin-bottom:3px;">{gen_time}</div>
-<div style="font-size:11px;color:rgba(255,255,255,0.72);letter-spacing:0.5px;">{wc:,} words &middot; {read_min} min read</div>
-</td>
-</tr></table>
-{"<div style='margin-top:12px;padding-top:12px;border-top:1px solid #D4AC0D;font-size:13px;color:rgba(255,255,255,0.9);font-family:Georgia,serif;'><strong style='color:#D4AC0D;font-family:Arial,sans-serif;font-size:11px;letter-spacing:1px;'>RE:</strong>&nbsp; " + re_line + "</div>" if re_line else ""}
-</div>""")
+    <a name="top" id="top"></a>
+    <div bgcolor="#DE2910" style="background-color:#DE2910;color:#fff;padding:16px 32px 16px;border-bottom:1px solid rgba(255,255,255,0.18);" class="sec mast-band">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td class="mast-main" style="vertical-align:top;">
+          <div style="font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.78);margin-bottom:7px;">CSIS China Programs</div>
+          <h1 style="margin:0 0 4px 0;font-size:26px;font-weight:700;font-family:Georgia,'Times New Roman',serif;color:#fff;letter-spacing:0.5px;">
+            China Daily Brief
+          </h1>
+          <div style="margin-top:2px;font-size:16px;font-weight:400;color:rgba(255,255,255,0.85);font-family:Georgia,serif;">{_esc(date_str)}</div>
+        </td>
+        <td class="mast-meta" style="vertical-align:bottom;text-align:right;">
+          <div style="font-family:Arial,sans-serif;font-size:11px;letter-spacing:0.5px;color:rgba(255,255,255,0.72);white-space:nowrap;">{wc:,} words &middot; {read_min} min read</div>
+        </td>
+      </tr></table>
+      {{"<div style='margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.28);font-size:13px;color:rgba(255,255,255,0.92);font-family:Georgia,serif;line-height:1.55;'><strong style='color:#FFFFFF;font-size:11px;letter-spacing:1.5px;font-family:Arial,sans-serif;'>RE:</strong>&nbsp; " + re_line + "</div>" if re_line else ""}}
+    </div>
+    """)
 
     # 2. Market strip — four indicators, directly under the nameplate.
     #
