@@ -911,12 +911,12 @@ def _build_archive_index(archive: list) -> str:
 <body style="margin:0;background:#F4F4F1;">
 <div style="max-width:760px;margin:0 auto;background:#fff;">
 <div style="background:#1B2A4A;color:#fff;padding:18px 32px 14px;">
-<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Teams</div>
+<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Programs</div>
 <h1 style="margin:0 0 4px 0;font-size:28px;font-weight:700;font-family:Georgia,serif;">China Daily Brief</h1>
 <div style="font-size:14px;color:rgba(255,255,255,0.85);font-family:Georgia,serif;">Archive &middot; {len(archive)} issues &middot; <a href="index.html" style="color:#D4AC0D;text-decoration:none;">Latest issue &#8594;</a></div>
 </div>
 <table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding:8px 24px 24px;">{body}</table>
-<div style="padding:16px 32px;font-size:10px;color:#888;font-family:Arial,sans-serif;text-align:center;">Generated automatically; every item links to its source. Prepared by Andy Lim, CSIS China Teams.</div>
+<div style="padding:16px 32px;font-size:10px;color:#888;font-family:Arial,sans-serif;text-align:center;">Generated automatically; every item links to its source. Prepared by Andy Lim, CSIS China Programs.</div>
 </div></body></html>"""
 
 

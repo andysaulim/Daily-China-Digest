@@ -34,7 +34,7 @@ def export_pdf(html_path: Path, pdf_path: Path | None = None, timeout_ms: int = 
                      header_template="<div></div>",
                      footer_template=(
                          "<div style='font-size:8px;color:#888;width:100%;text-align:center;"
-                         "font-family:Arial,sans-serif;'>China Daily Brief · CSIS China Teams · "
+                         "font-family:Arial,sans-serif;'>China Daily Brief · CSIS China Programs · "
                          "page <span class='pageNumber'></span> of <span class='totalPages'></span></div>"))
             browser.close()
         print(f"   ✓ PDF written: {pdf_path.name} ({pdf_path.stat().st_size:,} bytes)")
