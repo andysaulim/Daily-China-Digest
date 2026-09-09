@@ -656,7 +656,7 @@ def render_html(digest: dict) -> str:
 CSIS China Teams &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_time}
 </div>
 <div style="font-size:10px;color:rgba(255,255,255,0.55);font-family:Arial,sans-serif;line-height:1.6;max-width:520px;margin:8px auto 0;">
-This newsletter is automatically generated, so it may contain errors. Please check all information and sources before citing. Every item links to its source; check the source before citing. Prepared by Andy Lim, CSIS China Teams.
+This brief is generated automatically from {_esc(str(digest.get("source_count") or "the day's"))} collected sources and may contain errors. Every item links to its source; check the source before citing. Prepared by Andy Lim, CSIS Korea Chair.
 </div>
 <a href="#top" style="font-size:10px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:1px;">&#8593; Back to top</a>
 </div>""")
