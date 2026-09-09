@@ -179,16 +179,14 @@ def render_html(digest: dict) -> str:
 
     # 1. Header
     sections_pre.append(f"""
-<!-- The other editions put their identity colour behind the masthead.
-     China's gold carries white type at only 2.2:1, which is unreadable,
-     so the ground stays navy and the gold does the identifying work as a
-     rule above the nameplate and as the chair line, where it reads at
-     6.6:1. Same system, one colour that had to be used differently. -->
-<div style="height:4px;background:#D4AC0D;font-size:0;line-height:0;">&nbsp;</div>
-<div style="background:#1B2A4A;color:#ffffff;padding:18px 32px 14px;" class="sec dark-sec">
+<!-- PRC flag red. It carries white type at 4.74:1, so unlike the gold it
+     works as a ground, and it sits far enough from Japan's hinomaru
+     #BC002D to read as a different publication. Gold stays as the accent
+     inside the brief, which is the flag's own pairing. -->
+<div style="background:#DE2910;color:#ffffff;padding:18px 32px 14px;" class="sec dark-sec">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
 <td style="vertical-align:top;">
-<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Teams</div>
+<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.85);font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Teams</div>
 <h1 style="margin:0 0 4px 0;font-size:26px;font-weight:700;font-family:Georgia,serif;color:#fff;letter-spacing:0.3px;">China Daily Brief</h1>
 <div style="font-size:16px;font-weight:400;color:rgba(255,255,255,0.85);font-family:Georgia,serif;">{_esc(date_str)}</div>
 </td>
@@ -431,7 +429,7 @@ def render_html(digest: dict) -> str:
     stat = digest.get("key_stat") or {}
     if stat and stat.get("number"):
         stat_html = f"""
-<div style="padding:14px 32px 12px;background:#1B2A4A;color:#ffffff;text-align:center;border-top:4px solid #D4AC0D;border-bottom:1px solid rgba(255,255,255,0.12);" class="sec dark-sec">
+<div style="padding:14px 32px 12px;background:#DE2910;color:#ffffff;text-align:center;border-bottom:1px solid rgba(255,255,255,0.12);" class="sec dark-sec">
 <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.55);margin-bottom:2px;">Stat of the Day</div>
 <div class="key-stat-num" style="font-size:26px;font-weight:700;font-family:Georgia,serif;color:#ffffff;line-height:1.1;">{_esc(str(stat.get("number", "")))}</div>
 <div style="font-size:13px;color:rgba(255,255,255,0.85);margin-top:3px;">{_esc(stat.get("label", ""))}</div>
@@ -656,7 +654,7 @@ def render_html(digest: dict) -> str:
 CSIS China Teams &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_time}
 </div>
 <div style="font-size:10px;color:rgba(255,255,255,0.55);font-family:Arial,sans-serif;line-height:1.6;max-width:520px;margin:8px auto 0;">
-This newsletter is automatically generated, so it may contain errors. Please check all information and sources before citing. Every item links to its source; check the source before citing. Prepared by Andy Lim, CSIS China Teams.
+This brief is generated automatically from {_esc(str(digest.get("source_count") or "the day's"))} collected sources and may contain errors. Every item links to its source; check the source before citing. Prepared by Andy Lim, CSIS Korea Chair.
 </div>
 <a href="#top" style="font-size:10px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:1px;">&#8593; Back to top</a>
 </div>""")
