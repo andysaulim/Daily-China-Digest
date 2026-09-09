@@ -807,6 +807,29 @@ def _is_recent(entry, hours: int = 48, strict: bool = False) -> bool:
     return not strict
 
 
+# Feeds that are China-related by construction and so must NOT be put through
+# CHINA_KEYWORDS. That filter exists to strip world news out of general wires;
+# applied to a ministry feed it does the opposite of its job. Every one of
+# these was being discarded before the model saw it:
+#
+#   "Ministry of Commerce Announces Final Ruling on EU Pork Anti-Dumping
+#    Investigation", "Foreign Ministry Spokesperson Regular Press Conference",
+#   "National Bureau of Statistics releases August industrial output",
+#   "Loan Prime Rate Announcement", "Executive Meeting Deploys Measures on
+#    Domestic Demand"
+#
+# None of them names China, because the publisher has no reason to: the
+# ministry IS the subject. Chinese-language feeds already bypass the filter
+# through the lang check; their English counterparts had no such route.
+CHINA_NATIVE_FEEDS = {
+    "Xinhua English", "People's Daily EN", "MOFA Spokesperson", "PRC Embassy US",
+    "State Dept Press (direct)", "BIS Entity List", "Taiwan MOFA",
+    "Taiwan Officials (MAC/MOFA/MND)", "White House China", "State Dept China",
+    "Pentagon China", "Treasury China", "Commerce China", "USTR China",
+    "Japan MOFA China",
+}
+
+
 def _is_china_related(entry) -> bool:
     text = f"{entry.get('title', '')} {entry.get('summary', entry.get('description', ''))}"
     return bool(CHINA_KEYWORDS.search(text))
@@ -971,7 +994,8 @@ def _collect_tier1() -> list:
                 continue
             # PRC-language state media is China-related by construction; the
             # English keyword gate would drop most of it.
-            if lang != "ZH" and not _is_china_related(entry):
+            if (lang != "ZH" and source not in CHINA_NATIVE_FEEDS
+                    and not _is_china_related(entry)):
                 continue
             if _is_lifestyle(entry):
                 continue
@@ -989,7 +1013,7 @@ def _collect_tier2() -> list:
         for entry in entries:
             if not _is_recent(entry, hours=36, strict=True):
                 continue
-            if not _is_china_related(entry):
+            if source not in CHINA_NATIVE_FEEDS and not _is_china_related(entry):
                 continue
             lang = "ZH" if "(ZH)" in source else "EN"
             article = _entry_to_article(entry, source, lang=lang, extra={
@@ -1024,7 +1048,7 @@ def _collect_tier3() -> list:
         for entry in entries:
             if not _is_recent(entry, hours=72, strict=True):
                 continue
-            if not _is_china_related(entry):
+            if source not in CHINA_NATIVE_FEEDS and not _is_china_related(entry):
                 continue
             # Reject articles from known news domains — they bled in via keyword match
             url = entry.get("link", "")

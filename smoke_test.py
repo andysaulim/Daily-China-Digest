@@ -252,6 +252,37 @@ def test_fulltext():
     check("paywall list", fulltext._is_paywalled("https://www.wsj.com/x") and not fulltext._is_paywalled("https://amti.csis.org/x"))
 
 
+def test_primary_sources_survive_the_filter():
+    """A ministry feed must not be strained through the China keyword gate.
+
+    CHINA_KEYWORDS exists to strip world news out of general wires. Applied to
+    a primary source it does the opposite of its job, because the publisher
+    has no reason to name China in its own headline: the ministry IS the
+    subject. Every one of these was dropped before the model saw it.
+    """
+    section("primary sources vs the relevance filter")
+    import collect
+    from pathlib import Path
+
+    class _E(dict):
+        def get(self, k, d=""):
+            return dict.get(self, k, d)
+
+    for title in ("Ministry of Commerce Announces Final Ruling on EU Pork Anti-Dumping Investigation",
+                  "Foreign Ministry Spokesperson Lin Jian Regular Press Conference",
+                  "National Bureau of Statistics releases August industrial output",
+                  "Loan Prime Rate Announcement"):
+        check(f"filter alone would drop: {title[:34]}",
+              not collect._is_china_related(_E(title=title)))
+    check("there is an exemption set", bool(collect.CHINA_NATIVE_FEEDS))
+    check("the exemption is applied at every filter call site",
+          Path("collect.py").read_text(encoding="utf-8").count(
+              "source not in CHINA_NATIVE_FEEDS") >= 3)
+    # And the gate must still do its real job on a general wire.
+    check("world news is still rejected from a wire",
+          not collect._is_china_related(_E(title="Brazil harvest outlook improves after rainfall")))
+
+
 def test_collect_registry():
     section("collect.py registry")
     import collect
@@ -971,7 +1002,7 @@ def test_workflow_and_docs():
 
 
 if __name__ == "__main__":
-    for t in (test_resolve, test_fulltext, test_collect_registry, test_digest_module,
+    for t in (test_primary_sources_survive_the_filter, test_resolve, test_fulltext, test_collect_registry, test_digest_module,
               test_run_postprocess_and_validate, test_ledger_roundtrip, test_render,
               test_length_trim_and_caps, test_word_count_is_one_definition, test_state_merge,
               test_email_size_guard, test_archive_and_pdf,

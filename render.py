@@ -155,22 +155,18 @@ _SEC = 'style="padding:20px 32px;border-bottom:1px solid #EBEBEB;" class="sec"'
 _SEC_ALERT = 'style="padding:20px 32px;border-top:3px solid #C0392B;border-bottom:1px solid #EBEBEB;" class="sec"'
 
 def _item_card(tag: str, source: str, headline: str, url: str, body: str = "",
-               so_what: str = "", so_what_label: str = "So what",
                headline_size: str = "13px") -> str:
     """The one card every news section uses. Tag and source in grey small-caps,
-    navy headline, body, optional so-what. Colour belongs to the section label,
+    navy headline, body. Colour belongs to the section label,
     not to the item, so a page of twelve regions reads as one page."""
     tag_line = " &middot; ".join(x for x in (_esc(tag), _esc(_clean_src(source))) if x)
-    sw = (f"<div style='font-size:13px;line-height:1.5;color:#555;font-style:italic;"
-          f"margin-top:4px;'><strong style='color:#1B2A4A;font-style:normal;'>"
-          f"{_esc(so_what_label)}:</strong> {_esc(so_what)}</div>") if so_what else ""
     return (f'<div style="margin-bottom:11px;padding-left:12px;border-left:3px solid #1B2A4A;">'
             f'<div style="font-size:10px;color:#6B7280;text-transform:uppercase;'
             f'letter-spacing:1px;font-weight:600;margin-bottom:2px;">{tag_line}</div>'
             f'<div style="font-size:{headline_size};font-weight:600;color:#1B2A4A;'
             f'line-height:1.4;">{_link_or_text(_esc(headline), url)}</div>'
             f'{("<div style=" + chr(34) + "font-size:13px;line-height:1.5;color:#555;margin-top:2px;" + chr(34) + ">" + _esc(body) + "</div>") if body else ""}'
-            f'{sw}</div>')
+            f'</div>')
 
 
 INK  = "#1A222E"
