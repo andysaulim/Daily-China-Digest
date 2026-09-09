@@ -63,14 +63,17 @@ def _direct(source: str, direct_url: str, gnews_query: str) -> str:
 TIER1_FEEDS = {
     # ── Major international — China correspondents ─────────────────────────
     "WSJ China":          _gnews("China+site:wsj.com"),
-    "NYT China":          _gnews("China+site:nytimes.com"),
+    "NYT China":          _direct("NYT China", "https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml",
+                              "China+site:nytimes.com"),
     "WaPo China":         _gnews("China+site:washingtonpost.com"),
-    "FT China":           _gnews("China+site:ft.com"),
+    "FT China":           _direct("FT China", "https://www.ft.com/world/asia-pacific?format=rss",
+                              "China+site:ft.com"),
     "Reuters China":      _gnews("China+site:reuters.com"),
     "AP China":           _gnews("China+site:apnews.com"),
     "AFP China":          _gnews("China+site:afp.com"),
     "Bloomberg China":    _gnews("China+site:bloomberg.com"),
-    "BBC China":          _gnews("China+site:bbc.com"),
+    "BBC China":          _direct("BBC China", "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+                              "China+site:bbc.com"),
     "BBC Asia (direct)":  _direct("BBC Asia (direct)", "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
                                   "China+OR+Taiwan+site:bbc.com/news/world/asia"),
     "NYT Asia (direct)":  _direct("NYT Asia (direct)", "https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml",
@@ -80,7 +83,8 @@ TIER1_FEEDS = {
     "CNN China":          _gnews("China+site:cnn.com"),
     "CNBC China":         _gnews("China+site:cnbc.com"),
     "Economist China":    _gnews("China+site:economist.com"),
-    "Guardian China":     _gnews("China+site:theguardian.com"),
+    "Guardian China":     _direct("Guardian China", "https://www.theguardian.com/world/china/rss",
+                              "China+site:theguardian.com"),
     "Al Jazeera China":   _gnews("China+site:aljazeera.com"),
     "Politico China":     _gnews("China+site:politico.com"),
     "Axios China":        _gnews("China+site:axios.com"),
@@ -88,30 +92,36 @@ TIER1_FEEDS = {
     # ── Regional Asia ──────────────────────────────────────────────────────
     "SCMP":               "https://www.scmp.com/rss/91/feed",
     "SCMP China":         _direct("SCMP China", "https://www.scmp.com/rss/4/feed", "site:scmp.com/news/china"),
-    "Nikkei Asia China":  _gnews("China+site:asia.nikkei.com"),
+    "Nikkei Asia China":  _direct("Nikkei Asia China", "https://asia.nikkei.com/rss/feed/nar",
+                              "China+site:asia.nikkei.com"),
     "Japan Times China":  _gnews("China+site:japantimes.co.jp"),
     "Kyodo China":        _gnews("China+site:english.kyodonews.net"),
     "Mainichi China":     _gnews("China+site:mainichi.jp/english"),
     "Asahi China":        _gnews("China+site:asahi.com/ajw"),
-    "CNA China":          _gnews("China+site:channelnewsasia.com"),
+    "CNA China":          _direct("CNA China", "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml",
+                              "China+site:channelnewsasia.com"),
     "Straits Times China": _gnews("China+site:straitstimes.com"),
     "The Diplomat China": _gnews("site:thediplomat.com+China"),
     "The Diplomat (direct)": _direct("The Diplomat (direct)", "https://thediplomat.com/feed/",
                                      "site:thediplomat.com+China+OR+Taiwan+OR+PLA"),
 
     # ── Taiwan press (English) ─────────────────────────────────────────────
-    "Taipei Times":       _gnews("site:taipeitimes.com"),
+    "Taipei Times":       _direct("Taipei Times", "https://www.taipeitimes.com/xml/index.rss",
+                              "site:taipeitimes.com"),
     "Taipei Times (direct)": _direct("Taipei Times (direct)", "https://www.taipeitimes.com/xml/index.rss",
                                      "site:taipeitimes.com/News/front"),
-    "Focus Taiwan":       _gnews("Taiwan+OR+China+site:focustaiwan.tw"),
+    "Focus Taiwan":       _direct("Focus Taiwan", "https://focustaiwan.tw/rss/all",
+                              "Taiwan+OR+China+site:focustaiwan.tw"),
     "Taiwan News":        _gnews("site:taiwannews.com.tw"),
     # Liberty Times' English site is unindexed and Taipei Times (same group) is
     # already in twice; this slot now carries Taiwan's OFFICIAL voice instead.
     "Taiwan Officials (MAC/MOFA/MND)": _gnews("Taiwan+%22Mainland+Affairs+Council%22+OR+%22Presidential+Office%22+OR+%22Defense+Ministry%22+China+OR+PLA"),
 
     # ── PRC English-language press (Tier 4 covers Chinese-language primary) ───
-    "Caixin Global":      _gnews("China+site:caixinglobal.com"),
-    "China Daily":        _gnews("site:chinadaily.com.cn"),
+    "Caixin Global":      _direct("Caixin Global", "https://www.caixinglobal.com/rss/",
+                              "China+site:caixinglobal.com"),
+    "China Daily":        _direct("China Daily", "https://www.chinadaily.com.cn/rss/china_rss.xml",
+                              "site:chinadaily.com.cn"),
     "China Daily (direct)": _direct("China Daily (direct)", "http://www.chinadaily.com.cn/rss/china-rss.xml",
                                     "site:chinadaily.com.cn/a"),
     "Sixth Tone":         _gnews("China+site:sixthtone.com"),
@@ -395,9 +405,11 @@ TIER3_FEEDS = {
 TIER4_FEEDS = {
     # Direct PRC state media
     "Xinhua English":      "http://www.xinhuanet.com/english/rss/worldrss.xml",
-    "People's Daily EN":   _gnews("site:en.people.cn"),
+    "People's Daily EN":   _direct("People's Daily EN", "http://en.people.cn/rss/China.xml",
+                              "site:en.people.cn"),
     "Global Times":        "https://www.globaltimes.cn/rss/outbrain.xml",
-    "China Daily Opinion": _gnews("site:chinadaily.com.cn/opinion"),
+    "China Daily Opinion": _direct("China Daily Opinion", "https://www.chinadaily.com.cn/rss/opinion_rss.xml",
+                              "site:chinadaily.com.cn/opinion"),
     "CGTN":                _gnews("site:cgtn.com"),
 
     # PRC government, Chinese-language primary (what Beijing is saying, in its
