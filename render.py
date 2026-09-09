@@ -172,6 +172,10 @@ def _item_card(tag: str, source: str, headline: str, url: str, body: str = "",
 INK  = "#1A222E"
 MUTE = "#6B7280"
 PRC_RED = "#DE2910"
+# The same red darkened for use as type. On the tinted glance and stat panels
+# the flag red falls just under 4.5:1; this clears it without reading as a
+# different colour.
+PRC_RED_TEXT = "#C82409"
 
 
 RING_ON_DARK = "#EF4027"   # the accent, lightened to read on the black bar
@@ -288,12 +292,12 @@ def render_html(digest: dict) -> str:
           'text-decoration:none;white-space:nowrap;')
     _links = []
     if web_url:
-        _links.append(f'<a href="{_esc(web_url)}" style="{_a}">Read online</a>')
+        _links.append(f'<a class="pill" href="{_esc(web_url)}" style="{_a}">Read online</a>')
     if pdf_url:
-        _links.append(f'<a href="{_esc(pdf_url)}" style="{_a}">Download PDF</a>')
+        _links.append(f'<a class="pill" href="{_esc(pdf_url)}" style="{_a}">Download PDF</a>')
     _arch = archive_url or (_base + "archive.html" if _base else "")
     if _arch:
-        _links.append(f'<a href="{_esc(_arch)}" style="{_a}">Past issues</a>')
+        _links.append(f'<a class="pill" href="{_esc(_arch)}" style="{_a}">Past issues</a>')
     sections_pre.append(f"""
     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#2E3644;" class="util-row no-print">
       <tr>
@@ -327,7 +331,7 @@ def render_html(digest: dict) -> str:
           <div style="font-family:Arial,sans-serif;font-size:11px;letter-spacing:0.5px;color:rgba(255,255,255,0.72);white-space:nowrap;">{wc:,} words &middot; {read_min} min read</div>
         </td>
       </tr></table>
-      {{"<div style='margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.28);font-size:13px;color:rgba(255,255,255,0.92);font-family:Georgia,serif;line-height:1.55;'><strong style='color:#FFFFFF;font-size:11px;letter-spacing:1.5px;font-family:Arial,sans-serif;'>RE:</strong>&nbsp; " + re_line + "</div>" if re_line else ""}}
+      {"<div style='margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.28);font-size:13px;color:rgba(255,255,255,0.92);font-family:Georgia,serif;line-height:1.55;'><strong style='color:#FFFFFF;font-size:11px;letter-spacing:1.5px;font-family:Arial,sans-serif;'>RE:</strong>&nbsp; " + re_line + "</div>" if re_line else ""}
     </div>
     """)
 
@@ -417,7 +421,9 @@ def render_html(digest: dict) -> str:
     if memo:
         memo_html = ""
         for idx, mi in enumerate(memo[:3], 1):
-            t = _esc(mi) if isinstance(mi, str) else _esc(mi.get("text", "") if isinstance(mi, dict) else str(mi or ""))
+            # The memo is the first thing read and the place the prompt most
+            # wants a name bolded, so it converts emphasis like any body copy.
+            t = _emphasis(_esc(mi) if isinstance(mi, str) else _esc(mi.get("text", "") if isinstance(mi, dict) else str(mi or "")))
             memo_html += f"""<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
 <tr>
 <td width="28" style="vertical-align:top;padding-top:1px;">
@@ -435,8 +441,8 @@ def render_html(digest: dict) -> str:
 <div {_SEC}>
 <a name="memo" id="memo"></a>
 <table width="100%" cellpadding="0" cellspacing="0" border="0" class="glance-panel" style="background:#FDEEEB;border-left:3px solid {PRC_RED};">
-  <tr><td style="padding:16px 20px 8px;">
-    {_sec_label("Today at a Glance")}
+  <tr><td style="padding:0;">{_sec_label("Today at a Glance")}</td></tr>
+            <tr><td style="padding:0 20px 8px;">
     {memo_html}
   </td></tr>
 </table>
@@ -456,10 +462,10 @@ def render_html(digest: dict) -> str:
             url = s.get("url", "")
             sh += f"""
 <div class="story-card" style="margin-bottom:12px;padding:14px 16px;background:#fff;border-left:3px solid #1B2A4A;border-bottom:1px solid #F0F0F0;">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#888;font-weight:700;margin-bottom:6px;">{cat}</div>
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#6B7280;font-weight:700;margin-bottom:6px;">{cat}</div>
 <h3 style="margin:0 0 8px 0;font-size:16px;line-height:1.4;color:#1B2A4A;font-family:Georgia,serif;font-weight:700;">{_link_or_text(h, url, style="color:#1B2A4A;text-decoration:none;")}</h3>
 {"<p style='margin:0 0 10px 0;font-size:13px;line-height:1.55;color:#444;'>" + b + "</p>" if b else ""}
-<div style="font-size:10px;color:#aaa;margin-top:6px;text-transform:uppercase;letter-spacing:0.5px;">{sl}</div>
+<div style="font-size:10px;color:#6B7280;margin-top:6px;text-transform:uppercase;letter-spacing:0.5px;">{sl}</div>
 </div>"""
         sections_today.append(f'<div {_SEC}><a name="top-stories" id="top-stories"></a>{_sec_label("Top Stories")}{sh}</div>')
         _after_top = len(sections_today)
@@ -508,7 +514,7 @@ def render_html(digest: dict) -> str:
                 continue
             cat = _esc(_str(it.get("category", "")))
             h = _esc(it.get("headline", ""))
-            b = _esc(it.get("body_text", ""))
+            b = _emphasis(_esc(it.get("body_text", "")))
             src = _esc(_clean_src(it.get("source", "")))
             url = it.get("url", "")
             tail = (f'<span style="color:{MUTE};"> &mdash; {b}</span>' if b else "")
@@ -547,7 +553,7 @@ def render_html(digest: dict) -> str:
   <a name="key-stat" id="key-stat"></a>{_sec_label("Stat of the Day")}
   <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FDF4F2;border-left:3px solid {PRC_RED};border-radius:3px;">
     <tr><td style="padding:14px 16px;">
-      <div class="key-stat-num" style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:{PRC_RED};line-height:1;">{_esc(str(stat.get("number", "")))}</div>
+      <div class="key-stat-num" style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:{PRC_RED_TEXT};line-height:1;">{_esc(str(stat.get("number", "")))}</div>
       <div style="font-family:Georgia,serif;font-size:14px;color:{INK};margin-top:5px;line-height:1.4;">{_esc(stat.get("label", ""))}</div>
       {"<div style='font-family:Georgia,serif;font-size:13px;color:#4A5260;margin-top:4px;line-height:1.5;'>" + _esc(stat.get("context", "")) + "</div>" if stat.get("context") else ""}
       {"<div style='font-family:Arial,sans-serif;font-size:11px;color:#55607A;margin-top:7px;'>" + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
@@ -585,16 +591,16 @@ def render_html(digest: dict) -> str:
             if mzh:
                 hdr_parts.append(f'<span style="font-size:11px;color:#666;">{mzh}</span>')
             if mn:
-                hdr_parts.append(f'<span style="font-size:10px;color:#888;text-transform:uppercase;letter-spacing:0.6px;">{mn}</span>')
+                hdr_parts.append(f'<span style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:0.6px;">{mn}</span>')
             if off:
-                hdr_parts.append(f'<span style="font-size:11px;color:#999;font-style:italic;">{off}</span>')
+                hdr_parts.append(f'<span style="font-size:11px;color:#6B7280;font-style:italic;">{off}</span>')
             hdr = ' <span style="color:#ccc;">·</span> '.join(hdr_parts)
             slink = ""
             if url and url != "#" and url.startswith("http"):
                 sl = lbl if lbl else mn.lower()
-                slink = f'<div style="margin-top:6px;font-size:11px;color:#888;">→ <a href="{_esc(url)}" style="color:#888;text-decoration:none;">{_esc(sl)} ↗</a></div>'
+                slink = f'<div style="margin-top:6px;font-size:11px;color:#6B7280;">→ <a href="{_esc(url)}" style="color:#6B7280;text-decoration:none;">{_esc(sl)} ↗</a></div>'
             elif lbl:
-                slink = f'<div style="margin-top:6px;font-size:11px;color:#888;">→ {_esc(lbl)}</div>'
+                slink = f'<div style="margin-top:6px;font-size:11px;color:#6B7280;">→ {_esc(lbl)}</div>'
             gov_rows_html += f"""
 <div style="margin-bottom:12px;padding:12px 14px;border-left:3px solid #1B2A4A;border-bottom:1px solid #F0F0F0;">
 <div style="margin-bottom:6px;">{hdr}</div>
@@ -617,7 +623,7 @@ def render_html(digest: dict) -> str:
                 pred = _esc(p.get("predecessor", "")) if p.get("predecessor") else ""
                 ac_c = ac.get(a, "#1B2A4A")
                 bg = f'<span style="display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;color:#fff;background:{ac_c};text-transform:uppercase;margin-left:6px;">{_esc(a)}</span>'
-                pl = f'<div style="font-size:11px;color:#888;margin-top:2px;">Succeeds: {pred}</div>' if pred else ""
+                pl = f'<div style="font-size:11px;color:#6B7280;margin-top:2px;">Succeeds: {pred}</div>' if pred else ""
                 pi += f"""<div style="margin-bottom:10px;padding-left:12px;border-left:3px solid {ac_c};">
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;">{nm}{bg}</div>
 <div style="font-size:13px;color:#555;">{pos}</div>
@@ -633,7 +639,7 @@ def render_html(digest: dict) -> str:
         if npc:
             ni = ""
             for n in npc:
-                body = _esc(n.get("body", ""))
+                body = _emphasis(_esc(n.get("body", "")))
                 act = _esc(n.get("action", ""))
                 det = _esc(n.get("detail", ""))
                 url = n.get("url", "")
@@ -678,7 +684,7 @@ def render_html(digest: dict) -> str:
             sections_analysis.append(f"""
 <div {_SEC}>
 <a name="beijing" id="beijing"></a>{_sec_label("What Beijing Did")}
-<div style="font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-top:-10px;margin-bottom:14px;">State Council + Ministries{(" · " + ds) if ds else ""}</div>
+<div style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px;margin-top:-10px;margin-bottom:14px;">State Council + Ministries{(" · " + ds) if ds else ""}</div>
 {gov_grid}{pers_html}{npc_html}
 </div>""")
         # The calendar is a forward look, so it closes the brief rather than
@@ -710,7 +716,7 @@ def render_html(digest: dict) -> str:
                       "routine": "#7F8C8D"}
         oh = ""
         for o in official[:8]:
-            body = _esc(o.get("body", ""))
+            body = _emphasis(_esc(o.get("body", "")))
             body_zh = _esc(o.get("body_chinese", ""))
             speaker = _esc(o.get("speaker", ""))
             role = _esc(o.get("role", ""))
@@ -723,12 +729,12 @@ def render_html(digest: dict) -> str:
             tc = tone_color.get(tone, "#7F8C8D")
             url = o.get("url", "")
             src = _esc(_clean_src(o.get("source", "")))
-            src_link = ("<div style='font-size:10px;color:#888;margin-top:4px;'>" +
-                        _link_or_text(src or "source", url, style="color:#888;text-decoration:underline;") +
+            src_link = ("<div style='font-size:10px;color:#6B7280;margin-top:4px;'>" +
+                        _link_or_text(src or "source", url, style="color:#6B7280;text-decoration:underline;") +
                         "</div>") if url and url.startswith("http") else (
-                        f"<div style='font-size:10px;color:#888;margin-top:4px;'>{src}</div>" if src else "")
+                        f"<div style='font-size:10px;color:#6B7280;margin-top:4px;'>{src}</div>" if src else "")
             head = f"{body_zh} · {body}" if body_zh else body
-            who = f"{speaker} <span style='font-size:11px;color:#888;font-weight:400;'>· {role}</span>" if speaker else role
+            who = f"{speaker} <span style='font-size:11px;color:#6B7280;font-weight:400;'>· {role}</span>" if speaker else role
             oh += f"""<div style="margin-bottom:14px;padding:12px;background:#FAFAF5;border-radius:4px;border-left:3px solid {tc};">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
 <td style="font-size:13px;color:#1B2A4A;font-weight:700;letter-spacing:0.3px;">{head}</td>
@@ -756,10 +762,10 @@ def render_html(digest: dict) -> str:
             nt = _esc(s.get("analyst_note", ""))
             bc = _social_badge(s.get("badge_class", "sb-p"))
             url = s.get("url", "")
-            src_link = ("<div style='font-size:10px;color:#888;margin-top:4px;'>" + _link_or_text("source", url, style="color:#888;text-decoration:underline;") + "</div>") if url and url != "#" and url.startswith("http") else ""
+            src_link = ("<div style='font-size:10px;color:#6B7280;margin-top:4px;'>" + _link_or_text("source", url, style="color:#6B7280;text-decoration:underline;") + "</div>") if url and url != "#" and url.startswith("http") else ""
             sh += f"""<div style="margin-bottom:14px;padding:12px;background:#FAFAF5;border-radius:4px;border-left:3px solid {bc};">
-<div style="font-size:13px;color:#888;text-transform:uppercase;letter-spacing:0.5px;">{pd}</div>
-<div style="font-size:14px;font-weight:600;color:#1B2A4A;margin:2px 0;">{who} <span style="font-size:11px;color:#888;font-weight:400;">· {ctx}</span></div>
+<div style="font-size:13px;color:#6B7280;text-transform:uppercase;letter-spacing:0.5px;">{pd}</div>
+<div style="font-size:14px;font-weight:600;color:#1B2A4A;margin:2px 0;">{who} <span style="font-size:11px;color:#6B7280;font-weight:400;">· {ctx}</span></div>
 <blockquote style="margin:6px 0;padding:8px 12px;background:#fff;border-left:3px solid {bc};font-style:italic;font-size:13px;line-height:1.5;color:#333;font-family:Georgia,serif;">&ldquo;{q}&rdquo;</blockquote>
 {"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Note:</strong> " + nt + "</div>" if nt else ""}
 {src_link}
@@ -786,7 +792,7 @@ def render_html(digest: dict) -> str:
                              headline=_esc(i.get("headline", "")),
                              url=i.get("url", ""),
                              src=_esc(_clean_src(i.get("source", ""))),
-                             body=_esc(i.get("body_text", "")))
+                             body=_emphasis(_esc(i.get("body_text", ""))))
                 for i in _items)
             ah += ((_subhead(_esc(_cat)) if _multi else "")
                    + rows)
@@ -878,7 +884,7 @@ def render_html(digest: dict) -> str:
             ("Analysis", "analysis"), ("Overnight", "overnight"),
             ("The Wire", "wire"), ("Upcoming", "upcoming")]
     body_html = "\n".join(s for s in sections if s)
-    _links = [f'<a href="#{_a}" style="color:{PRC_RED};text-decoration:underline;'
+    _links = [f'<a href="#{_a}" style="color:{PRC_RED_TEXT};text-decoration:underline;'
               f'text-underline-offset:2px;white-space:nowrap;">{_l}</a>'
               for _l, _a in _NAV if f'a name="{_a}"' in body_html]
     _nav_html = ""
@@ -909,7 +915,7 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
 /* The wrapper <td align="center"> centres the container for Outlook, which
    ignores margin:auto. Without the reset above it also centred every line
    of text in the brief. */
-/* Lock dark sections — prevent iOS Mail light-mode override */
+/* Lock dark sections - prevent iOS Mail light-mode override */
 /* No background here. This class exists to force light-on-dark type in
    clients that recolour; the ground is set inline per band, and an
    !important background here silently overrode the red masthead. */
@@ -930,12 +936,23 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
 @media only screen and (max-width: 600px) {{
   /* The notice and the links will not sit side by side on a phone. The other
      three briefs stack them; this one kept them in one row, so the pills were
-     squeezed against the right edge. No width:100% here — a cell set to
+     squeezed against the right edge. No width:100% here - a cell set to
      display:block already fills its row, and 100% plus horizontal padding is
      measured content-box, which pushes the table wider than the screen. */
   .util-row .util-cell {{ display:block !important; text-align:center !important;
     padding:5px 8px !important; white-space:normal !important; }}
   .util-row .util-cell a {{ margin:2px !important; }}
+  /* The data strip is four tiles of monospaced figures in one row. At 320px
+     that is 80px a tile, and "18,220.10" in 16px Courier does not fit, so the
+     row set a min-content floor wider than the screen and the whole brief
+     scrolled sideways. Smaller figures and tighter padding, which is what the
+     other briefs already do. */
+  .mkt-table td {{ padding:8px 3px 10px !important; }}
+  .mkt-table div[style*="font-size:16px"] {{ font-size:13px !important; }}
+  /* 10px stays: 9px is below the floor the visual check enforces, and the
+     tracking is what was costing the width, not the size. */
+  .mkt-table div[style*="font-size:10px"] {{ letter-spacing:0.2px !important; }}
+  .mkt-table div[style*="font-size:11px"] {{ font-size:10px !important; }}
   /* The masthead had no mobile rule at all, so its two columns stayed side by
      side on a phone: the nameplate squeezed into a narrow column while the
      meta line held its own width on the right. The other three briefs stack
@@ -954,12 +971,16 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
      stays white in dark mode, a bright band across the bottom of an otherwise
      dark brief. The coverage guard misses it because #FFFFFF is on the exempt
      list, being legitimate as type on an accent fill. */
-  .wrapper .footer-end, .container .footer-end {{ background:#1a1a1a !important; }}
-  .wrapper .footer-end td, .container .footer-end td {{ color:#9AA3AE !important; }}
+  .container .footer-end, .container .footer-end {{ background:#1a1a1a !important; }}
+      /* Keep the filled buttons filled. The generic white-background
+         rule darkens them while their type stays dark, which measured
+         1.23:1 - a button you cannot read. */
+    
+  .container .footer-end td, .container .footer-end td {{ color:#9AA3AE !important; }}
     /* There was no dark block at all, and body is hardcoded white, so a client
        in dark mode inverted the ground and left dark type on it. These rules
        are generated from the colours this template actually uses, rather than
-       from a guess at which elements carry them — Korea's hand-written
+       from a guess at which elements carry them - Korea's hand-written
        selectors matched h3, div and a while the markup also used td, p and
        span, and most of its body text stayed unreadable as a result. */
     body {{ background:#121212 !important; }}
@@ -990,30 +1011,38 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
     /* Filled from a measured audit of the rendered brief: these
        colours reached the output with no dark rule, so they kept
        their light values and rendered near-black on near-black. */
-    .wrapper [style*="color:#1a222e"] {{ color:#E8E6E1 !important; }}
-    .wrapper [style*="color:#1A222E"] {{ color:#E8E6E1 !important; }}
-    .wrapper [style*="color:#222"] {{ color:#E8E6E1 !important; }}
-    .wrapper [style*="color:#444"] {{ color:#C4C8CE !important; }}
-    .wrapper [style*="color:#4a5260"] {{ color:#C4C8CE !important; }}
-    .wrapper [style*="color:#4A5260"] {{ color:#C4C8CE !important; }}
-    .wrapper [style*="color:#55607a"] {{ color:#C4C8CE !important; }}
-    .wrapper [style*="color:#55607A"] {{ color:#C4C8CE !important; }}
-    .wrapper [style*="color:#888"] {{ color:#9AA3AE !important; }}
-    .wrapper [style*="color:#aaa"] {{ color:#9AA3AE !important; }}
-    .wrapper [style*="color:#AAA"] {{ color:#9AA3AE !important; }}
-    .wrapper [style*="color:#d4ac0d"] {{ color:#E8C86A !important; }}
-    .wrapper [style*="color:#D4AC0D"] {{ color:#E8C86A !important; }}
-    .wrapper [style*="color:#de2910"] {{ color:#FF8A7A !important; }}
-    .wrapper [style*="color:#DE2910"] {{ color:#FF8A7A !important; }}
-    .wrapper [style*="background:#f7f8fa"] {{ background-color:#1A1D22 !important; }}
-    .wrapper [style*="background:#F7F8FA"] {{ background-color:#1A1D22 !important; }}
-    .wrapper [style*="background:#fdeeeb"] {{ background-color:#2A1815 !important; }}
-    .wrapper [style*="background:#FDEEEB"] {{ background-color:#2A1815 !important; }}
-    .wrapper [style*="background:#fdf4f2"] {{ background-color:#2A1D1A !important; }}
-    .wrapper [style*="background:#FDF4F2"] {{ background-color:#2A1D1A !important; }}
-    .wrapper [style*="background:#fff"] {{ background-color:#262A30 !important; }}
-    .wrapper [style*="background:#FFF"] {{ background-color:#262A30 !important; }}
-  }}
+    .container [style*="color:#1a222e"] {{ color:#E8E6E1 !important; }}
+    .container [style*="color:#1A222E"] {{ color:#E8E6E1 !important; }}
+    .container [style*="color:#222"] {{ color:#E8E6E1 !important; }}
+    .container [style*="color:#444"] {{ color:#C4C8CE !important; }}
+    .container [style*="color:#4a5260"] {{ color:#C4C8CE !important; }}
+    .container [style*="color:#4A5260"] {{ color:#C4C8CE !important; }}
+    .container [style*="color:#55607a"] {{ color:#C4C8CE !important; }}
+    .container [style*="color:#55607A"] {{ color:#C4C8CE !important; }}
+    .container [style*="color:#888"] {{ color:#9AA3AE !important; }}
+    .container [style*="color:#aaa"] {{ color:#9AA3AE !important; }}
+    .container [style*="color:#AAA"] {{ color:#9AA3AE !important; }}
+    .container [style*="color:#d4ac0d"] {{ color:#E8C86A !important; }}
+    .container [style*="color:#D4AC0D"] {{ color:#E8C86A !important; }}
+    .container [style*="color:#de2910"] {{ color:#FF8A7A !important; }}
+    .container [style*="color:#DE2910"] {{ color:#FF8A7A !important; }}
+    .container [style*="background:#f7f8fa"] {{ background-color:#1A1D22 !important; }}
+    .container [style*="background:#F7F8FA"] {{ background-color:#1A1D22 !important; }}
+    .container [style*="background:#fdeeeb"] {{ background-color:#2A1815 !important; }}
+    .container [style*="background:#FDEEEB"] {{ background-color:#2A1815 !important; }}
+    .container [style*="background:#fdf4f2"] {{ background-color:#2A1D1A !important; }}
+    .container [style*="background:#FDF4F2"] {{ background-color:#2A1D1A !important; }}
+    .container [style*="background:#fff"] {{ background-color:#262A30 !important; }}
+    .container [style*="background:#FFF"] {{ background-color:#262A30 !important; }}
+    /* Last in the block, so these win: equal specificity, so order decides.
+     The pill is dark type on a white fill and the generic white-background
+     rule above darkens the fill while the type stays dark - 1.23:1, a button
+     you cannot read. The stat figure and the nameplate sit on grounds the
+     rules above change underneath them. */
+  .container .pill {{ background:#E8E6E1 !important; color:#14181F !important; }}
+  .container [style*="color:#C82409"] {{ color:#FF8A7A !important; }}
+  .container .mast-band h1 {{ color:#FFFFFF !important; }}
+}}
 @media print {{
   .no-print {{ display: none !important; }}
   .sec {{ page-break-inside: avoid; }}
