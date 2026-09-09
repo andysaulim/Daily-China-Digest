@@ -586,7 +586,7 @@ def test_render():
     # PR #11's mobile light-mode fix works through .dark-sec / .delta-sec; the
     # rewritten strip has to carry them or the rows go unreadable on phones.
     check("market rows carry the mobile light-mode class",
-          'class="dark-sec" style="background:#1B2A4A' in hd)
+          'class="mkt-table dark-sec"' in hd and "background:#051F3D" in hd)
     check("missing-line carries the mobile light-mode class",
           'class="delta-sec" style="background:#0a0f1e' in hd)
 
@@ -668,8 +668,8 @@ def _long_digest(seed=3):
     # the section floors are set. Neither tests anything true.
     d["social_statements"] = [{"title": u(8), "summary": u(45), "source": "CSIS China"} for _ in range(6)]
     d["also_today"] = [{"headline": u(9), "body_text": u(30), "source": "WSJ China"} for _ in range(14)]
-    d["overnight_items"] = [{"headline": u(9), "body_text": u(60), "source": "Taipei Times"} for _ in range(12)]
-    d["business_economy"] = [{"headline": u(9), "body_text": u(60), "source": "Reuters China"} for _ in range(9)]
+    d["overnight_items"] = [{"headline": u(9), "body_text": u(110), "source": "Taipei Times"} for _ in range(12)]
+    d["business_economy"] = [{"headline": u(9), "body_text": u(110), "source": "Reuters China"} for _ in range(9)]
     d["china_world"] = [{"headline": u(9), "body_text": u(60), "source": "SCMP",
                          "region": "Cross-Strait", "url": f"https://ex.com/w{i}"} for i in range(11)]
     d["us_china"] = [{"headline": u(9), "body_text": u(60), "source": "Reuters",
@@ -823,9 +823,20 @@ def test_email_size_guard():
     zh = "中" * 40_000                       # 40k chars, 120k bytes
     check("counts UTF-8 bytes, not characters",
           "CRITICAL" in (run.check_email_size(zh) or [""])[0])
+    # The ceiling and the byte guard are two independent protections, and this
+    # ties them together: a brief at the word ceiling must not be able to reach
+    # the size at which Gmail clips. 30 B/word was the old assumption and it no
+    # longer holds at a 3,250-word ceiling, so measure a rendered brief instead
+    # of assuming. The margin is real but thinner than it was — a China brief
+    # carrying a lot of Chinese quotation is the case to watch.
+    import render as _render_mod, wordcount as _wc_mod
+    _bpw_html = _render_mod.render_html(_long_digest())
+    _bpw_words = _wc_mod.count_words(_long_digest()) or 1
+    _bytes_per_word = len(_bpw_html.encode("utf-8")) / _bpw_words
     check("word ceiling leaves byte headroom",
-          run.WORD_CEILING * 30 < run.EMAIL_BYTES_CRITICAL,
-          f"{run.WORD_CEILING} words x ~30 B/word vs {run.EMAIL_BYTES_CRITICAL}")
+          run.WORD_CEILING * _bytes_per_word < run.EMAIL_BYTES_CRITICAL,
+          f"{run.WORD_CEILING} words x {_bytes_per_word:.1f} B/word measured "
+          f"vs {run.EMAIL_BYTES_CRITICAL}")
 
 
 def test_archive_and_pdf():

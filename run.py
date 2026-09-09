@@ -101,8 +101,12 @@ SECTION_CAPS = {
 # rose with the band; per-item body limits did not.
 WORD_FLOOR_CRITICAL = 1600
 WORD_TARGET_LOW = 2000
-WORD_TARGET_HIGH = 3000
-WORD_CEILING = 3000
+# The prompt asks for 2,000-3,000. The trim does not start at the top of that
+# band: a brief that lands at 3,050 is inside its intended shape, and cutting
+# a sourced item to save fifty words costs more than it saves. 3,250 is the
+# point past which the model is padding rather than covering.
+WORD_TARGET_HIGH = 3250
+WORD_CEILING = 3250
 
 # Sections the length trim may cut from, in the order the editorial rule says
 # to cut: the wire first, the relationship sections last, never the top

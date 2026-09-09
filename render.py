@@ -251,14 +251,17 @@ def render_html(digest: dict) -> str:
     # known and its anchors can be checked.
     sections_pre.append("%%NAV%%")
 
-    # 2. Market strip. Built from what actually resolved, never from a fixed
-    # grid. The old strip hard-coded nine tiles across three tables; four of the
-    # nine indicators (10Y CGB, PBOC LPR, China 5Y CDS, GDP) have failed to fetch
-    # on every recent run, so five of nine cells rendered as a bare em dash and
-    # the section read as broken rather than as honest. Now: a tile appears only
-    # when it has a number, the rows reflow to fill, and anything missing is named
-    # once in a footnote. The market-honesty rule is unchanged — a figure that was
-    # not fetched is still never invented — it just no longer costs the layout.
+    # 2. Market strip — the house strip, built from what actually resolved.
+    #
+    # It was nine tiles across three tables in three shades of navy. Four of
+    # the nine (10Y CGB, PBOC LPR, 5Y CDS, GDP) have failed to fetch on every
+    # recent run, so most of it rendered as bare em dashes and read as broken
+    # rather than as honest. It is now one row of four, matching Korea: the
+    # first four indicators that carry a real number, in priority order.
+    #
+    # The honesty rule is unchanged. A figure that was not fetched is never
+    # invented and never carried forward — it simply does not get a tile, and
+    # what is missing is still named once underneath.
     m = digest.get("market_indicators") or {}
     if m:
         def _has(d):
@@ -266,106 +269,90 @@ def render_html(digest: dict) -> str:
             if not isinstance(d, dict) or d.get("unavailable"):
                 return False
             v = d.get("value")
-            return v not in (None, "", "—", "-")
+            return v not in (None, "", "\u2014", "-")
 
-        def _tile(label, value, sub, big=False):
-            vs = "20px" if big else "15px"
-            sub_html = (f'<div style="font-size:{"11px" if big else "10px"};'
-                        f'opacity:0.75;margin-top:2px;">{sub}</div>' if sub else "")
-            return (f'<div style="font-size:{"11px" if big else "10px"};'
-                    f'text-transform:uppercase;letter-spacing:1.1px;opacity:0.55;">{label}</div>'
-                    f'<div style="font-size:{vs};font-weight:700;margin:2px 0;">{value}</div>'
-                    f'{sub_html}')
-
-        def _row(tiles, bg, pad):
-            if not tiles:
-                return ""
-            w = 100 // len(tiles)
-            cells = ""
-            for i, t in enumerate(tiles):
-                border = ('border-left:1px solid rgba(255,255,255,0.12);' if i else "")
-                cells += (f'<td width="{w}%" align="center" '
-                          f'style="padding:{pad};{border}vertical-align:top;">{t}</td>')
-            return (f'<table width="100%" cellpadding="0" cellspacing="0" border="0" '
-                    f'class="dark-sec" style="background:{bg};color:#ffffff;'
-                    f'border-bottom:1px solid rgba(255,255,255,0.1);">'
-                    f'<tr>{cells}</tr></table>')
-
-        as_of = now.strftime("%b %-d")
-        missing = []
-
-        # Row 1 — the headline markets, at full size.
-        hero = []
-        for key, label in (("sse_composite", "SSE Composite"),
-                           ("hang_seng", "Hang Seng"),
-                           ("usd_cny", "USD/CNY")):
+        _MONO = "'Courier New',Courier,monospace"
+        # Priority order: what a China desk looks at first. Only the first four
+        # that resolved are shown; the rest are named in the footnote.
+        _WANTED = [("sse_composite", "SSE Composite", ""),
+                   ("hang_seng", "Hang Seng", ""),
+                   ("usd_cny", "USD/CNY", ""),
+                   ("brent", "Brent", "$"),
+                   ("usd_cnh", "USD/CNH", ""),
+                   ("cgb_10y", "10Y CGB", ""),
+                   ("china_cds", "China 5Y CDS", "")]
+        resolved, missing = [], []
+        for key, label, prefix in _WANTED:
             d = m.get(key) or {}
             if _has(d):
-                hero.append(_tile(label, _esc(str(d.get("value"))),
-                                  f'{_arrow(d.get("change_pct", 0))}'
-                                  f'<div style="font-size:10px;opacity:0.45;margin-top:2px;">'
-                                  f'as of {as_of}</div>', big=True))
+                resolved.append((label, prefix + _esc(str(d.get("value"))),
+                                 _arrow(d.get("change_pct", 0))))
             else:
                 missing.append(label)
 
-        # Row 2 — rates, credit and commodities.
-        second = []
-        d = m.get("usd_cnh") or {}
-        if _has(d):
-            second.append(_tile("USD/CNH", _esc(str(d.get("value"))), _arrow(d.get("change_pct", 0))))
-        else:
-            missing.append("USD/CNH")
-        d = m.get("brent") or {}
-        if _has(d):
-            second.append(_tile("Brent", "$" + _esc(str(d.get("value"))), _arrow(d.get("change_pct", 0))))
-        else:
-            missing.append("Brent")
-        d = m.get("cgb_10y") or {}
-        if _has(d):
-            second.append(_tile("10Y CGB", _esc(str(d.get("value"))), _cds_arrow(d.get("change_bps", 0))))
-        else:
-            missing.append("10Y CGB")
-        d = m.get("china_cds") or {}
-        if _has(d):
-            second.append(_tile("China 5Y CDS", _esc(str(d.get("value"))) + " bps",
-                                _cds_arrow(d.get("change_bps", 0))))
-        else:
-            missing.append("China 5Y CDS")
+        # The rates, credit and macro prints. These are NOT dropped to match
+        # Korea's four-tile row: Korea has four indicators and China has
+        # twelve, and collect._fetch_china_macro gathered CPI, PPI, PMI and
+        # retail sales on every run for months while nothing rendered them.
+        # They get a compact second row on the same ground instead.
+        secondary = []
         lpr = m.get("pboc_lpr") or {}
         if not lpr.get("unavailable"):
             for fld, label in (("lpr_1y", "PBOC 1Y LPR"), ("lpr_5y", "PBOC 5Y LPR")):
                 v = lpr.get(fld)
-                if v not in (None, "", "—", "-"):
-                    second.append(_tile(label, _esc(str(v)), _esc(str(lpr.get("last_change", "")))))
+                if v not in (None, "", "\u2014", "-"):
+                    secondary.append((label, _esc(str(v))))
                 else:
                     missing.append(label)
         else:
             missing.extend(["PBOC 1Y LPR", "PBOC 5Y LPR"])
-
-        # Row 3 — the macro prints. collect._fetch_china_macro has gathered CPI,
-        # PPI, manufacturing PMI and retail sales on every run since the pipeline
-        # was built and nothing has ever rendered them, the same way editor_note
-        # was generated and dropped. They are the numbers a China desk actually
-        # asks for, and they are the ones that fill this strip.
-        third = []
         d = m.get("gdp_yoy") or {}
         if _has(d):
-            sub = " · ".join(x for x in (_esc(str(d.get("source") or "NBS")),
-                                         _esc(str(d.get("period") or ""))) if x)
-            third.append(_tile("GDP YoY", _esc(str(d.get("value"))), sub))
+            secondary.append(("GDP YoY", _esc(str(d.get("value")))))
         else:
             missing.append("GDP")
         macro = m.get("china_macro") or {}
         for fld, label in (("cpi_yoy", "CPI YoY"), ("ppi_yoy", "PPI YoY"),
                            ("pmi_mfg", "Mfg PMI"), ("retail", "Retail Sales YoY")):
             v = macro.get(fld)
-            if v not in (None, "", "—", "-"):
-                third.append(_tile(label, _esc(str(v)), ""))
+            if v not in (None, "", "\u2014", "-"):
+                secondary.append((label, _esc(str(v))))
 
-        strip = (_row(hero, "#1B2A4A", "12px 8px 10px")
-                 + _row(second, "#162340", "9px 8px")
-                 + _row(third, "#0F1B30", "9px 8px"))
-        if strip:
+        def _tile_cell(i, w, label, value, under, big):
+            edge = ("border-left:1px solid rgba(255,255,255,0.10);" if i else "")
+            pad = "11px 6px 13px" if big else "8px 6px 9px"
+            vs = "16px" if big else "13px"
+            under_html = (f'<div style="font-family:{_MONO};font-size:11px;'
+                          f'margin-top:2px;">{under}</div>' if under else "")
+            return (f'<td width="{w}%" align="center" style="padding:{pad};{edge}">'
+                    f'<div style="font-size:10px;text-transform:uppercase;'
+                    f'letter-spacing:1px;color:#9DB2CE;">{label}</div>'
+                    f'<div style="font-family:{_MONO};font-size:{vs};'
+                    f'font-weight:700;margin-top:3px;">{value}</div>'
+                    f'{under_html}</td>')
+
+        if resolved:
+            shown = resolved[:4]
+            w = 100 // len(shown)
+            cells = "".join(_tile_cell(i, w, lab, val, und, True)
+                            for i, (lab, val, und) in enumerate(shown))
+            strip = (f'<table class="mkt-table dark-sec" width="100%" cellpadding="0" '
+                     f'cellspacing="0" border="0" style="background:#051F3D;color:#fff;'
+                     f'border-bottom:1px solid rgba(255,255,255,0.10);">'
+                     f'<tr>{cells}</tr></table>')
+            # Anything the first row could not fit joins the second, so a
+            # resolved figure is never silently dropped.
+            secondary = [(lab, val) for lab, val, _ in resolved[4:]] + secondary
+            for _chunk_start in range(0, len(secondary), 4):
+                _chunk = secondary[_chunk_start:_chunk_start + 4]
+                _w2 = 100 // len(_chunk)
+                _cells2 = "".join(_tile_cell(i, _w2, lab, val, "", False)
+                                  for i, (lab, val) in enumerate(_chunk))
+                strip += (f'<table class="mkt-table dark-sec" width="100%" '
+                          f'cellpadding="0" cellspacing="0" border="0" '
+                          f'style="background:#041A33;color:#fff;'
+                          f'border-bottom:1px solid rgba(255,255,255,0.08);">'
+                          f'<tr>{_cells2}</tr></table>')
             if missing:
                 strip += (f'<div class="delta-sec" style="background:#0a0f1e;'
                           f'color:rgba(255,255,255,0.4);'
