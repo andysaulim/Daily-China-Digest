@@ -78,6 +78,25 @@ def _check_dark_coverage(html: str) -> list[str]:
     return sorted(missing)
 
 
+
+def _emphasis(text: str) -> str:
+    """Turn the model's **bold** and *italic* marks into tags, after escaping.
+
+    Names and figures are what a reader scans a policy brief for, so the
+    prompt asks for a person's name in **double asterisks** on first mention
+    and a quantity in *single* ones. The model cannot emit HTML — every field
+    goes through _esc() first — so this converts a narrow, fixed convention
+    afterwards. Anything that is not one of these two exact shapes stays
+    literal text, which is what keeps the escaping meaningful.
+    """
+    import re as _re
+    text = _re.sub(r"\*\*(?!\s)([^*]{1,80}?)(?<!\s)\*\*",
+                   r'<strong style="font-weight:700;">\1</strong>', text)
+    text = _re.sub(r"(?<![*\w])\*(?!\s)([^*]{1,60}?)(?<!\s)\*(?![*\w])",
+                   r"<em>\1</em>", text)
+    return text
+
+
 def _esc(text) -> str:
     if text is None or text == "":
         return ""
@@ -199,17 +218,32 @@ def _compact_row(cat: str, headline: str, url: str, src: str, body: str = "") ->
 
 
 def _sec_label(label: str, color: str = PRC_RED) -> str:
-    """Section label — the house metrics, in the edition's accent.
+    """A section bar: black field, an accent ring, a white letterspaced label.
 
-    It was 10px over 2px of tracking in navy, so the headings read as a
-    different system from Korea's and the identity colour appeared only in
-    the nameplate. One accent, one size, everywhere.
+    The label used to be small coloured type over a hairline rule. In a
+    2,000-word brief with a dozen sections that gave the reader no stop
+    between them: the sections blurred into one another and a scan found no
+    purchase. This is a hard stop.
+
+    Black rather than each edition's own colour. Four editions with four
+    coloured bars would read as decoration; black reads as structure, and the
+    accent lands as one deliberate mark instead of a whole field. It is also
+    the only colour that leaves the masthead as the single place a reader
+    meets the edition's identity.
+
+    Solid background and a text glyph, so it survives clients that block
+    images and clients that drop background images.
     """
-    return (f'<div style="font-size:11px;font-weight:700;text-transform:uppercase;'
-            f'letter-spacing:1.5px;color:{color};font-family:Arial,sans-serif;'
-            f'margin-bottom:14px;padding-bottom:6px;border-bottom:2px solid {color};">'
-            f'{label}</div>')
-
+    return (
+        '<table width="100%" cellpadding="0" cellspacing="0" border="0" '
+        'class="sec-bar" style="background:#14181F;margin-bottom:14px;">'
+        '<tr><td style="padding:9px 14px;">'
+        f'<span style="font-family:Arial,sans-serif;font-size:12px;color:{color};'
+        'line-height:1;vertical-align:middle;margin-right:9px;">&#9675;</span>'
+        '<span style="font-family:Arial,sans-serif;font-size:11px;font-weight:700;'
+        'text-transform:uppercase;letter-spacing:2px;color:#FFFFFF;'
+        f'vertical-align:middle;">{label}</span>'
+        '</td></tr></table>')
 
 def _word_count(d: dict) -> int:
     """The count shown in the header. Shares wordcount.py with the prompt target
@@ -249,11 +283,11 @@ def render_html(digest: dict) -> str:
     # the internal-use banner nor the link buttons — just a pale grey line of
     # plain-text links that read as a footnote above the nameplate.
     _base = web_url.rsplit("/", 1)[0] + "/" if "/" in web_url else ""
-    _a = ('display:inline-block;padding:4px 12px;margin:0 2px;'
+    _a = ('display:inline-block;padding:6px 14px;margin:0 3px;'
           'font-family:Arial,sans-serif;font-size:11px;font-weight:700;'
-          'letter-spacing:0.5px;color:rgba(255,255,255,0.92);'
-          'background:rgba(255,255,255,0.10);'
-          'border:1px solid rgba(255,255,255,0.22);border-radius:3px;'
+          'letter-spacing:0.5px;color:#14181F;'
+          'background:#FFFFFF;'
+          'border-radius:14px;'
           'text-decoration:none;white-space:nowrap;')
     _links = []
     if web_url:
@@ -287,7 +321,7 @@ def render_html(digest: dict) -> str:
 </td>
 <td style="vertical-align:top;text-align:right;">
 <div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.92);margin-bottom:3px;">{gen_time}</div>
-<div style="font-size:10px;color:rgba(255,255,255,0.4);">{wc:,} words &middot; {read_min} min read</div>
+<div style="font-size:11px;color:rgba(255,255,255,0.72);letter-spacing:0.5px;">{wc:,} words &middot; {read_min} min read</div>
 </td>
 </tr></table>
 {"<div style='margin-top:12px;padding-top:12px;border-top:1px solid #D4AC0D;font-size:13px;color:rgba(255,255,255,0.9);font-family:Georgia,serif;'><strong style='color:#D4AC0D;font-family:Arial,sans-serif;font-size:11px;letter-spacing:1px;'>RE:</strong>&nbsp; " + re_line + "</div>" if re_line else ""}
@@ -763,10 +797,10 @@ def render_html(digest: dict) -> str:
         _fbase = web_url.rsplit("/", 1)[0] + "/" if "/" in web_url else ""
         _parts = []
         if web_url:
-            _parts.append(f'<a href="{_esc(web_url)}" style="{_fa}">Read online</a>')
+            _parts.append(f'<a href="{_esc(web_url)}" style="display:inline-block;padding:6px 15px;margin:0 4px;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.5px;color:#14181F;background:#FFFFFF;border-radius:14px;text-decoration:none;white-space:nowrap;">Read online</a>')
         _arch = archive_url or (_fbase + "archive.html" if _fbase else "")
         if _arch:
-            _parts.append(f'<a href="{_esc(_arch)}" style="{_fa}">Past issues</a>')
+            _parts.append(f'<a href="{_esc(_arch)}" style="display:inline-block;padding:6px 15px;margin:0 4px;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.5px;color:#14181F;background:#FFFFFF;border-radius:14px;text-decoration:none;white-space:nowrap;">Past issues</a>')
         if _parts:
             _foot_links = ('<div style="margin-top:11px;font-family:Arial,sans-serif;'
                            'font-size:11px;letter-spacing:0.5px;">'
@@ -780,12 +814,17 @@ def render_html(digest: dict) -> str:
      name instead. Everything else matches: centred, the city and domain on
      their own line, the links as links rather than a run-on sentence, and
      the disclaimer set in the reading face rather than the label face. -->
-<table width="100%" cellpadding="0" cellspacing="0" border="0" class="sec footer" style="background:#1B2A4A;border-top:4px solid #DE2910;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="sec footer" style="background:#14181F;border-top:4px solid #DE2910;">
   <tr><td style="padding:20px 32px 6px;text-align:center;">
-    <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#FFFFFF;letter-spacing:0.5px;line-height:1.2;">CSIS China Programs</div>
+    <div style="font-family:Georgia,serif;font-size:38px;font-weight:700;color:#FFFFFF;letter-spacing:1px;line-height:1.1;">CSIS China Programs</div>
     <div style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.72);margin-top:6px;">China Daily Brief</div>
     <div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,255,255,0.72);margin-top:12px;">Washington, D.C.</div>
     {_foot_links}
+  </td></tr>
+  <tr><td style="padding:16px 32px 4px;text-align:center;">
+    <div style="font-family:Georgia,serif;font-size:13px;line-height:1.6;color:rgba(255,255,255,0.80);max-width:520px;margin:0 auto;">
+      You are receiving the China Daily Brief as a member of the CSIS China Programs distribution list.
+    </div>
   </td></tr>
   <tr><td style="padding:14px 32px 10px;text-align:center;">
     <div style="border-top:1px solid rgba(255,255,255,0.14);padding-top:12px;font-family:Georgia,serif;font-size:13px;line-height:1.6;color:rgba(255,255,255,0.82);max-width:560px;margin:0 auto;">
@@ -796,6 +835,11 @@ def render_html(digest: dict) -> str:
   <tr><td style="padding:0 32px 20px;text-align:center;">
     <div style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:0.5px;color:rgba(255,255,255,0.70);margin-bottom:9px;">generated {gen_time}</div>
     <a href="#top" style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.95);text-decoration:none;">&#8593; Back to top</a>
+  </td></tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="footer-end" style="background:#FFFFFF;">
+  <tr><td style="padding:12px 32px 18px;text-align:center;font-family:Arial,sans-serif;font-size:10px;letter-spacing:0.5px;color:#6B7280;">
+    &copy; {now.year} Center for Strategic and International Studies
   </td></tr>
 </table>""")
 
