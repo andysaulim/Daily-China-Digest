@@ -19,7 +19,7 @@
  },
  "AFRICOM China": {
   "empty_runs": 0,
-  "last_count": 60,
+  "last_count": 62,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -326,7 +326,7 @@
  },
  "China Quarterly": {
   "empty_runs": 0,
-  "last_count": 69,
+  "last_count": 68,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -542,7 +542,7 @@
  },
  "HR Shipyards": {
   "empty_runs": 0,
-  "last_count": 85,
+  "last_count": 86,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -583,7 +583,7 @@
   "last_seen": "2026-09-09"
  },
  "House Select CCP": {
-  "empty_runs": 4,
+  "empty_runs": 5,
   "last_count": 0,
   "last_ok": "2026-09-05",
   "last_seen": "2026-09-09"
@@ -829,7 +829,7 @@
   "last_seen": "2026-09-09"
  },
  "PRC Embassy US": {
-  "empty_runs": 1,
+  "empty_runs": 2,
   "last_count": 0,
   "last_ok": "2026-09-08",
   "last_seen": "2026-09-09"
@@ -1042,7 +1042,7 @@
  },
  "Survival IISS": {
   "empty_runs": 0,
-  "last_count": 29,
+  "last_count": 28,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
@@ -1300,7 +1300,7 @@
  },
  "上海国际问题研究院 SIIS (ZH)": {
   "empty_runs": 0,
-  "last_count": 7,
+  "last_count": 8,
   "last_ok": "2026-09-09",
   "last_seen": "2026-09-09"
  },
