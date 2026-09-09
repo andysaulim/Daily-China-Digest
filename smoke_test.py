@@ -507,7 +507,7 @@ def test_render():
     html = render.render_html(d)
     check("html renders", len(html) > 15000, str(len(html)))
     check("official line section rendered", "What Beijing Is Saying" in html and "中方敦促美方" in html)
-    check("disclaimer footer", "generated automatically" in html)
+    check("disclaimer footer", "automatically generated" in html)
 
     # The wrapper cell is <td align="center"> so Outlook centres the container.
     # That attribute also centres every line of text inside it unless the
@@ -520,12 +520,13 @@ def test_render():
     digest_fixture = d
     body = html[html.index("<body"):]
     # Centring is chrome only: the header band, the links bar, the stat band,
-    # the footer, the calendar day cell, and one numbered circle per memo item.
+    # the calendar day cell, one numbered circle per memo item, and the house
+    # footer, whose three rows and their contents are centred by design.
     # No article body, headline or quote may be centred.
     n_memo = len(digest_fixture.get("morning_memo") or [])
     stray = body.count("text-align:center")
-    check("centering confined to chrome", stray <= 6 + n_memo,
-          f"{stray} centred elements, budget {6 + n_memo}")
+    check("centering confined to chrome", stray <= 9 + n_memo,
+          f"{stray} centred elements, budget {9 + n_memo}")
     check("no centred article body",
           "line-height:1.55;color:#444;text-align:center" not in body)
 

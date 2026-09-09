@@ -647,15 +647,32 @@ def render_html(digest: dict) -> str:
 
     # Footer (with the auto-generation disclaimer the Japan brief carries)
     sections_post.append(f"""
-<div style="padding:20px 32px;background:#1B2A4A;text-align:center;" class="sec dark-sec">
-<div style="font-size:10px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.45);font-family:Arial,sans-serif;line-height:2;">
-CSIS China Teams &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_time}
-</div>
-<div style="font-size:10px;color:rgba(255,255,255,0.92);font-family:Arial,sans-serif;line-height:1.6;max-width:520px;margin:8px auto 0;">
-This brief is generated automatically from {_esc(str(digest.get("source_count") or "the day's"))} collected sources and may contain errors. Every item links to its source; check the source before citing. Prepared by Andy Lim, CSIS China Teams.
-</div>
-<a href="#top" style="font-size:10px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:1px;">&#8593; Back to top</a>
-</div>""")
+<!-- The house footer. Korea carries a CSIS lockup built in HTML; the other
+     editions have no wordmark to reproduce, so this leads with the chair
+     name instead. Everything else matches: centred, the city and domain on
+     their own line, the links as links rather than a run-on sentence, and
+     the disclaimer set in the reading face rather than the label face. -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="sec footer" style="background:#1B2A4A;border-top:4px solid #DE2910;">
+  <tr><td style="padding:20px 32px 6px;text-align:center;">
+    <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#FFFFFF;letter-spacing:0.5px;line-height:1.2;">CSIS China Teams</div>
+    <div style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.72);margin-top:6px;">China Daily Brief</div>
+    <div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,255,255,0.72);margin-top:12px;">Washington, DC &middot; csis.org</div>
+    <div style="margin-top:11px;font-family:Arial,sans-serif;font-size:11px;letter-spacing:0.5px;">
+      <a href="{_esc(web_url)}" style="color:rgba(255,255,255,0.95);text-decoration:none;">Read online</a> &nbsp;&middot;&nbsp;
+      <a href="{_esc(archive_url)}" style="color:rgba(255,255,255,0.95);text-decoration:none;">Past issues</a>
+    </div>
+  </td></tr>
+  <tr><td style="padding:14px 32px 10px;text-align:center;">
+    <div style="border-top:1px solid rgba(255,255,255,0.14);padding-top:12px;font-family:Georgia,serif;font-size:13px;line-height:1.6;color:rgba(255,255,255,0.82);max-width:560px;margin:0 auto;">
+      This newsletter is automatically generated, so it may contain errors. Please check all information and sources before citing.
+      To report errors or other issues, please contact Andy Lim at <a href="mailto:alim@csis.org" style="color:rgba(255,255,255,0.95);">alim@csis.org</a>.
+    </div>
+  </td></tr>
+  <tr><td style="padding:0 32px 20px;text-align:center;">
+    <div style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:0.5px;color:rgba(255,255,255,0.70);margin-bottom:9px;">generated {gen_time}</div>
+    <a href="#top" style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.95);text-decoration:none;">&#8593; Back to top</a>
+  </td></tr>
+</table>""")
 
     # Assembly. Organised by RELATIONSHIP, not by time: the frame, the biggest
     # stories, then US–China, China & the World, Economy & Business; the data
