@@ -1,6 +1,6 @@
 """
 China Daily Brief — HTML Renderer
-CSIS Korea Chair
+CSIS China Teams
 
 Mirrors Daily-Korea-Digest visual language exactly:
 - Navy #1B2A4A header + saturated CSIS palette
@@ -107,15 +107,15 @@ def _item_card(tag: str, source: str, headline: str, url: str, body: str = "",
     navy headline, body, optional so-what. Colour belongs to the section label,
     not to the item, so a page of twelve regions reads as one page."""
     tag_line = " &middot; ".join(x for x in (_esc(tag), _esc(_clean_src(source))) if x)
-    sw = (f"<div style='font-size:12px;line-height:1.5;color:#555;font-style:italic;"
+    sw = (f"<div style='font-size:13px;line-height:1.5;color:#555;font-style:italic;"
           f"margin-top:4px;'><strong style='color:#1B2A4A;font-style:normal;'>"
           f"{_esc(so_what_label)}:</strong> {_esc(so_what)}</div>") if so_what else ""
     return (f'<div style="margin-bottom:11px;padding-left:12px;border-left:3px solid #1B2A4A;">'
-            f'<div style="font-size:9px;color:#6B7280;text-transform:uppercase;'
+            f'<div style="font-size:10px;color:#6B7280;text-transform:uppercase;'
             f'letter-spacing:1px;font-weight:600;margin-bottom:2px;">{tag_line}</div>'
             f'<div style="font-size:{headline_size};font-weight:600;color:#1B2A4A;'
             f'line-height:1.4;">{_link_or_text(_esc(headline), url)}</div>'
-            f'{("<div style=" + chr(34) + "font-size:12px;line-height:1.5;color:#555;margin-top:2px;" + chr(34) + ">" + _esc(body) + "</div>") if body else ""}'
+            f'{("<div style=" + chr(34) + "font-size:13px;line-height:1.5;color:#555;margin-top:2px;" + chr(34) + ">" + _esc(body) + "</div>") if body else ""}'
             f'{sw}</div>')
 
 
@@ -138,7 +138,7 @@ def _chapter(label: str) -> str:
     return f"""
 <div style="padding:12px 32px;background:#1B2A4A;text-align:center;" class="sec dark-sec">
 <div style="height:1px;background:rgba(212,172,13,0.4);margin-bottom:10px;"></div>
-<span style="font-size:9px;font-family:Arial,sans-serif;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:5px;font-weight:700;">{label}</span>
+<span style="font-size:10px;font-family:Arial,sans-serif;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:5px;font-weight:700;">{label}</span>
 <div style="height:1px;background:rgba(212,172,13,0.4);margin-top:10px;"></div>
 </div>"""
 
@@ -179,11 +179,17 @@ def render_html(digest: dict) -> str:
 
     # 1. Header
     sections_pre.append(f"""
+<!-- The other editions put their identity colour behind the masthead.
+     China's gold carries white type at only 2.2:1, which is unreadable,
+     so the ground stays navy and the gold does the identifying work as a
+     rule above the nameplate and as the chair line, where it reads at
+     6.6:1. Same system, one colour that had to be used differently. -->
+<div style="height:4px;background:#D4AC0D;font-size:0;line-height:0;">&nbsp;</div>
 <div style="background:#1B2A4A;color:#ffffff;padding:18px 32px 14px;" class="sec dark-sec">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
 <td style="vertical-align:top;">
-<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS Korea Chair</div>
-<h1 style="margin:0 0 4px 0;font-size:28px;font-weight:700;font-family:Georgia,serif;color:#fff;letter-spacing:0.3px;">China Daily Brief</h1>
+<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Teams</div>
+<h1 style="margin:0 0 4px 0;font-size:26px;font-weight:700;font-family:Georgia,serif;color:#fff;letter-spacing:0.3px;">China Daily Brief</h1>
 <div style="font-size:16px;font-weight:400;color:rgba(255,255,255,0.85);font-family:Georgia,serif;">{_esc(date_str)}</div>
 </td>
 <td style="vertical-align:top;text-align:right;">
@@ -246,7 +252,7 @@ def render_html(digest: dict) -> str:
             if _has(d):
                 hero.append(_tile(label, _esc(str(d.get("value"))),
                                   f'{_arrow(d.get("change_pct", 0))}'
-                                  f'<div style="font-size:9px;opacity:0.45;margin-top:2px;">'
+                                  f'<div style="font-size:10px;opacity:0.45;margin-top:2px;">'
                                   f'as of {as_of}</div>', big=True))
             else:
                 missing.append(label)
@@ -312,7 +318,7 @@ def render_html(digest: dict) -> str:
             if missing:
                 strip += (f'<div class="delta-sec" style="background:#0a0f1e;'
                           f'color:rgba(255,255,255,0.4);'
-                          f'padding:5px 32px;font-size:9px;letter-spacing:0.4px;'
+                          f'padding:5px 32px;font-size:10px;letter-spacing:0.4px;'
                           f'border-bottom:1px solid rgba(255,255,255,0.08);">'
                           f'Not fetched today: {_esc(", ".join(missing))} '
                           f'&middot; shown only when sourced, never carried forward</div>')
@@ -372,10 +378,10 @@ def render_html(digest: dict) -> str:
             url = s.get("url", "")
             sh += f"""
 <div class="story-card" style="margin-bottom:12px;padding:14px 16px;background:#fff;border-left:3px solid #1B2A4A;border-bottom:1px solid #F0F0F0;">
-<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#888;font-weight:700;margin-bottom:6px;">{cat}</div>
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#888;font-weight:700;margin-bottom:6px;">{cat}</div>
 <h3 style="margin:0 0 8px 0;font-size:16px;line-height:1.4;color:#1B2A4A;font-family:Georgia,serif;font-weight:700;">{_link_or_text(h, url, style="color:#1B2A4A;text-decoration:none;")}</h3>
 {"<p style='margin:0 0 10px 0;font-size:13px;line-height:1.55;color:#444;'>" + b + "</p>" if b else ""}
-{"<p style='margin:0 0 6px 0;font-size:12px;line-height:1.5;color:#555;font-style:italic;'><strong style='color:#1B2A4A;font-style:normal;'>So what:</strong> " + _link_or_text(sw, url, style="color:#555;text-decoration:underline;") + "</p>" if sw else ""}
+{"<p style='margin:0 0 6px 0;font-size:13px;line-height:1.5;color:#555;font-style:italic;'><strong style='color:#1B2A4A;font-style:normal;'>So what:</strong> " + _link_or_text(sw, url, style="color:#555;text-decoration:underline;") + "</p>" if sw else ""}
 <div style="font-size:10px;color:#aaa;margin-top:6px;text-transform:uppercase;letter-spacing:0.5px;">{sl}</div>
 </div>"""
         sections_today.append(f'<div {_SEC}>{_sec_label("Top Stories")}{sh}</div>')
@@ -425,12 +431,12 @@ def render_html(digest: dict) -> str:
     stat = digest.get("key_stat") or {}
     if stat and stat.get("number"):
         stat_html = f"""
-<div style="padding:14px 32px 12px;background:#1B2A4A;color:#ffffff;text-align:center;border-bottom:1px solid rgba(255,255,255,0.12);" class="sec dark-sec">
-<div style="font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.55);margin-bottom:2px;">Stat of the Day</div>
-<div class="key-stat-num" style="font-size:30px;font-weight:700;font-family:Georgia,serif;color:#ffffff;line-height:1.1;">{_esc(str(stat.get("number", "")))}</div>
-<div style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:3px;">{_esc(stat.get("label", ""))}</div>
+<div style="padding:14px 32px 12px;background:#1B2A4A;color:#ffffff;text-align:center;border-top:4px solid #D4AC0D;border-bottom:1px solid rgba(255,255,255,0.12);" class="sec dark-sec">
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.55);margin-bottom:2px;">Stat of the Day</div>
+<div class="key-stat-num" style="font-size:26px;font-weight:700;font-family:Georgia,serif;color:#ffffff;line-height:1.1;">{_esc(str(stat.get("number", "")))}</div>
+<div style="font-size:13px;color:rgba(255,255,255,0.85);margin-top:3px;">{_esc(stat.get("label", ""))}</div>
 <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:3px;font-style:italic;">{_esc(stat.get("context", ""))}</div>
-{"<div style='font-size:9px;color:rgba(255,255,255,0.4);margin-top:3px;'>Source: " + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
+{"<div style='font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;'>Source: " + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
 </div>"""
         sections_markets.insert(0, stat_html)
 
@@ -468,7 +474,7 @@ def render_html(digest: dict) -> str:
 <div style="margin-bottom:12px;padding:12px 14px;border-left:3px solid #1B2A4A;border-bottom:1px solid #F0F0F0;">
 <div style="margin-bottom:6px;">{hdr}</div>
 <div style="font-size:14px;font-weight:700;color:#1B2A4A;line-height:1.4;margin-bottom:5px;">{act}</div>
-<div style="font-size:12px;line-height:1.55;color:#555;">{det}</div>
+<div style="font-size:13px;line-height:1.55;color:#555;">{det}</div>
 {slink}
 </div>"""
         gov_grid = gov_rows_html if prc_gov else ""
@@ -489,8 +495,8 @@ def render_html(digest: dict) -> str:
                 pl = f'<div style="font-size:11px;color:#888;margin-top:2px;">Succeeds: {pred}</div>' if pred else ""
                 pi += f"""<div style="margin-bottom:10px;padding-left:12px;border-left:3px solid {ac_c};">
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;">{nm}{bg}</div>
-<div style="font-size:12px;color:#555;">{pos}</div>
-<div style="font-size:12px;line-height:1.4;color:#555;">{det}</div>
+<div style="font-size:13px;color:#555;">{pos}</div>
+<div style="font-size:13px;line-height:1.4;color:#555;">{det}</div>
 {pl}
 </div>"""
             pers_html = f"""<div style="margin-top:16px;">
@@ -509,7 +515,7 @@ def render_html(digest: dict) -> str:
                 ni += f"""<div style="margin-bottom:8px;padding-left:12px;border-left:3px solid #7F8C8D;">
 <div style="font-size:11px;color:#7F8C8D;font-weight:600;text-transform:uppercase;">{body}</div>
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;">{_link_or_text(act, url)}</div>
-<div style="font-size:12px;line-height:1.4;color:#555;">{det}</div>
+<div style="font-size:13px;line-height:1.4;color:#555;">{det}</div>
 </div>"""
             npc_html = f"""<div style="margin-top:16px;">
 <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#7F8C8D;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid #E8E8E8;">NPC / Politburo Watch</div>
@@ -528,11 +534,11 @@ def render_html(digest: dict) -> str:
 <tr>
 <td width="50" style="padding:10px 10px 10px 0;text-align:center;vertical-align:top;">
 <div style="font-size:10px;text-transform:uppercase;color:#888;letter-spacing:0.5px;">{cm}</div>
-<div style="font-size:18px;font-weight:300;color:#1B2A4A;line-height:1.2;">{cd}</div>
+<div style="font-size:16px;font-weight:300;color:#1B2A4A;line-height:1.2;">{cd}</div>
 </td>
 <td style="padding:10px 0;vertical-align:top;">
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;margin-bottom:2px;">{ch}</div>
-<div style="font-size:12px;line-height:1.4;color:#555;">{cdet}</div>
+<div style="font-size:13px;line-height:1.4;color:#555;">{cdet}</div>
 </td>
 </tr>
 </table>"""
@@ -596,13 +602,13 @@ def render_html(digest: dict) -> str:
             who = f"{speaker} <span style='font-size:11px;color:#888;font-weight:400;'>· {role}</span>" if speaker else role
             oh += f"""<div style="margin-bottom:14px;padding:12px;background:#FAFAF5;border-radius:4px;border-left:3px solid {tc};">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-<td style="font-size:12px;color:#1B2A4A;font-weight:700;letter-spacing:0.3px;">{head}</td>
+<td style="font-size:13px;color:#1B2A4A;font-weight:700;letter-spacing:0.3px;">{head}</td>
 <td align="right" style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:{tc};font-weight:700;">{_esc(tone)}{(" · to " + to) if to else ""}</td>
 </tr></table>
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;margin:4px 0 2px;font-family:Georgia,serif;">{topic}</div>
-{"<div style='font-size:12px;color:#555;'>" + who + "</div>" if (speaker or role) else ""}
+{"<div style='font-size:13px;color:#555;'>" + who + "</div>" if (speaker or role) else ""}
 <blockquote style="margin:6px 0;padding:8px 12px;background:#fff;border-left:3px solid {tc};font-style:italic;font-size:13px;line-height:1.5;color:#333;font-family:Georgia,serif;">&ldquo;{stmt}&rdquo;</blockquote>
-{"<div style='font-size:12px;color:#666;line-height:1.5;margin:2px 0 0 12px;'>" + zh + "</div>" if zh else ""}
+{"<div style='font-size:13px;color:#666;line-height:1.5;margin:2px 0 0 12px;'>" + zh + "</div>" if zh else ""}
 {"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Context:</strong> " + ctx + "</div>" if ctx else ""}
 {src_link}
 </div>"""
@@ -623,7 +629,7 @@ def render_html(digest: dict) -> str:
             url = s.get("url", "")
             src_link = ("<div style='font-size:10px;color:#888;margin-top:4px;'>" + _link_or_text("source", url, style="color:#888;text-decoration:underline;") + "</div>") if url and url != "#" and url.startswith("http") else ""
             sh += f"""<div style="margin-bottom:14px;padding:12px;background:#FAFAF5;border-radius:4px;border-left:3px solid {bc};">
-<div style="font-size:12px;color:#888;text-transform:uppercase;letter-spacing:0.5px;">{pd}</div>
+<div style="font-size:13px;color:#888;text-transform:uppercase;letter-spacing:0.5px;">{pd}</div>
 <div style="font-size:14px;font-weight:600;color:#1B2A4A;margin:2px 0;">{who} <span style="font-size:11px;color:#888;font-weight:400;">· {ctx}</span></div>
 <blockquote style="margin:6px 0;padding:8px 12px;background:#fff;border-left:3px solid {bc};font-style:italic;font-size:13px;line-height:1.5;color:#333;font-family:Georgia,serif;">&ldquo;{q}&rdquo;</blockquote>
 {"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Note:</strong> " + nt + "</div>" if nt else ""}
@@ -646,11 +652,11 @@ def render_html(digest: dict) -> str:
     # Footer (with the auto-generation disclaimer the Japan brief carries)
     sections_post.append(f"""
 <div style="padding:20px 32px;background:#1B2A4A;text-align:center;" class="sec dark-sec">
-<div style="font-size:9px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.45);font-family:Arial,sans-serif;line-height:2;">
-CSIS Korea Chair &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_time}
+<div style="font-size:10px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.45);font-family:Arial,sans-serif;line-height:2;">
+CSIS China Teams &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_time}
 </div>
 <div style="font-size:10px;color:rgba(255,255,255,0.55);font-family:Arial,sans-serif;line-height:1.6;max-width:520px;margin:8px auto 0;">
-This brief is generated automatically from {_esc(str(digest.get("source_count") or "the day's"))} collected sources and may contain errors. Every item links to its source; check the source before citing. Prepared by Andy Lim, CSIS Korea Chair.
+This newsletter is automatically generated, so it may contain errors. Please check all information and sources before citing. Every item links to its source; check the source before citing. Prepared by Andy Lim, CSIS China Teams.
 </div>
 <a href="#top" style="font-size:10px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:1px;">&#8593; Back to top</a>
 </div>""")
@@ -699,6 +705,39 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
   .key-stat-num {{ font-size:26px !important; }}
   .market-val {{ font-size:16px !important; }}
 }}
+@media (prefers-color-scheme: dark) {{
+    /* There was no dark block at all, and body is hardcoded white, so a client
+       in dark mode inverted the ground and left dark type on it. These rules
+       are generated from the colours this template actually uses, rather than
+       from a guess at which elements carry them — Korea's hand-written
+       selectors matched h3, div and a while the markup also used td, p and
+       span, and most of its body text stayed unreadable as a result. */
+    body {{ background:#121212 !important; }}
+    .wrapper {{ background:#1a1a1a !important; }}
+    .wrapper h1, .wrapper h2, .wrapper h3 {{ color:#E8E6E1 !important; }}
+    .wrapper a {{ color:#6FA8E8 !important; }}
+    .wrapper [style*="color:#1B2A4A"] {{ color:#E8E6E1 !important; }}
+    .wrapper [style*="color:#1b2a4a"] {{ color:#E8E6E1 !important; }}
+    .wrapper [style*="color:#27AE60"] {{ color:#9AA3AE !important; }}
+    .wrapper [style*="color:#27ae60"] {{ color:#9AA3AE !important; }}
+    .wrapper [style*="color:#2980B9"] {{ color:#9AA3AE !important; }}
+    .wrapper [style*="color:#2980b9"] {{ color:#9AA3AE !important; }}
+    .wrapper [style*="color:#2c3e50"] {{ color:#E8E6E1 !important; }}
+    .wrapper [style*="color:#2C3E50"] {{ color:#E8E6E1 !important; }}
+    .wrapper [style*="color:#333333"] {{ color:#E8E6E1 !important; }}
+    .wrapper [style*="color:#6B7280"] {{ color:#9AA3AE !important; }}
+    .wrapper [style*="color:#6b7280"] {{ color:#9AA3AE !important; }}
+    .wrapper [style*="color:#7f8c8d"] {{ color:#9AA3AE !important; }}
+    .wrapper [style*="color:#7F8C8D"] {{ color:#9AA3AE !important; }}
+    .wrapper [style*="color:#c0392b"] {{ color:#C4C8CE !important; }}
+    .wrapper [style*="color:#C0392B"] {{ color:#C4C8CE !important; }}
+    .wrapper [style*="background:#f0f0f0"] {{ background-color:#262A30 !important; }}
+    .wrapper [style*="background:#F0F0F0"] {{ background-color:#262A30 !important; }}
+    .wrapper [style*="background:#fafaf5"] {{ background-color:#262A30 !important; }}
+    .wrapper [style*="background:#FAFAF5"] {{ background-color:#262A30 !important; }}
+    .wrapper [style*="background:#ffffff"] {{ background-color:#262A30 !important; }}
+    .wrapper [style*="background:#FFFFFF"] {{ background-color:#262A30 !important; }}
+  }}
 @media print {{
   .no-print {{ display: none !important; }}
   .sec {{ page-break-inside: avoid; }}

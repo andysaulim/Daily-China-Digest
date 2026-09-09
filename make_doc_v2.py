@@ -132,7 +132,7 @@ style.font.size = Pt(10.5)
 p = doc.add_paragraph()
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p.paragraph_format.space_before = Pt(30)
-r = p.add_run("CSIS Korea Chair")
+r = p.add_run("CSIS China Teams")
 r.font.size = Pt(10); r.font.color.rgb = GOLD; r.bold = True
 
 p = doc.add_paragraph()
@@ -154,7 +154,7 @@ r.font.size = Pt(11); r.font.color.rgb = MID; r.italic = True
 
 p = doc.add_paragraph()
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-r = p.add_run("Prepared by Andy Lim  ·  CSIS Korea Chair  ·  May 2026")
+r = p.add_run("Prepared by Andy Lim  ·  CSIS China Teams  ·  May 2026")
 r.font.size = Pt(10); r.font.color.rgb = MID
 
 doc.add_page_break()
@@ -472,7 +472,7 @@ doc.add_page_break()
 p = doc.add_paragraph()
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p.paragraph_format.space_before = Pt(50)
-r = p.add_run("CSIS Korea Chair  ·  Daily Intelligence Digest")
+r = p.add_run("CSIS China Teams  ·  Daily Intelligence Digest")
 r.font.size = Pt(12); r.font.color.rgb = NAVY; r.bold = True
 
 p = doc.add_paragraph()
