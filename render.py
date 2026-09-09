@@ -1,6 +1,6 @@
 """
 China Daily Brief — HTML Renderer
-CSIS China Teams
+CSIS China Programs
 
 Mirrors Daily-Korea-Digest visual language exactly:
 - Navy #1B2A4A header + saturated CSIS palette
@@ -217,14 +217,9 @@ def _word_count(d: dict) -> int:
     return wordcount.count_words(d)
 
 
-def _chapter(label: str) -> str:
-    """Chapter divider — dark navy band with gold rule, white letterspaced label."""
-    return f"""
-<div style="padding:12px 32px;background:#1B2A4A;text-align:center;" class="sec dark-sec dark-navy">
-<div style="height:1px;background:rgba(212,172,13,0.4);margin-bottom:10px;"></div>
-<span style="font-size:10px;font-family:Arial,sans-serif;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:5px;font-weight:700;">{label}</span>
-<div style="height:1px;background:rgba(212,172,13,0.4);margin-top:10px;"></div>
-</div>"""
+# The BEIJING and WIRE chapter dividers are gone. Full-width dark bands
+# announcing a chapter are chrome the other editions do not carry, and the
+# section labels already say where the reader is.
 
 
 def render_html(digest: dict) -> str:
@@ -248,22 +243,34 @@ def render_html(digest: dict) -> str:
     # 0. Read online · Print/PDF · Archive
     pdf_url = digest.get("pdf_url", "")
     archive_url = digest.get("archive_url", "")
-    if web_url or pdf_url or archive_url:
-        links = []
-        if web_url:
-            links.append(f'<a href="{_esc(web_url)}" style="color:#2980B9;text-decoration:none;">Read online</a>')
-        if pdf_url:
-            links.append(f'<a href="{_esc(pdf_url)}" style="color:#2980B9;text-decoration:none;">Print / PDF</a>')
-        if archive_url:
-            links.append(f'<a href="{_esc(archive_url)}" style="color:#2980B9;text-decoration:none;">Archive</a>')
-        # pdf_export.py has run on every build and the file it writes was
-        # never offered anywhere in the brief.
-        if pdf_url:
-            links.append(f'<a href="{_esc(pdf_url)}" style="color:#2980B9;text-decoration:none;">Download PDF</a>')
-        sections_pre.append(f"""
-<div style="background:#F0F0F0;padding:6px 32px;text-align:center;font-size:11px;color:#888;" class="sec no-print">
-{" &nbsp;&middot;&nbsp; ".join(links)}
-</div>""")
+
+    # ── 0. Utility row: internal-use notice left, links right ────────────
+    # The house treatment, matching the other three. This edition had neither
+    # the internal-use banner nor the link buttons — just a pale grey line of
+    # plain-text links that read as a footnote above the nameplate.
+    _base = web_url.rsplit("/", 1)[0] + "/" if "/" in web_url else ""
+    _a = ('display:inline-block;padding:4px 12px;margin:0 2px;'
+          'font-family:Arial,sans-serif;font-size:11px;font-weight:700;'
+          'letter-spacing:0.5px;color:rgba(255,255,255,0.92);'
+          'background:rgba(255,255,255,0.10);'
+          'border:1px solid rgba(255,255,255,0.22);border-radius:3px;'
+          'text-decoration:none;white-space:nowrap;')
+    _links = []
+    if web_url:
+        _links.append(f'<a href="{_esc(web_url)}" style="{_a}">Read online</a>')
+    if pdf_url:
+        _links.append(f'<a href="{_esc(pdf_url)}" style="{_a}">Download PDF</a>')
+    _arch = archive_url or (_base + "archive.html" if _base else "")
+    if _arch:
+        _links.append(f'<a href="{_esc(_arch)}" style="{_a}">Past issues</a>')
+    sections_pre.append(f"""
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#2E3644;" class="util-row no-print">
+      <tr>
+        <td class="util-cell" style="padding:7px 32px;font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.72);white-space:nowrap;">For Internal Use Only</td>
+        <td class="util-cell" align="right" style="padding:5px 32px 5px 0;text-align:right;">{''.join(_links)}</td>
+      </tr>
+    </table>
+    """)
 
     # 1. Header
     sections_pre.append(f"""
@@ -274,7 +281,7 @@ def render_html(digest: dict) -> str:
 <div style="background:#DE2910;color:#ffffff;padding:18px 32px 14px;" class="sec dark-sec">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
 <td style="vertical-align:top;">
-<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#FFFFFF;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Teams</div>
+<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#FFFFFF;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Programs</div>
 <h1 style="margin:0 0 4px 0;font-size:26px;font-weight:700;font-family:Georgia,serif;color:#fff;letter-spacing:0.3px;">China Daily Brief</h1>
 <div style="font-size:16px;font-weight:400;color:rgba(255,255,255,0.85);font-family:Georgia,serif;">{_esc(date_str)}</div>
 </td>
@@ -286,21 +293,14 @@ def render_html(digest: dict) -> str:
 {"<div style='margin-top:12px;padding-top:12px;border-top:1px solid #D4AC0D;font-size:13px;color:rgba(255,255,255,0.9);font-family:Georgia,serif;'><strong style='color:#D4AC0D;font-family:Arial,sans-serif;font-size:11px;letter-spacing:1px;'>RE:</strong>&nbsp; " + re_line + "</div>" if re_line else ""}
 </div>""")
 
-    # Placeholder for the jump row, resolved at the end once every section is
-    # known and its anchors can be checked.
-    sections_pre.append("%%NAV%%")
-
-    # 2. Market strip — the house strip, built from what actually resolved.
+    # 2. Market strip — four indicators, directly under the nameplate.
     #
-    # It was nine tiles across three tables in three shades of navy. Four of
-    # the nine (10Y CGB, PBOC LPR, 5Y CDS, GDP) have failed to fetch on every
-    # recent run, so most of it rendered as bare em dashes and read as broken
-    # rather than as honest. It is now one row of four, matching Korea: the
-    # first four indicators that carry a real number, in priority order.
-    #
-    # The honesty rule is unchanged. A figure that was not fetched is never
-    # invented and never carried forward — it simply does not get a tile, and
-    # what is missing is still named once underneath.
+    # It was nine tiles across three tables in three shades of navy, most of
+    # them rendering as bare em dashes because they had not fetched. Four is
+    # what a reader takes in at a glance, and it matches the other editions.
+    # The rates, credit and macro prints are not shown: they are a terminal,
+    # not a brief. Anything that did not fetch is still named once underneath,
+    # and is never invented or carried forward.
     m = digest.get("market_indicators") or {}
     if m:
         def _has(d):
@@ -311,15 +311,10 @@ def render_html(digest: dict) -> str:
             return v not in (None, "", "\u2014", "-")
 
         _MONO = "'Courier New',Courier,monospace"
-        # Priority order: what a China desk looks at first. Only the first four
-        # that resolved are shown; the rest are named in the footnote.
-        _WANTED = [("sse_composite", "SSE Composite", ""),
+        _WANTED = [("usd_cny", "USD/CNY", ""),
+                   ("sse_composite", "SSE Composite", ""),
                    ("hang_seng", "Hang Seng", ""),
-                   ("usd_cny", "USD/CNY", ""),
-                   ("brent", "Brent", "$"),
-                   ("usd_cnh", "USD/CNH", ""),
-                   ("cgb_10y", "10Y CGB", ""),
-                   ("china_cds", "China 5Y CDS", "")]
+                   ("brent", "Brent", "$")]
         resolved, missing = [], []
         for key, label, prefix in _WANTED:
             d = m.get(key) or {}
@@ -329,69 +324,23 @@ def render_html(digest: dict) -> str:
             else:
                 missing.append(label)
 
-        # The rates, credit and macro prints. These are NOT dropped to match
-        # Korea's four-tile row: Korea has four indicators and China has
-        # twelve, and collect._fetch_china_macro gathered CPI, PPI, PMI and
-        # retail sales on every run for months while nothing rendered them.
-        # They get a compact second row on the same ground instead.
-        secondary = []
-        lpr = m.get("pboc_lpr") or {}
-        if not lpr.get("unavailable"):
-            for fld, label in (("lpr_1y", "PBOC 1Y LPR"), ("lpr_5y", "PBOC 5Y LPR")):
-                v = lpr.get(fld)
-                if v not in (None, "", "\u2014", "-"):
-                    secondary.append((label, _esc(str(v))))
-                else:
-                    missing.append(label)
-        else:
-            missing.extend(["PBOC 1Y LPR", "PBOC 5Y LPR"])
-        d = m.get("gdp_yoy") or {}
-        if _has(d):
-            secondary.append(("GDP YoY", _esc(str(d.get("value")))))
-        else:
-            missing.append("GDP")
-        macro = m.get("china_macro") or {}
-        for fld, label in (("cpi_yoy", "CPI YoY"), ("ppi_yoy", "PPI YoY"),
-                           ("pmi_mfg", "Mfg PMI"), ("retail", "Retail Sales YoY")):
-            v = macro.get(fld)
-            if v not in (None, "", "\u2014", "-"):
-                secondary.append((label, _esc(str(v))))
-
-        def _tile_cell(i, w, label, value, under, big):
-            edge = ("border-left:1px solid rgba(255,255,255,0.10);" if i else "")
-            pad = "11px 6px 13px" if big else "8px 6px 9px"
-            vs = "16px" if big else "13px"
-            under_html = (f'<div style="font-family:{_MONO};font-size:11px;'
-                          f'margin-top:2px;">{under}</div>' if under else "")
-            return (f'<td width="{w}%" align="center" style="padding:{pad};{edge}">'
-                    f'<div style="font-size:10px;text-transform:uppercase;'
-                    f'letter-spacing:1px;color:#9DB2CE;">{label}</div>'
-                    f'<div style="font-family:{_MONO};font-size:{vs};'
-                    f'font-weight:700;margin-top:3px;">{value}</div>'
-                    f'{under_html}</td>')
-
         if resolved:
-            shown = resolved[:4]
-            w = 100 // len(shown)
-            cells = "".join(_tile_cell(i, w, lab, val, und, True)
-                            for i, (lab, val, und) in enumerate(shown))
+            w = 100 // len(resolved)
+            cells = ""
+            for i, (label, value, under) in enumerate(resolved):
+                edge = ("border-left:1px solid rgba(255,255,255,0.10);" if i else "")
+                cells += (f'<td width="{w}%" align="center" '
+                          f'style="padding:11px 6px 13px;{edge}">'
+                          f'<div style="font-size:10px;text-transform:uppercase;'
+                          f'letter-spacing:1px;color:#9DB2CE;">{label}</div>'
+                          f'<div style="font-family:{_MONO};font-size:16px;'
+                          f'font-weight:700;margin-top:3px;">{value}</div>'
+                          f'<div style="font-family:{_MONO};font-size:11px;'
+                          f'margin-top:2px;">{under}</div></td>')
             strip = (f'<table class="mkt-table dark-sec" width="100%" cellpadding="0" '
                      f'cellspacing="0" border="0" style="background:#051F3D;color:#fff;'
                      f'border-bottom:1px solid rgba(255,255,255,0.10);">'
                      f'<tr>{cells}</tr></table>')
-            # Anything the first row could not fit joins the second, so a
-            # resolved figure is never silently dropped.
-            secondary = [(lab, val) for lab, val, _ in resolved[4:]] + secondary
-            for _chunk_start in range(0, len(secondary), 4):
-                _chunk = secondary[_chunk_start:_chunk_start + 4]
-                _w2 = 100 // len(_chunk)
-                _cells2 = "".join(_tile_cell(i, _w2, lab, val, "", False)
-                                  for i, (lab, val) in enumerate(_chunk))
-                strip += (f'<table class="mkt-table dark-sec" width="100%" '
-                          f'cellpadding="0" cellspacing="0" border="0" '
-                          f'style="background:#041A33;color:#fff;'
-                          f'border-bottom:1px solid rgba(255,255,255,0.08);">'
-                          f'<tr>{_cells2}</tr></table>')
             if missing:
                 strip += (f'<div class="delta-sec" style="background:#0a0f1e;'
                           f'color:rgba(255,255,255,0.4);'
@@ -399,7 +348,14 @@ def render_html(digest: dict) -> str:
                           f'border-bottom:1px solid rgba(255,255,255,0.08);">'
                           f'Not fetched today: {_esc(", ".join(missing))} '
                           f'&middot; shown only when sourced, never carried forward</div>')
-            sections_markets.append(strip)
+            # Straight under the nameplate, before the jump row, as in Korea.
+            sections_pre.append(strip)
+
+    # Placeholder for the jump row, resolved at the end once every section is
+    # known and its anchors can be checked. It sits under the data strip,
+    # where Korea puts it: nameplate and the day's figures first, then the way
+    # into the brief.
+    sections_pre.append("%%NAV%%")
 
     # 2c. Δ Since Yesterday Bar — single-row chip strip of key deltas
     delta = digest.get("delta_since_yesterday") or {}
@@ -439,7 +395,7 @@ def render_html(digest: dict) -> str:
         # of them, and it was the one heading still set in the old gold.
         sections_today.append(f"""
 <div {_SEC}>
-<a name="memo"></a>
+<a name="memo" id="memo"></a>
 <table width="100%" cellpadding="0" cellspacing="0" border="0" class="glance-panel" style="background:#FDEEEB;border-left:3px solid {PRC_RED};">
   <tr><td style="padding:16px 20px 8px;">
     {_sec_label("Today at a Glance")}
@@ -467,7 +423,7 @@ def render_html(digest: dict) -> str:
 {"<p style='margin:0 0 10px 0;font-size:13px;line-height:1.55;color:#444;'>" + b + "</p>" if b else ""}
 <div style="font-size:10px;color:#aaa;margin-top:6px;text-transform:uppercase;letter-spacing:0.5px;">{sl}</div>
 </div>"""
-        sections_today.append(f'<div {_SEC}><a name="top-stories"></a>{_sec_label("Top Stories")}{sh}</div>')
+        sections_today.append(f'<div {_SEC}><a name="top-stories" id="top-stories"></a>{_sec_label("Top Stories")}{sh}</div>')
 
     # 4a. US–China. One format for the whole relationship: trade, export
     # controls, sanctions, CFIUS, diplomacy, military, Congress. This replaces
@@ -480,7 +436,7 @@ def render_html(digest: dict) -> str:
                                 it.get("headline", ""), it.get("url", ""),
                                 it.get("body_text", ""), headline_size="14px")
                      for it in usc if isinstance(it, dict))
-        sections_today.append(f'<div {_SEC}><a name="us-china"></a>{_sec_label("US&ndash;China")}{uh}</div>')
+        sections_today.append(f'<div {_SEC}><a name="us-china" id="us-china"></a>{_sec_label("US&ndash;China")}{uh}</div>')
 
     # 4b. China & the World. Everyone except the United States, region-tagged,
     # with a Cross-Strait item guaranteed by the prompt and Korea and Japan
@@ -495,7 +451,7 @@ def render_html(digest: dict) -> str:
                                 it.get("headline", ""), it.get("url", ""),
                                 it.get("body_text", ""), headline_size="14px")
                      for it in cw if isinstance(it, dict))
-        sections_today.append(f'<div {_SEC}><a name="world"></a>{_sec_label("China &amp; the World")}{wh}</div>')
+        sections_today.append(f'<div {_SEC}><a name="world" id="world"></a>{_sec_label("China &amp; the World")}{wh}</div>')
 
     # 4c. Overnight Flash. The residual tier: important items that fit none of
     # the relationship sections. It leads the wire rather than sitting under
@@ -532,7 +488,7 @@ def render_html(digest: dict) -> str:
         fh = (f'<table width="100%" cellpadding="0" cellspacing="0" border="0" '
               f'class="flash-table" style="border-top:2px solid {PRC_RED};">{fh}</table>')
         sections_wire.append(
-            f'<div {_SEC}><a name="overnight"></a>{_sec_label("Overnight")}{fh}</div>')
+            f'<div {_SEC}><a name="overnight" id="overnight"></a>{_sec_label("Overnight")}{fh}</div>')
 
     # 5. Key Stat. Rendered as the first row of the market band, so the page
     # has one dark data band instead of two.
@@ -543,7 +499,7 @@ def render_html(digest: dict) -> str:
         # out of the column every other section reads down.
         stat_html = f"""
 <div {_SEC}>
-  <a name="key-stat"></a>{_sec_label("Stat of the Day")}
+  <a name="key-stat" id="key-stat"></a>{_sec_label("Stat of the Day")}
   <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FDF4F2;border-left:3px solid {PRC_RED};border-radius:3px;">
     <tr><td style="padding:14px 16px;">
       <div class="key-stat-num" style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:{PRC_RED};line-height:1;">{_esc(str(stat.get("number", "")))}</div>
@@ -667,14 +623,14 @@ def render_html(digest: dict) -> str:
         if gov_grid or pers_html or npc_html:
             sections_analysis.append(f"""
 <div {_SEC}>
-<a name="beijing"></a>{_sec_label("What Beijing Did")}
+<a name="beijing" id="beijing"></a>{_sec_label("What Beijing Did")}
 <div style="font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-top:-10px;margin-bottom:14px;">State Council + Ministries{(" · " + ds) if ds else ""}</div>
 {gov_grid}{pers_html}{npc_html}
 </div>""")
         # The calendar is a forward look, so it closes the brief rather than
         # sitting halfway down inside a government section.
         if cal_html:
-            sections_close.append(f'<div {_SEC}><a name="upcoming"></a>{_sec_label("Upcoming")}{cal_html}</div>')
+            sections_close.append(f'<div {_SEC}><a name="upcoming" id="upcoming"></a>{_sec_label("Upcoming")}{cal_html}</div>')
 
     # 10. Economy & Business — inside China.
     biz = digest.get("business_economy") or []
@@ -687,7 +643,7 @@ def render_html(digest: dict) -> str:
             tag = " / ".join(x for x in (str(b.get("sector") or ""), ", ".join(comps)) if x)
             bh += _item_card(tag, b.get("source", ""), b.get("headline", ""),
                              b.get("url", ""), b.get("body_text", ""))
-        sections_today.append(f'<div {_SEC}><a name="business"></a>{_sec_label("Economy &amp; Business")}{bh}</div>')
+        sections_today.append(f'<div {_SEC}><a name="business" id="business"></a>{_sec_label("Economy &amp; Business")}{bh}</div>')
 
     # 14. Public Sentiment — removed (low signal-to-noise)
 
@@ -732,7 +688,7 @@ def render_html(digest: dict) -> str:
 {src_link}
 </div>"""
         sections_analysis.append(
-            f'<div {_SEC}><a name="saying"></a>{_sec_label("What Beijing Is Saying", "#C0392B")}{oh}</div>')
+            f'<div {_SEC}><a name="saying" id="saying"></a>{_sec_label("What Beijing Is Saying", "#C0392B")}{oh}</div>')
 
     # 15. Social Statements
     stmts = digest.get("social_statements") or []
@@ -754,7 +710,7 @@ def render_html(digest: dict) -> str:
 {"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Note:</strong> " + nt + "</div>" if nt else ""}
 {src_link}
 </div>"""
-        sections_analysis.append(f'<div {_SEC}><a name="analysis"></a>{_sec_label("What Others Are Saying")}{sh}</div>')
+        sections_analysis.append(f'<div {_SEC}><a name="analysis" id="analysis"></a>{_sec_label("What Others Are Saying")}{sh}</div>')
 
     # 16. Also Today — the one-line wire.
     also = digest.get("also_today") or []
@@ -782,7 +738,7 @@ def render_html(digest: dict) -> str:
                    + f'<table width="100%" cellpadding="0" cellspacing="0" '
                      f'border="0" class="flash-table">{rows}</table>')
         sections_wire.append(
-            f'<div {_SEC}><a name="wire"></a>{_sec_label("The Wire")}{ah}</div>')
+            f'<div {_SEC}><a name="wire" id="wire"></a>{_sec_label("The Wire")}{ah}</div>')
 
     # 18. Sanctions Status footer — REMOVED. Will return when trade tracker is wired
     # with verifiable BIS/OFAC/DoD running totals. Placeholder text was misleading.
@@ -817,7 +773,7 @@ def render_html(digest: dict) -> str:
      the disclaimer set in the reading face rather than the label face. -->
 <table width="100%" cellpadding="0" cellspacing="0" border="0" class="sec footer" style="background:#1B2A4A;border-top:4px solid #DE2910;">
   <tr><td style="padding:20px 32px 6px;text-align:center;">
-    <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#FFFFFF;letter-spacing:0.5px;line-height:1.2;">CSIS China Teams</div>
+    <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#FFFFFF;letter-spacing:0.5px;line-height:1.2;">CSIS China Programs</div>
     <div style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.72);margin-top:6px;">China Daily Brief</div>
     <div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,255,255,0.72);margin-top:12px;">Washington, D.C.</div>
     {_foot_links}
@@ -842,8 +798,8 @@ def render_html(digest: dict) -> str:
         sections_pre +
         sections_today +
         sections_markets +
-        ([_chapter("BEIJING")] if sections_analysis else []) + sections_analysis +
-        ([_chapter("WIRE")] if sections_wire else []) + sections_wire +
+        sections_analysis +
+        sections_wire +
         sections_close +
         sections_post
     )
@@ -976,7 +932,7 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
 </style>
 </head>
 <body style="margin:0;padding:0;background:#ffffff;">
-<a name="top"></a>
+<a name="top" id="top"></a>
 <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;">
 <tr><td align="center">
 <div class="container">

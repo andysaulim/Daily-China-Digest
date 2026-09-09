@@ -57,7 +57,10 @@ def send_digest(html: str, subject: str | None = None,
 
     msg = EmailMessage()
     msg["Subject"] = subject
-    msg["From"] = sender
+    # The display name a reader sees in their inbox list. Without it the From
+    # column shows the raw Gmail address, which says nothing about what the
+    # message is.
+    msg["From"] = f"CSIS China Programs <{sender}>"
     msg["To"] = sender                     # visible header; real list is BCC
     msg["Reply-To"] = gmail_user
     msg.set_content(plain_text or "This email requires an HTML-capable client to render properly.")

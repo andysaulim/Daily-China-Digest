@@ -553,7 +553,7 @@ def test_render():
     check("ministry actions kept, next to Beijing's words",
           "What Beijing Did" in hmoved)
     check("congress folded into US-China, above the wire",
-          0 < hmoved.find("US&ndash;China") < hmoved.find("WIRE"))
+          0 < hmoved.find("US&ndash;China") < hmoved.find('a name="wire"'))
     # Named "Upcoming" now, the house name; anchored on the section's own
     # <a name> because the jump row also carries the label.
     check("calendar closes the brief as the forward look",
@@ -568,18 +568,42 @@ def test_render():
                                    "market_indicators": mi,
                                    "top_stories": [{"headline": "H", "body": "B",
                                                     "url": "https://x/a", "source": "R"}]})
+    # The strip is four indicators: USD/CNY, SSE Composite, Hang Seng, Brent.
+    # Rates, credit and the macro prints are not in it — nine tiles across
+    # three navy bands is a terminal, not a brief. Anything of the four that
+    # did not fetch is still named once and never invented.
+    full = {"usd_cny": {"value": "7.1204", "change_pct": 0.02},
+            "sse_composite": {"value": "3,412.55", "change_pct": 0.4},
+            "hang_seng": {"value": "18,220.10", "change_pct": -0.3},
+            "brent": {"value": "72.40", "change_pct": -1.1}}
+    hf = _strip(full)
+    for label in ("USD/CNY", "SSE Composite", "Hang Seng", "Brent"):
+        check(f"{label} renders", f">{label}</div>" in hf)
+    check("exactly four tiles", hf.split('class="mkt-table')[1]
+          .split("</table>")[0].count('align="center"') == 4)
+    check("no missing-line when all four resolve", "Not fetched today" not in hf)
+    # Indicators the strip no longer carries must not reappear through some
+    # other path, and must not be reported as "missing" either — they are not
+    # part of the strip, so their absence is not a fetch failure.
+    off = dict(full)
+    off.update({"cgb_10y": {"value": "1.78%", "change_bps": 2.0},
+                "china_cds": {"value": "58", "change_bps": -1.5},
+                "pboc_lpr": {"lpr_1y": "3.00%", "lpr_5y": "3.50%"},
+                "gdp_yoy": {"value": "4.8%", "source": "NBS", "period": "Q2"},
+                "china_macro": {"cpi_yoy": "+0.3%", "ppi_yoy": "-2.1%",
+                                "pmi_mfg": "50.4", "retail": "+4.1%"}})
+    ho = _strip(off)
+    for label in ("10Y CGB", "China 5Y CDS", "PBOC 1Y LPR", "PBOC 5Y LPR",
+                  "GDP YoY", "CPI YoY", "PPI YoY", "Mfg PMI", "Retail Sales YoY"):
+        check(f"{label} is not in the strip", f">{label}</div>" not in ho)
+    check("retired indicators are not reported missing", "Not fetched today" not in ho)
+
     dead = {"sse_composite": {"value": "3,412.55", "change_pct": 0.4},
             "hang_seng": {"value": "18,220.10", "change_pct": -0.3},
             "usd_cny": {"value": "7.1204", "change_pct": 0.02},
-            "usd_cnh": {"value": "7.1310", "change_pct": 0.03},
-            "brent": {"value": "72.40", "change_pct": -1.1},
-            "cgb_10y": {"value": "—", "unavailable": True},
-            "china_cds": {"value": "—", "unavailable": True},
-            "pboc_lpr": {"lpr_1y": "—", "lpr_5y": "—", "unavailable": True},
-            "gdp_yoy": {"value": "—", "unavailable": True}}
+            "brent": {"value": "\u2014", "unavailable": True}}
     hd = _strip(dead)
-    for label in ("10Y CGB", "China 5Y CDS", "PBOC 1Y LPR", "GDP YoY"):
-        check(f"no dead tile for {label}", f">{label}</div>" not in hd)
+    check("no dead tile for Brent", ">Brent</div>" not in hd)
     check("live tiles still render", "SSE Composite" in hd and "Hang Seng" in hd)
     check("missing indicators named once", "Not fetched today" in hd)
     check("honesty line kept", "never carried forward" in hd)
@@ -589,30 +613,23 @@ def test_render():
           'class="mkt-table dark-sec"' in hd and "background:#051F3D" in hd)
     check("missing-line carries the mobile light-mode class",
           'class="delta-sec" style="background:#0a0f1e' in hd)
-
-    live = dict(dead)
-    live.update({"cgb_10y": {"value": "1.78%", "change_bps": 2.0},
-                 "china_cds": {"value": "58", "change_bps": -1.5},
-                 "pboc_lpr": {"lpr_1y": "3.00%", "lpr_5y": "3.50%"},
-                 "gdp_yoy": {"value": "4.8%", "source": "NBS", "period": "Q2"},
-                 "china_macro": {"cpi_yoy": "+0.3%", "ppi_yoy": "-2.1%",
-                                 "pmi_mfg": "50.4", "retail": "+4.1%"}})
-    hl = _strip(live)
-    for label in ("10Y CGB", "China 5Y CDS", "PBOC 1Y LPR", "PBOC 5Y LPR", "GDP YoY"):
-        check(f"{label} renders when sourced", label in hl)
-    # collect._fetch_china_macro has run on every build since the pipeline was
-    # written and nothing ever displayed its output.
-    for label in ("CPI YoY", "PPI YoY", "Mfg PMI", "Retail Sales YoY"):
-        check(f"macro tile {label} surfaced", label in hl)
-    check("no missing-line when nothing is missing", "Not fetched today" not in hl)
     check("strip suppressed when nothing resolves",
-          "SSE Composite" not in _strip({"sse_composite": {"value": "—", "unavailable": True}}))
+          "SSE Composite" not in _strip({"sse_composite": {"value": "\u2014",
+                                                           "unavailable": True}}))
+    # The strip belongs under the nameplate, ahead of the jump row. The jump
+    # row needs four sections before it renders, so this uses the full digest
+    # fixture rather than the four-tile one.
+    _ordered = render.render_html(dict(make_digest(), market_indicators=full))
+    check("strip sits under the masthead, above the jump row",
+          0 < _ordered.index('class="mkt-table') < _ordered.index('class="nav-row'))
+    check("strip sits above the morning memo",
+          _ordered.index('class="mkt-table') < _ordered.index('a name="memo"'))
 
     # Relationship sections: US-China and China & the World sit under the top
     # stories; Korea lives inside China & the World rather than on its own.
     hk = render.render_html({
         "digest_date": "2026-09-05", "editor_note": "J. E. Watch: x.",
-        "market_indicators": live,
+        "market_indicators": full,
         "top_stories": [{"headline": "T", "body": "B", "url": "https://x/a", "source": "R"}],
         "us_china": [{"instrument": "Export Controls", "source": "Reuters",
                       "headline": "Commerce adds gallium refiners", "body_text": "B",
@@ -643,7 +660,13 @@ def test_render():
     d["pdf_url"] = "https://example.org/2026-09-04.pdf"
     d["archive_url"] = "https://example.org/archive.html"
     html2 = render.render_html(d)
-    check("online / print / archive links", all(s in html2 for s in ("Read online", "Print / PDF", "Archive")))
+    # The house utility row: the internal-use notice and the three link
+    # buttons the other editions carry. "Print / PDF" and "Archive" were this
+    # edition's own wording for two of them.
+    check("utility row carries the internal-use notice",
+          "For Internal Use Only" in html2 and 'class="util-row' in html2)
+    check("online / pdf / past-issues links",
+          all(s in html2 for s in ("Read online", "Download PDF", "Past issues")))
     check("no placeholder links", 'href="#"' not in html.replace('href="#top"', ""))
     check("unavailable market shows dash", "1.75%" not in html)
     check("repaired scmp link present", "scarborough" in html)
