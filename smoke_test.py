@@ -680,10 +680,15 @@ def test_render():
     check("region tags rendered", "KOREA" in hk.upper() and "CROSS-STRAIT" in hk.upper())
     check("economy & business rendered", "Economy &amp; Business" in hk)
     check("no standalone korea section", "The Korea Angle" not in hk)
-    check("reading order: top stories, US-China, world, economy, then the wire",
-          0 < hk.find("Top Stories") < hk.find("US&ndash;China") < hk.find("China &amp; the World")
-          < hk.find("Economy &amp; Business") < hk.find('a name="overnight"'))
-    check("overnight now leads the wire", hk.find("WIRE") < hk.find('a name="overnight"'))
+    # Overnight now sits directly after Top Stories, where the other three
+    # briefs put it. It used to come a section lower, after Stat of the Day,
+    # so a reader moving between the briefs met the day's news in a different
+    # place depending on which one they opened.
+    check("overnight follows top stories",
+          0 < hk.find("Top Stories") < hk.find('a name="overnight"'))
+    check("reading order: overnight, then US-China, world, economy",
+          hk.find('a name="overnight"') < hk.find("US&ndash;China")
+          < hk.find("China &amp; the World") < hk.find("Economy &amp; Business"))
     # Format order: the frame and the news come before the data strip.
     i_top, i_mkt = html.find("Top Stories"), html.find("SSE Composite")
     check("no Bottom Line section", "The Bottom Line" not in html)
