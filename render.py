@@ -136,7 +136,7 @@ def _word_count(d: dict) -> int:
 def _chapter(label: str) -> str:
     """Chapter divider — dark navy band with gold rule, white letterspaced label."""
     return f"""
-<div style="padding:12px 32px;background:#1B2A4A;text-align:center;" class="sec dark-sec">
+<div style="padding:12px 32px;background:#1B2A4A;text-align:center;" class="sec dark-sec dark-navy">
 <div style="height:1px;background:rgba(212,172,13,0.4);margin-bottom:10px;"></div>
 <span style="font-size:10px;font-family:Arial,sans-serif;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:5px;font-weight:700;">{label}</span>
 <div style="height:1px;background:rgba(212,172,13,0.4);margin-top:10px;"></div>
@@ -371,7 +371,6 @@ def render_html(digest: dict) -> str:
             b_raw = s.get("body", "") or ""
             # Suppress body if it duplicates the headline (Google News RSS quirk)
             b = _esc(b_raw) if b_raw.strip() and b_raw.strip() != s.get("headline", "").strip() else ""
-            sw = _esc(s.get("so_what", ""))
             sl = _esc(_clean_src(s.get("src_line", s.get("source", ""))))
             url = s.get("url", "")
             sh += f"""
@@ -379,7 +378,6 @@ def render_html(digest: dict) -> str:
 <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#888;font-weight:700;margin-bottom:6px;">{cat}</div>
 <h3 style="margin:0 0 8px 0;font-size:16px;line-height:1.4;color:#1B2A4A;font-family:Georgia,serif;font-weight:700;">{_link_or_text(h, url, style="color:#1B2A4A;text-decoration:none;")}</h3>
 {"<p style='margin:0 0 10px 0;font-size:13px;line-height:1.55;color:#444;'>" + b + "</p>" if b else ""}
-{"<p style='margin:0 0 6px 0;font-size:13px;line-height:1.5;color:#555;font-style:italic;'><strong style='color:#1B2A4A;font-style:normal;'>So what:</strong> " + _link_or_text(sw, url, style="color:#555;text-decoration:underline;") + "</p>" if sw else ""}
 <div style="font-size:10px;color:#aaa;margin-top:6px;text-transform:uppercase;letter-spacing:0.5px;">{sl}</div>
 </div>"""
         sections_today.append(f'<div {_SEC}>{_sec_label("Top Stories")}{sh}</div>')
@@ -654,7 +652,7 @@ def render_html(digest: dict) -> str:
 CSIS China Teams &nbsp;·&nbsp; China Daily Brief &nbsp;·&nbsp; Generated {gen_time}
 </div>
 <div style="font-size:10px;color:rgba(255,255,255,0.55);font-family:Arial,sans-serif;line-height:1.6;max-width:520px;margin:8px auto 0;">
-This brief is generated automatically from {_esc(str(digest.get("source_count") or "the day's"))} collected sources and may contain errors. Every item links to its source; check the source before citing. Prepared by Andy Lim, CSIS Korea Chair.
+This brief is generated automatically from {_esc(str(digest.get("source_count") or "the day's"))} collected sources and may contain errors. Every item links to its source; check the source before citing. Prepared by Andy Lim, CSIS China Teams.
 </div>
 <a href="#top" style="font-size:10px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:1px;">&#8593; Back to top</a>
 </div>""")
@@ -690,7 +688,11 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
    ignores margin:auto. Without the reset above it also centred every line
    of text in the brief. */
 /* Lock dark sections — prevent iOS Mail light-mode override */
-.dark-sec {{ background-color:#1B2A4A !important; color:#ffffff !important; }}
+/* No background here. This class exists to force light-on-dark type in
+   clients that recolour; the ground is set inline per band, and an
+   !important background here silently overrode the red masthead. */
+.dark-sec {{ color:#ffffff !important; }}
+.dark-navy {{ background-color:#1B2A4A !important; }}
 .dark-sec * {{ color:#ffffff !important; }}
 .dark-sec a {{ color:#D4AC0D !important; }}
 .mid-sec {{ background-color:#162340 !important; color:#ffffff !important; }}
@@ -711,30 +713,30 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
        selectors matched h3, div and a while the markup also used td, p and
        span, and most of its body text stayed unreadable as a result. */
     body {{ background:#121212 !important; }}
-    .wrapper {{ background:#1a1a1a !important; }}
-    .wrapper h1, .wrapper h2, .wrapper h3 {{ color:#E8E6E1 !important; }}
-    .wrapper a {{ color:#6FA8E8 !important; }}
-    .wrapper [style*="color:#1B2A4A"] {{ color:#E8E6E1 !important; }}
-    .wrapper [style*="color:#1b2a4a"] {{ color:#E8E6E1 !important; }}
-    .wrapper [style*="color:#27AE60"] {{ color:#9AA3AE !important; }}
-    .wrapper [style*="color:#27ae60"] {{ color:#9AA3AE !important; }}
-    .wrapper [style*="color:#2980B9"] {{ color:#9AA3AE !important; }}
-    .wrapper [style*="color:#2980b9"] {{ color:#9AA3AE !important; }}
-    .wrapper [style*="color:#2c3e50"] {{ color:#E8E6E1 !important; }}
-    .wrapper [style*="color:#2C3E50"] {{ color:#E8E6E1 !important; }}
-    .wrapper [style*="color:#333333"] {{ color:#E8E6E1 !important; }}
-    .wrapper [style*="color:#6B7280"] {{ color:#9AA3AE !important; }}
-    .wrapper [style*="color:#6b7280"] {{ color:#9AA3AE !important; }}
-    .wrapper [style*="color:#7f8c8d"] {{ color:#9AA3AE !important; }}
-    .wrapper [style*="color:#7F8C8D"] {{ color:#9AA3AE !important; }}
-    .wrapper [style*="color:#c0392b"] {{ color:#C4C8CE !important; }}
-    .wrapper [style*="color:#C0392B"] {{ color:#C4C8CE !important; }}
-    .wrapper [style*="background:#f0f0f0"] {{ background-color:#262A30 !important; }}
-    .wrapper [style*="background:#F0F0F0"] {{ background-color:#262A30 !important; }}
-    .wrapper [style*="background:#fafaf5"] {{ background-color:#262A30 !important; }}
-    .wrapper [style*="background:#FAFAF5"] {{ background-color:#262A30 !important; }}
-    .wrapper [style*="background:#ffffff"] {{ background-color:#262A30 !important; }}
-    .wrapper [style*="background:#FFFFFF"] {{ background-color:#262A30 !important; }}
+    .container {{ background:#1a1a1a !important; }}
+    .container h1, .container h2, .container h3 {{ color:#E8E6E1 !important; }}
+    .container a {{ color:#6FA8E8 !important; }}
+    .container [style*="color:#1B2A4A"] {{ color:#E8E6E1 !important; }}
+    .container [style*="color:#1b2a4a"] {{ color:#E8E6E1 !important; }}
+    .container [style*="color:#27AE60"] {{ color:#9AA3AE !important; }}
+    .container [style*="color:#27ae60"] {{ color:#9AA3AE !important; }}
+    .container [style*="color:#2980B9"] {{ color:#9AA3AE !important; }}
+    .container [style*="color:#2980b9"] {{ color:#9AA3AE !important; }}
+    .container [style*="color:#2c3e50"] {{ color:#E8E6E1 !important; }}
+    .container [style*="color:#2C3E50"] {{ color:#E8E6E1 !important; }}
+    .container [style*="color:#333333"] {{ color:#E8E6E1 !important; }}
+    .container [style*="color:#6B7280"] {{ color:#9AA3AE !important; }}
+    .container [style*="color:#6b7280"] {{ color:#9AA3AE !important; }}
+    .container [style*="color:#7f8c8d"] {{ color:#9AA3AE !important; }}
+    .container [style*="color:#7F8C8D"] {{ color:#9AA3AE !important; }}
+    .container [style*="color:#c0392b"] {{ color:#C4C8CE !important; }}
+    .container [style*="color:#C0392B"] {{ color:#C4C8CE !important; }}
+    .container [style*="background:#f0f0f0"] {{ background-color:#262A30 !important; }}
+    .container [style*="background:#F0F0F0"] {{ background-color:#262A30 !important; }}
+    .container [style*="background:#fafaf5"] {{ background-color:#262A30 !important; }}
+    .container [style*="background:#FAFAF5"] {{ background-color:#262A30 !important; }}
+    .container [style*="background:#ffffff"] {{ background-color:#262A30 !important; }}
+    .container [style*="background:#FFFFFF"] {{ background-color:#262A30 !important; }}
   }}
 @media print {{
   .no-print {{ display: none !important; }}

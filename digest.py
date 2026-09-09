@@ -701,10 +701,9 @@ fourth sentence in a body, you are writing the wrong thing: add another item.
 NO INTERPRETATION. State what happened and what was said. Do NOT write that
 something "signals", "suggests", "reflects", "underscores", "marks a shift",
 "comes amid" or "sets the stage". Do NOT tell the reader what to watch or what it
-portends. The one permitted forward-looking line is so_what, on TOP STORIES ONLY:
+portends. Report what happened and what was said:
 a single sentence naming a specific decision, meeting or deadline the story bears
 on, and only when that decision, meeting or deadline appears in today's articles or
-in calendar_watch. Everywhere else, so_what is null.
 
 EVERY IMPORTANT STORY MAKES IT. Any input item carrying "prestige_outlet": true or
 "flagged_journalist" is a story the readership will have seen the headline of by
@@ -745,7 +744,7 @@ Return a digest object with:
 
 - china_world: 6-9 items — CHINA AND THE REST OF THE WORLD, everyone except the United States. Every region is in scope: Cross-Strait, Japan, Korea (ROK and DPRK), India, ASEAN (Philippines, Vietnam, Indonesia, Malaysia, Singapore), Australia and the Pacific, Russia and Central Asia, Europe and the UK, the Middle East and Iran, Africa, Latin America, and multilateral (BRICS, SCO, UN, WTO, G20). Rules: ALWAYS include at least one Cross-Strait item, even on a slow day. Korea and Japan are the readership's home region: when there is a genuine China-Korea or China-Japan development, it goes here, and a China development that touches the Korean Peninsula outranks a comparable one elsewhere. Beyond that, order by importance to a US policymaker, and cover more than one region — a section that is all Taiwan or all Russia has been selected badly. Each: url (copy verbatim from input), source, headline, body_text (2 sentences), region (EXACTLY one of "Cross-Strait", "Japan", "Korea", "India", "ASEAN", "Australia-Pacific", "Russia-Central Asia", "Europe", "Middle East", "Africa", "Latin America", "Multilateral"). Do not duplicate an item already placed in top_stories or us_china.
 
-- top_stories: 4-6 biggest HARD NEWS stories — aim for 5. From wires/correspondents/PRC press/government — NOT op-eds or think tank commentary. TOPIC DIVERSITY MANDATORY. Each: url (copy verbatim from input — do not construct or alter), source, category_tag (Cross-Strait/US-China/PRC-Economy/PLA/Indo-Pacific/Technology/Sanctions/Energy/Diplomacy), headline, body (MAX 3 sentences, aim for 2 — facts: who/what/when/specifics), so_what (1 sentence — specific decision/meeting/timeline this affects, only if appears in today's articles or calendar_watch), src_line.
+- top_stories: 4-6 biggest HARD NEWS stories — aim for 5. From wires/correspondents/PRC press/government — NOT op-eds or think tank commentary. TOPIC DIVERSITY MANDATORY. Each: url (copy verbatim from input — do not construct or alter), source, category_tag (Cross-Strait/US-China/PRC-Economy/PLA/Indo-Pacific/Technology/Sanctions/Energy/Diplomacy), headline, body (MAX 3 sentences, aim for 2 — facts: who/what/when/specifics), src_line.
 
 - also_today: up to 12 remaining articles score >= 4. ONE LINE EACH: body_text is a single sentence, max 25 words. This is a scan-and-click list, not a section of summaries. Each: url (copy verbatim from input), source, category, headline, body_text (1-2 sentences), color_bar_class (cb-navy=Cross-Strait, cb-red=PLA, cb-lt=Trade/Sanctions, cb-mid=Diplomacy, cb-tech=Technology, cb-biz=Economy).
 
@@ -785,7 +784,7 @@ Return ONLY valid JSON. Begin your response with {{ and end it with }}. No code 
 # ─────────────────────────────────────────────────────────────────────────────
 
 _TEXT_FIELDS = ("body", "body_text", "summary", "detail", "quote_text",
-               "so_what", "analyst_note")
+               "analyst_note")
 
 
 def _count_digest_words(digest: dict) -> int:
