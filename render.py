@@ -163,11 +163,16 @@ def _compact_row(cat: str, headline: str, url: str, src: str, body: str = "") ->
             f'{line}</tr>')
 
 
-def _sec_label(label: str, color: str = "#1B2A4A") -> str:
-    """Section label — small-caps with rule, no background pill."""
-    return (f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
-            f'letter-spacing:2px;color:{color};font-family:Arial,sans-serif;'
-            f'margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid {color};">'
+def _sec_label(label: str, color: str = PRC_RED) -> str:
+    """Section label — the house metrics, in the edition's accent.
+
+    It was 10px over 2px of tracking in navy, so the headings read as a
+    different system from Korea's and the identity colour appeared only in
+    the nameplate. One accent, one size, everywhere.
+    """
+    return (f'<div style="font-size:11px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:1.5px;color:{color};font-family:Arial,sans-serif;'
+            f'margin-bottom:14px;padding-bottom:6px;border-bottom:2px solid {color};">'
             f'{label}</div>')
 
 
@@ -396,17 +401,25 @@ def render_html(digest: dict) -> str:
             memo_html += f"""<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
 <tr>
 <td width="28" style="vertical-align:top;padding-top:1px;">
-<div style="width:22px;height:22px;border-radius:50%;background:#1B2A4A;color:#fff;font-size:11px;font-weight:700;text-align:center;line-height:22px;font-family:Arial,sans-serif;">{idx}</div>
+<div style="width:24px;height:24px;border-radius:50%;background:{PRC_RED};color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:24px;font-family:Georgia,serif;">{idx}</div>
 </td>
 <td style="vertical-align:top;padding-left:8px;">
 <div style="font-size:14px;line-height:1.5;color:#222;font-family:Georgia,serif;">{t}</div>
 </td>
 </tr>
 </table>"""
+        # A tinted panel with a rule down the left, as in Korea. Flat on white
+        # it read as the first news section rather than as the summary of all
+        # of them, and it was the one heading still set in the old gold.
         sections_today.append(f"""
-<div style="padding:20px 32px;border-bottom:1px solid #EBEBEB;" class="sec">
-<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #D4AC0D;">Today at a Glance</div>
-{memo_html}
+<div {_SEC}>
+<a name="memo"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="glance-panel" style="background:#FDEEEB;border-left:3px solid {PRC_RED};">
+  <tr><td style="padding:16px 20px 8px;">
+    {_sec_label("Today at a Glance")}
+    {memo_html}
+  </td></tr>
+</table>
 </div>""")
 
     # 4. Top Stories — heaviest visual weight in TODAY chapter
@@ -608,13 +621,17 @@ def render_html(digest: dict) -> str:
                 cdet = _esc(c.get("detail", ""))
                 ci += f"""<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-bottom:1px solid #E8E8E8;">
 <tr>
-<td width="50" style="padding:10px 10px 10px 0;text-align:center;vertical-align:top;">
-<div style="font-size:10px;text-transform:uppercase;color:#888;letter-spacing:0.5px;">{cm}</div>
-<div style="font-size:16px;font-weight:300;color:#1B2A4A;line-height:1.2;">{cd}</div>
+<td width="54" style="padding:9px 12px 9px 0;vertical-align:top;">
+<table cellpadding="0" cellspacing="0" border="0" style="background:{PRC_RED};">
+<tr><td align="center" style="padding:4px 0 5px;width:46px;">
+<div style="font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.85);">{cm}</div>
+<div style="font-family:Georgia,serif;font-size:16px;font-weight:700;color:#fff;line-height:1;">{cd}</div>
+</td></tr>
+</table>
 </td>
-<td style="padding:10px 0;vertical-align:top;">
-<div style="font-size:13px;font-weight:600;color:#1B2A4A;margin-bottom:2px;">{ch}</div>
-<div style="font-size:13px;line-height:1.4;color:#555;">{cdet}</div>
+<td style="padding:9px 0;vertical-align:top;">
+<div style="font-family:Georgia,serif;font-size:14px;font-weight:700;color:#1B2A4A;">{ch}</div>
+<div style="font-family:Georgia,serif;font-size:13px;line-height:1.45;color:#4A5260;margin-top:3px;">{cdet}</div>
 </td>
 </tr>
 </table>"""
@@ -631,7 +648,7 @@ def render_html(digest: dict) -> str:
         # The calendar is a forward look, so it closes the brief rather than
         # sitting halfway down inside a government section.
         if cal_html:
-            sections_close.append(f'<div {_SEC}><a name="upcoming"></a>{_sec_label("What We Are Watching")}{cal_html}</div>')
+            sections_close.append(f'<div {_SEC}><a name="upcoming"></a>{_sec_label("Upcoming")}{cal_html}</div>')
 
     # 10. Economy & Business — inside China.
     biz = digest.get("business_economy") or []

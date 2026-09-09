@@ -554,8 +554,10 @@ def test_render():
           "What Beijing Did" in hmoved)
     check("congress folded into US-China, above the wire",
           0 < hmoved.find("US&ndash;China") < hmoved.find("WIRE"))
+    # Named "Upcoming" now, the house name; anchored on the section's own
+    # <a name> because the jump row also carries the label.
     check("calendar closes the brief as the forward look",
-          hmoved.find("What We Are Watching") > hmoved.find("The Wire") > 0)
+          hmoved.find('a name="upcoming"') > hmoved.find('a name="wire"') > 0)
 
     # The market strip renders what resolved and nothing else. Five of nine
     # tiles were bare em dashes on run 118, which reads as broken rather than
