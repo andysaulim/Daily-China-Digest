@@ -310,12 +310,12 @@ def render_html(digest: dict) -> str:
      inside the brief, which is the flag's own pairing. -->
 <div style="background:#DE2910;color:#ffffff;padding:18px 32px 14px;" class="sec dark-sec">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-<td style="vertical-align:top;">
+<td class="mast-main" style="vertical-align:top;">
 <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#FFFFFF;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Programs</div>
 <h1 style="margin:0 0 4px 0;font-size:26px;font-weight:700;font-family:Georgia,serif;color:#fff;letter-spacing:0.3px;">China Daily Brief</h1>
 <div style="font-size:16px;font-weight:400;color:rgba(255,255,255,0.85);font-family:Georgia,serif;">{_esc(date_str)}</div>
 </td>
-<td style="vertical-align:top;text-align:right;">
+<td class="mast-meta" style="vertical-align:top;text-align:right;">
 <div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.92);margin-bottom:3px;">{gen_time}</div>
 <div style="font-size:11px;color:rgba(255,255,255,0.72);letter-spacing:0.5px;">{wc:,} words &middot; {read_min} min read</div>
 </td>
@@ -907,6 +907,13 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
 .deep-sec {{ background-color:#0F1B30 !important; color:#ffffff !important; }}
 .delta-sec {{ background-color:#0a0f1e !important; color:#ffffff !important; }}
 @media only screen and (max-width: 600px) {{
+  /* The masthead had no mobile rule at all, so its two columns stayed side by
+     side on a phone: the nameplate squeezed into a narrow column while the
+     meta line held its own width on the right. The other three briefs stack
+     these; this one now does too, at the same nameplate size. */
+  h1 {{ font-size:22px !important; }}
+  .mast-main, .mast-meta {{ display:block !important; width:100% !important; }}
+  .mast-meta {{ text-align:left !important; padding-top:10px !important; }}
   .container {{ width:100% !important; text-align:left !important; }}
   .sec {{ padding-left:16px !important; padding-right:16px !important; }}
   h1 {{ font-size:22px !important; }}
