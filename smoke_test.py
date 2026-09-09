@@ -544,8 +544,13 @@ def test_render():
     # That attribute also centres every line of text inside it unless the
     # container resets it, which is why the whole brief rendered centred until
     # Sep 7 2026. Both the base rule and the mobile override must carry it.
+    # The frame is now width:680px with max-width:100%, matching the other
+    # three: a fixed max-width cannot flex, so a forwarded copy whose stylesheet
+    # was stripped would be stranded at 680px on a phone. What this check is
+    # really about is the text-align reset, which is what stops the wrapper's
+    # align="center" centring every line in the brief.
     check("container resets the inherited centering",
-          "max-width:680px; margin:0 auto; background:#ffffff; text-align:left;" in html)
+          "width:680px; max-width:100%; margin:0 auto; background:#ffffff; text-align:left;" in html)
     check("mobile override keeps the reset",
           "width:100% !important; text-align:left !important;" in html)
     digest_fixture = d

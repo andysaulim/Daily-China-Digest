@@ -905,7 +905,7 @@ def render_html(digest: dict) -> str:
 <style>
 :root {{ color-scheme: light; }}
 body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; color:#333333; -webkit-text-size-adjust:100%; }}
-.container {{ max-width:680px; margin:0 auto; background:#ffffff; text-align:left; }}
+.container {{ width:680px; max-width:100%; margin:0 auto; background:#ffffff; text-align:left; }}
 /* The wrapper <td align="center"> centres the container for Outlook, which
    ignores margin:auto. Without the reset above it also centred every line
    of text in the brief. */
@@ -920,6 +920,13 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
 .mid-sec {{ background-color:#162340 !important; color:#ffffff !important; }}
 .deep-sec {{ background-color:#0F1B30 !important; color:#ffffff !important; }}
 .delta-sec {{ background-color:#0a0f1e !important; color:#ffffff !important; }}
+/* The tablet band, which this brief did not have. Between 601 and 768 the
+   frame was uncapped while the other three held 680, so the same brief read
+   wider here in a desktop preview pane. */
+@media only screen and (min-width: 601px) and (max-width: 768px) {{
+  .container {{ width:100% !important; max-width:680px !important; }}
+}}
+
 @media only screen and (max-width: 600px) {{
   /* The notice and the links will not sit side by side on a phone. The other
      three briefs stack them; this one kept them in one row, so the pills were
@@ -936,7 +943,7 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
   h1 {{ font-size:22px !important; }}
   .mast-main, .mast-meta {{ display:block !important; width:100% !important; }}
   .mast-meta {{ text-align:left !important; padding-top:10px !important; }}
-  .container {{ width:100% !important; text-align:left !important; }}
+  .container {{ width:100% !important; max-width:100% !important; text-align:left !important; }}
   .sec {{ padding-left:16px !important; padding-right:16px !important; }}
   h1 {{ font-size:22px !important; }}
   .key-stat-num {{ font-size:26px !important; }}
