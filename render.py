@@ -921,6 +921,12 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
   .market-val {{ font-size:16px !important; }}
 }}
 @media (prefers-color-scheme: dark) {{
+  /* The terminal strip is white by design in light mode. Left unmapped it
+     stays white in dark mode, a bright band across the bottom of an otherwise
+     dark brief. The coverage guard misses it because #FFFFFF is on the exempt
+     list, being legitimate as type on an accent fill. */
+  .wrapper .footer-end, .container .footer-end {{ background:#1a1a1a !important; }}
+  .wrapper .footer-end td, .container .footer-end td {{ color:#9AA3AE !important; }}
     /* There was no dark block at all, and body is hardcoded white, so a client
        in dark mode inverted the ground and left dark type on it. These rules
        are generated from the colours this template actually uses, rather than
