@@ -256,6 +256,10 @@ def render_html(digest: dict) -> str:
             links.append(f'<a href="{_esc(pdf_url)}" style="color:#2980B9;text-decoration:none;">Print / PDF</a>')
         if archive_url:
             links.append(f'<a href="{_esc(archive_url)}" style="color:#2980B9;text-decoration:none;">Archive</a>')
+        # pdf_export.py has run on every build and the file it writes was
+        # never offered anywhere in the brief.
+        if pdf_url:
+            links.append(f'<a href="{_esc(pdf_url)}" style="color:#2980B9;text-decoration:none;">Download PDF</a>')
         sections_pre.append(f"""
 <div style="background:#F0F0F0;padding:6px 32px;text-align:center;font-size:11px;color:#888;" class="sec no-print">
 {" &nbsp;&middot;&nbsp; ".join(links)}
@@ -784,6 +788,27 @@ def render_html(digest: dict) -> str:
     # with verifiable BIS/OFAC/DoD running totals. Placeholder text was misleading.
 
     # Footer (with the auto-generation disclaimer the Japan brief carries)
+    # Both footer links point into the published archive, so neither is
+    # rendered when there is no page behind it. "Past issues" was built from
+    # digest["archive_url"], which the pipeline does not always set, so it
+    # shipped as href="" — a link that looks live and goes nowhere.
+    _foot_links = ""
+    if web_url or archive_url:
+        _fa = 'color:rgba(255,255,255,0.95);text-decoration:none;'
+        _fbase = web_url.rsplit("/", 1)[0] + "/" if "/" in web_url else ""
+        _parts = []
+        if web_url:
+            _parts.append(f'<a href="{_esc(web_url)}" style="{_fa}">Read online</a>')
+        _arch = archive_url or (_fbase + "archive.html" if _fbase else "")
+        if _arch:
+            _parts.append(f'<a href="{_esc(_arch)}" style="{_fa}">Past issues</a>')
+        if _parts:
+            _foot_links = ('<div style="margin-top:11px;font-family:Arial,sans-serif;'
+                           'font-size:11px;letter-spacing:0.5px;">'
+                           + '<span style="color:rgba(255,255,255,0.45);">'
+                             '&nbsp;&middot;&nbsp;</span>'.join(_parts)
+                           + '</div>')
+
     sections_post.append(f"""
 <!-- The house footer. Korea carries a CSIS lockup built in HTML; the other
      editions have no wordmark to reproduce, so this leads with the chair
@@ -795,10 +820,7 @@ def render_html(digest: dict) -> str:
     <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#FFFFFF;letter-spacing:0.5px;line-height:1.2;">CSIS China Teams</div>
     <div style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.72);margin-top:6px;">China Daily Brief</div>
     <div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,255,255,0.72);margin-top:12px;">Washington, D.C.</div>
-    <div style="margin-top:11px;font-family:Arial,sans-serif;font-size:11px;letter-spacing:0.5px;">
-      <a href="{_esc(web_url)}" style="color:rgba(255,255,255,0.95);text-decoration:none;">Read online</a> &nbsp;&middot;&nbsp;
-      <a href="{_esc(archive_url)}" style="color:rgba(255,255,255,0.95);text-decoration:none;">Past issues</a>
-    </div>
+    {_foot_links}
   </td></tr>
   <tr><td style="padding:14px 32px 10px;text-align:center;">
     <div style="border-top:1px solid rgba(255,255,255,0.14);padding-top:12px;font-family:Georgia,serif;font-size:13px;line-height:1.6;color:rgba(255,255,255,0.82);max-width:560px;margin:0 auto;">
