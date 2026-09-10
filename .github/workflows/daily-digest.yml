@@ -99,8 +99,13 @@ jobs:
           git fetch -q origin "${GITHUB_REF_NAME}" 2>/dev/null || true
           LAST_SENT=$(git show "origin/${GITHUB_REF_NAME}:last_sent.txt" 2>/dev/null | tr -d '[:space:]' || true)
           [ -n "$LAST_SENT" ] || LAST_SENT=$(tr -d '[:space:]' < last_sent.txt 2>/dev/null || true)
+          # Only the SUBJECT line carries the tag. Grepping the whole message
+          # means a commit that merely MENTIONS the tag in its body triggers a
+          # send; that is how the Japan edition mailed its list at 12:44 AM on
+          # 10 September, off a commit describing the tag.
+          SUBJECT=$(printf '%s' "$COMMIT_MSG" | head -n 1)
           if [ "${{ github.event_name }}" = "push" ]; then
-            if printf '%s' "$COMMIT_MSG" | grep -q '\[test-send\]'; then
+            if printf '%s' "$SUBJECT" | grep -q '\[test-send\]'; then
               echo "::notice::Branch push tagged [test-send]: running a test send."
               echo "should_run=true" >> "$GITHUB_OUTPUT"
             else
