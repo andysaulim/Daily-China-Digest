@@ -1168,7 +1168,9 @@ def run_pipeline(args: argparse.Namespace) -> int:
         subject = None
         if test_mode:
             recipients = [r.strip() for r in args.send_to.split(",") if r.strip()]
-            subject = (f"China Daily Brief — {now.strftime('%a %b %-d %Y')} (test run)")
+            # Same house format as a live send, with a marker: one shape for
+            # the subject line across all four editions and both paths.
+            subject = (f"China Daily Brief | {now.strftime('%A, %B %-d, %Y')} (test run)")
             print(f"\n📧 Test send to {', '.join(recipients)}...")
         else:
             print("\n📧 Sending email...")
