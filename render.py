@@ -164,8 +164,8 @@ def _item_card(tag: str, source: str, headline: str, url: str, body: str = "",
             f'<div style="font-size:10px;color:#6B7280;text-transform:uppercase;'
             f'letter-spacing:1px;font-weight:600;margin-bottom:2px;">{tag_line}</div>'
             f'<div style="font-size:{headline_size};font-weight:600;color:#1B2A4A;'
-            f'line-height:1.4;">{_link_or_text(_esc(headline), url)}</div>'
-            f'{("<div style=" + chr(34) + "font-size:13px;line-height:1.5;color:#555;margin-top:2px;" + chr(34) + ">" + _esc(body) + "</div>") if body else ""}'
+            f'line-height:1.4;">{_link_or_text(_emphasis(_esc(headline)), url)}</div>'
+            f'{("<div style=" + chr(34) + "font-size:13px;line-height:1.5;color:#555;margin-top:2px;" + chr(34) + ">" + _emphasis(_esc(body)) + "</div>") if body else ""}'
             f'</div>')
 
 
@@ -454,10 +454,10 @@ def render_html(digest: dict) -> str:
         sh = ""
         for s in stories:
             cat = _esc(_str(s.get("category_tag", s.get("category", ""))))
-            h = _esc(s.get("headline", ""))
+            h = _emphasis(_esc(s.get("headline", "")))
             b_raw = s.get("body", "") or ""
             # Suppress body if it duplicates the headline (Google News RSS quirk)
-            b = _esc(b_raw) if b_raw.strip() and b_raw.strip() != s.get("headline", "").strip() else ""
+            b = _emphasis(_esc(b_raw)) if b_raw.strip() and b_raw.strip() != s.get("headline", "").strip() else ""
             sl = _esc(_clean_src(s.get("src_line", s.get("source", ""))))
             url = s.get("url", "")
             sh += f"""
@@ -513,7 +513,7 @@ def render_html(digest: dict) -> str:
             if not isinstance(it, dict):
                 continue
             cat = _esc(_str(it.get("category", "")))
-            h = _esc(it.get("headline", ""))
+            h = _emphasis(_esc(it.get("headline", "")))
             b = _emphasis(_esc(it.get("body_text", "")))
             src = _esc(_clean_src(it.get("source", "")))
             url = it.get("url", "")
@@ -555,7 +555,7 @@ def render_html(digest: dict) -> str:
     <tr><td style="padding:14px 16px;">
       <div class="key-stat-num" style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:{PRC_RED_TEXT};line-height:1;">{_esc(str(stat.get("number", "")))}</div>
       <div style="font-family:Georgia,serif;font-size:14px;color:{INK};margin-top:5px;line-height:1.4;">{_esc(stat.get("label", ""))}</div>
-      {"<div style='font-family:Georgia,serif;font-size:13px;color:#4A5260;margin-top:4px;line-height:1.5;'>" + _esc(stat.get("context", "")) + "</div>" if stat.get("context") else ""}
+      {"<div style='font-family:Georgia,serif;font-size:13px;color:#4A5260;margin-top:4px;line-height:1.5;'>" + _emphasis(_esc(stat.get("context", ""))) + "</div>" if stat.get("context") else ""}
       {"<div style='font-family:Arial,sans-serif;font-size:11px;color:#55607A;margin-top:7px;'>" + _esc(stat.get("source", "")) + "</div>" if stat.get("source") else ""}
     </td></tr>
   </table>
@@ -583,7 +583,7 @@ def render_html(digest: dict) -> str:
             mn = _esc(it.get("ministry", ""))
             mzh = _esc(it.get("ministry_chinese", ""))
             act = _esc(it.get("action", ""))
-            det = _esc(it.get("detail", ""))
+            det = _emphasis(_esc(it.get("detail", "")))
             url = it.get("url", "")
             lbl = _esc(it.get("source_label", ""))
             off = _esc(it.get("official", ""))
@@ -619,7 +619,7 @@ def render_html(digest: dict) -> str:
                 pos = _esc(p.get("position", ""))
                 nm = _esc(p.get("name", ""))
                 a = p.get("action", "appointed")
-                det = _esc(p.get("detail", ""))
+                det = _emphasis(_esc(p.get("detail", "")))
                 pred = _esc(p.get("predecessor", "")) if p.get("predecessor") else ""
                 ac_c = ac.get(a, "#1B2A4A")
                 bg = f'<span style="display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;color:#fff;background:{ac_c};text-transform:uppercase;margin-left:6px;">{_esc(a)}</span>'
@@ -641,7 +641,7 @@ def render_html(digest: dict) -> str:
             for n in npc:
                 body = _emphasis(_esc(n.get("body", "")))
                 act = _esc(n.get("action", ""))
-                det = _esc(n.get("detail", ""))
+                det = _emphasis(_esc(n.get("detail", "")))
                 url = n.get("url", "")
                 ni += f"""<div style="margin-bottom:8px;padding-left:12px;border-left:3px solid #7F8C8D;">
 <div style="font-size:11px;color:#7F8C8D;font-weight:600;text-transform:uppercase;">{body}</div>
@@ -659,8 +659,8 @@ def render_html(digest: dict) -> str:
             for c in calendar:
                 cm = _esc(c.get("month", ""))
                 cd = _esc(str(c.get("day", "")))
-                ch = _esc(c.get("headline", ""))
-                cdet = _esc(c.get("detail", ""))
+                ch = _emphasis(_esc(c.get("headline", "")))
+                cdet = _emphasis(_esc(c.get("detail", "")))
                 ci += f"""<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-bottom:1px solid #E8E8E8;">
 <tr>
 <td width="54" style="padding:9px 12px 9px 0;vertical-align:top;">
@@ -723,7 +723,7 @@ def render_html(digest: dict) -> str:
             topic = _esc(o.get("topic", ""))
             stmt = _esc(o.get("statement", ""))
             zh = _esc(o.get("original_zh") or "")
-            ctx = _esc(o.get("context", ""))
+            ctx = _emphasis(_esc(o.get("context", "")))
             tone = str(o.get("tone", "routine") or "routine").lower()
             to = _esc(o.get("addressed_to", ""))
             tc = tone_color.get(tone, "#7F8C8D")
@@ -789,7 +789,7 @@ def render_html(digest: dict) -> str:
         for _cat, _items in _groups.items():
             rows = "".join(
                 _compact_row(cat="" if _multi else _esc(_cat),
-                             headline=_esc(i.get("headline", "")),
+                             headline=_emphasis(_esc(i.get("headline", ""))),
                              url=i.get("url", ""),
                              src=_esc(_clean_src(i.get("source", ""))),
                              body=_emphasis(_esc(i.get("body_text", ""))))
