@@ -739,17 +739,17 @@ def render_html(digest: dict) -> str:
                         "</div>") if url and url.startswith("http") else (
                         f"<div style='font-size:10px;color:#6B7280;margin-top:4px;'>{src}</div>" if src else "")
             head = f"{body_zh} · {body}" if body_zh else body
-            who = f"{speaker} <span style='font-size:11px;color:#6B7280;font-weight:400;'>· {role}</span>" if speaker else role
+            who = (f"{speaker} <span style='font-size:12px;color:#6B7280;font-weight:400;'>"
+                   f"&middot; {role}</span>") if speaker else role
             oh += f"""<div style="margin-bottom:16px;padding:13px 0 3px;background:#FFFFFF;border-top:2px solid {tc};">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-<td style="font-size:13px;color:#1B2A4A;font-weight:700;letter-spacing:0.3px;">{head}</td>
-<td align="right" style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:{tc};font-weight:700;">{_esc(tone)}{(" · to " + to) if to else ""}</td>
+<td style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#6B7280;">{head}{(" &middot; " + topic) if topic else ""}</td>
+<td align="right" style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:{tc};font-weight:700;">{_esc(tone)}{(" &middot; to " + to) if to else ""}</td>
 </tr></table>
-<div style="font-size:13px;font-weight:600;color:#1B2A4A;margin:4px 0 2px;font-family:Georgia,serif;">{topic}</div>
-{"<div style='font-size:13px;color:#555;'>" + who + "</div>" if (speaker or role) else ""}
-<blockquote style="margin:8px 0 6px;padding:0 0 0 14px;border-left:1px solid #D8D8D8;font-size:14px;line-height:1.55;color:#1B2A4A;font-family:Georgia,serif;">&ldquo;{stmt}&rdquo;</blockquote>
-{"<div style='font-size:13px;color:#666;line-height:1.5;margin:2px 0 0 12px;'>" + zh + "</div>" if zh else ""}
-{"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Context:</strong> " + ctx + "</div>" if ctx else ""}
+{"<div style='font-size:14px;font-weight:700;color:#14181F;margin:5px 0 0;'>" + who + "</div>" if (speaker or role) else ""}
+<blockquote style="margin:7px 0 6px;padding:0;border:0;font-size:15px;line-height:1.6;color:#1A222E;font-family:Georgia,serif;">&ldquo;{stmt}&rdquo;</blockquote>
+{"<div style='font-size:13px;color:#6B7280;line-height:1.6;margin:0 0 5px;font-family:Georgia,serif;'>" + zh + "</div>" if zh else ""}
+{"<div style='font-size:12px;color:#4A5260;line-height:1.5;margin-top:3px;'>" + ctx + "</div>" if ctx else ""}
 {src_link}
 </div>"""
         sections_analysis.append(
@@ -769,10 +769,10 @@ def render_html(digest: dict) -> str:
             url = s.get("url", "")
             src_link = ("<div style='font-size:10px;color:#6B7280;margin-top:4px;'>" + _link_or_text("source", url, style="color:#6B7280;text-decoration:underline;") + "</div>") if url and url != "#" and url.startswith("http") else ""
             sh += f"""<div style="margin-bottom:16px;padding:13px 0 3px;background:#FFFFFF;border-top:2px solid {bc};">
-<div style="font-size:13px;color:#6B7280;text-transform:uppercase;letter-spacing:0.5px;">{pd}</div>
-<div style="font-size:14px;font-weight:600;color:#1B2A4A;margin:2px 0;">{who} <span style="font-size:11px;color:#6B7280;font-weight:400;">· {ctx}</span></div>
-<blockquote style="margin:8px 0 6px;padding:0 0 0 14px;border-left:1px solid #D8D8D8;font-size:14px;line-height:1.55;color:#1B2A4A;font-family:Georgia,serif;">&ldquo;{q}&rdquo;</blockquote>
-{"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Note:</strong> " + nt + "</div>" if nt else ""}
+<div style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px;">{pd}</div>
+<div style="font-size:14px;font-weight:700;color:#14181F;margin:5px 0 0;">{who} <span style="font-size:12px;color:#6B7280;font-weight:400;">&middot; {ctx}</span></div>
+<blockquote style="margin:7px 0 6px;padding:0;border:0;font-size:15px;line-height:1.6;color:#1A222E;font-family:Georgia,serif;">&ldquo;{q}&rdquo;</blockquote>
+{"<div style='font-size:12px;color:#4A5260;line-height:1.5;margin-top:3px;'>" + nt + "</div>" if nt else ""}
 {src_link}
 </div>"""
         sections_analysis.append(f'<div {_SEC}><a name="analysis" id="analysis"></a>{_sec_label("What Others Are Saying")}{sh}</div>')
