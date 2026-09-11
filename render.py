@@ -124,24 +124,24 @@ def _arrow(val) -> str:
     try:
         val = float(val)
     except (TypeError, ValueError):
-        return '<span style="color:#7F8C8D;">—</span>'
+        return '<span style="color:#9FB3CC;">-</span>'
     if val > 0:
-        return f'<span style="color:#27AE60;">&#9650; +{val:.2f}%</span>'
+        return f'<span style="color:#69C88E;">&#9650; +{val:.2f}%</span>'
     if val < 0:
-        return f'<span style="color:#C0392B;">&#9660; {val:.2f}%</span>'
-    return '<span style="color:#7F8C8D;">— flat</span>'
+        return f'<span style="color:#E8697A;">&#9660; {val:.2f}%</span>'
+    return '<span style="color:#9FB3CC;">flat</span>'
 
 
 def _cds_arrow(val) -> str:
     try:
         val = float(val)
     except (TypeError, ValueError):
-        return '<span style="color:#7F8C8D;">—</span>'
+        return '<span style="color:#9FB3CC;">-</span>'
     if val > 0:
-        return f'<span style="color:#C0392B;">&#9650; +{val:.1f} bps</span>'
+        return f'<span style="color:#E8697A;">&#9650; +{val:.1f} bps</span>'
     if val < 0:
-        return f'<span style="color:#27AE60;">&#9660; {val:.1f} bps</span>'
-    return '<span style="color:#7F8C8D;">— flat</span>'
+        return f'<span style="color:#69C88E;">&#9660; {val:.1f} bps</span>'
+    return '<span style="color:#9FB3CC;">flat</span>'
 
 
 def _link_or_text(text: str, url: str,
@@ -240,7 +240,7 @@ def _sec_label(label: str, color: str = RING_ON_DARK) -> str:
         'class="sec-bar" style="background:#14181F;margin-bottom:14px;">'
         '<tr><td style="padding:9px 14px;">'
         f'<span style="font-family:Arial,sans-serif;font-size:12px;color:{color};'
-        'line-height:1;vertical-align:middle;margin-right:9px;">&#9675;</span>'
+        'line-height:1;vertical-align:middle;margin-right:9px;">&#9679;</span>'
         '<span style="font-family:Arial,sans-serif;font-size:11px;font-weight:700;'
         'text-transform:uppercase;letter-spacing:2px;color:#FFFFFF;'
         f'vertical-align:middle;">{label}</span>'

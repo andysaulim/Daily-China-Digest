@@ -884,40 +884,12 @@ def _web_base() -> str:
 
 
 def _build_archive_index(archive: list) -> str:
-    """public/archive.html: every issue, newest first, with word count and links."""
-    from html import escape
-    rows = []
-    for a in archive:
-        d = a.get("date", "")
-        try:
-            label = datetime.strptime(d, "%Y-%m-%d").strftime("%A, %B %-d, %Y")
-        except ValueError:
-            label = d
-        re_line = escape(str(a.get("re_line") or ""))
-        wc = a.get("word_count") or ""
-        pdf = f' &middot; <a href="{d}.pdf" style="color:#2980B9;text-decoration:none;">PDF</a>' if a.get("pdf") else ""
-        rows.append(
-            f'<tr><td style="padding:10px 8px;border-bottom:1px solid #EBEBEB;white-space:nowrap;'
-            f'font-family:Arial,sans-serif;font-size:13px;color:#1B2A4A;font-weight:700;">'
-            f'<a href="{d}.html" style="color:#1B2A4A;text-decoration:none;">{label}</a>{pdf}</td>'
-            f'<td style="padding:10px 8px;border-bottom:1px solid #EBEBEB;font-family:Georgia,serif;'
-            f'font-size:13px;color:#444;">{re_line}</td>'
-            f'<td style="padding:10px 8px;border-bottom:1px solid #EBEBEB;font-family:Arial,sans-serif;'
-            f'font-size:11px;color:#888;text-align:right;white-space:nowrap;">{wc} words</td></tr>')
-    body = "\n".join(rows) or '<tr><td style="padding:12px;">No issues archived yet.</td></tr>'
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>China Daily Brief · Archive</title></head>
-<body style="margin:0;background:#F4F4F1;">
-<div style="max-width:760px;margin:0 auto;background:#fff;">
-<div style="background:#1B2A4A;color:#fff;padding:18px 32px 14px;">
-<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#D4AC0D;font-family:Arial,sans-serif;margin-bottom:6px;">CSIS China Programs</div>
-<h1 style="margin:0 0 4px 0;font-size:28px;font-weight:700;font-family:Georgia,serif;">China Daily Brief</h1>
-<div style="font-size:14px;color:rgba(255,255,255,0.85);font-family:Georgia,serif;">Archive &middot; {len(archive)} issues &middot; <a href="index.html" style="color:#D4AC0D;text-decoration:none;">Latest issue &#8594;</a></div>
-</div>
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding:8px 24px 24px;">{body}</table>
-<div style="padding:16px 32px;font-size:10px;color:#888;font-family:Arial,sans-serif;text-align:center;">Generated automatically; every item links to its source. Prepared by Andy Lim, CSIS China Programs.</div>
-</div></body></html>"""
+    """The house archive page. Layout and search both live in archive_page,
+    which every edition shares, so the four cannot drift apart again."""
+    import archive_page
+    return archive_page.build(archive, title="China Daily Brief",
+                              chair="CSIS China Programs", accent="#EF4027",
+                              latest_href="index.html")
 
 
 def _archive_html(html: str, digest: dict, date_str: str) -> None:
