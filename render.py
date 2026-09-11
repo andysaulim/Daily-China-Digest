@@ -126,9 +126,9 @@ def _arrow(val) -> str:
     except (TypeError, ValueError):
         return '<span style="color:#9FB3CC;">-</span>'
     if val > 0:
-        return f'<span style="color:#69C88E;">&#9650; +{val:.2f}%</span>'
+        return f'<span class="mkt-up" style="color:#69C88E;">&#9650; +{val:.2f}%</span>'
     if val < 0:
-        return f'<span style="color:#E8697A;">&#9660; {val:.2f}%</span>'
+        return f'<span class="mkt-dn" style="color:#E8697A;">&#9660; {val:.2f}%</span>'
     return '<span style="color:#9FB3CC;">flat</span>'
 
 
@@ -138,9 +138,9 @@ def _cds_arrow(val) -> str:
     except (TypeError, ValueError):
         return '<span style="color:#9FB3CC;">-</span>'
     if val > 0:
-        return f'<span style="color:#E8697A;">&#9650; +{val:.1f} bps</span>'
+        return f'<span class="mkt-dn" style="color:#E8697A;">&#9650; +{val:.1f} bps</span>'
     if val < 0:
-        return f'<span style="color:#69C88E;">&#9660; {val:.1f} bps</span>'
+        return f'<span class="mkt-up" style="color:#69C88E;">&#9660; {val:.1f} bps</span>'
     return '<span style="color:#9FB3CC;">flat</span>'
 
 
@@ -517,7 +517,12 @@ def render_html(digest: dict) -> str:
             b = _emphasis(_esc(it.get("body_text", "")))
             src = _esc(_clean_src(it.get("source", "")))
             url = it.get("url", "")
-            tail = (f'<span style="color:{MUTE};"> &mdash; {b}</span>' if b else "")
+            # Headline on its own line, the clause beneath it. Running them
+            # together behind an em-dash made a two-line wrap read as one long
+            # sentence, and the eye could not find where an item ended.
+            tail = (f'<div style="font-family:Georgia,serif;font-size:13px;'
+                    f'line-height:1.45;color:{MUTE};margin-top:2px;">{b}</div>'
+                    if b else "")
             fh += (f'<tr>'
                    f'<td style="padding:7px 10px 7px 0;vertical-align:top;white-space:nowrap;'
                    f'font-family:Arial,sans-serif;font-size:10px;font-weight:700;'
@@ -526,9 +531,9 @@ def render_html(digest: dict) -> str:
                    f'<td style="padding:7px 0;vertical-align:top;font-family:Georgia,serif;'
                    f'font-size:13px;line-height:1.45;color:{INK};'
                    f'border-bottom:1px solid #EEF0F3;">'
-                   f'{_link_or_text(h, url)}{tail}'
+                   f'<div>{_link_or_text(h, url)}'
                    f'<span style="font-family:Arial,sans-serif;font-size:11px;color:{MUTE};">'
-                   f' &middot; {src}</span></td>'
+                   f' &middot; {src}</span></div>{tail}</td>'
                    f'</tr>')
         fh = (f'<table width="100%" cellpadding="0" cellspacing="0" border="0" '
               f'class="flash-table" style="border-top:2px solid {PRC_RED};">{fh}</table>')
@@ -926,6 +931,13 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
 .dark-sec {{ color:#ffffff !important; }}
 .dark-navy {{ background-color:#1B2A4A !important; }}
 .dark-sec * {{ color:#ffffff !important; }}
+/* The blanket rule above forces every descendant white and, being !important,
+   beats the arrows' own inline colour: a fall and a rise rendered identically.
+   Recolouring _arrow alone could not fix it, because nothing inline can win
+   against !important. These are (0,2,0) against the blanket's (0,1,0), so they
+   take precedence, and they are the only two exemptions. */
+.dark-sec .mkt-up {{ color:#69C88E !important; }}
+.dark-sec .mkt-dn {{ color:#E8697A !important; }}
 .dark-sec a {{ color:#D4AC0D !important; }}
 .mid-sec {{ background-color:#162340 !important; color:#ffffff !important; }}
 .deep-sec {{ background-color:#0F1B30 !important; color:#ffffff !important; }}
