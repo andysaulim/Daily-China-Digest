@@ -905,8 +905,12 @@ def render_html(digest: dict) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="supported-color-schemes" content="light">
+<!-- Both schemes. This declared light only while the stylesheet below
+     carried a full dark-mode palette, so the dark rules could never fire in
+     a client that honours the declaration. It was the one edition of four
+     whose dark mode was switched off by its own header. -->
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
 <title>China Daily Brief</title>
 <style>
 :root {{ color-scheme: light; }}
