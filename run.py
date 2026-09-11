@@ -684,6 +684,37 @@ def _record_ledger(digest: dict, today_iso: str) -> None:
     print(f"   ✓ Published ledger updated ({len(pruned)} entries, last {_LEDGER_WINDOW_DAYS}d)")
 
 
+# A quotation section whose quotations are three words long is not reporting.
+# The prompt asks for twelve words or more; this is what makes that true when
+# the model returns a fragment anyway.
+_MIN_QUOTE_WORDS = 8
+
+
+def _drop_stub_quotes(digest: dict) -> list[str]:
+    """Remove quote items whose quotation is too short to carry a claim."""
+    log, dropped = [], 0
+    for section, field in (("official_line", "statement"),
+                           ("social_statements", "quote_text")):
+        items = digest.get(section)
+        if not isinstance(items, list):
+            continue
+        kept = []
+        for it in items:
+            if not isinstance(it, dict):
+                continue
+            q = str(it.get(field) or "").strip().strip('"\u201c\u201d')
+            # "Per <source>:" prefixed paraphrases are allowed to be short;
+            # they are labelled as paraphrase, not offered as a quotation.
+            if q.lower().startswith("per ") or len(q.split()) >= _MIN_QUOTE_WORDS:
+                kept.append(it)
+            else:
+                dropped += 1
+        digest[section] = kept
+    if dropped:
+        log.append(f"   \u2713 Dropped {dropped} quote(s) under {_MIN_QUOTE_WORDS} words")
+    return log
+
+
 def _postprocess_digest(digest: dict, payload: dict, prev_urls: set, prev_titles: set,
                         today) -> tuple[dict, list[str]]:
     _PP_STATS.clear()
@@ -695,6 +726,7 @@ def _postprocess_digest(digest: dict, payload: dict, prev_urls: set, prev_titles
     log += _dedupe_cross_day(digest, prev_urls, prev_titles)
     log += _dedupe_within(digest)
     log += _drop_hollow_items(digest)
+    log += _drop_stub_quotes(digest)
     log += _drop_stale_calendar(digest, today)
     log += _enforce_source_diversity(digest)
     # Caps first (a slice), then length (drops tail items). Both run after the

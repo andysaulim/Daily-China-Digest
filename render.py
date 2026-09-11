@@ -288,7 +288,7 @@ def render_html(digest: dict) -> str:
           'font-family:Arial,sans-serif;font-size:11px;font-weight:700;'
           'letter-spacing:0.5px;color:#14181F;'
           'background:#FFFFFF;'
-          'border-radius:14px;'
+          'border-radius:3px;'
           'text-decoration:none;white-space:nowrap;')
     _links = []
     if web_url:
@@ -407,7 +407,7 @@ def render_html(digest: dict) -> str:
         for it in items[:6]:
             chip_html += (f'<span style="display:inline-block;margin:0 4px 4px 0;'
                           f'padding:3px 10px;background:rgba(255,255,255,0.06);'
-                          f'border:1px solid rgba(255,255,255,0.12);border-radius:14px;'
+                          f'border:1px solid rgba(255,255,255,0.12);border-radius:3px;'
                           f'font-size:11px;color:rgba(255,255,255,0.85);'
                           f'font-family:Arial,sans-serif;">{_esc(it)}</span>')
         sections_markets.append(f"""
@@ -735,20 +735,20 @@ def render_html(digest: dict) -> str:
                         f"<div style='font-size:10px;color:#6B7280;margin-top:4px;'>{src}</div>" if src else "")
             head = f"{body_zh} · {body}" if body_zh else body
             who = f"{speaker} <span style='font-size:11px;color:#6B7280;font-weight:400;'>· {role}</span>" if speaker else role
-            oh += f"""<div style="margin-bottom:14px;padding:12px;background:#FAFAF5;border-radius:4px;border-left:3px solid {tc};">
+            oh += f"""<div style="margin-bottom:16px;padding:13px 0 3px;background:#FFFFFF;border-top:2px solid {tc};">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
 <td style="font-size:13px;color:#1B2A4A;font-weight:700;letter-spacing:0.3px;">{head}</td>
 <td align="right" style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:{tc};font-weight:700;">{_esc(tone)}{(" · to " + to) if to else ""}</td>
 </tr></table>
 <div style="font-size:13px;font-weight:600;color:#1B2A4A;margin:4px 0 2px;font-family:Georgia,serif;">{topic}</div>
 {"<div style='font-size:13px;color:#555;'>" + who + "</div>" if (speaker or role) else ""}
-<blockquote style="margin:6px 0;padding:8px 12px;background:#fff;border-left:3px solid {tc};font-style:italic;font-size:13px;line-height:1.5;color:#333;font-family:Georgia,serif;">&ldquo;{stmt}&rdquo;</blockquote>
+<blockquote style="margin:8px 0 6px;padding:0 0 0 14px;border-left:1px solid #D8D8D8;font-size:14px;line-height:1.55;color:#1B2A4A;font-family:Georgia,serif;">&ldquo;{stmt}&rdquo;</blockquote>
 {"<div style='font-size:13px;color:#666;line-height:1.5;margin:2px 0 0 12px;'>" + zh + "</div>" if zh else ""}
 {"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Context:</strong> " + ctx + "</div>" if ctx else ""}
 {src_link}
 </div>"""
         sections_analysis.append(
-            f'<div {_SEC}><a name="saying" id="saying"></a>{_sec_label("What Beijing Is Saying", "#C0392B")}{oh}</div>')
+            f'<div {_SEC}><a name="saying" id="saying"></a>{_sec_label("What Beijing Is Saying")}{oh}</div>')
 
     # 15. Social Statements
     stmts = digest.get("social_statements") or []
@@ -763,10 +763,10 @@ def render_html(digest: dict) -> str:
             bc = _social_badge(s.get("badge_class", "sb-p"))
             url = s.get("url", "")
             src_link = ("<div style='font-size:10px;color:#6B7280;margin-top:4px;'>" + _link_or_text("source", url, style="color:#6B7280;text-decoration:underline;") + "</div>") if url and url != "#" and url.startswith("http") else ""
-            sh += f"""<div style="margin-bottom:14px;padding:12px;background:#FAFAF5;border-radius:4px;border-left:3px solid {bc};">
+            sh += f"""<div style="margin-bottom:16px;padding:13px 0 3px;background:#FFFFFF;border-top:2px solid {bc};">
 <div style="font-size:13px;color:#6B7280;text-transform:uppercase;letter-spacing:0.5px;">{pd}</div>
 <div style="font-size:14px;font-weight:600;color:#1B2A4A;margin:2px 0;">{who} <span style="font-size:11px;color:#6B7280;font-weight:400;">· {ctx}</span></div>
-<blockquote style="margin:6px 0;padding:8px 12px;background:#fff;border-left:3px solid {bc};font-style:italic;font-size:13px;line-height:1.5;color:#333;font-family:Georgia,serif;">&ldquo;{q}&rdquo;</blockquote>
+<blockquote style="margin:8px 0 6px;padding:0 0 0 14px;border-left:1px solid #D8D8D8;font-size:14px;line-height:1.55;color:#1B2A4A;font-family:Georgia,serif;">&ldquo;{q}&rdquo;</blockquote>
 {"<div style='font-size:11px;color:#555;margin-top:4px;'><strong>Note:</strong> " + nt + "</div>" if nt else ""}
 {src_link}
 </div>"""
@@ -813,10 +813,10 @@ def render_html(digest: dict) -> str:
         _fbase = web_url.rsplit("/", 1)[0] + "/" if "/" in web_url else ""
         _parts = []
         if web_url:
-            _parts.append(f'<a href="{_esc(web_url)}" style="display:inline-block;padding:6px 15px;margin:0 4px;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.5px;color:#14181F;background:#FFFFFF;border-radius:14px;text-decoration:none;white-space:nowrap;">Read online</a>')
+            _parts.append(f'<a href="{_esc(web_url)}" style="display:inline-block;padding:6px 15px;margin:0 4px;font-family:Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:0.5px;color:#14181F;background:#FFFFFF;border-radius:3px;text-decoration:none;white-space:nowrap;">Read online</a>')
         _arch = archive_url or (_fbase + "archive.html" if _fbase else "")
         if _arch:
-            _parts.append(f'<a href="{_esc(_arch)}" style="display:inline-block;padding:6px 15px;margin:0 4px;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.5px;color:#14181F;background:#FFFFFF;border-radius:14px;text-decoration:none;white-space:nowrap;">Past issues</a>')
+            _parts.append(f'<a href="{_esc(_arch)}" style="display:inline-block;padding:6px 15px;margin:0 4px;font-family:Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:0.5px;color:#14181F;background:#FFFFFF;border-radius:3px;text-decoration:none;white-space:nowrap;">Past issues</a>')
         if _parts:
             _foot_links = ('<div style="margin-top:11px;font-family:Arial,sans-serif;'
                            'font-size:11px;letter-spacing:0.5px;">'
