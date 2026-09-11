@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-11",
+    "filename": "2026-09-11.html",
+    "re_line": "Xi to BRICS & DC \u00b7 Anthropic vs Chinese AI labs \u00b7 HK Tiananmen sentences \u00b7 US-China tariff talks \u00b7 Qingdao fire",
+    "top_stories": 6,
+    "overnight_items": 10,
+    "word_count": 2855,
+    "sources": 114,
+    "pdf": true
+  },
+  {
     "date": "2026-09-10",
     "filename": "2026-09-10.html",
     "re_line": "Xi to BRICS then DC \u00b7 Huawei trial opens in Brooklyn \u00b7 $30bn tariff talks \u00b7 HK court convicts WSJ publisher",
