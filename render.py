@@ -551,7 +551,7 @@ def render_html(digest: dict) -> str:
         stat_html = f"""
 <div {_SEC}>
   <a name="key-stat" id="key-stat"></a>{_sec_label("Stat of the Day")}
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FDF4F2;border-left:3px solid {PRC_RED};border-radius:3px;">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FDF4F2;border-top:2px solid {PRC_RED};border-bottom:1px solid #E4E7EB;">
     <tr><td style="padding:14px 16px;">
       <div class="key-stat-num" style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:{PRC_RED_TEXT};line-height:1;">{_esc(str(stat.get("number", "")))}</div>
       <div style="font-family:Georgia,serif;font-size:14px;color:{INK};margin-top:5px;line-height:1.4;">{_esc(stat.get("label", ""))}</div>
