@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-12",
+    "filename": "2026-09-12.html",
+    "re_line": "RE: Xi lands in Delhi for BRICS \u00b7 HK Tiananmen sentences handed down \u00b7 Trump open to China-built cars \u00b7 MOFCOM warns US on spying",
+    "top_stories": 5,
+    "overnight_items": 7,
+    "word_count": 2601,
+    "sources": 89,
+    "pdf": true
+  },
+  {
     "date": "2026-09-11",
     "filename": "2026-09-11.html",
     "re_line": "Xi to BRICS & DC \u00b7 Anthropic vs Chinese AI labs \u00b7 HK Tiananmen sentences \u00b7 US-China tariff talks \u00b7 Qingdao fire",
