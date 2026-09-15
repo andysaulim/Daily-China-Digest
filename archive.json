@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-15",
+    "filename": "2026-09-15.html",
+    "re_line": "Aug data softens on demand \u00b7 exit-entry law takes effect \u00b7 MSS warns on AI \u00b7 Iran FM to Beijing \u00b7 Taiwan tests MQ-9B",
+    "top_stories": 6,
+    "overnight_items": 8,
+    "word_count": 2789,
+    "sources": 111,
+    "pdf": true
+  },
+  {
     "date": "2026-09-14",
     "filename": "2026-09-14.html",
     "re_line": "AI 'fear mongering' fight \u00b7 Xiangshan Forum opens \u00b7 Taiwan flags pre-summit leverage \u00b7 Okinawa turns conservative",
