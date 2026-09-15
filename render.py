@@ -207,7 +207,7 @@ def _compact_row(cat: str, headline: str, url: str, src: str, body: str = "") ->
     """
     tag_line = " &middot; ".join(x for x in (cat, src) if x)
     return (f'<div style="margin-bottom:11px;padding-left:12px;'
-            f'border-left:3px solid {PRC_RED};">'
+            f'border-left:3px solid {PRC_RED};">'  
             + (f'<div style="font-family:Arial,sans-serif;font-size:10px;color:{MUTE};'
                f'text-transform:uppercase;letter-spacing:1px;font-weight:600;'
                f'margin-bottom:2px;">{tag_line}</div>' if tag_line else "")
@@ -287,7 +287,7 @@ def render_html(digest: dict) -> str:
     pdf_url = digest.get("pdf_url", "")
     archive_url = digest.get("archive_url", "")
 
-    # ── 0. Utility row: internal-use notice left, links right ────────────────────
+    # ── 0. Utility row: internal-use notice left, links right ────────────
     # The house treatment, matching the other three. This edition had neither
     # the internal-use banner nor the link buttons — just a pale grey line of
     # plain-text links that read as a footnote above the nameplate.
@@ -315,7 +315,7 @@ def render_html(digest: dict) -> str:
     </table>
     """)
 
-    # ── 1. Header ─────────────────────────────────────────────────────
+    # ── 1. Header ────────────────────────────────────────────────────────
     # The house masthead, identical in all four briefs. Only the band colour,
     # the chair name and the title differ. Left column: chair, title, date.
     # Right column, bottom-aligned: the issue meta. Then a rule and the RE
@@ -395,7 +395,7 @@ def render_html(digest: dict) -> str:
                 strip += (f'<div class="delta-sec" style="background:#0a0f1e;'
                           f'color:rgba(255,255,255,0.4);'
                           f'padding:5px 32px;font-size:10px;letter-spacing:0.4px;'
-                          f'border-bottom:1px solid rgba(255,255,255,0.08);'">'
+                          f'border-bottom:1px solid rgba(255,255,255,0.08);">'
                           f'Not fetched today: {_esc(", ".join(missing))} '
                           f'&middot; shown only when sourced, never carried forward</div>')
             # Straight under the nameplate, before the jump row, as in Korea.
@@ -747,7 +747,7 @@ def render_html(digest: dict) -> str:
                         "</div>") if url and url.startswith("http") else (
                         f"<div style='font-size:10px;color:#6B7280;margin-top:4px;'>{src}</div>" if src else "")
             head = f"{body_zh} · {body}" if body_zh else body
-            who = (f"{speaker} <span style='font-size:12px;color:#6B7280;font-weight:400;'>'
+            who = (f"{speaker} <span style='font-size:12px;color:#6B7280;font-weight:400;'>'"
                    f"&middot; {role}</span>") if speaker else role
             oh += f"""<div style="margin-bottom:16px;padding:13px 0 3px;background:#FFFFFF;border-top:2px solid {tc};">
 <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
@@ -838,11 +838,6 @@ def render_html(digest: dict) -> str:
                            + '</div>')
 
     sections_post.append(f"""
-<!-- The house footer. Korea carries a CSIS lockup built in HTML; the other
-     editions have no wordmark to reproduce, so this leads with the chair
-     name instead. Everything else matches: centred, the city and domain on
-     their own line, the links as links rather than a run-on sentence, and
-     the disclaimer set in the reading face rather than the label face. -->
 <table width="100%" cellpadding="0" cellspacing="0" border="0" class="sec footer" style="background:#14181F;border-top:4px solid #DE2910;">
   <tr><td style="padding:20px 32px 6px;text-align:center;">
     <div style="font-family:Georgia,serif;font-size:38px;font-weight:700;color:#FFFFFF;letter-spacing:1px;line-height:1.1;">CSIS China Programs</div>
@@ -886,7 +881,7 @@ def render_html(digest: dict) -> str:
         sections_post
     )
 
-    # ── Jump row ─────────────────────────────────────────────────────
+    # ── Jump row ──────────────────────────────────────────────────────────
     # The brief is too long to scan end to end and the only link in it was
     # "back to top". Label and anchor are paired here and each pair is kept
     # only when the section actually emitted its anchor, so a quiet day that
@@ -918,10 +913,6 @@ def render_html(digest: dict) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Both schemes. This declared light only while the stylesheet below
-     carried a full dark-mode palette, so the dark rules could never fire in
-     a client that honours the declaration. It was the one edition of four
-     whose dark mode was switched off by its own header. -->
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
 <title>China Daily Brief</title>
@@ -929,58 +920,27 @@ def render_html(digest: dict) -> str:
 :root {{ color-scheme: light; }}
 body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; color:#333333; -webkit-text-size-adjust:100%; }}
 .container {{ width:680px; max-width:100%; margin:0 auto; background:#ffffff; text-align:left; }}
-/* The wrapper <td align="center"> centres the container for Outlook, which
-   ignores margin:auto. Without the reset above it also centred every line
-   of text in the brief. */
-/* Lock dark sections - prevent iOS Mail light-mode override */
-/* No background here. This class exists to force light-on-dark type in
-   clients that recolour; the ground is set inline per band, and an
-   !important background here silently overrode the red masthead. */
 .dark-sec {{ color:#ffffff !important; }}
 .dark-navy {{ background-color:#1B2A4A !important; }}
 .dark-sec * {{ color:#ffffff !important; }}
-/* The blanket rule above forces every descendant white and, being !important,
-   beats the arrows' own inline colour: a fall and a rise rendered identically.
-   Recolouring _arrow alone could not fix it, because nothing inline can win
-   against !important. These are (0,2,0) against the blanket's (0,1,0), so they
-   take precedence, and they are the only two exemptions. */
 .dark-sec .mkt-up {{ color:#69C88E !important; }}
 .dark-sec .mkt-dn {{ color:#E8697A !important; }}
 .dark-sec a {{ color:#D4AC0D !important; }}
 .mid-sec {{ background-color:#162340 !important; color:#ffffff !important; }}
 .deep-sec {{ background-color:#0F1B30 !important; color:#ffffff !important; }}
 .delta-sec {{ background-color:#0a0f1e !important; color:#ffffff !important; }}
-/* The tablet band, which this brief did not have. Between 601 and 768 the
-   frame was uncapped while the other three held 680, so the same brief read
-   wider here in a desktop preview pane. */
 @media only screen and (min-width: 601px) and (max-width: 768px) {{
   .container {{ width:100% !important; max-width:680px !important; }}
 }}
 
 @media only screen and (max-width: 600px) {{
-  /* The notice and the links will not sit side by side on a phone. The other
-     three briefs stack them; this one kept them in one row, so the pills were
-     squeezed against the right edge. No width:100% here - a cell set to
-     display:block already fills its row, and 100% plus horizontal padding is
-     measured content-box, which pushes the table wider than the screen. */
   .util-row .util-cell {{ display:block !important; text-align:center !important;
     padding:5px 8px !important; white-space:normal !important; }}
   .util-row .util-cell a {{ margin:2px !important; }}
-  /* The data strip is four tiles of monospaced figures in one row. At 320px
-     that is 80px a tile, and "18,220.10" in 16px Courier does not fit, so the
-     row set a min-content floor wider than the screen and the whole brief
-     scrolled sideways. Smaller figures and tighter padding, which is what the
-     other briefs already do. */
   .mkt-table td {{ padding:8px 3px 10px !important; }}
   .mkt-table div[style*="font-size:16px"] {{ font-size:13px !important; }}
-  /* 10px stays: 9px is below the floor the visual check enforces, and the
-     tracking is what was costing the width, not the size. */
   .mkt-table div[style*="font-size:10px"] {{ letter-spacing:0.2px !important; }}
   .mkt-table div[style*="font-size:11px"] {{ font-size:10px !important; }}
-  /* The masthead had no mobile rule at all, so its two columns stayed side by
-     side on a phone: the nameplate squeezed into a narrow column while the
-     meta line held its own width on the right. The other three briefs stack
-     these; this one now does too, at the same nameplate size. */
   h1 {{ font-size:22px !important; }}
   .mast-main, .mast-meta {{ display:block !important; width:100% !important; }}
   .mast-meta {{ text-align:left !important; padding-top:10px !important; }}
@@ -991,22 +951,8 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
   .market-val {{ font-size:16px !important; }}
 }}
 @media (prefers-color-scheme: dark) {{
-  /* The terminal strip is white by design in light mode. Left unmapped it
-     stays white in dark mode, a bright band across the bottom of an otherwise
-     dark brief. The coverage guard misses it because #FFFFFF is on the exempt
-     list, being legitimate as type on an accent fill. */
   .container .footer-end, .container .footer-end {{ background:#1a1a1a !important; }}
-      /* Keep the filled buttons filled. The generic white-background
-         rule darkens them while their type stays dark, which measured
-         1.23:1 - a button you cannot read. */
-    
   .container .footer-end td, .container .footer-end td {{ color:#9AA3AE !important; }}
-    /* There was no dark block at all, and body is hardcoded white, so a client
-       in dark mode inverted the ground and left dark type on it. These rules
-       are generated from the colours this template actually uses, rather than
-       from a guess at which elements carry them - Korea's hand-written
-       selectors matched h3, div and a while the markup also used td, p and
-       span, and most of its body text stayed unreadable as a result. */
     body {{ background:#121212 !important; }}
     .container {{ background:#1a1a1a !important; }}
     .container h1, .container h2, .container h3 {{ color:#E8E6E1 !important; }}
@@ -1032,9 +978,6 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
     .container [style*="background:#FAFAF5"] {{ background-color:#262A30 !important; }}
     .container [style*="background:#ffffff"] {{ background-color:#262A30 !important; }}
     .container [style*="background:#FFFFFF"] {{ background-color:#262A30 !important; }}
-    /* Filled from a measured audit of the rendered brief: these
-       colours reached the output with no dark rule, so they kept
-       their light values and rendered near-black on near-black. */
     .container [style*="color:#1a222e"] {{ color:#E8E6E1 !important; }}
     .container [style*="color:#1A222E"] {{ color:#E8E6E1 !important; }}
     .container [style*="color:#222"] {{ color:#E8E6E1 !important; }}
@@ -1058,11 +1001,6 @@ body {{ margin:0; padding:0; background:#ffffff; font-family:Arial,sans-serif; c
     .container [style*="background:#FDF4F2"] {{ background-color:#2A1D1A !important; }}
     .container [style*="background:#fff"] {{ background-color:#262A30 !important; }}
     .container [style*="background:#FFF"] {{ background-color:#262A30 !important; }}
-    /* Last in the block, so these win: equal specificity, so order decides.
-     The pill is dark type on a white fill and the generic white-background
-     rule above darkens the fill while the type stays dark - 1.23:1, a button
-     you cannot read. The stat figure and the nameplate sit on grounds the
-     rules above change underneath them. */
   .container .pill {{ background:#E8E6E1 !important; color:#14181F !important; }}
   .container [style*="color:#C82409"] {{ color:#FF8A7A !important; }}
   .container .mast-band h1 {{ color:#FFFFFF !important; }}
