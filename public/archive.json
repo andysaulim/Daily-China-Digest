@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-23",
+    "filename": "2026-09-23.html",
+    "re_line": "Xi departs Beijing for DC state visit \u00b7 Taiwan arms sales as red line \u00b7 Alibaba Zhenwu V900 \u00b7 fentanyl precursor controls",
+    "top_stories": 5,
+    "overnight_items": 8,
+    "word_count": 3041,
+    "sources": 111,
+    "pdf": true
+  },
+  {
     "date": "2026-09-22",
     "filename": "2026-09-22.html",
     "re_line": "RE: Xi's DC visit confirmed \u00b7 Generals purged from PLA \u00b7 Taiwan arms pressure \u00b7 Alibaba AI chip \u00b7 Fifth Plenum Oct 26-29",
