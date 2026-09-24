@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-24",
+    "filename": "2026-09-24.html",
+    "re_line": "Xi arrives in Washington \u00b7 trade truce extended to Jan 10 \u00b7 F-35 parts diverted to Hong Kong \u00b7 MND cautions on Taiwan arms sales",
+    "top_stories": 5,
+    "overnight_items": 8,
+    "word_count": 2686,
+    "sources": 120,
+    "pdf": true
+  },
+  {
     "date": "2026-09-23",
     "filename": "2026-09-23.html",
     "re_line": "Xi departs Beijing for DC state visit \u00b7 Taiwan arms sales as red line \u00b7 Alibaba Zhenwu V900 \u00b7 fentanyl precursor controls",
