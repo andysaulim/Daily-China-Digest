@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-26",
+    "filename": "2026-09-26.html",
+    "re_line": "Xi-Trump summit closes with $30B tariff deal, AI dialogue \u00b7 reported CMC purge of Zhang Youxia \u00b7 Taiwan pushback \u00b7 coal pledge",
+    "top_stories": 5,
+    "overnight_items": 7,
+    "word_count": 3066,
+    "sources": 99,
+    "pdf": true
+  },
+  {
     "date": "2026-09-25",
     "filename": "2026-09-25.html",
     "re_line": "Xi's DC visit: truce extended, Taiwan pressed \u00b7 China-Iran intel link \u00b7 Manila-Beijing SCS clash \u00b7 F-35 parts probe",
