@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-28",
+    "filename": "2026-09-28.html",
+    "re_line": "$30B tariff lists released \u00b7 Perdue arms-offer disclosure \u00b7 industrial profit growth slows \u00b7 Shoal standoff \u00b7 Taiwan-Xi WWII spat",
+    "top_stories": 6,
+    "overnight_items": 6,
+    "word_count": 2660,
+    "sources": 87,
+    "pdf": true
+  },
+  {
     "date": "2026-09-27",
     "filename": "2026-09-27.html",
     "re_line": "Xi-Trump summit fallout \u00b7 Scarborough Shoal drills \u00b7 AI dialogue set for Nov \u00b7 Taiwan absent from readouts",
