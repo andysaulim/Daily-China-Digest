@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-29",
+    "filename": "2026-09-29.html",
+    "re_line": "RE: $60B US-China tariff cuts \u00b7 Trump denies Xi arms offer \u00b7 Beijing stimulus push \u00b7 Japan-Taiwan row",
+    "top_stories": 6,
+    "overnight_items": 9,
+    "word_count": 2680,
+    "sources": 108,
+    "pdf": true
+  },
+  {
     "date": "2026-09-28",
     "filename": "2026-09-28.html",
     "re_line": "$30B tariff lists released \u00b7 Perdue arms-offer disclosure \u00b7 industrial profit growth slows \u00b7 Shoal standoff \u00b7 Taiwan-Xi WWII spat",
