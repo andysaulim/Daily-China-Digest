@@ -1,0 +1,504 @@
+{
+  "digest_date": "Monday, October 5, 2026",
+  "re_line": "RE: Taiwan-spy arrest · Huawei-Qualcomm patent deal · EU anti-coercion tool · Scarborough Shoal intrusion · bank consolidation",
+  "market_indicators": {
+    "brent": {
+      "value": "100.32",
+      "change_pct": -3.1,
+      "as_of": "Oct 05"
+    },
+    "hang_seng": {
+      "value": "24,040.34",
+      "change_pct": -1.92,
+      "as_of": "Oct 05"
+    },
+    "usd_cnh": {
+      "value": "6.7031",
+      "change_pct": -0.02,
+      "as_of": "Oct 05"
+    },
+    "usd_cny": {
+      "value": "6.7040",
+      "change_pct": -0.09,
+      "as_of": "Oct 05"
+    },
+    "sse_composite": {
+      "value": "3,842.20",
+      "change_pct": -2.4,
+      "as_of": "Sep 30"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "FBI arrested a California woman on charges of acting as an unregistered Chinese agent after she allegedly surveilled President Lai Ching-te's son in the US, prompting Taipei to call it 'transnational repression.'",
+    "Huawei and Qualcomm signed their first-ever 5G patent cross-license Monday, with Qualcomm paying Huawei for the first time to access its 'LogicFolding' chip architecture.",
+    "Germany and France are pushing Brussels for a joint 'last-resort' trade tool to counter coercion over critical supplies such as Chinese rare earths and magnets, the Financial Times reported."
+  ],
+  "key_stat": {
+    "number": "$6.9B",
+    "label": "Huawei's cumulative patent-licensing revenue after the Qualcomm deal",
+    "context": "Huawei first paid Qualcomm a patent fee in 2001 and first earned patent income from Motorola in 2011; its IP-licensing business has run a net surplus since 2021, per Guancha.",
+    "source": "观察者网 (Guancha)"
+  },
+  "prc_government": [
+    {
+      "ministry": "China Securities Regulatory Commission",
+      "ministry_chinese": "中国证监会",
+      "official": null,
+      "action": "Watsons Hong Kong-London listing cleared by CSRC, awaiting cyberspace regulator",
+      "document": null,
+      "detail": "Watsons' planned dual listing, expected to value the health and beauty retailer at roughly *$30 billion*, has been delayed to 2027 pending approval from China's cybersecurity regulator even though the CSRC has cleared the filing, Hong Kong Economic Journal reported.",
+      "source_label": "HKEJ ZH",
+      "url": "https://www1.hkej.com/dailynews/finnews/article/4532450/%E5%B1%88%E8%87%A3%E6%B0%8F%E4%B8%8A%E5%B8%82%E5%82%B3%E5%B0%9A%E5%BE%85%E4%B8%AD%E5%9C%8B%E7%B6%B2%E5%AE%89%E6%94%BE%E8%A1%8C"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758 — 55th anniversary",
+      "detail": "The 1971 resolution seating the PRC at the UN turns 55; Beijing and Taipei continue to contest its interpretation on Taiwan's status."
+    },
+    {
+      "month": "Oct",
+      "day": 26,
+      "headline": "Fifth Plenum of the 20th Central Committee opens, Beijing",
+      "detail": "Previously set for Oct. 26-29; follows the Fourth Plenum's October 2025 expulsion of two CMC vice chairmen and sets groundwork for the 21st Party Congress."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Control of Congress at stake; outcome could affect the stalled $14 billion Taiwan arms package and pending China trade legislation."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal one-year suspensions approach expiry",
+      "detail": "BIS's Affiliates Rule suspension and China's Oct. 2025 rare-earth export-control suspension, both dated from the Oct. 30, 2025 Busan truce, lapse around this date unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts Nov. 18-19; Trump attendance and any Trump-Xi meeting remain unconfirmed."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3369775/why-plas-z-10-attack-helicopter-taking-bigger-role-sea?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "PLA",
+      "headline": "PLA's Z-10 attack helicopter increasingly trained for shipboard operations",
+      "body_text": "The Z-10, built for ground support, is training to fly from ships in a shift that could add firepower to an amphibious assault on Taiwan. Manufactured by AVIC's Changhe Aircraft Industries, it began documented shipboard trials in 2014."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/society/article/3369821/mainland-chinese-arrivals-hong-kong-surged-start-golden-week-holiday?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "Mainland arrivals to Hong Kong jump 19% at golden-week start",
+      "body_text": "Immigration data show *277,304* mainland visitors entered Hong Kong on Oct. 1, up from 232,751 a year earlier. A lawmaker attributed the early rush partly to the city's fireworks display and a shorter holiday this year."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3369751/hong-kong-outlines-four-step-ai-talent-ladder-offset-entry-level-job-shock?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Technology",
+      "headline": "Hong Kong unveils four-step AI 'talent ladder'",
+      "body_text": "Officials said the plan treats AI as a 'catalyst, not a threat' amid 'entry-level shock' as AI takes over routine coding and first-line graduate tasks. Permanent Secretary Kevin Choi Kit-ming announced the strategy Monday."
+    },
+    {
+      "url": "https://www.taiwannews.com.tw/news/6451993",
+      "source": "Taiwan News",
+      "category": "Cross-Strait",
+      "headline": "Kuai Kuai workers strike over planned factory relocation",
+      "body_text": "Workers at Taiwanese snack maker Kuai Kuai went on strike Monday over a planned factory relocation. Further details of the dispute were not provided in the initial report."
+    },
+    {
+      "url": "https://www.taiwannews.com.tw/en/news/6451977",
+      "source": "Taiwan News",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Coast Guard begins building second long-distance patrol ship",
+      "body_text": "Construction began Monday on Taiwan's second long-distance patrol ship, part of an effort to expand maritime presence amid Chinese gray-zone pressure."
+    },
+    {
+      "url": "https://english.kyodonews.net/articles/-/87225",
+      "source": "Kyodo News",
+      "category": "Indo-Pacific",
+      "headline": "Southeast Asia's China travel map widens, platform data show",
+      "body_text": "Traveloka platform data show Southeast Asian travelers booking trips across an expanding range of Chinese destinations, Kyodo reported Monday."
+    },
+    {
+      "url": "https://www.reuters.com/commentary/reuters-open-interest/india-may-be-best-placed-fill-china-sized-hole-fuel-exports-2026-10-05/",
+      "source": "Reuters",
+      "category": "Energy",
+      "headline": "India seen best placed to fill China-sized hole in fuel exports",
+      "body_text": "Reuters commentary Monday argued India is well positioned to fill a gap in global fuel exports left by reduced Chinese shipments amid shifting refining dynamics."
+    },
+    {
+      "url": "https://www.voachinese.com/a/how-will-the-us-accelerate-its-buildup-of-china-free-rare-earths-supply-chains-20261005/8207836.html",
+      "source": "VOA Chinese",
+      "category": "Sanctions",
+      "headline": "VOA: US pursues 'combination punch' to build rare-earth supply chains free of China",
+      "body_text": "VOA Chinese reported Monday on US efforts to build rare-earth supply chains independent of China through a combination of policy tools. The report gave no further detail on specific measures."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-04/taiwan-s-envoy-prods-trump-administration-on-stalled-arms-sale",
+      "source": "Bloomberg",
+      "headline": "Taiwan's envoy presses Trump administration on stalled $14B arms sale",
+      "body_text": "Taiwan's envoy in Washington pressed the Trump administration Monday on the status of the stalled *$14 billion* arms package, Bloomberg reported. The package has been paused since before the May summit amid broader trade diplomacy with Beijing.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://www.reuters.com/business/media-telecom/us-said-china-was-priming-trade-superweapon-then-it-vanished-2026-10-05/",
+      "source": "Reuters",
+      "headline": "The China trade 'superweapon' Washington flagged has 'vanished'",
+      "body_text": "Reuters reported Monday that a Chinese trade measure US officials had earlier described as a potential 'superweapon' has since disappeared from the public conversation. The dispatch gave no further detail on what prompted its apparent withdrawal.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/markets/commodities/soybeans-slump-on-dimming-hope-of-chinese-tariff-cuts",
+      "source": "Nikkei Asia",
+      "headline": "Soybeans slump as hopes for Chinese tariff relief dim",
+      "body_text": "Soybean futures slid to a roughly one-month low this week after soybeans were unexpectedly excluded from a list of products covered by US-China tariff adjustments, Nikkei Asia reported. China's selective farm purchases have been a recurring friction point since the May summit.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3369770/days-after-xi-trump-summit-top-taiwan-diplomat-opens-de-facto-consulate-us?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Taiwan's foreign minister opens de facto consulate in Arizona",
+      "body_text": "Taiwan Foreign Minister **Lin Chia-lung** arrived in Phoenix on Saturday for a three-day visit to open a new de facto consulate and tour Arizona's semiconductor corridor, days after **Xi Jinping** concluded his Washington state visit. His itinerary does not include stops in Washington or meetings at the State Department, SCMP reported.",
+      "instrument": "Diplomacy"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/06/2003865474",
+      "source": "Taipei Times",
+      "headline": "At least 126 Taiwanese targeted in China's transnational repression, MAC says",
+      "body_text": "Taiwan's Mainland Affairs Council said Monday at least *126* Taiwanese in 140 cases have been subjected to Chinese transnational repression, following the arrest of a woman accused of spying on President **William Lai**'s son. The council said Taiwan's Anti-Infiltration Act does not currently criminalize such surveillance when conducted domestically, and the government is working to revise the law.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.voachinese.com/a/kevin-rudd-us-china-taiwan-20261005/8208055.html",
+      "source": "VOA Chinese",
+      "headline": "Kevin Rudd: 2028 'especially dangerous year' for Taiwan Strait",
+      "body_text": "Former Australian prime minister **Kevin Rudd** said 2028 would be an 'especially dangerous year' for the Taiwan Strait, with the scale of the threat the key variable, VOA Chinese reported Monday.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/05/japanese-companies-leaving-china-takaichi-comment-taiwan.html",
+      "source": "CNBC",
+      "headline": "Japanese companies retreat from China at historic rate",
+      "body_text": "Japanese companies are leaving China at a historic rate as a diplomatic freeze and slowing Chinese economy prompt businesses to reassess their presence, CNBC reported Monday. The exodus follows Prime Minister **Sanae Takaichi**'s comment suggesting Tokyo could intervene in a Taiwan contingency, which triggered a diplomatic rupture with Beijing.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/world/archives/2026/10/06/2003865487",
+      "source": "Taipei Times",
+      "headline": "Takaichi vows to build stable China relations in policy address",
+      "body_text": "Japanese Prime Minister Sanae Takaichi called China an 'important neighbor' and pledged to 'build a constructive and stable relationship' in a policy address Monday, while vowing Japan would also 'firmly assert' its positions. Ties between the two countries have been frozen since her November remarks on a possible Taiwan contingency.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.reuters.com/world/uk/britain-expected-impose-tariffs-chinese-electric-cars-times-reports-2026-10-04/",
+      "source": "Reuters",
+      "headline": "Britain set to levy tariffs on Chinese electric cars",
+      "body_text": "Britain is expected to impose tariffs on Chinese electric vehicles, following the EU's lead, the Times reported and Reuters relayed Monday. The move would add the UK to a growing list of Western markets restricting Chinese EV imports.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://apnews.com/article/hungary-former-foreign-minister-szijjarto-byd-questioned-5bbdf0ad89b7fadd9c1d0a24202b280d",
+      "source": "AP News",
+      "headline": "Hungary's former FM grilled over BYD ties while in office",
+      "body_text": "Hungary's former foreign minister faced questioning from lawmakers Monday over his ties to Chinese automaker **BYD** while in office, AP reported.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.bbc.com/zhongwen/articles/c98rzd1ye6n0o/simp",
+      "source": "BBC Chinese",
+      "headline": "India's trade deficit with China widens to $112 billion",
+      "body_text": "India's trade deficit with China widened to *$112 billion* this year from $44 billion in 2020, even as diplomatic and security ties remain strained since the 2020 Galwan Valley clash, BBC Chinese reported. Chinese goods now supply more than 30 percent of India's industrial imports, with India reliant on China for over 100 'critical products,' per the Global Trade Research Initiative.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.scmp.com/week-asia/politics/article/3369812/why-indias-missile-deals-central-asia-matter-russia-and-china?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "India's Akash missile sales give it a Central Asian foothold",
+      "body_text": "India sold its Akash air-defense missile system to Tajikistan and Turkmenistan, Defence Secretary Rajesh Kumar Singh confirmed last week, giving New Delhi a foothold in a region long dominated by Russian and Chinese influence. The deals mark India's push to become a major global arms exporter.",
+      "region": "Russia-Central Asia"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://apnews.com/article/fbi-arrest-china-taiwan-spying-42e55337e768722b67874b9dc29f127c",
+      "source": "AP News",
+      "category_tag": "Cross-Strait",
+      "headline": "FBI arrests California woman accused of spying for China on Taiwan leader's son",
+      "body": "The FBI arrested Wanying \"Heather\" Zhang, 34, at Los Angeles International Airport on charges of acting as an unregistered agent of a foreign government as she prepared to board a flight to Shanghai, prosecutors said. First Assistant US Attorney Bill Essayli said she surveilled a close relative of **Lai Ching-te**, identified by law enforcement sources as his son, engineer Lai Ting-yu. Taiwan's Presidential Office called the case \"a typical case of transnational repression.\"",
+      "src_line": "AP News, Oct 5"
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16491197.html",
+      "source": "MND (国防部)",
+      "category_tag": "PLA",
+      "headline": "PLA says it tracked, warned off Philippine aircraft near Scarborough Shoal",
+      "body": "The PLA Southern Theater Command said Monday it organized naval and air forces to track, monitor and warn away a Philippine C-208 aircraft that \"illegally intruded\" into airspace over Huangyan Dao (Scarborough Shoal) on Oct. 3 without Chinese government approval. Spokesperson **Zhai Shichen**, a senior captain, called the act a \"serious violation\" of sovereignty risking an \"unintended maritime or air incident\" and demanded Manila \"immediately stop\" its \"provocative acts.\"",
+      "src_line": "MND ZH, Oct 5"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-05/qualcomm-licenses-patents-on-huawei-s-logicfolding-chip-tech",
+      "source": "Bloomberg",
+      "category_tag": "Technology",
+      "headline": "Huawei, Qualcomm sign first-ever 5G patent cross-license",
+      "body": "Huawei announced Monday a multiyear cross-license with **Qualcomm** covering 5G, computing, AI and networking patents, marking the first time Qualcomm has paid Huawei for a patent license. Huawei said the deal includes US patents tied to its \"LogicFolding\" 3D chip-stacking technology, debuted in the Kirin 9050 Pro processor, and brings its total licensing agreements to more than *270* worldwide.",
+      "src_line": "Bloomberg, Oct 5"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/05/china-banks-consolidation-economy.html",
+      "source": "CNBC",
+      "category_tag": "PRC-Economy",
+      "headline": "China shuts hundreds of banks to shore up financial system",
+      "body": "Beijing shuttered *670* mainly rural banks last year in a push to consolidate the sector into fewer, larger and better-capitalized lenders, CNBC reported Monday. The consolidation drive targets China's thousands of small rural lenders as regulators move to shore up the financial system.",
+      "src_line": "CNBC, Oct 5"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/06/2003865473",
+      "source": "Taipei Times",
+      "category_tag": "US-China",
+      "headline": "Pentagon experts to join 130 meetings, war games inside Taiwan's MND",
+      "body": "US defense liaisons will hold *130* meetings and map-based war games with Taiwan's Ministry of National Defense through 2028 under an expanded joint assessment program, the ministry said Monday. One representative each from the Office of the Under Secretary of Defense for Policy and the Institute for Defense Analyses will be stationed at the ministry's headquarters, coordinating experts from INDOPACOM, the Defense Intelligence Agency and the National Ground Intelligence Center.",
+      "src_line": "Taipei Times, Oct 5"
+    },
+    {
+      "url": "https://www.ft.com/content/4416101f-5072-4ee0-aa12-5b1daf25b31b?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category_tag": "Sanctions",
+      "headline": "Germany, France agree on 'last-resort' trade tool against China coercion",
+      "body": "**Germany** and **France** agreed on a joint last-resort trade tool meant to deter coercion over critical supplies such as Chinese rare earths and magnets, the Financial Times reported Monday. Reuters and Bloomberg separately reported the two governments are pushing Brussels for a rapid-response mechanism aimed chiefly at China.",
+      "src_line": "Financial Times, Oct 5"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://sinocism.com/p/interdependence-and-its-limits-sinification",
+      "source": "Sinocism",
+      "category": "Diplomacy",
+      "headline": "Sinocism's September roundup: US-China, global order, Brazil, India, Russia-NK",
+      "body_text": "Sinocism's monthly Sinification roundup covered US-China ties, global order, Brazil, India, Russia-North Korea, the economy, AI and state-society issues.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/tech/semiconductors/japan-local-governments-step-up-taiwan-outreach-for-chip-investment",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Japanese local governments step up Taiwan chip-investment outreach",
+      "body_text": "Japanese local governments are intensifying business missions and partnership outreach to Taiwan's semiconductor sector, Nikkei Asia reported.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/06/2003865475",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "China's Munich consulate pressured institute to cancel Taiwanese author's talk",
+      "body_text": "China's consulate in Munich unsuccessfully pressured a literary institute to cancel a talk by Taiwanese author Yang Shuang-zi, Taipei Times reported.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.dw.com/zh/%E5%90%8D%E5%8F%A4%E5%B1%8B%E4%BA%9A%E8%BF%90%E7%A6%81%E5%8F%B0%E6%B9%BE%E6%97%97%E4%BA%89%E8%AE%AE%E6%97%A5%E6%9C%AC%E4%B8%BA%E4%BD%95%E5%A6%82%E6%AD%A4%E8%B0%A8%E6%85%8E/a-79547177",
+      "source": "DW Chinese",
+      "category": "Cross-Strait",
+      "headline": "Nagoya Asian Games Taiwan-flag ban reignites debate on Japan's caution",
+      "body_text": "DW Chinese examined why Japan barred Taiwanese flags at the Nagoya Asian Games, reigniting debate over Tokyo's handling of cross-strait sensitivities.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.scmp.com/business/companies/article/3369781/hong-kong-lawmakers-say-5-year-tax-incentive-too-short-entice-major-innovative-firms?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "HK lawmakers say 5-year tax incentive too short to lure major firms",
+      "body_text": "Hong Kong lawmakers said the government's proposed five-year tax concession for large innovative companies is too short to attract headquarters relocations.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-05/nvidia-backed-reflection-unveils-open-ai-model-taking-on-china",
+      "source": "Bloomberg",
+      "headline": "Nvidia-backed Reflection AI unveils open model to rival China",
+      "body_text": "Nvidia-backed startup Reflection AI unveiled an open AI model called Beam that it says rivals leading Chinese open-weight models, Bloomberg reported Monday.",
+      "companies": [
+        "Reflection AI",
+        "Nvidia"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/05/business/energy-environment/tandem-solar-panels-us-china.html",
+      "source": "NYT",
+      "headline": "US solar makers push tandem-panel technology to catch up with China",
+      "body_text": "US manufacturers say they are close to perfecting tandem solar panels that are more efficient than today's silicon panels, aiming to reclaim production ground lost to Chinese makers, the New York Times reported.",
+      "companies": [
+        "Tandem PV Inc",
+        "Hanwha Group"
+      ],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-05/china-fund-closures-head-for-eight-year-high-as-demand-fades",
+      "source": "Bloomberg",
+      "headline": "China fund closures head for eight-year high as demand fades",
+      "body_text": "Closures of Chinese mutual funds are on pace to hit an *eight-year high* in 2026 as investor demand fades, Bloomberg reported Monday.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.ft.com/content/91741bbc-9626-41fc-8320-9ab9adbd8631?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "headline": "Chinese billionaire Chen Tianqiao hits limits building AI across borders",
+      "body_text": "Gaming-tycoon-turned-AI-investor Chen Tianqiao's bet on agentic research has run into US-China trade tensions, the Financial Times reported Monday.",
+      "companies": [],
+      "sector": "tech"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/electric-vehicles/china-s-byd-to-sell-mini-ev-meant-for-japan-in-other-markets",
+      "source": "Nikkei Asia",
+      "headline": "BYD to sell Japan-targeted mini-EV in other markets",
+      "body_text": "BYD will sell its Racco electric minicar, originally developed for Japan, in other markets as well, the company said, per Nikkei Asia.",
+      "companies": [
+        "BYD"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/electric-vehicles/suzuki-undercuts-byd-in-japan-with-cheapest-in-class-mini-ev",
+      "source": "Nikkei Asia",
+      "headline": "Suzuki undercuts BYD in Japan with cheapest-in-class mini EV",
+      "body_text": "Suzuki's new electric kei minicar will be priced at *2.12 million yen* ($13,400), undercutting BYD's rival model in Japan, Nikkei Asia reported.",
+      "companies": [
+        "Suzuki Motor",
+        "BYD"
+      ],
+      "sector": "auto"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MND",
+      "body_chinese": "国防部",
+      "speaker": "Zhai Shichen",
+      "role": "PLA Southern Theater Command spokesperson, Senior Captain",
+      "topic": "Philippine aircraft incursion over Scarborough Shoal",
+      "statement": "Huangyan Dao is China's inherent territory. The Philippine side's actions seriously violate China's sovereignty and could very easily trigger an unintended maritime or air incident. We sternly warn the Philippine side to immediately stop its rights-violation and provocative acts.",
+      "original_zh": "黄岩岛是中国固有领土。菲方行为严重侵犯中国主权，极易引发海空意外事件。我们正告菲方立即停止侵权挑衅。",
+      "addressed_to": "Philippines",
+      "tone": "warning",
+      "context": "Statement issued after the PLA said a Philippine C-208 aircraft entered airspace over Huangyan Dao (Scarborough Shoal) on Oct. 3 without approval.",
+      "source": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16491197.html"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "CCP General Secretary, President",
+      "topic": "77th anniversary of PRC founding, National Day reception remarks",
+      "statement": "At this moment, we are immensely proud of the remarkable achievements New China has made, and full of confidence in the bright prospects of Chinese-style modernization.",
+      "original_zh": "此时此刻，我们为新中国取得的举世瞩目成就无比自豪，对中国式现代化的光明前景充满信心。",
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "Remarks delivered Sept. 30 at a reception marking the PRC's 77th founding anniversary, cited in a PLA Daily retrospective published Oct. 5.",
+      "source": "解放军报 (PLA Daily ZH)",
+      "url": "http://www.81.cn/xx_207779/16491152.html"
+    },
+    {
+      "body": "Global Times",
+      "body_chinese": "环球时报",
+      "speaker": "CGTN commentary",
+      "role": "State media commentary",
+      "topic": "Reaction to Japan's China policy",
+      "statement": "Per CGTN: Japan's diplomatic conduct amounts to 'hypocrisy' that 'is fooling no one.'",
+      "original_zh": null,
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Commentary published the same day Japanese Prime Minister Sanae Takaichi used a policy address to pledge a 'stable' relationship with China while vowing Tokyo would also 'firmly assert' its positions.",
+      "source": "CGTN",
+      "url": "https://news.cgtn.com/news/2026-10-05/Japan-s-diplomatic-hypocrisy-is-fooling-no-one-1QZvgCVvkLS/p.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "KK",
+      "who": "Vulindlela Simphiwe Kunene",
+      "handle_context": "Eswatini Ambassador to Taiwan",
+      "platform_date": "Taipei Times · Oct 5, 2026",
+      "quote_text": "Eswatini will therefore continue to advocate for Taiwan's meaningful participation in international organizations and mechanisms where its contribution can benefit humanity.",
+      "analyst_note": "Eswatini is one of Taiwan's 12 remaining diplomatic allies and its only ally in Africa, with ties dating back 58 years, per Taipei Times.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/06/2003865478"
+    },
+    {
+      "avatar_initials": "ST",
+      "who": "Sanae Takaichi",
+      "handle_context": "Prime Minister of Japan",
+      "platform_date": "Taipei Times · Oct 5, 2026",
+      "quote_text": "We will work to ensure communication on shared challenges, promote dialogue to safeguard our national interests, and build a constructive and stable relationship.",
+      "analyst_note": "Takaichi's address follows a diplomatic freeze with Beijing that began after she suggested in November that Tokyo might intervene in any attack on Taiwan, per Taipei Times.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/world/archives/2026/10/06/2003865487"
+    },
+    {
+      "avatar_initials": "KK",
+      "who": "Karen Kuo",
+      "handle_context": "Presidential Office spokeswoman, Taiwan",
+      "platform_date": "Taipei Times · Oct 5, 2026",
+      "quote_text": "Such behavior should not be tolerated in the civilized world.",
+      "analyst_note": "Taiwan's Presidential Office issued the statement after CBS News reported the FBI arrested a California woman accused of surveilling President William Lai's son in the US.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/06/2003865462"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "http://www.mod.gov.cn/gfbw/qwfb/16491197.html",
+    "https://apnews.com/article/fbi-arrest-china-taiwan-spying-42e55337e768722b67874b9dc29f127c",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/06/2003865474",
+    "https://www.scmp.com/news/china/military/article/3369775/why-plas-z-10-attack-helicopter-taking-bigger-role-sea?utm_source=rss_feed",
+    "https://www.taiwannews.com.tw/en/news/6451977"
+  ],
+  "story_count": 100,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 91,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-05.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-05.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
