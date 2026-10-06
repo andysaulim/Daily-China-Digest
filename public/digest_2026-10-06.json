@@ -1,0 +1,525 @@
+{
+  "digest_date": "Tuesday, October 6, 2026",
+  "re_line": "RE: Taiwan spy arrest · China-Laos base imagery · APEC Shenzhen truncated · EU trade weapon · Q3 growth estimate 4.4%",
+  "market_indicators": {
+    "brent": {
+      "value": "98.07",
+      "change_pct": -4.14,
+      "as_of": "Oct 06"
+    },
+    "hang_seng": {
+      "value": "24,280.56",
+      "change_pct": -1.47,
+      "as_of": "Oct 06"
+    },
+    "usd_cny": {
+      "value": "6.6918",
+      "change_pct": -0.17,
+      "as_of": "Oct 06"
+    },
+    "usd_cnh": {
+      "value": "6.7020",
+      "change_pct": -0.02,
+      "as_of": "Oct 06"
+    },
+    "sse_composite": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": ""
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "The FBI arrested Irvine, California real-estate agent Zhang Wanying at LAX on Oct. 4, charging her with acting as an unregistered Chinese government agent who surveilled the engineer son of a senior Taiwanese official, days after the Xi-Trump summit.",
+    "Reuters satellite imagery exclusively shows attack aircraft and military vehicles at a newly built China-Laos military base.",
+    "The Financial Times reports Beijing plans to move part of November's APEC Economic Leaders' Meeting in Shenzhen online, drawing concern from attending partners."
+  ],
+  "key_stat": {
+    "number": "670",
+    "label": "Record number of Chinese banks shuttered",
+    "context": "CNBC's Daily Open says the closures amount to roughly a quarter of the country's banking institutions, part of a financial-system consolidation effort; no comparable prior-year total was cited.",
+    "source": "CNBC Daily Open"
+  },
+  "prc_government": [
+    {
+      "ministry": "Ministry of National Defense (Southern Theater Command)",
+      "ministry_chinese": "国防部",
+      "official": "Senior Captain Zhai Shichen, Southern Theater Command spokesperson",
+      "action": "MND warns Philippines after aircraft 'intrudes' over Scarborough Shoal airspace",
+      "document": null,
+      "detail": "A Philippine C-208 aircraft entered airspace over Huangyan Dao (Scarborough Shoal) on Oct. 3 without Chinese government approval; the Southern Theater Command organized naval and air forces to track, monitor and warn the aircraft away.",
+      "source_label": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16491197.html"
+    },
+    {
+      "ministry": "State Council (telecoms regulator)",
+      "ministry_chinese": "国务院",
+      "official": "Not named",
+      "action": "China reports over 5.19 million 5G base stations nationwide",
+      "document": null,
+      "detail": "State media reported the national 5G base station count surpassed *5.19 million* as of end-August, part of continuing telecom infrastructure build-out.",
+      "source_label": "State Council ZH",
+      "url": "https://www.beijing.gov.cn/ywdt/zybwdt/202610/t20261006_4891222.html"
+    },
+    {
+      "ministry": "Foreign Ministry (UN mission)",
+      "ministry_chinese": "外交部",
+      "official": "Sun Lei, Deputy Permanent Representative to the UN",
+      "action": "China rejects UK, Australia, Japan human rights criticism at UNGA Third Committee",
+      "document": null,
+      "detail": "Sun Lei told the UN General Assembly's Third Committee on Oct. 5 that Britain, Australia, Japan, Ireland, the Czech Republic and Lithuania had no standing to criticize China's human rights record given their own domestic problems.",
+      "source_label": "UDN ZH",
+      "url": "https://udn.com/news/story/7331/9798238"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 26,
+      "headline": "Fifth Plenum of the 20th Central Committee opens in Beijing",
+      "detail": "The Politburo set Oct. 26-29 dates; the plenum is expected to finalize 15th Five-Year Plan recommendations ahead of the 21st Party Congress."
+    },
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "55th anniversary of UN Resolution 2758",
+      "detail": "A recurring flashpoint over contested interpretations of Taiwan's UN status."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "A more hawkish Congress on China is possible depending on results, per Taipei Times commentary citing a paused $14 billion Taiwan arms sale."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal one-year suspensions approach lapse",
+      "detail": "The BIS Affiliates ('50%') Rule suspension and China's Oct. 2025 rare-earth export-control suspension are both due to lapse around this date absent extension."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting opens in Shenzhen",
+      "detail": "FT reports Beijing plans to move part of the forum online, a decision drawing concern from attending partners."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.wsj.com/world/china/what-xis-grip-on-his-wifes-hand-tells-us-about-power-in-china-cca91567",
+      "source": "WSJ",
+      "category": "Diplomacy",
+      "headline": "WSJ feature reads Xi's public hand-hold with his wife as a power signal",
+      "body_text": "The Wall Street Journal examines **Xi Jinping**'s practice of publicly holding his wife's hand, framing the gesture as a signal about power dynamics within the Communist Party leadership. The piece appears amid continued speculation about Xi's health and public appearances."
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/06/starbucks-luckin-china-xinjiang-forced-labour-export-trade-.html",
+      "source": "CNBC",
+      "category": "Sanctions",
+      "headline": "Starbucks' Xinjiang expansion draws renewed forced-labor scrutiny",
+      "body_text": "CNBC's China Connection newsletter says Starbucks has expanded into Xinjiang through a partner that leans toward Beijing, calling it one of Asia's most closely watched deals. The newsletter frames the move as a calculated geopolitical risk for the coffee chain."
+    },
+    {
+      "url": "https://apnews.com/article/china-drownings-flood-illegal-mining-14dc9c1169430de9ab83ff78b63a587d",
+      "source": "AP",
+      "category": "PRC-Economy",
+      "headline": "Seven dead in abandoned China mine flood, 21 held for illegal mining",
+      "body_text": "Chinese police found *seven* people dead after floodwaters inundated an abandoned mine, AP reports, and detained *21* people suspected of illegal mining. The incident highlights continued safety lapses in China's informal mining sector."
+    },
+    {
+      "url": "https://www.reuters.com/technology/nvidia-backed-reflection-unveils-first-ai-model-take-chinese-open-models-2026-10-05/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "Nvidia-backed Reflection AI unveils open model to rival Chinese systems",
+      "body_text": "Reflection AI, backed by Nvidia, unveiled its first open AI model, named Beam, aimed at competing directly with leading Chinese open-weight models. The startup claims performance on par with top Chinese competitors."
+    },
+    {
+      "url": "https://www.economist.com/china/2026/10/05/fifty-years-after-the-cultural-revolution-china-wont-talk-about-it",
+      "source": "The Economist",
+      "category": "Diplomacy",
+      "headline": "Fifty years after the Cultural Revolution, China still avoids the topic",
+      "body_text": "The Economist reports that Chinese state media and education largely avoid discussing the Cultural Revolution five decades on. The piece examines how official historiography continues to limit public reckoning with the era."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/mistral-ceo-says-new-ai-model-beats-chinese-ones-some-areas-2026-10-06/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "Mistral CEO says new AI model beats Chinese ones in some areas",
+      "body_text": "Mistral's chief executive said the French startup's newest model outperforms leading Chinese AI systems in certain benchmarks. The claim comes amid intensifying competition between Western and Chinese open-model developers."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-06/ray-dalio-warns-china-japan-may-pull-back-from-us-treasuries",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "Dalio warns China and Japan may pull back from US Treasuries",
+      "body_text": "**Ray Dalio** said the US Treasury market is vulnerable to reduced demand from China and Japan, which together fund a large share of US debt. He said geopolitics makes Beijing reluctant to keep adding Treasuries while Tokyo wants to recall previously lent funds."
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/06/cnbc-daily-open-china-shuts-down-record-670-banks-new-worries-over-oil-and-ai-.html",
+      "source": "CNBC",
+      "category": "PRC-Economy",
+      "headline": "CNBC: China shuts down record 670 banks amid oil, AI worries",
+      "body_text": "CNBC's Daily Open reports Beijing has shut down a record *670* banks, about a quarter of the country's banking institutions, to shore up its financial system. The newsletter links the consolidation to broader market anxiety over oil prices and AI valuations."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.cnbc.com/2026/10/06/hong-kong-fed-fima-dollar-liquidity-china-moolenaar.html",
+      "source": "CNBC",
+      "headline": "House China panel chair urges Fed to review Hong Kong's dollar-swap access",
+      "body_text": "Rep. **John Moolenaar** wants the Federal Reserve to reconsider Hong Kong's access to a dollar-liquidity facility, CNBC reports, as China promotes the renminbi as a global reserve currency. Moolenaar chairs the House Select Committee on the CCP.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://apnews.com/article/arizona-phoenix-taiwan-china-objection-tsmc-99d57813ae96b05955dbe1d3dd7252b8",
+      "source": "AP",
+      "headline": "Arizona welcomes new Taiwan representative office, rejecting China's objection",
+      "body_text": "Arizona opened a new Taiwan representative office despite a formal objection from Beijing, AP reports. The opening follows Taiwan's foreign minister's three-day US visit and comes as TSMC expands its Arizona chip manufacturing footprint.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/features/2026-10-05/nvidia-enfrenta-preguntas-sobre-contrabando-de-chips-de-ia-en-china",
+      "source": "Bloomberg",
+      "headline": "Chip smuggling into China exposes gaps in Nvidia's export compliance",
+      "body_text": "Bloomberg reports that smuggling of advanced AI chips into China has exposed weaknesses in Nvidia's compliance with US export controls. The report examines how components reach Chinese buyers despite BIS restrictions on advanced-computing exports.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/06/russia-gold-hong-kong-china-western-sanctions.html",
+      "source": "CNBC",
+      "headline": "Russian gold flows through Hong Kong as Western sanctions redraw bullion trade",
+      "body_text": "CNBC reports Russian gold exports have been rerouted through Hong Kong after Western sanctions shut Russian producers out of major markets following the 2022 invasion of Ukraine. The shift highlights Hong Kong's growing role as a sanctions-adjacent trading hub.",
+      "instrument": "Sanctions"
+    },
+    {
+      "url": "https://asia.nikkei.com/spotlight/huawei-crackdown/qualcomm-to-pay-huawei-for-first-time-in-5g-ai-patent-breakthrough",
+      "source": "Nikkei Asia",
+      "headline": "Qualcomm to pay Huawei for the first time in 5G, AI patent deal",
+      "body_text": "Huawei announced that Qualcomm will pay to use its patents for the first time, under a cross-licensing agreement covering 5G and AI technology, Nikkei reports. Huawei remains on the US Entity List despite the commercial arrangement.",
+      "instrument": "Entity List"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.scmp.com/news/china/politics/article/3369782/beijings-policy-advisers-map-out-how-post-reunification-taiwan-could-be-governed?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Beijing's policy advisers map out how post-reunification Taiwan could be governed",
+      "body_text": "Mainland research institutes have finalized or are nearing completion of the first detailed proposals for governing Taiwan after reunification, seven years after **Xi Jinping** called for such studies in 2019, SCMP reports. Scholars involved say the work sets out different scenarios rather than a single fixed model.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://hongkongfp.com/2026/10/06/japan-says-it-told-china-survey-ship-to-leave-tokyos-economic-waters/",
+      "source": "Hong Kong Free Press",
+      "headline": "Japan says it ordered Chinese survey ship out of its EEZ",
+      "body_text": "Japan's coast guard said the Chinese vessel Kexue left Tokyo's exclusive economic zone after repeated orders to stop unauthorized research operations. The ship was first spotted on Sept. 27 roughly *70 kilometers* north of Ishigaki island.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://hongkongfp.com/2026/10/05/china-says-philippine-plane-intruded-airspace-over-disputed-waters/",
+      "source": "Hong Kong Free Press",
+      "headline": "China warns Manila over Philippine plane's airspace 'intrusion'",
+      "body_text": "Beijing accused a Philippine aircraft of violating airspace over the South China Sea over the weekend and warned Manila against further 'provocative acts.' Confrontations between the two countries over the disputed waters occur regularly despite a 2016 international ruling against China's claims.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://english.kyodonews.net/articles/-/87211",
+      "source": "Kyodo News",
+      "headline": "As India and China repair ties, a Tibet film tells a forgotten story",
+      "body_text": "A Tibet-focused film has emerged as India and China work to repair bilateral relations, Kyodo reports. The film recounts an account of resistance that the outlet frames against the backdrop of warming India-China ties.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/06/2003865478",
+      "source": "Taipei Times",
+      "headline": "New Eswatini envoy pledges continued support for Taiwan's global role",
+      "body_text": "Eswatini's new ambassador to Taiwan, Vulindlela Simphiwe Kunene, told **Lai Ching-te** his country will keep advocating for Taiwan's participation in international organizations. Eswatini is one of Taiwan's *12* remaining diplomatic allies and its only one in Africa, with ties dating back 58 years.",
+      "region": "Africa"
+    },
+    {
+      "url": "https://focustaiwan.tw/society/202610060010",
+      "source": "Focus Taiwan",
+      "headline": "Alleged Hong Kong gangster indicted over attack on commentator Yaita",
+      "body_text": "Taiwanese prosecutors indicted an alleged Hong Kong gang member over an attack on political commentator Yaita, Focus Taiwan reports. The case follows Taiwan's probe into cross-border intimidation networks operating on the island.",
+      "region": "Cross-Strait"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.scmp.com/news/us/diplomacy/article/3369844/us-accuses-mainland-china-targeting-taiwan-leaders-family-surveillance-case?utm_source=rss_feed",
+      "source": "SCMP",
+      "category_tag": "Cross-Strait",
+      "headline": "FBI arrests woman accused of spying on Taiwan president's son for China",
+      "body": "The FBI arrested 34-year-old Zhang Wanying at Los Angeles International Airport on Oct. 4 as she allegedly tried to flee to Shanghai, charging her with acting as an unregistered agent of the Chinese government. US officials say she surveilled **Lai Ting-yu**, an engineer and the son of Taiwanese President William Lai Ching-te, days after Xi Jinping's state visit to Washington. Taiwan's Presidential Office called it a 'typical case of transnational repression.'",
+      "src_line": "SCMP, citing CBS News and FBI; corroborated by Taipei Times, AP, Bloomberg"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/attack-aircraft-military-vehicles-visible-new-china-laos-base-satellite-images-2026-10-06/",
+      "source": "Reuters",
+      "category_tag": "PLA",
+      "headline": "Satellite images show attack aircraft, military vehicles at new China-Laos base",
+      "body": "Reuters satellite imagery reveals attack aircraft and military vehicles at a newly constructed China-Laos base. The exclusive report documents an expanding PLA overseas footprint beyond the established Djibouti and Cambodia facilities.",
+      "src_line": "Reuters exclusive"
+    },
+    {
+      "url": "https://www.ft.com/content/792366b3-e010-4e0e-a1c4-692ffae3f5aa?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category_tag": "Diplomacy",
+      "headline": "China angers partners with plan to move part of APEC summit online",
+      "body": "The Financial Times reports a truncated APEC forum in Shenzhen is stirring concern that Beijing is focused on burnishing its image while limiting dialogue. Attending partners have raised objections to moving part of November's Asia-Pacific summit online.",
+      "src_line": "FT China"
+    },
+    {
+      "url": "https://www.wsj.com/world/europe/germany-and-france-are-proposing-a-new-weapon-to-counter-flood-of-chinese-goods-f723dfdf",
+      "source": "WSJ",
+      "category_tag": "PRC-Economy",
+      "headline": "Germany and France propose new EU weapon against flood of Chinese goods",
+      "body": "Germany and France are jointly proposing a rapid-response trade tool to let the EU restrict market access for countries flooding Europe with subsidized exports, aimed chiefly at China. The WSJ reports the proposal marks a shift as Berlin, traditionally more cautious on China trade measures, aligns with Paris.",
+      "src_line": "WSJ"
+    },
+    {
+      "url": "https://asia.nikkei.com/economy/china-s-q3-growth-estimated-below-target-at-4.4-despite-ai-boom",
+      "source": "Nikkei Asia",
+      "category_tag": "PRC-Economy",
+      "headline": "China's Q3 growth estimated at *4.4%*, below target despite AI boom",
+      "body": "Economists surveyed by Nikkei estimate China's economy grew *4.4%* year-on-year in the July-September quarter, only marginally above the prior quarter despite a boom in AI-related investment. The estimate is not an official NBS print; China's Q3 GDP data is due mid-October.",
+      "src_line": "Nikkei Asia"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3369922/hong-kong-remains-worlds-freest-economy-switzerland-overtakes-singapore?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "Hong Kong stays world's freest economy as Switzerland overtakes Singapore",
+      "body_text": "The Fraser Institute's annual ranking kept Hong Kong first among *165* economies despite a declining score in recent years.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/society/article/3369930/hong-kongs-generation-y-unhappiest-amid-housing-and-economic-pressures-poll-finds?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "Hong Kong's Gen Y rated unhappiest amid housing, economic pressure",
+      "body_text": "A poll of *1,039* adults put Hong Kong's Happiness Index at 5.87 out of 10, below passing for a fourth straight year.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.taiwannews.com.tw/news/6452779",
+      "source": "Taiwan News",
+      "category": "Cross-Strait",
+      "headline": "Indiana University strengthens ties with Taiwan",
+      "body_text": "Indiana University announced expanded academic cooperation with Taiwan institutions.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://aa.com.tr/en/asia-pacific/japans-prime-minister-calls-china-an-important-neighbor-amid-tensions-over-taiwan/4079077",
+      "source": "Anadolu Agency",
+      "category": "Diplomacy",
+      "headline": "Japan's PM calls China 'an important neighbor' amid Taiwan tensions",
+      "body_text": "Prime Minister Sanae Takaichi described China as an important neighbor even as tensions over Taiwan persist.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://cn.wsj.com/articles/%E7%BE%8E%E5%9B%BD%E6%83%B3%E8%B5%A2%E5%BE%97%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%AB%9E%E8%B5%9B-%E4%BD%86%E4%B8%80%E4%B8%AA%E5%85%B3%E9%94%AE%E9%83%A8%E4%BB%B6%E9%9D%A2%E4%B8%B4%E4%BE%9B%E5%BA%94%E7%93%B6%E9%A2%88-44637f98",
+      "source": "WSJ Chinese",
+      "category": "Technology",
+      "headline": "WSJ: US lacks supply chain for key humanoid robot component",
+      "body_text": "WSJ Chinese reports the US wants to win the humanoid robot race but lacks a domestic supply chain for a critical component.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://news.cgtn.com/news/2026-10-05/China-s-National-Holiday-box-office-hits-800-million-yuan-1QZLamWvNyo/p.html",
+      "source": "CGTN",
+      "category": "PRC-Economy",
+      "headline": "China's National Holiday box office hits *800 million yuan*",
+      "body_text": "CGTN reported National Day holiday cinema takings reached 800 million yuan.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://news.cgtn.com/news/2026-10-06/From-Long-March-bridges-to-Chishui-s-bamboo-economy-in-SW-China-1R1p6HE8SiI/p.html",
+      "source": "CGTN",
+      "category": "PRC-Economy",
+      "headline": "China's AG600 amphibious aircraft completes forest fire duty",
+      "body_text": "State media highlighted the AG600 amphibious aircraft's completion of forest firefighting operations during the holiday period.",
+      "color_bar_class": "cb-tech"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-06/china-ai-video-startup-kling-picks-banks-for-1-billion-plus-ipo",
+      "source": "Bloomberg",
+      "headline": "China AI video startup Kling picks banks for $1 billion-plus IPO",
+      "body_text": "Kling, a Chinese AI video-generation startup, has selected banks to lead a Hong Kong listing targeting over *$1 billion*, Bloomberg reports.",
+      "companies": [
+        "Kling"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-06/suzuki-undercuts-byd-as-competition-for-cheap-mini-evs-heats-up",
+      "source": "Bloomberg",
+      "headline": "Suzuki undercuts BYD with cheap mini EV in Japan",
+      "body_text": "Suzuki Motor is launching a low-cost mini EV to defend its home market against Chinese rivals, undercutting BYD on price. A companion Nikkei report says the move exposes Japan's reliance on Chinese battery supply chains.",
+      "companies": [
+        "Suzuki",
+        "BYD"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.scmp.com/business/companies/article/3369908/chinas-transsion-africas-top-phone-maker-targets-us500-million-hong-kong-listing?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Transsion, Africa's top phone maker, targets $500 million Hong Kong listing",
+      "body_text": "Shenzhen Transsion Holdings aims to start its Hong Kong offering Wednesday, targeting an Oct. 15 listing with a market cap of *62 billion yuan* ($9.24 billion).",
+      "companies": [
+        "Transsion Holdings"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.ft.com/content/1a4458ce-6317-4dce-a43e-95e724d7c33f?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "headline": "Hong Kong quizzes HSBC over Singapore AI hub decision",
+      "body_text": "Hong Kong's monetary authority pressed HSBC over its decision to locate an AI hub in Singapore rather than Hong Kong, as it strives to bolster the city's status as an international financial center.",
+      "companies": [
+        "HSBC"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/06/business/china-exports-currency.html",
+      "source": "NYT",
+      "headline": "Hidden tax breaks, weak currency sustain China's export boom",
+      "body_text": "The NYT reports huge tax breaks and a weak currency sustain China's exports while widening the government budget deficit, complicating Beijing's efforts to rebalance the economy toward consumption.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.hkej.com/dailynews/finnews/article/4532450/%25E5%25B1%2588%25E8%2587%25A3%25E6%25B0%258F%25E4%25B8%258A%25E5%25B8%2582%25E5%2582%25B3%25E5%25B0%259A%25E5%25BE%2585%25E4%25B8%25AD%25E5%259C%258B%25E7%25B6%25B2%25E5%25AE%2589%25E6%2594%25BE%25E8%25A1%258C",
+      "source": "HKEJ",
+      "headline": "Watsons' $30 billion HK-London listing delayed to 2027 on China cybersecurity review",
+      "body_text": "CK Hutchison's Watsons has had its planned dual Hong Kong-London listing, valued near *$30 billion*, pushed to 2027 because China's cybersecurity regulator has not yet cleared the application, per the FT. The CSRC has already approved the listing.",
+      "companies": [
+        "Watsons",
+        "CK Hutchison"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/06/science/in-race-with-us-china-struggles-to-recruit-foreign-ai-researchers.html",
+      "source": "NYT",
+      "headline": "China struggles to recruit foreign AI researchers despite government push",
+      "body_text": "China's booming AI sector gives local researchers reason to stay, but a government push has yet to lure overseas scientists, the NYT reports.",
+      "companies": [],
+      "sector": "tech"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MND",
+      "body_chinese": "国防部",
+      "speaker": "Senior Captain Zhai Shichen",
+      "role": "Southern Theater Command spokesperson",
+      "topic": "Philippine aircraft 'intrusion' over Scarborough Shoal",
+      "statement": "Huangyan Dao is China's inherent territory. The Philippines' actions seriously violate China's sovereignty and could easily trigger an unexpected air or maritime incident. We solemnly warn the Philippine side to immediately stop its infringing and provocative acts.",
+      "original_zh": "黄岩岛是中国固有领土。菲方行为严重侵犯中国主权，极易引发海空意外事件。我们正告菲方立即停止侵权挑衅。",
+      "addressed_to": "Philippines",
+      "tone": "warning",
+      "context": "A Philippine C-208 aircraft entered airspace over Huangyan Dao (Scarborough Shoal) on Oct. 3 without authorization; PLA Southern Theater Command tracked and warned it away.",
+      "source": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16491197.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Sun Lei",
+      "role": "China's Deputy Permanent Representative to the UN",
+      "topic": "UN human rights criticism of UK, Australia, Japan and others",
+      "statement": "These countries consider themselves superior and strike the pose of a 'human rights preacher,' yet their own domestic human rights problems are glaring; they are in no position to lecture on human rights, let alone to criticize China.",
+      "original_zh": "這些國家自以為高人一等，動輒擺出一副「人權教師爺」的做派，但其國內人權問題突出，根本沒有資格奢談人權，更無權對中國說三道四。",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "Sun Lei spoke Oct. 5 at the UN General Assembly's Third Committee after representatives from Britain, Australia, Japan, Ireland, the Czech Republic and Lithuania criticized China's human rights record.",
+      "source": "UDN ZH",
+      "url": "https://udn.com/news/story/7331/9798238"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA",
+      "role": "Ministry of Foreign Affairs (bilingual video)",
+      "topic": "Cross-strait reunification messaging",
+      "statement": "After all the calamities, brothers remain; meeting again, a smile dissolves old enmities.",
+      "original_zh": "度盡劫波兄弟在，相逢一笑泯恩仇",
+      "addressed_to": "Taiwan",
+      "tone": "conciliatory",
+      "context": "MOFA released a bilingual video titled 'The Road Home' around the National Day holiday, opening with Wen Yiduo's poem on Taiwan and closing with this Lu Xun verse to call for cross-strait reunification.",
+      "source": "China Times ZH",
+      "url": "https://www.chinatimes.com/newspapers/20261006000737-260109"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "KK",
+      "who": "Karen Kuo",
+      "handle_context": "Taiwan Presidential Office spokeswoman",
+      "platform_date": "Taipei Times · Oct 6, 2026",
+      "quote_text": "Such behavior should not be tolerated in the civilized world.",
+      "analyst_note": "Kuo made the remark condemning China's alleged surveillance of President Lai Ching-te's son after the FBI's Oct. 4 arrest of Zhang Wanying.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/06/2003865462"
+    },
+    {
+      "avatar_initials": "VK",
+      "who": "Vulindlela Simphiwe Kunene",
+      "handle_context": "Eswatini's ambassador to Taiwan",
+      "platform_date": "Taipei Times · Oct 6, 2026",
+      "quote_text": "Eswatini will therefore continue to advocate for Taiwan's meaningful participation in international organizations and mechanisms where its contribution can benefit humanity.",
+      "analyst_note": "Kunene made the remark while presenting his credentials to President Lai Ching-te; Eswatini is Taiwan's only remaining diplomatic ally in Africa.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/06/2003865478"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/asia-pacific/attack-aircraft-military-vehicles-visible-new-china-laos-base-satellite-images-2026-10-06/",
+    "https://hongkongfp.com/2026/10/05/china-says-philippine-plane-intruded-airspace-over-disputed-waters/",
+    "https://hongkongfp.com/2026/10/06/japan-says-it-told-china-survey-ship-to-leave-tokyos-economic-waters/",
+    "http://www.mod.gov.cn/gfbw/qwfb/16491197.html",
+    "https://www.scmp.com/news/us/diplomacy/article/3369844/us-accuses-mainland-china-targeting-taiwan-leaders-family-surveillance-case?utm_source=rss_feed",
+    "https://www.scmp.com/news/china/politics/article/3369782/beijings-policy-advisers-map-out-how-post-reunification-taiwan-could-be-governed?utm_source=rss_feed"
+  ],
+  "story_count": 145,
+  "oped_count": 6,
+  "academic_count": 0,
+  "source_count": 93,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-06.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-06.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
