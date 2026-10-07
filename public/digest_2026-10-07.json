@@ -1,0 +1,503 @@
+{
+  "digest_date": "Wednesday, October 7, 2026",
+  "re_line": "RE: Lai-son spy case · Wang Yi presses Takaichi on Taiwan remarks · EU-China trade talks in Beijing",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "24,130.50",
+      "change_pct": -1.6,
+      "as_of": "Oct 07"
+    },
+    "usd_cnh": {
+      "value": "6.7072",
+      "change_pct": 0.11,
+      "as_of": "Oct 07"
+    },
+    "usd_cny": {
+      "value": "6.6933",
+      "change_pct": -0.17,
+      "as_of": "Oct 07"
+    },
+    "brent": {
+      "value": "101.94",
+      "change_pct": -0.3,
+      "as_of": "Oct 07"
+    },
+    "sse_composite": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": ""
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "FBI's arrest of alleged PRC agent Zhang Wanying for surveilling President Lai Ching-te's adult child in Seattle draws Senate Republican fire and a MOFA denial of any knowledge of the case.",
+    "Wang Yi tells Tokyo that Prime Minister Takaichi must personally resolve her Taiwan remarks dispute, rejecting any indirect fix, as Japan separately protests Beijing referring to her by name without her title.",
+    "EU trade chief Maros Sefcovic departs for Beijing to meet Commerce Minister Wang Wentao Thursday and Friday against an October deadline Brussels set for rebalancing, as the EU readies a Chinese hybrid-vehicle import cap."
+  ],
+  "key_stat": {
+    "number": "$90 billion+",
+    "label": "US semiconductor imports, January-August 2026",
+    "context": "Nearly double the same period in 2025 and a chief driver of the US August trade deficit hitting $105.6 billion, a 17-month high, per Commerce Department data reported by Lianhe Zaobao.",
+    "source": "联合早报 (Lianhe Zaobao)"
+  },
+  "prc_government": [
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "Wang Min, Ambassador",
+      "action": "China's embassy launches Africa resilience and community health program",
+      "document": null,
+      "detail": "Ambassador Wang Min attended the launch of an Africa resilience-building and community health empowerment initiative, part of continued Chinese development assistance engagement on the continent.",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/zwjg/jmxw/xyfz/art/2026/art_fb3473abd6034156895804570f37f3b5.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 8,
+      "headline": "Sefcovic meets Wang Wentao in Beijing",
+      "detail": "Two days of EU-China trade talks Oct 8-9, three months after the last Brussels encounter and against an October deadline Brussels set for signs of rebalancing."
+    },
+    {
+      "month": "Oct",
+      "day": 15,
+      "headline": "TSMC investor conference",
+      "detail": "Investors expect updated guidance on AI demand and overseas expansion; TSMC accounts for more than 40 percent of the TAIEX's total value."
+    },
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758 55th anniversary",
+      "detail": "Contested-interpretation flashpoint over Taiwan's UN status, closely watched by Taipei and Washington."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Outcome could shape the composition and posture of the China-focused committees in the 119th Congress."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayoral and magistrate races read as a mid-term on President Lai; pre-election F-16V delivery and DPP campaign dynamics already in play."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.cnbc.com/2026/10/06/mistral-ai-model-le-chonk.html",
+      "source": "CNBC China",
+      "category": "Technology",
+      "headline": "Mistral unveils AI model it says rivals China's best open-weight systems",
+      "body_text": "French AI company Mistral launched a new model it says can compete with top open-weight and open-source systems from China, CNBC reports. The launch reflects a broader push by Western developers to close the gap with Chinese AI labs on open-source performance."
+    },
+    {
+      "url": "https://focustaiwan.tw/business/202610070019",
+      "source": "Focus Taiwan",
+      "category": "Technology",
+      "headline": "TSMC supplier Gudeng launches operations at new Arizona plant",
+      "body_text": "Gudeng Precision, a key TSMC supplier, began operations at its new Arizona facility, Focus Taiwan reports, part of a wider build-out of Taiwanese semiconductor supply-chain capacity in the US. The move follows TSMC's own expanding Arizona investment."
+    },
+    {
+      "url": "https://focustaiwan.tw/business/202610070021",
+      "source": "Focus Taiwan",
+      "category": "Technology",
+      "headline": "Micron's Taoyuan union secures strike authorization, weighs 'surprise strike'",
+      "body_text": "The union at Micron's Taoyuan, Taiwan facility secured authorization for a strike and is weighing a 'surprise' walkout, Focus Taiwan reports. The dispute adds labor-relations risk to Micron's Taiwan memory-chip operations."
+    },
+    {
+      "url": "https://www.scmp.com/economy/global-economy/article/3369918/after-cordial-xi-trump-summit-could-chinas-us-dollar-pivot-cause-tremors?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "Could China's gradual dollar pivot cause tremors after the Xi-Trump summit?",
+      "body_text": "China's push to diversify away from US dollar assets loomed as an unspoken issue during the Xi-Trump summit, SCMP reports, though it was not a formal agenda item. Beijing has been cutting US Treasury holdings while expanding the yuan's global use."
+    },
+    {
+      "url": "https://www.taiwannews.com.tw/news/6453371",
+      "source": "Taiwan News",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Coast Guard debuts drones at National Day rehearsal",
+      "body_text": "Taiwan's Coast Guard showcased drones during rehearsals for National Day celebrations, Taiwan News reports, part of a push to integrate unmanned systems into maritime patrol operations. The debut comes amid increased patrol activity around Taiwan's outlying islands."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/suzuki-s-mini-ev-bet-exposes-japan-s-battery-vulnerability-to-china",
+      "source": "Nikkei Asia China",
+      "category": "Technology",
+      "headline": "Suzuki's mini-EV bet exposes Japan's battery dependence on China",
+      "body_text": "Suzuki Motor is betting on a new mini electric vehicle to defend its home market against Chinese EV rivals, Nikkei Asia reports. The launch highlights Japan's continued reliance on Chinese battery supply chains in its smallest-car segment."
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/taiwan-s-top-diplomat-launches-new-mission-in-arizona",
+      "source": "Nikkei Asia China",
+      "category": "Cross-Strait",
+      "headline": "Taiwan's top diplomat opens new quasi-diplomatic mission in Arizona",
+      "body_text": "Taiwan's foreign minister launched a new quasi-diplomatic mission in Arizona during a three-day US visit, Nikkei Asia reports. The trip underscores deepening Taiwan-US engagement tied to the state's growing semiconductor investment."
+    },
+    {
+      "url": "https://wpintelligence.washingtonpost.com/topics/2026/10/06/us-china-are-headed-showdown-over-6g/?itid=hp_brand_promo_1",
+      "source": "WaPo China",
+      "category": "Technology",
+      "headline": "US and China headed for a showdown over 6G",
+      "body_text": "The US and China are heading toward a clash over next-generation 6G wireless standards, the Washington Post reports, framing it as a new front in the bilateral technology rivalry. The dispatch follows years of US restrictions targeting Chinese telecom and semiconductor exporters."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.reuters.com/world/china/us-china-discuss-reciprocal-visits-nuclear-sites-cnn-reports-2026-10-06/",
+      "source": "Reuters",
+      "headline": "US and China discuss reciprocal visits to nuclear sites, CNN reports",
+      "body_text": "The US and China are discussing reciprocal visits to each other's nuclear facilities, CNN reported via Reuters, a potential transparency and confidence-building measure. No date or scope for any visits has been confirmed.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://selectcommitteeontheccp.house.gov/media/press-releases/moolenaar-review-hong-kong-s-access-to-federal-reserve-s-liquidity-tool",
+      "source": "House Select CCP",
+      "headline": "Moolenaar calls for review of Hong Kong's access to Federal Reserve liquidity tool",
+      "body_text": "House Select Committee on the CCP Chairman **John Moolenaar** called for a review of Hong Kong's access to a Federal Reserve liquidity facility, per a committee release. The move adds to congressional scrutiny of Hong Kong's financial privileges amid its alignment with Beijing.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/07/2003865547",
+      "source": "Taipei Times (direct)",
+      "headline": "Taiwan defense minister: no word of $14 billion arms package being split into tranches",
+      "body_text": "US Senator **Michael Bennet** is visiting Taiwan this week to meet senior officials on regional security and the Taiwan-US partnership, AIT announced. Defense Minister **Wellington Koo** said he had not heard of plans to split a prospective *$14 billion* arms sale into smaller packages after Trump withheld approval to preserve the trade truce with Xi.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/business-trends/tsmc-and-other-taiwan-players-boost-ai-spending-in-us-southeast-asia",
+      "source": "Nikkei Asia China",
+      "headline": "TSMC and other Taiwanese firms step up AI spending in US, Southeast Asia",
+      "body_text": "Taiwanese companies have increased overseas investment to build out supply chains for surging AI demand, Nikkei Asia reports, with the US and Southeast Asia drawing fresh capital from TSMC's supply-chain partners. The build-out follows years of US pressure for chip production diversification away from Taiwan.",
+      "instrument": "Investment"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://hongkongfp.com/2026/10/07/taiwan-accuses-hong-kong-residents-of-hiring-4-people-to-spy-on-lawmaker-critical-of-china/",
+      "source": "Hong Kong Free Press",
+      "headline": "Taiwan charges four over Hong Kong-funded surveillance of DPP lawmaker Puma Shen",
+      "body_text": "Taipei prosecutors charged four Taiwanese defendants with surveilling, filming and photographing DPP lawmaker **Puma Shen** and his family two years ago, allegedly hired by two Hong Kong residents. Shen, an outspoken critic of Beijing, has previously accused China of transnational repression against Taiwanese dissidents.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/japan-china-tensions/xi-leaves-japan-uncertain-on-china-summit-at-apec",
+      "source": "Nikkei Asia China",
+      "headline": "Xi leaves Japan uncertain on a China summit at APEC",
+      "body_text": "Japan hopes to arrange a regular summit with China on the sidelines of next month's APEC meeting in Shenzhen, but Tokyo has received no confirmation from Beijing, Nikkei Asia reports. The uncertainty comes amid the ongoing dispute over Prime Minister Takaichi's Taiwan remarks.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.reuters.com/business/aerospace-defense/north-korea-warns-us-over-taiwan-while-kim-pledges-support-russia-2026-10-06/",
+      "source": "Reuters",
+      "headline": "North Korea criticizes US support for Taiwan, pledges backing for Russia",
+      "body_text": "North Korea criticized US support for Taiwan and pledged continued backing for Russia, Reuters reports, linking the two issues in a single statement. The remarks align Pyongyang with Beijing and Moscow's shared opposition to US regional alliance-building.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/china-breaks-silence-on-plague-says-it-s-in-contact-with-russia",
+      "source": "Bloomberg",
+      "headline": "China says it is in contact with Russia on suspected plague case",
+      "body_text": "China's foreign ministry said Beijing is in contact with Moscow over a suspected plague death at a Russian research institute, Bloomberg reports. The statement follows days of Russian stonewalling toward Washington's requests for information on the case.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-06/franco-german-unity-on-china-trade-paves-way-for-tougher-eu-line",
+      "source": "Bloomberg",
+      "headline": "Franco-German unity on China trade paves way for tougher EU line",
+      "body_text": "France and Germany have aligned on a tougher approach to Chinese trade practices, Bloomberg reports, paving the way for a harder EU negotiating line. The alignment comes as EU trade chief Sefcovic prepares for two days of talks with Commerce Minister Wang Wentao in Beijing.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/uk-universities-review-china-ties-after-mi5-espionage-alert",
+      "source": "Nikkei Asia China",
+      "headline": "UK universities review China ties after MI5 espionage alert",
+      "body_text": "British universities are telling academics to disclose links to a Chinese research institute named in an MI5 espionage alert, Nikkei Asia reports. The review reflects heightened UK scrutiny of academic ties to Chinese state-linked institutions.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.reuters.com/business/energy/chinese-independent-refiners-boost-iraqi-oil-purchases-iranian-flows-fall-2026-10-06/",
+      "source": "Reuters",
+      "headline": "Chinese independent refiners boost Iraqi oil purchases as Iranian flows fall",
+      "body_text": "Chinese independent refiners have increased purchases of Iraqi crude as Iranian oil flows decline, traders told Reuters. The shift suggests Chinese buyers are diversifying sanctioned-oil sourcing amid tighter enforcement against Iranian exports.",
+      "region": "Middle East"
+    },
+    {
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/china-plans-late-entry-into-who-leadership-race-sources-say-2026-10-06/",
+      "source": "Reuters",
+      "headline": "China plans late entry into WHO leadership race, sources say",
+      "body_text": "Beijing is weighing a late entry into the race for the World Health Organization's top leadership post, sources told Reuters. A Chinese candidacy would mark a bid for greater influence over a key multilateral health body.",
+      "region": "Multilateral"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261007-9795234",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "headline": "Poll: Latin Americans now view China's influence more favorably than the US's",
+      "body_text": "A Latinobarómetro survey found *65 percent* of Latin Americans view China's regional influence positively, up from 48 percent in 2020, versus 57 percent for the US, down from 60 percent. It is the first time China has topped the index since the survey began in 1995, leading in 15 of 17 countries surveyed.",
+      "region": "Latin America"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.chinatimes.com/newspapers/20261007000529-260121",
+      "source": "中国时报 (China Times ZH)",
+      "category_tag": "Cross-Strait",
+      "headline": "FBI espionage case targeting Lai Ching-te's son roils Washington, Beijing denies knowledge",
+      "body": "US prosecutors charged **Zhang Wanying** with acting as an unregistered PRC agent after she allegedly surveilled an adult child of Taiwan President **Lai Ching-te** in Seattle in September, passing photos, video and license-plate data to a Chinese official; the charge carries up to *10 years* in prison. Republican Senators Blackburn, Ricketts and Scott called the case evidence the CCP is exporting repressive surveillance to the US, while China's foreign ministry said it was unaware of the case and accused Washington of 'hyping so-called Chinese spies' to smear China.",
+      "src_line": "China Times (ZH); VOA Chinese"
+    },
+    {
+      "url": "https://www.japantimes.co.jp/news/2026/10/07/japan/wang-takaichi-taiwan-remark/",
+      "source": "Japan Times China",
+      "category_tag": "Diplomacy",
+      "headline": "Wang Yi tells Tokyo Takaichi must personally resolve Taiwan remarks dispute",
+      "body": "**Wang Yi** rejected any indirect fix to the row over Prime Minister **Sanae Takaichi**'s Taiwan remarks, saying she must resolve the issue herself rather than through a third channel, per Japanese and Korean wire reports. Tokyo separately protested after Chinese officials referred to Takaichi by name only, without her prime-ministerial title, which Japan said shows a lack of respect.",
+      "src_line": "Japan Times; Kyodo News"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3369992/last-chance-saloon-eu-presses-china-sign-prove-trade-talks-can-work?utm_source=rss_feed",
+      "source": "SCMP China",
+      "category_tag": "PRC-Economy",
+      "headline": "EU trade chief heads to Beijing as Brussels weighs tougher line on China imports",
+      "body": "**Maros Sefcovic** departs for two days of talks with Commerce Minister **Wang Wentao** in Beijing Thursday and Friday, three months after Brussels set an October deadline for signs of rebalancing in the trade relationship, per SCMP. The EU is separately preparing an import cap on Chinese hybrid vehicles, Bloomberg reported, as the NYT notes China's manufacturing self-reliance drive has widened its trade imbalance with Europe.",
+      "src_line": "SCMP; NYT; Bloomberg"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/06/science/china-ai-research-recruitment.html",
+      "source": "NYT Asia (direct)",
+      "category_tag": "Technology",
+      "headline": "China's AI boom keeps homegrown talent, but fails to draw foreign researchers",
+      "body": "China's booming domestic AI sector gives local researchers good reason to stay, but the country has yet to attract overseas scientists despite a government recruitment push, the New York Times reports. The dispatch frames the gap as a vulnerability in Beijing's race with Washington for AI talent.",
+      "src_line": "New York Times"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3370027/how-will-new-longer-range-aircraft-boost-manilas-south-china-sea-surveillance?utm_source=rss_feed",
+      "source": "SCMP China",
+      "category_tag": "Indo-Pacific",
+      "headline": "Philippine Coast Guard to get three extended-range surveillance aircraft under $39.6 million US contract",
+      "body": "The US Navy awarded a *$39.6 million* contract on September 28 for three second-hand King Air 350-series aircraft, two modified with extended-range fuel systems and upgraded avionics, SCMP reports. The aircraft will expand Manila's reach and endurance to monitor Chinese coast guard, naval and research vessels across the South China Sea.",
+      "src_line": "SCMP"
+    },
+    {
+      "url": "https://focustaiwan.tw/society/202610060020",
+      "source": "Focus Taiwan",
+      "category_tag": "Sanctions",
+      "headline": "Taiwan indicts 10 for reselling restricted chips to Hong Kong, mainland China",
+      "body": "Taiwanese prosecutors indicted *10* individuals for illegally reselling export-restricted chips to Hong Kong buyers with onward routes to mainland China, Focus Taiwan reports. The case adds to a string of transshipment-evasion prosecutions as Washington and Taipei tighten enforcement against circumvention of export controls on advanced semiconductors.",
+      "src_line": "Focus Taiwan"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://asia.nikkei.com/business/materials/taiwan-s-auo-innolux-bet-on-glass-as-next-gen-ai-chip-material",
+      "source": "Nikkei Asia China",
+      "category": "Technology",
+      "headline": "Taiwan's AUO, Innolux bet on glass as next-gen AI chip material",
+      "body_text": "AUO showcased a glass-core substrate for semiconductors at Semicon Taiwan, Nikkei reports, as Taiwanese panel makers pivot toward AI chip packaging materials.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/07/2003865524",
+      "source": "Taipei Times (direct)",
+      "category": "Cross-Strait",
+      "headline": "Hong Kong gang member indicted over assault on Taiwan-based Japanese commentator",
+      "body_text": "Prosecutors indicted Hong Kong triad member Liu Kong-faat over the July assault on commentator Akio Yaita in a Taichung hotel; four other Hong Kong gang suspects remain at large.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://user.guancha.cn/main/content?id=1748593",
+      "source": "观察者网 (Guancha ZH)",
+      "category": "Cross-Strait",
+      "headline": "Guancha calls Taiwan's pre-election F-16V delivery 'political manipulation'",
+      "body_text": "Chinese nationalist outlet Guancha said the delivery of two F-16Vs to Taiwan just before the Nov 28 local elections, after they sat in Hawaii for weeks, was timed as political manipulation to boost the DPP.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.voachinese.com/a/democratic-members-of-us-congress-visit-taiwan-after-trump-s-meeting-with-xi-20261006/8208364.html",
+      "source": "美国之音中文 (VOA Chinese ZH)",
+      "category": "Cross-Strait",
+      "headline": "Multiple US Congress members visit Taiwan after Trump-Xi summit",
+      "body_text": "Several US lawmakers are visiting Taiwan following last month's Trump-Xi summit, VOA Chinese reports, with AIT saying the visits reinforce the US-Taiwan partnership.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.voachinese.com/a/china-keeps-expanding-its-coercive-repression-in-taiwan-to-intimidate-dissidents-20261006/8208304.html",
+      "source": "美国之音中文 (VOA Chinese ZH)",
+      "category": "Cross-Strait",
+      "headline": "Backlash follows China's boycott reaction to Cai Kangyong's DPP campaign appearance",
+      "body_text": "China's reaction to entertainer Cai Kangyong appearing at a DPP mayoral campaign launch triggered Taiwanese backlash over what VOA Chinese describes as expanding cross-border coercion against dissidents.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.news.cn/20261007/9bb3cc15a20f4ae5a883c48d31ee0dd3/c.html",
+      "source": "新华社 (Xinhua ZH)",
+      "category": "Diplomacy",
+      "headline": "Shanghai music teacher who went missing in Thailand returns home safely",
+      "body_text": "China's embassy in Thailand confirmed a Shanghai music teacher who had gone missing in Bangkok returned safely, Xinhua reports, renewing warnings about scam-recruitment schemes targeting Chinese nationals.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/10/07/2003865511",
+      "source": "Taipei Times (direct)",
+      "category": "Markets",
+      "headline": "Taiwan shares close at record high, just below 50,000-point mark",
+      "body_text": "The TAIEX closed at a record *49,822.55*, up 0.22 percent, with TSMC closing at another high ahead of its Oct. 15 investor conference, Taipei Times reports.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.reuters.com/world/china/mercedes-benz-q3-car-sales-fall-8-china-demand-weakness-persists-ev-sales-rise-2026-10-07/",
+      "source": "Reuters China",
+      "headline": "Mercedes-Benz Q3 global sales fall 8% as China demand weakness persists",
+      "body_text": "Mercedes-Benz's third-quarter car sales fell *8 percent* as weak demand in China continued to weigh on the German automaker, Reuters reports, though its EV sales rose 52 percent.",
+      "companies": [
+        "Mercedes-Benz"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/china-s-central-bank-adds-gold-in-september-as-bullion-weakens",
+      "source": "Bloomberg China",
+      "headline": "China's central bank adds gold in September as bullion weakens",
+      "body_text": "The People's Bank of China added to its gold reserves in September even as bullion prices weakened, Bloomberg reports, continuing a multi-year diversification push away from US dollar assets.",
+      "companies": [
+        "PBOC"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/qatarenergy-secures-3-billion-loan-from-four-chinese-banks",
+      "source": "Bloomberg China",
+      "headline": "QatarEnergy secures $3 billion loan from four Chinese banks",
+      "body_text": "QatarEnergy secured a *$3 billion* loan from four Chinese banks, Bloomberg reports, deepening financial ties between Qatari energy interests and Chinese state lenders.",
+      "companies": [
+        "QatarEnergy"
+      ],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/eu-prepares-import-cap-on-chinese-hybrid-cars-to-balance-trade",
+      "source": "Bloomberg China",
+      "headline": "EU prepares import cap on Chinese hybrid cars to balance trade",
+      "body_text": "The EU is preparing an import cap on Chinese hybrid vehicles, Bloomberg reports, as Brussels seeks to rebalance a widening trade deficit with China ahead of this week's talks in Beijing.",
+      "companies": [],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-06/venture-global-is-in-talks-to-sell-us-lng-to-more-chinese-buyers",
+      "source": "Bloomberg China",
+      "headline": "Venture Global in talks to sell more US LNG to Chinese buyers",
+      "body_text": "Venture Global is in talks to sell more US liquefied natural gas to Chinese buyers, Bloomberg reports, part of continued US-China energy trade engagement following the Trump-Xi summit's trade commitments.",
+      "companies": [
+        "Venture Global"
+      ],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.ft.com/content/f31baf40-a753-4cca-86e1-1373f08d99e2?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "China's tax crackdown rattles offshore wealth managers in Hong Kong, Singapore, Tokyo",
+      "body_text": "A Chinese crackdown on offshore wealth has rattled the country's richest individuals and the Hong Kong, Singapore and Tokyo firms that manage their money, the FT reports.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/taiwan-dethrones-korea-atop-global-markets-as-ai-trade-widens",
+      "source": "Bloomberg China",
+      "headline": "Taiwan dethrones Korea atop world markets as AI trade widens",
+      "body_text": "Taiwan's stock market has overtaken Korea's as the top-performing major market amid the widening AI trade, Bloomberg reports, with TSMC's dominance in advanced chipmaking driving the rally.",
+      "companies": [
+        "TSMC"
+      ],
+      "sector": "finance"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "Wang Yi",
+      "body_chinese": "王毅",
+      "speaker": "Wang Yi",
+      "role": "Foreign Minister",
+      "topic": "Japan PM Takaichi's Taiwan remarks",
+      "statement": "Per Japan Times: China's foreign minister said Prime Minister Takaichi must resolve the Taiwan remarks dispute herself, rejecting proposals for an indirect fix through a third channel.",
+      "original_zh": null,
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Statement follows a continuing row over Takaichi's Taiwan comments; Kyodo separately reported Japan protested Chinese officials referring to the premier by name only, without her title.",
+      "source": "Japan Times",
+      "url": "https://www.japantimes.co.jp/news/2026/10/07/japan/wang-takaichi-taiwan-remark/"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "Ministry of Foreign Affairs spokesperson",
+      "topic": "US arrest of alleged PRC agent surveilling Lai Ching-te's son",
+      "statement": "China has always opposed hyping up so-called 'Chinese spies' in order to defame and smear China.",
+      "original_zh": "中國一貫反對炒作所謂『中國間諜』，以此詆毀、抹黑中國",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "FBI arrested Zhang Wanying on an unregistered foreign agent charge after she allegedly surveilled an adult child of President Lai Ching-te in Seattle; Republican senators called it evidence of CCP infiltration of the US.",
+      "source": "China Times (ZH)",
+      "url": "https://www.chinatimes.com/newspapers/20261007000529-260121"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "Ministry of Foreign Affairs spokesperson",
+      "topic": "China-Russia cooperation on infectious disease control",
+      "statement": "Per RFI: China's foreign ministry said Beijing and Moscow maintain close exchange and cooperation in the field of infectious disease prevention and control.",
+      "original_zh": "中俄在传染病防控领域保持密切交流合作",
+      "addressed_to": "Russia",
+      "tone": "routine",
+      "context": "Statement comes as Russian presidential aide Nikolai Patrushev prepares to visit China Thursday, and as Washington presses Moscow for information about a plague death at a Russian research institute.",
+      "source": "RFI (ZH)",
+      "url": "https://www.rfi.fr/cn/%E5%9B%BD%E9%99%85/20261007-%E4%BF%84%E6%80%BB%E7%BB%9F%E5%8A%A9%E7%90%86%E5%B8%95%E7%89%B9%E9%B2%81%E8%88%8D%E5%A4%AB%E5%91%A8%E5%9B%9B%E8%AE%BF%E5%8D%8E-%E5%8C%97%E4%BA%AC-%E4%B8%AD%E4%BF%84%E5%9C%A8%E4%BC%A0%E6%9F%93%E7%97%85%E9%98%B2%E6%8E%A7%E9%A2%86%E5%9F%9F%E4%BF%9D%E6%8C%81%E5%AF%86%E5%88%87%E4%BA%A4%E6%B5%81%E5%90%88%E4%BD%9C"
+    }
+  ],
+  "social_statements": [],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.chinatimes.com/newspapers/20261007000529-260121",
+    "https://hongkongfp.com/2026/10/07/taiwan-accuses-hong-kong-residents-of-hiring-4-people-to-spy-on-lawmaker-critical-of-china/",
+    "https://www.reuters.com/business/aerospace-defense/north-korea-warns-us-over-taiwan-while-kim-pledges-support-russia-2026-10-06/",
+    "https://www.bloomberg.com/news/articles/2026-10-07/china-breaks-silence-on-plague-says-it-s-in-contact-with-russia",
+    "https://www.rfi.fr/cn/%E5%9B%BD%E9%99%85/20261007-%E4%BF%84%E6%80%BB%E7%BB%9F%E5%8A%A9%E7%90%86%E5%B8%95%E7%89%B9%E9%B2%81%E8%88%8D%E5%A4%AB%E5%91%A8%E5%9B%9B%E8%AE%BF%E5%8D%8E-%E5%8C%97%E4%BA%AC-%E4%B8%AD%E4%BF%84%E5%9C%A8%E4%BC%A0%E6%9F%93%E7%97%85%E9%98%B2%E6%8E%A7%E9%A2%86%E5%9F%9F%E4%BF%9D%E6%8C%81%E5%AF%86%E5%88%87%E4%BA%A4%E6%B5%81%E5%90%88%E4%BD%9C"
+  ],
+  "story_count": 96,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 96,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-07.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-07.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
