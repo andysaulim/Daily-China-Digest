@@ -1,0 +1,583 @@
+{
+  "digest_date": "Thursday, October 8, 2026",
+  "re_line": "EU-China trade talks open in Beijing · Taiwan militia boat off east coast · China-Laos PLA base · WHO nomination bid",
+  "market_indicators": {
+    "brent": {
+      "value": "105.31",
+      "change_pct": 4.97,
+      "as_of": "Oct 08"
+    },
+    "hang_seng": {
+      "value": "23,785.79",
+      "change_pct": -3.36,
+      "as_of": "Oct 08"
+    },
+    "usd_cnh": {
+      "value": "6.7048",
+      "change_pct": 0.02,
+      "as_of": "Oct 08"
+    },
+    "sse_composite": {
+      "value": "3,811.90",
+      "change_pct": -1.97,
+      "as_of": "Oct 08"
+    },
+    "usd_cny": {
+      "value": "6.6930",
+      "change_pct": -0.17,
+      "as_of": "Oct 08"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "EU trade commissioner Maroš Šefčovič opened two days of talks in Beijing, calling the bloc's trade deficit with China 'unsustainable' as Brussels weighs tougher measures.",
+    "A Taiwanese patrol spotted a Chinese maritime militia boat off Taiwan's east coast for the first time, while Taipei's Washington envoy and former president Tsai Ing-wen separately told US audiences of sustained Chinese pressure.",
+    "China confirmed nominating Song Li, a senior Women's Federation official, to lead the World Health Organization as Tedros Adhanom Ghebreyesus's term runs through 2027."
+  ],
+  "key_stat": {
+    "number": "$1.1B/day",
+    "label": "EU-China daily trade deficit",
+    "context": "Europe's 2025 goods-and-services gap with China ran to roughly €1 billion a day, per EU figures cited as Šefčovič opened two days of talks in Beijing.",
+    "source": "AFP"
+  },
+  "prc_government": [
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "People's Bank of China",
+      "action": "Expands reverse-repo liquidity injection",
+      "document": null,
+      "detail": "The PBOC will conduct an enlarged 1.2 trillion yuan outright reverse-repo operation, an increased renewal of maturing facilities, per Beijing Daily.",
+      "source_label": "PBOC",
+      "url": "https://news.bjd.com.cn/2026/10/08/11987303.shtml"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson",
+      "action": "Opens antidumping probe into EU-origin para-nitrotoluene",
+      "document": "Antidumping investigation announcement",
+      "detail": "MOFCOM announced an antidumping investigation into imports of para-nitrotoluene originating in the European Union, published on the ministry's trade-remedy information site.",
+      "source_label": "MOFCOM",
+      "url": "https://cacs.mofcom.gov.cn/article/gnwjmdt/sb/zo/202610/189410.html"
+    },
+    {
+      "ministry": "MND",
+      "ministry_chinese": "国防部",
+      "official": "PLA Navy",
+      "action": "48th escort flotilla arrives in Malaysia",
+      "document": null,
+      "detail": "China's Navy's 48th escort flotilla arrived in Malaysia for a friendly visit, the Ministry of National Defense said.",
+      "source_label": "MND",
+      "url": "http://www.mod.gov.cn/gfbw/jsxd/16491543.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758, 55th anniversary",
+      "detail": "The 1971 resolution restoring PRC representation at the UN turns 55; Beijing and Washington continue to dispute whether it addresses Taiwan's status."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Control of the House and Senate at stake, shaping the China agenda for the remainder of the Trump administration."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal suspensions due to lapse",
+      "detail": "The one-year suspensions of BIS's Affiliates Rule and China's October 2025 rare-earth export controls are set to expire around this date absent an extension."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Leaders' Meeting, Shenzhen",
+      "detail": "China hosts APEC in Shenzhen roughly two months after the CCDI announced an investigation into the city's former mayor, Qin Weizhong."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors and magistrates up for election in a vote read as a mid-term referendum on President Lai Ching-te."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.ft.com/content/a6f9e7c6-996e-4a16-915a-d75b21a25c55?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category": "Cross-Strait",
+      "headline": "Taiwan's fertility clinics draw Chinese women fleeing reproductive limits",
+      "body_text": "China's reproductive restrictions are sending women across the Taiwan Strait to freeze their eggs, the Financial Times reported Thursday. The flow continues even as political and military tensions between Beijing and Taipei persist."
+    },
+    {
+      "url": "https://sinocism.com/p/eu-china-trade-talks-reality-after",
+      "source": "Sinocism",
+      "category": "PRC-Economy",
+      "headline": "MOFCOM prepared for Šefčovič visit through National Day break, Sinocism reports",
+      "body_text": "China's commerce ministry worked through the National Day holiday preparing for EU trade commissioner Maroš Šefčovič's two-day Beijing visit, Sinocism's newsletter said Thursday. The newsletter assessed the talks as unlikely to head off further EU-China trade escalation."
+    },
+    {
+      "url": "https://www.economist.com/china/2026/10/07/chinas-oil-tactics-have-been-clever-now-the-costs-are-mounting",
+      "source": "Economist China",
+      "category": "Energy",
+      "headline": "China's oil-buying tactics face rising costs, The Economist reports",
+      "body_text": "China's strategy of exploiting discounted sanctioned crude has grown costlier, The Economist reported Thursday. The piece examines how Beijing's approach to importing Russian and Iranian oil is running into new constraints."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/chinese-ai-startup-manus-drums-up-over-500m-in-fresh-funding",
+      "source": "Nikkei Asia China",
+      "category": "Technology",
+      "headline": "Chinese AI startup Manus raises over $500 million in fresh funding",
+      "body_text": "Manus's parent, Butterfly Effect, raised more than *$500 million* in new funding, Nikkei Asia reported, after Beijing ordered the startup to unwind a prior $20 billion valuation arrangement. The raise underscores continued investor appetite for Chinese AI ventures."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/alibaba-s-joe-tsai-says-open-source-is-europe-s-best-shot-at-ai",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "Alibaba's Joe Tsai says open source is Europe's best shot at AI",
+      "body_text": "Alibaba chairman **Joe Tsai** said open-source models represent Europe's best opportunity to compete in artificial intelligence, Bloomberg reported Thursday. His comments come as Chinese firms push open-source AI models globally."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/us-fcc-vote-ban-chinese-labs-testing-us-electronics-2026-10-07/",
+      "source": "Reuters China",
+      "headline": "US FCC to vote on banning Chinese labs from testing US electronics",
+      "body_text": "The US Federal Communications Commission plans to vote on a rule barring all Chinese testing labs from certifying electronics sold in the United States, Reuters reported Thursday. The move would extend existing restrictions on Chinese telecom gear to the compliance-testing process itself.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/webull-sinks-after-cnbc-reports-us-house-panel-flagged-china-ties-2026-10-07/",
+      "source": "Reuters China",
+      "headline": "Webull shares drop after US House panel flags China ties",
+      "body_text": "Shares of online brokerage Webull fell after a US House committee flagged the company's ties to China, Reuters reported Thursday, citing CNBC. The report did not specify the panel or the exact nature of the flagged ties.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/ups-worker-missed-security-email-letting-china-get-f-35-parts",
+      "source": "Bloomberg China",
+      "headline": "UPS employee's missed security email let diverted F-35 parts reach China",
+      "body_text": "A UPS worker failed to act on a security-alert email, allowing diverted F-35 stealth-fighter parts to reach China via Hong Kong, Bloomberg reported Thursday. The Pentagon has been investigating the diversion since last month.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.ft.com/content/c4ef549c-0451-4884-b922-23cd24cf35a6?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "Houston startup aims to loosen China's grip on rare-earth magnet metal",
+      "body_text": "**Hertha Metals** has developed a method to produce high-purity iron needed for rare-earth magnets, the Financial Times reported Thursday. The process could reduce reliance on Chinese supply chains for a material critical to defense and clean-energy manufacturing.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://cacs.mofcom.gov.cn/cacscms/article/ckys?articleId=189389&type=1",
+      "source": "MOFCOM (trade remedy site)",
+      "headline": "US ITC upholds antidumping/countervailing duties on Chinese steel cylinders",
+      "body_text": "The US International Trade Commission issued a final injury determination in the first sunset review of antidumping and countervailing duties on non-refillable steel cylinders from China, China's trade-remedy information center reported Thursday. The ruling keeps existing US duties in place on the product category.",
+      "instrument": "Tariff"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.reuters.com/world/china/taiwans-us-envoy-says-ties-robust-after-trump-xi-summit-2026-10-07/",
+      "source": "Reuters China",
+      "headline": "Taiwan's US envoy says ties robust after Trump-Xi summit",
+      "body_text": "Taiwan's envoy to Washington said bilateral ties remain robust following last month's Trump-Xi summit, Reuters reported Thursday. The comment follows Taipei's earlier accusation that Xi had 'distorted facts' in his summit remarks on Taiwan.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/former-taiwan-president-tsai-tells-us-audience-sustained-chinese-pressure-2026-10-08/",
+      "source": "Reuters China",
+      "headline": "Tsai Ing-wen tells US audience of 'sustained' Chinese pressure",
+      "body_text": "Former Taiwan president **Tsai Ing-wen** told a US audience Thursday that Taiwan faces 'sustained' pressure from China, Reuters reported. The remarks follow Taiwan's recent upgrades to maritime patrol capacity around outposts exposed to Chinese gray-zone activity.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/08/2003865612",
+      "source": "Taipei Times (direct)",
+      "headline": "Taiwan donates patrol vessel 'Kinmen' to Philippines with security provisions",
+      "body_text": "Taiwan's donation of the offshore patrol vessel Kinmen to the Philippines includes provisions protecting Taiwanese fishers and facilitating security cooperation across the First Island Chain, officials told the legislature Thursday. The announcement came during the Cabinet's comprehensive administrative report to lawmakers.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.scmp.com/week-asia/politics/article/3370202/marcos-says-philippines-resigned-managing-south-china-sea-dispute?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Marcos says Philippines 'resigned' to managing South China Sea dispute",
+      "body_text": "President **Ferdinand Marcos Jnr** said Thursday the Philippines is 'resigned' to managing, rather than resolving, its South China Sea dispute with Beijing, speaking at the Forbes Global CEO Conference in Singapore. He said his greatest fear is a mistake by 'some seaman, some soldier' escalating the standoff.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://news.youth.cn/jsxw/202610/t20261008_16904384.htm",
+      "source": "中国青年网 (MOFA presser ZH)",
+      "headline": "China renews demand Japan punish embassy knife-attack suspect",
+      "body_text": "China's foreign ministry on Thursday again urged Japan to 'severely punish' the knife-wielding attacker who breached the Chinese embassy compound in Tokyo, per the ministry's daily briefing. No new detail on the suspect or incident timing was given in the readout.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.japantimes.co.jp/news/2026/10/07/asia-pacific/politics/north-korea-us-taiwan-russia/",
+      "source": "Japan Times China",
+      "headline": "North Korea warns US over Taiwan as Kim pledges Russia support",
+      "body_text": "North Korea warned the United States over Taiwan while **Kim Jong Un** pledged continued support for Russia, the Japan Times reported. The dual messaging links Pyongyang's Taiwan Strait rhetoric to its deepening wartime alignment with Moscow.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/india-s-clout-in-kashmir-tested-by-new-china-pakistan-border-protocol",
+      "source": "Nikkei Asia China",
+      "headline": "China-Pakistan border protocol tests India's clout in Kashmir",
+      "body_text": "China and Pakistan's decision to activate a long-delayed protocol for managing their shared frontier will test India's influence in the Kashmir region, Nikkei Asia reported Thursday. The protocol governs border management in territory India also disputes.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/germany-blocks-sale-logistics-company-chinas-cosco-2026-10-07/",
+      "source": "Reuters China",
+      "headline": "Germany blocks sale of logistics company to China's Cosco",
+      "body_text": "Germany's government blocked the sale of a domestic logistics company to China's Cosco, Reuters reported Thursday. The decision adds to a run of European scrutiny of Chinese state-linked acquisitions in strategic infrastructure.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370170/kremlin-aide-visits-china-amid-speculation-about-potential-xi-putin-trump-meeting",
+      "source": "SCMP China",
+      "headline": "Kremlin aide visits China amid Xi-Putin-Trump summit speculation",
+      "body_text": "A senior Kremlin aide visited China this week amid speculation over a possible trilateral summit involving **Vladimir Putin**, Xi Jinping and Trump, the South China Morning Post reported. The visit comes ahead of November's APEC leaders' meeting in Shenzhen.",
+      "region": "Russia-Central Asia"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/world/china/china-militia-boat-spotted-first-time-off-taiwans-east-coast-patrol-finds-2026-10-08/",
+      "source": "Reuters China",
+      "category_tag": "Cross-Strait",
+      "headline": "China militia boat spotted for first time off Taiwan's east coast",
+      "body": "A Taiwanese patrol spotted a Chinese maritime militia boat operating off Taiwan's east coast for the first time, Reuters reported Thursday, citing the patrol's own findings. Chinese militia activity has concentrated chiefly on the Taiwan Strait median line to the island's west; a confirmed sighting on the Pacific-facing east coast marks a new area of operation.",
+      "src_line": "Reuters, Oct. 8"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/08/world/asia/china-military-base-laos.html",
+      "source": "NYT Asia (direct)",
+      "category_tag": "PLA",
+      "headline": "China expands military reach with new base in Laos",
+      "body": "China is building a military facility with a new runway at Ban Keun, Laos, currently used only by small jets, the New York Times reported Thursday. Neighboring nations are watching to see whether Beijing expands the runway to accommodate larger aircraft. Satellite imagery reviewed this week by Reuters showed attack aircraft and military vehicles already present at the site.",
+      "src_line": "NYT, Oct. 8"
+    },
+    {
+      "url": "https://www.afp.com/en/beijing-eu-trade-envoy-says-deficit-china-unsustainable",
+      "source": "AFP China",
+      "category_tag": "PRC-Economy",
+      "headline": "EU trade chief calls China deficit 'unsustainable' as Beijing talks open",
+      "body": "**Maroš Šefčovič**, the EU's trade commissioner, said Thursday the bloc's trade deficit with China is 'unsustainable' as he began two days of talks in Beijing aimed at averting a trade war. The EU recorded a goods-and-services deficit with China of roughly *$1.1 billion* a day in 2025, per European figures; France and Germany have urged Brussels to adopt a 'credible instrument' to respond quickly to any Chinese escalation.",
+      "src_line": "AFP, Oct. 8"
+    },
+    {
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/china-has-nominated-health-official-song-li-who-head-2026-10-08/",
+      "source": "Reuters China",
+      "category_tag": "Diplomacy",
+      "headline": "China nominates Song Li to lead World Health Organization",
+      "body": "China has nominated **Song Li**, a senior official of the All-China Women's Federation, to run for WHO Director-General, Reuters reported Thursday, as current chief Tedros Adhanom Ghebreyesus's term runs through 2027. Beijing's bid would give it a chance to expand influence over the UN health body.",
+      "src_line": "Reuters, Oct. 8"
+    },
+    {
+      "url": "https://www.scmp.com/plus/news/china/diplomacy/article/3370186/trump-pushed-xi-end-japan-freeze-chinese-leader-unmoved?utm_source=rss_feed",
+      "source": "SCMP China",
+      "category_tag": "US-China",
+      "headline": "Trump pressed Xi to end Japan freeze; Xi unmoved, SCMP reports",
+      "body": "**Donald Trump** pressed **Xi Jinping** during last month's summit to end Beijing's diplomatic freeze with Japan's **Sanae Takaichi**, people familiar with the talks told the South China Morning Post. Trump raised Japan's grievances over Chinese restrictions imposed after Takaichi said in November that Japan's military might intervene in a Taiwan Strait conflict.",
+      "src_line": "SCMP, Oct. 8"
+    },
+    {
+      "url": "https://www.reuters.com/world/suspect-behind-south-korea-bank-hacks-may-be-26-year-old-china-cybersecurity-2026-10-08/",
+      "source": "Reuters China",
+      "category_tag": "Technology",
+      "headline": "Chinese-based actor using AI agent likely behind South Korea bank hacks",
+      "body": "Cybersecurity firm CrowdStrike said a China-based actor using an AI agent was likely behind a string of hacks on South Korean banks, Reuters reported Thursday. Investigators believe the suspect is a *26-year-old* based in China.",
+      "src_line": "Reuters, Oct. 8"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.reuters.com/world/china/uk-proposes-duty-imports-chinese-rutile-titanium-dioxide-2026-10-07/",
+      "source": "Reuters China",
+      "category": "Trade",
+      "headline": "UK proposes duty on Chinese rutile titanium dioxide imports",
+      "body_text": "The UK proposed a duty on imports of Chinese rutile titanium dioxide, Reuters reported Thursday.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261008-9803045",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "category": "Diplomacy",
+      "headline": "Japan protests China's use of PM Takaichi's name without honorific",
+      "body_text": "Japan lodged a protest after China's foreign ministry repeatedly referred to PM Sanae Takaichi by name without title, Lianhe Zaobao reported.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/ex-bytedance-intern-s-200-million-ai-lab-takes-on-fei-fei-li",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "Ex-ByteDance intern's AI lab raises $200 million",
+      "body_text": "A former ByteDance intern's AI lab raised *$200 million* to compete with Fei-Fei Li's startup, Bloomberg reported.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.ft.com/content/e1dd8bff-b06d-4a40-bbb7-c0a6a36f1c8e?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category": "Technology",
+      "headline": "China races to build AI data centres in Inner Mongolia",
+      "body_text": "China is rolling out AI computing infrastructure at 'breakneck speed' in Inner Mongolia, the Financial Times reported.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-08/copper-gains-with-other-metals-as-china-returns-in-positive-mood",
+      "source": "Bloomberg China",
+      "category": "Economy",
+      "headline": "Copper gains as Chinese markets reopen in 'positive mood'",
+      "body_text": "Copper and other metals gained as Chinese markets reopened after Golden Week, Bloomberg reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/china-s-weak-holiday-spending-casts-shadow-as-markets-reopen",
+      "source": "Bloomberg China",
+      "category": "Economy",
+      "headline": "China's weak holiday spending casts shadow on reopening markets",
+      "body_text": "China's Golden Week spending data came in weak, casting a shadow as markets reopened, Bloomberg reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/uniqlo-operator-fast-retailing-posts-32-rise-full-year-profit-2026-10-08/",
+      "source": "Reuters China",
+      "category": "Economy",
+      "headline": "Uniqlo owner posts record profit as Western sales overtake China",
+      "body_text": "Fast Retailing posted record profit as Western sales overtook China sales, Reuters reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/10/08/2003865575",
+      "source": "Taipei Times (direct)",
+      "category": "Technology",
+      "headline": "Taiwan's TAIEX beats South Korea's KOSPI by widest margin since 2000s",
+      "body_text": "Taiwan's TAIEX outperformed South Korea's KOSPI by *23 percentage points* last quarter, the widest gap since the century's turn, Taipei Times reported.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202610080008",
+      "source": "Focus Taiwan",
+      "category": "Cross-Strait",
+      "headline": "Taiwan parties name 16 committee conveners for new Legislative Yuan session",
+      "body_text": "Taiwan's parties named 16 committee conveners for the new Legislative Yuan session, Focus Taiwan reported.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.taiwannews.com.tw/news/6454261",
+      "source": "Taiwan News",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Coast Guard 'Friendship Fleet' arrives in Palau",
+      "body_text": "Taiwan's Coast Guard 'Friendship Fleet' arrived in Palau, Taiwan News reported.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://world.huanqiu.com/article/4TWu9OlNkIJ",
+      "source": "环球时报 (Global Times ZH)",
+      "category": "Diplomacy",
+      "headline": "China rejects US bribery claim against Fiji overseas-Chinese center director",
+      "body_text": "China's foreign ministry rejected a US State Department claim that a Fiji overseas-Chinese center director bribed officials, Global Times reported.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.reuters.com/science/scientists-vienna-beijing-create-worlds-first-nuclear-clocks-2026-10-07/",
+      "source": "Reuters China",
+      "category": "Technology",
+      "headline": "Vienna and Beijing scientists unveil world's first nuclear clocks",
+      "body_text": "Scientists in Vienna and Beijing created the world's first nuclear clocks, Reuters reported, a joint advance in ultra-precise timekeeping. The collaboration spans two capitals amid broader US-China and Europe-China friction over technology access."
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.cnbc.com/2026/10/08/huawei-china-smartphone-ev-slow.html",
+      "source": "CNBC China",
+      "headline": "Huawei doubles down on smartphones as EV sales slow",
+      "body_text": "Huawei is rebuilding its consumer smartphone business after US sanctions *halved* its segment revenue, CNBC reported Thursday, as the company's EV sales slow.",
+      "companies": [
+        "Huawei"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/08/chinas-real-estate-market-may-be-set-for-a-turnaround-sp-says.html",
+      "source": "CNBC China",
+      "headline": "China's property market may turn around as soon as next year, S&P says",
+      "body_text": "S&P Global Ratings said a recovery in China's largest-city real estate markets could arrive as early as next year, CNBC reported Thursday, after a yearslong slump.",
+      "companies": [
+        "S&P Global"
+      ],
+      "sector": "property"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/08/autos-china-evs-uk-tariffs-hybrid-cars.html",
+      "source": "CNBC China",
+      "headline": "Britain weighs tariff choice on Chinese EVs after US shut them out",
+      "body_text": "Britain faces a finely balanced decision on whether to follow the EU in imposing tariffs on Chinese electric vehicles, CNBC reported Thursday, after the US excluded them from its market.",
+      "companies": [],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/07/supertanker-from-us-to-china-chartered-for-76-million-source.html",
+      "source": "CNBC China",
+      "headline": "Supertanker charter from Gulf Coast to China hits $76 million",
+      "body_text": "A supertanker was chartered from the US Gulf Coast to China for *$76 million*, roughly ten times the pre-war level, CNBC reported, as the Persian Gulf war strains tanker availability.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.wsj.com/finance/investing/bond-yields-are-surging-around-the-worldbut-not-in-china-efd4c694",
+      "source": "WSJ China",
+      "headline": "Bond yields surge worldwide but not in China, WSJ finds",
+      "body_text": "Global bond yields are climbing sharply while China's have held steady, the Wall Street Journal reported Thursday.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.scmp.com/tech/tech-trends/article/3370177/chinas-ai-chipmaker-biren-tumbles-12-it-seeks-us510-million-share-placement?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "China's AI chipmaker Biren falls 12% on $510 million share placement",
+      "body_text": "Shanghai Biren Technology shares dropped more than *12 percent* in Hong Kong after it moved to raise HK$4 billion (US$510 million) via a share placement at HK$31.08 apiece, SCMP reported Thursday.",
+      "companies": [
+        "Shanghai Biren Technology"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.guancha.cn/CaiJing/2026_10_08_903549.shtml",
+      "source": "观察者网 (Guancha ZH)",
+      "headline": "Huawei becomes net fee recipient in new Qualcomm patent deal",
+      "body_text": "Huawei and Qualcomm signed a multi-year cross-licensing deal covering 5G, computing, AI and networking patents, per Guancha; Huawei said the deal marks the first time it has turned net revenue-positive in a patent arrangement with Qualcomm, though Qualcomm disputes being described as the net payer.",
+      "companies": [
+        "Huawei",
+        "Qualcomm"
+      ],
+      "sector": "tech"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "WHO Director-General nomination",
+      "statement": "Multilateralism is under strain, and the cause of global health still has a long way to go; how the WHO can remain steady and far-reaching amid this new landscape makes the Secretary-General's role especially important.",
+      "original_zh": "当前多边主义受到冲击，全球卫生健康事业发展任重道远，世卫组织如何在新变局和新形势下行稳致远，秘书长的作用尤为重要。",
+      "addressed_to": "other",
+      "tone": "routine",
+      "context": "Statement confirms China's nomination of Song Li to succeed Tedros Adhanom Ghebreyesus, whose WHO term runs through 2027.",
+      "source": "UDN (经济日报)",
+      "url": "https://money.udn.com/money/story/5599/9803377"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "EU trade deficit dialogue",
+      "statement": "We hope the European side can work with China in the same direction and promote the healthy and stable development of China-EU economic and trade relations.",
+      "original_zh": "希望欧方能够同中方相向而行，推动中欧经贸关系健康稳定发展",
+      "addressed_to": "EU",
+      "tone": "conciliatory",
+      "context": "Remarks came as EU trade commissioner Maroš Šefčovič opened two days of talks in Beijing over the bloc's trade deficit with China.",
+      "source": "Sina Finance (新浪财经)",
+      "url": "https://finance.sina.cn/2026-10-08/detail-iniupafi3759952.d.html"
+    },
+    {
+      "body": "PBOC",
+      "body_chinese": "中国人民银行",
+      "speaker": "PBOC",
+      "role": "central bank policy statement",
+      "topic": "RMB exchange rate and trade surplus",
+      "statement": "Per PBOC: there is no simple linear relationship between the exchange rate and the current account.",
+      "original_zh": "汇率与经常账户不存在简单线性关系",
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "Statement pushes back on arguments that a weak yuan and export tax rebates are the primary drivers of China's export boom.",
+      "source": "Jiemian (界面新闻)",
+      "url": "https://www.jiemian.com/article/15168795.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "MS",
+      "who": "Maroš Šefčovič",
+      "handle_context": "EU Trade Commissioner",
+      "platform_date": "AFP · Oct 8, 2026",
+      "quote_text": "Day one in China, with one goal: begin rebalancing our... unsustainable trade deficit.",
+      "analyst_note": "The EU's goods-and-services deficit with China ran to roughly €1 billion ($1.1 billion) a day in 2025, per European figures cited by AFP.",
+      "badge_class": "sb-p",
+      "url": "https://www.afp.com/en/beijing-eu-trade-envoy-says-deficit-china-unsustainable"
+    },
+    {
+      "avatar_initials": "FM",
+      "who": "Ferdinand Marcos Jnr",
+      "handle_context": "President of the Philippines",
+      "platform_date": "SCMP · Oct 8, 2026",
+      "quote_text": "I don't know if we can find a resolution to the problem, but we are resigned to just being able to manage the problem, so that we do not have mistakes, we do not have misinterpretations.",
+      "analyst_note": "Marcos spoke at the Forbes Global CEO Conference in Singapore on the South China Sea dispute with Beijing.",
+      "badge_class": "sb-p",
+      "url": "https://www.scmp.com/week-asia/politics/article/3370202/marcos-says-philippines-resigned-managing-south-china-sea-dispute?utm_source=rss_feed"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "WHO Director-General candidate (China's nominee)",
+      "name": "Song Li",
+      "action": "nominated",
+      "detail": "China confirmed nominating Song Li, Secretary of the Secretariat of the All-China Women's Federation and former head of the National Health Commission's maternal and child health department, to run for WHO Director-General.",
+      "predecessor": "Tedros Adhanom Ghebreyesus (term runs through 2027)"
+    },
+    {
+      "position": "Shenzhen Mayor (former)",
+      "name": "Qin Weizhong (覃伟中)",
+      "action": "under investigation",
+      "detail": "China's anti-graft agency CCDI announced Sept. 21, 2026 that Qin Weizhong, an alternate member of the 20th CCP Central Committee and former Shenzhen mayor, is under investigation for 'serious violations of discipline and law'; he is the third of four Shenzhen mayors since 2005 to fall under investigation, per Hong Kong media.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/china/china-militia-boat-spotted-first-time-off-taiwans-east-coast-patrol-finds-2026-10-08/",
+    "https://www.nytimes.com/2026/10/08/world/asia/china-military-base-laos.html",
+    "https://www.scmp.com/news/china/diplomacy/article/3370170/kremlin-aide-visits-china-amid-speculation-about-potential-xi-putin-trump-meeting",
+    "https://www.japantimes.co.jp/news/2026/10/07/asia-pacific/politics/north-korea-us-taiwan-russia/",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/08/2003865612"
+  ],
+  "story_count": 100,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 110,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-08.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-08.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
