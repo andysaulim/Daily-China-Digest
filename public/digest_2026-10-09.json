@@ -1,0 +1,531 @@
+{
+  "digest_date": "Friday, October 9, 2026",
+  "re_line": "Laos PLA base · SCS vessels surge to 101 · PBOC defends yuan · US disrupts China hacking · Taiwan flag defies Beijing",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "24,211.35",
+      "change_pct": 1.0,
+      "as_of": "Oct 09"
+    },
+    "sse_composite": {
+      "value": "3,813.79",
+      "change_pct": -0.26,
+      "as_of": "Oct 09"
+    },
+    "usd_cny": {
+      "value": "6.6814",
+      "change_pct": -0.34,
+      "as_of": "Oct 09"
+    },
+    "brent": {
+      "value": "103.09",
+      "change_pct": 2.76,
+      "as_of": "Oct 09"
+    },
+    "usd_cnh": {
+      "value": "6.6919",
+      "change_pct": -0.15,
+      "as_of": "Oct 09"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "China's PBOC publicly rejected pressure to let the yuan appreciate a day before EU trade negotiators arrive in Beijing, saying it has 'no need or intention' to gain trade advantage through currency weakness.",
+    "The NYT and CNN report China is widening a runway at Ban Keun, Laos, a former CIA Air America site, into a PLA-linked logistics hub, though it currently handles only small jets.",
+    "Manila's military says Chinese navy and coast guard vessels around disputed Philippine-claimed features nearly doubled last month to 101, even as Beijing and Manila traded blame over a medical evacuation from the grounded BRP Sierra Madre."
+  ],
+  "key_stat": {
+    "number": "101",
+    "label": "Chinese navy/coast guard vessels around Philippine-claimed SCS features, Sept 2026",
+    "context": "Nearly double August's count of 56 vessels, per the Philippine military's tally around Thitu Island, Second Thomas Shoal, Sabina Shoal and Scarborough Shoal.",
+    "source": "SCMP / Taipei Times, Oct 9"
+  },
+  "prc_government": [
+    {
+      "ministry": "Foreign Ministry",
+      "ministry_chinese": "外交部",
+      "official": "Mao Ning, MOFA spokesperson",
+      "action": "Announces Botswana president's state visit to China",
+      "document": null,
+      "detail": "Botswana President Duma Boko will make a state visit to China Oct 12-17 at Xi Jinping's invitation, with multiple talks and meetings plus a visit to Fujian province.",
+      "source_label": "MOFA/People's Daily",
+      "url": "http://world.people.com.cn/n1/2026/1009/c1002-40811480.html"
+    },
+    {
+      "ministry": "State Council (HK-Shenzhen port authorities)",
+      "ministry_chinese": "国务院",
+      "official": "HK Security Bureau / Shenzhen Port Affairs Office (joint announcement)",
+      "action": "Sets Oct 12 opening date for new Huanggang border crossing",
+      "document": "Joint announcement on Huanggang Port opening",
+      "detail": "The new Huanggang Port immigration building opens at 6:30am Oct 12 with 24-hour clearance for passengers and vehicles; service to the temporary Lok Ma Chau inspection building will be suspended.",
+      "source_label": "Xinhua/HK Government",
+      "url": "https://www.news.cn/gangao/20261009/83ecdde1a1f840b98d72ab6454cd054d/c.html"
+    },
+    {
+      "ministry": "Ministry of National Defense",
+      "ministry_chinese": "国防部",
+      "official": null,
+      "action": "Publishes explainer on 15th Five-Year Plan military modernization goals",
+      "document": "\"决定性进展\"的关键一程 (explainer on defense/military modernization)",
+      "detail": "MND outlined the 'decisive progress' framework for defense and military modernization during the 15th Five-Year Plan period, ahead of the Fifth Plenum expected this month.",
+      "source_label": "MND",
+      "url": "http://www.mod.gov.cn/gfbw/gfjy_index/16491675.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 12,
+      "headline": "Botswana president begins state visit to China",
+      "detail": "President Duma Boko holds talks in Beijing and visits Fujian province through Oct 17, per MOFA's Oct 9 announcement."
+    },
+    {
+      "month": "Oct",
+      "day": 12,
+      "headline": "Huanggang border crossing opens between Hong Kong and Shenzhen",
+      "detail": "The new 24-hour crossing opens at 6:30am, replacing the temporary inspection facility to Lok Ma Chau."
+    },
+    {
+      "month": "Oct",
+      "day": 19,
+      "headline": "Keen Sword 27 US-Japan exercise begins",
+      "detail": "The drill runs Oct 19-29 involving about 45,000 Japanese and 12,000 US personnel, rehearsing missile and air-defense deployments to islands near Taiwan."
+    },
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "55th anniversary of UN Resolution 2758",
+      "detail": "The anniversary remains a contested-interpretation flashpoint over Taiwan's UN status."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "Trump is expected to visit Shenzhen and meet Xi again; Bessent may skip the APEC finance ministers' session in Hong Kong to focus on preparations, per SCMP."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/09/2003865675",
+      "source": "Taipei Times",
+      "category": "Indo-Pacific",
+      "headline": "Taiwan coast guard 'friendship fleet' docks in Palau",
+      "body_text": "Two Taiwan Coast Guard vessels, the Chiayi and Penghu, docked at Malakal Harbor in Palau this week as part of a goodwill expedition, with a senior official expected to meet President Surangel Whipps Jr. It is the second such friendship fleet Taiwan's coast guard has dispatched abroad."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/energy/vietnam-offshore-oil-and-gas-draw-japan-us-russia-to-south-china-sea",
+      "source": "Nikkei Asia",
+      "category": "Energy",
+      "headline": "Vietnam offshore oil and gas projects draw Japan, US, Russia",
+      "body_text": "New offshore oil and gas projects off Vietnam's coast are drawing Japanese, American and Russian investment into some of Southeast Asia's richest reserves, Nikkei reports. The activity sits in waters also claimed in part under China's South China Sea assertions."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/travel-leisure/japan-s-tourist-spending-windfall-shrinks-as-chinese-visitors-plunge",
+      "source": "Nikkei Asia",
+      "category": "Indo-Pacific",
+      "headline": "Japan's inbound tourism spending shrinks as Chinese visitors plunge",
+      "body_text": "Japan's foreign tourism spending windfall is slowing due to a sharp decline in Chinese visitors, official data released Thursday showed. Chinese tourists had been a major driver of Japan's inbound revenue growth in prior years."
+    },
+    {
+      "url": "https://asia.nikkei.com/spotlight/supply-chain/japan-s-mitsubishi-materials-taps-vietnam-for-tungsten-as-china-alternative",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Mitsubishi Materials sources Vietnam tungsten to cut China reliance",
+      "body_text": "Mitsubishi Materials is sourcing recycled tungsten from Vietnam for carbide tools, turning to a costlier supply source to reduce dependence on China for the industrial metal. The move reflects wider Japanese efforts to diversify critical-mineral supply chains."
+    },
+    {
+      "url": "https://companies.caixin.com/2026-10-09/102491606.html",
+      "source": "Caixin",
+      "category": "Legal",
+      "headline": "Ex-Greentown China chairman charged with bribery in Hong Kong",
+      "body_text": "Hong Kong's ICAC charged former Greentown China chairman Zhang Yadong with conspiracy to accept bribes, alleging he took *HK$20 million* to facilitate a RMB440 million Dalian property purchase. Zhang, 58, appeared in court and was granted HK$1 million bail."
+    },
+    {
+      "url": "https://www.scmp.com/news/china/science/article/3370319/russia-lifts-plague-lab-related-measures-should-china-and-world-be-relieved?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Health",
+      "headline": "Russia's plague-lab death sparks concern in China and beyond",
+      "body_text": "Russian authorities deny a lab technician's death in Siberia is linked to plague, but the incident has drawn concern in China and globally over transparency. Donald Trump said he plans to speak with Vladimir Putin about the matter."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.cnbc.com/2026/10/09/taiwan-trump-china-militia-boat-tsmc-.html",
+      "source": "CNBC",
+      "headline": "US envoy says investors overpricing Taiwan conflict risk",
+      "body_text": "A US East Asian envoy said investors are overestimating the risk of cross-strait conflict, arguing that emphasizing deterrence helps keep Beijing from moving against the island. The remarks follow weeks of PLA pressure activity, including a newly reported militia-boat sighting off Taiwan's east coast.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370295/bessent-may-skip-apec-hong-kong-focus-trumps-shenzhen-visit-sources-say?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Bessent may skip APEC Hong Kong to focus on Trump's Shenzhen visit",
+      "body_text": "Treasury Secretary **Scott Bessent** may skip the APEC finance ministers' meeting in Hong Kong this month to focus on preparing **Donald Trump**'s November visit to Shenzhen, sources told SCMP. Bessent is expected to meet Vice-Premier **He Lifeng** in Shenzhen ahead of Trump's talks with Xi Jinping on a longer trade-truce extension.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-08/rubio-urges-portugal-and-europe-to-reduce-dependence-on-china",
+      "source": "Bloomberg",
+      "headline": "Rubio urges Portugal, Europe to cut China dependence",
+      "body_text": "Secretary of State **Marco Rubio** urged Portugal and the rest of Europe to reduce dependence on China, Bloomberg reports. The remarks come as the EU separately negotiates with Beijing over the yuan and car exports.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.afp.com/en/fiji-demands-us-provide-evidence-chinese-official-paid-bribes-beijing",
+      "source": "AFP",
+      "headline": "Fiji demands US evidence on Chinese official's alleged bribes",
+      "body_text": "Fiji's government demanded Washington produce evidence behind claims that **Zhao Fugang**, director of the Overseas Chinese Service Centre in Suva, paid bribes on behalf of Beijing. The State Department accused Zhao of 'significant corruption' on Wednesday; Fiji said allegations must go through its own legal process.",
+      "instrument": "Sanctions"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3370210/how-expanded-japan-us-military-exercises-could-complicate-pla-planning-over-taiwan?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Keen Sword 27 to rehearse missile deployments near Taiwan",
+      "body_text": "Japan and the US will rehearse moving anti-ship missiles, air defenses and communications networks onto islands near Taiwan during Keen Sword 27, running Oct 19-29. The exercise expands to about *45,000* Japanese personnel and 12,000 US personnel, up from roughly 33,000 Japanese troops in 2024.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.ft.com/content/e1823a4a-7a0d-4550-aa00-d685bc642c98?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "EU envoy lands in Beijing for last-ditch car export talks",
+      "body_text": "An EU envoy arrived in Beijing for last-ditch talks over Chinese car exports, with Brussels blaming Beijing's surging exports for the loss of tens of thousands of European manufacturing jobs. The visit follows the PBOC's Thursday currency-policy paper and comes as European industry groups press for faster EU action.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/09/2003865662",
+      "source": "Taipei Times",
+      "headline": "Taiwan spots first China militia boat off east coast",
+      "body_text": "A Chinese militia boat, the Minfudingyu 07902, was seen operating alongside a coast guard cutter and a research vessel off Taiwan's east coast in mid-August, the first confirmed sighting of such a craft there. Taiwan's defense ministry said China is using 'law enforcement and scientific research as cover for harassment' to practice for a potential blockade.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/09/2003865654",
+      "source": "Taipei Times",
+      "headline": "EU Parliament rejects China's pressure on Taiwan's participation",
+      "body_text": "The European Parliament adopted a recommendation rejecting China's efforts to restrict Taiwan's participation in international organizations, citing pressure over Vice President **Hsiao Bi-khim**'s appearance at a European Parliament-organized conference last month. The text also expressed 'strong disapproval' of China's transnational repression, citing the investigation into Legislator **Puma Shen**.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/taiwan-s-kmt-shows-signs-of-power-struggle-tracked-by-us-and-china",
+      "source": "Nikkei Asia",
+      "headline": "KMT power struggle tracked by US and China ahead of elections",
+      "body_text": "Tensions inside Taiwan's main opposition KMT are brewing weeks ahead of the Nov 28 local elections, with the internal struggle being tracked by both Washington and Beijing, Nikkei reports. The elections for 22 mayors and magistrates are widely read as a mid-term on President **Lai Ching-te**.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/10/08/china-who-nominee-song-un/686b2846-c307-11f1-8170-681419af1cc9_story.html",
+      "source": "Washington Post",
+      "headline": "China nominates health official to lead WHO",
+      "body_text": "China nominated a health official to lead the World Health Organization, the Washington Post reports, in a bid for greater influence over the UN health body. The nomination follows Beijing's broader push to fill multilateral leadership gaps amid reduced US engagement with UN institutions.",
+      "region": "Multilateral"
+    },
+    {
+      "url": "https://www.reuters.com/business/finance/former-german-spy-chief-had-contacts-with-chinese-official-spiegel-reports-2026-10-09/",
+      "source": "Reuters",
+      "headline": "Former German spy chief had contacts with Chinese official",
+      "body_text": "Germany's former intelligence chief had contacts with a Chinese official, Der Spiegel reported, according to Reuters. The report did not specify the nature or timing of the contacts.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/european-industry-groups-call-urgent-eu-action-china-trade-2026-10-08/",
+      "source": "Reuters",
+      "headline": "European industry groups press Brussels for urgent China trade action",
+      "body_text": "European industry groups called for urgent EU action on China trade, Reuters reports, as Brussels weighs tariff and policy responses to rising Chinese export volumes. The call lands alongside an EU envoy's visit to Beijing this week over car exports.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-08/brazil-election-bolsonaro-says-he-d-work-with-us-china-as-president",
+      "source": "Bloomberg",
+      "headline": "Bolsonaro says he would work with both US and China as president",
+      "body_text": "Brazilian presidential contender **Jair Bolsonaro** said he would work with both the US and China if elected, Bloomberg reports. The comment reflects Brazil's balancing act between China, its largest trading partner, and its historic US ties.",
+      "region": "Latin America"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370306/china-and-philippines-blame-each-other-over-south-china-sea-medical-mission?utm_source=rss_feed",
+      "source": "SCMP",
+      "category_tag": "Indo-Pacific",
+      "headline": "Chinese vessels near Philippine-claimed features nearly double to 101",
+      "body": "Manila's military tally shows Chinese navy and coast guard vessels around Philippine-claimed South China Sea features nearly doubled in September to *101*, up from 56 in August, around Thitu Island, Second Thomas Shoal, Sabina Shoal and Scarborough Shoal. The same week, Beijing and Manila traded blame after a Philippine serviceman was evacuated from the grounded BRP Sierra Madre at Second Thomas Shoal. Philippine Navy spokesman **Roy Vincent Trinidad** called the buildup a 'mission kill' operation.",
+      "src_line": "SCMP, Oct 9; also Taipei Times, HKFP"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/china-has-no-need-or-intention-weaken-yuan-trade-edge-central-bank-says-2026-10-08/",
+      "source": "Reuters",
+      "category_tag": "PRC-Economy",
+      "headline": "PBOC defends yuan policy ahead of EU trade talks",
+      "body": "The PBOC issued a policy paper Thursday stating China 'has no need or intention' to weaken the yuan for trade advantage and does not preset a target exchange rate, directly rebutting IMF-based arguments for appreciation. The paper, published in Chinese and English, lands a day before EU trade negotiators arrive in Beijing and after European officials linked China's currency to its trade surplus.",
+      "src_line": "Reuters, Oct 8; also Bloomberg, SCMP, Sinocism"
+    },
+    {
+      "url": "https://www.reuters.com/technology/us-announces-effort-disrupt-hacking-infrastructure-run-by-chinas-integrity-tech-2026-10-09/",
+      "source": "Reuters",
+      "category_tag": "Sanctions",
+      "headline": "US moves to disrupt hacking infrastructure tied to China's Integrity Tech",
+      "body": "The US said Thursday it is working to disrupt hacking infrastructure it attributes to China's Integrity Tech Group, and the FBI separately confirmed it seized tools used in the operation. MOFA spokeswoman **Mao Ning** responded the same day, urging Washington to 'abandon double standards' and pursue 'equal dialogue' with Beijing on cybersecurity.",
+      "src_line": "Reuters, AP, Oct 9"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/giant-taiwan-flag-flies-helicopter-national-day-defying-beijing-2026-10-09/",
+      "source": "Reuters",
+      "category_tag": "Cross-Strait",
+      "headline": "Giant Taiwan flag flown from helicopter for National Day",
+      "body": "A giant Taiwan flag was flown from a helicopter over Taipei to mark National Day, an open display of defiance toward Beijing's territorial claims. The display came during a Double Ten holiday weekend that included a Twin Oaks reception hosted by Taiwan's Washington office and reports of increased Chinese coast guard activity off Taiwan's east coast.",
+      "src_line": "Reuters, Oct 9"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://asia.nikkei.com/business/tech/semiconductors/sumitomo-bakelite-to-boost-chip-encapsulant-output-in-china-singapore",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Sumitomo Bakelite to raise chip-encapsulant output in China, Singapore",
+      "body_text": "Sumitomo Bakelite will raise output of advanced-chip encapsulation materials in China and Singapore to meet growing data-center demand.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/graphics/2026-china-ai-energy-future/",
+      "source": "Bloomberg",
+      "category": "Technology",
+      "headline": "China's AI race hinges on its green energy advantage, Bloomberg finds",
+      "body_text": "Bloomberg graphics track how China's renewable energy buildout underpins its push to compete with the US in AI compute.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/features/2026-10-08/china-s-delivery-robots-are-learning-to-tackle-the-night-shift",
+      "source": "Bloomberg",
+      "category": "Technology",
+      "headline": "China's delivery robots expand into overnight hours",
+      "body_text": "Chinese delivery-robot operators are expanding into overnight hours as urban logistics automation scales nationwide, Bloomberg reports.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-09/china-stocks-rebound-on-unconfirmed-talks-of-regulator-guidance",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "China stocks rebound on unconfirmed regulator guidance talk",
+      "body_text": "Chinese equities rebounded on unverified market talk that regulators had issued guidance supporting share prices, Bloomberg reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-09/chinese-bonds-become-source-of-cheap-money-for-global-borrowers",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "Chinese bonds become a source of cheap money for global borrowers",
+      "body_text": "Global borrowers are increasingly tapping China's bond market for cheaper financing than available in Western markets, Bloomberg reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-09/copper-set-for-weekly-gain-on-china-s-return-and-supply-concerns",
+      "source": "Bloomberg",
+      "category": "Energy",
+      "headline": "Copper set for weekly gain as China returns",
+      "body_text": "Copper is headed for a weekly gain as Chinese buyers return from the holiday and supply concerns persist, Bloomberg reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/newsletters/2026-10-08/china-s-stimulus-may-shore-up-gdp-while-reinforcing-imbalances",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "Beijing's stimulus may lift GDP while deepening imbalances",
+      "body_text": "Beijing's stimulus could lift near-term GDP while deepening the structural imbalances it is meant to fix, Bloomberg's newsletter finds.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.voachinese.com/a/taiwan-twin-oaks-20261008/8209322.html",
+      "source": "VOA Chinese",
+      "category": "Cross-Strait",
+      "headline": "Taiwan's Washington envoy says US arms sales will continue",
+      "body_text": "Taiwan's representative to the US, **Alexander Yui**, said at a Double Ten reception that Washington's arms sales to Taiwan will continue.",
+      "color_bar_class": "cb-navy"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.scmp.com/tech/big-tech/article/3370297/china-state-funds-double-down-hua-hong-legacy-chip-push?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "China state funds double down on Hua Hong in legacy chip push",
+      "body_text": "Chinese state funds are pouring billions of yuan into Hua Hong Grace Semiconductor's parent company and a new Wuxi fabrication plant to build out mature-node chip capacity, as Washington tightens tech restrictions on Chinese chipmakers.",
+      "companies": [
+        "Hua Hong Grace Semiconductor"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/porsches-nine-month-sales-slide-16-on-weak-china-demand-focus-value-over-volume-2026-10-09/",
+      "source": "Reuters",
+      "headline": "Porsche's nine-month sales slide 16% on weak China demand",
+      "body_text": "**Porsche**'s nine-month sales fell *16 percent* on weak China demand, with the automaker prioritizing value over volume in the market.",
+      "companies": [
+        "Porsche"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/record-chinese-turnout-puts-european-carmakers-under-pressure-paris-show-2026-10-09/",
+      "source": "Reuters",
+      "headline": "Record Chinese turnout pressures European carmakers at Paris show",
+      "body_text": "Record Chinese exhibitor turnout at the Paris auto show put European carmakers under renewed competitive pressure, Reuters reports.",
+      "companies": [],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.reuters.com/business/finance/chinas-tax-crackdown-piles-pressure-luxury-brands-as-us-spending-falters-2026-10-09/",
+      "source": "Reuters",
+      "headline": "China's tax crackdown squeezes luxury brands as US spending falters",
+      "body_text": "China's tax crackdown is piling pressure on luxury brands just as US spending on luxury goods falters, Reuters reports.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-09/ecobank-taps-yuan-payments-as-it-eyes-africa-s-trade-with-china",
+      "source": "Bloomberg",
+      "headline": "Ecobank taps yuan payments to capture Africa-China trade",
+      "body_text": "**Ecobank** is expanding yuan-payment services to capture Africa's growing trade with China, Bloomberg reports.",
+      "companies": [
+        "Ecobank"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-09/china-s-tech-hardware-selloff-extends-as-valuation-concerns-rise",
+      "source": "Bloomberg",
+      "headline": "China's tech hardware selloff extends on valuation concerns",
+      "body_text": "China's tech hardware stocks extended their selloff on valuation concerns, Bloomberg reports, following a period of sharp gains in AI and semiconductor-linked names.",
+      "companies": [],
+      "sector": "tech"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Denial of reported US-China nuclear facility visits",
+      "statement": "Per 新京报: US media reports that China and the US have discussed mutual visits to nuclear facilities do not accord with the facts.",
+      "original_zh": "美媒称中美双方已探讨互访核设施，外交部：与事实不符",
+      "addressed_to": "US",
+      "tone": "routine",
+      "context": "Asked about reports that Chinese and US officials discussed reciprocal nuclear-facility visits, MOFA denied the account at the Oct 9 briefing.",
+      "source": "新京报 (via MOFA presser)",
+      "url": "https://www.bjnews.com.cn/detail/1791536980129340.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Response to US cybersecurity/hacking accusations",
+      "statement": "Per 京报网: MOFA urges the US side to abandon double standards and political manipulation, and to build a peaceful, stable and mutually respectful China-US cyber relationship.",
+      "original_zh": "外交部：敦促美方摒弃双重标准和政治操弄，构建和平稳定、相互尊重的中美网络关系",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "The statement followed a US announcement that it disrupted hacking infrastructure it attributes to China's Integrity Tech Group and an FBI seizure of related tools.",
+      "source": "京报网 (via MOFA presser)",
+      "url": "https://news.bjd.com.cn/2026/10/09/11988517.shtml"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Second Thomas Shoal medical evacuation dispute with Philippines",
+      "statement": "Per 国际在线: The Philippine side disregards the facts; China will resolutely respond to any malicious provocation.",
+      "original_zh": "外交部：菲方罔顾事实 中方将坚决回应任何恶意挑衅",
+      "addressed_to": "Philippines",
+      "tone": "warning",
+      "context": "MOFA responded after Manila accused Beijing of obstructing a medical evacuation from the BRP Sierra Madre at Second Thomas Shoal and reported a near-doubling of Chinese vessels in the area.",
+      "source": "国际在线 (via MOFA presser)",
+      "url": "https://news.cri.cn/20261009/c7c00218-ab3d-4383-bb2c-bfbd3d7583ba.html"
+    },
+    {
+      "body": "Wang Yi",
+      "body_chinese": "王毅",
+      "speaker": "Wang Yi",
+      "role": "Politburo member, Director of the CCP Central Foreign Affairs Office",
+      "topic": "Meeting with Pacific Island politicians delegation",
+      "statement": "Per 中国军网: Under the joint guidance of President Xi Jinping and Pacific Island leaders, China's comprehensive strategic partnership with Pacific Island countries has grown more mature and resilient, and China wants to build an even closer China-Pacific Island Countries community of shared destiny.",
+      "original_zh": "在习近平主席和太平洋岛国领导人共同引领下，中国同太平洋岛国全面战略伙伴关系更加成熟稳健...携手构建更加紧密的中国－太平洋岛国命运共同体",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Wang met a delegation of Pacific Island politicians led by Tonga's deputy prime minister Lātū, who pledged continued adherence to the one-China policy.",
+      "source": "中国军网 (解放军报)",
+      "url": "http://www.81.cn/ss_208539/16491747.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "RT",
+      "who": "Roy Vincent Trinidad",
+      "handle_context": "Rear Admiral, Philippine Navy Spokesman",
+      "platform_date": "Taipei Times/AFP · Oct 9, 2026",
+      "quote_text": "It's called mission kill. It seeks to destroy your capability to continue the mission.",
+      "analyst_note": "Manila's military reported Chinese navy and coast guard vessels around disputed features rose to 101 in September from 56 in August.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/world/archives/2026/10/09/2003865681"
+    },
+    {
+      "avatar_initials": "TI",
+      "who": "Tsai Ing-wen",
+      "handle_context": "Former President of Taiwan",
+      "platform_date": "Taipei Times · Oct 7, 2026",
+      "quote_text": "The Taiwan Strait is one of the world's most important trade and energy routes, and Taiwan is deeply integrated into global technology and manufacturing networks.",
+      "analyst_note": "Tsai delivered the keynote at the Stanford Conference on Technology and National Security, hosted by Stanford DEFCON.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/09/2003865653"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Chairman, Greentown China (former)",
+      "name": "Zhang Yadong",
+      "action": "prosecuted",
+      "detail": "Hong Kong's ICAC charged Zhang with conspiracy to accept bribes, alleging he took HK$20 million to facilitate a RMB440 million Dalian property purchase; he was granted HK$1 million bail.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.scmp.com/news/china/diplomacy/article/3370306/china-and-philippines-blame-each-other-over-south-china-sea-medical-mission?utm_source=rss_feed",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/09/2003865662",
+    "https://www.nytimes.com/2026/10/08/world/asia/china-military-base-laos.html",
+    "https://www.scmp.com/news/china/military/article/3370210/how-expanded-japan-us-military-exercises-could-complicate-pla-planning-over-taiwan?utm_source=rss_feed"
+  ],
+  "story_count": 101,
+  "oped_count": 9,
+  "academic_count": 0,
+  "source_count": 109,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-09.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-09.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
