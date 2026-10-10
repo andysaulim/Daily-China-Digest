@@ -1,0 +1,481 @@
+{
+  "digest_date": "Saturday, October 10, 2026",
+  "re_line": "China-EU hybrid car deal · Lai's Double Ten defense pledge · US calls PLA Taiwan patrols 'destabilising' · Beijing's AI safety guidelines",
+  "market_indicators": {
+    "usd_cny": {
+      "value": "6.6830",
+      "change_pct": -0.32,
+      "as_of": "Oct 10"
+    },
+    "hang_seng": {
+      "value": "24,211.35",
+      "change_pct": 1.0,
+      "as_of": "Oct 09"
+    },
+    "brent": {
+      "value": "104.72",
+      "change_pct": 4.39,
+      "as_of": "Oct 09"
+    },
+    "sse_composite": {
+      "value": "3,813.79",
+      "change_pct": -0.26,
+      "as_of": "Oct 09"
+    },
+    "usd_cnh": {
+      "value": "6.6920",
+      "change_pct": -0.15,
+      "as_of": "Oct 09"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    }
+  },
+  "morning_memo": [
+    "China and the EU reached an understanding to roughly halve Chinese hybrid-vehicle exports to the bloc over four years, after Brussels cited a trade deficit of €1.18 billion a day.",
+    "President Lai Ching-te pledged a record NT$1.1 trillion ($34.5 billion) 2027 defense budget in his Double Ten address, saying the increase is meant 'to deter war,' while the US State Department called China's maritime patrols off Taiwan's east coast 'deeply destabilising.'",
+    "Beijing's Central Committee and State Council issued new guidelines mandating AI risk-monitoring systems alongside a full rollout of the 'AI Plus' industrial initiative, Xinhua reported."
+  ],
+  "key_stat": {
+    "number": "€1.18B/day",
+    "label": "EU-China auto trade deficit cited in hybrid-car deal",
+    "context": "Trade commissioner Maroš Šefčovič said the gap, the result of 'intense' talks since June, drove Brussels to negotiate a deal that could cut Chinese hybrid exports by more than half within four years."
+  },
+  "prc_government": [],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758 55th anniversary",
+      "detail": "Contested-interpretation flashpoint over Taiwan's UN status, following Lai's Double Ten call for Taiwan's 'right to exist' to be respected."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Outcome reshapes the House Select Committee on the CCP and other China-focused congressional panels."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan one-year suspensions approach lapse",
+      "detail": "The BIS Affiliates ('50%') Rule suspension and China's October 2025 rare-earth export-control suspension are both due to expire around this date unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts; a further Trump-Xi meeting could occur on the sidelines following Trump's pledge to meet Xi again this year."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3370374/chinese-researchers-make-arctic-antarctic-call-using-rival-musks-starlink?utm_source=rss_feed",
+      "source": "SCMP China",
+      "category": "Technology",
+      "headline": "China tests Guowang satellite network with Arctic-to-Antarctic call",
+      "body_text": "Polar researchers used China's nascent Guowang constellation to make a satellite video call between the Arctic and Antarctic, the first publicly reported test of the Starlink rival. Guowang has roughly *180* satellites in orbit versus Starlink's 11,000, state media reported."
+    },
+    {
+      "url": "https://www.scmp.com/news/china/science/article/3370149/new-taipei-hong-kong-subsea-route-opened-cut-risk-and-meet-ai-demand?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Technology",
+      "headline": "New Taipei-Hong Kong subsea cable route opens to cut disruption risk",
+      "body_text": "UK-based network provider RETN opened a new subsea cable route between Taipei and Hong Kong, bringing its total Taiwan-serving routes to six. The move aims to reduce exposure to recurring undersea cable disruptions around the island."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/10/2003865715",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Tsai Ing-wen tells Stanford audience Taiwan offers 'much more than tech'",
+      "body_text": "Former Taiwan president **Tsai Ing-wen** told a Hoover Institution audience that Taiwan's democratic experience, not just semiconductors, defines its global contribution. She warned advances in AI have lowered language barriers, making cross-border disinformation campaigns easier to spread."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/10/2003865728",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Giant Taiwan flag flown under Chinook helicopter for National Day",
+      "body_text": "A Taiwanese flag suspended beneath a US-made Chinook CH-47SD helicopter flew over the Presidential Office Building for Double Ten celebrations, a practice the military has repeated annually since 2019. Taiwan's flag is largely banned from international display due to Beijing's objections."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/10/2003865733",
+      "source": "Taipei Times",
+      "category": "Indo-Pacific",
+      "headline": "Taiwan coast guard 'friendship fleet' docks in Palau as donated vessel joins Philippine fleet",
+      "body_text": "Two Taiwan Coast Guard Administration vessels, the Chiayi and Penghu, arrived at Malakal Harbor in Palau for a diplomatic visit, the agency's second such goodwill fleet. Separately, a CGA-donated patrol vessel was commissioned into the Philippine Coast Guard as the BRP Sarangani."
+    },
+    {
+      "url": "https://www.thewirechina.com/2026/10/09/xinjiangs-blue-miracle/",
+      "source": "The Wire China",
+      "category": "PRC-Economy",
+      "headline": "Xinjiang's desert fish-farming boom built on imported feed and political control",
+      "body_text": "A long-form investigation finds Xinjiang's promoted 'blue miracle' aquaculture industry relies heavily on imported feed and runs atop a system of tight political control. Less than 10 percent of the region's 600,000 square miles has ever been fit for human habitation."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370410/key-us-port-china-imports-records-best-ever-quarter-despite-trade-uncertainty?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Port of Los Angeles posts best-ever quarter despite tariff uncertainty",
+      "body_text": "The Port of Los Angeles, the top US gateway for Chinese imports, recorded its busiest three-month period on record from July through September. Executive director **Gene Seroka** said 'If there was ever a time for a drum roll, this is it,' citing persistent tariff and supply-chain uncertainty.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/10/2003865730",
+      "source": "Taipei Times",
+      "headline": "US probe into alleged Chinese agent surveilling Lai's son identifies possible accomplice",
+      "body_text": "CBS News reported that **Miao Fatai**, a Chinese-born California construction entrepreneur, may be the unidentified companion who helped Wanying 'Heather' Zhang surveil the family of Taiwan President Lai's son in Seattle last year. Zhang was arrested by the FBI at Los Angeles International Airport on charges of acting as an unregistered Chinese government agent; Miao flew to China about two weeks ago and has not been accused of wrongdoing.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.globaltimes.cn/page/202610/1371820.shtml",
+      "source": "Global Times",
+      "headline": "FCC plan to bar Chinese testing labs threatens electronics supply chain, Chinese analysts say",
+      "body_text": "A US Federal Communications Commission plan to bar Chinese laboratories from testing electronics for the American market could force manufacturers to shift testing overseas, analysts told Global Times. China this week added US-based Compliance Testing LLC to its own countermeasure list in a reciprocal dispute over electronics certification.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://thediplomat.com/2026/10/why-is-china-proposing-reciprocal-nuclear-laboratory-visits/",
+      "source": "The Diplomat (direct)",
+      "headline": "US, China hold informal talks on reciprocal nuclear lab visits",
+      "body_text": "CNN reported the US and China are in preliminary, informal discussions on reciprocal visits to nuclear facilities, an idea first raised by the Chinese side this year covering US Department of Energy national laboratories and Chinese counterparts. The two sides did not discuss the idea at September's Xi-Trump summit, where they agreed to a 'constructive relationship of strategic stability.'",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.scmp.com/tech/tech-war/article/3370317/anthropic-claims-chinese-ai-firms-secretly-use-claude-it-true?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "NSA, FBI advisory alleges Chinese AI firms secretly tap US frontier models",
+      "body_text": "A joint advisory from the NSA, FBI and CISA last month alleged Chinese AI developers have been systematically extracting capabilities from US frontier models such as Claude to cut their own computing and electricity costs. An analyst told SCMP that if true, Beijing's chief concern would be data security rather than IP theft.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/politics/article/3370402/will-taiwan-issue-derail-washington-and-beijings-latest-reset-analysts-are-sceptical?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Analysts skeptical Taiwan friction will derail US-China reset; $14 billion arms deal in focus",
+      "body_text": "Diplomatic analysts told SCMP recent US-Taiwan interactions, including a new representative office and Tsai Ing-wen's US visit, are unlikely to derail momentum from the Xi-Trump Washington summit. The fate of a *$14 billion* US arms package for Taiwan remains the key concern, they said.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://asia.nikkei.com/economy/trade-war/trump-tariffs/tariffs-targeting-china-s-temu-shein-shrink-us-small-parcel-deliveries",
+      "source": "Nikkei Asia China",
+      "headline": "Tariffs on Temu, Shein shrink US small-parcel import volumes",
+      "body_text": "The volume of small international parcels entering the US and EU has fallen significantly since tariff exemptions for such shipments from China-based retailers Temu and Shein ended. The decline reflects the removal of the de minimis exemption that previously let low-value parcels enter duty-free.",
+      "instrument": "Tariff"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/10/2003865714",
+      "source": "Taipei Times",
+      "headline": "King Mswati III pledges deeper Taiwan-Eswatini ties on 20th visit",
+      "body_text": "**King Mswati III** arrived in Taipei for a state visit marking 58 years of diplomatic ties, pledging to deepen the 'enduring friendship' with Taiwan after Lai's May trip to Eswatini that China tried to block. The monarch said Eswatini would keep advocating for Taiwan's 'meaningful participation' in the UN.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/politics/article/3370442/taiwanese-leader-welcomes-talks-between-washington-and-beijing-reduce-risk-war?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Lai welcomes US-China risk-reduction talks; Beijing says speech 'revealed sinister motives'",
+      "body_text": "**William Lai** used his Double Tenth address to welcome talks between Washington and Beijing aimed at reducing the risk of conflict, adopting a softer tone than in prior years while calling for democracies to safeguard regional peace. Beijing accused him of 'stirring up confrontation' across the Taiwan Strait.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.theguardian.com/world/2026/oct/09/eu-pulling-out-all-stops-with-minerals-projects-as-it-tries-to-avert-china-trade-war",
+      "source": "Guardian China",
+      "headline": "EU backs 46 critical-minerals projects to reduce China dependence",
+      "body_text": "EU industry commissioner **Stéphane Séjourné** said the bloc would support 46 new strategic lithium and rare-earths projects by 2030 to avert a potential trade crisis with China. 'We could face a crisis in the coming months... We need to be prepared for that,' he said.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://asia.nikkei.com/spotlight/big-in-asia/beijing-wields-pop-culture-to-court-malaysian-chinese",
+      "source": "Nikkei Asia China",
+      "headline": "Beijing uses pop culture to court Malaysian Chinese audiences",
+      "body_text": "Chinese films and television are being used to build cultural affinity among Malaysia's ethnic Chinese population, with Malaysian actors describing scenes evoking nostalgia for ancestral dialects. The effort forms part of Beijing's broader soft-power outreach in Southeast Asia.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://thediplomat.com/2026/10/why-afghanistans-neighbors-have-not-backed-pakistans-strikes-on-the-taliban/",
+      "source": "The Diplomat (direct)",
+      "headline": "Moscow Format Afghanistan talks fail to adopt joint statement amid China-Pakistan rift",
+      "body_text": "An October 5 meeting of the Moscow Format, which includes China, failed to adopt a joint statement after Pakistani and Afghan delegates disagreed over references to terrorism. Russia's special envoy **Zamir Kabulov** said changed Pakistan-Afghanistan relations likely drove Kabul's objection.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370299/can-chinas-dancing-robots-swing-some-new-business-partners-africa?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Dancing robots entertain guests at China's National Day events across Africa",
+      "body_text": "Robots performed at China's National Day celebrations in Luanda and Brazzaville, with ambassador **Zhang Bin** calling the displays 'a small snapshot of the Chinese economy's move towards innovation.' Analysts said the performances market China as a technology partner but may not translate into factory deals.",
+      "region": "Africa"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370291/why-confrontational-posture-wont-help-china-arctic?utm_source=rss_feed",
+      "source": "SCMP China",
+      "headline": "Chinese think tank warns against 'confrontational posture' on US-Denmark-Greenland Arctic pact",
+      "body_text": "Shanghai Jiao Tong University's National Institute of Strategic Studies said Beijing risks exclusion from the emerging Arctic order if it takes a confrontational stance toward the new US-Denmark-Greenland security pact. The report said China 'still has considerable policy space' in the region.",
+      "region": "Russia-Central Asia"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/10/09/business/china-european-union-trade.html",
+      "source": "NYT China",
+      "category_tag": "PRC-Economy",
+      "headline": "China, EU step back from trade war with limits on hybrid car exports",
+      "body": "The European Union said a new deal with Beijing could roughly halve shipments of hybrid vehicles from China over the next four years. Trade commissioner Maroš Šefčovič called it the result of 'intense' negotiations since June over a trade deficit of *€1.18 billion a day*.",
+      "src_line": "NYT China / Guardian / FT"
+    },
+    {
+      "url": "https://hongkongfp.com/2026/10/10/taiwans-leader-says-increasing-defence-spending-to-deter-war/",
+      "source": "Hong Kong Free Press",
+      "category_tag": "Cross-Strait",
+      "headline": "Lai pledges record $34.5 billion defense budget 'to deter war'",
+      "body": "President **Lai Ching-te** said Taiwan will spend NT$1.1 trillion (*$34.5 billion*) on defense in 2027, over 3 percent of GDP, telling National Day crowds 'Our aim by increasing investment in national defence is not to provoke, rather, it is to deter war.' He added, 'peace cannot rely solely on wishes, and tolerance cannot become a pretext for aggressors to encroach ever further.'",
+      "src_line": "Hong Kong Free Press / AFP"
+    },
+    {
+      "url": "https://www.channelnewsasia.com/east-asia/us-says-chinas-maritime-actions-taiwan-deeply-destabilising-6448331",
+      "source": "CNA China",
+      "category_tag": "Indo-Pacific",
+      "headline": "US calls China's maritime actions off Taiwan 'deeply destabilising'",
+      "body": "A State Department spokesperson said China's patrols off Taiwan's east coast 'only exacerbate tensions,' after Reuters reported the first known sighting of a Chinese militia boat in those waters in August. China has run regular coast guard patrols off the island's east coast since June, which Taiwan officials believe are rehearsals for a maritime blockade.",
+      "src_line": "CNA China"
+    },
+    {
+      "url": "https://hongkongfp.com/2026/10/10/chinas-new-development-plan-includes-ai-safety-goals-xinhua/",
+      "source": "Hong Kong Free Press",
+      "category_tag": "Technology",
+      "headline": "Beijing's new development guidelines pair AI expansion with safety mandates",
+      "body": "The CCP Central Committee and State Council issued guidelines outlining *19 key measures* in five areas to advance 'new quality productive forces,' including full rollout of the 'AI Plus' initiative. The guidelines also call for 'systems for technology monitoring, early risk warning and emergency response' to keep AI 'safe, reliable and controllable.'",
+      "src_line": "Hong Kong Free Press / Xinhua / AFP"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370323/what-are-concerns-and-priorities-behind-new-language-used-define-china-us-ties?utm_source=rss_feed",
+      "source": "SCMP",
+      "category_tag": "US-China",
+      "headline": "Beijing and Washington add 'respect' and 'reciprocity' to post-summit framework",
+      "body": "Four months after agreeing in May to frame ties as a 'constructive relationship of strategic stability,' the two sides have elaborated the phrase following last month's **Xi Jinping**-Trump summit in Washington. The added principles reflect each side's own priorities, diplomatic observers told SCMP.",
+      "src_line": "SCMP"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.scmp.com/news/hong-kong/transport/article/3370423/how-zoom-through-new-huanggang-port-crossing-hong-kongs-border?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Infrastructure",
+      "headline": "Huanggang Port crossing opens Monday with five-minute joint clearance",
+      "body_text": "The revamped Hong Kong-mainland checkpoint opens Monday with a new 'joint clearance' model promising five-minute processing.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/politics/article/3370417/why-communist-party-boss-had-coffee-shop-date-chinese-content-creators?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Domestic Politics",
+      "headline": "Jilin party secretary meets influencers at coffee shop to push 'positive energy'",
+      "body_text": "Jilin's party boss Huang Qiang invited content creators to a Changchun cafe to encourage promotion of 'mainstream values.'",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/technology/dutch-greenhouse-firms-in-china-pivot-to-selling-software",
+      "source": "Nikkei Asia China",
+      "category": "Agritech",
+      "headline": "Dutch greenhouse suppliers pivot to software sales as China's industry matures",
+      "body_text": "Dutch horticultural firms are shifting from exporting full greenhouses to selling software as China's domestic industry advances.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/10/2003865729",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Taiwan court upholds ruling freezing NT$5.6 billion in KMT youth-body assets",
+      "body_text": "The Supreme Administrative Court upheld a 2018 ruling that the China Youth Corps was a KMT-affiliated body, keeping $176 million frozen.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://thediplomat.com/2026/10/debunking-alarmist-narratives-on-the-china-air-base-in-laos/",
+      "source": "The Diplomat (direct)",
+      "category": "PLA",
+      "headline": "Analysis disputes 'China air base' framing of new Laos training center",
+      "body_text": "Satellite imagery shows eight Chinese training aircraft at the Ban Keun facility, which opened September 29 as a joint support center, not an attack base.",
+      "color_bar_class": "cb-red"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/politics/article/3370401/hong-kong-lawmakers-back-5-year-plan-firms-urged-align-blueprint?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Beijing's HK liaison office urges mainland firms to align with city's five-year plan",
+      "body_text": "Hong Kong's legislature passed motions backing its first five-year plan as the liaison office chief urged mainland enterprises to play a greater role.",
+      "color_bar_class": "cb-mid"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/china-s-geely-announces-entry-into-canadian-auto-market",
+      "source": "Nikkei Asia China",
+      "headline": "Geely announces entry into Canadian auto market",
+      "body_text": "Chinese automaker Geely said it will enter Canada with plans to introduce its first vehicles there in 2027.",
+      "companies": [
+        "Geely"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/food-beverage/once-china-s-most-valuable-stock-liquor-maker-kweichow-moutai-down-43-from-peak",
+      "source": "Nikkei Asia China",
+      "headline": "Kweichow Moutai down 43% from peak as China's once-top stock struggles",
+      "body_text": "China's largest spirits maker and former most valuable listed company is still searching for a formula to arrest its *43 percent* slide from peak.",
+      "companies": [
+        "Kweichow Moutai"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.ft.com/content/b2730098-0767-401f-99b5-a53bd27bd659?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "DJI, Insta360 wage 'civil war' as GoPro's decline opens camera market",
+      "body_text": "GoPro's decline has intensified competition between Chinese camera makers DJI and Insta360 for the top spot in smart cameras globally.",
+      "companies": [
+        "DJI",
+        "Insta360",
+        "GoPro"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.scmp.com/economy/global-economy/article/3370344/chinese-nickel-investors-brace-headwinds-indonesia-weighs-smelter-freeze?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Chinese nickel investors brace as Indonesia weighs smelter moratorium",
+      "body_text": "Indonesia is weighing a halt to new nickel smelter construction amid a global supply glut, a move that could disrupt Chinese-backed supply chains feeding stainless steel and EV battery production, minister Bahlil Lahadalia said.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/science/article/3370437/china-unveils-ai-powered-robot-designed-help-farmers-breed-better-strains-wheat?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "China unveils AI-powered robot for wheat breeding",
+      "body_text": "A smart robot prototype designed to assist wheat breeders made its public debut at a Chinese seminar, state-run China Science Daily reported, aimed at bolstering food security.",
+      "companies": [],
+      "sector": "manufacturing"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "State Council",
+      "body_chinese": "国务院",
+      "speaker": "Xinhua",
+      "role": "State media reporting Central Committee/State Council guidelines",
+      "topic": "AI safety systems within new development guidelines",
+      "statement": "Efforts are also needed to establish systems for technology monitoring, early risk warning and emergency response to ensure that AI is safe, reliable and controllable.",
+      "original_zh": null,
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "The guidelines, covering 19 measures in five areas, pair a full rollout of the 'AI Plus' initiative with new AI risk-control requirements.",
+      "source": "Hong Kong Free Press / Xinhua",
+      "url": "https://hongkongfp.com/2026/10/10/chinas-new-development-plan-includes-ai-safety-goals-xinhua/"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "President",
+      "topic": "Human control over AI development",
+      "statement": "Per HKFP: Xi Jinping said this summer that AI should be \"always under human control,\" calling for more \"laws and regulations, technological monitoring, early warning, and emergency response systems.\"",
+      "original_zh": null,
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "The remarks preceded the Central Committee and State Council's new guidelines formalizing AI risk-monitoring requirements.",
+      "source": "Hong Kong Free Press",
+      "url": "https://hongkongfp.com/2026/10/10/chinas-new-development-plan-includes-ai-safety-goals-xinhua/"
+    },
+    {
+      "body": "Wang Yi",
+      "body_chinese": "王毅",
+      "speaker": "Wang Yi",
+      "role": "Foreign Minister",
+      "topic": "Pacific islands cooperation",
+      "statement": "China's engagement with Pacific island countries is a form of South-South cooperation based on mutual assistance and support.",
+      "original_zh": null,
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Wang made the remarks to a delegation of Pacific island politicians as the US and China compete for influence across the South Pacific.",
+      "source": "SCMP",
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370393/chinas-pacific-ties-not-part-geopolitical-rivalry-wang-yi-tells-island-leaders?utm_source=rss_feed"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "LC",
+      "who": "Lai Ching-te",
+      "handle_context": "President of Taiwan",
+      "platform_date": "Hong Kong Free Press · Oct 10, 2026",
+      "quote_text": "We do not seek hegemony, nor do we seek to dominate others.",
+      "analyst_note": "Said in the same Double Ten address announcing a record NT$1.1 trillion ($34.5 billion) 2027 defense budget.",
+      "badge_class": "sb-r",
+      "url": "https://hongkongfp.com/2026/10/10/taiwans-leader-says-increasing-defence-spending-to-deter-war/"
+    },
+    {
+      "avatar_initials": "TI",
+      "who": "Tsai Ing-wen",
+      "handle_context": "Former President of Taiwan",
+      "platform_date": "Taipei Times · Oct 10, 2026",
+      "quote_text": "That experience has shaped who we are and continues to shape how we approach the future.",
+      "analyst_note": "Tsai spoke at Stanford's Hoover Institution on Taiwan's democratic resilience amid authoritarian influence campaigns.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/10/2003865715"
+    },
+    {
+      "avatar_initials": "MS",
+      "who": "King Mswati III",
+      "handle_context": "King of Eswatini",
+      "platform_date": "Taipei Times · Oct 10, 2026",
+      "quote_text": "We deeply value the enduring friendship and cooperation between our two countries, and we look forward to strengthening these bonds for the benefit of our peoples.",
+      "analyst_note": "Mswati made his 20th visit to Taiwan, following Lai's May trip to Eswatini that China tried to block.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/10/2003865714"
+    },
+    {
+      "avatar_initials": "GS",
+      "who": "Gene Seroka",
+      "handle_context": "Executive Director, Port of Los Angeles",
+      "platform_date": "SCMP · Oct 9, 2026",
+      "quote_text": "If there was ever a time for a drum roll, this is it.",
+      "analyst_note": "Seroka was describing the port's busiest-ever quarter, July through September, for Chinese and Asian imports.",
+      "badge_class": "sb-p",
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370410/key-us-port-china-imports-records-best-ever-quarter-despite-trade-uncertainty?utm_source=rss_feed"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.channelnewsasia.com/east-asia/us-says-chinas-maritime-actions-taiwan-deeply-destabilising-6448331",
+    "https://www.scmp.com/news/china/politics/article/3370402/will-taiwan-issue-derail-washington-and-beijings-latest-reset-analysts-are-sceptical?utm_source=rss_feed",
+    "https://hongkongfp.com/2026/10/10/taiwans-leader-says-increasing-defence-spending-to-deter-war/",
+    "https://www.scmp.com/news/china/politics/article/3370442/taiwanese-leader-welcomes-talks-between-washington-and-beijing-reduce-risk-war?utm_source=rss_feed"
+  ],
+  "story_count": 70,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 16,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-10.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-10.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
