@@ -1,0 +1,505 @@
+{
+  "digest_date": "Monday, October 12, 2026",
+  "re_line": "RE: China sanctions Taiwan allies · PLA four-sea drills · EU caps Chinese hybrid imports",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "24,271.20",
+      "change_pct": 0.96,
+      "as_of": "Oct 12"
+    },
+    "brent": {
+      "value": "105.73",
+      "change_pct": 5.52,
+      "as_of": "Oct 12"
+    },
+    "sse_composite": {
+      "value": "3,797.24",
+      "change_pct": -0.87,
+      "as_of": "Oct 12"
+    },
+    "usd_cny": {
+      "value": "6.6816",
+      "change_pct": -0.34,
+      "as_of": "Oct 12"
+    },
+    "usd_cnh": {
+      "value": "6.6941",
+      "change_pct": 0.03,
+      "as_of": "Oct 12"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "China sanctioned Paraguay's communications minister Gustavo Villate and Belize's foreign minister Francis Fonseca Monday, the first time Beijing has sanctioned officials from a state holding formal diplomatic ties with Taiwan.",
+    "Chinese maritime authorities announced live-fire drills across the Bohai, Yellow, East China and South China Seas running October 12-20, days after President Lai Ching-te's Double Ten National Day address.",
+    "The EU agreed to cap Chinese hybrid-vehicle imports at 350,000 units a year after Beijing talks between Maroš Šefčovič and Wang Wentao, sending Chinese lithium stocks down as much as 10 percent."
+  ],
+  "key_stat": {
+    "number": "10%",
+    "label": "Drop in Chinese lithium stocks after EU hybrid-car import cap",
+    "context": "The slide followed Monday's EU-China deal capping Chinese hybrid-vehicle imports at 350,000 units annually, marking one of the sharpest single-sector market reactions to the agreement reported today.",
+    "source": "Bloomberg"
+  },
+  "prc_government": [
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson",
+      "action": "Addresses China-EU hybrid, EV consultation consensus",
+      "document": "商务部新闻发言人就中欧混动汽车、电动汽车磋商共识答记者问",
+      "detail": "MOFCOM's spokesperson responded to questions on the consensus reached in China-EU consultations over hybrid and electric-vehicle trade, following the October 8-9 Beijing talks between Wang Wentao and EU trade chief Maroš Šefčovič.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_d6a5e2c4e62740868c7f1a7cd061f84a.html"
+    },
+    {
+      "ministry": "State Council / Ecology and Environment",
+      "ministry_chinese": "国务院",
+      "official": null,
+      "action": "Launches seventh batch of third-round central environmental inspections",
+      "document": null,
+      "detail": "The inspections, approved by the CCP Central Committee and State Council, open the seventh batch of the third round of central ecological and environmental protection oversight covering provincial-level jurisdictions.",
+      "source_label": "CCTV ZH",
+      "url": "https://news.cctv.com/2026/10/12/ARTIyHWBVjg5pnJ2lueT2mU1261012.shtml"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": null,
+      "action": "Cuts Pledged Supplementary Lending (PSL) rate",
+      "document": null,
+      "detail": "The PBOC lowered its PSL rate in a move analysts said benefits stable cash-flow assets, as the central bank separately accelerates gold purchases under its reserve-diversification push, per Chinese financial media.",
+      "source_label": "PBOC ZH",
+      "url": "https://www.jiemian.com/article/15179525.html"
+    },
+    {
+      "ministry": "Ministry of Commerce / State Council",
+      "ministry_chinese": "商务部",
+      "official": "Li Qiang, Premier",
+      "action": "Premier Li Qiang to attend 140th Canton Fair opening",
+      "document": null,
+      "detail": "MOFCOM announced Premier Li Qiang will attend the opening ceremony and related events of the 140th China Import and Export Fair in Guangzhou.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_ecd5561ca21a4582a25d8043303bf89d.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758 55th anniversary",
+      "detail": "Marks 55 years since the resolution seating the PRC at the UN; Beijing and Washington contest its interpretation regarding Taiwan."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Results determine control of Congress, including leadership of the House Select Committee on the CCP."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal suspensions due to lapse",
+      "detail": "The one-year suspensions of BIS's Affiliates ('50%') Rule and China's October 2025 rare-earth export controls are set to expire around this date unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts APEC through November 19; Trump attendance and any Trump-Xi meeting are unconfirmed."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Voters choose 22 mayors and magistrates in a vote read as a mid-term referendum on President Lai Ching-te."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.wsj.com/world/china/why-china-doesnt-want-to-join-the-ranks-of-the-worlds-developed-countries-e37bbec1",
+      "source": "WSJ",
+      "category": "PRC-Economy",
+      "headline": "Why China resists joining ranks of 'developed' countries",
+      "body_text": "China continues to resist formal classification as a developed economy, a status that would carry new trade and climate-finance obligations, the WSJ reported. Beijing has long argued it remains a developing country despite its economic scale."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/materials/the-pentagon-and-toyota-backed-startup-trying-to-cut-us-reliance-on-china-iron",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Pentagon-, Toyota-backed startup builds Texas plant to cut China iron reliance",
+      "body_text": "A Pentagon- and Toyota-backed US startup is building a Texas plant to produce a key magnet ingredient domestically instead of sourcing it from China, Nikkei Asia reported. The project targets US dependence on Chinese supply chains for rare-earth magnet materials."
+    },
+    {
+      "url": "https://mainichi.jp/english/articles/20261012/p2g/00m/0na/017000c",
+      "source": "Mainichi",
+      "category": "Japan",
+      "headline": "Japan cross-party lawmaker group thanks Taiwan for disaster support",
+      "body_text": "The head of a Japanese cross-party lawmakers' group thanked Taiwan for its support following past disasters, Mainichi reported Monday. The exchange reflects informal Japan-Taiwan legislative ties outside formal diplomatic channels."
+    },
+    {
+      "url": "https://www.reuters.com/business/energy/us-china-supertanker-freight-cost-eases-record-data-shows-2026-10-12/",
+      "source": "Reuters",
+      "category": "Energy",
+      "headline": "US-China supertanker freight cost eases from record",
+      "body_text": "The cost of chartering supertankers on the US-China route eased from a record high, according to freight data cited by Reuters Monday. Rates had surged in recent weeks amid tightening vessel availability."
+    },
+    {
+      "url": "https://www.wsj.com/finance/commodities-futures/gold-rises-as-markets-weigh-oil-pullback-2c0301c2",
+      "source": "WSJ",
+      "category": "Energy",
+      "headline": "Copper rises on China stimulus hopes, mining supply risks",
+      "body_text": "Copper prices rose on hopes for Chinese stimulus and concerns over mining supply risks, the WSJ reported Monday. Markets continue weighing China's growth trajectory against tightening metals supply."
+    },
+    {
+      "url": "https://www.thewirechina.com/2026/10/11/emily-feng-on-the-uyghurs-syria-and-xinjiang/",
+      "source": "The Wire China",
+      "category": "Human Rights",
+      "headline": "Emily Feng on Uyghurs who fought in Syria and face statelessness",
+      "body_text": "Journalist Emily Feng described meeting Uyghurs from Xinjiang who played roles in the Syrian civil war and now face potential statelessness, in an interview published by The Wire China. The piece examines the Uyghur diaspora's precarious legal status following Syria's civil war."
+    },
+    {
+      "url": "https://www.scmp.com/opinion/hong-kong-opinion/article/3370195/game-changer-hong-kongs-gold-ambition-shenzhens-jewellery-hub?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "Shenzhen's jewellery hub seen as key to Hong Kong's gold ambitions",
+      "body_text": "Shenzhen's jewellery manufacturing hub is positioned as a key piece of Hong Kong's ambition to become an international gold trading center, SCMP reported, part of Beijing's push to build gold-backed monetary infrastructure. China is the world's largest gold producer and importer."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/10/12/2003865784",
+      "source": "Taipei Times",
+      "headline": "US trade panel opens Section 337 probe naming Foxconn, Delta, Quanta",
+      "body_text": "The US International Trade Commission voted to open a Section 337 investigation into vertical power-delivery systems used in AI servers, naming 20 respondents across Taiwan, China, Germany and the US including **Hon Hai Precision**, **Delta Electronics** and **Quanta Computer**. Massachusetts-based Vicor Corp filed the complaint September 9 alleging patent infringement; China-based Luxshare Precision and Foxconn Industrial Internet are also named.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.scmp.com/tech/tech-trends/article/3370581/mapping-us-chip-supply-chain-china-accounts-far-more-it-appears-report-says?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "SIA data show China's outsized grip on chipmaking rare earths",
+      "body_text": "The Semiconductor Industry Association found China supplies about *5 percent* of equipment and materials to the US chip industry by country of manufacture, but holds over 90 percent of the market in certain rare earths needed for chipmaking. Some 95 percent of the roughly $27 billion American chipmakers spend annually on manufacturing equipment and materials comes from firms headquartered in the US, Europe and Japan, the SIA found.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/politics/article/3370546/us-can-choose-deport-hongkongers-under-deferred-enforced-departure-scheme?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "DHS says it can deport Hongkongers under deferred-departure program",
+      "body_text": "The Department of Homeland Security said it is \"not precluded\" from placing Hong Kong residents under the Deferred Enforced Departure program into removal proceedings, after a dozen were reportedly detained at US airports. DHS said it is not currently removing DED holders but did not rule out doing so.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370485/kurt-campbell-us-deterrence-quad-aukus-and-taiwan-after-xi-trump-summit?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Kurt Campbell assesses US deterrence, Quad, AUKUS and Taiwan after Xi-Trump summit",
+      "body_text": "**Kurt Campbell**, former US deputy secretary of state and White House Indo-Pacific coordinator under Biden, discussed deterrence, the Quad, AUKUS and Taiwan policy in an SCMP interview published Monday after the Xi-Trump summit. Campbell served as assistant secretary of state for East Asian and Pacific affairs from 2009 to 2013 and helped architect the Obama-era 'pivot to Asia.'",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://cn.nytimes.com/business/20261012/correspondent-banking-russia-sanctions-evasion/",
+      "source": "NYT Chinese",
+      "headline": "Small Chinese bank helped Russia evade sanctions to access Wall Street",
+      "body_text": "**Zhejiang Chouzhou Commercial Bank** used correspondent-banking relationships to provide financial services to Russian shell companies, helping Moscow evade Western sanctions, a New York Times Chinese-language investigation found. The bank also provides correspondent-banking services to banks in multiple countries flagged by Western regulators as high-risk for money laundering or sanctions evasion.",
+      "instrument": "Sanctions"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/12/2003865798",
+      "source": "Taipei Times",
+      "headline": "Taiwan urges China to stop hostile rhetoric after TAO rebuke of Lai speech",
+      "body_text": "Taiwan's Ministry of Foreign Affairs urged China on Monday to stop hostile rhetoric and abandon force or coercion to change the status quo, after Beijing's Taiwan Affairs Office said President **Lai Ching-te**'s Double Ten speech \"disregards facts, distorts the truth, misleads the public and reveals ulterior motives.\" The US welcomed Lai's commitment to Taiwan Strait stability in the address, in which he called Taiwan a \"city upon a hill.\"",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3370611/taiwan-aims-raise-pilot-retirement-age-58-new-f-16v-jets-arrive?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Taiwan to raise fighter pilot retirement age to 58 as F-16Vs arrive",
+      "body_text": "Taiwan's defence ministry plans to raise the mandatory retirement age for military pilots to 58, from about 48 for lieutenant colonels and 52 for colonels, as the air force prepares to form squadrons around *66 new F-16V Block 70 fighters* ordered from the US. The proposal addresses a shrinking pool of experienced pilots as new jets arrive.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/12/2003865809",
+      "source": "Taipei Times",
+      "headline": "Ex-Japan army chief: Tokyo should allow arms sales to Taiwan",
+      "body_text": "Former Japan Ground Self-Defense Force chief of staff **Kiyofumi Iwata** said Japan should add Taiwan to the list of 17 countries eligible for Japanese arms exports, calling Japan and Taiwan an \"inseparable community\" with a shared destiny. He said Taiwan sits at the strategic center of the First Island Chain and that its fall to China would let Beijing push naval and air power into the Western Pacific.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.scmp.com/opinion/asia-opinion/article/3370226/despite-china-india-thaw-military-relations-are-stuck-2020?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "China-India military ties remain stuck despite diplomatic thaw",
+      "body_text": "**Xi Jinping** has met Indian Prime Minister Narendra Modi three times in the past three years and Air China has restarted flights to New Delhi, but China-India military relations remain stuck at pre-2020 levels, SCMP reported. Xi made his first visit to India in nearly seven years in September, even as the two armies still meet mainly in crisis settings.",
+      "region": "India"
+    },
+    {
+      "url": "https://english.kyodonews.net/articles/-/87869",
+      "source": "Kyodo",
+      "headline": "Russia likely mass-producing satellites with Chinese components: Ukraine",
+      "body_text": "Russia has likely begun mass-producing small satellites for its Rassvet communications network using components from **Shanghai Fudan Microelectronics Group**, Ukrainian military intelligence told Kyodo. Moscow launched *32 satellites* from Plesetsk Cosmodrome this year and could operationalize the network, intended to rival Starlink, by early 2027.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/12/stellantis-europe-cars-chinese-rivals-evs.html",
+      "source": "CNBC",
+      "headline": "Stellantis CEO urges EU incentives for carmakers building in Europe",
+      "body_text": "Stellantis's CEO urged European regulators to create incentives for carmakers that manufacture in the region, as Chinese rivals gain market share, CNBC reported Monday. The call came the same day the EU and China reached a deal capping Chinese hybrid-vehicle imports at 350,000 units annually.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/12/2003865812",
+      "source": "Taipei Times",
+      "headline": "King of Eswatini thanks Taiwan for donated military helicopters",
+      "body_text": "King **Mswati III** of Eswatini thanked Taiwan for donating military helicopters as he toured an army flight training center in Tainan with President Lai Ching-te. Taiwan donated two retired UH-1H helicopters to Eswatini in 2020 and trained 11 Eswatini pilots and maintenance personnel between 2019 and 2020.",
+      "region": "Africa"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/world/china/china-sanctions-paraguay-belize-ministers-over-taiwan-ties-2026-10-12/",
+      "source": "Reuters",
+      "category_tag": "Sanctions",
+      "headline": "China sanctions Paraguay, Belize ministers in first action against a Taiwan ally's officials",
+      "body": "China's foreign ministry sanctioned Paraguay's communications minister **Gustavo Villate** and Belize's foreign minister **Francis Fonseca** Monday, freezing their China-held assets and barring entry, the first time Beijing has sanctioned officials from a state holding formal diplomatic ties with Taiwan. MOFA invoked its Anti-Foreign Sanctions Law, accusing the pair of acting as a 'pawn' for Taipei's outreach and of spreading false claims about Chinese cyberattacks.",
+      "src_line": "Reuters"
+    },
+    {
+      "url": "https://hongkongfp.com/2026/10/12/taiwan-preparing-for-the-worst-as-china-begins-live-fire-drills/",
+      "source": "Hong Kong Free Press",
+      "category_tag": "PLA",
+      "headline": "China launches four-sea live-fire drills days after Lai's National Day address",
+      "body": "Chinese maritime authorities announced live-fire drills across the Bohai, Yellow, East China and South China Seas running October 12-20, days after President **Lai Ching-te**'s Double Ten address asserting Taiwan will not accept \"subordination.\" Taiwan's defence minister said Monday the island would \"closely monitor\" the exercises.",
+      "src_line": "Hong Kong Free Press (AFP)"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-11/eu-to-cap-chinese-hybrid-vehicle-imports-at-350-000-each-year",
+      "source": "Bloomberg",
+      "category_tag": "PRC-Economy",
+      "headline": "EU caps Chinese hybrid-vehicle imports at 350,000 units a year",
+      "body": "The EU agreed to cap imports of Chinese-made hybrid vehicles at *350,000 units a year*, following trade talks between EU trade chief Maroš Šefčovič and Commerce Minister **Wang Wentao** in Beijing October 8-9. MOFCOM said the deal secures China's continued 'export space' in Europe; Chinese lithium stocks fell as much as 10 percent on the news.",
+      "src_line": "Bloomberg"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/12/china-gold-buying-interest-rate-.html",
+      "source": "CNBC",
+      "category_tag": "PRC-Economy",
+      "headline": "China imports record gold as Beijing diversifies away from the dollar",
+      "body": "China is importing a record amount of gold as Beijing diversifies reserves away from the dollar and Chinese households seek a safe store of savings, CNBC reported Monday. The yuan traded at *6.6816* per dollar Monday as the gold-buying push continues alongside reserve diversification.",
+      "src_line": "CNBC"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/intel-ceo-says-chinese-frontier-ai-model-adoption-has-been-very-fast-2026-10-12/",
+      "source": "Reuters",
+      "category_tag": "Technology",
+      "headline": "Intel CEO says Chinese frontier AI model adoption has been 'very fast'",
+      "body": "Intel's chief executive said Monday that adoption of Chinese frontier AI models has been \"very fast,\" one of the more direct public assessments from a US chipmaker of China's AI trajectory. The comment comes as AI issues remain unresolved after the May 2026 Trump-Xi summit, which left export controls and AI outside the agreed truce terms.",
+      "src_line": "Reuters"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/european-chinese-automakers-launch-product-blitz-paris-car-show-fight-market-2026-10-12/",
+      "source": "Reuters",
+      "category": "PRC-Economy",
+      "headline": "European, Chinese automakers launch product blitz at Paris car show",
+      "body_text": "European and Chinese automakers unveiled new models at the Paris car show as both sides fight for market share.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "http://www.81.cn/fyr/16492304.html",
+      "source": "PLA Daily / Xinhua",
+      "category": "Diplomacy",
+      "headline": "MOFA says fixing China-Japan ties is squarely Tokyo's responsibility",
+      "body_text": "Mao Ning said repairing China-Japan relations is entirely up to Tokyo, citing distorted Japanese views of history and Taiwan.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/12/2003865811",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "KMT chair Cheng Li-wun: DPP limits Taiwan's ability to shape its future",
+      "body_text": "KMT Chairwoman Cheng Li-wun said the DPP champions Taiwan's identity while limiting the island's ability to chart its own course.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://money.udn.com/money/story/7307/9809988?from=edn_related_storybottom",
+      "source": "UDN",
+      "category": "Sanctions",
+      "headline": "Taiwan's MOFA condemns China's sanctions on Paraguayan, Belizean officials",
+      "body_text": "Taiwan's foreign ministry called China's sanctions on the two officials contemptible interference in other countries' sovereignty.",
+      "color_bar_class": "cb-lt"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-12/beijing-police-launch-probe-into-wealth-manager-creditease",
+      "source": "Bloomberg",
+      "headline": "Beijing police launch probe into wealth manager CreditEase",
+      "body_text": "Beijing police launched a probe into wealth manager **CreditEase**, Bloomberg reported Monday, without detailing the scope of the investigation.",
+      "companies": [
+        "CreditEase"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/tencent-plans-dollar-offshore-yuan-bond-sale-under-note-programme-2026-10-12/",
+      "source": "Reuters",
+      "headline": "Tencent weighs $4.5 billion bond sale to fund AI push",
+      "body_text": "**Tencent** is weighing a *$4.5 billion* bond sale, including dollar and offshore yuan tranches under a note program, to fund its AI expansion, a source told Reuters.",
+      "companies": [
+        "Tencent"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/china-approves-geely-acquisition-ford-espaa-2026-10-12/",
+      "source": "Reuters",
+      "headline": "China approves Geely's acquisition of Ford España",
+      "body_text": "China approved **Geely**'s acquisition of Ford España, clearing the deal for the automaker's European manufacturing expansion, Reuters reported Monday.",
+      "companies": [
+        "Geely",
+        "Ford España"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/11/this-chinese-memory-chip-maker-has-global-potential.html",
+      "source": "CNBC",
+      "headline": "CXMT seen with 'global potential' ahead of October 31 earnings",
+      "body_text": "Chinese memory chipmaker **CXMT** is seen as having global potential ahead of its earnings release expected October 31, CNBC reported, as stakes rise for the company's performance.",
+      "companies": [
+        "CXMT"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/business/volkswagen-reports-14-drop-third-quarter-deliveries-2026-10-12/",
+      "source": "Reuters",
+      "headline": "Volkswagen deliveries post steepest drop in more than four years",
+      "body_text": "**Volkswagen** reported a *14 percent* drop in third-quarter deliveries, its steepest fall in more than four years, as China-market weakness deepened, Reuters reported.",
+      "companies": [
+        "Volkswagen"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/china-home-car-sales-downturn-continues-exports-retain-momentum-2026-10-12/",
+      "source": "Reuters",
+      "headline": "China's domestic car sales downturn continues even in peak season",
+      "body_text": "China's domestic passenger-car sales extended their downturn in September during peak season, while exports retained momentum, Reuters reported Monday.",
+      "companies": [],
+      "sector": "auto"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Sanctions on Paraguay, Belize officials over Taiwan ties",
+      "statement": "Against individuals who stubbornly support 'Taiwan independence' separatist forces, China will adopt all necessary disciplinary measures to resolutely safeguard national sovereignty and territorial integrity.",
+      "original_zh": "对于顽固支持\"台独\"分裂势力的人员，中方将采取一切必要的惩戒措施，坚决维护国家主权和领土完整。",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "Statement made after MOFA announced sanctions Monday on Paraguay's communications minister and Belize's foreign minister over their Taiwan contacts.",
+      "source": "外交部发言人 (MOFA presser ZH) via 川观新闻",
+      "url": "https://cbgc.scol.com.cn/news/8048323"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Status of Taiwan after Lai's Double Ten speech",
+      "statement": "The true status quo of the Taiwan Strait is that the two sides belong to one China; no matter what Lai Ching-te says or does, it cannot change the historical and legal fact that Taiwan belongs to China.",
+      "original_zh": "台海的真正现状就是两岸同属一个中国，不管赖清德说什么、做什么，都改变不了台湾属于中国的历史和法理事实，改变不了\"台独\"穷途末路、注定败亡的结局，更阻挡不了中国终将统一、也必将统一的大势。",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "Mao Ning was responding to President Lai Ching-te's October 10 National Day address, which Beijing accused of spreading 'seeking independence through external forces' claims.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://www.sina.cn/news/detail/5353224744731247.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "US criticism of PLA activity east of Taiwan",
+      "statement": "China has exclusive economic zone and continental shelf rights in the waters east of Taiwan island, and activities there are entirely within China's sovereign rights and jurisdiction, proper, legitimate and beyond reproach. The United States should abide by the one-China principle and the three China-US joint communiqués and handle the Taiwan question prudently.",
+      "original_zh": "中国在台湾岛以东海域拥有专属经济区和大陆架，中方在该海域开展活动完全是中国主权权利和管辖权范围内的事，正当合法、无可非议。美方应当恪守一个中国原则和中美三个联合公报，慎重处理台湾问题，以实际行动维护中美关系大局和地区和平稳定。",
+      "addressed_to": "US",
+      "tone": "warning",
+      "context": "Responds to a US State Department statement criticizing PLA maritime activity east of Taiwan as destabilizing, per Mao Ning's October 12 briefing.",
+      "source": "外交部发言人 (MOFA presser ZH) / 人民网",
+      "url": "http://world.people.com.cn/n1/2026/1012/c1002-40813065.html"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "Reaction to Lai Ching-te's Double Ten speech",
+      "statement": "Lai's speech disregards facts, distorts the truth, misleads the public and reveals ulterior motives.",
+      "original_zh": "罔顾事实、颠倒是非，误导民众、用心叵测",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "TAO's response followed President Lai's October 10 National Day address describing Taiwan as a 'city upon a hill.'",
+      "source": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/12/2003865798"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "LC",
+      "who": "Lai Ching-te",
+      "handle_context": "President of Taiwan",
+      "platform_date": "Double Ten National Day address · Oct 10, 2026",
+      "quote_text": "Taiwan cherishes peace, but we will not give up our freedom. We are open to exchanges, but will not accept subordination.",
+      "analyst_note": "Beijing's Taiwan Affairs Office called the same speech a distortion of facts the same week.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/12/2003865798"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://hongkongfp.com/2026/10/12/taiwan-preparing-for-the-worst-as-china-begins-live-fire-drills/",
+    "https://udn.com/news/story/7331/9808836?from=udn-catelistnews_ch2",
+    "https://english.kyodonews.net/articles/-/87869",
+    "https://www.taipeitimes.com/News/front/archives/2026/10/12/2003865798",
+    "https://www.reuters.com/world/china/china-sanctions-paraguay-belize-ministers-over-taiwan-ties-2026-10-12/"
+  ],
+  "story_count": 95,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 84,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-12.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-12.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
