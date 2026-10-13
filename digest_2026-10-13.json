@@ -1,0 +1,549 @@
+{
+  "digest_date": "Tuesday, October 13, 2026",
+  "re_line": "EU caps Chinese hybrid EVs at 350K · China sanctions Paraguay/Belize over Taiwan · Nvidia China share falls to 34% · Visa wins PBOC nod",
+  "market_indicators": {
+    "usd_cny": {
+      "value": "6.6821",
+      "change_pct": -0.33,
+      "as_of": "Oct 13"
+    },
+    "brent": {
+      "value": "104.59",
+      "change_pct": 0.3,
+      "as_of": "Oct 13"
+    },
+    "hang_seng": {
+      "value": "24,345.22",
+      "change_pct": 0.27,
+      "as_of": "Oct 13"
+    },
+    "sse_composite": {
+      "value": "3,800.86",
+      "change_pct": -1.08,
+      "as_of": "Oct 13"
+    },
+    "usd_cnh": {
+      "value": "6.6935",
+      "change_pct": 0.0,
+      "as_of": "Oct 13"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "The EU struck a deal capping Chinese hybrid-vehicle imports at 350,000 units a year even as China's carmakers posted record export growth, with European automakers calling it a 'first step' toward fairer competition.",
+    "Beijing sanctioned Paraguay's communications minister and Belize's foreign minister over their countries' Taiwan ties, freezing assets and denying visas, prompting the US State Department to say Washington 'opposes Chinese coercion.'",
+    "Nvidia's share of China's data-center AI chip market fell to 34 percent in H1 2026 as Huawei's share rose to 28 percent, IDC found, with Nvidia's shipments down 44 percent year-on-year."
+  ],
+  "key_stat": {
+    "number": "44%",
+    "label": "Nvidia's H1 2026 China AI-accelerator shipment decline",
+    "context": "Nvidia shipped 678,000 AI accelerators to Chinese data centers in H1 2026, down 44 percent year-on-year, while Huawei's shipments rose to 572,000 units for a 28 percent market share, per IDC data cited by Guancha.",
+    "source": "Reuters / Guancha (IDC data)"
+  },
+  "prc_government": [
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "Wang Wentao, Commerce Minister",
+      "action": "Wang Wentao meets Danone CEO",
+      "document": null,
+      "detail": "Commerce Minister Wang Wentao met Danone Group CEO Antoine de Saint-Affrique in Beijing as part of MOFCOM's ongoing outreach to multinational investors.",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_8b51256ec4ad4b429b87ec29e37fb65e.html"
+    },
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "Xi Jinping, General Secretary",
+      "action": "Xi Jinping addresses National Conference on Health and Wellness",
+      "document": null,
+      "detail": "Xi Jinping attended and delivered a major address at the National Conference on Health and Wellness in Beijing, his first confirmed public appearance after a 38-day gap per CSIS's appearance tracker.",
+      "source_label": "State Council ZH",
+      "url": "http://www.fujian.gov.cn/sylm/szyw/202610/t20261013_7224659.htm"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 20,
+      "headline": "APEC Finance Ministers' Meeting, Hong Kong",
+      "detail": "Taiwan Finance Minister Chuang Tsui-yun will attend as usual Oct. 20-21; APEC is one of the few international bodies that includes both Beijing and Taipei."
+    },
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758 55th anniversary",
+      "detail": "Marks 55 years since the UNGA resolution on Chinese representation at the UN, a recurring flashpoint over competing interpretations regarding Taiwan."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal one-year suspensions set to lapse",
+      "detail": "The BIS Affiliates ('50%') Rule suspension and China's October 2025 rare-earth export-control suspension are both due to lapse around this date unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts the APEC summit; CNBC reports the US and Chinese presidents are due to meet for a third time this year."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Elections for 22 mayors and magistrates and roughly 11,000 local offices, read as a mid-term gauge on President Lai Ching-te."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.cnn.com/2026/10/13/china/china-data-centers-ai-race-intl-hnk-dst",
+      "source": "CNN China",
+      "category": "Technology",
+      "headline": "US Fights Over Data Centers While China Builds Them Fast",
+      "body_text": "Beijing is accelerating AI data-center construction to leverage its advantages in the technology race, CNN reported, while the US remains mired in permitting and siting disputes. The contrast highlights diverging approaches to AI infrastructure buildout."
+    },
+    {
+      "url": "https://hongkongfp.com/2026/10/13/hong-kong-enacts-pneumonia-checks-for-arrivals-from-russia-after-mystery-lab-death/",
+      "source": "Hong Kong Free Press",
+      "category": "Public Health",
+      "headline": "Hong Kong Adds Pneumonia Checks for Arrivals From Russia",
+      "body_text": "Hong Kong's Centre for Health Protection stepped up checks on arrivals from Russia after a lab worker in Siberia died of severe pneumonia of undetermined cause. The WHO learned of the death at the Irkutsk Antiplague Research Institute on October 2."
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202610130015",
+      "source": "Focus Taiwan",
+      "category": "Public Health",
+      "headline": "Taiwan Premier Says Monitoring China Pneumonic Plague Rumors",
+      "body_text": "Taiwan's Premier said the government is closely monitoring rumors of pneumonic plague circulating about China, Focus Taiwan reported. No further detail on the rumors' source or substance was given."
+    },
+    {
+      "url": "https://www.reuters.com/legal/government/china-linked-hackers-breached-fiji-organization-us-embassy-says-2026-10-13/",
+      "source": "Reuters China",
+      "category": "Cyber",
+      "headline": "China-Linked Hackers Breached Fiji Organization, US Embassy Says",
+      "body_text": "The US Embassy said China-linked hackers breached an organization in Fiji, Reuters reported, without naming the victim organization. The disclosure adds to a pattern of reported Chinese cyber activity across the Pacific."
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/ai-boom-bolstered-growth-global-trade-benefiting-china-india-imf-says-2026-10-13/",
+      "source": "Reuters China",
+      "category": "Macro",
+      "headline": "IMF: AI Boom Lifted Global Trade, Benefiting China and India",
+      "body_text": "The AI investment boom has bolstered growth in global trade, with China and India among the main beneficiaries, the IMF said, per Reuters. The finding points to AI-related goods as a growing share of cross-border commerce."
+    },
+    {
+      "url": "https://www.ft.com/content/9dbd99db-6b0c-43bd-b7be-849f129df098?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category": "Technology",
+      "headline": "China's Tech Giants Turn to Nvidia Gaming Chips for AI Firepower",
+      "body_text": "Chinese tech companies are buying Nvidia gaming chips never designed for advanced AI to meet soaring computing demand, the FT reported. The workaround reflects continued supply constraints on more advanced accelerators under US export controls."
+    },
+    {
+      "url": "https://cn.nytimes.com/business/20261013/tandem-solar-panels-us-china/",
+      "source": "NYT Chinese",
+      "category": "Energy",
+      "headline": "US Tandem Solar Panel Breakthrough May Challenge China's Dominance",
+      "body_text": "US solar panel makers say a tandem solar cell technology breakthrough could convert more sunlight into electricity, potentially threatening China's dominance of the industry, per NYT Chinese."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/markets/equities/hong-kong-watchdog-investigates-ipo-rigging-suspends-chapanda-shares",
+      "source": "Nikkei Asia China",
+      "category": "Finance",
+      "headline": "Hong Kong Regulator Probes IPO Rigging, Suspends ChaPanda Shares",
+      "body_text": "Hong Kong's Securities and Futures Commission said it is acting against parties suspected of rigging an initial public offering, suspending trading in ChaPanda shares, Nikkei Asia reported."
+    },
+    {
+      "url": "https://www.ft.com/content/bbe24952-d66f-480e-b0a8-94339d75bc48?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category": "Legal",
+      "headline": "UK's Chances of Keeping £3.8bn Bitcoin Haul Rise After Court Ruling",
+      "body_text": "A London High Court ruling found Chinese victims of a massive crypto fraud cannot rely on English law to seek compensation, improving the UK's chances of keeping a £3.8 billion bitcoin haul, the FT reported."
+    },
+    {
+      "url": "https://www.wsj.com/pro/venture-capital/startup-raises-10-15-million-for-anode-free-china-free-sodium-battery-a05717f4",
+      "source": "WSJ China",
+      "category": "Technology",
+      "headline": "Startup Raises $10.15 Million for 'China-Free' Sodium Battery",
+      "body_text": "A startup raised $10.15 million for an anode-free, 'China-free' sodium battery, the WSJ reported, part of a push to build battery supply chains outside Chinese-dominated materials."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.reuters.com/world/china/us-says-it-opposes-chinese-coercion-after-belize-paraguay-ministers-sanctioned-2026-10-13/",
+      "source": "Reuters China",
+      "headline": "US Says It Opposes 'Chinese Coercion' After Belize, Paraguay Sanctions",
+      "body_text": "The US said it opposes Chinese 'coercion' after Beijing sanctioned Paraguay's communications minister and Belize's foreign minister over their Taiwan ties. Both Central American countries are among the 12 remaining states that maintain formal diplomatic relations with Taiwan.",
+      "instrument": "Sanctions"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/trump-says-he-does-not-believe-china-russia-are-helping-iran-at-all-2026-10-13/",
+      "source": "Reuters China",
+      "headline": "Trump Says He Doesn't Believe China, Russia Are Helping Iran 'At All'",
+      "body_text": "President Trump said he does not believe China and Russia are helping Iran 'at all.' China's MOFA responded that Beijing 'will continue to work with relevant countries and the international community' on Middle East stability.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/us-chinese-indian-firms-show-interest-perus-844-million-port-project-2026-10-12/",
+      "source": "Reuters China",
+      "headline": "US, Chinese, Indian Firms Show Interest in Peru's $844 Million Port Project",
+      "body_text": "US, Chinese and Indian firms have expressed interest in Peru's $844 million port project, Reuters reported. The competition echoes the dynamics around China's COSCO-built Chancay port, also in Peru.",
+      "instrument": "Investment"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/13/2003865858",
+      "source": "Taipei Times",
+      "headline": "Taiwan Condemns China's 'Political Coercion' on Diplomatic Partners",
+      "body_text": "Taiwan's Ministry of Foreign Affairs said China's sanctions on Paraguayan and Belizean officials 'interfered in other nations' sovereignty and foreign policy through political coercion.' The sanctions came two days after President William Lai delivered Taiwan's Double Ten National Day speech, which Beijing condemned as usual.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/13/2003865871",
+      "source": "Taipei Times",
+      "headline": "Taiwan Detains Drone Firm Executives Over Banned China-Made Chips",
+      "body_text": "Prosecutors in Taoyuan detained two executives of drone supplier Jiin Ming Industry Co, vice chairman Chien Hao-ting and business manager Chen Yang-cheng, on suspicion of violating the National Security Act by supplying Chinese-made chips and camera lenses in military-contract drones. The court cited national security implications and risk of evidence tampering.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.channelnewsasia.com/east-asia/taiwan-finance-minister-attend-apec-hong-kong-6454781",
+      "source": "CNA China",
+      "headline": "Taiwan Finance Minister to Attend APEC Meeting in Hong Kong",
+      "body_text": "Taiwan's finance ministry confirmed Finance Minister Chuang Tsui-yun will attend the APEC Finance Ministers' Meeting in Hong Kong Oct. 20-21, as usual. APEC remains one of the few international bodies that includes both Beijing and Taipei.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://english.kyodonews.net/articles/-/88054",
+      "source": "Kyodo China",
+      "headline": "Chinese Delegation Visits Japan-Russia Disputed Island; Tokyo Vows Response",
+      "body_text": "A delegation from China's Heilongjiang province visited Etorofu, one of the islands at the center of the Japan-Russia territorial dispute, Sakhalin authorities said. Japan's prime minister said Tokyo would respond 'properly' to the visit.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://international.caixin.com/2026-10-13/102492895.html",
+      "source": "Caixin",
+      "headline": "Poll: 83% of Japanese Oppose SDF Armed Involvement in Taiwan Strait",
+      "body_text": "A survey found 83 percent of Japanese respondents oppose the Self-Defense Forces taking armed action in a Taiwan Strait contingency, while roughly 30 percent object to US forces using Japanese bases for such operations, Caixin reported.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.scmp.com/news/asia/article/3370692/marcos-south-china-sea-row-anger-thailand-over-iron-cage-beds-7-asia-highlights?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Marcos: Philippines 'Resigned' to Managing South China Sea Dispute",
+      "body_text": "Philippine President Ferdinand Marcos Jnr said the Philippines is 'resigned' to managing its long-standing South China Sea dispute with Beijing and avoiding dangerous escalations, per SCMP's weekly Asia roundup.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://ua.news/en/world/kerivnik-uriadu-togo-gnassingbe-zustrivsia-z-si-tszinpinom-u-pekini-the-rio-times",
+      "source": "Xi Activity / MND ZH",
+      "headline": "Xi Jinping Meets Botswana President, Togo Government Head in Beijing",
+      "body_text": "Xi Jinping met Botswana President Boko and co-attended a cooperation-document signing ceremony, and separately met with Togo's head of government, per China's Ministry of National Defense. The meetings mark Xi's first confirmed public appearances after a 38-day gap, per CSIS's tracker of Xi's public schedule.",
+      "region": "Africa"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-13/korean-chip-stocks-sink-on-chinese-rival-worry-broadcom-remarks",
+      "source": "Bloomberg China",
+      "headline": "Korean Chip Stocks Sink on Chinese Rival Worries, Broadcom Remarks",
+      "body_text": "South Korean semiconductor stocks fell on investor concern over rising Chinese competition and remarks from Broadcom, Bloomberg reported. The move adds pressure on Korean chipmakers already contending with Chinese rivals' gains in memory and AI accelerators.",
+      "region": "Korea"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://apnews.com/article/china-taiwan-sanctions-belize-paraguay-9e034184490a60a9905aea9e437daf1e",
+      "source": "AP News",
+      "category_tag": "Sanctions",
+      "headline": "China Sanctions Paraguayan, Belizean Ministers Over Taiwan Ties",
+      "body": "Beijing sanctioned Paraguay's communications minister **Gustavo Villate** and Belize's foreign minister **Francis Fonseca**, freezing their assets in China, denying visas and barring Chinese entities from doing business with them. Paraguay and Belize are two of just *12 countries* that still maintain formal diplomatic relations with Taiwan; the US State Department said Washington 'opposes Chinese coercion.'",
+      "src_line": "AP News"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/nvidias-china-ai-chip-share-falls-huawei-closes-gap-report-finds-2026-10-13/",
+      "source": "Reuters",
+      "category_tag": "Technology",
+      "headline": "Nvidia's China AI Chip Market Share Falls to 34% as Huawei Gains",
+      "body": "Nvidia's share of China's data-center AI accelerator market fell to *34 percent* in the first half of 2026, IDC found, as US export controls curbed the range of chips it can sell and Huawei's shipments rose to 572,000 units for a 28 percent share. Nvidia's overall AI accelerator shipments to China dropped 44 percent year-on-year to 678,000 units, per the report cited by Guancha.",
+      "src_line": "Reuters"
+    },
+    {
+      "url": "https://www.ft.com/content/6c5ee2f8-a26c-4655-9389-f877bb5b42db?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category_tag": "US-China",
+      "headline": "Visa Wins PBOC Approval to Prepare China Card-Clearing Business",
+      "body": "The **People's Bank of China** approved Visa's application to prepare a domestic bank-card clearing institution, after the company sought market access for more than a decade, FT reported. CEO **Ryan McInerney** called it 'a significant step forward,' landing a month before the US and Chinese presidents are due to meet for a third time this year.",
+      "src_line": "Financial Times"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/13/2003865868",
+      "source": "Taipei Times",
+      "category_tag": "PLA",
+      "headline": "China Runs Live-Fire Drills Across Five Sea Areas; Taiwan Monitoring",
+      "body": "China's Maritime Safety Administration issued no-sail notices for five sea areas, from the South China Sea to the northeastern province of Liaoning, for live-fire drills running all week, with none specifically around Taiwan. Defense Minister **Wellington Koo** said the preliminary assessment points to coastal artillery exercises, adding Taiwan will 'continue to closely monitor their activities, whether firing or military training.'",
+      "src_line": "Taipei Times"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://sinocism.com/p/sharp-china-brussels-and-beijing",
+      "source": "Sinocism",
+      "category": "Diplomacy",
+      "headline": "Sinocism Podcast Covers EU-China Car Deal, Xi 'Rest Breaks' Reports",
+      "body_text": "Sinocism's roundup covers the EU-China car deal, weak holiday spending data, and reports of Xi Jinping's 'rest breaks.'",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://sinocism.com/p/guidelines-for-developing-new-quality",
+      "source": "Sinocism",
+      "category": "PRC-Economy",
+      "headline": "Sinocism Flags New Productive Forces Guidelines, EU Trade Talks",
+      "body_text": "Sinocism's newsletter covers new guidelines on 'new quality productive forces,' EU-China trade talks, and a food-safety crackdown.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/commentary/breakingviews/why-global-oil-markets-will-be-watching-alibaba-2026-10-13/",
+      "source": "Reuters Breakingviews",
+      "category": "Energy",
+      "headline": "Breakingviews: Global Oil Markets Will Be Watching Alibaba",
+      "body_text": "Reuters Breakingviews argues global oil markets will be watching Alibaba, without detailing the mechanism in the available summary.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/business/china-business/article/3370680/why-haidilaos-us149-million-credit-line-founder-fuelling-china-tax-speculation?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "Haidilao's $14.9M Loan to Founder Fuels China Tax Speculation",
+      "body_text": "Haidilao agreed to a *$14.9 million* one-month loan to founder Zhang Yong, fueling speculation ahead of Beijing's Oct. 22 offshore-trust taxation deadline.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bbc.com/zhongwen/articles/cmeweg5eg7ljo/simp",
+      "source": "BBC Chinese",
+      "category": "Cross-Strait",
+      "headline": "Chinese Militia Vessel Reportedly Appears East of Taiwan for First Time",
+      "body_text": "A Chinese maritime militia vessel appeared in waters east of Taiwan for the first time, BBC Chinese reported.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://focustaiwan.tw/society/202610130007",
+      "source": "Focus Taiwan",
+      "category": "Cross-Strait",
+      "headline": "Taiwan MOFA Security Checks Uncover China-Developed Software",
+      "body_text": "Security checks by Taiwan's Ministry of Foreign Affairs uncovered China-developed software, Focus Taiwan reported.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-13/china-state-media-warns-eu-against-new-tricks-after-car-deal",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "China State Media Warns EU Against 'New Tricks' After Car Deal",
+      "body_text": "Chinese state media warned the EU against 'new tricks' after the bloc's deal capping Chinese hybrid-vehicle imports.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-13/south-african-factories-crater-as-china-imports-stunt-revival",
+      "source": "Bloomberg",
+      "category": "Africa",
+      "headline": "South African Factories Crater as China Imports Stunt Revival",
+      "body_text": "South African factory output is cratering under a wave of Chinese imports, stunting the sector's hoped-for revival.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.economist.com/china/2026/10/12/chinese-taxpayers-now-owe-more-is-more-owed-to-them",
+      "source": "The Economist",
+      "category": "PRC-Economy",
+      "headline": "Economist: Chinese Taxpayers Now Owe More, Question Is Owed to Them",
+      "body_text": "The Economist examines whether Chinese taxpayers, who now owe more to the state, are owed more in return.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.wsj.com/business/autos/europes-biggest-auto-show-is-now-dominated-by-chinese-cars-cefea46d",
+      "source": "WSJ",
+      "category": "PRC-Economy",
+      "headline": "Chinese Cars Now Dominate Europe's Biggest Auto Show",
+      "body_text": "Chinese-made cars now dominate Europe's biggest auto show, the WSJ reported, as the EU moves to cap Chinese hybrid imports.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.wsj.com/world/china/xis-superpower-ambitions-fuel-a-dangerous-debt-spiral-in-china-edad4f9f",
+      "source": "WSJ",
+      "category": "PRC-Economy",
+      "headline": "WSJ: Xi's Superpower Ambitions Fuel a Dangerous Debt Spiral",
+      "body_text": "The WSJ reports that Xi Jinping's superpower ambitions are fueling a dangerous debt spiral in China.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/12/business/europe-china-evs-hybrids.html",
+      "source": "NYT",
+      "category": "PRC-Economy",
+      "headline": "NYT: Europeans Have a Love-Hate Relationship With Chinese Cars",
+      "body_text": "Europeans increasingly want cheap Chinese cars even as policymakers move to slow their advance, the NYT reported, naming BYD, BMW and Xiaomi.",
+      "color_bar_class": "cb-lt"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/lvmh-third-quarter-sales-below-expectations-fashion-leather-division-shrinks-2026-10-12/",
+      "source": "Reuters",
+      "headline": "LVMH's China Weakness Dims Hopes of Luxury Revival",
+      "body_text": "LVMH's third-quarter sales came in below expectations as its fashion and leather goods division shrank, weighed down by continued weak demand in China, Reuters reported.",
+      "companies": [
+        "LVMH",
+        "Louis Vuitton"
+      ],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-13/china-s-cxmt-claims-memory-breakthrough-ahead-of-samsung-hynix",
+      "source": "Bloomberg",
+      "headline": "China's CXMT Claims Memory Chip Breakthrough Ahead of Samsung, SK Hynix",
+      "body_text": "China's CXMT claimed a memory-chip breakthrough it said puts it ahead of Samsung and SK Hynix, Bloomberg reported, without disclosing further technical detail.",
+      "companies": [
+        "CXMT",
+        "Samsung",
+        "SK Hynix"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/china-smartphone-shipments-fall-sixth-straight-quarter-idc-2026-10-13/",
+      "source": "Reuters",
+      "headline": "China Smartphone Shipments Fall for Sixth Straight Quarter",
+      "body_text": "China's smartphone shipments declined for a sixth consecutive quarter, IDC data cited by Reuters showed.",
+      "companies": [],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/tencent-markets-us-dollar-dim-sum-bonds-four-tranches-2026-10-13/",
+      "source": "Reuters",
+      "headline": "Tencent Draws Strong Demand for $4.5 Billion Debt Sale",
+      "body_text": "Tencent sold *$4.5 billion* in US-dollar and dim-sum bonds across four tranches, drawing strong investor demand despite scrutiny over its AI spending, Reuters reported.",
+      "companies": [
+        "Tencent"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.reuters.com/legal/government/chinese-wealth-manager-creditease-placed-under-criminal-investigation-2026-10-12/",
+      "source": "Reuters",
+      "headline": "Chinese Wealth Manager CreditEase Placed Under Criminal Investigation",
+      "body_text": "CreditEase, a Chinese wealth manager, has been placed under criminal investigation, Reuters reported, without further detail on the allegations.",
+      "companies": [
+        "CreditEase"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/china-s-peak-season-auto-sales-flop-with-sharpest-monthly-drop-of-year",
+      "source": "Nikkei Asia",
+      "headline": "China's Peak-Season Auto Sales Post Sharpest Monthly Drop of the Year",
+      "body_text": "China recorded its sharpest drop in monthly passenger car sales so far this year during the peak sales season, dashing carmakers' hopes for a demand revival, Nikkei Asia reported.",
+      "companies": [],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/12/cnbc-china-connection-newsletter-gold-purchases-yuan-globalization.html",
+      "source": "CNBC",
+      "headline": "China's Gold-Buying Spree Supports Yuan Globalization Push",
+      "body_text": "China's central bank gold purchases and plans for a Hong Kong gold-trading hub are supporting efforts to internationalize the yuan, CNBC reported.",
+      "companies": [],
+      "sector": "finance"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokeswoman",
+      "topic": "Sanctions on Paraguay, Belize officials over Taiwan ties",
+      "statement": "Certain politicians in Paraguay and Belize have willingly served as pawns of the Taiwan authorities in their attempts to seek independence through external support.",
+      "original_zh": null,
+      "addressed_to": "Taiwan",
+      "tone": "warning",
+      "context": "China sanctioned Paraguay's communications minister Gustavo Villate and Belize's foreign minister Francis Fonseca Monday, freezing assets and imposing visa bans, two days after Taiwan's Double Ten speech.",
+      "source": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/13/2003865858"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA presser",
+      "topic": "US response to Taiwan sanctions",
+      "statement": "Per MOFA: the US should prudently handle the Taiwan question and stop sending wrong signals to 'Taiwan independence' separatist forces.",
+      "original_zh": "美方应慎重处理台湾问题，停止向\"台独\"分裂势力发出错误信号",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Response after the US State Department said it opposes 'Chinese coercion' following Beijing's sanctions on Paraguayan and Belizean officials over Taiwan ties.",
+      "source": "QQ News (MOFA presser ZH)",
+      "url": "https://news.qq.com/rain/a/20261013A08ON700?adChannelId=news_news_top"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA presser",
+      "topic": "India's Ladakh 'standardized place names'",
+      "statement": "China has never recognized India's unilateral and illegal establishment of the so-called 'Union Territory of Ladakh'; India's move is illegal and invalid.",
+      "original_zh": "中方从不承认印方单方面非法设立所谓\"拉达克中央直辖区\"，印方此举非法、无效",
+      "addressed_to": "India",
+      "tone": "firm",
+      "context": "Responds to India's publication of 28 'standardized place names' in the Ladakh region.",
+      "source": "Sohu (MOFA presser ZH)",
+      "url": "https://m.sohu.com/a/1087263076_163278?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "RM",
+      "who": "Ryan McInerney",
+      "handle_context": "CEO, Visa",
+      "platform_date": "AFP · Oct 13, 2026",
+      "quote_text": "The approval of our Application to Prepare marks a significant step forward in Visa's long-standing commitment to China.",
+      "analyst_note": "Visa has sought China market access for over a decade; PBOC's approval lets it begin preparing a domestic bank-card clearing business.",
+      "badge_class": "sb-p",
+      "url": "https://www.afp.com/en/infos/visa-receives-approval-begin-preparations-domestic-business-china"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/13/2003865868",
+    "https://english.kyodonews.net/articles/-/88037",
+    "https://english.kyodonews.net/articles/-/88054",
+    "https://apnews.com/article/china-taiwan-sanctions-belize-paraguay-9e034184490a60a9905aea9e437daf1e",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/13/2003865871"
+  ],
+  "story_count": 98,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 101,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-13.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-13.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
