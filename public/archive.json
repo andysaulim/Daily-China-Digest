@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-14",
+    "filename": "2026-10-14.html",
+    "re_line": "RE: China trade surplus nears $1tn \u00b7 CXMT memory chip rout rattles markets \u00b7 Taiwan water-cannon flap \u00b7 EU weighs new China import curbs",
+    "top_stories": 5,
+    "overnight_items": 10,
+    "word_count": 2886,
+    "sources": 117,
+    "pdf": true
+  },
+  {
     "date": "2026-10-13",
     "filename": "2026-10-13.html",
     "re_line": "EU caps Chinese hybrid EVs at 350K \u00b7 China sanctions Paraguay/Belize over Taiwan \u00b7 Nvidia China share falls to 34% \u00b7 Visa wins PBOC nod",
