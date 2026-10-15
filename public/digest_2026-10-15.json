@@ -1,0 +1,644 @@
+{
+  "digest_date": "Thursday, October 15, 2026",
+  "re_line": "RE: China-DPRK bridge opens · Exports near record · US-China AI hotline talks · Rare earths to EU · Liaoning off Okinawa",
+  "market_indicators": {
+    "sse_composite": {
+      "value": "3,707.48",
+      "change_pct": -2.79,
+      "as_of": "Oct 15"
+    },
+    "usd_cny": {
+      "value": "6.6811",
+      "change_pct": -0.31,
+      "as_of": "Oct 15"
+    },
+    "usd_cnh": {
+      "value": "6.6914",
+      "change_pct": -0.02,
+      "as_of": "Oct 15"
+    },
+    "hang_seng": {
+      "value": "24,062.72",
+      "change_pct": 1.16,
+      "as_of": "Oct 15"
+    },
+    "brent": {
+      "value": "104.52",
+      "change_pct": -2.0,
+      "as_of": "Oct 15"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "China and North Korea opened the long-delayed New Yalu River Bridge linking Dandong and Sinuiju, expanding trade despite UN sanctions on Pyongyang.",
+    "China's exports grew at their fastest pace in almost any month since the 2008-09 financial crisis, putting the trade surplus on track for a record, the New York Times reported.",
+    "US and Chinese officials are negotiating an AI incident hotline and dialogue framework ahead of a Xi-Trump meeting at next month's APEC summit in Shenzhen, per SCMP."
+  ],
+  "key_stat": {
+    "number": "4.4%",
+    "label": "AFP poll forecast for China's Q3 GDP growth",
+    "context": "That would be up from Q2's 4.3% but still below Beijing's 2026 target range of 4.5-5.0%, itself the lowest in decades; official data is due Monday.",
+    "source": "AFP"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (unnamed)",
+      "action": "PBOC conducts large liquidity operations",
+      "document": null,
+      "detail": "PBOC conducted 45 billion yuan of 7-day reverse repos at an unchanged 1.40% rate and separately announced a 700 billion yuan outright reverse repo operation on Oct. 15.",
+      "source_label": "PBOC ZH",
+      "url": "http://www.jingjiribao.cn/static/detail.jsp?id=689883"
+    },
+    {
+      "ministry": "State Council / CPC Central Committee",
+      "ministry_chinese": "国务院",
+      "official": "CPC Central Committee / State Council (joint document)",
+      "action": "State Council issues opinion on developing 'new productive forces'",
+      "document": "关于发展新质生产力的意见 (Opinion on Developing New Productive Forces)",
+      "detail": "The CPC Central Committee and State Council jointly issued guidance on advancing 'new productive forces,' a doctrinal priority heading into the 15th Five-Year Plan period.",
+      "source_label": "State Council ZH",
+      "url": "https://gaizexian.gov.cn/info/2131/325141.htm"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM (Canton Fair Organizing Committee)",
+      "action": "MOFCOM opens 140th Canton Fair, marking 70th anniversary",
+      "document": null,
+      "detail": "MOFCOM marked the 70th anniversary of the Canton Fair with the opening of its 140th session, where Premier Li Qiang delivered the keynote address.",
+      "source_label": "MOFCOM ZH",
+      "url": "http://www.mofcom.gov.cn/tj/qttj/art/2026/art_8fa1d2f5a66644059f44cff3f62a1e02.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758, 55th anniversary",
+      "detail": "Contested-interpretation flashpoint over Taiwan's UN status."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Decides control of Congress; Bloomberg reported today that Russia, China and Iran are using AI to amplify disinformation ahead of the vote."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan one-year suspensions due to lapse",
+      "detail": "BIS Affiliates Rule and China's Oct. 2025 rare-earth export controls are due to expire unless extended; CNBC reported today Beijing signaled rare earths will keep flowing to the EU regardless."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Leaders' Meeting, Shenzhen",
+      "detail": "Expected Xi-Trump meeting; SCMP reported the two sides are negotiating an AI incident-hotline framework ahead of it."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Includes the Taipei mayoral race where China's TAO has sanctioned a company tied to candidate Puma Shen's father."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.reuters.com/world/china/chinas-top-prosecutor-arrests-former-chengdu-mayor-suspected-bribery-2026-10-15/",
+      "source": "Reuters",
+      "category": "Governance",
+      "headline": "China's Top Prosecutor Arrests Former Chengdu Mayor on Bribery Charges",
+      "body_text": "China's Supreme People's Procuratorate announced the arrest of a former Chengdu mayor on suspicion of bribery, Reuters reported. No further case details were disclosed."
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/french-cosmetics-facing-delays-clearing-china-customs-says-industry-association-2026-10-14/",
+      "source": "Reuters",
+      "category": "Trade",
+      "headline": "French Cosmetics Face Delays Clearing China Customs, Industry Group Says",
+      "body_text": "French cosmetics shipments are facing delays clearing Chinese customs, an industry association told Reuters. The group did not specify a cause for the holdups."
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/after-hybrid-car-deal-eu-needs-rebalance-china-trade-other-sectors-dombrovskis-2026-10-14/",
+      "source": "Reuters",
+      "category": "Trade",
+      "headline": "EU's Dombrovskis Says Bloc Must Rebalance China Trade Beyond Autos",
+      "body_text": "EU Trade Commissioner Valdis Dombrovskis said Europe needs to rebalance its China trade relationship beyond the recent hybrid-vehicle deal, Reuters reported. The comments come ahead of an EU summit putting China trade high on the agenda."
+    },
+    {
+      "url": "https://www.wsj.com/economy/trade/with-china-facing-more-trade-barriers-it-cant-afford-to-lose-europe-d041ab25",
+      "source": "WSJ",
+      "category": "Trade",
+      "headline": "China Can't Afford to Lose Europe Amid Rising Trade Barriers: WSJ",
+      "body_text": "The Wall Street Journal reported China, facing mounting trade barriers elsewhere, cannot afford to lose access to European markets. The piece comes as Brussels debates expanding curbs on Chinese imports."
+    },
+    {
+      "url": "https://www.washingtonpost.com/business/2026/10/15/hong-kong-remade-beijings-image-rebounds-global-financial-center/",
+      "source": "WaPo",
+      "category": "Finance",
+      "headline": "Hong Kong Rebounds as Global Financial Center, Remade in Beijing's Image",
+      "body_text": "The Washington Post reported Hong Kong is rebounding as a global financial center under a governance model reshaped by Beijing since 2019. The city's IPO market is separately on track for a record 2026, per Nikkei."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-15/taiwan-dollar-won-slump-as-chip-stock-selloff-hurts-sentiment",
+      "source": "Bloomberg",
+      "category": "Markets",
+      "headline": "Taiwan Dollar, Korean Won Slump as Chip Stock Selloff Hits Sentiment",
+      "body_text": "The Taiwan dollar and South Korean won slumped Thursday as a selloff in chip stocks hit regional sentiment, Bloomberg reported."
+    },
+    {
+      "url": "https://www.scmp.com/tech/big-tech/article/3371010/tsmc-confirms-talks-elon-musk-over-texas-terafab-insists-operational-control?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Technology",
+      "headline": "TSMC Confirms Talks With Musk Over Texas 'Terafab,' Insists on Control",
+      "body_text": "TSMC chairman and CEO C.C. Wei confirmed talks with Elon Musk over a role in his proposed Texas chip complex, saying any plant \"has got to be run by TSMC.\" TSMC has sent teams to Texas to assess expansion beyond its existing hub."
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202610150010",
+      "source": "Focus Taiwan",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Military Watching for Large-Scale PLA Drills as 'Peak Season' Nears",
+      "body_text": "Taiwan's defense establishment is watching for a large-scale PLA exercise as the annual peak season for Chinese drills approaches, Focus Taiwan reported."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/sk-hynix-conditions-new-us-factory-more-us-chip-equipment-exports-china-sources-2026-10-15/",
+      "source": "Reuters",
+      "headline": "SK Hynix Ties New US Fab to Looser China Chip-Equipment Export Rules",
+      "body_text": "SK Hynix is conditioning a planned new US factory on Washington approving more exports of chipmaking equipment to its China operations, Reuters reported, citing sources. The leverage play comes as the BIS Affiliates Rule suspension agreed at Busan is due to lapse around Nov. 10.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://selectcommitteeontheccp.house.gov/media/press-releases/moolenaar-calls-for-pentagon-to-update-its-list-of-pla-linked-institutions-and-talent-recruitment-programs",
+      "source": "House Select CCP",
+      "headline": "Moolenaar Presses Pentagon to Update PLA-Linked Institutions List",
+      "body_text": "House Select Committee on the CCP Chairman **John Moolenaar** called on the Pentagon to update its list of PLA-linked institutions and foreign talent-recruitment programs. The list informs US restrictions on research collaboration with Chinese military-tied entities.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-14/bessent-pushes-imf-on-distortionary-policies-in-china-signal",
+      "source": "Bloomberg",
+      "headline": "Bessent Presses IMF on 'Distortionary' Policies in China Signal",
+      "body_text": "Treasury Secretary **Scott Bessent** pushed the IMF on what Bloomberg read as 'distortionary' policies aimed at China, at the Fund's annual meetings in Bangkok. The comments come as the IMF separately warned China's stimulus lacks ambition and leaves the yuan undervalued.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3370865/how-new-us-army-unit-could-challenge-plas-area-denial-strategy-taiwan-conflict?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "New US Army Task Force Targets PLA Area-Denial Strategy",
+      "body_text": "The US Army's 4th Multi-Domain Task Force, activated at Fort Carson, Colorado on Oct. 8 with nearly *2,100* soldiers, is designed to counter Chinese efforts to block US and allied ships and aircraft in a Taiwan contingency. It is the latest of several such units stood up in Washington state, Germany and Hawaii.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://apnews.com/article/yemen-houthis-missile-technology-china-parts-iran-2ad930f312484954bcc21cca7e94e571",
+      "source": "AP",
+      "headline": "Houthis Seek More Chinese Supplies to Build Ballistic Missiles, Report Says",
+      "body_text": "Yemen's Houthi rebels are looking to expand their ballistic-missile program with additional Chinese-sourced components, the AP reported, citing a new report. The finding adds to scrutiny of Chinese dual-use exports reaching Iran-aligned groups.",
+      "instrument": "Sanctions"
+    },
+    {
+      "url": "https://www.hkej.com/instantnews/china/article/4540170/%E7%8E%8B%E6%96%87%E6%BF%A4%E6%99%A4%E5%BA%AB%E5%85%8B+%E7%A8%B1%E5%86%80%E8%98%8B%E6%9E%9C%E7%99%BC%E6%8F%AE%E6%BA%9D%E9%80%9A%E6%A9%8B%E6%A8%91%E4%BD%9C%E7%94%A8",
+      "source": "信报 (HKEJ ZH)",
+      "headline": "Commerce Minister Wang Wentao Meets Tim Cook, Seeks Apple as 'Bridge'",
+      "body_text": "Commerce Minister **Wang Wentao** met Apple CEO **Tim Cook** in Beijing on Oct. 15 and said he hoped Apple would serve as a communication bridge amid US-China trade frictions. The two discussed China-US economic relations, AI development and Apple's China operations, per Caixin.",
+      "instrument": "Diplomacy"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/15/2003866000",
+      "source": "Taipei Times",
+      "headline": "Belize PM Says China Sanctions Will Only Strengthen Taiwan Ties",
+      "body_text": "Belizean Prime Minister **John Briceno** called China's sanctions on Foreign Minister Francis Fonseca \"uncalled for,\" \"unjustified,\" \"wrong\" and \"illegal,\" saying they will only strengthen Belize's resolve to back Taiwan. Beijing's Monday sanctions also targeted Paraguay's information minister, freezing assets and barring entry to China, Hong Kong and Macau.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/15/2003865986",
+      "source": "Taipei Times",
+      "headline": "Taiwan's MAC Says China Sanctions on Candidate's Family Firm Target Elections",
+      "body_text": "Taiwan's Mainland Affairs Council said China's sanctioning of VWAY Co, owned by the father of Taipei mayoral candidate **Puma Shen**, is an \"egregious attempt\" to interfere in Taiwan's elections. The TAO said Shen Tu-cheng used VWAY to evade a June 2025 sanction on his other company.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://apnews.com/article/laos-china-airfield-vietnam-taiwan-ban-keun-e887f6f53da184d916603e0e339bf7dd",
+      "source": "AP",
+      "headline": "China Opens Joint-Use Airfield in Laos Amid Scrutiny of Military Role",
+      "body_text": "China has opened a joint-use airfield at Ban Keun in Laos, with construction continuing, the AP reported, as observers watch for its potential military applications. The facility adds to China's expanding infrastructure footprint in mainland Southeast Asia.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/russias-lavrov-chinas-wang-discuss-cooperation-ukraine-iran-asia-security-2026-10-14/",
+      "source": "Reuters",
+      "headline": "Wang Yi, Lavrov Discuss Ukraine, Iran at Asia Security Meeting in Baku",
+      "body_text": "Foreign Minister **Wang Yi** met Russian counterpart Sergei Lavrov on the sidelines of a CICA summit in Baku, discussing bilateral coordination plus the wars in Ukraine and Iran. China also backed extending Azerbaijan's CICA chairmanship for another two years, per Xinhua.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-14/eu-set-to-lift-sanction-on-chinese-firm-to-save-asml-supplier",
+      "source": "Bloomberg",
+      "headline": "EU Set to Lift Sanction on Chinese Firm to Save ASML Supplier",
+      "body_text": "The EU is preparing to lift a sanction on a Chinese company to rescue a supplier to Dutch chip-equipment maker ASML, Bloomberg reported. The move illustrates the bloc's balancing act between sanctions enforcement and semiconductor supply-chain continuity.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-14/china-and-eu-risk-new-trade-clash-over-what-comes-after-car-deal",
+      "source": "Bloomberg",
+      "headline": "EU Risks Bigger China Trade Fight With Plans to Expand Import Curbs",
+      "body_text": "Brussels is weighing plans to expand trade curbs on China beyond the recent EV hybrid deal, risking a broader clash, Bloomberg reported, as EU leaders put China first on the agenda at a Brussels summit this week.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-14/zambia-says-some-copper-sales-to-china-to-be-settled-in-renminbi",
+      "source": "Bloomberg",
+      "headline": "Zambia to Settle Some Copper Sales to China in Renminbi",
+      "body_text": "Zambia will settle some copper sales to China in renminbi, Bloomberg reported, a step in de-dollarizing commodity trade with one of its largest export markets.",
+      "region": "Africa"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-14/argentina-eyes-tapping-china-swap-to-cover-2027-financing-needs",
+      "source": "Bloomberg",
+      "headline": "Argentina Eyes China Currency Swap for 2027 Financing Needs",
+      "body_text": "Argentina is considering tapping its currency swap line with China to help cover 2027 financing needs, Bloomberg reported. The swap line has repeatedly served as a backstop for Buenos Aires amid balance-of-payments strain.",
+      "region": "Latin America"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-14/russia-iran-china-use-ai-to-boost-disinformation-before-us-midterms",
+      "source": "Bloomberg",
+      "headline": "Russia, China, Iran Using AI to Boost US Midterm Disinformation",
+      "body_text": "Russia, China and Iran are using AI tools to amplify disinformation campaigns ahead of the Nov. 3 US midterms, Bloomberg reported, citing researchers. The report adds to scrutiny of state-linked influence operations targeting the vote.",
+      "region": "Multilateral"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/10/15/world/asia/north-korea-china-bridge-yalu.html",
+      "source": "NYT",
+      "category_tag": "Diplomacy",
+      "headline": "China, North Korea Open Long-Delayed Yalu River Bridge",
+      "body": "China and North Korea opened the New Yalu River Bridge Thursday, a four-lane crossing linking Dandong, Liaoning, with Sinuiju, more than a decade after construction began. The *28.5-meter*-wide span drew truck convoys for the opening ceremony, and Premier **Li Qiang** called it a 'new chapter' in bilateral ties, per Xinhua. The opening comes as the two countries expand trade despite international sanctions on Pyongyang.",
+      "src_line": "NYT, with Xinhua, Reuters"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/14/business/china-exports-trade-surplus.html",
+      "source": "NYT",
+      "category_tag": "PRC-Economy",
+      "headline": "China's Exports Hit Near-Decade High, Trade Surplus Nears Record",
+      "body": "China's exports grew last month at their fastest pace in almost any month since the end of the 2008-09 financial crisis, the New York Times reported, putting the trade surplus on track for a record. The AP separately reported the surplus is nearing a record even as pressure mounts from trading partners in Washington and Brussels.",
+      "src_line": "NYT, with AP"
+    },
+    {
+      "url": "https://www.scmp.com/plus/tech/tech-war/article/3371013/china-us-discuss-ai-chip-stock-rout-hits-asian-markets?utm_source=rss_feed",
+      "source": "SCMP",
+      "category_tag": "US-China",
+      "headline": "US, China Edge Toward AI Incident Hotline Ahead of Shenzhen Summit",
+      "body": "The US and China are in regular talks on AI, seeking to firm up plans for an incident 'hotline' and a formalized dialogue process ahead of a presidential summit next month, SCMP reported. The two sides aim to agree a basic framework for addressing AI incidents before **Xi Jinping** and **Donald Trump** meet on the sidelines of the APEC leaders' meeting in Shenzhen.",
+      "src_line": "SCMP, sources"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/15/china-rare-earth-exports-europe.html",
+      "source": "CNBC",
+      "category_tag": "Sanctions",
+      "headline": "China Signals Rare Earths Will Keep Flowing to EU Regardless of US Deal Status",
+      "body": "Beijing indicated rare-earth exports to Europe will continue regardless of the status of its trade arrangement with Washington, CNBC reported, after EU trade commissioner Maroš Šefčovič met Commerce Minister **Wang Wentao** in Beijing last week. The signal comes as the one-year suspension of China's October 2025 rare-earth export controls, agreed at Busan, is due to lapse around Nov. 10.",
+      "src_line": "CNBC"
+    },
+    {
+      "url": "https://english.kyodonews.net/articles/-/88190",
+      "source": "Kyodo",
+      "category_tag": "PLA",
+      "headline": "Chinese Aircraft Carrier Liaoning Spotted Off Japan's Okinawa",
+      "body": "Kyodo News reported in a breaking alert Thursday that the Chinese aircraft carrier *Liaoning* was spotted operating off Okinawa, with no further operational detail given. Taiwan's defense establishment separately said it is watching for a large-scale PLA exercise as the annual 'peak season' for drills approaches, Focus Taiwan reported.",
+      "src_line": "Kyodo News"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/15/2003865987",
+      "source": "Taipei Times",
+      "category_tag": "Energy",
+      "headline": "Taiwan Advances Talks on Up to $4.4 Billion Alaska LNG Investment",
+      "body": "Taiwan's CPC Corp is in talks to invest as much as *$4.4 billion* in the Alaska LNG project and purchase 6 million tonnes of gas annually once production begins, Taiwan's economic ministry said, after President **Trump** told a rally Taiwan would buy 30 percent of the facility's output. Taiwan could begin receiving LNG as early as 2032 if the 1,299km pipeline project proceeds on schedule.",
+      "src_line": "Taipei Times"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.reuters.com/world/china/no-auto-plants-available-italy-chinese-purchase-italian-minister-says-2026-10-14/",
+      "source": "Reuters",
+      "category": "Trade",
+      "headline": "No Auto Plants Available in Italy for Chinese Purchase, Minister Says",
+      "body_text": "No factories are available in Italy for a Chinese automaker to buy, an Italian minister told Reuters, dimming one path for Chinese EV expansion in Europe.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370902/us-china-rivalry-middle-powers-urged-be-indispensable-chokepoints?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Middle Powers Urged to Be 'Indispensable' Chokepoints Amid US-China Rivalry",
+      "body_text": "Former leaders and diplomats at an India forum said middle powers should become 'indispensable' chokepoints to preserve strategic autonomy, SCMP reported.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/15/2003865997",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Taiwan FM Warns EU Against Dependence on China",
+      "body_text": "Lin Chia-lung warned the EU against China dependence in a Warsaw Security Forum speech promoting a 'Taiwan model' for reindustrialization.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/markets/ipo/hong-kong-ipos-on-track-for-record-2026-but-momentum-slows",
+      "source": "Nikkei Asia",
+      "category": "Economy",
+      "headline": "Hong Kong IPO Market on Track for Record 2026 Despite Slowing Momentum",
+      "body_text": "Hong Kong's IPO market remains on track for a record 2026, driven by strong demand for mainland Chinese listings, Nikkei reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/energy/taiwanese-korean-firms-eye-japan-grid-storage-market-with-china-locked-out",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Taiwanese, Korean Firms Eye Japan Grid Storage as China Locked Out",
+      "body_text": "Taiwanese and South Korean battery suppliers are moving into Japan's grid-storage market as Chinese rivals remain locked out, Nikkei reported.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.voachinese.com/a/ipac-audit-calls-for-coherent-uk-china-policy-and-a-us-inspired-china-house-20261014/8211343.html",
+      "source": "VOA Chinese",
+      "category": "Diplomacy",
+      "headline": "IPAC Report Urges UK to Overhaul China Policy",
+      "body_text": "A parliamentary group's audit called for a coherent UK China policy and a State Department-style 'China House,' VOA Chinese reported.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/15/2003865999",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "World Medical Association Reaffirms Support for Taiwan's WHO Bid",
+      "body_text": "The WMA reaffirmed its resolution backing Taiwan's participation in WHO programs tied to International Health Regulations, per Taipei Times.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.voachinese.com/a/taiwan-thunder-tiger-ausa-20261014/8211503.html",
+      "source": "VOA Chinese",
+      "category": "Cross-Strait",
+      "headline": "Taiwan's Thunder Tiger Unveils Attack Drone for US Market",
+      "body_text": "Taiwan's Thunder Tiger showed a new attack drone aimed at the US military market at the AUSA exhibition, VOA Chinese reported.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.channelnewsasia.com/business/chinese-automaker-chery-launch-new-ev-model-in-uk-in-early-2027-6461781",
+      "source": "CNA",
+      "category": "Economy",
+      "headline": "Chery to Launch New EV SUV in UK in Early 2027",
+      "body_text": "Chery will launch a new EV SUV in Britain under its iCAUR brand in early 2027, already the top-selling Chinese automaker in the UK.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/business/banking-finance/article/3370997/hsbc-double-hong-kong-ai-team-300-outpacing-singapore-plan?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Technology",
+      "headline": "HSBC to Double Hong Kong AI Team to 300",
+      "body_text": "HSBC will double its Hong Kong AI specialist team to 300 over two to three years, outpacing its planned Singapore AI hub headcount.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3370979/over-1000-hongkongers-ride-baidus-robotaxis-city-first-public-trial?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Technology",
+      "headline": "Over 1,000 Hongkongers to Ride Baidu Robotaxis in Public Trial",
+      "body_text": "More than 1,000 Hong Kong residents will ride Baidu's Apollo robotaxis in the city's first large-scale trial, running Oct. 21-Nov. 3.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.afp.com/en/infos/takedas-orzeyful-oveporexton-launches-simultaneously-japan-and-china-giving-physicians-first",
+      "source": "AFP",
+      "category": "Economy",
+      "headline": "Takeda Launches Narcolepsy Drug Simultaneously in Japan, China",
+      "body_text": "Takeda launched its narcolepsy drug ORZEYFUL simultaneously in Japan and China, giving physicians first access to the new orexin-agonist drug class.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-14/apple-prepares-to-debut-first-ai-features-in-china-in-december",
+      "source": "Bloomberg",
+      "headline": "Apple to Launch First AI Features in China in December",
+      "body_text": "Apple plans to debut its first AI features in China in December, Bloomberg reported, a market where the company has lacked a Siri-style AI product.",
+      "companies": [
+        "Apple"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-15/bytedance-in-talks-to-secure-mediatek-ai-chips-for-data-centers",
+      "source": "Bloomberg",
+      "headline": "ByteDance in Talks to Secure MediaTek AI Chips for Data Centers",
+      "body_text": "ByteDance is negotiating with MediaTek to secure AI chips for its data centers, Bloomberg reported, as Chinese firms diversify suppliers amid US export restrictions on Nvidia's most advanced accelerators.",
+      "companies": [
+        "ByteDance",
+        "MediaTek"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/technology/chinese-startup-dexforce-trains-humanoid-robots-using-virtual-data-slash-costs-2026-10-15/",
+      "source": "Reuters",
+      "headline": "Chinese Startup DexForce Trains Humanoid Robots With Virtual Data",
+      "body_text": "Chinese startup DexForce is using simulation-generated virtual data to train humanoid robots, cutting the cost of physical data collection, Reuters reported.",
+      "companies": [
+        "DexForce"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-14/china-s-backdoor-bond-buying-talk-swirls-on-600-billion-buildup",
+      "source": "Bloomberg",
+      "headline": "China's 'Backdoor' Bond-Buying Talk Swirls on $600 Billion Buildup",
+      "body_text": "Traders are speculating that state-linked entities are behind an unexplained *$600 billion* buildup in government bond holdings, Bloomberg reported, fueling debate over Beijing's role in managing borrowing costs.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-15/imf-warns-china-stimulus-lacks-ambition-leaves-yuan-undervalued",
+      "source": "Bloomberg",
+      "headline": "IMF Warns China's Stimulus Lacks Ambition, Yuan Remains Undervalued",
+      "body_text": "The IMF said China's stimulus measures lack ambition and that the yuan remains undervalued, Bloomberg reported, adding pressure on Beijing as growth slows.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.afp.com/en/chinas-economy-seen-missing-target-global-shocks-bite-afp-poll",
+      "source": "AFP",
+      "headline": "China's Q3 Growth Seen Missing Government Target, AFP Poll Finds",
+      "body_text": "Economists polled by AFP expect China's economy grew 4.4% year-on-year in Q3, below Beijing's 4.5-5.0% target but up from Q2's 4.3%; Oxford Economics' Sheana Yue cited 'persistently weak domestic demand, particularly consumption and property investment.'",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.economist.com/finance-and-economics/2026/10/14/another-warning-sign-for-chinas-economy-falling-consumer-credit",
+      "source": "The Economist",
+      "headline": "Falling Consumer Credit Flags Fresh Warning for China's Economy",
+      "body_text": "The Economist reported falling consumer credit as a new warning sign for China's economy, adding to evidence of weak household demand alongside the property slump.",
+      "companies": [],
+      "sector": "macro"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "Chen Binhua",
+      "role": "TAO spokesperson",
+      "topic": "Taiwan compatriots' role in post-unification governance",
+      "statement": "Per TAO: Taiwan compatriots will be able to participate in the design of institutional arrangements after unification.",
+      "original_zh": null,
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "The statement comes as Taipei holds nine-in-one local elections on Nov. 28, 2026, in a cycle where the TAO has also sanctioned a company tied to a mayoral candidate's family.",
+      "source": "中新网福建",
+      "url": "http://www.fj.chinanews.com.cn/news/2026/2026-10-15/592145.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Japan's Yasukuni Shrine and Class-A war criminals",
+      "statement": "Per MOFA: Japanese leaders have repeatedly paid homage at the 'war-criminal shrine', where is their conscience? Japan's leaders should face history squarely, reflect on their guilt, and thoroughly reform.",
+      "original_zh": "外交部：日本当政者一再对“战犯神社”顶礼膜拜，良知何在？",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "The comments follow Japanese media disclosures about Yasukuni Shrine's enshrinement of Class-A war criminals, raised at Mao Ning's Oct. 15 regular press briefing.",
+      "source": "京报网",
+      "url": "https://news.bjd.com.cn/2026/10/15/90093551.shtml"
+    },
+    {
+      "body": "Premier",
+      "body_chinese": "李强",
+      "speaker": "Li Qiang",
+      "role": "Premier of the State Council",
+      "topic": "China's trade role at Canton Fair opening",
+      "statement": "When some people discuss China's trade today, they often see only import and export figures and overlook the real effects behind them. China is both a 'super seller' and a 'super buyer.'",
+      "original_zh": null,
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Li Qiang delivered the keynote at the opening of the 140th Canton Fair, marking its 70th anniversary, amid near-record Chinese export growth.",
+      "source": "Sinocism",
+      "url": "https://sinocism.com/p/september-trade-prices-and-credit"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "CCP General Secretary",
+      "topic": "Party discipline ahead of the Fifth Plenum",
+      "statement": "Implementing the major decisions and arrangements of the Party Central Committee is a basic requirement of the Party's political discipline and rules.",
+      "original_zh": "贯彻落实党中央重大决策部署是党的政治纪律和政治规矩的基本要求。",
+      "addressed_to": "domestic",
+      "tone": "firm",
+      "context": "Qiushi magazine republished the article today, drawn from Xi's Jan. 12, 2026 speech to the 20th Central Commission for Discipline Inspection, ahead of the Fifth Plenum of the 20th Central Committee expected this month.",
+      "source": "求是 (Qiushi)",
+      "url": "https://www.qstheory.cn/20261015/a6ed86729ae947d99a83bb431867b7d3/c.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Zimbabwe sovereign debt restructuring",
+      "statement": "Per MOFA: China attaches great importance to Zimbabwe's demands regarding debt disposal, and the relevant departments and financial institutions on both sides are maintaining communication.",
+      "original_zh": "中方高度重视津巴布韦方面债务处置的诉求，双方有关部门和金融机构保持着沟通",
+      "addressed_to": "other",
+      "tone": "routine",
+      "context": "The response followed reports that China had agreed to partially restructure Zimbabwe's debt.",
+      "source": "搜狐",
+      "url": "https://m.sohu.com/a/1088146628_121019331?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "DB",
+      "who": "Dennis Blair",
+      "handle_context": "Former US Director of National Intelligence; retired US Navy admiral",
+      "platform_date": "Taipei security conference (virtual) · Oct 14, 2026",
+      "quote_text": "helping Taiwan is very much in the interests of all seafaring nations... if Taiwan can be bullied into giving up parts of its sovereignty, then Japan, the Philippines, Vietnam, Malaysia, Korea, all of the countries of the world have to wonder, the region has to wonder about whether they are next",
+      "analyst_note": "Blair, former commander in chief of US Pacific Command before retiring in 2002, praised Taiwan's shift of the Han Kuang exercises into a whole-of-society defense effort.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/15/2003865998"
+    },
+    {
+      "avatar_initials": "AG",
+      "who": "Alicia Garcia-Herrero",
+      "handle_context": "Senior fellow, Bruegel; chief economist Asia-Pacific, Natixis",
+      "platform_date": "SCMP · Oct 15, 2026",
+      "quote_text": "We are already at the starting point of the China shock 3.0",
+      "analyst_note": "Garcia-Herrero said the next China shock will be driven by AI, biotech and robot exports and could hit harder than the prior wave.",
+      "badge_class": "sb-s",
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370925/china-shock-30-be-driven-ai-biotech-and-robot-exports-economist-says?utm_source=rss_feed"
+    },
+    {
+      "avatar_initials": "JB",
+      "who": "John Briceno",
+      "handle_context": "Prime Minister of Belize",
+      "platform_date": "CNA interview, Bangkok · Oct 14, 2026",
+      "quote_text": "We are very concerned and disappointed that China would take such a position... We believe that we are an independent country and, as an independent country, we should be allowed to make our own decisions... We believe that we are doing the right thing by standing with Taiwan.",
+      "analyst_note": "Briceno spoke after Beijing's sanctions on Belizean Foreign Minister Francis Fonseca and Paraguay's information minister over their governments' Taiwan ties.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/15/2003866000"
+    },
+    {
+      "avatar_initials": "LC",
+      "who": "Lin Chia-lung",
+      "handle_context": "Taiwan Minister of Foreign Affairs",
+      "platform_date": "Warsaw Security Forum · Oct 13, 2026",
+      "quote_text": "What is happening in Ukraine is shaping the security of Warsaw, of Berlin, of Paris, and, indeed, of Taipei. In an interconnected world, the front lines of freedom are no longer separated by geographical landscape.",
+      "analyst_note": "Lin promoted a 'Taiwan model' for reindustrialization and warned the EU against dependence on Chinese suppliers, ahead of an EU summit putting China trade high on the agenda.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/15/2003865997"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.nytimes.com/2026/10/15/world/asia/north-korea-china-bridge-yalu.html",
+    "https://www.reuters.com/world/china/russias-lavrov-chinas-wang-discuss-cooperation-ukraine-iran-asia-security-2026-10-14/",
+    "https://english.kyodonews.net/articles/-/88190",
+    "https://www.taipeitimes.com/News/front/archives/2026/10/15/2003865986",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/15/2003866000",
+    "https://apnews.com/article/laos-china-airfield-vietnam-taiwan-ban-keun-e887f6f53da184d916603e0e339bf7dd"
+  ],
+  "story_count": 100,
+  "oped_count": 2,
+  "academic_count": 0,
+  "source_count": 113,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-15.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-15.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
