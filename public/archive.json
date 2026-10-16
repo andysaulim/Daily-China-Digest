@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-16",
+    "filename": "2026-10-16.html",
+    "re_line": "PH-China envoy threat \u00b7 Beijing proposes 40-item export curbs \u00b7 Taiwan to curb AI chips to China \u00b7 Yuan push, PBOC liquidity",
+    "top_stories": 5,
+    "overnight_items": 7,
+    "word_count": 2560,
+    "sources": 117,
+    "pdf": true
+  },
+  {
     "date": "2026-10-15",
     "filename": "2026-10-15.html",
     "re_line": "RE: China-DPRK bridge opens \u00b7 Exports near record \u00b7 US-China AI hotline talks \u00b7 Rare earths to EU \u00b7 Liaoning off Okinawa",

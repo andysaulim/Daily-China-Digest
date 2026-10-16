@@ -1,0 +1,587 @@
+{
+  "digest_date": "Friday, October 16, 2026",
+  "re_line": "PH-China envoy threat · Beijing proposes 40-item export curbs · Taiwan to curb AI chips to China · Yuan push, PBOC liquidity",
+  "market_indicators": {
+    "brent": {
+      "value": "106.18",
+      "change_pct": -0.44,
+      "as_of": "Oct 16"
+    },
+    "sse_composite": {
+      "value": "3,716.28",
+      "change_pct": -2.13,
+      "as_of": "Oct 16"
+    },
+    "usd_cny": {
+      "value": "6.6754",
+      "change_pct": -0.25,
+      "as_of": "Oct 16"
+    },
+    "hang_seng": {
+      "value": "24,186.83",
+      "change_pct": -0.1,
+      "as_of": "Oct 16"
+    },
+    "usd_cnh": {
+      "value": "6.6854",
+      "change_pct": -0.04,
+      "as_of": "Oct 16"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "Beijing proposed adding 40 AI, biotech and solar technologies to its export-control catalogue on Oct 16, hours after Bloomberg reported Taiwan agreeing to curb AI chip exports to China under a new US trade arrangement.",
+    "Manila called Chinese Ambassador Jing Quan's remark that Beijing could 'easily win' a South China Sea showdown a 'thinly veiled threat' and may summon him, as MND separately vowed 'forceful action' against anyone 'creating chaos' in the sea.",
+    "PBOC injected 700 billion yuan via outright reverse repos on Oct 15 as Bloomberg reported China's stimulus response arriving too late to prevent a second straight quarter of sub-target growth."
+  ],
+  "key_stat": {
+    "number": "¥700B",
+    "label": "PBOC outright reverse repo operation, Oct 15",
+    "context": "Included a *200 billion yuan* increase in the 6-month tenor; the injection lands as Bloomberg separately reports China's stimulus push arriving too late to prevent a second straight quarter of sub-target GDP growth.",
+    "source": "PBOC ZH / Bloomberg"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": null,
+      "action": "Conducts large outright reverse repo operation",
+      "document": null,
+      "detail": "PBOC conducted *700 billion yuan* in outright reverse repos on Oct 15, including a 200 billion yuan increase in the 6-month tenor, alongside separate 45 billion and 60 billion yuan 7-day reverse repo operations this week.",
+      "source_label": "PBOC ZH",
+      "url": "https://www.guandian.cn/article/20261016/614114.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": null,
+      "action": "Holds second round of talks to upgrade Vanuatu economic partnership agreement",
+      "document": "China-Vanuatu Economic Partnership Agreement upgrade negotiations",
+      "detail": "The second round of negotiations to upgrade the China-Vanuatu Economic Partnership Agreement was held in Beijing, continuing Beijing's Pacific Islands economic diplomacy push.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_683fb5afa1c24be2a7cc5d0cf79e934b.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758, 55th anniversary",
+      "detail": "Marks 55 years since the 1971 resolution recognizing the PRC as China's UN representative; Beijing and Washington continue to contest interpretations of the resolution's scope regarding Taiwan."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "All 435 House seats and 35 Senate seats are contested; the outcome will shape the China policy agenda for the rest of Trump's term."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal suspensions approach lapse",
+      "detail": "The one-year suspensions of the BIS Affiliates Rule and China's Oct 2025 rare-earth export controls, agreed at Busan, are due to lapse around this date unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Leaders' Meeting, Shenzhen",
+      "detail": "China hosts the APEC summit Nov 18-19; Trump's attendance and any Trump-Xi meeting remain unconfirmed."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Voters choose 22 mayors and magistrates and roughly 11,000 local offices, read as a mid-term test for President Lai Ching-te."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/china-builds-gas-buffer-for-winter-as-iran-war-heightens-risk",
+      "source": "Bloomberg China",
+      "category": "Energy",
+      "headline": "China builds gas buffer for winter as Iran war heightens risk",
+      "body_text": "Bloomberg reported Oct 16 that China is building up natural gas inventories ahead of winter as the Iran war raises supply risk. The available summary did not specify the buffer's volume or which suppliers are involved."
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/chinas-tencent-says-ai-agents-showed-unintended-browsing-behaviour-2026-10-16/",
+      "source": "Reuters China",
+      "category": "Technology",
+      "headline": "Tencent says its AI agents showed unintended browsing behaviour",
+      "body_text": "Tencent disclosed that its AI agents exhibited unintended browsing behavior, Reuters reported Oct 16. The company did not detail the scope of the anomaly or corrective steps taken in the available report."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/law-and-crime/article/3371131/hong-kong-housewife-gets-3-months-psychiatric-institution-over-seditious-posters?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Legal",
+      "headline": "Hong Kong housewife ordered into psychiatric institution over seditious posters",
+      "body_text": "West Kowloon Court ordered 62-year-old Yang Chau-ki into three months of mandatory psychiatric treatment at Siu Lam Psychiatric Centre for displaying pro-independence slogans and Hong Kong's colonial-era flag. She was charged under Hong Kong's Article 23 for seditious publications."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/16/2003866062",
+      "source": "Taipei Times (direct)",
+      "category": "Cross-Strait",
+      "headline": "Taiwan blocks Coinbase, Kalshi over suspected election bets",
+      "body_text": "A New Taipei court authorized Taiwan's communications regulator to block domestic access to Coinbase and Kalshi over suspected election betting ahead of the Nov 28 local elections. The Criminal Investigation Bureau cited concern over 'overseas interference' under the Public Officials Election and Recall Act."
+    },
+    {
+      "url": "https://focustaiwan.tw/business/202610160010",
+      "source": "Focus Taiwan",
+      "category": "Cross-Strait",
+      "headline": "Taiwan plans US industrial parks with private funding, government aid",
+      "body_text": "Focus Taiwan reported Oct 16 that Taiwan plans to build industrial parks in the United States using private funding supplemented by government aid. The available summary did not specify locations, sectors or a timeline."
+    },
+    {
+      "url": "https://cacs.mofcom.gov.cn/cacscms/article/ckys?articleId=189523&type=1",
+      "source": "MOFCOM Trade Remedy Info ZH",
+      "category": "Trade",
+      "headline": "Japan opens anti-dumping probe into Chinese titanium dioxide pigments",
+      "body_text": "Japan initiated an anti-dumping investigation into Chinese rutile-type titanium dioxide pigments and preparations, China's trade-remedy information site reported Oct 16. No further detail on the investigation's scope or timeline was given."
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/sy/tt_214026/16493648.html",
+      "source": "MND ZH",
+      "category": "Domestic",
+      "headline": "Xi Jinping inspects Ulanqab, Inner Mongolia",
+      "body_text": "State media reported **Xi Jinping** conducting an inspection tour of Ulanqab in Inner Mongolia, the first reported public activity after a 41-day gap in confirmed appearances tracked by outside monitors. The dispatch gave no further detail on the visit's agenda or accompanying officials."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.reuters.com/world/china/trump-says-he-is-talking-russia-china-about-denuclearization-2026-10-16/",
+      "source": "Reuters China",
+      "headline": "Trump says he is talking to Russia and China about denuclearization",
+      "body_text": "President **Trump** said the United States is in talks with Russia and China about denuclearization, Reuters reported Oct 16. The report did not detail format, timeline or specific proposals discussed.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/15/jensen-huang-nvidia-china-ai.html",
+      "source": "CNBC China",
+      "headline": "Nvidia's Jensen Huang urges US-China dialogue on 'potentially dangerous' AI",
+      "body_text": "Nvidia CEO **Jensen Huang** called for US-China dialogue on AI he described as 'potentially dangerous,' telling CNBC he maintains ongoing 'dialogs' with researchers in China. The comments come as Washington and Beijing continue negotiating advanced-chip export terms.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/newsletters/2026-10-15/china-may-be-behind-canada-s-growing-us-treasury-bond-holdings",
+      "source": "Bloomberg China",
+      "headline": "Canada's pile of US bonds grew by nearly $600 billion; some see China at work",
+      "body_text": "Canada's holdings of US Treasury bonds grew by nearly *$600 billion*, Bloomberg reported Oct 15, with some analysts suggesting China may be using Canadian intermediaries to maintain dollar-asset exposure. The dispatch did not identify specific institutions or transactions under scrutiny.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://www.reuters.com/technology/google-warns-suspected-china-linked-hackers-could-exploit-beyondtrust-flaw-2026-10-15/",
+      "source": "Reuters China",
+      "headline": "Google warns suspected China-linked hackers could exploit BeyondTrust flaw",
+      "body_text": "Google warned that suspected China-linked hackers could exploit a vulnerability in BeyondTrust software, Reuters reported Oct 15. The advisory did not name specific victims or confirm active exploitation.",
+      "instrument": "Legal"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/16/2003866057",
+      "source": "Taipei Times (direct)",
+      "headline": "Taiwan's MND on guard for PLA exercises as 'peak season' nears",
+      "body_text": "Taiwan's MND said it is using joint intelligence, surveillance and reconnaissance capabilities to watch for large-scale PLA exercises as the November-December 'peak season' for Chinese drills approaches. Deputy Chief of the General Staff for Intelligence **Pan Chun-kuang** said a **Liaoning**-led carrier fleet began 'routine drills' in the western Pacific on Oct 14.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/taiwan-tells-its-people-shun-chinese-anniversary-events-revolutionary-hero-2026-10-16/",
+      "source": "Reuters China",
+      "headline": "Taiwan tells its people to shun Chinese anniversary events for revolutionary hero",
+      "body_text": "Taiwan's government told citizens to avoid Chinese commemorative events tied to a shared revolutionary historical figure, Reuters reported Oct 16. The available summary did not specify which anniversary or figure was involved.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://english.kyodonews.net/articles/-/88374",
+      "source": "Kyodo China",
+      "headline": "Japan defense chief vows to boost monitoring after sailing of China carrier",
+      "body_text": "Japan's defense minister vowed to step up monitoring after a Chinese aircraft carrier sailed through waters near Japan, Kyodo reported Oct 16. Taiwan's MND separately said the carrier was part of a **Liaoning**-led fleet that began 'routine drills' in the western Pacific on Oct 14.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://apnews.com/article/china-north-korea-bridge-delay-899452a683ff984b081e538901050da8",
+      "source": "AP China",
+      "headline": "New China-North Korea bridge opens after more than a decade of delay",
+      "body_text": "North Korea and China held an opening ceremony Oct 15 for a new Yalu River bridge linking Sinuiju and Dandong, a cable-stayed span completed in 2014 but left unopened for *12 years* over unfinished approach roads on the North Korean side. North Korean Premier Pak Thae Song and Chinese Premier **Li Qiang** delivered video remarks at the ceremony.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/sitharaman-says-china-s-trade-barriers-biggest-hurdle-to-ties",
+      "source": "Bloomberg China",
+      "headline": "Sitharaman says China's trade barriers are biggest hurdle to ties",
+      "body_text": "Sitharaman said China's trade barriers remain the biggest hurdle to bilateral ties, Bloomberg reported Oct 16. The comment follows MOFA's statement the same day that Beijing 'has never deliberately pursued a trade surplus,' after India's trade deficit with China was reported at $112 billion earlier this month.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-15/eu-prepares-trade-tool-that-could-block-china-from-single-market",
+      "source": "Bloomberg China",
+      "headline": "EU to bolster its power to block Chinese imports in trade fight",
+      "body_text": "The EU is preparing a new trade tool giving Brussels power to block Chinese imports from the single market, Bloomberg reported Oct 15. The available summary did not specify the legal mechanism or targeted sectors.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/china-ready-cooperate-with-eu-tackling-global-imbalances-2026-10-16/",
+      "source": "Reuters China",
+      "headline": "China ready to cooperate with EU in tackling global imbalances",
+      "body_text": "China said it is ready to cooperate with the EU in tackling global economic imbalances, Reuters reported Oct 16. The available summary did not name a Chinese official or specify proposed joint measures.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/china-says-israel-should-stop-its-forced-establishment-west-bank-settlements-2026-10-16/",
+      "source": "Reuters China",
+      "headline": "China says Israel should stop 'forced establishment' of West Bank settlements",
+      "body_text": "China's Foreign Minister **Wang Yi** called on Israel to 'cease and withdraw' from the 'forced establishment' of West Bank settlements and reopen Gaza Strip aid access, Reuters reported Oct 16. The comments came as Wang attended the CICA summit in Baku, where he also met the Palestinian foreign minister.",
+      "region": "Middle East"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/china-targets-practical-action-global-governance-forum-next-week-2026-10-16/",
+      "source": "Reuters China",
+      "headline": "China targets practical action from global governance forum next week",
+      "body_text": "China said it wants 'practical action' from a global governance forum scheduled for next week, Reuters reported Oct 16. The available summary did not name the host city or confirm an attendee list.",
+      "region": "Multilateral"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://apnews.com/article/china-philippines-chinese-ambassador-jing-quan-south-china-sea-disputes-9e532b4bd2413b3702d4c55f89cffd22",
+      "source": "AP News",
+      "category_tag": "Indo-Pacific",
+      "headline": "Philippines calls Chinese envoy's 'easily win' remark a 'thinly veiled threat'",
+      "body": "Chinese Ambassador to the Philippines **Jing Quan** said Thursday that Beijing could 'easily win' a military showdown in the South China Sea but had instead chosen peace, prompting Manila to call the remark a 'thinly veiled threat' and press for diplomatic restraint. The exchange follows months of Chinese moves to drive Philippine aircraft from Scarborough Shoal; the Philippine president may summon the envoy over the comments, per Bloomberg.",
+      "src_line": "AP News, corroborated by SCMP, Reuters, Bloomberg"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/china-proposes-adding-40-ai-biotech-solar-technologies-export-control-list-2026-10-16/",
+      "source": "Reuters China",
+      "category_tag": "Technology",
+      "headline": "China proposes adding 40 AI, biotech and solar technologies to export control list",
+      "body": "China's Ministry of Commerce and Ministry of Science and Technology proposed adding *40* AI, biopharmaceutical and photovoltaic technologies to the country's export-control catalogue on Oct 16, opening a public-comment period and imposing temporary registration management on affected exports in the interim. The move follows MOFCOM's Announcement No. 48 of 2026 revising the 'Catalogue of Technologies Prohibited and Restricted from Export.'",
+      "src_line": "Reuters, corroborated by Bloomberg, Nikkei Asia, MOFCOM"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/taiwan-to-curb-ai-chip-exports-to-china-as-part-of-us-trade-deal",
+      "source": "Bloomberg China",
+      "category_tag": "US-China",
+      "headline": "Taiwan to curb AI chip exports to China as part of US trade deal",
+      "body": "Taiwan agreed to curb AI chip exports to China as part of a trade arrangement with Washington, Bloomberg reported Oct 16. The dispatch did not specify which chip categories or companies are covered, or when the curbs take effect.",
+      "src_line": "Bloomberg"
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/10/14/laos-china-airfield-vietnam-taiwan-ban-keun/8d499dbe-c83e-11f1-aefb-abe4112d087e_story.html",
+      "source": "WaPo China",
+      "category_tag": "PLA",
+      "headline": "China opens joint airfield in Laos, eyes on its military role",
+      "body": "The Washington Post reported Oct 14 that China has opened a joint airfield in Laos, with construction still ongoing and questions remaining about its eventual military role in the region. The report did not specify the airfield's exact location or completion date.",
+      "src_line": "The Washington Post"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-15/china-s-plan-to-make-yuan-a-global-currency-enters-faster-phase",
+      "source": "Bloomberg China",
+      "category_tag": "PRC-Economy",
+      "headline": "China's plan to make yuan a global currency enters faster phase",
+      "body": "Bloomberg reported Oct 15 that Beijing's campaign to internationalize the yuan has entered a faster phase, though the available summary did not detail specific new measures. The yuan traded at *6.6754* per dollar Oct 16, down 0.25% on the day.",
+      "src_line": "Bloomberg"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.wsj.com/business/retail/kimberly-clark-forecasts-quarterly-sales-decline-following-social-media-firestorm-in-china-5963d4d2",
+      "source": "WSJ China",
+      "category": "Economy",
+      "headline": "Kimberly-Clark forecasts quarterly sales decline after China social-media firestorm",
+      "body_text": "Kimberly-Clark forecast a quarterly sales decline following a social-media backlash in China, WSJ reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.wsj.com/logistics-report/chinese-automakers-focus-on-international-expansion-despite-limits-9be92d95",
+      "source": "WSJ China",
+      "category": "Auto",
+      "headline": "Chinese automakers focus on international expansion despite limits",
+      "body_text": "Chinese automakers are prioritizing overseas expansion despite market-access limits abroad, WSJ reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.ft.com/content/0a39fcdb-860c-4739-8454-21fb429f6336?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category": "Trade",
+      "headline": "FT answers readers: who's winning the US-China trade war?",
+      "body_text": "FT's trade writers fielded reader questions on who is winning the US-China trade war.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-15/eu-begins-assessing-additional-sectors-for-china-trade-quotas",
+      "source": "Bloomberg China",
+      "category": "Trade",
+      "headline": "EU begins assessing additional sectors for China trade quotas",
+      "body_text": "The EU began assessing additional sectors for potential China trade quotas, Bloomberg reported.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.economist.com/china/2026/10/15/china-is-channelling-much-more-money-to-poor-countries",
+      "source": "Economist China",
+      "category": "Diplomacy",
+      "headline": "China channelling much more money to poor countries",
+      "body_text": "China is channelling significantly more money to poor countries, The Economist reported.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.economist.com/china/2026/10/15/china-has-captured-the-market-for-hobbyist-3d-printers",
+      "source": "Economist China",
+      "category": "Technology",
+      "headline": "China captures market for hobbyist 3D printers",
+      "body_text": "China has captured the global market for hobbyist 3D printers, The Economist reported.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-15/compound-semaglutide-tirzepatide-plants-in-china-found-with-black-mold-by-fda",
+      "source": "Bloomberg China",
+      "category": "Health/Regulatory",
+      "headline": "Black mold, bugs found at Chinese plants making GLP-1 compounding agents",
+      "body_text": "FDA inspectors found black mold and insects at Chinese plants making GLP-1 compounding agents, Bloomberg reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/features/2026-10-16/how-kfc-turned-egg-tarts-into-a-fast-food-hit-in-china",
+      "source": "Bloomberg China",
+      "category": "Economy",
+      "headline": "Everyone wants a bite of China's egg tart economy",
+      "body_text": "Bloomberg profiled how KFC and rivals turned egg tarts into a fast-food hit across China.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/toyota-to-debut-its-own-version-of-tesla-ev-making-tech-in-china",
+      "source": "Bloomberg China",
+      "category": "Auto",
+      "headline": "Toyota to debut its own version of Tesla EV-making tech in China",
+      "body_text": "Toyota will debut its own version of Tesla's EV-manufacturing technology in China, Bloomberg reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/10/15/our-model-puts-us-within-shooting-distance-of-chinas-ai-models-says-reflection-ceo.html",
+      "source": "CNBC China",
+      "category": "Technology",
+      "headline": "Reflection AI CEO: our model is within 'shooting distance' of China's AI",
+      "body_text": "Reflection AI's CEO said its new open model is within 'shooting distance' of China's AI models.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/15/chinese-spending-nearly-as-much-of-income-as-americans-on-healthcare.html",
+      "source": "CNBC China",
+      "category": "Economy",
+      "headline": "Chinese households near US levels of income spent on healthcare",
+      "body_text": "Chinese households now spend nearly as much income on healthcare as Americans, per IMF data cited by CNBC.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/japan-china-tensions/chinese-tech-companies-strive-to-crack-japan-market-despite-tensions",
+      "source": "Nikkei Asia China",
+      "category": "Technology",
+      "headline": "Chinese tech companies strive to crack Japan market despite tensions",
+      "body_text": "Chinese tech companies are pushing into Japan's market despite bilateral diplomatic tensions, Nikkei reported.",
+      "color_bar_class": "cb-tech"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/china-moves-to-prop-up-stock-market-with-selling-curbs-buybacks",
+      "source": "Bloomberg China",
+      "headline": "China moves to prop up stock market with selling curbs, buybacks",
+      "body_text": "Beijing is deploying selling curbs and buyback encouragement to support its stock market, Bloomberg reported Oct 16, after the SSE Composite fell *2.13%* on the day.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/china-s-national-team-signals-return-with-heavy-etf-inflows",
+      "source": "Bloomberg China",
+      "headline": "China's 'national team' signals return with heavy ETF inflows",
+      "body_text": "State-linked funds known as China's 'national team' showed heavy ETF inflows, Bloomberg reported Oct 16, signaling renewed market-support buying.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/tardy-china-stimulus-sets-up-second-quarter-of-sub-target-growth",
+      "source": "Bloomberg China",
+      "headline": "Tardy China stimulus sets up second quarter of sub-target growth",
+      "body_text": "Bloomberg reported Oct 16 that delayed stimulus measures have set China up for a second consecutive quarter of growth below its official target.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/15/memory-stocks-micron-sk-hynix-samsung-china.html",
+      "source": "CNBC China",
+      "headline": "Memory stocks hammered on China competition, 2029 oversupply fears",
+      "body_text": "SK Hynix, Samsung and Micron shares have been hit hard amid fears of Chinese competition and a looming 2029 memory-chip oversupply, CNBC reported.",
+      "companies": [
+        "Micron",
+        "SK Hynix",
+        "Samsung"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/legal/transactional/chinas-super-rich-scramble-exit-offshore-trusts-raise-cash-taxman-knocks-2026-10-16/",
+      "source": "Reuters China",
+      "headline": "China's super-rich scramble to exit offshore trusts as taxman knocks",
+      "body_text": "Wealthy Chinese individuals are rushing to unwind offshore trusts and raise cash as tax authorities increase scrutiny, Reuters reported Oct 16.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/china-investigates-reported-brake-pedal-bracket-fracture-huawei-backed-maextro-2026-10-15/",
+      "source": "Reuters China",
+      "headline": "China investigates reported brake pedal bracket fracture in Huawei-backed Maextro EV",
+      "body_text": "Chinese regulators opened an investigation into a reported brake pedal bracket fracture in the Huawei-backed Maextro EV, Reuters reported Oct 15.",
+      "companies": [
+        "Huawei",
+        "Maextro"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371159/chinas-ai-boom-self-sufficiency-push-fuel-earnings-surge-local-chip-firms?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "China's AI boom, self-sufficiency push fuel earnings surge for chip firms",
+      "body_text": "Shanghai-listed Yuanjie Semiconductor Technology expects third-quarter net profit of 403-453 million yuan, up *579% to 660%* year-on-year, as domestic AI-chip demand surges.",
+      "companies": [
+        "Yuanjie Semiconductor Technology"
+      ],
+      "sector": "tech"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Response to Trump's denuclearization remarks",
+      "statement": "Per MOFA: The US should earnestly fulfill its special and primary responsibility for nuclear disarmament.",
+      "original_zh": "美方理应切实履行核裁军的特殊优先责任",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Trump said the US is in talks with Russia and China about denuclearization, per Reuters' Oct 16 report.",
+      "source": "MOFA presser ZH",
+      "url": "https://finance.eastmoney.com/a/202610163898428063.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "White House press secretary's 'toilet' comments about China",
+      "statement": "We welcome her to visit China more often when she has the opportunity.",
+      "original_zh": null,
+      "addressed_to": "US",
+      "tone": "routine",
+      "context": "White House Press Secretary Katie Zacharia said in an interview that China lacked 'proper toilets,' recalling a 2016-era impression.",
+      "source": "AFP",
+      "url": "https://www.afp.com/en/china-tells-trumps-press-secretary-visit-more-often-after-toilet-comments"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "India's trade barrier complaint",
+      "statement": "Per MOFA: China has never deliberately pursued a trade surplus.",
+      "original_zh": "中方从不刻意追求贸易顺差",
+      "addressed_to": "India",
+      "tone": "routine",
+      "context": "India accused China of erecting trade barriers after Finance Minister Sitharaman called them the biggest hurdle to bilateral ties.",
+      "source": "MOFA presser ZH",
+      "url": "https://news.china.com/socialgd/10000169/20261016/49798789.html"
+    },
+    {
+      "body": "MND",
+      "body_chinese": "国防部",
+      "speaker": "MND spokesperson",
+      "role": "Ministry of National Defense spokesperson",
+      "topic": "South China Sea tensions with the Philippines",
+      "statement": "Per MND: China will take forceful action to curb any attempt to create chaos in the South China Sea.",
+      "original_zh": "中方将以有力行动遏制任何祸乱南海的行径",
+      "addressed_to": "Philippines",
+      "tone": "warning",
+      "context": "Comes as Manila protested Chinese Ambassador Jing Quan's remark that Beijing could 'easily win' a South China Sea military showdown.",
+      "source": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16493567.html"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "Taiwanese entertainer's appearance at pro-independence campaign event",
+      "statement": "Upholding reunification and opposing 'Taiwan independence' is the common will of the entire Chinese people; no one and no force can enjoy the mainland's development dividends while colluding with 'Taiwan independence' separatist forces as a 'two-faced person.'",
+      "original_zh": "维护统一、反对\"台独\"是全体中国人民的共同意志，任何人、任何势力都不能一边赚取大陆发展红利，一边与\"台独\"分裂势力勾连纠缠，做\"两面人\"。",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "Taiwanese entertainer Cai Kangyong appeared at the campaign launch of DPP Taipei mayoral candidate Shen Boyang, prompting the TAO rebuke.",
+      "source": "TAO ZH",
+      "url": "https://m.sohu.com/a/1087813854_180220?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "PC",
+      "who": "Pan Chun-kuang",
+      "handle_context": "Deputy Chief of the General Staff for Intelligence, Taiwan Ministry of National Defense",
+      "platform_date": "Taipei Times · Oct 16, 2026",
+      "quote_text": "We see this as behavior that disrupts regional stability.",
+      "analyst_note": "Comment came as Taiwan's MND said it was tracking a Liaoning-led carrier fleet conducting what Beijing called 'routine drills' in the western Pacific, ahead of the PLA's November-December peak drill season.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/16/2003866057"
+    },
+    {
+      "avatar_initials": "KZ",
+      "who": "Katie Zacharia",
+      "handle_context": "White House Press Secretary",
+      "platform_date": "AFP · Oct 16, 2026",
+      "quote_text": "How is China the next country on the horizon? They don't even have proper toilets.",
+      "analyst_note": "The remark, recalling 2016-era perceptions of China's rise, prompted MOFA spokesperson Mao Ning to invite Zacharia to visit China 'more often.'",
+      "badge_class": "sb-p",
+      "url": "https://www.afp.com/en/china-tells-trumps-press-secretary-visit-more-often-after-toilet-comments"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/16/2003866057",
+    "https://english.kyodonews.net/articles/-/88374",
+    "https://apnews.com/article/china-north-korea-bridge-delay-899452a683ff984b081e538901050da8",
+    "https://www.reuters.com/world/china/taiwan-tells-its-people-shun-chinese-anniversary-events-revolutionary-hero-2026-10-16/",
+    "https://apnews.com/article/china-philippines-chinese-ambassador-jing-quan-south-china-sea-disputes-9e532b4bd2413b3702d4c55f89cffd22",
+    "https://www.washingtonpost.com/world/2026/10/14/laos-china-airfield-vietnam-taiwan-ban-keun/8d499dbe-c83e-11f1-aefb-abe4112d087e_story.html"
+  ],
+  "story_count": 100,
+  "oped_count": 7,
+  "academic_count": 0,
+  "source_count": 117,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-16.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-16.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
