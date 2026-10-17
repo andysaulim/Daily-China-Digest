@@ -1,0 +1,621 @@
+{
+  "digest_date": "Saturday, October 17, 2026",
+  "re_line": "China drafts AI/biopharma/solar export curbs · EU readies import tools · Manila protests envoy · Xi in Ulanqab",
+  "market_indicators": {
+    "sse_composite": {
+      "value": "3,716.28",
+      "change_pct": -2.13,
+      "as_of": "Oct 16"
+    },
+    "hang_seng": {
+      "value": "24,186.83",
+      "change_pct": -0.1,
+      "as_of": "Oct 16"
+    },
+    "brent": {
+      "value": "109.86",
+      "change_pct": 3.01,
+      "as_of": "Oct 16"
+    },
+    "usd_cny": {
+      "value": "6.6862",
+      "change_pct": -0.09,
+      "as_of": "Oct 17"
+    },
+    "usd_cnh": {
+      "value": "6.6853",
+      "change_pct": -0.05,
+      "as_of": "Oct 16"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "MOFCOM and the science ministry opened public comment on adding roughly 40 artificial-intelligence, biopharmaceutical and photovoltaic technologies to China's restricted-export catalogue, and placed exports of those technologies under interim registration immediately.",
+    "Marcos protested Chinese Ambassador Jing Quan's remark that Beijing could 'easily win' if it chose force, with Manila's foreign ministry calling it a thinly veiled threat of the use of force.",
+    "The EU's chief said the bloc will propose import curbs on further Chinese sectors, and Beijing warned Brussels not to underestimate its ability to fight on trade."
+  ],
+  "key_stat": {
+    "number": "$590.7B",
+    "label": "China's US Treasury holdings, August",
+    "context": "Total foreign holdings rose to $9.331 trillion in August from $9.248 trillion in July, so Beijing's drawdown ran against the aggregate flow; Japan remains the largest holder at $1.068 trillion.",
+    "source": "HKEJ, citing US Treasury data"
+  },
+  "prc_government": [
+    {
+      "ministry": "Ministry of Commerce / Ministry of Science and Technology",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson (unnamed in notice)",
+      "action": "Public comment opened on revised technology export-control catalogue; interim registration imposed",
+      "document": "商务部科技部公告2026年第48号 (MOFCOM/MOST Announcement No. 48 of 2026)",
+      "detail": "The notice seeks comment on revisions to the Catalogue of Technologies Prohibited or Restricted from Export and applies interim registration management to exports of the technologies concerned. Reuters put the proposed additions at 40, covering AI, biopharmaceuticals and photovoltaics.",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/zcfb/blgg/gg/2026/art/2026/art_05e2643a8ca04eb9adf9dd0542991fe4.html"
+    },
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "Li Qiang, Premier",
+      "action": "Executive meeting hears progress report on the 'AI+' action plan",
+      "document": "国务院常务会议 (State Council executive meeting, Oct 16)",
+      "detail": "The meeting called for deepening the 'AI+' initiative through applied deployment, stronger algorithm work and risk assessment. It also discussed draft revisions to the Teachers Law and the Price Law and approved a draft decision amending and repealing certain administrative regulations.",
+      "source_label": "State Council",
+      "url": "https://www.ahlx.gov.cn/Content/show/1733718.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (open market operations desk)",
+      "action": "700 billion yuan outright reverse repo conducted Oct 15",
+      "document": null,
+      "detail": "The operation included a 200 billion yuan six-month tranche rolled over at increased volume.",
+      "source_label": "PBOC",
+      "url": "https://www.guandian.cn/m/show/614114"
+    },
+    {
+      "ministry": "State Administration for Market Regulation",
+      "ministry_chinese": "国务院",
+      "official": "SAMR, with MIIT",
+      "action": "Mandatory national standard issued for lithium-ion batteries in electric motorcycles",
+      "document": "《电动摩托车和电动轻便摩托车用锂离子电池安全要求》",
+      "detail": "The standard takes effect July 1, 2027 and upgrades the prior recommended standard to mandatory status. It adds tests for low-temperature cycling followed by heating, crush, handle strength, thermal propagation and flame retardance across cell, pack and system levels.",
+      "source_label": "SAMR via Guancha",
+      "url": "https://user.guancha.cn/main/content?id=1754840&comments-container"
+    },
+    {
+      "ministry": "National Food and Strategic Reserves Administration",
+      "ministry_chinese": "国务院",
+      "official": "National Food and Strategic Reserves Administration",
+      "action": "Autumn grain procurement and smart-silo data released",
+      "document": null,
+      "detail": "Buyers have purchased 18 million tonnes of mid-and-late-season rice to date, up 1.6 million tonnes year on year. National standard granary capacity in good condition stands at 730 million tonnes; the 15th Five-Year Plan period targets 100-plus green storage demonstration sites across seven ecological zones.",
+      "source_label": "State Council",
+      "url": "https://www.beijing.gov.cn/ywdt/zybwdt/202610/t20261017_4907172.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "Qiushi / CCP Central Committee",
+      "action": "Qiushi publishes Xi article on comprehensive strict party governance",
+      "detail": "The journal carried a signed Xi Jinping article titled 'Advancing Comprehensive Strict Governance of the Party with Higher Standards and More Practical Measures,' circulated through State Council and provincial portals.",
+      "url": "https://www.zhaoyuan.gov.cn/col/col50695/art/2026/art_fe219a9799d81550667db07712e101ce.html"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN General Assembly Resolution 2758 turns 55",
+      "detail": "The contested-interpretation anniversary; Beijing and Taipei issue competing readings of the 1971 resolution each year."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Senate races in Texas, Michigan and Maine are among the most closely contested, per VOA Chinese reporting."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan one-year suspensions due to lapse",
+      "detail": "The BIS Affiliates Rule suspension and China's suspension of its Oct 2025 rare-earth export-control expansion were set to run one year from Nov 10, 2025. Status unverified as of today."
+    },
+    {
+      "month": "Nov",
+      "day": 12,
+      "headline": "Sun Yat-sen 160th birth anniversary events in China",
+      "detail": "Beijing announced last year it would mark the anniversary; the Mainland Affairs Council has told Taiwanese not to attend. China has not announced its event list."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "Runs Nov 18-19 with China hosting. SCMP reports Washington and Beijing are each working to shape the AI agenda for Xi-Trump talks there."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.voachinese.com/a/japan-weighs-letting-us-nuclear-armed-ships-into-port-in-a-crisis-20261016/8212097.html",
+      "source": "VOA Chinese",
+      "category": "Japan",
+      "headline": "Takaichi says exceptions to Japan's three non-nuclear principles have 'room for discussion'",
+      "body_text": "Prime Minister **Sanae Takaichi** suggested allowing US forces to bring nuclear weapons into Japan could be examined; scholars cited by VOA said it would strengthen deterrence against China. China's foreign ministry said the remarks again exposed the Japanese ruling authorities' swelling nuclear ambitions."
+    },
+    {
+      "url": "https://www.voachinese.com/a/taiwan-to-curb-ai-chip-exports-to-china-as-beijing-too-limits-its-tech-export-20261016/8212027.html",
+      "source": "VOA Chinese",
+      "category": "Technology",
+      "headline": "Taiwan moves to tighten chip export controls on China, aligning with Washington",
+      "body_text": "Taipei is preparing to align its semiconductor export restrictions on the mainland more closely with US rules. The move lands the same week Beijing published its own draft curbs on AI technology exports."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/feat/archives/2026/10/17/2003866109",
+      "source": "Taipei Times",
+      "category": "Russia-Ukraine",
+      "headline": "Ukraine's drone industry still cannot break its dependence on Chinese electronics",
+      "body_text": "Ukrainian makers have expanded domestic production and shifted sourcing to Taiwan, Europe and the US, but cannot match Chinese cost and capacity for motors and flight controllers. 'If China stops their production to us ... we are blinded,' said **Andrii Taganskyi** of Odd Systems."
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/japan-s-icc-rift-with-us-limits-options-in-handling-china-russia-pressure",
+      "source": "Nikkei Asia",
+      "category": "Japan",
+      "headline": "Japan's ICC rift with Washington narrows its options against China and Russia",
+      "body_text": "Tokyo has been reduced to issuing protests over recent incidents involving China, Russia and North Korea as perceived cracks in its alignment with Washington widen. The gap centres on the International Criminal Court."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/business-trends/china-s-canton-fair-showcases-tech-push-as-trade-frictions-persist",
+      "source": "Nikkei Asia",
+      "category": "Trade",
+      "headline": "Canton Fair exhibitors lean on embedded tech as trade frictions persist",
+      "body_text": "Coffee machines, air fryers and barbecue grills fitted with cameras and other advanced features dominated China's largest trade fair in Guangzhou. **Xi Jinping** sent a congratulatory letter to the 140th session."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/peru-indigenous-group-bids-for-part-of-china-owned-copper-mine",
+      "source": "Bloomberg",
+      "category": "Latin America",
+      "headline": "Peruvian Indigenous group bids for a stake in a China-owned copper mine",
+      "body_text": "The community is seeking part-ownership of a Chinese-controlled copper operation in Peru. Chinese capital dominates Peruvian copper output and the COSCO-built Chancay port."
+    },
+    {
+      "url": "https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_10_17_904753.shtml",
+      "source": "Guancha",
+      "category": "Russia",
+      "headline": "Moscow calls Trump's suspension of the Graham sanctions bill a 'historic moment'",
+      "body_text": "Russian presidential envoy **Kirill Dmitriev** said on Telegram that the suspension replaced sanctions and confrontation with dialogue. The legislation, signed in September, would have imposed tariffs of up to 100 percent on buyers of Russian crude and was due to take effect Oct 18."
+    },
+    {
+      "url": "https://www.voachinese.com/a/ausa-2026-showcases-advanced-defense-systems-with-tactical-applications-for-a-potential-taiwan-strait-conflict-20261016/8212237.html",
+      "source": "VOA Chinese",
+      "category": "PLA / US military",
+      "headline": "AUSA annual exhibition features systems with Taiwan Strait applications",
+      "body_text": "Several new US Army systems displayed at the association's 2026 meeting carry tactical applications for a potential Taiwan Strait conflict, VOA reported."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3371212/china-pushes-back-us-lawmaker-seeks-blacklist-universities-and-tech-labs?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Moolenaar asks Pentagon to blacklist 58 Chinese universities and 62 tech labs",
+      "body_text": "In a letter to Defense Secretary **Pete Hegseth**, House Select Committee on China Chairman **John Moolenaar** urged designation of 58 Chinese universities and 62 technology labs as national security threats, including institutions SCMP described as linked to Nvidia. Beijing called the request Cold War-style overreach.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.scmp.com/news/us/science-technology/article/3371154/new-details-emerge-us-investigations-chinese-american-scientists-over-china-links?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Select Committee releases files on federal probes of dozens of researchers",
+      "body_text": "Hundreds of pages of documents detail investigations into dozens of researchers, many of them Chinese-American, over alleged China links. They accompanied a committee report titled 'How to Stop China's Theft of Taxpayer-Funded Research' that pushes back on university objections to tighter rules.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3370926/us-and-china-race-shape-ai-agenda-ahead-xi-trump-talks-shenzhen-sources-say",
+      "source": "SCMP",
+      "headline": "US and China each racing to set the AI agenda for Shenzhen talks, sources say",
+      "body_text": "Both governments are working to frame artificial intelligence for planned **Xi Jinping**-**Donald Trump** talks in Shenzhen, SCMP reported citing sources. APEC leaders convene there Nov 18-19.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/china-buys-more-us-soybeans-as-purchasing-spree-gathers-pace",
+      "source": "Bloomberg",
+      "headline": "Chinese state buyers book at least 20 more US soybean cargoes",
+      "body_text": "State-owned firms have booked at least 20 cargoes, roughly *1.3 million tonnes*, from the US Gulf and Pacific Northwest, the first purchases since the late-September leaders' summit. USDA separately reported an 800,000-tonne sale to China for 2026-27 plus 283,450 tonnes to unknown destinations; soybeans are still absent from the post-summit tariff-cut list and carry about 13 percent duty against a pledge of at least 25 million tonnes a year through 2028.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/chinese-online-retailer-temu-agrees-data-privacy-restrictions-settle-texas-2026-10-16/",
+      "source": "Reuters",
+      "headline": "Temu accepts data-privacy restrictions to settle Texas lawsuit",
+      "body_text": "The Chinese-founded online retailer agreed to curbs on its data practices to resolve litigation brought by the state of Texas.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://m.hkej.com/landing/mobarticle2/id/4542009/%E4%B8%AD%E5%9C%8B%E6%89%80%E6%8C%81%E7%BE%8E%E5%9C%8B%E5%82%B5%E8%A6%8F%E6%A8%A1%E9%99%8D%E8%87%B3%E9%80%BE18%E5%B9%B4%E4%BD%8E%E4%BD%8D",
+      "source": "HKEJ",
+      "headline": "China's US Treasury holdings fall to lowest since August 2008",
+      "body_text": "Beijing's holdings dropped to $590.7 billion in August from $618.0 billion in July, a third consecutive monthly decline and down nearly *16 percent* year on year. China remains the third-largest foreign holder behind Japan at $1.068 trillion and the UK, which passed $1 trillion for the first time at $1.009 trillion.",
+      "instrument": "Investment"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/17/2003866112",
+      "source": "Taipei Times",
+      "headline": "Taiwan deports Chinese exchange student over Douyin post targeting Lai",
+      "body_text": "The National Immigration Agency revoked the entry permit of a National Taiwan University exchange student surnamed **Wang** and deported him at 3pm Friday, barring re-entry for five years. Wang had posted footage of **Lai Ching-te**'s Taiwan Bridge Program speech with captions including 'Take down little Lai Ching-te' and 'Unification across the Taiwan Strait is a historical inevitability.'",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202610170005",
+      "source": "Focus Taiwan",
+      "headline": "Chinese coast guard vessels enter restricted waters near Dongsha",
+      "body_text": "Taiwan's Coast Guard Administration reported China Coast Guard ships entering restricted waters around the Dongsha (Pratas) Islands.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.news.cn/world/20261017/3c9e81b3e34442d5bfc0dc0b8790e13f/c.html",
+      "source": "Xinhua",
+      "headline": "Takaichi sends Yasukuni offering as autumn festival opens; Seoul protests",
+      "body_text": "Prime Minister **Sanae Takaichi** sent a 'masakaki' offering in her capacity as prime minister on the opening day of the three-day autumn rites; economic and fiscal policy minister **Kiuchi Minoru** and LDP policy research chief **Kobayashi Takayuki** worshipped in person, while the speakers of both Diet chambers sent offerings. South Korea's foreign ministry expressed 'deep disappointment and regret' and urged Japanese leaders to face history squarely.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/world/paper/1774835",
+      "source": "Liberty Times",
+      "headline": "Phantom freighter with AIS signal traced to China appeared off the Senkakus",
+      "body_text": "Sankei reported that a vessel named 'FUCK JAPAN' showed a continuous AIS track around the Senkakus from Dec 19 last year to Jan 1, including a position *155 metres* north of Uotsuri, but the 11th Regional Coast Guard Headquarters found no ship. Analysis placed the spoofed signals near Zhoushan, Zhejiang, and the track began ten days before the PLA Eastern Theater Command's 'Justice Mission-2025' exercise around Taiwan on Dec 29 and ended after it.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.guancha.cn/ZhengZhi/2026_10_17_904746.shtml",
+      "source": "Guancha / China Coast Guard",
+      "headline": "China and South Korea complete joint fisheries enforcement patrol",
+      "body_text": "The CCG vessel Changshan and South Korea's Mugunghwa 42 fisheries guidance ship patrolled the provisional measures zone under the China-ROK Fisheries Agreement from Oct 8 to 17. They logged over 210 hours and 1,200 nautical miles, observed 123 fishing vessels, hailed 74 and boarded three.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.ft.com/content/062bb1af-d44b-4176-89cd-49042e06362b?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "headline": "New bridges draw North Korea closer to China and Russia",
+      "body_text": "Expanding trade and cooperation with Beijing and Moscow reduce Pyongyang's need for talks with Washington and Seoul, analysts told the FT.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/china-warns-eu-not-to-underestimate-ability-to-fight-on-trade",
+      "source": "Bloomberg",
+      "headline": "Beijing warns the EU not to underestimate its ability to fight on trade",
+      "body_text": "The warning followed the European Council summit's 'dual-track' formulation on China, on which MOFCOM issued a spokesperson Q&A. The Oct 9 second session of the China-EU trade and investment consultation mechanism had produced an understanding on hybrid-vehicle trade.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/article/3371214/paraguays-tech-minister-defies-beijing-sanctions-says-taiwan-ties-not-negotiation?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Sanctioned Paraguayan minister says Taiwan ties are not negotiable",
+      "body_text": "**Gustavo Villate**, who heads Paraguay's information and communication technologies ministry, said Beijing's sanctions over his country's Taiwan ties would only accelerate joint projects with Taipei. He suggested Beijing acted to protect Chinese telecoms suppliers excluded from Paraguay's networks.",
+      "region": "Latin America"
+    },
+    {
+      "url": "https://www.hkej.com/instantnews/current/article/4542022/%E4%B8%AD%E5%9C%8B%E9%A7%90%E6%B3%B0%E5%9C%8B%E5%A4%A7%E4%BD%BF%E9%A4%A8%E7%B1%B2%E4%B8%AD%E5%9C%8B%E5%85%AC%E6%B0%91%E5%8B%BF%E5%A2%AE%E9%82%80%E7%B4%84%E9%A8%99%E5%B1%80",
+      "source": "HKEJ",
+      "headline": "Chinese embassy in Bangkok warns citizens over trafficking to the Thai-Myanmar border",
+      "body_text": "The embassy cited multiple recent cases of Chinese nationals disappearing after entering Thailand, being unlawfully detained and moved to the Thai-Myanmar border. It flagged a new pattern of fake filming and performance invitations aimed at livestreamers and entertainers.",
+      "region": "ASEAN"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.ft.com/content/e0a1295c-4492-4fdd-aaf5-55678a9ef9bf?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category_tag": "Technology",
+      "headline": "China drafts export controls on AI, biopharma and solar technologies",
+      "body": "The Ministry of Commerce and the Ministry of Science and Technology issued Announcement No. 48 of 2026, opening public comment on a revised Catalogue of Technologies Prohibited or Restricted from Export and applying interim registration management to exports of the technologies concerned. Reuters counted *40* proposed additions across artificial intelligence, biopharmaceuticals and photovoltaics; the FT described the package as aimed at preventing transfer of the most advanced technology overseas. **Li Qiang** chaired a State Council executive meeting the same day that heard a progress report on the 'AI+' action plan and called for holding the bottom line on AI safety.",
+      "src_line": "Financial Times · Oct 16"
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/10/16/china-philippines-chinese-ambassador-jing-quan-south-china-sea-disputes/304ac994-c942-11f1-aefb-abe4112d087e_story.html",
+      "source": "Washington Post",
+      "category_tag": "Indo-Pacific",
+      "headline": "Manila protests Chinese ambassador's remark as a thinly veiled threat of force",
+      "body": "President **Ferdinand Marcos Jr** and his government protested remarks by Ambassador **Jing Quan**, made to reporters on the sidelines of a Manila forum on Thursday after he was asked about Defense Secretary **Gilberto Teodoro Jr**'s description of China as a regional 'troublemaker.' The Department of Foreign Affairs said the wording conveyed a near-naked threat of force and did not help a complex bilateral relationship; Coast Guard spokesman **Jay Tarriela** called it a direct threat. The Chinese embassy said the DFA had quoted Jing selectively and over-interpreted him, urging Manila to play a more responsible role.",
+      "src_line": "Washington Post · Oct 16 (Taipei Times, Liberty Times corroborating)"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/16/us-china-mastercard-citigroup-market-access.html",
+      "source": "CNBC",
+      "category_tag": "US-China",
+      "headline": "US raised Mastercard and Citigroup market access with China in Bangkok",
+      "body": "A US Treasury official said Washington pressed China on market-access issues for Mastercard and Citigroup during bilateral meetings in Bangkok this week. The talks are the latest economic contact since the leaders' summit in late September.",
+      "src_line": "CNBC · Oct 16"
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/sy/rt/16493699.html",
+      "source": "Ministry of National Defense (PRC)",
+      "category_tag": "PRC-Economy",
+      "headline": "Xi inspects green computing hub and wetland reserve in Inner Mongolia",
+      "body": "**Xi Jinping** toured the Chahar High-Tech Development Zone in Ulanqab on Oct 16, meeting computing-centre project managers and technicians and reviewing green computing-power development, then visited the Huangqihai nature reserve in Chahar Right Front Banner. CCTV's commentary on the trip framed green development as the defining colour of Chinese-style modernisation and quoted him urging coordinated carbon reduction, pollution cuts, green expansion and growth. The stop follows his Oct 13 Beijing talks with Botswana President **Boko**, after which the two sides upgraded relations to a comprehensive strategic cooperative partnership.",
+      "src_line": "MND photo release / CCTV commentary · Oct 16"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/eu-propose-import-curbs-other-chinese-sectors-says-eu-chief-2026-10-16/",
+      "source": "Reuters",
+      "category_tag": "Diplomacy",
+      "headline": "EU chief says bloc will propose import curbs on more Chinese sectors",
+      "body": "The EU's chief said Brussels will bring forward import restrictions covering additional Chinese sectors. MOFCOM issued a spokesperson Q&A on the European Council summit's 'dual-track' approach to China, and **Mao Ning** told the Oct 16 MOFA briefing that the bloc should avoid protectionist and discriminatory measures.",
+      "src_line": "Reuters · Oct 16"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/eu-takes-the-trade-fight-to-china-and-braces-for-the-backlash",
+      "source": "Bloomberg",
+      "category": "Trade",
+      "headline": "EU takes the trade fight to China and braces for the backlash",
+      "body_text": "Brussels weighs the retaliation risk as it escalates trade measures against Chinese imports.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.reuters.com/commentary/reuters-open-interest/ai-jitters-trumps-fading-oil-clout-china-shock-20-financial-week-five-charts-2026-10-16/",
+      "source": "Reuters",
+      "category": "Markets",
+      "headline": "AI jitters, fading US oil clout and 'China shock 2.0': the week in five charts",
+      "body_text": "Reuters Open Interest charts the week's cross-asset moves, including a second China export shock.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://apnews.com/article/china-kindergarten-food-lead-poison-cd5f37cb0f4174ecf52705d2918b053f",
+      "source": "AP",
+      "category": "Domestic",
+      "headline": "Six sentenced over lead-tainted kindergarten food that sickened 200-plus children",
+      "body_text": "Chinese courts handed down sentences in the lead-contamination case involving more than 200 children.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/17/2003866127",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "MAC tells Taiwanese to skip China's Sun Yat-sen anniversary events",
+      "body_text": "The council said Beijing's Nov 12 commemorations promote an 'oppose Taiwan independence, promote unification' narrative.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/17/2003866122",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Taiwan to donate up to 24,876 tonnes of rice to 17 countries",
+      "body_text": "The 25th year of the Food Humanitarian Aid Program ships flag-marked rice to Africa, Latin America and Asia.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.cnn.com/2026/10/16/china/china-katie-zacharia-intl-hnk",
+      "source": "CNN",
+      "category": "Diplomacy",
+      "headline": "Beijing invites ousted White House press secretary back after 'toilets' remark",
+      "body_text": "China urged Katie Zacharia to visit more often after she said the country lacks 'proper toilets.'",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://weekly.caixin.com/2026-10-17/102494232.html",
+      "source": "Caixin Weekly",
+      "category": "Trade",
+      "headline": "Caixin dissects the China-EU hybrid vehicle understanding",
+      "body_text": "The Oct 9 joint statement put hybrids first among Sefcovic's three deliverables from the consultation mechanism.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.cnn.com/2026/10/17/world/video/the-changing-face-of-pride-in-hong-kong-hnk-digvid",
+      "source": "CNN",
+      "category": "Hong Kong",
+      "headline": "Hong Kong LGBTQ visibility fading as high-profile events are cancelled",
+      "body_text": "Community members tell CNN their visibility has receded even as representation expanded elsewhere in Asia.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_683fb5afa1c24be2a7cc5d0cf79e934b.html",
+      "source": "MOFCOM",
+      "category": "Trade",
+      "headline": "China-Vanuatu economic partnership upgrade talks hold second round in Beijing",
+      "body_text": "MOFCOM announced the second negotiating round on upgrading the bilateral economic partnership agreement.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://focustaiwan.tw/sci-tech/202610170003",
+      "source": "Focus Taiwan",
+      "category": "Business",
+      "headline": "PharmaEssentia plans $46 million Puerto Rico plant",
+      "body_text": "The Taiwanese drugmaker is building out US manufacturing as it expands globally.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/law-and-crime/article/3371245/police-receive-over-100-reports-about-credit-card-charges-iphone-duo-pre-orders?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Hong Kong",
+      "headline": "Hong Kong police field 100-plus reports of unauthorised iPhone Duo pre-order charges",
+      "body_text": "Complaints of duplicate or unauthorised transactions, said to involve a few million dollars, began after Friday's 8pm pre-order opening.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.wsj.com/business/visa-wins-approval-to-prepare-for-china-payments-business-c96bab06",
+      "source": "WSJ",
+      "headline": "Visa wins approval to prepare for a China payments business",
+      "body_text": "Chinese regulators cleared Visa to begin preparatory work on a domestic payments operation.",
+      "companies": [
+        "Visa"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/chinas-central-bank-further-open-up-chinese-financial-markets-foreigners-2026-10-16/",
+      "source": "Reuters",
+      "headline": "PBOC governor pledges further opening of Chinese financial markets to foreigners",
+      "body_text": "The central bank chief said China will widen foreign access to its financial markets.",
+      "companies": [
+        "People's Bank of China"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/china-s-cxmt-swings-to-profit-after-memory-chip-prices-surge",
+      "source": "Bloomberg",
+      "headline": "CXMT swings to profit as memory chip prices surge",
+      "body_text": "China's leading DRAM maker returned to profit on the memory price run-up. Yicai separately reported handset makers cutting output and raising retail prices as memory and key component costs climb.",
+      "companies": [
+        "ChangXin Memory Technologies (CXMT)"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/business/finance/china-ai-supply-chain-ipos-hold-firm-despite-valuation-pullback-citi-says-2026-10-17/",
+      "source": "Reuters",
+      "headline": "Citi says China AI supply-chain IPOs are holding firm despite valuation pullback",
+      "body_text": "Listings tied to the AI hardware supply chain are proving resilient even as valuations retreat, according to Citi.",
+      "companies": [
+        "Citigroup"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://weekly.caixin.com/2026-10-16/102493974.html",
+      "source": "Caixin Weekly",
+      "headline": "Guangdong power retailers post heavy losses as spot prices spike",
+      "body_text": "Guangdong spot power prices hit *1.11 yuan per kWh* at the evening peak on Oct 13, with a daily average of 0.808 yuan, 198 percent and 117 percent above the province's medium-and-long-term contract average. Coal and gas cost increases have driven the rally since April across the five southern provinces' jointly cleared market.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/electric-vehicles/china-s-byd-turns-to-local-assembler-in-malaysia-after-shelving-plant-plan",
+      "source": "Nikkei Asia",
+      "headline": "BYD appoints Malaysian partner for knocked-down EV assembly after shelving plant",
+      "body_text": "BYD will have a local partner assemble knocked-down kits into finished EVs in Malaysia instead of building its own factory.",
+      "companies": [
+        "BYD"
+      ],
+      "sector": "auto"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "Embassy",
+      "body_chinese": "使馆",
+      "speaker": "Jing Quan",
+      "role": "Chinese Ambassador to the Philippines",
+      "topic": "South China Sea dispute and the use of force",
+      "statement": "The Philippines should feel fortunate to have China as a neighbour. If we want to use force, we may easily win. But no, we will not choose force and we love peace. Look at other regions: Ukraine, Gaza and even Venezuela.",
+      "original_zh": "菲律賓應當感當慶幸，擁有中國這樣一個鄰居。如果我們要動用武力，完全有可能輕易取勝。但我們不會使用武力，因為我們熱愛和平",
+      "addressed_to": "Philippines",
+      "tone": "warning",
+      "context": "Jing was asked by Philippine reporters on Oct 15 to respond to Defense Secretary Gilberto Teodoro Jr's description of China as a regional 'troublemaker.'",
+      "source": "Liberty Times",
+      "url": "https://news.ltn.com.tw/news/world/paper/1774836"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "EU trade measures against China",
+      "statement": "We hope the European side will abide by its commitments to freedom and openness and to WTO rules, avoid introducing protectionist and discriminatory policy measures, move toward China, jointly promote upward-balanced and sustainable development of China-EU trade, and jointly safeguard the stability and smooth functioning of global production and supply chains.",
+      "original_zh": "我们希望欧方恪守自由开放的承诺和世贸组织规则，避免出台保护主义和歧视性的政策措施，同中方相向而行，共同推动中欧贸易向上平衡、可持续发展，共同维护全球产供链的稳定畅通。",
+      "addressed_to": "EU",
+      "tone": "firm",
+      "context": "Mao was asked at the Oct 16 MOFA briefing about China-EU economic and trade issues after the second session of the China-EU trade and investment consultation mechanism.",
+      "source": "MOFA presser via Sohu",
+      "url": "https://m.sohu.com/a/1088685729_267106?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "State Council",
+      "body_chinese": "国务院",
+      "speaker": "Li Qiang",
+      "role": "Premier, chairing the State Council executive meeting",
+      "topic": "AI development and safety",
+      "statement": "Artificial intelligence is a key variable affecting future development. Development and security must be coordinated, with graded and classified measures by industry, stronger risk assessment and judgement, and the bottom line of artificial intelligence safety firmly held.",
+      "original_zh": "人工智慧是影響未來發展的關鍵變數⋯⋯要統籌發展和安全，因業分級分類施策，加強風險研判評估，守牢人工智慧安全底線。",
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "The Oct 16 State Council executive meeting heard a progress report on the 'AI+' action plan on the same day MOFCOM proposed adding AI technologies to the export-control catalogue.",
+      "source": "UDN, citing Xinhua",
+      "url": "https://money.udn.com/money/story/5603/9820821"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Li Chijiang",
+      "role": "China's Ambassador for Disarmament Affairs",
+      "topic": "Trilateral nuclear arms control with the US and Russia",
+      "statement": "China's nuclear forces are in a completely different order of magnitude from those of the United States and Russia. Demanding at this stage that China take part in so-called China-US-Russia trilateral nuclear disarmament negotiations is unfair, unreasonable and unworkable.",
+      "original_zh": "中国核力量同美俄完全不在一个量级，现阶段要求中方参加所谓中美俄三边核裁军谈判不公平、不合理、也不可行。",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Li spoke in a rebuttal on nuclear issues at the UN General Assembly First Committee on Oct 16, rejecting what he called distortions of China's nuclear policy.",
+      "source": "PLA Daily, citing Xinhua",
+      "url": "http://www.81.cn/ss_208539/16493807.html"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "CCP General Secretary, President, CMC Chairman",
+      "topic": "Green development and high-quality growth",
+      "statement": "Green development is an intrinsic part of high-quality development. We must coordinate high-quality development with high-level protection, uphold integrated protection and systematic governance of mountains, rivers, forests, farmland, lakes, grassland and sand, advance carbon reduction, pollution control, green expansion and growth together, and unswervingly follow a path of ecology first and green development.",
+      "original_zh": "绿色发展是高质量发展的应有之义，要统筹高质量发展和高水平保护，坚持山水林田湖草沙一体化保护和系统治理，协同推进降碳、减污、扩绿、增长，坚定不移走生态优先、绿色发展之路。",
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "Xi made the remarks during his Oct 16 inspection of Ulanqab, Inner Mongolia, which included a green computing-power project and the Huangqihai nature reserve.",
+      "source": "CCTV commentary",
+      "url": "https://news.cctv.com/2026/10/16/ARTIrR6cX1IhkvcvV2kpEpSU261016.shtml"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "KD",
+      "who": "Kirill Dmitriev",
+      "handle_context": "Russian presidential special representative for investment and foreign economic cooperation; head of RDIF",
+      "platform_date": "Guancha, citing TASS · Oct 17",
+      "quote_text": "We no longer face sanctions and confrontation, but have arrived at dialogue, mutually beneficial cooperation and shared responsibility for preserving global stability.",
+      "analyst_note": "The Graham bill, signed in September, would have imposed tariffs of up to 100 percent on importers of Russian crude 30 days after entry into force and was due to take effect Oct 18.",
+      "badge_class": "sb-r",
+      "url": "https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_10_17_904753.shtml"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.washingtonpost.com/world/2026/10/16/china-philippines-chinese-ambassador-jing-quan-south-china-sea-disputes/304ac994-c942-11f1-aefb-abe4112d087e_story.html",
+    "https://focustaiwan.tw/politics/202610170005",
+    "https://news.ltn.com.tw/news/world/paper/1774835",
+    "https://www.taipeitimes.com/News/front/archives/2026/10/17/2003866112",
+    "https://www.guancha.cn/ZhengZhi/2026_10_17_904746.shtml",
+    "https://www.ft.com/content/062bb1af-d44b-4176-89cd-49042e06362b?syn-25a6b1a6=1",
+    "https://www.ft.com/content/e0a1295c-4492-4fdd-aaf5-55678a9ef9bf?syn-25a6b1a6=1"
+  ],
+  "story_count": 100,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 92,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-17.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-17.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
