@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-17",
+    "filename": "2026-10-17.html",
+    "re_line": "China drafts AI/biopharma/solar export curbs \u00b7 EU readies import tools \u00b7 Manila protests envoy \u00b7 Xi in Ulanqab",
+    "top_stories": 5,
+    "overnight_items": 8,
+    "word_count": 3230,
+    "sources": 92,
+    "pdf": true
+  },
+  {
     "date": "2026-10-16",
     "filename": "2026-10-16.html",
     "re_line": "PH-China envoy threat \u00b7 Beijing proposes 40-item export curbs \u00b7 Taiwan to curb AI chips to China \u00b7 Yuan push, PBOC liquidity",
