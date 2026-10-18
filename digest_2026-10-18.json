@@ -1,0 +1,481 @@
+{
+  "digest_date": "Sunday, October 18, 2026",
+  "re_line": "RE: Yasukuni row · PLA swarm near Pratas · Beijing export-control push · PBOC at IMF · APEC Shenzhen countdown",
+  "market_indicators": {
+    "brent": {
+      "value": "109.86",
+      "change_pct": 3.95,
+      "as_of": "Oct 16"
+    },
+    "hang_seng": {
+      "value": "24,186.83",
+      "change_pct": -0.1,
+      "as_of": "Oct 16"
+    },
+    "sse_composite": {
+      "value": "3,716.28",
+      "change_pct": -2.13,
+      "as_of": "Oct 16"
+    },
+    "usd_cnh": {
+      "value": "6.6853",
+      "change_pct": -0.05,
+      "as_of": "Oct 16"
+    },
+    "usd_cny": {
+      "value": "6.6862",
+      "change_pct": -0.09,
+      "as_of": "Oct 18"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "Beijing proposed adding AI, biopharmaceutical and solar-manufacturing technologies to its export control list Friday, extending its tech-export regime beyond rare earths.",
+    "China's embassy in Tokyo 'strongly condemned' PM Takaichi's Oct 17 Yasukuni Shrine offering and visits by several cabinet ministers, calling the moves 'an affront to historical justice.'",
+    "Taiwan's Coast Guard expelled two China Coast Guard vessels from restricted waters off the Pratas Islands Friday, part of a 16-vessel, multi-point operation Taipei calls Beijing's 11th such incursion near Dongsha this year."
+  ],
+  "key_stat": {
+    "number": "19.63%",
+    "label": "Rise in Taiwanese trips to China, Jan-Aug 2026",
+    "context": "The increase outpaced Taiwan's 15.24% overall rise in outbound travel over the same period, with March recording the steepest year-on-year jump at 32.34%, per Taiwan's Tourism Administration.",
+    "source": "Taipei Times"
+  },
+  "prc_government": [
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "Li Qiang, Premier of the State Council",
+      "action": "Li Qiang visits Uzbekistan and Tajikistan, signs multi-sector cooperation deals",
+      "document": null,
+      "detail": "Li Qiang held talks with Uzbek Prime Minister Aripov in Tashkent Oct 17; the two sides signed cooperation documents on trade, education, customs, health and poverty reduction, plus separate e-commerce, climate and media agreements. Li continued to Dushanbe for the 25th SCO Heads of Government Council meeting.",
+      "source_label": "MOFA ZH",
+      "url": "https://www.fmprc.gov.cn/zyxw/202610/t20261018_12042332.shtml"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758, 55th anniversary",
+      "detail": "Contested-interpretation flashpoint over Taiwan's UN status; Beijing and Washington read the 1971 resolution differently on Taiwan representation."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Control of Congress at stake; outcome shapes the House Select Committee on the CCP's agenda for 2027."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal suspensions set to lapse",
+      "detail": "The one-year suspensions of BIS's Affiliates Rule and China's October 2025 rare-earth export controls, agreed at Busan, are due to expire absent an extension."
+    },
+    {
+      "month": "Nov",
+      "day": 16,
+      "headline": "Trump's Asia swing: Manila ASEAN summit, then APEC Shenzhen",
+      "detail": "Philippines confirmed Trump will attend the ASEAN summit Nov 16-18 before traveling to Shenzhen for the APEC Leaders' Meeting Nov 18-19, per SCMP."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors/magistrates and roughly 11,000 offices up for election, read as a mid-term on President Lai Ching-te."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3371252/how-taiwans-new-ai-satellite-system-aims-speed-early-warning-against-pla-moves?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Cross-Strait",
+      "headline": "Taiwan to field AI satellite system for PLA early warning",
+      "body_text": "Taiwan will acquire an AI-powered satellite imagery system able to identify PLA ships, aircraft and missile launchers within minutes, costing NT$46.55 million (*$1.45 million*). It can analyze satellite images covering 100 sq km, cutting manpower needed to track PLA movements."
+    },
+    {
+      "url": "https://www.guancha.cn/ChengShi/2026_10_18_904839.shtml",
+      "source": "Guancha (观察者网)",
+      "category": "Technology",
+      "headline": "Hong Kong police to connect mall CCTV to 'Skynet' surveillance system",
+      "body_text": "Hong Kong's security chief said talks to link private shopping-mall CCTV into police's 'Skynet' network have reached a final stage, after airports, railways and public housing were already connected. Police plan to expand Skynet to about 60,000 cameras by 2028, with facial recognition still in testing."
+    },
+    {
+      "url": "https://www.news.cn/20261018/36329b077fa5490fa2d4e953fd38dc8d/c.html",
+      "source": "Xinhua",
+      "category": "Indo-Pacific",
+      "headline": "Rebuilt Huanggang checkpoint handles over 130,000 crossings on reopening holiday",
+      "body_text": "More than 135,300 total crossings were recorded at Hong Kong border checkpoints Oct 17, the first day of the Chung Yeung holiday, with the rebuilt Huanggang checkpoint handling over 130,000 crossings. The checkpoint, rebuilt over seven years, reopened Oct 12, raising weekday traffic from 30,000-40,000 to more than 80,000."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/politics/article/3371265/ai-used-first-time-analyse-lawmakers-5-year-plan-policy-address-debate?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Technology",
+      "headline": "Hong Kong legislature uses AI for first time to analyze policy debate",
+      "body_text": "Hong Kong's Legislative Council used AI to analyze lawmakers' remarks during a three-day debate on the city's first five-year plan and policy address, LegCo president Starry Lee said Oct 17. Talent policy and the Northern Metropolis emerged as the most-discussed topics."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/politics/article/3371296/influential-leftist-educator-ng-hon-mun-dies-aged-100?utm_source=rss_feed",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Influential pro-Beijing educator, ex-NPC deputy Ng Hon-mun dies at 100",
+      "body_text": "Ng Hon-mun, a longtime Hong Kong deputy to the National People's Congress known for an outspoken reform record, died at 100, former chief executive Leung Chun-ying confirmed Oct 18. Leung called him one of Hong Kong's most senior pro-Beijing figures."
+    },
+    {
+      "url": "http://www.81.cn/xx_207779/16494273.html",
+      "source": "PLA Daily (解放军报), relaying Xinhua",
+      "category": "Technology",
+      "headline": "Xi inspects green-computing hub in Inner Mongolia, stresses power-water coordination",
+      "body_text": "Xi Jinping visited Ulanqab's Chahar high-tech zone Oct 16 to inspect 'East Data West Computing' and green-computing development, urging 'compute-electricity coordination' and 'compute-water coordination.' China's data-center electricity use hit 196 billion kWh in 2025, 1.9% of national consumption and growing 18.1% year-on-year, more than five times overall power-demand growth."
+    },
+    {
+      "url": "https://www.taiwannews.com.tw/news/6460234",
+      "source": "Taiwan News",
+      "category": "ASEAN",
+      "headline": "Taiwan, Philippines sign livestock research cooperation deal",
+      "body_text": "Taiwan and the Philippines signed an agreement to cooperate on livestock research, broadening technical ties between Taipei and a key Southeast Asian partner. The announcement did not disclose the scope of the agreement."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/18/2003866167",
+      "source": "Taipei Times",
+      "headline": "Taiwan to buy 292 Shield AI V-BAT drones in up to NT$37.2 billion deal",
+      "body_text": "Taiwan's navy and coast guard are acquiring 292 MQ-35A V-BAT vertical-takeoff surveillance drones from US-based Shield AI; the navy's planned 280-drone, four-year 'Yuan Xiao' program alone would exceed the *250 units* Shield AI had sold to the US and NATO combined by 2024. The drones are meant to preserve Taiwan's command capability if Chinese attacks disrupt its networks.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://abc7ny.com/post/trump-says-he-chinese-president-xi-jinping-feel-similar-iran/19105160/?userab=kfsn_content_recs-582*variant_a_control_kfsn-2512,kabc_content_recs-577*variant_c_trending-2482,wls_content_recs-584*variant_b_trending_wls-2517,wtvd_content_recs-585*variant_a_control_wtvd-2518,ktrk_content_recs-587*variant_a_control_ktrk-2522,wpvi_content_recs-586*variant_a_control_wpvi-2520,abcn_article_nfy_v2-691*control-3727,otv_web_content_rec-539*variant_c_trending-2268,otv_web_topic-580*variant_b_topic_redesign-2509,follow_abcnews_otv_on_google-654*variant_a_control-3493,otv_search_page_design_unification-546*variant_b_search_redesign-2300,otv_web_live-581*variant_b_live_redesign-2511,follow_otv_on_google-683*variant_a_control-3659,abcn_popular_reads_exp_followup-648*variant_a_control-3455,otv_mobile_web_content_recs-639*variant_a_control-3429,kgo_content_recs-583*variant_b_trending_kgo-2515,abcn_verts_midterms-671*variant_b_verts_midterms_enabled-3588,otvlink_abcnnav-576*variant_a_control-2478",
+      "source": "ABC7 New York",
+      "headline": "Trump says he and Xi feel 'very similar' on Iran",
+      "body_text": "President Trump said he and Chinese President Xi Jinping feel 'very similar' on Iran, without elaborating further. The remark surfaced amid separate US reporting on potential military options against Iran.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3371233/coming-roses-how-trump-planted-new-seed-chinese-gift-diplomacy?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Trump's fascination with Zhongnanhai roses sparks new Chinese gift diplomacy",
+      "body_text": "Trump was reportedly captivated by a China rose variety in the Zhongnanhai garden during his May Beijing visit, prompting a new opening for gift diplomacy between the two governments. The anecdote surfaced even as the two sides remain at odds over trade, technology and Taiwan, per SCMP.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.channelnewsasia.com/business/accenture-looks-sell-chinese-operations-up-15-billion-ft-reports-6469506",
+      "source": "CNA, citing FT",
+      "headline": "Accenture seeks to sell Chinese operations for up to $1.5 billion",
+      "body_text": "IT consulting firm Accenture is looking to sell its China operations for up to *$1.5 billion*, the Financial Times reported Oct 18, citing people familiar with the matter. Reuters said it could not independently verify the report.",
+      "instrument": "Investment"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://def.ltn.com.tw/article/breakingnews/5610045",
+      "source": "Liberty Times (自由時報)",
+      "headline": "PLA helicopters cross Taiwan Strait median line twice in 24 hours",
+      "body_text": "Taiwan's defense ministry said it detected 2 PLA aircraft, 5 PLA naval vessels and 9 Chinese government ships around Taiwan between 6am Saturday and 6am Sunday. Two PLA helicopters crossed the median line, entering Taiwan's northern and central air defense identification zones respectively.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://world.huanqiu.com/article/4TfBYRg1I1I",
+      "source": "Global Times (环球时报), citing Kyodo",
+      "headline": "Takaichi cabinet approval falls below 50% for first time",
+      "body_text": "A Kyodo News poll published Oct 18 put support for PM Sanae Takaichi's cabinet at *49.1%*, down 4.3 points from last month and the lowest since her government took office. The drop followed the dismissal of her former agriculture minister over inappropriate remarks and alleged election-law violations.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.dw.com/zh/%E6%9C%9D%E9%B2%9C%E5%AE%A3%E7%A7%B0%E6%88%90%E5%8A%9F%E6%B5%8B%E8%AF%95%E9%87%87%E7%94%A8ai%E8%BE%85%E5%8A%A9%E7%9A%84%E6%96%B0%E5%9E%8B%E9%B1%BC%E9%9B%B7/a-79686243",
+      "source": "DW Chinese",
+      "headline": "North Korea claims AI-assisted torpedo test amid Trump-Kim meeting speculation",
+      "body_text": "North Korean state media said Thursday's underwater test of the 'Zam-2.0' high-speed precision-guided torpedo used AI for target detection and guidance, part of a program with more than 180 tests over five years. The test follows North Korea's submarine cruise-missile launches and comes as Trump said Oct 12 he might meet Kim Jong Un during his November Asia trip, which includes the APEC summit in Shenzhen.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.scmp.com/week-asia/economics/article/3371132/trumps-second-asean-summit-presence-comes-price-region?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "Trump's return to ASEAN summit comes at a price for region",
+      "body_text": "Trump is expected to drive hard bargains on tariffs and critical minerals during his Nov 16-18 Manila ASEAN summit appearance, seeking economic and strategic concessions while remaining hawkish on China. The Philippines confirmed the visit earlier this week; Trump flies directly to Shenzhen afterward for the APEC summit the same week.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3371232/beyond-evs-and-perception-how-china-gaining-ground-central-asia?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "China's Central Asia footprint extends beyond EVs as Li Qiang tours region",
+      "body_text": "Kazakh car dealers are increasingly switching from European to Chinese EVs like BYD's Han, with demand rising from both local and Russian buyers, SCMP reports. The trend coincides with Premier Li Qiang's Oct 17 visit to Uzbekistan, where he signed trade, education, customs and health cooperation deals before continuing to Tajikistan for the SCO Heads of Government Council.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.dw.com/zh/%E4%B8%AD%E5%9B%BD%E5%93%81%E7%89%8C%E4%B8%BB%E5%AF%BC%E6%B6%88%E8%B4%B9%E7%A7%91%E6%8A%80%E4%BB%B7%E5%BB%89%E7%89%A9%E7%BE%8E%E4%B8%8E%E5%AE%89%E5%85%A8%E7%96%91%E8%99%91/a-79682834",
+      "source": "DW Chinese",
+      "headline": "Chinese brands dominate global consumer tech as European data-privacy distrust persists",
+      "body_text": "DJI and Insta360 now hold more than *90%* of global smart handheld-camera sales, up from GoPro's over-70% share in 2015, per DW; Chinese brands also lead in EVs and robot vacuums. A recent poll found over 90% of Europeans distrust Chinese tech firms' data handling, versus about 80% for US firms, with Germans most distrustful; BYD's first EU passenger-car plant, in Hungary, opens later this year.",
+      "region": "Europe"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/china-proposes-export-controls-solar-manufacturing-technologies-2026-10-18/",
+      "source": "Reuters",
+      "category_tag": "Technology",
+      "headline": "China proposes export controls on AI, biopharma and solar-manufacturing technologies",
+      "body": "China proposed Friday adding artificial intelligence, biopharmaceutical and photovoltaic manufacturing technologies to its export control list, Reuters and Nikkei Asia reported. The move would extend Beijing's technology-export regime beyond the rare-earth and critical-minerals controls it imposed on the US in October 2025.",
+      "src_line": "Reuters, Oct 18; Nikkei Asia"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-18/china-condemns-japan-s-negative-moves-over-yasukuni-shrine",
+      "source": "Bloomberg",
+      "category_tag": "Diplomacy",
+      "headline": "China 'strongly condemns' Japan PM Takaichi's Yasukuni Shrine offering",
+      "body": "Japanese Prime Minister Sanae Takaichi sent a ritual offering to Yasukuni Shrine Oct 17 under the title 'Cabinet Prime Minister' as the shrine opened its three-day autumn festival; several cabinet ministers and parliamentary leaders also made offerings or visited in person. China's embassy in Tokyo called the moves 'an affront to historical justice' and said no pretext could hide the intent to 'vindicate war criminals, cover up war guilt... and pave the way for accelerated remilitarization.'",
+      "src_line": "Bloomberg, Oct 18; Xinhua/embassy statement"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/18/2003866171",
+      "source": "Taipei Times",
+      "category_tag": "Cross-Strait",
+      "headline": "Chinese coast guard, survey ships swarm Taiwan-controlled waters in multi-point incursion",
+      "body": "Two China Coast Guard vessels, numbered 3301 and 3303, entered restricted waters around the Taiwan-controlled Pratas (Dongsha) Islands at 3:34pm Friday; Taiwan's Coast Guard Administration deployed the Cijin patrol ship and patrol boat PP-10032 to shadow and warn them off, citing *11* such incursions this year involving 14 vessel encounters. CGA separately reported 16 Chinese coast guard, survey and fishing vessels operating off Hualien, Pingtung, Kaohsiung and Dongsha the same day, including a survey ship expelled after 12 radio warnings near Eluanbi.",
+      "src_line": "Taipei Times; Liberty Times (自由時報), Oct 18"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/china-central-bank-chief-says-he-supports-closer-imf-surveillance-fiscal-risks-2026-10-17/",
+      "source": "Reuters",
+      "category_tag": "PRC-Economy",
+      "headline": "PBOC governor Pan Gongsheng backs tighter IMF scrutiny of advanced-economy fiscal risk",
+      "body": "**Pan Gongsheng** told the IMF's International Monetary and Financial Committee in Bangkok Oct 17 that China supports strengthened IMF surveillance of major developed economies' fiscal risks and spillover effects. He said trade friction and protectionism drag down global growth via supply chains, inflation and disrupted market expectations, urging countries to resist protectionism and support the multilateral trading system.",
+      "src_line": "Reuters, Oct 17; Lianhe Zaobao"
+    },
+    {
+      "url": "https://cn.yna.co.kr/view/ACK20261018000500881",
+      "source": "Yonhap (Chinese)",
+      "category_tag": "Indo-Pacific",
+      "headline": "Trump confirmed for Manila ASEAN summit before APEC Shenzhen, as Kim meeting speculation grows",
+      "body": "The Philippines confirmed Trump will attend the ASEAN summit in Manila Nov 16-18 before traveling to Shenzhen for the APEC Leaders' Meeting, where South Korean, Chinese, Japanese and Russian leaders are also expected, per SCMP and Yonhap. Trump said Oct 12 he might meet North Korean leader Kim Jong Un during the trip, without confirming details.",
+      "src_line": "Yonhap (Chinese), Oct 18; SCMP"
+    },
+    {
+      "url": "http://www.afp.com/en/infos/worlds-first-commercial-ship-ship-green-ammonia-bunkering-completed-zhoushan-zhejiang-china",
+      "source": "AFP",
+      "category_tag": "Energy",
+      "headline": "World's first ship-to-ship green ammonia bunkering completed at Zhoushan",
+      "body": "A total of *1,000 tonnes* of green ammonia produced at Energy China's Songyuan hydrogen-energy project in Jilin was loaded via the bunkering vessel Shenghang Yongle onto Belgium's CMB.TECH-owned ammonia-powered ship Mineral Europa at Zhoushan, Zhejiang on Oct 13. The vessel will cross the Pacific to Australia; the project holds ISCC EU RFNBO certification and already has a sales contract for ocean-going green ammonia fuel.",
+      "src_line": "AFP, Oct 18"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.news.cn/20261018/33e0bbb40a5d4faaa53a1099c1ea9a22/c.html",
+      "source": "Xinhua",
+      "category": "Diplomacy",
+      "headline": "Asian Cultural Heritage Protection Alliance adds Kazakhstan, Egypt",
+      "body_text": "The alliance's council, meeting in Hangzhou, admitted Kazakhstan as an observer and Egypt as a partner, bringing total membership to 26.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.news.cn/20261018/51902acb4be44562b0b43a7506e8cce6/c.html",
+      "source": "Xinhua",
+      "category": "Diplomacy",
+      "headline": "Former UK business secretary Vince Cable gains following on China's Xiaohongshu",
+      "body_text": "Cable said his run as a Xiaohongshu influencer, with nearly 180,000 followers, has been 'novel and interesting' for UK-China mutual understanding.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://m.jiemian.com/article/15203980.html",
+      "source": "Jiemian (界面新闻)",
+      "category": "Technology",
+      "headline": "CITIC Securities says AI stock correction nearing its end",
+      "body_text": "CITIC compared the pullback in core AI stocks to the 2021-2022 new-energy correction, saying the first hardware valuation adjustment is nearly complete.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.fj.chinanews.com.cn/news/2026/2026-10-17/592243.html",
+      "source": "China News Fujian (中新网福建)",
+      "category": "Cross-Strait",
+      "headline": "TAO accuses Taiwan legislator Shen Bo-yang of rapid reversal",
+      "body_text": "A Taiwan Affairs Office spokesperson accused Taiwanese legislator-at-large Shen Bo-yang of changing position faster than 'flipping a book,' Chinese state media said Oct 17.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.voachinese.com/amp/china-s-accused-of-using-sanctions-to-intervene-taipei-mayor-election-20261016/8211964.html",
+      "source": "VOA Chinese",
+      "category": "Cross-Strait",
+      "headline": "Report: Beijing accused of using sanctions to sway Taipei mayoral race",
+      "body_text": "VOA Chinese examined accusations that Beijing is using sanctions as leverage ahead of Taipei's mayoral contest in the Nov 28 local elections.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.news.cn/legal/20261018/c5f7d1b7f53c475ca93f4c0ebd57a8e6/c.html",
+      "source": "Xinhua",
+      "category": "PRC-Economy",
+      "headline": "Chinese courts accepted 32.7 million cases in first three quarters of 2026",
+      "body_text": "The Supreme People's Court said courts accepted *32.71 million* cases Jan-Sep, up 1.48% year-on-year; administrative cases rose 10.05% while criminal cases fell 5.64%.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-18/china-s-anti-graft-body-investigates-ex-guangxi-official-huang",
+      "source": "Bloomberg",
+      "category": "Politics",
+      "headline": "China's anti-graft watchdog probes ex-Guangxi CPPCC vice chairman Huang Ribo",
+      "body_text": "The National Supervisory Commission is investigating Huang Ribo, 68, a non-party-affiliated former Guangxi CPPCC vice chairman, for serious job-related violations.",
+      "color_bar_class": "cb-mid"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-18/china-rail-logs-record-3-71-billion-trips-in-first-nine-months",
+      "source": "Bloomberg",
+      "headline": "China Rail logs record 3.71 billion trips in first nine months",
+      "body_text": "China's railways carried *3.71 billion* passenger trips between January and September 2026, a record for the period, reflecting continued recovery in domestic travel demand.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/toyota-to-build-next-gen-corolla-in-china-from-2028",
+      "source": "Nikkei Asia",
+      "headline": "Toyota to build next-generation Corolla in China from 2028",
+      "body_text": "Toyota plans to produce the next-generation Corolla in China starting in 2028 using a vehicle platform compatible with different powertrains, Nikkei reported.",
+      "companies": [
+        "Toyota"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://money.udn.com/money/story/5603/9822355",
+      "source": "UDN (联合报), citing Reuters",
+      "headline": "China's refined oil product exports jump 39.4% in September",
+      "body_text": "September refined oil product exports rose 19% month-on-month to *7.16 million tonnes*; diesel exports surged 262.3% year-on-year to 1.85 million tonnes, the highest since February 2023, after Beijing eased March export curbs in July.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3371290/more-drug-semiconductor-firms-eyeing-hong-kong-expansion-oases-head-says?utm_source=rss_feed",
+      "source": "SCMP",
+      "headline": "10-20 more drugmakers, semiconductor firms eyeing Hong Kong expansion",
+      "body_text": "OASES director Peter Yan King-shun said 10 to 20 companies, roughly split between mainland and overseas firms, are set to establish or expand in Hong Kong, including leading drugmakers and a semiconductor business.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/editorials/archives/2026/10/18/2003866155",
+      "source": "Taipei Times",
+      "headline": "Chinese protein exporters flood global markets, drawing EU anti-dumping scrutiny",
+      "body_text": "Shandong's Wintop Food processes *60 million* chickens annually and exports to more than 20 countries, with exports accounting for half of last year's profit; the EU launched an anti-dumping investigation into Chinese poultry products in July.",
+      "companies": [
+        "Wintop Food"
+      ],
+      "sector": "manufacturing"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "Wang Yi",
+      "body_chinese": "王毅",
+      "speaker": "Wang Yi",
+      "role": "Foreign Minister",
+      "topic": "China-Montenegro relations and EU accession",
+      "statement": "We should jointly discuss elevating bilateral relations to a higher level... China understands Montenegro's efforts to join the EU and its choice to integrate into Europe, and believes this process is not at odds with deepening cooperation with China.",
+      "original_zh": "要共同協商將兩國關係提升至更高水平，開拓新的合作領域，中方理解黑山加入歐盟的努力和融入歐洲一體化的選擇，認為這一進程與深化對華合作並行不悖。",
+      "addressed_to": "EU",
+      "tone": "conciliatory",
+      "context": "Wang Yi met Montenegro's president, Milatović, in Cetinje during a visit focused on elevating bilateral ties.",
+      "source": "HKEJ (信報)",
+      "url": "https://m.hkej.com/landing/mobarticle2/id/4542055/%E7%8E%8B%E6%AF%85%E6%99%A4%E9%BB%91%E5%B1%B1%E7%B8%BD%E7%B5%B1%20%E5%85%B1%E5%90%8C%E5%8D%94%E5%95%86%E6%8F%90%E5%8D%87%E5%85%A9%E5%9C%8B%E9%97%9C%E4%BF%82%E8%87%B3%E6%9B%B4%E9%AB%98%E6%B0%B4%E5%B9%B3"
+    },
+    {
+      "body": "PBOC",
+      "body_chinese": "中国人民银行",
+      "speaker": "Pan Gongsheng",
+      "role": "PBOC Governor",
+      "topic": "IMF surveillance of advanced-economy fiscal risk",
+      "statement": "Trade friction and protectionism are dragging down the global economy by affecting supply chains, pushing up inflation and disrupting market expectations... we firmly support the multilateral trading system and resist all forms of protectionism.",
+      "original_zh": "贸易摩擦和保护主义通过影响供应链、推升通胀、扰乱市场预期等因素拖累全球经济...坚定支持多边贸易体制，抵制一切形式的保护主义措施。",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "Remarks came at the IMF-World Bank annual meetings' International Monetary and Financial Committee session in Bangkok Oct 17.",
+      "source": "Lianhe Zaobao (联合早报)",
+      "url": "https://www.zaobao.com.sg/news/china/story20261017-9853920"
+    },
+    {
+      "body": "Embassy",
+      "body_chinese": "使馆",
+      "speaker": "Chinese Embassy in Japan spokesperson",
+      "role": "Embassy spokesperson",
+      "topic": "Japanese leaders' Yasukuni Shrine offerings",
+      "statement": "Whatever pretext they invent, Japanese leaders cannot hide their real intent to vindicate war criminals, cover up war guilt, distort historical facts, and pave the way for accelerated remilitarization.",
+      "original_zh": "日本当政者对此顶礼膜拜，无论编造何种理由，都无法隐藏其为战犯翻案、掩盖战争罪责、歪曲历史事实，为加速再军事化铺路的真实企图。",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Statement follows PM Takaichi's Oct 17 ritual offering to Yasukuni Shrine and visits by several cabinet ministers and lawmakers during the shrine's three-day autumn festival.",
+      "source": "PLA Daily (解放军报)/Xinhua",
+      "url": "http://www.81.cn/ss_208539/16493979.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "MZ",
+      "who": "Maria Zakharova",
+      "handle_context": "Russian Foreign Ministry spokesperson",
+      "platform_date": "Xinhua · Oct 16, 2026",
+      "quote_text": "This path is one of arduous struggle and selfless dedication, a truly heroic path.",
+      "analyst_note": "Remarks made at Russia's Oct 16 Foreign Ministry briefing marking the 90th anniversary of the Long March's conclusion, in response to a Xinhua reporter's question.",
+      "badge_class": "sb-p",
+      "url": "http://www.81.cn/ss_208539/16494006.html"
+    },
+    {
+      "avatar_initials": "CG",
+      "who": "Taiwan Coast Guard Administration",
+      "handle_context": "CGA patrol ship Taichung, broadcast to Chinese coast guard vessel",
+      "platform_date": "Liberty Times (自由時報) · Oct 18, 2026",
+      "quote_text": "The Republic of China, Taiwan, is a sovereign, independent country, not subordinate to the People's Republic of China, this is an undeniable fact. You have entered our waters without permission, in violation of international law; please turn around and leave immediately.",
+      "analyst_note": "Broadcast made after China Coast Guard vessel 3303 was intercepted near the Pratas Islands, one of 16 Chinese vessels the CGA tracked across four locations that day.",
+      "badge_class": "sb-r",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5610518"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Guangxi CPPCC Vice Chairman (former)",
+      "name": "Huang Ribo (黄日波)",
+      "action": "under investigation",
+      "detail": "China's National Supervisory Commission announced Oct 18 that Huang Ribo, 68, a non-party-affiliated former Guangxi CPPCC vice chairman, is under investigation for serious job-related violations. He is the sixth centrally-managed official to fall in Guangxi since the 20th Party Congress, following Zhang Xiulong, Qin Rupei, Zhou Jiabin, Lan Tianli and Peng Xiaochun.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://news.ltn.com.tw/news/politics/breakingnews/5610518",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/18/2003866171",
+    "https://def.ltn.com.tw/article/breakingnews/5610045",
+    "http://www.81.cn/ss_208539/16494006.html"
+  ],
+  "story_count": 99,
+  "oped_count": 10,
+  "academic_count": 0,
+  "source_count": 70,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-18.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-18.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
