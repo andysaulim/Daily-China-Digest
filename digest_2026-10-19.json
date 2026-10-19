@@ -1,0 +1,487 @@
+{
+  "digest_date": "Monday, October 19, 2026",
+  "re_line": "China Q3 GDP 4.5% · Manila summons Chinese envoy · Taiwan repels 16 PRC vessels · Putin floats Trump-Xi summit",
+  "market_indicators": {
+    "sse_composite": {
+      "value": "3,730.92",
+      "change_pct": -1.84,
+      "as_of": "Oct 19"
+    },
+    "usd_cnh": {
+      "value": "6.6790",
+      "change_pct": -0.09,
+      "as_of": "Oct 19"
+    },
+    "hang_seng": {
+      "value": "24,186.83",
+      "change_pct": -0.1,
+      "as_of": "Oct 16"
+    },
+    "usd_cny": {
+      "value": "6.6690",
+      "change_pct": -0.34,
+      "as_of": "Oct 19"
+    },
+    "brent": {
+      "value": "108.40",
+      "change_pct": 2.21,
+      "as_of": "Oct 19"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "China's economy grew 4.5 percent in Q3, beating forecasts as an export boom offset weak domestic demand, the NBS said Monday.",
+    "The Philippines summoned China's ambassador to protest remarks Manila said threatened the use of force; Beijing called it 'malicious hype.'",
+    "Taiwan's coast guard said it drove off 16 Chinese coast guard, survey and fishing vessels in coordinated operations around Taiwan proper and the Pratas Islands."
+  ],
+  "key_stat": {
+    "number": "458",
+    "label": "Taiwanese reported missing or detained in China in 2026",
+    "context": "Up by four from the prior week, per Taiwan's Mainland Affairs Council: 175 are listed missing, 41 detained for questioning, and 242 still held by Chinese authorities.",
+    "source": "Taipei Times"
+  },
+  "prc_government": [
+    {
+      "ministry": "Commerce Ministry",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson",
+      "action": "Tightens export controls on BVLOS, large-payload drones",
+      "document": "商务部新闻发言人就优化调整无人机相关物项出口管制措施答记者问",
+      "detail": "MOFCOM expanded export controls to cover drones capable of beyond-visual-line-of-sight flight and heavy payloads, part of a broader same-day adjustment of dual-use item rules.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_11a9b615dc91444193dc855a368ac2f0.html"
+    },
+    {
+      "ministry": "Commerce Ministry / Customs",
+      "ministry_chinese": "商务部 / 海关总署",
+      "official": "MOFCOM and Customs joint announcement",
+      "action": "Adjusts export controls on dredgers",
+      "document": "商务部 海关总署公告2026年第51号",
+      "detail": "A joint MOFCOM-Customs notice revised export-control measures covering dredger-related items, alongside a companion announcement (No. 52) optimizing dual-use item classification and identification procedures.",
+      "source_label": "MOFCOM ZH",
+      "url": "http://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_24e42675dd30435a944eee87427a94d2.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "Pan Gongsheng, PBOC Governor",
+      "action": "PBOC to exit benchmark deposit and lending rates",
+      "document": null,
+      "detail": "Speaking at the 2026 Financial Street Forum, Pan said the PBOC will push to replace benchmark deposit and lending rates with market-based rate indicators, with the interbank overnight repo rate already functioning as the de facto policy target rate.",
+      "source_label": "Xinhua ZH",
+      "url": "http://www.xinhuanet.com/fortune/20261019/9c17fbe70a62470f8f0df05374188b0c/c.html"
+    },
+    {
+      "ministry": "China Securities Regulatory Commission",
+      "ministry_chinese": "中国证监会",
+      "official": "Wu Qing, CSRC Chairman",
+      "action": "Approves first batch of 18 actively managed ETFs",
+      "document": null,
+      "detail": "Wu Qing said the CSRC would approve registration of the first 18 actively managed ETFs on Monday, calling it a step to spur fund product innovation and bring incremental capital into the market.",
+      "source_label": "Xinhua ZH",
+      "url": "https://www.news.cn/20261019/6b8ed473b6c447e283c4b22c27042a0d/c.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (draft rule)",
+      "action": "Drafts rules tightening interbank bond issuance oversight",
+      "document": "银行间债券市场债券发行管理规则（征求意见稿）",
+      "detail": "The 28-article draft bars issuers from buying their own bonds, bans underpriced underwriting and prohibits fake bids; public comments are due by Nov. 15, 2026.",
+      "source_label": "Economic Daily ZH",
+      "url": "http://m.ce.cn/gp/gd/202610/t20261019_3262051.shtml"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758 55th anniversary",
+      "detail": "Contested-interpretation flashpoint over Taiwan's UN status; Beijing and Taipei offer competing readings of the 1971 resolution."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Outcome shapes the composition of the Select Committee on the CCP and other China-focused congressional panels."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal one-year suspensions set to lapse",
+      "detail": "The BIS Affiliates (\"50%\") Rule and China's Oct. 2025 rare-earth export-control expansion were suspended for a year from this date under the Busan truce; renewal status unconfirmed."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts; Trump attendance and any Trump-Xi meeting on the sidelines remain to be confirmed."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors and magistrates and roughly 11,000 offices up for election, read as a mid-term referendum on President Lai."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-19/china-s-coal-output-drops-as-concerns-build-over-winter-supply",
+      "source": "Bloomberg China",
+      "category": "Energy",
+      "headline": "China's Coal Output Drops as Winter Supply Fears Build",
+      "body_text": "China's coal production fell, raising concern about winter heating and power supply, Bloomberg reported Monday. The report did not specify the scale of the decline or which regions face the greatest exposure."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/beijings-population-expected-become-super-aged-by-2035-2026-10-19/",
+      "source": "Reuters China",
+      "category": "PRC-Economy",
+      "headline": "Beijing Population Set to Become 'Super-Aged' by 2035",
+      "body_text": "Beijing's population is projected to become a super-aged society by 2035, Reuters reported Monday. The projection adds to long-term strain on the capital's pension and healthcare systems."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-19/new-zealand-s-trade-deficit-with-china-widens-on-ev-imports",
+      "source": "Bloomberg China",
+      "category": "Indo-Pacific",
+      "headline": "New Zealand's Trade Deficit With China Widens on EV Imports",
+      "body_text": "New Zealand's trade deficit with China widened as electric-vehicle imports rose, Bloomberg reported Monday. The widening gap reflects China's growing dominance in global EV exports."
+    },
+    {
+      "url": "https://focustaiwan.tw/business/202610190006",
+      "source": "Focus Taiwan",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Finance Minister Leads Delegation to APEC Meeting in Hong Kong",
+      "body_text": "Taiwan's finance minister is leading the island's delegation to an APEC meeting in Hong Kong, Focus Taiwan reported Monday. Beijing routinely objects to Taiwan's participation in multilateral forums under its own name."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/china-to-add-ai-biopharma-and-solar-tech-to-export-control-list",
+      "source": "Nikkei Asia China",
+      "category": "Technology",
+      "headline": "China Proposes Adding AI, Biopharma, Solar Tech to Export Control List",
+      "body_text": "Chinese authorities proposed adding artificial intelligence, biopharmaceutical and photovoltaic technologies to the national export control list, Nikkei Asia reported. The move would expand Beijing's leverage over technologies central to its competition with the US and allies."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/19/2003866215",
+      "source": "Taipei Times (direct)",
+      "category": "Indo-Pacific",
+      "headline": "Japanese Scholar Urges Taiwan-Japan-Philippines Coordination on China's Maritime Moves",
+      "body_text": "Kyushu University's Chisako Masuo said China's expanding maritime activity east of Taiwan is a shared concern for Taiwan, Japan and the Philippines. She said Japanese alarm over a Taiwan contingency has faded following the removal of senior Chinese military officers from the CCP."
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/japan-to-allow-taiwan-as-place-of-origin-in-some-national-records",
+      "source": "Nikkei Asia China",
+      "category": "Cross-Strait",
+      "headline": "Japan to Allow 'Taiwan' as Place of Origin in Some National Records",
+      "body_text": "Japan changed its national records system to allow 'Taiwan' as an entry in place-of-origin fields for individuals with ties to the island, Nikkei Asia reported. The change applies to certain official records."
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3371379/pla-hits-out-chinese-student-accused-wearing-japanese-rising-sun-flag-classroom?utm_source=rss_feed",
+      "source": "SCMP China",
+      "category": "PLA",
+      "headline": "PLA Criticizes Chinese Student Over Alleged 'Rising Sun' Flag Display",
+      "body_text": "The PLA criticized a Chinese student reportedly seen wearing Japan's 'rising sun' flag in a classroom at a Russian university, accusing him of whitewashing Japanese militarism, SCMP reported. The flag remains in use by Japan's Self-Defence Forces and is widely viewed in China as a symbol of wartime aggression."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.ft.com/content/4ed89331-df18-4f2d-817b-9a7b304fd4e4?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "US Army Chief Calls for Bigger Military Show of Force in Asia",
+      "body_text": "General Ronald Clark called for a more visible US military presence in the Indo-Pacific to build deterrence against China, the Financial Times reported Monday. The push comes as US and allied forces weigh posture adjustments amid Beijing's expanding regional ambitions.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/10/19/chinas-ai-sector-has-a-balanced-focus-in-inputs-fueling-ai-buildout.html",
+      "source": "CNBC China",
+      "headline": "BlackRock Sees Broader China AI Opportunity, Flags Need for US-China Stability",
+      "body_text": "BlackRock's **Mike Pyle** said China's AI sector now spans a more balanced mix of upstream inputs, models and applications, giving investors opportunities across the full stack, per CNBC. He said it is important for US-China relations to underwrite strategic stability as the world's two largest economies.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://www.wsj.com/world/russia/putin-floats-a-summit-with-trump-and-xi-to-decide-ukraines-fate-1cf6acc1",
+      "source": "WSJ",
+      "headline": "Putin Floats Trilateral Summit With Trump, Xi to Decide Ukraine's Fate",
+      "body_text": "Russian President **Vladimir Putin** proposed a summit next month with Donald Trump and Xi Jinping to discuss ending the war in Ukraine, the Wall Street Journal reported Monday, citing people familiar with the plan. China's Foreign Ministry said Monday it had no information to provide on the proposal, while Kremlin spokesman Dmitry Peskov said the idea had not been discussed in detail.",
+      "instrument": "Diplomacy"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.fj.chinanews.com.cn/news/2026/2026-10-19/592323.html",
+      "source": "国台办 (TAO ZH) via 中新网福建",
+      "headline": "TAO Accuses Lai of Concealing 'Separatist Intent' in Double Ten Speech",
+      "body_text": "China's Taiwan Affairs Office said President **Lai Ching-te**'s Double Ten National Day speech wrapped separatist intent in lies, per a Monday statement carried by a Fujian state outlet. The rebuke follows Lai's October 10 address, which Beijing has repeatedly criticized as advancing Taiwanese independence.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://english.kyodonews.net/articles/-/88702",
+      "source": "Kyodo China",
+      "headline": "China Strongly Condemns Takaichi's Monetary Offering to Yasukuni Shrine",
+      "body_text": "China issued a strong condemnation after Japanese Prime Minister **Sanae Takaichi** sent a ritual monetary offering to Yasukuni Shrine, Kyodo reported Monday. Several cabinet ministers and lawmakers also visited the shrine, which honors Japan's war dead including convicted Class-A war criminals.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/wary-instability-china-calls-deeper-security-cooperation-with-tajikistan-2026-10-19/",
+      "source": "Reuters China",
+      "headline": "China Calls for Deeper Security Cooperation With Tajikistan",
+      "body_text": "China called for deeper security cooperation with Tajikistan, citing concern about regional instability, Reuters reported Monday. The appeal followed remarks attributed to Premier **Li Qiang** on Central Asian security ties.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/19/2003866205",
+      "source": "Taipei Times (direct)",
+      "headline": "Palau Resists Chinese Pressure to Stand With Taipei, Lai Says",
+      "body_text": "President Lai Ching-te said Palau has stood with Taiwan despite Chinese infiltration and \"united front\" tactics aimed at its presidential election. Palauan President **Surangel Whipps Jr.** told Politico that Beijing had threatened Palau with \"consequences\" for promoting Taiwanese independence.",
+      "region": "Australia-Pacific"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/taiwan-tensions/taiwan-philippines-kindle-maritime-cooperation-in-face-of-chinese-pressure",
+      "source": "Nikkei Asia China",
+      "headline": "Taiwan, Philippines Deepen Maritime Cooperation Amid Chinese Pressure",
+      "body_text": "Taiwan and the Philippines are boosting maritime cooperation after decades of distance as Chinese vessel activity rises, Nikkei Asia reported. The outreach follows repeated Chinese coast guard and research-vessel patrols near both countries' waters.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "http://world.people.com.cn/n1/2026/1019/c1002-40817635.html",
+      "source": "人民日报国际 (People's Daily World ZH)",
+      "headline": "MOFA Says Xi's Four Principles Hold Significance for African Hotspot Issues",
+      "body_text": "China's Foreign Ministry said President **Xi Jinping**'s four principles for addressing hotspot issues carry important significance for Africa, per a Monday People's Daily report. The report did not detail the principles beyond the headline framing.",
+      "region": "Africa"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.afp.com/en/chinas-third-quarter-growth-narrowly-beats-forecasts",
+      "source": "AFP",
+      "category_tag": "PRC-Economy",
+      "headline": "China's Q3 GDP Grows 4.5%, Tops Forecasts as Exports Offset Weak Demand",
+      "body": "China's economy expanded *4.5 percent* in July-September, beating a Reuters-polled forecast of 4.4 percent and up from 4.3 percent in Q2, the National Bureau of Statistics said Monday. NBS deputy head **Mao Shengyong** called the international environment \"complex and volatile\" and said domestic demand remained \"insufficient,\" even as retail sales rose 1.1 percent in September, the fastest pace since March.",
+      "src_line": "AFP, Oct 19"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/19/2003866217",
+      "source": "Taipei Times (direct)",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan Says It Drove Off 16 Chinese Vessels in Coordinated 'Maritime Harassment'",
+      "body": "Taiwan's coast guard said it repelled **16** Chinese coast guard, research and fishing vessels conducting \"simultaneous operations at multiple locations\" around Taiwan proper and the Pratas Islands (Dongsha) on Sunday. The agency called it an \"unusually large\" operation and said some vessels entered restricted waters, days after Taiwan used a water cannon against a Chinese recreational fishing boat near Pratas on October 1.",
+      "src_line": "Taipei Times, Oct 19"
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/10/19/china-philippines-ambassador-sea-disputes/0c3a4676-cb9d-11f1-ac04-9f58578a68b4_story.html",
+      "source": "Washington Post",
+      "category_tag": "Indo-Pacific",
+      "headline": "Philippines Summons Chinese Ambassador Over Remarks It Says Threatened Force",
+      "body": "The Philippines summoned China's ambassador to protest remarks Manila said threatened the use of force in the South China Sea, the Washington Post reported Monday. China's Foreign Ministry said it \"firmly opposes\" what it called Manila's \"malicious hype,\" per a statement carried by Hong Kong's HK01.",
+      "src_line": "Washington Post, Oct 19"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-19/china-reveals-advanced-nuclear-sub-was-used-to-test-fire-missile",
+      "source": "Bloomberg",
+      "category_tag": "PLA",
+      "headline": "China Says Advanced Nuclear Submarine Test-Fired a Missile",
+      "body": "China disclosed that an advanced nuclear-powered submarine was used to test-fire a missile, Bloomberg reported Monday. The report did not specify the submarine class, missile type, or location of the test.",
+      "src_line": "Bloomberg, Oct 19"
+    },
+    {
+      "url": "https://www.wsj.com/business/earnings/chinas-cxmt-expects-over-eightfold-revenue-jump-amid-memory-squeeze-93d24f98",
+      "source": "WSJ",
+      "category_tag": "Technology",
+      "headline": "China's CXMT Guides for Eightfold Revenue Jump Amid Global Memory Squeeze",
+      "body": "Chinese memory chipmaker **CXMT** said it expects revenue to rise more than *eightfold* for the first nine months of 2026, the Wall Street Journal reported Monday, citing a global memory-chip supply squeeze. Investors looked past the forecast; CXMT shares fell nearly 8 percent on Monday, CNBC reported separately.",
+      "src_line": "WSJ, Oct 19"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.washingtonpost.com/opinions/2026/10/19/ai-risks-us-china-should-work-together/",
+      "source": "Washington Post",
+      "category": "Diplomacy",
+      "headline": "WaPo Opinion Calls for US-China AI Arms Control Pact",
+      "body_text": "A Washington Post opinion piece argued Washington and Beijing need an arms-control framework for artificial intelligence risk.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.ft.com/content/280637e2-72f7-46c0-8fc4-3532032287da?syn-25a6b1a6=1",
+      "source": "FT",
+      "category": "Trade",
+      "headline": "FT Newsletter: EU Turns to New Caledonia Nickel to Cut China Reliance",
+      "body_text": "An FT newsletter noted the EU is looking to New Caledonia for nickel supplies to loosen China's grip on the market.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.wsj.com/economy/chinas-export-boom-masks-deep-economic-problems-at-home-945833ac",
+      "source": "WSJ",
+      "category": "Economy",
+      "headline": "WSJ: China's Export Boom Masks Deep Domestic Economic Problems",
+      "body_text": "The Wall Street Journal reported China's export boom is obscuring deeper problems in its domestic economy.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-19/china-signals-plan-for-overnight-rate-to-play-bigger-policy-role",
+      "source": "Bloomberg",
+      "headline": "China Signals Overnight Repo Rate to Become Main Policy Benchmark",
+      "body_text": "China is moving to make the interbank overnight repo rate its primary policy benchmark, Bloomberg reported Monday, as Beijing phases out reliance on benchmark deposit and lending rates.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-19/china-state-funds-active-as-stocks-post-record-weekly-losing-run",
+      "source": "Bloomberg",
+      "headline": "State Funds Active as China Stocks Post Record Weekly Losing Run",
+      "body_text": "Chinese state funds intervened as mainland stocks posted a record weekly losing run, Bloomberg reported; the Shanghai Composite fell *1.84 percent* to 3,730.92 on Monday.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/chinas-new-home-prices-fall-again-september-recovery-stays-elusive-2026-10-19/",
+      "source": "Reuters",
+      "headline": "China's New Home Prices Fall Again in September",
+      "body_text": "China's new home prices fell again in September, Reuters reported Monday, with the property downturn showing no clear sign of turning around.",
+      "companies": [],
+      "sector": "property"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/china-set-leave-benchmark-lending-rates-unchanged-17th-month-2026-10-19/",
+      "source": "Reuters",
+      "headline": "China Set to Hold Benchmark Lending Rates for 17th Straight Month",
+      "body_text": "China is expected to leave its one- and five-year loan prime rates unchanged for a 17th consecutive month at Tuesday's fixing, Reuters reported.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.wsj.com/finance/stocks/nikkei-falls-1-8-tracking-wall-streets-losses-413895f0",
+      "source": "WSJ",
+      "headline": "EU Curbs on Chinese Hybrids Could Revive European Automaker Stocks",
+      "body_text": "New EU restrictions on Chinese hybrid vehicles could make European automakers investable again, the Wall Street Journal reported, as Brussels moves to shield domestic carmakers from Chinese competition.",
+      "companies": [],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/19/china-cxmt-profit-outlook-shares.html",
+      "source": "CNBC",
+      "headline": "CXMT Shares Fall Nearly 8% Despite Profit Turnaround Forecast",
+      "body_text": "Shares in Chinese memory chipmaker CXMT fell nearly *8 percent* Monday even after the company forecast a profit turnaround for the first nine months of 2026, CNBC reported.",
+      "companies": [
+        "CXMT"
+      ],
+      "sector": "tech"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Putin's proposed US-China-Russia summit",
+      "statement": "Per Sohu: China's Foreign Ministry said it currently has no information to provide regarding Putin's proposal for a trilateral summit with Trump and Xi next month to discuss ending the Ukraine crisis.",
+      "original_zh": "目前没有可提供的信息。",
+      "addressed_to": "US",
+      "tone": "routine",
+      "context": "Asked at Monday's briefing about WSJ reporting that Putin proposed a summit with Trump and Xi on Ukraine.",
+      "source": "Sohu",
+      "url": "https://www.sohu.com/a/1089747720_465270?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Philippines summoning China's ambassador",
+      "statement": "Per HK01: China's Foreign Ministry firmly opposes the Philippines' malicious hype after Manila said it summoned China's ambassador over 'threatened force' remarks.",
+      "original_zh": "堅決反對菲方惡意炒作",
+      "addressed_to": "Philippines",
+      "tone": "firm",
+      "context": "Manila summoned China's ambassador Monday to protest remarks it said threatened the use of force in the South China Sea.",
+      "source": "HK01",
+      "url": "https://www.washingtonpost.com/world/2026/10/19/china-philippines-ambassador-sea-disputes/0c3a4676-cb9d-11f1-ac04-9f58578a68b4_story.html",
+      "note": null
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "DPP pressure on TSMC capacity transfers to US",
+      "statement": "Per TAO: the Democratic Progressive Party is pressuring TSMC to transfer production capacity to the United States.",
+      "original_zh": null,
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "TAO reacted to reports that Taiwan's ruling DPP is pressuring TSMC over capacity transfers amid ongoing semiconductor investment disputes.",
+      "source": "中新网福建",
+      "url": "https://www.fj.chinanews.com.cn/news/2026/2026-10-19/592324.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Takaichi's Yasukuni Shrine offering",
+      "statement": "China firmly opposes and strongly condemns Japan's negative moves, and has lodged stern representations and strong protests with Japan.",
+      "original_zh": "中方坚决反对、严厉谴责日方有关消极动向，已向日方提出严正交涉、强烈抗议。",
+      "addressed_to": "Japan",
+      "tone": "warning",
+      "context": "Japanese Prime Minister Sanae Takaichi sent a ritual monetary offering to Yasukuni Shrine and several cabinet ministers and lawmakers visited it.",
+      "source": "Sohu",
+      "url": "https://www.sohu.com/a/1089768310_267106?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "PBOC",
+      "body_chinese": "中国人民银行",
+      "speaker": "Pan Gongsheng",
+      "role": "PBOC Governor",
+      "topic": "Exit from benchmark deposit and lending rates",
+      "statement": "The People's Bank of China will push to replace benchmark pricing in these areas with market-based interest rate indicators, achieving an exit from financial institutions' benchmark deposit and lending rates.",
+      "original_zh": "下一步，中国人民银行将推动这些领域的计息依据用市场化的利率指标来替代，实现退出金融机构存贷款基准利率。",
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "Pan made the remarks at the 2026 Financial Street Forum in Beijing as the interbank overnight repo rate becomes the de facto policy rate.",
+      "source": "Xinhua",
+      "url": "http://www.xinhuanet.com/fortune/20261019/9c17fbe70a62470f8f0df05374188b0c/c.html"
+    }
+  ],
+  "social_statements": [],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/19/2003866217",
+    "https://www.reuters.com/world/china/wary-instability-china-calls-deeper-security-cooperation-with-tajikistan-2026-10-19/",
+    "https://www.taipeitimes.com/News/front/archives/2026/10/19/2003866205",
+    "https://asia.nikkei.com/politics/international-relations/taiwan-tensions/taiwan-philippines-kindle-maritime-cooperation-in-face-of-chinese-pressure"
+  ],
+  "story_count": 101,
+  "oped_count": 6,
+  "academic_count": 0,
+  "source_count": 91,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-19.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-19.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
