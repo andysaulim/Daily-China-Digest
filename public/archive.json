@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-19",
+    "filename": "2026-10-19.html",
+    "re_line": "China Q3 GDP 4.5% \u00b7 Manila summons Chinese envoy \u00b7 Taiwan repels 16 PRC vessels \u00b7 Putin floats Trump-Xi summit",
+    "top_stories": 5,
+    "overnight_items": 8,
+    "word_count": 2166,
+    "sources": 91,
+    "pdf": true
+  },
+  {
     "date": "2026-10-18",
     "filename": "2026-10-18.html",
     "re_line": "RE: Yasukuni row \u00b7 PLA swarm near Pratas \u00b7 Beijing export-control push \u00b7 PBOC at IMF \u00b7 APEC Shenzhen countdown",
