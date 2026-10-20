@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-20",
+    "filename": "2026-10-20.html",
+    "re_line": "PBOC rate-anchor shift \u00b7 DeepSeek federal ban draws MOFA protest \u00b7 Trump-Xi-Putin summit floated \u00b7 PLA shadows US warship \u00b7 Japan rare-earth crunch",
+    "top_stories": 5,
+    "overnight_items": 6,
+    "word_count": 2756,
+    "sources": 112,
+    "pdf": true
+  },
+  {
     "date": "2026-10-19",
     "filename": "2026-10-19.html",
     "re_line": "China Q3 GDP 4.5% \u00b7 Manila summons Chinese envoy \u00b7 Taiwan repels 16 PRC vessels \u00b7 Putin floats Trump-Xi summit",
