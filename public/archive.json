@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-22",
+    "filename": "2026-10-22.html",
+    "re_line": "CSI 300 bear market \u00b7 Xi's Long March speech ahead of Fifth Plenum \u00b7 TSMC rare-earth pivot \u00b7 Shoal resupply",
+    "top_stories": 6,
+    "overnight_items": 7,
+    "word_count": 2657,
+    "sources": 116,
+    "pdf": true
+  },
+  {
     "date": "2026-10-21",
     "filename": "2026-10-21.html",
     "re_line": "China tightens AI/biotech export curbs \u00b7 Google-case sanctions row \u00b7 Trump floats Putin-Xi summit \u00b7 Dongsha standoff \u00b7 LPR steady 17mo",
