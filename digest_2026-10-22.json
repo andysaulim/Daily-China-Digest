@@ -1,0 +1,630 @@
+{
+  "digest_date": "Thursday, October 22, 2026",
+  "re_line": "CSI 300 bear market · Xi's Long March speech ahead of Fifth Plenum · TSMC rare-earth pivot · Shoal resupply",
+  "market_indicators": {
+    "sse_composite": {
+      "value": "3,658.03",
+      "change_pct": -1.57,
+      "as_of": "Oct 22"
+    },
+    "usd_cnh": {
+      "value": "6.6730",
+      "change_pct": -0.0,
+      "as_of": "Oct 22"
+    },
+    "usd_cny": {
+      "value": "6.6627",
+      "change_pct": -0.42,
+      "as_of": "Oct 22"
+    },
+    "hang_seng": {
+      "value": "22,934.68",
+      "change_pct": -5.67,
+      "as_of": "Oct 22"
+    },
+    "brent": {
+      "value": "111.81",
+      "change_pct": 2.06,
+      "as_of": "Oct 22"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "China's CSI 300 index has fallen into bear-market territory, down roughly 20% from its June peak, as the Hang Seng dropped 5.67% today.",
+    "Xi Jinping made a confirmed public appearance at a Beijing ceremony marking the Long March's 90th anniversary, five days before the Fifth Plenum opens, ending a 47-day gap since his last confirmed appearance.",
+    "TSMC is evaluating rare-earth-free motors and alternative factory-equipment suppliers to cut its exposure to China's export controls, Reuters reports, as China's coast guard separately confirmed it let the Philippines resupply its grounded warship at Second Thomas Shoal."
+  ],
+  "key_stat": {
+    "number": "56th",
+    "label": "Centrally-managed official purged in 2026",
+    "context": "Beijing's Executive Vice Mayor Xia Linmao was placed under investigation Oct 22, the 56th such 中管干部 named this year per Caixin's running tally; he was last seen publicly Oct 14 meeting Walmart's global CEO.",
+    "source": "Caixin"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "Pan Gongsheng, PBOC Governor",
+      "action": "LPR held for 17th straight month; PBOC previews policy-rate 're-anchoring'",
+      "document": "October 2026 LPR quotation",
+      "detail": "The 1-year LPR stayed at 3.0% and the 5-year-plus rate at 3.5%. Pan Gongsheng said the PBOC will study shifting its main open-market operation tenor to overnight, making the overnight reverse repo rate the de facto policy rate, and will move loan pricing toward a dual LPR-plus-DR benchmark.",
+      "source_label": "PBOC ZH",
+      "url": "https://www.21jingji.com/article/20261022/herald/385de6e54eba9c6b5854b23f09761235.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM",
+      "action": "Reports FDI data for January-September 2026",
+      "document": null,
+      "detail": "National utilized foreign investment totaled ¥548.81 billion for the first nine months of 2026.",
+      "source_label": "MOFCOM",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_ca089e39ff5f4385be2d1bd9494de9de.html"
+    },
+    {
+      "ministry": "Taiwan Affairs Office",
+      "ministry_chinese": "国台办",
+      "official": "Zhang Han, TAO spokesperson",
+      "action": "Cites surge in Taiwanese travel to the mainland",
+      "document": null,
+      "detail": "TAO said Taiwanese visits to the mainland rose 24.9% year-on-year in H1 2026 and reached 2.492 million for January-August, up 19.63%, despite Taipei's standing 'orange' travel advisory.",
+      "source_label": "TAO ZH",
+      "url": "https://news.china.com/socialgd/10000169/20261022/49809365.html"
+    },
+    {
+      "ministry": "Ministry of Foreign Affairs",
+      "ministry_chinese": "外交部",
+      "official": "MOFA",
+      "action": "Previews 2026 Global Governance Forum in Xiongan",
+      "document": null,
+      "detail": "MOFA outlined China's expectations for the forthcoming Global Governance Forum to be held in Xiongan.",
+      "source_label": "MOFA ZH",
+      "url": "https://www.yidaiyilu.gov.cn/p/0UIA1A3U.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "Central Committee / Fifth Plenum",
+      "action": "People's Daily 任仲平 commentary previews Fifth Plenum",
+      "detail": "A signed Xinhua/People's Daily commentary timed to the Long March 90th anniversary confirmed the Fifth Plenum of the 20th Central Committee convenes in Beijing October 26-29 to 'study major questions on continuing to comprehensively and rigorously govern the Party.'",
+      "url": "https://m.sohu.com/a/1091172029_118081?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758, 55th anniversary",
+      "detail": "Beijing and Taipei mark divergent interpretations of the 1971 resolution seating the PRC at the UN, a recurring flashpoint over Taiwan's international space."
+    },
+    {
+      "month": "Oct",
+      "day": 26,
+      "headline": "Fifth Plenum of the 20th Central Committee opens in Beijing",
+      "detail": "The four-day plenum (Oct 26-29) takes up Party discipline and self-governance, per today's Xinhua 任仲平 commentary, days after Xi's Long March anniversary speech."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Outcome shapes the House Select Committee on the CCP's composition and oversight agenda for 2027-28."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts Nov 18-19; the Kremlin says China is preparing for a possible Trump-Xi-Putin trilateral on the margins, per Bloomberg."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayoral and magistrate races and roughly 11,000 offices are at stake, read as a mid-term on President Lai Ching-te."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3371799/could-us-advances-drone-command-give-it-edge-over-pla-taiwan-conflict",
+      "source": "SCMP",
+      "category": "PLA",
+      "headline": "US tests drone command links from F-22 cockpit and carrier in Taiwan-relevant push",
+      "body_text": "The US disclosed two tests this month in which an F-22 pilot and a carrier-based system controlled autonomous combat drones over long distances. The tests illustrate a technology contest Washington says could redefine air and naval power in a Taiwan contingency."
+    },
+    {
+      "url": "https://www.taiwannews.com.tw/news/6457953",
+      "source": "Taiwan News",
+      "category": "Indo-Pacific",
+      "headline": "Taiwan Coast Guard buys 25 MarTac drone boats",
+      "body_text": "Taiwan's Coast Guard Administration has procured 25 MarTac unmanned surface vessels. The purchase adds to Taiwan's growing fleet of maritime drones for monitoring gray-zone activity around the island."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/tech/semiconductors/taiwan-s-first-ever-chip-workers-strike-hits-micron-plant",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Taiwan's first-ever chip workers strike hits Micron plant",
+      "body_text": "A Micron Technology labor union staged Taiwan's first-ever semiconductor industry strike Thursday in a dispute over compensation terms. The action marks a labor-organizing first for the island's chip sector."
+    },
+    {
+      "url": "https://www.ft.com/content/87193801-4057-4fad-b667-ac64ba230efa?syn-25a6b1a6=1",
+      "source": "FT",
+      "category": "Diplomacy",
+      "headline": "Private Chinese factories drive a new wave of Africa manufacturing",
+      "body_text": "After years of state-led infrastructure projects, FT reports private Chinese companies are now leading investment in African manufacturing. The shift marks a change from the state-to-state model that dominated the first decade of Belt and Road lending."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/22/2003866415",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "MAC and TAO spar over Chinese actor's denied entry to Taiwan",
+      "body_text": "Taiwan barred Chinese actor Zhang Linghe, citing his comments denigrating Taiwan's sovereignty and his appearance as a Straits Forum guest speaker. The TAO called the refusal political maneuvering; the MAC said Beijing has no standing to complain given attacks on Taiwanese entertainers."
+    },
+    {
+      "url": "https://finance.caixin.com/2026-10-22/102496118.html",
+      "source": "Caixin",
+      "category": "PRC-Economy",
+      "headline": "PBOC details four channels for offshore entities to access yuan",
+      "body_text": "The central bank outlined the mechanisms foreign entities can use to obtain renminbi: receiving, raising, borrowing and exchanging. The explainer comes as policymakers push internationalization of the currency."
+    },
+    {
+      "url": "https://www.jiemian.com/article/15224048.html",
+      "source": "Jiemian",
+      "category": "Technology",
+      "headline": "China's AI chip architects command million-yuan salaries amid talent crunch",
+      "body_text": "Chip-sector job postings rose 22.2% year-on-year in the first nine months of 2026, with top AI chip architect roles paying up to ¥1.8 million annually. Xinhua cited industry estimates of a 300,000-person integrated-circuit talent gap, growing to over 500,000 by 2030."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.washingtonpost.com/national-security/2026/10/21/pentagon-looks-build-deep-cover-spy-program-confront-china/",
+      "source": "Washington Post",
+      "headline": "Pentagon looks to build deep-cover spy program to confront China",
+      "body_text": "The Pentagon is working to establish a deep-cover espionage program aimed at China, per WaPo. The effort reflects a broader push to expand human intelligence capabilities against Beijing.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://www.reuters.com/legal/transactional/how-merged-spacex-tesla-might-navigate-its-china-problem-2026-10-22/",
+      "source": "Reuters",
+      "headline": "How a merged SpaceX-Tesla might navigate its China problem",
+      "body_text": "Reuters examines the legal and regulatory complications a combined SpaceX-Tesla entity would face given Tesla's China manufacturing footprint and SpaceX's national-security work. The piece flags CFIUS-adjacent exposure from mixing a defense-sensitive business with a China-dependent one.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-21/kremlin-says-china-preparing-for-possible-putin-trump-xi-meeting",
+      "source": "Bloomberg",
+      "headline": "Kremlin says China preparing for possible Putin-Trump-Xi meeting",
+      "body_text": "The Kremlin said China is making preparations for a potential trilateral meeting of Putin, Trump and Xi. Russia has floated the sidelines of November's APEC summit in Shenzhen as a possible venue.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://cacs.mofcom.gov.cn/cacscms/article/ssqdc?articleId=189568&type=",
+      "source": "MOFCOM (China Trade Remedies Info)",
+      "headline": "US ITC issues partial final ruling in Section 337 probe on vehicle parts",
+      "body_text": "The US International Trade Commission issued a partial final determination in a Section 337 investigation covering vehicle parts and components, per MOFCOM's trade-remedy tracking site. The ruling affects Chinese-linked auto-parts suppliers' access to the US market.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.afp.com/en/five-things-know-about-chinese-ai-startup-deepseek",
+      "source": "AFP",
+      "headline": "DHS orders US agencies to stop using DeepSeek AI tools",
+      "body_text": "The US Department of Homeland Security directed government agencies to halt use of DeepSeek's AI products, citing data-transfer risk to China. DeepSeek's chatbots are already banned or restricted on government devices in the US, Australia and South Korea.",
+      "instrument": "Sanctions"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://apnews.com/article/taiwan-china-xi-jinping-comedian-huang-attacked-5de1ede690a3881d79f74624e81acf0c",
+      "source": "AP",
+      "headline": "Taiwan indicts 5 over attack on comedian who mocks Xi and the CCP",
+      "body_text": "Prosecutors indicted five men for a September attack on comedian Huang Yi-hao, alleging a Chinese national paid NT$450,000 to have him injured before a scheduled show. Prosecutors are seeking a minimum five-and-a-half-year sentence for the lead suspect.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/taiwan-probes-organised-crime-links-chinas-transnational-repression-2026-10-22/",
+      "source": "Reuters",
+      "headline": "Taiwan probes organized-crime links to China's 'transnational repression'",
+      "body_text": "Taiwanese authorities are investigating whether organized-crime networks are being used to carry out intimidation campaigns against Beijing's critics on the island. The probe follows a string of physical attacks and harassment incidents targeting outspoken entertainers and activists.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/philippines-exploring-deeper-cooperation-with-taiwan-protect-cables-2026-10-21/",
+      "source": "Reuters",
+      "headline": "Philippines explores deeper cooperation with Taiwan to protect undersea cables",
+      "body_text": "Manila is exploring expanded cooperation with Taipei to safeguard undersea cables, prompting a sharp MOFA response that there is 'no gray zone' on Taiwan. The reported talks come as both countries face suspected gray-zone activity near their coasts.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/china-s-iron-ore-sway-may-leave-japan-a-price-taker-woodmac",
+      "source": "Bloomberg",
+      "headline": "China's iron ore sway may leave Japan a price taker, WoodMac says",
+      "body_text": "Wood Mackenzie says China's dominant position as the top buyer of seaborne iron ore is squeezing Japanese steelmakers into price-taker status. The analysis comes as Beijing's state commodities buyer separately struck a new supply deal with Rio Tinto.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/how-cheap-chinese-antibiotics-threaten-europes-last-major-penicillin-plant-2026-10-21/",
+      "source": "Reuters",
+      "headline": "Cheap Chinese antibiotics threaten Europe's last major penicillin plant",
+      "body_text": "Reuters reports low-cost Chinese antibiotic exports are undercutting Europe's sole remaining large-scale penicillin manufacturing site. The case illustrates the industrial-policy pressure building in Brussels over Chinese overcapacity in pharmaceutical inputs.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/china-djibouti-say-all-countries-should-enjoy-freedom-navigation-red-sea-2026-10-21/",
+      "source": "Reuters",
+      "headline": "China, Djibouti say all countries should enjoy freedom of navigation in Red Sea",
+      "body_text": "Beijing and Djibouti issued a joint statement calling for freedom of navigation in the Red Sea amid regional conflict spillover concerns. Wang Yi separately warned that Red Sea escalation threatens global economic security.",
+      "region": "Africa"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.cnbc.com/video/2026/10/21/house-committee-says-webull-messages-point-to-china-access-to-us-customer-data.html",
+      "source": "CNBC",
+      "category_tag": "US-China",
+      "headline": "House committee says Webull messages point to China access to US customer data",
+      "body": "The House Select Committee on the CCP said internal 2021 Webull messages indicate an employee believed to be based in China had access to information about a US customer account. Webull, an online investing platform, says sensitive US customer data is restricted to US-based employees.",
+      "src_line": "CNBC"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/22/chinas-stock-market-csi-300-bear-market.html",
+      "source": "CNBC",
+      "category_tag": "PRC-Economy",
+      "headline": "China's CSI 300 enters bear market as 10-week rout deepens",
+      "body": "China's benchmark CSI 300 index has fallen *20 percent* from its June peak, entering bear-market territory as a prolonged mainland equities selloff continues. The Hang Seng dropped 5.67% today and the Shanghai Composite fell 1.57%, per market data; Bloomberg separately reports fading AI-trade enthusiasm and diminished stimulus expectations are driving the slide.",
+      "src_line": "CNBC, Bloomberg"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-coast-guard-monitors-philippines-resupplying-vessel-disputed-shoal-2026-10-21/",
+      "source": "Reuters",
+      "category_tag": "Indo-Pacific",
+      "headline": "China's coast guard confirms it allowed Philippine resupply at Second Thomas Shoal",
+      "body": "China's coast guard said it monitored and permitted the Philippines to resupply the grounded warship **BRP Sierra Madre** at Second Thomas Shoal, saying it conducted \"confirmation checks and maintained full supervision\" of the operation. The episode comes as tensions remain high over a Chinese ambassador's comments and as Manila explores deeper undersea-cable cooperation with Taipei.",
+      "src_line": "Reuters"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/tsmc-seeks-factory-equipment-alternatives-thwart-chinas-rare-earths-grip-sources-2026-10-22/",
+      "source": "Reuters",
+      "category_tag": "Technology",
+      "headline": "TSMC seeks factory-equipment alternatives to thwart China's rare earths grip",
+      "body": "TSMC is evaluating rare-earth-free motors and alternative suppliers for factory equipment to reduce exposure to China's export controls, sources told Reuters. The move follows MOFA's confirmation today that Beijing is enforcing export controls on Japan as Tokyo's critical rare-earth stockpiles near depletion.",
+      "src_line": "Reuters, exclusive"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-xi-calls-qualitative-improvement-measurable-growth-economy-2026-10-22/",
+      "source": "Reuters",
+      "category_tag": "Diplomacy",
+      "headline": "Xi resurfaces at Long March anniversary, calls for 'qualitative improvement' in economy",
+      "body": "**Xi Jinping** called for \"qualitative improvement and measurable growth\" in the economy at a Beijing ceremony marking the 90th anniversary of the Long March's end, per Reuters. The appearance, confirmed by MND and Xinhua, ends a *47-day* gap since Xi's last confirmed public appearance and comes five days before the Fifth Plenum of the 20th Central Committee opens Oct 26.",
+      "src_line": "Reuters"
+    },
+    {
+      "url": "https://www.ft.com/content/587f1f89-3bff-4aae-9130-41f142f1cc5f?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category_tag": "Cross-Strait",
+      "headline": "China steps up 'gray zone' tactics to isolate Taiwan",
+      "body": "FT reports Beijing is blocking Taipei's diplomats abroad and tightening control over maritime territory near Taiwan as part of an intensifying gray-zone campaign. The report lands the same day MOFA told reporters there is \"no gray zone\" on the Taiwan question in response to Philippine-Taiwan security cooperation.",
+      "src_line": "FT"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.cnbc.com/video/2026/10/22/pullback-in-chinas-a-share-hardware-stocks-is-a-buying-opportunity.html",
+      "source": "CNBC",
+      "category": "Technology",
+      "headline": "UBS calls China A-share hardware pullback a buying opportunity",
+      "body_text": "UBS's Suresh Tantia says China's planned $3.7 trillion sixth-generation network spend will favor hardware-heavy A-shares over H-shares.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/audi-gets-new-china-leadership-face-bruising-competition-2026-10-22/",
+      "source": "Reuters",
+      "category": "Economy",
+      "headline": "Audi names new China leadership amid bruising local competition",
+      "body_text": "Audi overhauled its China management team as it faces intensifying competition from domestic EV brands.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/hermes-sales-miss-estimates-in-region-that-includes-china",
+      "source": "Bloomberg",
+      "category": "Economy",
+      "headline": "Hermès sales miss estimates in region that includes China",
+      "body_text": "Hermès posted weaker-than-expected sales in its Asia-ex-Japan region, which includes China, as luxury demand softens.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/europe-car-sales-growth-accelerates-as-china-brands-seize-share",
+      "source": "Bloomberg",
+      "category": "Economy",
+      "headline": "Europe car sales growth accelerates as Chinese brands seize share",
+      "body_text": "Chinese automakers are capturing a growing share of Europe's accelerating car-sales growth, Bloomberg reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-21/el-nino-stresses-china-s-power-market-with-return-to-costly-gas",
+      "source": "Bloomberg",
+      "category": "Energy",
+      "headline": "El Niño stresses China's power market with return to costly gas",
+      "body_text": "El Niño weather patterns are forcing China's power system back toward costlier gas generation, Bloomberg reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-21/eight-months-of-war-turns-china-petrochemical-glut-into-a-crunch",
+      "source": "Bloomberg",
+      "category": "Energy",
+      "headline": "China's petrochemicals glut turns to crunch after months of war",
+      "body_text": "Eight months of regional conflict have turned China's petrochemical oversupply into a supply crunch, per Bloomberg.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.ft.com/content/d3ad59b9-b3fe-4948-8979-4236f2b38c90?syn-25a6b1a6=1",
+      "source": "FT",
+      "category": "Economy",
+      "headline": "China's drugmakers move into the big league",
+      "body_text": "Foreign pharma groups are now paying to license innovation developed by Chinese drugmakers, FT reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-21/citi-targets-top-spot-in-china-as-it-awaits-securities-license",
+      "source": "Bloomberg",
+      "category": "Finance",
+      "headline": "Citi targets top spot in China as it awaits securities license",
+      "body_text": "Citi is positioning to become a leading foreign securities player in China while its license application remains pending.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/business/environment/china-reports-30-billion-natural-disaster-losses-first-9-months-2026-10-22/",
+      "source": "Reuters",
+      "category": "Economy",
+      "headline": "China's natural disaster losses hit $30 billion in first nine months of 2026",
+      "body_text": "China reported $30 billion in natural-disaster losses for January-September 2026, Reuters reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/legal/government/chinese-quant-fund-lingjun-draws-300-million-overseas-investors-2026-10-22/",
+      "source": "Reuters",
+      "category": "Finance",
+      "headline": "Chinese quant fund Lingjun draws $300 million from overseas investors",
+      "body_text": "Quant fund Lingjun attracted $300 million in fresh overseas capital, Reuters reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.ft.com/content/cbf8759b-ec19-4728-ab65-5706bc3343af?syn-25a6b1a6=1",
+      "source": "FT",
+      "category": "Legal",
+      "headline": "Evergrande liquidators pursue Harvard to recoup donation",
+      "body_text": "Liquidators of China Evergrande are pursuing Harvard University to recover millions in donations made before the developer's collapse.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/commentary/reuters-open-interest/china-uses-crude-stockpiles-rising-oil-imports-may-curtail-draws-2026-10-21/",
+      "source": "Reuters",
+      "category": "Energy",
+      "headline": "China draws down crude stockpiles, but rising imports may curtail further draws",
+      "body_text": "China is tapping crude stockpiles even as rising oil imports could limit how much further it draws them down, per Reuters.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs",
+      "source": "Bloomberg",
+      "headline": "DeepSeek raises $15 billion to challenge top US AI labs",
+      "body_text": "DeepSeek has raised *$15 billion* in a new funding round aimed at competing directly with leading US AI developers.",
+      "companies": [
+        "DeepSeek"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/alibaba-shares-post-steepest-drop-in-two-months-on-china-curbs",
+      "source": "Bloomberg",
+      "headline": "Alibaba shares post steepest drop in two months on China curbs",
+      "body_text": "Alibaba shares fell the most in two months after new China regulatory curbs, Bloomberg reports.",
+      "companies": [
+        "Alibaba"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/rio-tinto-and-china-state-buyer-agree-deal-on-iron-ore-supplies",
+      "source": "Bloomberg",
+      "headline": "Rio Tinto and China's state buyer agree iron ore supply deal",
+      "body_text": "Rio Tinto struck a new supply agreement with China's state-backed commodities buyer, easing one point of friction in the iron-ore trade.",
+      "companies": [
+        "Rio Tinto"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/australias-fortescue-posts-6-fall-quarterly-iron-ore-shipments-2026-10-21/",
+      "source": "Reuters",
+      "headline": "Fortescue posts 6% fall in quarterly iron ore shipments amid China dispute",
+      "body_text": "Fortescue's quarterly iron-ore shipments fell *6 percent* and the company warned its full-year sales outlook remains at risk while talks with China's state buyer drag on.",
+      "companies": [
+        "Fortescue"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.reuters.com/legal/litigation/china-evergrande-liquidators-recover-1-debt-claims-after-2-12-years-2026-10-22/",
+      "source": "Reuters",
+      "headline": "Evergrande liquidators recover just 1% of debt claims after two and a half years",
+      "body_text": "Liquidators of China Evergrande have recovered only *1 percent* of outstanding debt claims more than two and a half years into the process.",
+      "companies": [
+        "China Evergrande"
+      ],
+      "sector": "property"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/22/sovereign-wealth-funds-china-hong-kong.html",
+      "source": "CNBC",
+      "headline": "Sovereign wealth funds surge back into China and Hong Kong",
+      "body_text": "Sovereign wealth fund investment into China and Hong Kong jumped *190 percent* after a bruising prior slump, CNBC reports.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/21/business/gm-ai-electric-vehicles-china.html",
+      "source": "NYT",
+      "headline": "GM aims for 'eyes-off' driving within two years to match Chinese EV pace",
+      "body_text": "General Motors is turning to AI to accelerate vehicle development as it tries to keep pace with Chinese automakers launching new models rapidly.",
+      "companies": [
+        "General Motors"
+      ],
+      "sector": "auto"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Philippines-Taiwan cable cooperation, one-China principle",
+      "statement": "There is no 'gray zone' on the Taiwan question; the Philippines should honor the one-China principle with concrete actions.",
+      "original_zh": "在台湾问题上没有'灰色地带'，菲方应当以实际行动恪守一个中国原则",
+      "addressed_to": "Philippines",
+      "tone": "firm",
+      "context": "Asked at the Oct 22 briefing about reports Manila is seeking deeper cooperation with Taipei to protect undersea cables.",
+      "source": "MOFA presser ZH",
+      "url": "https://m.sohu.com/a/1091263672_115479?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA spokesperson",
+      "topic": "Rare-earth export controls on Japan",
+      "statement": "China implements export controls on Japan in accordance with law and regulations.",
+      "original_zh": "中方依法依规对日实施出口管制",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Responding to reports that Japan's critical rare-earth stockpiles are nearing depletion.",
+      "source": "MOFA presser ZH",
+      "url": "https://wap.eastmoney.com/a/202610213902597557.html"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "Taiwan's semiconductor industry and US control",
+      "statement": "Per China News Service: a TAO spokesperson said Taiwan's government behaves like 'the son who sells the ancestral land without feeling the pain' in ceding its semiconductor industry to US control.",
+      "original_zh": "崽卖爷田不心疼",
+      "addressed_to": "Taiwan",
+      "tone": "warning",
+      "context": "Comment responding to commentary on US influence over Taiwan's chip sector.",
+      "source": "TAO ZH",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-21/10718544.shtml"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA spokesperson",
+      "topic": "Red Sea tensions",
+      "statement": "We do not wish to see regional tensions spill further into the Red Sea.",
+      "original_zh": "不希望地区紧张局势向红海方向进一步外溢",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "Follows Wang Yi's warning that Red Sea escalation threatens global economic and regional security.",
+      "source": "MOFA presser ZH",
+      "url": "https://www.caiwennews.com/article/1663477.shtml"
+    },
+    {
+      "body": "Premier",
+      "body_chinese": "李强",
+      "speaker": "Li Qiang",
+      "role": "Premier of the State Council",
+      "topic": "China-Russia cooperation ahead of APEC",
+      "statement": "Amid continuously complex and evolving international circumstances, China and Russia maintain close coordination, a rare force for stability in a world of flux and turmoil.",
+      "original_zh": "在国际形势持续复杂演变的背景下，中俄保持着紧密协作，是变乱交织的世界中难能可贵的稳定力量",
+      "addressed_to": "Russia",
+      "tone": "conciliatory",
+      "context": "Li Qiang met Vladimir Putin in Beijing; Putin said Russia supports China's hosting of this year's APEC summit and its 2027 BRICS chairmanship.",
+      "source": "MOFA ZH",
+      "url": "https://www.fmprc.gov.cn/zyxw/202610/t20261022_12044854.shtml"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "LC",
+      "who": "Lai Ching-te",
+      "handle_context": "President of Taiwan",
+      "platform_date": "Facebook post · Oct 22, 2026",
+      "quote_text": "Everyone is urged to remain vigilant and be prepared for the strong winds and heavy rains brought by the typhoon.",
+      "analyst_note": "Typhoon Champi, with sustained winds of 213 km/h, is forecast to dump up to 900mm of rain on northern Taiwan Oct 22-24 and has triggered over 150 flight cancellations.",
+      "badge_class": "sb-p",
+      "url": "https://www.afp.com/en/taiwan-issues-warnings-typhoon-champi-nears"
+    },
+    {
+      "avatar_initials": "VP",
+      "who": "Vladimir Putin",
+      "handle_context": "President of Russia",
+      "platform_date": "MOFA readout of Beijing meeting · Oct 22, 2026",
+      "quote_text": "China has been, is, and will always be Russia's closest and most reliable partner.",
+      "analyst_note": "Remarks came during a meeting with Premier Li Qiang in Beijing, where Putin also voiced support for China hosting this year's APEC summit.",
+      "badge_class": "sb-p",
+      "url": "https://www.fmprc.gov.cn/zyxw/202610/t20261022_12044854.shtml"
+    },
+    {
+      "avatar_initials": "JC",
+      "who": "Jason Cheng",
+      "handle_context": "Central Weather Administration forecaster, Taiwan",
+      "platform_date": "AFP · Oct 22, 2026",
+      "quote_text": "Typhoon Champi is expected to have its most significant impact starting all day tomorrow through the first half of Saturday.",
+      "analyst_note": "Champi was downgraded from super typhoon status but retains sustained winds of 213 km/h as it tracks past Taiwan's northeast coast toward China and Japan.",
+      "badge_class": "sb-s",
+      "url": "https://www.afp.com/en/taiwan-issues-warnings-typhoon-champi-nears"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Beijing Municipal Standing Committee Member / Executive Vice Mayor",
+      "name": "Xia Linmao (夏林茂)",
+      "action": "investigated",
+      "detail": "China's central discipline watchdog announced Oct 22 that Xia, an alternate member of the 20th Central Committee, is under investigation for 'serious violations of discipline and law.' He was last seen publicly Oct 14 at a meeting between Beijing party chief Yin Li and Walmart global CEO John Furner.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/china/chinas-coast-guard-monitors-philippines-resupplying-vessel-disputed-shoal-2026-10-21/",
+    "https://www.reuters.com/world/china/philippines-exploring-deeper-cooperation-with-taiwan-protect-cables-2026-10-21/",
+    "https://www.ft.com/content/587f1f89-3bff-4aae-9130-41f142f1cc5f?syn-25a6b1a6=1",
+    "https://apnews.com/article/taiwan-china-xi-jinping-comedian-huang-attacked-5de1ede690a3881d79f74624e81acf0c",
+    "https://www.reuters.com/world/china/taiwan-probes-organised-crime-links-chinas-transnational-repression-2026-10-22/",
+    "https://www.bloomberg.com/news/articles/2026-10-21/kremlin-says-china-preparing-for-possible-putin-trump-xi-meeting",
+    "https://www.fmprc.gov.cn/zyxw/202610/t20261022_12044854.shtml"
+  ],
+  "story_count": 100,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 116,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-22.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-22.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
