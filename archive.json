@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-23",
+    "filename": "2026-10-23.html",
+    "re_line": "Tibet quake kills 16 \u00b7 Typhoon Champi shuts Taiwan \u00b7 Treasury curbs China tech investment \u00b7 Li Qiang meets Putin",
+    "top_stories": 6,
+    "overnight_items": 6,
+    "word_count": 2594,
+    "sources": 114,
+    "pdf": true
+  },
+  {
     "date": "2026-10-22",
     "filename": "2026-10-22.html",
     "re_line": "CSI 300 bear market \u00b7 Xi's Long March speech ahead of Fifth Plenum \u00b7 TSMC rare-earth pivot \u00b7 Shoal resupply",

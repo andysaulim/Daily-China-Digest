@@ -1,0 +1,574 @@
+{
+  "digest_date": "Friday, October 23, 2026",
+  "re_line": "Tibet quake kills 16 · Typhoon Champi shuts Taiwan · Treasury curbs China tech investment · Li Qiang meets Putin",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "23,093.37",
+      "change_pct": -4.03,
+      "as_of": "Oct 23"
+    },
+    "sse_composite": {
+      "value": "3,690.48",
+      "change_pct": -1.08,
+      "as_of": "Oct 23"
+    },
+    "brent": {
+      "value": "110.29",
+      "change_pct": 0.68,
+      "as_of": "Oct 23"
+    },
+    "usd_cnh": {
+      "value": "6.6686",
+      "change_pct": -0.05,
+      "as_of": "Oct 23"
+    },
+    "usd_cny": {
+      "value": "6.6596",
+      "change_pct": -0.47,
+      "as_of": "Oct 23"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "A magnitude-7.0 earthquake killed at least 16 people and injured dozens in Tibet's Nagqu prefecture overnight, with Xi Jinping ordering an 'all-out' rescue.",
+    "Typhoon Champi shut Taiwan's schools, flights and $5 trillion stock exchange Friday, while Taipei's National Security Bureau separately accused Beijing of expanding militia-boat 'battlefield preparation' in the western Pacific.",
+    "The US Treasury proposed new rules curbing American investment in Chinese AI, biotech and hypersonics, the same day Premier Li Qiang met Vladimir Putin in St. Petersburg and called China-Russia coordination 'a rare source of stability.'"
+  ],
+  "key_stat": {
+    "number": "RMB15 billion",
+    "label": "Huawei's first offshore syndicated loan since 2020",
+    "context": "Six Chinese banks including Bank of China, China Construction Bank and ICBC provided the seven-year offshore yuan loan as Huawei's H1 R&D spending hit RMB121 billion and operating cash flow turned negative by RMB39.9 billion.",
+    "source": "Lianhe Zaobao"
+  },
+  "prc_government": [
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": null,
+      "action": "PBOC to conduct RMB700 billion MLF operation",
+      "document": null,
+      "detail": "The one-year MLF operation set for Oct. 26 represents a RMB200 billion net reduction against the RMB900 billion maturing this month, after a RMB200 billion net injection in September. Analysts said the move aims to nudge short-term market rates up after money-market rates persistently fell below 1.30 percent since Oct. 10.",
+      "source_label": "PBOC (via Jiemian)",
+      "url": "https://m.jiemian.com/article/15232211.html"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": null,
+      "action": "MOFCOM reports FDI inflows of RMB548.81 billion for Jan-Sept 2026",
+      "document": null,
+      "detail": "China's nationwide foreign direct investment utilization reached RMB548.81 billion in the first nine months of 2026, per Commerce Ministry data released Friday.",
+      "source_label": "MOFCOM",
+      "url": "https://cacs.mofcom.gov.cn/article/gnwjmdt/gn/202610/189577.html"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": null,
+      "action": "MOFCOM briefs on Jan-Sept 2026 e-commerce development data",
+      "document": null,
+      "detail": "The head of the Commerce Ministry's E-Commerce Department briefed reporters Friday on national e-commerce trends for the first nine months of 2026.",
+      "source_label": "MOFCOM",
+      "url": "http://www.mofcom.gov.cn/xwfb/sjfzrfb/art/2026/art_b5092c2f30fb49009c5095560a2659e7.html"
+    },
+    {
+      "ministry": "TAO",
+      "ministry_chinese": "国台办",
+      "official": null,
+      "action": "Ceremony marks resumption of Taiwan fishery imports to mainland",
+      "document": null,
+      "detail": "A ceremony was held in Xiamen Friday marking the import of Taiwanese fishery products into mainland China, per a Taiwan Affairs Office notice.",
+      "source_label": "TAO",
+      "url": "https://www.gwytb.gov.cn/xwdt/zwyw/202610/t20261023_12819599.htm"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "Politburo",
+      "action": "Politburo reviews seventh round of central inspections report",
+      "detail": "The Politburo, chaired by Xi Jinping, reviewed a comprehensive report on the 20th Central Committee's seventh round of inspections, per the Ministry of National Defense's website.",
+      "url": "http://www.mod.gov.cn/gfbw/sy/tt_214026/16495594.html"
+    },
+    {
+      "body": "CCP / Xi Jinping",
+      "action": "Xi marks Long March 90th anniversary ahead of Fifth Plenum",
+      "detail": "Xi Jinping delivered a major address in Beijing on Oct. 22 at a ceremony marking the 90th anniversary of the Red Army's Long March victory, which Xinhua characterized as framing China's current challenges as a 'new Long March.'",
+      "url": "http://www.mod.gov.cn/gfbw/sy/tt_214026/16495347.html"
+    },
+    {
+      "body": "CCP Central Committee",
+      "action": "Discipline, Xi's authority to dominate Fifth Plenum agenda",
+      "detail": "Party discipline enforcement and Xi Jinping's internal authority are expected to be central themes as the Fifth Plenum convenes, Reuters reported Friday.",
+      "url": "https://www.reuters.com/world/china/tougher-discipline-xis-authority-key-chinas-communist-partys-fifth-plenum-2026-10-23/"
+    },
+    {
+      "body": "CCP elite",
+      "action": "Personnel moves, possible purges in focus ahead of Plenum",
+      "detail": "The Economist reported that personnel changes, including possible purges and promotions, are a key focus as China's party elite gathers ahead of the Fifth Plenum.",
+      "url": "https://www.economist.com/china/2026/10/22/chinas-party-elite-gathers-with-purges-and-promotions-in-mind"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758 55th anniversary; Taiwan Retrocession Day",
+      "detail": "Beijing marks the 55th anniversary of UN Resolution 2758 and Taiwan's 81st Retrocession Day; the Taiwan Affairs Office said this week it will hold commemorative events."
+    },
+    {
+      "month": "Oct",
+      "day": 27,
+      "headline": "German President Steinmeier begins state visit to China",
+      "detail": "Frank-Walter Steinmeier visits Beijing and Anhui through Oct. 31, his first state visit to China in nearly eight years; Xi Jinping, Li Qiang and Zhao Leji are all scheduled to meet him."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Control of Congress, including the House Select Committee on the CCP's gavel, is at stake."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal suspensions on BIS Affiliates Rule, China rare-earth controls near lapse",
+      "detail": "The one-year suspensions agreed after the Oct. 30, 2025 Trump-Xi meeting in Busan are due to expire around this date unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting opens in Shenzhen",
+      "detail": "China hosts the summit; Trump attendance and any Trump-Xi meeting remain unconfirmed."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/typhoon-champi-shuts-taiwan-s-5-trillion-stock-market",
+      "source": "Bloomberg",
+      "category": "Cross-Strait",
+      "headline": "Typhoon Champi forces closure of Taiwan's $5 trillion stock market",
+      "body_text": "Taiwan suspended stock trading Friday as Typhoon Champi approached the island, Bloomberg reported. The Taiwan Stock Exchange, valued at roughly $5 trillion, joined schools and transit in shutting down for the day."
+    },
+    {
+      "url": "https://asia.nikkei.com/editor-s-picks/interview/moderna-ceo-eyes-china-partnerships-despite-geopolitical-tensions",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Moderna CEO eyes China partnerships despite geopolitical tensions",
+      "body_text": "Moderna is exploring partnerships in China as it broadens its mRNA vaccine business, the company's CEO told Nikkei. The comments come despite continued US-China friction over biotech investment and technology transfer."
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/22/world/asia/taiwan-typhoon-champi-mayors.html",
+      "source": "NYT",
+      "category": "Cross-Strait",
+      "headline": "Taiwan mayors weigh typhoon holidays with elections a month away",
+      "body_text": "Taiwan mayors deciding whether to call a work-and-school holiday for Typhoon Champi face added scrutiny five weeks before the Nov. 28 local elections, the New York Times reported. One researcher found the likelihood a mayor announces a closure rises 31 percent in election years."
+    },
+    {
+      "url": "https://www.channelnewsasia.com/business/bolt-stellantis-plan-autonomous-driving-experiment-in-greater-paris-2028-6486221",
+      "source": "CNA",
+      "category": "Technology",
+      "headline": "Bolt, Stellantis plan autonomous driving pilot in Paris using Chinese tech",
+      "body_text": "Ride-hailing firm Bolt and Stellantis plan an autonomous driving pilot in Greater Paris by 2028, aiming for commercial operations by 2030. Chinese self-driving firm Pony.ai is named as a potential technology provider."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/markets/china-debt-crunch/evergrande-liquidators-plan-first-payout-with-under-1-of-claims-recovered",
+      "source": "Nikkei Asia",
+      "category": "PRC-Economy",
+      "headline": "Evergrande liquidators plan first creditor payout in H1 2027",
+      "body_text": "China Evergrande's liquidators said Thursday they will make an initial creditor payment in the first half of 2027, with under 1 percent of claims recovered so far. The liquidation process has run more than two and a half years."
+    },
+    {
+      "url": "https://www.voachinese.com/a/poll-one-in-two-taiwanese-says-china-is-responsible-for-disability-in-taiwan-strait-20261022/8214219.html",
+      "source": "VOA Chinese",
+      "category": "Cross-Strait",
+      "headline": "Taiwan poll: majority blame CCP for cross-strait tension",
+      "body_text": "More than half of Taiwanese respondents hold the Chinese Communist Party responsible for undermining cross-strait peace, per a Mainland Affairs Council survey. The poll lands five weeks before Taiwan's Nov. 28 local elections."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.ft.com/content/4fa0c5ef-abfe-4a63-95c0-2ba69329abd0?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "Citi wins approval for China securities business ahead of expected Trump-Xi meeting",
+      "body_text": "Citigroup received long-awaited approval to operate a securities business in China, the FT reported, after years of US financial firms waiting on market access. The green light lands ahead of an expected Trump-Xi meeting next month.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://www.reuters.com/world/us-blocks-two-devices-with-chinese-made-surveillance-chips-2026-10-22/",
+      "source": "Reuters",
+      "headline": "US blocks two devices containing Chinese-made surveillance chips",
+      "body_text": "The FCC blocked two devices equipped with Chinese-made surveillance chips from the US market, Reuters reported Thursday. Voice of America's Chinese service identified the restricted components as Huawei-linked monitoring chips.",
+      "instrument": "Sanctions"
+    },
+    {
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_8172b6c2a40142bd9b3a20912d30f81a.html",
+      "source": "MOFCOM",
+      "headline": "MOFCOM responds to Pentagon's 'research security review' findings",
+      "body_text": "China's Commerce Ministry spokesperson issued a brief response Friday after the US Defense Department published results of what Beijing termed a 'so-called research security review.' No further detail on China's position was given in the posted notice.",
+      "instrument": "Legal"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/23/2003866462",
+      "source": "Taipei Times",
+      "headline": "Taiwan says China is shifting election interference toward target voter groups",
+      "body_text": "China is mobilizing airlines to offer discounted tickets for Taiwanese living in China to fly home and vote, National Security Bureau Director-General Tsai Ming-yen said Thursday. The bureau also suspects Beijing is funneling illicit funding to favored candidates ahead of the Nov. 28 elections.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202610230004",
+      "source": "Focus Taiwan",
+      "headline": "Taiwan's MAC offers condolences to China after deadly Tibet quake",
+      "body_text": "Taiwan's Mainland Affairs Council extended condolences to Beijing Friday after the magnitude-7.0 earthquake in Tibet's Nagqu prefecture killed at least 16 people. The gesture came the same week Taipei's security agencies raised alarms over Chinese election interference.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://m.sohu.com/a/1091733605_115479?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+      "source": "MOFA presser (Sohu)",
+      "headline": "Germany's Steinmeier to make first state visit to China in nearly 8 years",
+      "body_text": "German President Frank-Walter Steinmeier will visit Beijing and Anhui province Oct. 27-31, his first state visit to China in almost eight years, MOFA spokesperson Mao Ning announced Friday. Xi Jinping will hold talks with Steinmeier, while Li Qiang and Zhao Leji are scheduled to meet him separately.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/south-africas-trade-with-china-surges-after-duty-free-deal-2026-10-22/",
+      "source": "Reuters",
+      "headline": "South Africa's trade with China surges after duty-free deal",
+      "body_text": "South Africa's trade with China has surged since a duty-free arrangement between the two countries took effect, Reuters reported Thursday. South Africa, Africa's most industrialized economy, is a BRICS member alongside China.",
+      "region": "Africa"
+    },
+    {
+      "url": "https://www.voachinese.com/a/japan-reports-foreign-tourists-fell-5-in-september-due-to-falling-number-of-chinese-visitors-20261022/8214221.html",
+      "source": "VOA Chinese",
+      "headline": "Chinese visitor arrivals to Japan plunged 44.5% in September",
+      "body_text": "Chinese tourist arrivals to Japan fell 44.5 percent year-on-year in September, Japan's tourism agency reported. The decline extends a downturn in Chinese outbound travel to Japan amid strained bilateral ties.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/business-deals/itochu-to-buy-hitachi-construction-machinery-s-taiwan-sales-unit",
+      "source": "Nikkei Asia",
+      "headline": "Itochu to acquire Hitachi Construction Machinery's Taiwan sales unit",
+      "body_text": "Japanese trading house Itochu will acquire a Taiwan-based sales subsidiary of Hitachi Construction Machinery by the end of 2026, Nikkei reported. The deal extends Itochu's distribution footprint in Taiwan's construction-equipment market.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/article/3371832/eu-mulls-sanctions-reprieve-chinese-fabric-maker-accused-aiding-russia",
+      "source": "SCMP",
+      "headline": "EU weighs lifting sanctions on Chinese textile maker accused of aiding Russia",
+      "body_text": "EU diplomats faced pressure this week to lift sanctions on Yusha Group, a Chinese textile manufacturer accused of selling sensitive European technology to Russian buyers, SCMP reported. In exchange, Beijing has reportedly pledged the company will stop banned shipments to Russian military-linked buyers and remove German firm Sindlhauser Materials from its own export-control list.",
+      "region": "Europe"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://apnews.com/article/china-earthquake-tibet-be27a2db79ada1c6309914d173b983a8",
+      "source": "AP News",
+      "category_tag": "Indo-Pacific",
+      "headline": "Magnitude-7.0 earthquake kills at least 16 in Tibet, Xi orders 'all-out' rescue",
+      "body": "A 7.0-magnitude earthquake struck Baqing county in Tibet's Nagqu prefecture overnight Thursday at a depth of 10 km, killing at least 16 people and collapsing more than 339 homes; Reuters later put the injury toll at *76*. **Xi Jinping** ordered rescue teams to prioritize search-and-rescue and guard against secondary disasters in the high-altitude, cold-weather zone. Bloomberg initially reported a toll of 18 dead and 32 injured, a figure other wires have not matched.",
+      "src_line": "AP News, Reuters"
+    },
+    {
+      "url": "https://www.reuters.com/business/environment/taiwan-shuts-down-ahead-weakening-typhoon-champi-hundreds-flights-cancelled-2026-10-22/",
+      "source": "Reuters",
+      "category_tag": "Cross-Strait",
+      "headline": "Typhoon Champi shuts down Taiwan, cancels nearly 1,000 flights",
+      "body": "Taiwan shut schools, grounded flights and suspended its $5 trillion stock market Friday as Typhoon Champi approached, with nearly *1,000* flights cancelled nationwide. The storm caused at least one death and dozens of injuries as it tracked past the island before weakening.",
+      "src_line": "Reuters, Bloomberg"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/taiwan-says-china-using-militia-boats-expand-battlefield-preparation-western-2026-10-23/",
+      "source": "Reuters",
+      "category_tag": "PLA",
+      "headline": "Taiwan says China militia boats expanding 'battlefield preparation' in western Pacific",
+      "body": "Taiwan's government said Friday that Chinese maritime militia vessels are extending Beijing's 'battlefield preparation' further into the western Pacific, beyond waters immediately around the island. The assessment follows a pattern of PLA gray-zone activity this year, including the first China militia boat spotted off Taiwan's east coast.",
+      "src_line": "Reuters"
+    },
+    {
+      "url": "https://apnews.com/article/treasury-china-tech-investments-rule-b742c292ff8eb19e6a4c8cf03d4d66b9",
+      "source": "AP News",
+      "category_tag": "Sanctions",
+      "headline": "US Treasury proposes crackdown on investment in Chinese biotech, AI and hypersonics",
+      "body": "The US Treasury Department proposed a rule Thursday restricting American investment in sensitive Chinese technology, including artificial intelligence, hypersonic weapons and biotechnology, the AP and FT reported. The move would broaden outbound-investment restrictions beyond the existing Treasury program covering Chinese semiconductors, quantum computing and AI. **Mao Ning** said Friday the US should 'respect the principles of the market economy' and stop interfering in normal corporate cooperation.",
+      "src_line": "AP, FT"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/china-stocks-sink-deeper-into-bear-market-despite-state-buying",
+      "source": "Bloomberg",
+      "category_tag": "PRC-Economy",
+      "headline": "China stocks sink deeper into bear market despite state fund buying",
+      "body": "Mainland Chinese equities extended declines into bear-market territory Friday even as state-linked 'national team' funds intervened, Bloomberg and Nikkei reported. The Hang Seng fell *4.03 percent* and the Shanghai Composite dropped 1.08 percent on the day, extending a selloff led by AI-linked tech shares.",
+      "src_line": "Bloomberg, Nikkei"
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/zyxw/202610/t20261022_12044854.shtml",
+      "source": "MOFA (fmprc.gov.cn)",
+      "category_tag": "Diplomacy",
+      "headline": "Li Qiang meets Putin, calls China-Russia ties 'a rare source of stability'",
+      "body": "**Li Qiang** met Russian President Vladimir Putin in St. Petersburg Thursday, saying close China-Russia coordination is 'a rare and valuable force for stability in a world of intersecting chaos' and pledging deeper cooperation on energy, trade and transport. Putin told Li that China 'has been, is, and will always be Russia's closest and most reliable partner,' and said Moscow supports Beijing's hosting of this year's APEC summit.",
+      "src_line": "MOFA (fmprc.gov.cn)"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/bridgewater-china-cut-gold-and-is-optimistic-on-local-stocks",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "Bridgewater China cuts gold, says it is 'optimistic' on local stocks",
+      "body_text": "Bridgewater's China unit trimmed gold holdings while voicing optimism on domestic equities, Bloomberg reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/china-is-said-to-tighten-scrutiny-of-listed-company-spinoffs",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "China tightens scrutiny of listed company spinoffs",
+      "body_text": "Regulators are stepping up review of spinoff transactions by listed Chinese companies, Bloomberg reported, citing people familiar with the matter.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/bosch-to-separate-auto-parts-unit-as-chinese-rivals-gain-ground",
+      "source": "Bloomberg",
+      "category": "Auto",
+      "headline": "Bosch to separate auto-parts unit as Chinese rivals gain ground",
+      "body_text": "Bosch plans to spin off its auto-parts division as Chinese competitors erode its market share, Bloomberg reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/hermes-cartier-s-last-reliable-shoppers-are-retreating-in-china",
+      "source": "Bloomberg",
+      "category": "Luxury",
+      "headline": "Hermès and Cartier's last reliable Chinese shoppers are retreating",
+      "body_text": "Bloomberg reported that even Hermès' and Cartier's most resilient Chinese customer segments are pulling back on spending.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/china-barely-eased-austerity-just-before-shift-to-stimulus-mode",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "China barely eased austerity just before shift to stimulus mode",
+      "body_text": "Bloomberg found Beijing's fiscal tightening persisted longer than expected before this year's pivot toward stimulus.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/article/3371851/honduras-squeezes-chinese-firms-super-typhoon-champi-nears-taiwan-scmps-7-highlights",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Honduran officials summon or review 41 Chinese nationals over shops, hospital project",
+      "body_text": "Honduran migration officials inspected Chinese-run shops and a hospital construction site, per SCMP's weekly roundup.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://hongkongfp.com/2026/10/23/society-for-hong-kong-studies-to-disband-after-9-years-citing-lack-of-funding/",
+      "source": "Hong Kong Free Press",
+      "category": "Hong Kong",
+      "headline": "Society for Hong Kong Studies to disband after 9 years citing funding shortfall",
+      "body_text": "The academic group founded by 250 scholars will cease operations Oct. 31 after nine years, citing a lack of funding.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/japan-startup-touts-ai-for-automakers-to-match-chinese-car-development-pace",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Japan AI startup pitches tools to match Chinese car-development speed",
+      "body_text": "Startup EpicAI plans to deploy AI software to accelerate Japanese automakers' vehicle design reviews, Nikkei reported.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/china-carmakers-go-back-to-design-basics-with-buttons-and-knobs",
+      "source": "Bloomberg",
+      "category": "Auto",
+      "headline": "Chinese carmakers bring back physical buttons and knobs",
+      "body_text": "Chinese automakers are reintroducing physical controls after years of touchscreen-only interiors, Bloomberg reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/canadian-data-cast-doubt-on-china-us-bond-conspiracy-nbf-says",
+      "source": "Bloomberg",
+      "category": "Finance",
+      "headline": "Canadian data cast doubt on China-US bond 'conspiracy' theory, NBF says",
+      "body_text": "National Bank of Canada analysts said Canadian data undercut a theory that China is manipulating US Treasury markets.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.cnbc.com/2026/10/23/volvo-cars-q3-earnings-job-cuts.html",
+      "source": "CNBC",
+      "headline": "Volvo Cars plunges 27% as CEO says China slump came 'faster than we thought'",
+      "body_text": "Volvo Cars shares plunged *27 percent* after its CEO said China's sales slump arrived 'faster than we thought,' citing tougher conditions in China and the US that hurt free cash flow.",
+      "companies": [
+        "Volvo Cars"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/guccis-sales-drop-5-third-quarter-weak-chinese-demand-dampens-turnaround-hopes-2026-10-22/",
+      "source": "Reuters",
+      "headline": "Gucci sales fall 5% in third quarter on weak Chinese demand",
+      "body_text": "Gucci's sales dropped *5 percent* in Q3, Reuters reported, as weak Chinese demand continued to weigh on parent Kering's turnaround plan for the brand.",
+      "companies": [
+        "Gucci",
+        "Kering"
+      ],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/chinese-copper-smelters-plan-more-output-cuts-ahead-of-fee-talks",
+      "source": "Bloomberg",
+      "headline": "Chinese copper smelters plan more output cuts ahead of fee talks",
+      "body_text": "Chinese copper smelters plan additional output cuts ahead of annual treatment and refining fee negotiations with miners, Bloomberg reported, as margins remain squeezed.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/catl-baic-target-1-million-cars-with-new-battery-swap-network",
+      "source": "Bloomberg",
+      "headline": "CATL, BAIC target 1 million cars with new battery-swap network",
+      "body_text": "CATL and BAIC are targeting *1 million* vehicles under a new battery-swap network, Bloomberg reported, expanding the companies' push into swappable EV battery infrastructure.",
+      "companies": [
+        "CATL",
+        "BAIC"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/23/wealthy-chinese-tax-offshore-trusts-capital-control-.html",
+      "source": "CNBC",
+      "headline": "Wealthy Chinese move offshore money to US banks as Beijing's tax net widens",
+      "body_text": "Bankers and lawyers say demand from wealthy Chinese clients for US bank accounts has accelerated as Beijing tightens its tax net on offshore wealth, CNBC reported.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/china-ai-model-stocks-150-billion-drop-shows-no-sign-of-easing",
+      "source": "Bloomberg",
+      "headline": "China AI model stocks' $150 billion drop shows no sign of easing",
+      "body_text": "Chinese AI model-related stocks have shed roughly *$150 billion* in value with no sign of the selloff easing, Bloomberg reported, extending a tech-sector rout.",
+      "companies": [],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/business/media-telecom/chinas-deepseek-minimax-win-approval-ai-global-use-state-media-affiliated-entity-2026-10-23/",
+      "source": "Reuters",
+      "headline": "China's DeepSeek, MiniMax win approval for AI global use",
+      "body_text": "DeepSeek and MiniMax won approval for global use of their AI models from a state-media-affiliated entity, Reuters reported Friday, a step toward wider international deployment of Chinese AI systems.",
+      "companies": [
+        "DeepSeek",
+        "MiniMax"
+      ],
+      "sector": "tech"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "CCP General Secretary and President",
+      "topic": "Earthquake relief in Tibet's Nagqu prefecture",
+      "statement": "The disaster-hit area is located in a high-altitude region with cold weather. It is imperative to closely monitor seismic activity and weather changes and implement rescue operations accordingly, while preventing secondary disasters.",
+      "original_zh": null,
+      "addressed_to": "domestic",
+      "tone": "firm",
+      "context": "A magnitude-7.0 earthquake struck Nagqu's Baqing county overnight Thursday, killing at least 16 and injuring dozens.",
+      "source": "SCMP",
+      "url": "https://www.scmp.com/news/china/politics/article/3371850/chinas-xi-jinping-orders-urgent-relief-after-tibet-earthquake-leaves-16-dead"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Response to US Treasury's proposed curbs on Chinese biotech investment",
+      "statement": "Per MOFA: the US should respect the principles of the market economy and stop interfering in normal economic and trade cooperation between enterprises.",
+      "original_zh": null,
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "The response follows the US Treasury Department's proposed rule Thursday restricting American investment in Chinese biotechnology and other sensitive technology sectors.",
+      "source": "MOFA presser (ifeng.com)",
+      "url": "https://news.ifeng.com/c/8xSRQpqdQ6H"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Philippines and the one-China principle",
+      "statement": "Per MOFA: the Philippines should abide by the one-China principle; there is no gray area on the Taiwan question.",
+      "original_zh": null,
+      "addressed_to": "Philippines",
+      "tone": "firm",
+      "context": "Mao Ning's comment responded to a Philippine official's remarks about cooperation with Taiwan reported the same day.",
+      "source": "military.china.com",
+      "url": "https://military.china.com/news/13004177/20261023/49812277.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "German President Steinmeier's state visit",
+      "statement": "As the world's second and third largest economies, the healthy and stable development of the China-Germany all-round strategic partnership serves the interests of both sides and carries the expectations of Europe and the world.",
+      "original_zh": "作为世界第二和第三大经济体，中德全方位战略伙伴关系健康稳定发展，符合双方利益，也承载着欧洲和世界的期待。",
+      "addressed_to": "EU",
+      "tone": "conciliatory",
+      "context": "Mao Ning announced Friday that German President Frank-Walter Steinmeier will pay a state visit to China Oct. 27-31, his first in nearly eight years.",
+      "source": "MOFA presser (Sohu)",
+      "url": "https://m.sohu.com/a/1091733605_115479?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "Taiwan's ban on Sun Yat-sen memorial activities",
+      "statement": "Per TAO: the Taiwan authorities' ban on participation in Sun Yat-sen memorial activities will be opposed and rejected by all Chinese compatriots.",
+      "original_zh": null,
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "The Taiwan Affairs Office responded Thursday to a Taipei ban on officials or groups attending commemorations of Sun Yat-sen, the Republic of China's founding father.",
+      "source": "Sina",
+      "url": "https://finance.sina.cn/2026-10-22/detail-iniwaezr5183666.d.html?vt=4&cid=76729&node_id=76729"
+    }
+  ],
+  "social_statements": [],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/china/taiwan-says-china-using-militia-boats-expand-battlefield-preparation-western-2026-10-23/",
+    "https://www.taipeitimes.com/News/front/archives/2026/10/23/2003866462",
+    "https://www.fmprc.gov.cn/zyxw/202610/t20261022_12044854.shtml"
+  ],
+  "story_count": 100,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 114,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-23.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-23.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
