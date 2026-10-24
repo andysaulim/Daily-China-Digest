@@ -1,0 +1,612 @@
+{
+  "digest_date": "Saturday, October 24, 2026",
+  "re_line": "Kim's Dandong visit · Beijing drafts tech export curbs · Pentagon vs Confucius Institutes · Taiwan gray-zone ops",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "23,093.37",
+      "change_pct": -4.03,
+      "as_of": "Oct 23"
+    },
+    "sse_composite": {
+      "value": "3,690.47",
+      "change_pct": -1.08,
+      "as_of": "Oct 23"
+    },
+    "brent": {
+      "value": "111.70",
+      "change_pct": 1.96,
+      "as_of": "Oct 23"
+    },
+    "usd_cnh": {
+      "value": "6.6682",
+      "change_pct": -0.06,
+      "as_of": "Oct 23"
+    },
+    "usd_cny": {
+      "value": "6.6702",
+      "change_pct": -0.31,
+      "as_of": "Oct 24"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "North Korea's Kim Jong Un made an unannounced visit to China, crossing into Dandong via the newly opened New Yalu River Bridge and meeting Premier Li Qiang.",
+    "Beijing drafted a sweeping new export-control catalogue covering 40 AI, biopharma and solar technologies, proposing outright bans on 14 and restrictions on 26.",
+    "The Pentagon designated China-funded Confucius Institutes a national security threat, saying it has dismantled 80 shadow promotional groups across 30 US campuses in two months."
+  ],
+  "key_stat": {
+    "number": "40",
+    "label": "technologies in Beijing's draft export-control catalogue revision",
+    "context": "MOFCOM and the Ministry of Science and Technology's Announcement No. 48 covers AI, biopharma and photovoltaic technology, proposing outright bans on 14 items and restrictions on 26; artificial intelligence alone accounts for 23 of the 40, including large models and compute clusters.",
+    "source": "HK01"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "Pan Gongsheng, PBOC Governor",
+      "action": "PBOC conducts ¥700bn MLF operation, confirms rate-anchor research",
+      "document": "2026年10月中期借贷便利招标公告",
+      "detail": "The October 26 one-year MLF operation rolls over ¥9,000bn in maturing facilities with a net reduction of ¥200bn, the first operation since Pan Gongsheng floated shifting the primary policy rate to the overnight repo rate.",
+      "source_label": "PBOC ZH",
+      "url": "https://finance.sina.com.cn/roll/2026-10-24/doc-iniwhxpw2151552.shtml"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM",
+      "action": "China reports ¥548.81bn in foreign investment for Jan-Sep 2026",
+      "document": "2026年1-9月全国吸收外资数据",
+      "detail": "MOFCOM released nine-month foreign capital utilization data showing *¥548.81 billion* (roughly $77bn) absorbed nationwide through September.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://cacs.mofcom.gov.cn/article/gnwjmdt/gn/202610/189577.html"
+    },
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "Li Qiang, Premier",
+      "action": "Li Qiang chairs State Council meeting on population and economic coordination",
+      "document": null,
+      "detail": "**Li Qiang** presided over a State Council executive meeting on coordinating population policy with economic and social development, and reviewed progress on the national services-sector conference agenda.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_a58d3a3cc2834076be644d327ee39fe2.html"
+    },
+    {
+      "ministry": "Ministry of National Defense",
+      "ministry_chinese": "国防部",
+      "official": "MND",
+      "action": "MND releases ten-point position paper on outer-space governance",
+      "document": "关于加强外空治理的中国立场",
+      "detail": "The paper opposes an outer-space arms race and calls for negotiating a space arms-control treaty, issued alongside Wang Yi's remarks at the Xiongan Global Governance Forum.",
+      "source_label": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16495761.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "Politburo",
+      "action": "Xi chairs early Politburo meeting on seventh-round inspection report",
+      "detail": "China's 21-member Politburo met Friday, earlier than its usual end-of-month schedule, chaired by **Xi Jinping** to review a comprehensive report on the seventh round of inspections by the 20th Central Committee, per SCMP.",
+      "url": "https://www.scmp.com/news/china/politics/article/3371960/xi-jinping-leads-early-politburo-meeting-signal-anti-corruption-drive-ahead-plenum"
+    },
+    {
+      "body": "Fifth Plenum",
+      "action": "Fifth Plenum of the 20th Central Committee to convene in Beijing",
+      "detail": "The Financial Times reports the central committee gathering, focused on party discipline, will be closely watched ahead of the 2027 Party Congress and Xi Jinping's expected fourth term.",
+      "url": "https://www.ft.com/content/d11b743a-cd2c-4f0d-a464-8750aa8f4170?syn-25a6b1a6=1"
+    },
+    {
+      "body": "Fifth Plenum",
+      "action": "Analysts: nearly a quarter of 2022 Central Committee eliminated ahead of Plenum",
+      "detail": "DW Chinese cites an Asia Society Policy Institute estimate that only about *77.4 percent* of members elected to the Central Committee in 2022 remain eligible to attend next week's session.",
+      "url": "https://www.dw.com/zh/%E4%B8%AD%E5%85%B1%E4%BA%94%E4%B8%AD%E5%85%A8%E4%BC%9A%E5%B0%86%E7%99%BB%E5%9C%BA%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%86%8D%E6%8E%8C%E6%9D%83%E5%85%AD%E5%B9%B4/a-79741768"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 25,
+      "headline": "UN Resolution 2758 55th anniversary",
+      "detail": "Beijing marks 55 years since the UN General Assembly seated the PRC as China's sole legitimate representative, a contested-interpretation flashpoint for cross-strait sovereignty claims."
+    },
+    {
+      "month": "Oct",
+      "day": 26,
+      "headline": "Fifth Plenum of the 20th CCP Central Committee opens in Beijing",
+      "detail": "The plenum runs through October 29, themed on strengthening party discipline; analysts expect no major personnel surprises but a signal of Xi Jinping's consolidated authority ahead of the 21st Party Congress."
+    },
+    {
+      "month": "Oct",
+      "day": 27,
+      "headline": "German President Steinmeier begins six-day state visit to China",
+      "detail": "Steinmeier's first state visit since 2018 includes stops in Anhui and Beijing, with a Xi Jinping meeting and state banquet set for October 30."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting opens in Shenzhen",
+      "detail": "China hosts the summit; Wang Yi pledged to 'host well' the gathering as one of eight actions announced at the Global Governance Forum."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Voters choose 22 mayors and magistrates and roughly 11,000 local offices in a mid-term test of President Lai Ching-te."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.afp.com/en/tropical-storm-champi-nears-china-after-battering-taiwan-japan",
+      "source": "AFP China",
+      "category": "Weather/Disaster",
+      "headline": "Tropical Storm Champi weakens, moves toward China after battering Taiwan, Japan",
+      "body_text": "Typhoon Champi, downgraded to a tropical storm with winds of 102 km/h, killed one person and injured more than 600 in Taiwan since Thursday. More than 5,000 people were evacuated and power has been restored to over 90 percent of 340,000 affected households."
+    },
+    {
+      "url": "https://apnews.com/article/tibet-earthquake-china-nagqu-0358c57cfcbc0de48d2486df15ded4ef",
+      "source": "AP China",
+      "category": "Disaster",
+      "headline": "China orders all-out rescue after 7.0-magnitude Tibet quake kills 16",
+      "body_text": "A magnitude-7.0 earthquake in Baqing County, Nagqu, killed at least 16 people, injured 76 and damaged or collapsed 339 houses, Xinhua reported. More than 12,000 residents were evacuated and over 300 soldiers joined rescue efforts."
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/23/apple-iphone-duo-china-launch.html",
+      "source": "CNBC China",
+      "category": "Technology",
+      "headline": "Scalpers charge hundreds extra for Apple's foldable iPhone Duo outside Beijing store",
+      "body_text": "Apple's global launch of the foldable iPhone Duo drew scalpers to the Beijing flagship store offering buyers hundreds of dollars extra for the already pricey devices, CNBC reported."
+    },
+    {
+      "url": "https://www.ft.com/content/bc13b5f1-387e-4fae-927e-d96ac24ea645?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category": "Finance",
+      "headline": "Hong Kong exchange weighs scrapping lunch break for longer trading day",
+      "body_text": "HKEX is discussing ending its midday trading break, calling it an 'antiquated practice,' as Nasdaq plans a move toward a 23-hour trading day, the Financial Times reported."
+    },
+    {
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/china-aims-stabilise-number-new-births-with-policy-support-2026-10-23/",
+      "source": "Reuters China",
+      "category": "PRC-Economy",
+      "headline": "China aims to stabilise birth numbers with new policy support",
+      "body_text": "China said it aims to stabilize the number of new births through policy support measures, Reuters reported Friday, without detailing specific new benefits in the dispatch."
+    },
+    {
+      "url": "https://www.reuters.com/business/finance/chinas-baidu-tests-robotaxi-london-streets-2026-10-23/",
+      "source": "Reuters China",
+      "category": "Technology",
+      "headline": "Baidu tests robotaxi on London streets",
+      "body_text": "China's Baidu began testing its robotaxi service on London streets, Reuters reported, extending the company's autonomous-driving push into a new European market."
+    },
+    {
+      "url": "https://focustaiwan.tw/business/202610240006",
+      "source": "Focus Taiwan",
+      "category": "Technology",
+      "headline": "Taiwan's ITRI plans rare-earth plant to supply half of island's demand by 2030",
+      "body_text": "Taiwan's Industrial Technology Research Institute plans a rare-earth processing plant aimed at meeting half the island's demand by 2030, Focus Taiwan reported, as Taipei seeks to cut reliance on Chinese supply."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/law-and-crime/article/3372004/hong-kong-customs-seizes-600-million-illicit-cigarettes-first-9-months-2026",
+      "source": "SCMP",
+      "category": "Customs",
+      "headline": "Hong Kong customs seizes 600 million illicit cigarettes in 2026's first nine months",
+      "body_text": "Hong Kong's customs commissioner said officers seized *600 million* illicit cigarette sticks in the first three quarters of 2026, nearly matching the full 2025 total. Of those, 200 million were destined for other markets."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-22/us-proposes-curbs-on-investment-in-chinese-biotech-firms",
+      "source": "Bloomberg China",
+      "headline": "US proposes curbs on investment in Chinese biotech firms",
+      "body_text": "The Trump administration proposed new restrictions on US investment in Chinese biotechnology companies, Bloomberg reported Thursday. The move would extend outbound-investment screening beyond the existing semiconductor, quantum and AI sectors.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://apnews.com/article/china-citi-securities-e14daf1de9131bbe826632a2b361186f",
+      "source": "AP China",
+      "headline": "Citi wins approval for wholly owned China securities unit",
+      "body_text": "China's securities regulator approved **Citi** to establish a wholly owned securities company in China, AP and Reuters reported Friday. The approval extends foreign-bank access to China's domestic securities market.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/world/story20261023-9885838",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "headline": "US forces in Japan to bar BYD vehicles from Okinawa bases starting Monday",
+      "body_text": "US forces in Japan will prohibit **BYD** vehicles, private, contractor, taxi and delivery, from entering Kadena Air Base starting October 26, citing concerns the EVs' cameras and sensors could leak base information. Officials said the restriction could extend to MCAS Futenma and potentially US bases in South Korea.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://m.hkej.com/landing/mobarticle2/id/4546464/%E7%8E%8B%E6%AF%85:%E4%B8%AD%E7%BE%8E%E6%9C%89%E8%83%BD%E5%8A%9B%E5%8F%8A%E8%B2%AC%E4%BB%BB%E5%85%B1%E5%90%8C%E7%99%BC%E5%B1%95%E5%92%8C%E7%AE%A1%E6%8E%A7AI",
+      "source": "信报 (HKEJ ZH)",
+      "headline": "Wang Yi: China, US as AI 'first-tier' powers share responsibility to manage the technology",
+      "body_text": "Foreign Minister **Wang Yi** told the Asia Society's board co-chair and a New York Times columnist in Xiongan that China and the US, as first-tier AI countries, have the capability and responsibility to jointly develop and govern AI so it remains controlled by humans and benefits the public. He said the two sides should discuss globally applicable rules alongside managing risk.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/defense/us-lawmaker-to-press-trump-to-expedite-taiwan-arms-sales2",
+      "source": "Nikkei Asia China",
+      "headline": "US lawmaker to press Trump administration to expedite Taiwan arms sales",
+      "body_text": "Rep. **Ami Bera** said Saturday he will continue pressing the Trump administration to move quickly on a major Taiwan arms package, per Nikkei Asia. The remarks came at dual Japan-US alliance dialogues held in Tokyo.",
+      "instrument": "Congress"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/24/2003866531",
+      "source": "Taipei Times",
+      "headline": "US think tank: Beijing intensifying pressure on family members of Taiwan 'separatists'",
+      "body_text": "The Institute for the Study of War, with the American Enterprise Institute, said China may be intensifying coercion against family of so-called 'diehard Taiwanese separatists,' including the father of Taipei mayoral candidate **Puma Shen**, citing the Taiwan Affairs Office's sanctions on the elder Shen's company VWAY. The report also notes the nephew of Interior Minister Liu Shyh-fang lost his China job in April.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202610230016",
+      "source": "Focus Taiwan",
+      "headline": "Eight Japan Coast Guard ships sheltering from Typhoon Champi shadowed by China near Penghu",
+      "body_text": "Taiwan's Coast Guard Administration said eight Japan Coast Guard vessels sailing south along the Taiwan Strait median line to shelter from the typhoon were shadowed by five China Coast Guard ships, including two 5,000-tonne Daishan-class patrol vessels, southwest of Penghu's Cimei Island. The CGA urged Beijing not to use the storm to assert jurisdiction over the Strait.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.theguardian.com/world/2026/oct/24/north-korea-new-yalu-river-bridge-russia-china",
+      "source": "Guardian China (direct)",
+      "headline": "North Korea opens new bridge links to both China and Russia",
+      "body_text": "Kim Jong Un's Dandong visit came via the New Yalu River Bridge, completed 12 years ago but opened to traffic only last week, the Guardian reported. The crossing adds to Pyongyang's expanding infrastructure links with both Beijing and Moscow.",
+      "region": "Korea"
+    },
+    {
+      "url": "http://www.81.cn/ss_208539/16495778.html",
+      "source": "解放军报 (PLA Daily ZH)",
+      "headline": "Wang Yi unveils eight actions at Global Governance Forum, including hosting APEC in Shenzhen",
+      "body_text": "Wang Yi read a letter from **Xi Jinping** and outlined eight actions at the 2026 Global Governance Forum in Xiongan, including hosting the APEC leaders' meeting, continuing UN reform, and publishing a position paper on outer-space governance. Nearly 400 representatives from more than 90 countries attended; Wang noted this year marks 55 years since the PRC's UN seat was restored.",
+      "region": "Multilateral"
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/jsxd/16495865.html",
+      "source": "国防部 (MND ZH)",
+      "headline": "Chinese navy hospital ship Ark of Peace arrives in Ghana",
+      "body_text": "China's naval hospital ship *Ark of Peace* (吉祥方舟) arrived in Ghana, the Ministry of National Defense said. The port call is part of a broader overseas naval medical-diplomacy deployment.",
+      "region": "Africa"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/three-red-lines-needed-against-china-japan-defense-academy-chief-says",
+      "source": "Nikkei Asia China",
+      "headline": "Japan defense academy chief calls for 'three red lines' against China",
+      "body_text": "At dual Japan-US alliance dialogues held in Tokyo Friday and Saturday, Japan's National Defense Academy president called for setting three red lines against China, per Nikkei Asia. The sessions drew policymakers, scholars and business figures from both countries.",
+      "region": "Japan"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/10/24/world/asia/north-korea-kim-jong-un-china.html",
+      "source": "NYT China",
+      "category_tag": "Diplomacy",
+      "headline": "Kim Jong Un makes unannounced China visit, meets Premier Li Qiang in Dandong",
+      "body": "North Korean leader **Kim Jong Un** crossed into China via the newly opened New Yalu River Bridge and met Chinese Premier **Li Qiang** in the border city of Dandong, according to South Korean officials cited by NYT, AP and Reuters. Neither Beijing nor Pyongyang announced the trip in advance; a South Korean lawmaker said Kim was expected to return home the same day. World leaders are preparing for November's APEC summit in Shenzhen, where Kim could meet President Trump.",
+      "src_line": "NYT, AP, Reuters, AFP"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/24/2003866530",
+      "source": "Taipei Times",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan says China pairing militia, coast guard vessels to expand 'battlefield preparation'",
+      "body": "Taiwan's Coast Guard Administration confirmed a Reuters exclusive, saying China is combining militia fishing boats with coast guard ships to expand gray-zone operations around Taiwan and into the western Pacific. It identified the vessel *Minfudingyu 07902*, spotted August 16 roughly 2.7 nautical miles outside Taiwan's restricted waters alongside a China Coast Guard ship and a research vessel. The CGA said such activity has increased since June in waters overlapping Taiwan, Japan and the Philippines.",
+      "src_line": "Taipei Times, citing Reuters"
+    },
+    {
+      "url": "https://www.voachinese.com/a/philippine-warns-china-towing-away-brp-sierra-madre-would-be-act-of-war-20261023/8214549.html",
+      "source": "VOA Chinese",
+      "category_tag": "Indo-Pacific",
+      "headline": "Philippines warns towing away grounded warship at Second Thomas Shoal would be 'act of war'",
+      "body": "The Philippines warned China that towing away the **BRP Sierra Madre**, the grounded warship marking Manila's outpost at Second Thomas Shoal, would constitute an act of war, per VOA Chinese. The warning follows continued Chinese pressure on the shoal, an AMTI-monitored flashpoint.",
+      "src_line": "VOA Chinese"
+    },
+    {
+      "url": "https://www.hk01.com/%E4%B8%AD%E5%9C%8B%E8%A7%80%E5%AF%9F/60403176/%E4%B8%AD%E5%9C%8B%E7%A6%81%E6%AD%A2%E5%87%BA%E5%8F%A3%E9%99%90%E5%88%B6%E5%8D%87%E7%B4%9A%E9%87%9D%E5%B0%8D%E4%BA%86%E8%AA%B0",
+      "source": "HK01",
+      "category_tag": "Technology",
+      "headline": "Beijing drafts expanded export-control catalogue covering 40 AI, biopharma, solar technologies",
+      "body": "China's Ministry of Commerce and Ministry of Science and Technology issued Announcement No. 48 of 2026, seeking public comment on a revised Catalogue of Technologies Prohibited and Restricted from Export covering *40 technologies* across AI, biopharma and photovoltaics. Fourteen items are proposed for outright export bans and 26 for restricted export, with AI accounting for 23 of the 40, including large models, agents and compute clusters. Temporary registration management for affected exports takes effect ahead of the formal rule.",
+      "src_line": "HK01"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3371962/france-certain-united-front-germany-pushed-china-hybrid-car-deal",
+      "source": "SCMP China",
+      "category_tag": "PRC-Economy",
+      "headline": "EU weighs new tariffs, quotas on Chinese plastics amid 'China Shock 2.0'",
+      "body": "EU trade chief **Maros Sefcovic** said the bloc may hit additional Chinese industries with quotas or tariffs before further Beijing talks, naming plastics as a sector where investigations are advanced. He said Brussels will consider emergency safeguards rather than lengthy negotiations when it needs to move quickly to protect industry.",
+      "src_line": "SCMP, citing Reuters"
+    },
+    {
+      "url": "https://www.voachinese.com/a/pentagon-designates-confucius-institutes-in-us-a-national-security-threat-20261023/8214673.html",
+      "source": "VOA Chinese",
+      "category_tag": "US-China",
+      "headline": "Pentagon designates Confucius Institutes a US national security threat",
+      "body": "US Defense Secretary **Pete Hegseth** announced the Pentagon has designated China-funded Confucius Institutes operating on US campuses as a national security threat, saying the department found 80 new promotional organizations across 30 universities using different names to continue the same mission after Congress banned the institutes years ago. He said the department has 'systematically dismantled every one' of these groups over the past two months, following an October 19 Pentagon announcement that 30 universities ended more than 80 partnerships tied to NDAA Section 1286 list entities.",
+      "src_line": "VOA Chinese"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.guancha.cn/ZhengZhi/2026_10_24_905646.shtml",
+      "source": "观察者网 (Guancha ZH)",
+      "category": "PRC-Economy",
+      "headline": "Prominent economist Ren Zeping's WeChat account banned 'for violations'",
+      "body_text": "Ren Zeping's 'Zeping Macro' WeChat account was banned Saturday for unspecified violations after posting daily through Friday.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261023-9886518",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "category": "PRC-Economy",
+      "headline": "Bridgewater China trims gold weighting, turns 'cautiously optimistic' on A-shares",
+      "body_text": "Bridgewater China told investors it has reduced its gold overweight and sees Q3 stock declines as liquidity-driven with valuations not stretched.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://news.china.com/socialgd/10000169/20261023/49812132.html",
+      "source": "中华网",
+      "category": "Diplomacy",
+      "headline": "MOFA: Cold War mentality 'not conducive' to Arctic development",
+      "body_text": "A MOFA spokesperson said Cold War thinking does not help Arctic peace, stability and development, without naming a specific pact.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/european-stocks-fall-as-china-woes-hit-volvo-car-gucci",
+      "source": "Bloomberg China",
+      "category": "PRC-Economy",
+      "headline": "European stocks fall as China woes hit Volvo Car and Gucci",
+      "body_text": "European equities dropped Friday as weaker China demand weighed on Volvo Car and Gucci-owner shares, Bloomberg reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://m.jiemian.com/article/15235318.html",
+      "source": "界面新闻 (Jiemian ZH)",
+      "category": "PRC-Economy",
+      "headline": "Chinese hydraulics maker AIDI Precision opens US subsidiary near Chicago",
+      "body_text": "AIDI Precision opened a US unit in Schaumburg, Illinois, to localize product support and after-sales service for North American customers.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "http://news.china.com.cn/2026-10/24/content_118747260.shtml",
+      "source": "中国网",
+      "category": "Diplomacy",
+      "headline": "MOFA: China will keep deepening all-around UN cooperation",
+      "body_text": "A MOFA spokesperson said China will continue deepening comprehensive cooperation with the United Nations, per a Friday briefing readout.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261024-9887565",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "category": "Diplomacy",
+      "headline": "Wang Yi meets UN refugee chief, pledges aid to address root causes",
+      "body_text": "Wang Yi told UNHCR's high commissioner China provides substantial humanitarian aid to least-developed countries to address refugee crises at their source.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/politics/article/3372011/hong-kong-must-revive-growth-and-drive-reforms-governments-visible-hand",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "Ex-Beijing HK official: city needs a 'visible hand' to drive five-year-plan reforms",
+      "body_text": "Former HKMAO deputy director Deng Zhonghua said Hong Kong authorities must act as a 'visible hand' to break down vested-interest barriers to growth.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://udn.com/news/story/7331/9835073",
+      "source": "联合报 (UDN ZH)",
+      "category": "Cross-Strait",
+      "headline": "Scholars: Beijing using anti-Japan history to restrain Japan's Taiwan Strait role",
+      "body_text": "Academics say Beijing is amplifying anti-Japan wartime narratives around Taiwan Retrocession Day to discourage Tokyo's involvement in cross-strait contingencies.",
+      "color_bar_class": "cb-navy"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://weekly.caixin.com/2026-10-24/102496749.html",
+      "source": "财新 (Caixin ZH)",
+      "headline": "Yuan's 9% rally since early 2025 expected to extend through year-end",
+      "body_text": "Caixin Weekly reports the yuan has appreciated *9 percent* against the dollar since early 2025, recovering above 7.0 by end-2025, with analysts expecting the gradual, orderly gains to continue through this year-end.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/markets/china-s-national-team-comes-to-rescue-as-stocks-flash-bearish-signs",
+      "source": "Nikkei Asia China",
+      "headline": "China's 'national team' intervenes as stocks flash bearish signs",
+      "body_text": "China's state-owned investment funds intervened in the stock market Friday after shares slid into bear territory, analysts told Nikkei Asia, as the Hang Seng fell *4.03 percent* to 23,093.37 and the Shanghai Composite slipped 1.08 percent to 3,690.47.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/china-s-cmoc-sees-earnings-soar-on-copper-rally-and-more-output",
+      "source": "Bloomberg China",
+      "headline": "CMOC earnings soar on copper rally, higher output",
+      "body_text": "China's CMOC reported a sharp earnings jump driven by the copper price rally and increased production volumes, Bloomberg reported.",
+      "companies": [
+        "CMOC"
+      ],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/volvo-car-deepen-job-cuts-china-sales-slump",
+      "source": "Bloomberg China",
+      "headline": "Volvo CEO says China's market is 'gone' for Western automakers",
+      "body_text": "Volvo Car's chief executive said the Chinese market is effectively lost to Western automakers amid deepening job cuts tied to the China sales slump, Bloomberg reported.",
+      "companies": [
+        "Volvo",
+        "Volvo Cars"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/chery-eyes-canada-production-as-chinese-carmakers-circle-the-us",
+      "source": "Bloomberg China",
+      "headline": "Chery eyes Canada production as Chinese carmakers circle the US",
+      "body_text": "Chery is considering Canadian production as Chinese automakers look for ways to approach the US market despite tariff barriers, Bloomberg reported.",
+      "companies": [
+        "Chery"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.ft.com/content/995ede2d-c1de-4ba7-99e3-2e18d1c43c50?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "China's luxury brands positioned to elbow Western rivals aside",
+      "body_text": "The FT reports investors are debating whether the rise of homegrown Chinese luxury brands reflects a durable shift or a short-lived trend.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.reuters.com/business/energy/china-calls-oil-gas-firms-boost-output-build-strategic-supply-bases-2026-10-23/",
+      "source": "Reuters China",
+      "headline": "China calls on oil, gas firms to boost output, build strategic supply bases",
+      "body_text": "Beijing urged domestic oil and gas companies to increase output and build strategic supply bases, Reuters reported Friday.",
+      "companies": [],
+      "sector": "energy"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "US restrictions on business cooperation",
+      "statement": "The US should abide by market economy principles, stop interfering in normal business cooperation between enterprises, and earnestly safeguard the stability of global production and supply chains.",
+      "original_zh": "美方应当遵守市场经济原则，停止干扰企业之间的正常经贸合作，切实维护全球产供链稳定。",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Mao Ning's October 23 press briefing responded to US moves restricting Chinese firms' commercial activity, amid reported new US curbs on investment in Chinese biotech.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://www.news.cn/world/20261023/ba83c77fd1714a73ae1a2b042c34e624/c.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Philippines and the Taiwan question",
+      "statement": "Per MOFA: the Philippines should abide by the one-China principle; there is no 'gray area' on the Taiwan question.",
+      "original_zh": null,
+      "addressed_to": "Philippines",
+      "tone": "firm",
+      "context": "The comment came amid continued Philippine warnings to China over the Second Thomas Shoal and the BRP Sierra Madre.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://military.china.com/news/13004177/20261023/49812277.html"
+    },
+    {
+      "body": "Xinhua commentary",
+      "body_chinese": "新华社",
+      "speaker": null,
+      "role": "Xinhua commentary (新华时评)",
+      "topic": "Taiwan Retrocession Day and reunification",
+      "statement": "The Taiwan question arose from the nation's weakness and chaos, and will inevitably be resolved along with national rejuvenation.",
+      "original_zh": "台湾问题因民族弱乱而产生，必将随着民族复兴而解决。",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "The commentary ran ahead of October 25, the first anniversary of China's designated 'Taiwan Retrocession Day' marking the 1945 end of Japanese colonial rule.",
+      "source": "新华社时评 (Xinhua commentary ZH)",
+      "url": "https://www.chinanews.com.cn/ll/2026/10-24/10720388.shtml"
+    },
+    {
+      "body": "MND",
+      "body_chinese": "国防部",
+      "speaker": null,
+      "role": "Ministry of National Defense position paper",
+      "topic": "Outer space governance and arms race",
+      "statement": "China insists on exploring and using outer space for peaceful purposes, and opposes the weaponization and battlefielding of outer space.",
+      "original_zh": "坚持基于和平目的探索和利用外空，反对外空武器化、战场化。",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "The position paper was released October 23 alongside Wang Yi's remarks on deep-sea and outer-space governance at the Global Governance Forum in Xiongan.",
+      "source": "国防部 (MND ZH)",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16495761.html"
+    },
+    {
+      "body": "PBOC",
+      "body_chinese": "中国人民银行",
+      "speaker": "Pan Gongsheng",
+      "role": "PBOC Governor",
+      "topic": "Monetary policy rate-anchor shift",
+      "statement": "Per PBOC: the central bank is studying shifting the open-market operation's primary instrument tenor to overnight, with the overnight repo rate becoming the main policy rate, while loan pricing benchmarks move from primarily referencing the LPR toward a more diversified base.",
+      "original_zh": "研究择机把央行公开市场主要操作品种的期限切换为隔夜，公开市场隔夜回购利率将相应成为主要政策利率；推动贷款利率定价基准从主要参考LPR向更加多元的基准转型。",
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "The remarks followed the PBOC's October 23 announcement of a ¥700 billion, one-year MLF operation, a ¥200 billion reduction from the ¥900 billion maturing.",
+      "source": "中国人民银行 (PBOC ZH)",
+      "url": "https://m.sohu.com/a/1092198145_122014422?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "KR",
+      "who": "Kevin Rudd",
+      "handle_context": "President, Asia Society; former Australian PM",
+      "platform_date": "SCMP · Oct 23, 2026",
+      "quote_text": "There is a full-blown strategic competition under way in every dimension of national political power and influence, militarily, economically, trade and investment and technology, in foreign policy, in ideology.",
+      "analyst_note": "Rudd made the remarks at a Harvard Kennedy School Institute of Politics event Friday, per SCMP.",
+      "badge_class": "sb-p",
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3371990/us-china-strategic-competition-keep-escalating-world-watches-rudd-says"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Fujian Provincial Government Party Group Secretary",
+      "name": "Guo Ningning",
+      "action": "appointed",
+      "detail": "Guo Ningning, born July 1970, previously Fujian provincial party committee deputy secretary, was named party group secretary of the Fujian provincial government. She became China's youngest female provincial-level vice governor in 2018 and the first 'post-1970s' woman on a provincial standing committee in 2021.",
+      "predecessor": null
+    },
+    {
+      "position": "Fujian Provincial Party Committee Deputy Secretary",
+      "name": "Lin Tao",
+      "action": "appointed",
+      "detail": "Lin Tao, former Xiamen municipal party secretary who previously served as Guangdong vice governor, was approved by the CCP Central Committee as Fujian's provincial party deputy secretary.",
+      "predecessor": null
+    },
+    {
+      "position": "Fuzhou Municipal Party Secretary",
+      "name": "Qin Haixiang",
+      "action": "appointed",
+      "detail": "Qin Haixiang was named a Fujian provincial party standing committee member and Fuzhou municipal party secretary.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.nytimes.com/2026/10/24/world/asia/north-korea-kim-jong-un-china.html",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/24/2003866530",
+    "https://focustaiwan.tw/politics/202610230016",
+    "https://www.voachinese.com/a/philippine-warns-china-towing-away-brp-sierra-madre-would-be-act-of-war-20261023/8214549.html",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/24/2003866531"
+  ],
+  "story_count": 100,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 94,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-24.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-24.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
