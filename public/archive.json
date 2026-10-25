@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-25",
+    "filename": "2026-10-25.html",
+    "re_line": "RE: Kim's Dandong trip \u00b7 Fifth Plenum opens \u00b7 US-China investment spat \u00b7 Taiwan Restoration Day \u00b7 stock rout",
+    "top_stories": 4,
+    "overnight_items": 7,
+    "word_count": 2457,
+    "sources": 75,
+    "pdf": true
+  },
+  {
     "date": "2026-10-24",
     "filename": "2026-10-24.html",
     "re_line": "Kim's Dandong visit \u00b7 Beijing drafts tech export curbs \u00b7 Pentagon vs Confucius Institutes \u00b7 Taiwan gray-zone ops",

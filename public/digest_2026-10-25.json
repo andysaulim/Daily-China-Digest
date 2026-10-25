@@ -1,0 +1,512 @@
+{
+  "digest_date": "Sunday, October 25, 2026",
+  "re_line": "RE: Kim's Dandong trip · Fifth Plenum opens · US-China investment spat · Taiwan Restoration Day · stock rout",
+  "market_indicators": {
+    "usd_cny": {
+      "value": "6.6702",
+      "change_pct": -0.31,
+      "as_of": "Oct 25"
+    },
+    "hang_seng": {
+      "value": "23,093.37",
+      "change_pct": -4.03,
+      "as_of": "Oct 23"
+    },
+    "usd_cnh": {
+      "value": "6.6682",
+      "change_pct": -0.06,
+      "as_of": "Oct 23"
+    },
+    "brent": {
+      "value": "111.70",
+      "change_pct": 2.67,
+      "as_of": "Oct 23"
+    },
+    "sse_composite": {
+      "value": "3,690.47",
+      "change_pct": -1.08,
+      "as_of": "Oct 23"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "Kim Jong Un made a surprise day trip to Dandong Saturday, his first China visit in over a year, meeting Politburo Standing Committee member Wang Huning rather than Xi Jinping.",
+    "China's Fifth Plenum opens in Beijing Monday after Anhui, Henan, Shanxi and Xinjiang completed provincial leadership reshuffles over the past week.",
+    "Beijing's Commerce Ministry protested a new US Treasury proposal expanding outbound-investment restrictions, calling it 'a typical case of overstretching the concept of national security.'"
+  ],
+  "key_stat": {
+    "number": "$3.5 trillion",
+    "label": "Wiped from Chinese equities in an earnings-driven stock rout",
+    "context": "Bloomberg ties the decline to deteriorating corporate profits rather than a broad risk-off move, even as the Hang Seng fell 4.03% and the Shanghai Composite slipped 1.08% on Oct 23.",
+    "source": "Bloomberg"
+  },
+  "prc_government": [
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson",
+      "action": "MOFCOM protests US outbound-investment-restriction proposal",
+      "document": "商务部新闻发言人就美发布新版对外投资限制拟议规则答记者问",
+      "detail": "MOFCOM said it 'firmly opposes' a new US Treasury rule adding biotechnology to restricted outbound-investment sectors and giving Treasury authority to designate further industries.",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_fe1a483e92bf48a88409978cc738e62f.html"
+    },
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "Li Qiang, Premier",
+      "action": "Li Qiang chairs State Council executive meeting on population and economic-social development",
+      "document": "国务院常务会议",
+      "detail": "The meeting studied coordinating population trends with economic and social development and reviewed implementation of a national services-sector conference deployment.",
+      "source_label": "State Council via MOFCOM",
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_a58d3a3cc2834076be644d327ee39fe2.html"
+    },
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "Pan Gongsheng, Governor",
+      "action": "PBOC rolls over CNY700bn MLF, a CNY200bn net drain",
+      "document": "2026年10月中期借贷便利招标公告",
+      "detail": "The central bank will conduct CNY700 billion in one-year MLF operations on Oct 26 against CNY900 billion maturing, a net drain versus September's CNY200 billion net add, as it studies shifting its primary policy-rate anchor to the overnight repo rate.",
+      "source_label": "PBOC ZH",
+      "url": "https://finance.sina.com.cn/roll/2026-10-24/doc-iniwhxpw2151552.shtml"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "CCP Central Inspection Work Leading Group",
+      "action": "20th CC seventh round of inspections completes feedback to 36 central bodies",
+      "detail": "15 central inspection teams delivered one-on-one feedback to 36 central party and state organs; Liu Jinguo, deputy head of the Central Inspection Work Leading Group, said agencies must track rectification and punish perfunctory responses.",
+      "url": "http://www.81.cn/ss_208539/16496043.html"
+    },
+    {
+      "body": "CCP Provincial Party Congresses",
+      "action": "Anhui, Henan, Shanxi, Xinjiang install new standing committees ahead of Fifth Plenum",
+      "detail": "The four provinces wrapped up party congresses and named new five-year standing committees in the week before the Fifth Plenum of the 20th Central Committee convenes Monday in Beijing.",
+      "url": "https://www.scmp.com/news/china/politics/article/3372064/how-chinas-regional-leadership-changes-offer-clues-future-communist-party"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 26,
+      "headline": "Fifth Plenum of the 20th Central Committee opens in Beijing",
+      "detail": "Follows a week of provincial leadership reshuffles; expected to finalize 15th Five-Year Plan recommendations ahead of the 21st Party Congress in 2027."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Control of Congress at stake; Rep. Ami Bera said he will intensify pressure on the administration over a pending Taiwan arms sale if Democrats retake the House."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal one-year suspensions approach lapse",
+      "detail": "The BIS Affiliates Rule suspension and China's October 2025 rare-earth export-control suspension are both due to expire around this date unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting opens in Shenzhen",
+      "detail": "China hosts; Trump attendance and any Trump-Xi meeting remain unconfirmed."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Voters elect 22 mayors and magistrates and roughly 11,000 local offices in a mid-term test of the Lai administration."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.thepaper.cn/newsDetail_forward_34327228",
+      "source": "澎湃新闻 (The Paper ZH)",
+      "category": "Economy",
+      "headline": "Independent economist Ren Zeping's WeChat account banned for 'violations'",
+      "body_text": "Ren Zeping's widely followed 'Zeping Macro' WeChat account was banned for unspecified violations, Chinese media reported Saturday, after posting commentaries as recently as Oct. 23. His video account remains active."
+    },
+    {
+      "url": "https://hongkongfp.com/2026/10/25/tropical-storm-champi-nears-china-after-battering-taiwan-japan/",
+      "source": "Hong Kong Free Press",
+      "category": "Indo-Pacific",
+      "headline": "Tropical Storm Champi weakens after battering Taiwan, Japan's southern islands",
+      "body_text": "Typhoon Champi, downgraded to a tropical storm with winds near 102 km/h, swept toward China Saturday after cutting power to thousands and forcing hundreds of flight cancellations in Taiwan and Japan's southernmost islands."
+    },
+    {
+      "url": "https://www.wsj.com/world/china/xinjiang-trade-energy-controversy-dff138df",
+      "source": "WSJ China",
+      "category": "Economy",
+      "headline": "WSJ: Xinjiang becomes showcase for China's commercial ambitions",
+      "body_text": "The Wall Street Journal reports Xinjiang has become a centerpiece of Beijing's trade and energy ambitions even as the region remains a flashpoint for international human-rights controversy."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/25/2003866565",
+      "source": "Taipei Times (direct)",
+      "category": "Indo-Pacific",
+      "headline": "Taiwan life expectancy rises to 81.27 years; cancer leading cause for 44th year",
+      "body_text": "Taiwan's average life expectancy reached 81.27 years, up from 80.77 the prior year, the Interior Ministry said, with cancer accounting for 27.48 percent of all deaths and remaining the top cause for a 44th consecutive year."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3372056/1-million-hong-kong-employees-get-full-portability-mpf-funds-december",
+      "source": "SCMP",
+      "category": "Economy",
+      "headline": "1 million Hong Kong employees gain full MPF portability starting December",
+      "body_text": "About 1 million Hong Kong employees will be able to move their entire Mandatory Provident Fund savings to a new provider once a year starting Dec. 21, the MPF Schemes Authority said, rolling out the change in two phases."
+    },
+    {
+      "url": "https://www.hkej.com/instantnews/china/article/4546570/AI%E4%B8%A8%E9%A6%96%E9%83%A8AI%E9%95%B7%E7%89%87%E5%85%A9%E6%97%A5%E7%A5%A8%E6%88%BF%E5%83%8566%E8%90%AC+%E9%9B%A3%E5%9B%9E%E6%9C%AC%EF%BC%9F",
+      "source": "信报 (HKEJ ZH)",
+      "category": "Technology",
+      "headline": "China's first AI-generated feature film earns just RMB665,000 in two days",
+      "body_text": "Sanxingdui: Future Past, China's first fully AI-generated theatrical film, grossed about RMB665,000 in its opening two days, far short of the roughly RMB35-55 million box office needed to recoup production costs, Hong Kong media reported."
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261025-9891386",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "category": "Technology",
+      "headline": "China launches six remote-sensing satellites on 673rd Long March flight",
+      "body_text": "China launched six remote-sensing satellites aboard a Long March 4B rocket from Jiuquan early Saturday, the 673rd Long March flight, for use in land surveys, crop-yield estimation and disaster mitigation."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.afp.com/de/node/3848180?ref=aipolicydaily.org",
+      "source": "AFP China",
+      "headline": "MOFA protests US ban on DeepSeek for federal agencies as 'overstretching' security",
+      "body_text": "The US Department of Homeland Security barred civilian agencies Monday from using DeepSeek-derived AI tools, warning they risk transferring sensitive data to China. MOFA spokesperson **Mao Ning** said China 'consistently opposed the overstretching of the concept of national security and the politicisation of issues related to science, technology, and trade.'",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://apnews.com/article/china-us-ai-blocs-9974a3e5dc955a93935d131a4aeb8886",
+      "source": "AP China",
+      "headline": "US and China form competing AI blocs, squeezing third countries",
+      "body_text": "AP reports Washington and Beijing are each building competing coalitions around AI standards and infrastructure, forcing other governments to navigate between the two technology ecosystems. The piece arrives as both capitals court partners ahead of the APEC summit China hosts in Shenzhen Nov. 18-19.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-24/china-hits-back-at-us-proposal-to-tighten-investment-limits",
+      "source": "Bloomberg China",
+      "headline": "China 'firmly opposes' new US Treasury proposal tightening outbound-investment review",
+      "body_text": "**MOFCOM** said Saturday it firmly opposes a new US Treasury proposal expanding national-security review of outbound investment into China, calling it 'a typical case of overstretching the concept of national security.' The draft rule, published Thursday, adds biotechnology to restricted sectors and gives Treasury authority to designate additional industries.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://www.chinatimes.com/newspapers/20261025000326-260121",
+      "source": "中国时报 (China Times ZH)",
+      "headline": "US presses Japan to align security revision with 'first island chain' strategy; lawmaker vows Taiwan arms-sale push",
+      "body_text": "A US deputy secretary of state, identified in Chinese reports as Landau, told a Tokyo forum Saturday that Japan's security-strategy revision, due by year-end, must align with the US push to strengthen deterrence along the first island chain linking Japan, Taiwan and the Philippines. Rep. Ami Bera, co-chair of the House Taiwan Caucus, said he will press **Trump** to approve a pending Taiwan arms sale and intensify the effort if Democrats retake the House Nov. 3.",
+      "instrument": "Congress"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.scmp.com/news/china/politics/article/3372065/beijing-commemorates-end-japanese-rule-over-taiwan-call-reunification",
+      "source": "SCMP China",
+      "headline": "TAO's Song Tao pledges support for Taiwan's 'pro-unification patriots' on Restoration Day",
+      "body_text": "**Song Tao**, head of Beijing's Taiwan Affairs Office, pledged at a Fuzhou commemoration Sunday to support pro-unification forces in Taiwan as China marked the 81st anniversary of the end of Japanese colonial rule, formally designated 'Taiwan Restoration Day' last year. CCTV released Jilin-1 satellite imagery of Taipei landmarks, while the PLA's Eastern Theater Command issued a commemorative poster on the theme of national unity.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://user.guancha.cn/main/content?id=1759373",
+      "source": "观察者网 (Guancha ZH)",
+      "headline": "Japan to ramp up security-policy PR campaign ahead of year-end strategy revision",
+      "body_text": "Japan's government will intensify security-policy public-relations campaigns from late October, tailoring messaging by age group ahead of a planned revision of its '3 Security Documents' by year-end. The materials reference a 'new way of fighting' and 'sustained response capability' for prolonged conflict.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-24/venezuela-to-restart-a-crucial-power-plant-with-china-s-help",
+      "source": "Bloomberg China",
+      "headline": "Venezuela to restart crucial power plant with Chinese assistance",
+      "body_text": "Bloomberg reports Venezuela plans to restart a crucial power plant with assistance from China, continuing Beijing's infrastructure engagement in a country largely cut off from Western financing. No financing or timeline details were disclosed.",
+      "region": "Latin America"
+    },
+    {
+      "url": "http://world.people.com.cn/n1/2026/1025/c1002-40821116.html",
+      "source": "人民网 (People's Daily World ZH)",
+      "headline": "China, Kyrgyzstan convene sixth China-Central Asia think tank forum in Bishkek",
+      "body_text": "The sixth China-Central Asia Think Tank Forum, themed 'high-quality development and common modernization,' met in Bishkek Oct. 22, co-hosted by the Chinese Academy of Social Sciences and a Kyrgyz presidential institute. CASS vice president **Li Xuesong** cited the China-Kyrgyzstan-Uzbekistan railway as a flagship project.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.news.cn/world/20261025/238bac72f7aa44ba847e15a47cf81937/c.html",
+      "source": "新华社 (Xinhua ZH)",
+      "headline": "ASEAN durian exporters meet 90-plus Chinese buyers at Kunming trade fair",
+      "body_text": "More than 40 durian growers and exporters from Cambodia, Thailand, Vietnam and Malaysia met over 90 Chinese buyers, cold-chain operators and processors in Kunming Oct. 23 to negotiate supply deals. China remains the top destination market for Southeast Asian durian exports.",
+      "region": "ASEAN"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/world/china/chinas-communist-party-names-new-provincial-chiefs-ahead-fifth-plenum-2026-10-24/",
+      "source": "Reuters China",
+      "category_tag": "PRC-Economy",
+      "headline": "China's Communist Party completes provincial reshuffle ahead of Monday's Fifth Plenum",
+      "body": "Anhui, Henan, Shanxi and Xinjiang wrapped up provincial party congresses and installed new standing committees for the next five years in the week before the Fifth Plenum of the 20th Central Committee opens in Beijing Monday. The plenum is expected to finalize recommendations for the *15th Five-Year Plan* ahead of the 21st Party Congress in 2027.",
+      "src_line": "Reuters"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-25/sinking-profits-turn-china-s-3-5-trillion-stock-rout-into-trap",
+      "source": "Bloomberg China",
+      "category_tag": "PRC-Economy",
+      "headline": "China's $3.5 trillion stock rout turns cheap valuations into an earnings trap",
+      "body": "Bloomberg reports *$3.5 trillion* has been erased from Chinese equities as weak corporate earnings undercut the rally that drove this year's rebound, turning low valuations into a trap for investors betting on a turnaround. The Hang Seng fell 4.03% to 23,093.37 on Oct 23, while the Shanghai Composite slipped 1.08% to 3,690.47.",
+      "src_line": "Bloomberg"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/25/2003866563",
+      "source": "Taipei Times (direct)",
+      "category_tag": "Technology",
+      "headline": "Taiwan's ITRI to build rare-earth plant to meet half of domestic demand by 2030",
+      "body": "Taiwan's Industrial Technology Research Institute plans a rare-earth demonstration plant producing *500 tonnes* annually, aiming to cover half the island's needs by the end of 2030, ITRI president **Chang Pei-zen** said. Construction is targeted for completion by 2028, with funding to be requested from the National Science and Technology Council and government price guarantees for investors still under discussion; Reuters separately reported TSMC is exploring alternatives to rare-earth components in factory equipment.",
+      "src_line": "Taipei Times"
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/world/breakingnews/5618367",
+      "source": "自由时报 (Liberty Times ZH)",
+      "category_tag": "Sanctions",
+      "headline": "EU seizes record 196 million counterfeit goods in 2025, over 40% from China",
+      "body": "The EU Intellectual Property Office recorded *196 million* counterfeit goods seized across the bloc in 2025, a record, with China the largest single source country at more than 40 percent of seizures, followed by Turkey at over 18 percent. Seized-goods retail value topped €6.3 billion, up from under €3.9 billion in 2024, with Spain and Germany accounting for the largest shares by value.",
+      "src_line": "Liberty Times, citing EUIPO/DPA"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.news.cn/fortune/20261024/32fd3bfa75d54d30b8241606e4a1b70f/c.html",
+      "source": "新华社 (Xinhua ZH)",
+      "category": "Economy",
+      "headline": "PBOC to issue 2027 Panda gold and silver coin set Oct. 30",
+      "body_text": "The 15-coin set, minted in Shenyang, Shanghai and Shenzhen, depicts Beijing's Temple of Heaven and two pandas.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "http://www.81.cn/ss_208539/16496019.html",
+      "source": "解放军报 (PLA Daily ZH)",
+      "category": "Technology",
+      "headline": "Jiaolong submersible completes 7,057-meter dive after upgrade",
+      "body_text": "China's Jiaolong submersible reached 7,056.9 meters in the Philippine Sea basin after an upgrade adding domestic lithium batteries and an AI-based seabed image system.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "http://world.people.com.cn/n1/2026/1025/c1002-40821133.html",
+      "source": "人民网 (People's Daily World ZH)",
+      "category": "Diplomacy",
+      "headline": "Greek culture minister touts deepened China-Greece exchange after Liangzhu Forum",
+      "body_text": "Lina Mendoni cited joint archaeology and a 2024 Chinese classical-civilization research institute in Athens ahead of the 55th anniversary of bilateral ties next year.",
+      "color_bar_class": "cb-mid"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.ft.com/content/1c3065cf-538f-433a-9749-0355a3642c7c?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "European luxury groups lose €250bn in value as Chinese demand fades",
+      "body_text": "FT reports European luxury groups have lost *€250 billion* in combined value as a China slowdown compounds cooling global equity markets, deepening a sector-wide downturn.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.ft.com/content/9fe60016-1520-4bfd-bcfc-f30caa0b1600?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "SoftBank-backed XAG pitches pilotless crop sprayers to Chinese farmers",
+      "body_text": "Chinese start-up XAG, backed by SoftBank, is marketing pilotless crop-spraying drones as a solution to a shrinking farm workforce and rising temperatures, FT reports.",
+      "companies": [
+        "XAG",
+        "SoftBank"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://companies.caixin.com/2026-10-25/102497183.html",
+      "source": "财新 (Caixin ZH)",
+      "headline": "China's first fully operational regional power market launches across five provinces",
+      "body_text": "The Southern Regional Electricity Market, covering Guangdong, Guangxi, Yunnan, Guizhou and Hainan, moved to full operation Oct. 24 under China Southern Power Grid, the country's first region-wide unified power market.",
+      "companies": [
+        "China Southern Power Grid"
+      ],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.guancha.cn/CaiJing/2026_10_25_905730.shtml",
+      "source": "观察者网 (Guancha ZH)",
+      "headline": "Japanese automakers race to halve vehicle development time to match Chinese rivals",
+      "body_text": "Toyota, Honda, Nissan, Suzuki and Mitsubishi are cutting new-car development cycles, currently four to five years, more than double China's pace, with Nissan targeting *3 years, 1 month* for a new SUV launching in North America in 2028, Kyodo reported.",
+      "companies": [
+        "Toyota",
+        "Honda",
+        "Nissan",
+        "Suzuki",
+        "Mitsubishi"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3372073/hong-kong-seeks-bigger-role-yuan-regional-trade-treasury-chief-says",
+      "source": "SCMP",
+      "headline": "Hong Kong held APEC talks on expanding yuan use in regional trade settlement",
+      "body_text": "Hong Kong's financial services and treasury chief **Christopher Hui** said the city discussed reducing US dollar reliance and expanding yuan and local-currency trade settlement with regional finance ministries at last week's APEC meeting.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261025-9891640",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "headline": "Gold slide below $4,000/oz triggers crowds at Shenzhen's Shuibei jewelry market",
+      "body_text": "Spot gold fell 0.72% to $3,995.63 an ounce Friday, prompting Chow Tai Fook, Lao Feng Xiang and other Chinese retailers to cut gold-jewelry prices by RMB6-12 per gram; crowds packed Shenzhen's Shuibei market Saturday.",
+      "companies": [
+        "Chow Tai Fook",
+        "Lao Feng Xiang",
+        "Chow Sang Sang",
+        "Lao Miao Gold"
+      ],
+      "sector": "finance"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "US DHS ban on DeepSeek AI tools for federal agencies",
+      "statement": "China has consistently opposed the overstretching of the concept of national security and the politicisation of issues related to science, technology, and trade.",
+      "original_zh": null,
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "DHS barred civilian agencies from using DeepSeek-derived AI tools Monday, citing risk that user data could be transferred to China under PRC law.",
+      "source": "AFP",
+      "url": "https://www.afp.com/de/node/3848180?ref=aipolicydaily.org"
+    },
+    {
+      "body": "MOFCOM",
+      "body_chinese": "商务部",
+      "speaker": "MOFCOM spokesperson",
+      "role": "Ministry of Commerce spokesperson",
+      "topic": "US Treasury proposal tightening outbound-investment review of China",
+      "statement": "US restrictions on investment in China are not conducive to China-US economic and trade cooperation, and will also harm the interests of American enterprises themselves.",
+      "original_zh": "美方限制對華投資，既不利於中美經貿合作，也會損害美國企業自身利益",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "US Treasury published a draft rule last Thursday adding biotechnology to restricted outbound-investment sectors and empowering itself to designate further industries.",
+      "source": "HKEJ, citing MOFCOM",
+      "url": "https://m.hkej.com/landing/mobarticle2/id/4546569/%E4%B8%AD%E5%9C%8B%E5%95%86%E5%8B%99%E9%83%A8:%E5%8F%8D%E5%B0%8D%E7%BE%8E%E5%9C%8B%E6%96%B0%E7%89%88%E5%B0%8D%E5%A4%96%E6%8A%95%E8%B3%87%E9%99%90%E5%88%B6%E6%93%AC%E8%AD%B0%E8%A6%8F%E5%89%87"
+    },
+    {
+      "body": "Xinhua commentary",
+      "body_chinese": "新华社",
+      "speaker": "Xinhua commentary",
+      "role": "Xinhua Commentary (新华时评)",
+      "topic": "81st anniversary of Taiwan's retrocession, cross-strait reunification",
+      "statement": "The Taiwan question arose from national weakness and turmoil, and will inevitably be resolved along with national rejuvenation.",
+      "original_zh": "台湾问题因民族弱乱而产生，必将随着民族复兴而解决。",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "Published as China marked the 81st anniversary of Taiwan's 1945 retrocession and the first anniversary of the official 'Taiwan Restoration Day' memorial, coinciding with the 55th anniversary of UN Resolution 2758.",
+      "source": "Xinhua commentary via China News Service",
+      "url": "https://www.chinanews.com.cn/ll/2026/10-24/10720388.shtml"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "CCP General Secretary",
+      "topic": "90th anniversary of the Long March; 'new Long March' framing ahead of Fifth Plenum",
+      "statement": "The new journey is an expedition filled with glory and dreams; it is the new Long March of the Party and the people.",
+      "original_zh": "新征程是充满光荣和梦想的远征，是党和人民的新长征。",
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "Remarks made at a Beijing commemoration of the 90th anniversary of the Red Army's Long March victory, cited in PLA Daily commentary published Sunday ahead of the Fifth Plenum.",
+      "source": "PLA Daily commentary",
+      "url": "http://www.mod.gov.cn/gfbw/jmsd/16495989.html"
+    },
+    {
+      "body": "PBOC",
+      "body_chinese": "中国人民银行",
+      "speaker": "Pan Gongsheng",
+      "role": "PBOC Governor",
+      "topic": "Policy rate benchmark shift to overnight repo rate",
+      "statement": "Per Sina Finance: Pan Gongsheng said the PBOC is studying when to shift its primary open-market operation tenor to overnight, making the overnight repo rate the main policy rate, and is pushing loan-pricing benchmarks to diversify beyond the LPR.",
+      "original_zh": null,
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "The PBOC rolled over only CNY700 billion of a CNY900 billion maturing MLF tranche on Oct 26, a CNY200 billion net drain, its first operation since Pan's remarks on the rate-anchor shift.",
+      "source": "Sina Finance, citing PBOC",
+      "url": "https://finance.sina.com.cn/stock/wbstock/2026-10-24/doc-iniwiyzn0388560.shtml"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "HH",
+      "who": "Hung Hsiu-chu (洪秀柱)",
+      "handle_context": "Former KMT Chairperson",
+      "platform_date": "Lianhe Zaobao · Oct 25, 2026",
+      "quote_text": "The mainland's military and people resisted Japan, and Taiwan's people also resisted Japan; when the War of Resistance achieved victory, both sides of the strait celebrated together.",
+      "analyst_note": "Hung made the remarks at a symposium in Fuzhou marking the 81st anniversary of Taiwan's 1945 retrocession from Japan.",
+      "badge_class": "sb-p",
+      "url": "https://www.zaobao.com.sg/news/china/story20261025-9891920"
+    },
+    {
+      "avatar_initials": "LD",
+      "who": "Landau",
+      "handle_context": "US Deputy Secretary of State",
+      "platform_date": "China Times · Oct 25, 2026",
+      "quote_text": "China is adopting a tougher posture toward Japan.",
+      "analyst_note": "Remarks made at the 13th 'Mt. Fuji Dialogue' in Tokyo, co-hosted by the Japan Center for Economic Research and the Japan Institute of International Affairs.",
+      "badge_class": "sb-r",
+      "url": "https://www.chinatimes.com/newspapers/20261025000326-260121"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Fujian Provincial Party Committee Deputy Secretary",
+      "name": "Lin Tao (林涛)",
+      "action": "appointed",
+      "detail": "The CCP Central Committee approved Lin Tao as deputy secretary of the Fujian provincial party committee.",
+      "predecessor": null
+    },
+    {
+      "position": "Fuzhou Municipal Party Secretary",
+      "name": "Qin Haixiang (秦海翔)",
+      "action": "appointed",
+      "detail": "Qin Haixiang was named a Fujian provincial standing committee member and Fuzhou party secretary.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.nytimes.com/2026/10/24/world/asia/north-korea-kim-jong-un-china.html",
+    "https://www.scmp.com/news/china/politics/article/3372065/beijing-commemorates-end-japanese-rule-over-taiwan-call-reunification"
+  ],
+  "story_count": 100,
+  "oped_count": 4,
+  "academic_count": 0,
+  "source_count": 75,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-25.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-25.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
