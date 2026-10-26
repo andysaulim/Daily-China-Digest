@@ -1,0 +1,563 @@
+{
+  "digest_date": "Monday, October 26, 2026",
+  "re_line": "RE: Fifth Plenum opens, record-low attendance · Kim visits Dandong · Liaoning nears US carrier · Yuan at 4-yr high",
+  "market_indicators": {
+    "brent": {
+      "value": "109.96",
+      "change_pct": 1.05,
+      "as_of": "Oct 26"
+    },
+    "usd_cnh": {
+      "value": "6.6679",
+      "change_pct": -0.0,
+      "as_of": "Oct 26"
+    },
+    "hang_seng": {
+      "value": "23,211.81",
+      "change_pct": -4.03,
+      "as_of": "Oct 26"
+    },
+    "usd_cny": {
+      "value": "6.6565",
+      "change_pct": -0.51,
+      "as_of": "Oct 26"
+    },
+    "sse_composite": {
+      "value": "3,697.52",
+      "change_pct": -1.01,
+      "as_of": "Oct 26"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "Xi Jinping opened the Fifth Plenum of the 20th Central Committee in Beijing Monday, with attendance estimated to fall to a record-low 77.4 percent amid his ongoing discipline campaign.",
+    "Kim Jong Un made a surprise same-day trip to Dandong on Oct. 24, crossing the newly opened China-DPRK bridge accompanied by CPPCC Chairman Wang Huning.",
+    "China's Liaoning carrier group sailed past the first island chain to within 25 nautical miles of the Philippines' Balut Island, positioning near ongoing US-Japan exercises involving the USS Theodore Roosevelt."
+  ],
+  "key_stat": {
+    "number": "77.4%",
+    "label": "Projected Fifth Plenum attendance rate",
+    "context": "The Asia Society Policy Institute estimates only 291 of 376 full and alternate Central Committee members will attend, down from 315 (83.8 percent) at last October's Fourth Plenum, which it called the lowest turnout of any plenum since the Mao era.",
+    "source": "Lianhe Zaobao / Asia Society Policy Institute, Oct 26"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC",
+      "action": "Establishes Bond Market NBFI Swap Facility (BNSF)",
+      "document": "Bond Market NBFI Swap Facility notice",
+      "detail": "PBOC announced a new facility allowing systemically important bank wealth-management units and public fund managers facing mass redemptions to borrow central bank bills against collateral to fund repurchases of redeemed bond holdings, aimed at stabilizing the bond market during systemic liquidity stress.",
+      "source_label": "PBOC ZH",
+      "url": "https://www.bjnews.com.cn/detail/1793005706129309.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC",
+      "action": "Releases September financial market data",
+      "document": null,
+      "detail": "PBOC's September report showed bond market turnover of 37.6 trillion yuan, the 10-year government bond yield at 1.68 percent at month-end, and the yuan at 6.7053 per dollar (up 0.22 percent from August); panda bond issuance reached 245.05 billion yuan for the first nine months of 2026.",
+      "source_label": "PBOC ZH",
+      "url": "https://m.sohu.com/a/1092973066_120109837?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM",
+      "action": "Seeks comment on draft rules countering foreign trade-secret infringement",
+      "document": "Special Provisions on Protecting Chinese Trade Secrets (Draft for Comment)",
+      "detail": "MOFCOM published for public comment draft rules letting Beijing restrict or ban foreign entities' trade, investment, and personnel visas or residency in China if found to harm Chinese sovereignty, security or development interests through trade-secret violations.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://www.hkej.com/instantnews/china/article/4547213/%E5%85%A7%E5%9C%B0%E5%B0%B1%E4%BF%9D%E8%AD%B7%E5%95%86%E6%A5%AD%E7%A7%98%E5%AF%86%E8%A6%8F%E5%AE%9A%E5%BE%B5%E6%B1%82%E6%84%8F%E8%A6%8B"
+    },
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "State Council General Office",
+      "action": "Issues guidance on AI and employment",
+      "document": "Opinions on Adapting to AI Technology Development to Build an Employment-Friendly Development Approach",
+      "detail": "The State Council General Office circulated guidance on adapting to AI technology development to support employment-friendly growth, per a notice on China's e-commerce policy portal; specific implementation targets were not detailed in available reporting.",
+      "source_label": "State Council ZH",
+      "url": "https://dzswgf.mofcom.gov.cn/news/43/2026/10/1792993862488.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "20th Central Committee (Fifth Plenum)",
+      "action": "Fifth Plenum opens with Xi's work report; attendance seen at record low",
+      "detail": "Xi Jinping delivered a work report on behalf of the Politburo to the Fifth Plenum, which runs Oct. 26-29 and focuses on 'unremittingly advancing full and rigorous party self-governance.' The Asia Society Policy Institute estimates attendance could fall to roughly 291 of 376 full and alternate members (77.4 percent), down from 315 (83.8 percent) at the Fourth Plenum, which it called the lowest plenum turnout since the Mao era.",
+      "url": "https://www.zaobao.com.sg/news/china/story20261026-9894390"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Oct",
+      "day": 29,
+      "headline": "Fifth Plenum concludes",
+      "detail": "The 20th Central Committee's Fifth Plenum, opened Oct. 26 with a work report from Xi Jinping on party discipline, is scheduled to close Thursday."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Control of Congress is at stake, with implications for China-related legislation and committee leadership, including the House Select Committee on the CCP."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal suspensions due to lapse",
+      "detail": "The one-year suspensions of the BIS Affiliates Rule and China's October 2025 rare-earth export controls are due to lapse around this date unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Leaders' Meeting, Shenzhen",
+      "detail": "China hosts the APEC Economic Leaders' Meeting Nov. 18-19; Trump attendance and any Trump-Xi meeting remain unconfirmed."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Taiwan holds elections for 22 mayors/magistrates and roughly 11,000 offices; prosecutors have logged over 2,300 vote-buying complaints ahead of the vote."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.washingtonpost.com/world/2026/10/26/japan-china-prime-minister-politics/78ac0c82-d11e-11f1-9931-2a41b76fc976_story.html",
+      "source": "WaPo China",
+      "category": "Diplomacy",
+      "headline": "Former Japanese PM Fukuda, China-ties advocate, dies at 90",
+      "body_text": "Former Japanese Prime Minister Fukuda Yasuo, who championed closer ties with Beijing, died Oct. 22 in Tokyo of heart failure, Japanese media reported. China's Foreign Ministry called him 'an old friend of the Chinese people' who contributed to improving bilateral relations."
+    },
+    {
+      "url": "https://www.cnn.com/travel/huajiang-bridge-china-tourism-intl-hnk",
+      "source": "CNN China",
+      "category": "Economy",
+      "headline": "World's highest bridge becomes tourism driver for rural Guizhou villages",
+      "body_text": "China's record-breaking Huajiang Bridge has transformed the economies of villages at its base as tourists flock to see it, CNN reports. Local residents have embraced the new visitor traffic following construction."
+    },
+    {
+      "url": "https://www.ft.com/content/8bf93407-6b93-4ebb-b54b-f290ebd563e3?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category": "Technology",
+      "headline": "Toyota commercializes humanoid robots to compete with Tesla, Chinese rivals",
+      "body_text": "Toyota is commercializing two decades of humanoid-robot research to compete with Tesla and Chinese manufacturers, the Financial Times reports. The move intensifies global competition in advanced robotics as Chinese firms accelerate development."
+    },
+    {
+      "url": "https://www.economist.com/science-and-technology/2026/10/25/china-increasingly-depends-on-copying-american-ai",
+      "source": "Economist China",
+      "category": "Technology",
+      "headline": "China's AI sector grows more reliant on copying US models, Economist finds",
+      "body_text": "The Economist reports that China's artificial-intelligence industry is becoming increasingly dependent on replicating American AI models rather than independent development. Further detail was not available from the published summary."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/markets/trading-asia/ai-stock-falls-are-sore-spot-for-china-s-self-reliance-strategy",
+      "source": "Nikkei Asia China",
+      "category": "Technology",
+      "headline": "AI profitability worries weigh on Chinese stocks despite self-reliance push",
+      "body_text": "Mounting concerns over AI profitability are weighing on Chinese equity markets even as homegrown AI remains central to Beijing's self-reliance strategy, Nikkei Asia reports. The pressure highlights tension between domestic tech ambitions and global AI valuation jitters."
+    },
+    {
+      "url": "https://www.scmp.com/business/banking-finance/article/3372140/top-bankers-gather-hong-kong-learn-how-city-has-been-rethinking-playbook",
+      "source": "SCMP",
+      "category": "Finance",
+      "headline": "280 global bank chiefs to gather in Hong Kong for finance summit",
+      "body_text": "About 280 of the world's top bankers, including 120 group chairmen and CEOs such as Morgan Stanley's Ted Pick, Goldman Sachs's David Solomon and Blackstone's John Gray, will attend Hong Kong's Global Financial Leaders' Invitational next week, HKMA chief Eddie Yue said Monday."
+    },
+    {
+      "url": "https://world.people.com.cn/n1/2026/1026/c1002-40821887.html",
+      "source": "People's Daily World ZH",
+      "category": "Diplomacy",
+      "headline": "Iceland's foreign minister to visit China Oct. 26-31",
+      "body_text": "Iceland's foreign minister will visit China from Oct. 26 to 31 at the invitation of Foreign Minister Wang Yi, China's Foreign Ministry announced Monday."
+    },
+    {
+      "url": "https://www.reuters.com/business/environment/large-fire-breaks-out-island-off-hong-kong-2026-10-26/",
+      "source": "Reuters China",
+      "category": "Safety",
+      "headline": "Fire breaks out at Hong Kong's offshore waste-to-energy plant",
+      "body_text": "A blaze broke out Monday at Hong Kong's Shek Kwu Chau waste-to-energy incinerator, prompting evacuation of close to 1,000 people and a No. 3 fire alarm. One staff member fell ill from heat; no other injuries were reported."
+    },
+    {
+      "url": "https://www.hkej.com/instantnews/china/article/4547395/%E6%88%BF%E5%9C%B0%E7%94%A2%E9%96%8B%E7%99%BC%E5%95%86%E7%8F%A0%E6%B5%B7%E8%8F%AF%E7%99%BC%E6%93%9A%E5%A0%B1%E5%B0%8B%E6%B1%82%E5%82%B5%E5%8B%99%E5%B1%95%E6%9C%9F",
+      "source": "HKEJ ZH",
+      "category": "Economy",
+      "headline": "State developer Zhuhai Huafa reportedly seeks debt-maturity extensions",
+      "body_text": "Zhuhai Huafa Group, one of China's largest local state-owned conglomerates, is negotiating with at least three Chinese banks to extend loan maturities and lower rates, Bloomberg reported via HKEJ. The company posted a 16.9 billion yuan loss last year, citing the property downturn."
+    },
+    {
+      "url": "https://www.hkej.com/instantnews/china/article/4546968/%E5%85%A7%E5%9C%B0%E9%8A%85%E6%A5%AD%E5%A4%A7%E4%BA%A8%E4%BD%95%E9%87%91%E7%A2%A7%E6%93%9A%E5%A0%B1%E8%A2%AB%E5%88%A4%E7%84%A1%E6%9C%9F%E5%BE%92%E5%88%91",
+      "source": "HKEJ ZH",
+      "category": "Legal",
+      "headline": "Copper trading tycoon He Jinbi sentenced to life for fraud",
+      "body_text": "He Jinbi, founder of Maike Metals International, was sentenced to life in prison by a Xi'an court for contract fraud, bribery-related offenses and other crimes, Bloomberg reported via HKEJ. The court found Maike's conduct exposed Chinese banks to more than $1 billion in potential losses; He has appealed."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261026-9896615",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "headline": "Democratic congressman says Taiwan arms sales were never a 'bargaining chip'",
+      "body_text": "Rep. Ami Bera (D-CA), ranking member on the House Foreign Affairs Asia-Pacific subcommittee and co-chair of the Congressional Taiwan Caucus, said treating Taiwan as a bargaining chip 'has never been US policy,' referencing the Trump administration's delay of a $14 billion arms package. Bera said Secretary of State Marco Rubio assured him Taiwan policy remains unchanged, but called President Trump's improvisational remarks 'a dangerous thing.'",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://cacs.mofcom.gov.cn/cacscms/article/ckys?articleId=189602&type=1",
+      "source": "商务部 (MOFCOM ZH)",
+      "headline": "US ITC completes third sunset review on Chinese diamond saw blade duties",
+      "body_text": "The US International Trade Commission completed its third sunset review of antidumping duties on Chinese diamond saw blades, China's Ministry of Commerce said Monday. The ruling continues the order as part of a trade-remedy case that has run multiple five-year review cycles.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "http://chinawto.mofcom.gov.cn/article/dh/janghua/202610/20261003646780.shtml",
+      "source": "WTO/FTA咨询网 (via MOFCOM ZH)",
+      "headline": "US opens antidumping, countervailing duty probe into Chinese amine compounds",
+      "body_text": "The US government initiated antidumping and countervailing duty investigations into Chinese amine compound exports, according to China's Ministry of Commerce trade portal. No further case details were disclosed in the notice.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://cn.nikkei.com/politicsaeconomy/politicsasociety/64473-2026-10-26-13-57-06.html",
+      "source": "日经中文网 (Nikkei Chinese ZH)",
+      "headline": "Pentagon designates Confucius Institutes a 'national security threat'",
+      "body_text": "The US Department of Defense designated Confucius Institutes a 'national security threat,' Nikkei's Chinese-language edition reported Monday. No additional detail on the designation's scope or effective date was available.",
+      "instrument": "Legal"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/26/2003866612",
+      "source": "Taipei Times",
+      "headline": "Taiwan prosecutors probe over 2,300 vote-buying cases ahead of Nov. 28 elections",
+      "body_text": "Taiwan's Supreme Prosecutors' Office said it has received 2,302 vote-buying reports involving 2,593 people as of Oct. 19, accounting for 35.9 percent of 6,415 election-related offenses reported ahead of the Nov. 28 nine-in-one local elections. Investigators are separately probing alleged vote-buying by Sioulin Township Mayor Wang Mei-kuei and her husband, Hu Chih-min, in Hualien County.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/26/2003866611",
+      "source": "Taipei Times",
+      "headline": "Taiwan to strip citizenship from Hongkongers aiding China transnational repression",
+      "body_text": "Any Hong Kongers who collaborate with China on transnational repression in Taiwan would have their Taiwanese citizenship or residency revoked, an official said, after prosecutors issued arrest warrants Oct. 7 for two Hongkongers accused of hiring investigators to surveil DPP Legislator Puma Shen in 2024. Two Taiwanese private investigators were indicted for illegally collecting Shen's personal data under the Personal Data Protection Act.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://news.china.com/socialgd/10000169/20261026/49819440.html",
+      "source": "中华网 (via MOFA presser ZH)",
+      "headline": "MOFA rejects Indian accusation that China undermined border peace",
+      "body_text": "China's foreign ministry rejected Indian accusations that Beijing is undermining border peace, calling on both sides to jointly maintain peace and tranquility, Chinese state media reported Monday. The exchange follows continued friction over disputed border areas between the two countries.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/indonesia-energy-minister-visit-china-india-ensure-gasoline-supply-2026-10-26/",
+      "source": "Reuters China",
+      "headline": "Indonesia's energy minister to visit China, India to secure gasoline supply",
+      "body_text": "Indonesia's energy minister plans to visit China and India this week to help secure gasoline supplies, Reuters reports, as Jakarta works to shore up fuel stocks.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-26/eu-plans-to-hit-china-with-more-import-curbs-in-early-2027",
+      "source": "Bloomberg China",
+      "headline": "EU plans additional import curbs on China for early 2027",
+      "body_text": "The European Union is preparing additional import restrictions targeting Chinese goods for early 2027, Bloomberg reports, extending Brussels' trade-defense measures following its cap on Chinese hybrid-vehicle imports at 350,000 units a year.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/26/2003866628",
+      "source": "Taipei Times",
+      "headline": "Taiwan historian: China's WWII revisionism aims to discredit modern Japan",
+      "body_text": "Beijing has promoted a 'manipulated version' of World War II history that exaggerates the CCP's wartime role, an unnamed historian told the Taipei Times, calling it part of a 'public opinion offensive against modern-day Japan.' The academic cited Mao Zedong's own 1961 remarks thanking Japanese militarism for creating the conditions for the CCP's rise, from the official Selected Works on Diplomacy of Mao Zedong.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-26/soybeans-hit-2-month-low-as-lula-s-win-lifts-china-trade-outlook",
+      "source": "Bloomberg China",
+      "headline": "Soybean prices fall as Lula's win lifts China-Brazil trade outlook",
+      "body_text": "Soybean futures fell to a two-month low after Brazilian President Lula's election win raised expectations for expanded China-Brazil agricultural trade, Bloomberg reports.",
+      "region": "Latin America"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-25/byd-s-korea-expansion-challenges-hyundai-dominance-on-home-turf",
+      "source": "Bloomberg China",
+      "headline": "BYD's South Korea expansion challenges Hyundai on home turf",
+      "body_text": "Chinese automaker BYD is expanding aggressively in South Korea, challenging Hyundai's dominance in its home market, Bloomberg reports.",
+      "region": "Korea"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.afp.com/en/chinas-communist-party-elite-gather-governance-talks",
+      "source": "AFP China",
+      "category_tag": "Diplomacy",
+      "headline": "Fifth Plenum opens in Beijing with roughly 300 Central Committee members",
+      "body": "**Xi Jinping** opened the fifth plenum of the 20th Central Committee Monday, with roughly *300* Central Committee members attending a four-day session running through Thursday focused on tightening party discipline and reducing corruption. State media published remarks from a January speech in which Xi attacked \"two-faced\" officials who \"inwardly resist\" central directives. The plenum precedes the 2027 Party Congress, where the 73-year-old Xi is expected to secure a fourth term and oversee a leadership reshuffle.",
+      "src_line": "AFP, Oct 26"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/26/world/asia/china-communist-party-xi-forever-purge.html",
+      "source": "NYT Asia (direct)",
+      "category_tag": "Diplomacy",
+      "headline": "Xi's purges widen ahead of 2027 congress, suspicion reaching into top leadership",
+      "body": "**Xi Jinping**, preparing to secure a fourth term in 2027, continues to complain that officials remain untrustworthy, the New York Times reports. A companion Chinese-language NYT report says the investigation into **Huang Qifan** has unsettled the party, with Xi's suspicion potentially extending to figures as senior as **Wang Qishan**.",
+      "src_line": "NYT, Oct 26"
+    },
+    {
+      "url": "https://www.wsj.com/world/asia/kim-jong-un-makes-surprise-trip-to-china-crosses-new-bridge-3d0f7069",
+      "source": "WSJ China",
+      "category_tag": "Indo-Pacific",
+      "headline": "Kim Jong Un makes surprise same-day trip to China, crosses new Yalu bridge",
+      "body": "North Korean leader **Kim Jong Un** crossed the newly opened China-DPRK bridge into Dandong on Oct. 24 for his first visit to China in over a year, accompanied throughout by CPPCC Chairman **Wang Huning**, Chinese state media reported. Kim attended a ceremony honoring Chinese People's Volunteers martyrs before returning to North Korea the same day; MOFA said Monday it would continue to work with the DPRK side to advance bilateral relations.",
+      "src_line": "WSJ; MOFA presser ZH, Oct 26"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3372078/chinas-liaoning-aircraft-carrier-and-uss-theodore-roosevelt-converge-philippine-sea",
+      "source": "SCMP China",
+      "category_tag": "PLA",
+      "headline": "Liaoning carrier group nears US carrier in Philippine Sea",
+      "body": "China's **Liaoning** aircraft carrier strike group sailed beyond the first island chain last week, reaching waters roughly *25 nautical miles* east-southeast of Balut Island, the Philippines' southernmost point, before turning northeast on Friday, Philippine broadcaster BNC reported. The positioning placed the Chinese carrier group near ongoing US-Japan exercises involving the USS Theodore Roosevelt.",
+      "src_line": "SCMP, Oct 26"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/chinas-yuan-climbs-fresh-4-year-high-ahead-key-policy-meetings-2026-10-26/",
+      "source": "Reuters China",
+      "category_tag": "PRC-Economy",
+      "headline": "Yuan climbs to fresh four-year high ahead of Fifth Plenum, Fed decision",
+      "body": "China's yuan strengthened to its strongest level in *four years* on Monday, Reuters reports, as markets position ahead of the Fifth Plenum in Beijing and this week's Federal Reserve, European Central Bank and Bank of Japan rate decisions.",
+      "src_line": "Reuters, Oct 26"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/chinese-beauty-brands-flush-with-success-home-start-vie-global-shelf-space-2026-10-26/",
+      "source": "Reuters China",
+      "category": "Economy",
+      "headline": "Chinese beauty brands push into global retail shelf space",
+      "body_text": "Chinese cosmetics brands are expanding abroad after success at home, competing for shelf space in international markets, Reuters reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/chinas-domestic-car-sales-seen-rising-2-2027-after-2026-slump-2026-10-26/",
+      "source": "Reuters China",
+      "category": "Auto",
+      "headline": "China's domestic car sales forecast to rise 2% in 2027",
+      "body_text": "Analysts expect China's domestic car sales to rise 2 percent in 2027 after a 2026 slump, Reuters reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/science/article/3371763/tibetan-river-hosting-worlds-biggest-dam-facing-increasing-flood-risk-study",
+      "source": "SCMP",
+      "category": "Energy",
+      "headline": "Study flags rising flood risk for river hosting world's biggest dam",
+      "body_text": "Tree-ring data show rising runoff and flood risk for the Yarlung Tsangpo River, future site of the world's largest dam, SCMP reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://taiwan.huanqiu.com/article/4TlkMshMzzs",
+      "source": "环球时报 (Global Times ZH)",
+      "category": "Cross-Strait",
+      "headline": "Taiwan groups urge youth to study Japanese colonial history in Fujian talks",
+      "body_text": "Taiwanese commemoration groups marked Taiwan Retrocession Day in Fuzhou, urging young people to learn the history of anti-Japanese resistance, Global Times reports.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_c8a06a980a894f438bf9491c32e81d86.html",
+      "source": "商务部 (MOFCOM ZH)",
+      "category": "Economy",
+      "headline": "MOFCOM reports on China's Jan-Sept wholesale, retail sector performance",
+      "body_text": "MOFCOM's circulation development department briefed on wholesale and retail sector trends for the first nine months of 2026.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-26/chinese-carmakers-overtake-japan-europe-byd-chery-toyota-nissan",
+      "source": "Bloomberg China",
+      "headline": "Chinese carmakers overtake Japan in Europe for first time",
+      "body_text": "**BYD** and **Chery** helped Chinese automakers overtake Japanese rivals in Europe for the first time, Bloomberg reports, as Toyota and Nissan lose share to Chinese EV makers.",
+      "companies": [
+        "BYD",
+        "Chery",
+        "Toyota",
+        "Nissan"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.ft.com/content/fa2bdd53-29dc-4e3f-bbd2-5510da3cd88c?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "Ming Yang builds 'European firewall' to reassure wind-turbine customers",
+      "body_text": "Chinese wind turbine maker **Ming Yang** is building a joint venture with Octopus and separate legal entities, aiming to convince customers Beijing cannot access operational data, the Financial Times reports.",
+      "companies": [
+        "Ming Yang",
+        "Octopus"
+      ],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.wsj.com/health/pharma/bayer-gets-in-china-its-first-global-approval-for-stroke-prevention-drug-318727bd",
+      "source": "WSJ China",
+      "headline": "Bayer gets first global approval for stroke-prevention drug in China",
+      "body_text": "**Bayer** received its first global regulatory approval for a stroke-prevention drug in China, the Wall Street Journal reports, making China the lead market for the treatment's rollout.",
+      "companies": [
+        "Bayer"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-26/china-boosts-self-driving-push-with-vw-xpeng-technology-trials",
+      "source": "Bloomberg China",
+      "headline": "China runs VW, Xpeng self-driving technology trials",
+      "body_text": "**Volkswagen** and **Xpeng** are running joint self-driving technology trials in China, Bloomberg reports, as Beijing pushes automakers toward autonomous-driving capability.",
+      "companies": [
+        "Volkswagen",
+        "Xpeng"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-26/china-national-team-etfs-draw-most-inflows-since-trade-war-rout",
+      "source": "Bloomberg China",
+      "headline": "China 'national team' ETFs draw biggest inflows since trade-war rout",
+      "body_text": "China's state-linked 'national team' ETFs drew their largest inflows since the trade-war stock rout, Bloomberg reports, as Beijing-backed funds moved to support equities ahead of the Fifth Plenum.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-26/morgan-stanley-sees-further-china-stock-downside-before-bottom",
+      "source": "Bloomberg China",
+      "headline": "Morgan Stanley sees further China stock downside before bottom",
+      "body_text": "**Morgan Stanley** strategists said China's stock market faces further downside before reaching a bottom, Bloomberg reports.",
+      "companies": [
+        "Morgan Stanley"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-25/chinese-manufacturer-dongshan-raises-1-3-billion-in-hk-listing",
+      "source": "Bloomberg China",
+      "headline": "Chinese PCB maker Dongshan raises $1.3 billion in HK listing",
+      "body_text": "Chinese PCB maker **Dongshan** raised *$1.3 billion* in a Hong Kong listing, Bloomberg reports.",
+      "companies": [
+        "Dongshan"
+      ],
+      "sector": "manufacturing"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "China-DPRK relations following Kim Jong Un's Dandong visit",
+      "statement": "China is willing to continue working together with the DPRK side to advance China-DPRK relations continuously forward.",
+      "original_zh": "愿继续同朝方一道推动中朝关系不断向前发展",
+      "addressed_to": "other",
+      "tone": "routine",
+      "context": "Kim Jong Un crossed the newly opened China-DPRK bridge into Dandong on Oct. 24, accompanied by CPPCC Chairman Wang Huning, for his first China visit in over a year.",
+      "source": "MOFA presser ZH",
+      "url": "https://www.sohu.com/a/1092917986_203783?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Condolences on death of former Japanese PM Fukuda Yasuo",
+      "statement": "Mr. Fukuda Yasuo was an old friend of the Chinese people who made positive contributions to improving and developing China-Japan relations.",
+      "original_zh": "福田康夫先生是中国人民的老朋友，为推动中日关系改善发展作出积极贡献",
+      "addressed_to": "Japan",
+      "tone": "conciliatory",
+      "context": "Fukuda, Japan's prime minister from 2007 to 2008, died Oct. 22 in Tokyo at age 90 of heart failure.",
+      "source": "People's Daily World ZH",
+      "url": "http://world.people.com.cn/n1/2026/1026/c1002-40821749.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "ASEAN Defense Ministers' Meeting-Plus",
+      "statement": "Per MOFA: China opposes any force 'hijacking' ASEAN or stirring up trouble within the bloc.",
+      "original_zh": "反对任何势力绑架东盟，搅局生事",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "The comment responded to questions about China's participation in the expanded ASEAN defense ministers' meeting.",
+      "source": "MOFA presser ZH",
+      "url": "https://m.sohu.com/a/1092947743_119038?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "TAO spokesperson",
+      "topic": "Criticism of Taiwan entertainer Kevin Tsai's campaign appearance",
+      "statement": "Per Taipei Times: TAO criticized those who sought to benefit from the Chinese market while maintaining ties with what it called 'Taiwan independence forces.'",
+      "original_zh": null,
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "TV host Kevin Tsai attended the Oct. 4 campaign launch of DPP Taipei mayoral candidate Puma Shen, drawing backlash from Chinese social media users and some Chinese companies.",
+      "source": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/26/2003866645"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "AB",
+      "who": "Ami Bera",
+      "handle_context": "US Representative (D-CA), ranking member House Foreign Affairs Asia-Pacific Subcommittee; Congressional Taiwan Caucus co-chair",
+      "platform_date": "Lianhe Zaobao, Oct 26",
+      "quote_text": "Treating Taiwan as a bargaining chip has never been US policy.",
+      "analyst_note": "Trump said after the May 2026 Beijing summit that a $14 billion second Taiwan arms package was 'very good bargaining chips'; it remains unapproved, per the Zaobao report.",
+      "badge_class": "sb-p",
+      "url": "https://www.zaobao.com.sg/news/china/story20261026-9896615"
+    },
+    {
+      "avatar_initials": "MZ",
+      "who": "Zakharova",
+      "handle_context": "Russian Foreign Ministry spokesperson",
+      "platform_date": "Xinhua ZH, Oct 26",
+      "quote_text": "The Japanese government has not apologized, and does not even intend to acknowledge the results of World War II.",
+      "analyst_note": "Zakharova's remarks were carried by Xinhua on Oct. 26 and warned that Japan's 'revanchist line' would bring serious consequences.",
+      "badge_class": "sb-r",
+      "url": "https://www.news.cn/world/20261026/cf363c44005f453daad519ba2d8f116d/c.html"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.scmp.com/news/china/military/article/3372078/chinas-liaoning-aircraft-carrier-and-uss-theodore-roosevelt-converge-philippine-sea",
+    "https://www.wsj.com/world/asia/kim-jong-un-makes-surprise-trip-to-china-crosses-new-bridge-3d0f7069",
+    "https://www.taipeitimes.com/News/front/archives/2026/10/26/2003866611"
+  ],
+  "story_count": 100,
+  "oped_count": 7,
+  "academic_count": 0,
+  "source_count": 88,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-26.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-26.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
