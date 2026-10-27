@@ -1,0 +1,565 @@
+{
+  "digest_date": "Tuesday, October 27, 2026",
+  "re_line": "Fifth Plenum opens · Alibaba beats Pentagon blacklist · Taiwan rebuffs Beijing · India border flare-up",
+  "market_indicators": {
+    "usd_cny": {
+      "value": "6.6559",
+      "change_pct": -0.33,
+      "as_of": "Oct 27"
+    },
+    "usd_cnh": {
+      "value": "6.6659",
+      "change_pct": -0.01,
+      "as_of": "Oct 27"
+    },
+    "hang_seng": {
+      "value": "23,041.32",
+      "change_pct": -3.46,
+      "as_of": "Oct 27"
+    },
+    "brent": {
+      "value": "110.04",
+      "change_pct": -2.77,
+      "as_of": "Oct 27"
+    },
+    "sse_composite": {
+      "value": "3,648.30",
+      "change_pct": -1.74,
+      "as_of": "Oct 27"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "Opened: China's Fifth Plenum convened in Beijing on Oct. 26, with People's Daily and PLA Daily commentaries demanding the Party 'persist unswervingly' in anti-corruption discipline ahead of the 2027 congress.",
+    "Won: A US federal judge granted Alibaba a preliminary injunction barring the Pentagon from denying it contracts over its China-military blacklisting, boosting its separate suit against the designation itself.",
+    "Rebuffed: Taiwan rejected Beijing's framing of its 1945 'restoration' as TAO director Song Tao told a Fuzhou ceremony that reunification remains the goal, while Taipei's Mainland Affairs Council said only that 'the Republic of China will continue to exist.'"
+  ],
+  "key_stat": {
+    "number": "395%",
+    "label": "ZTE's year-on-year Q3 net profit growth",
+    "context": "Net profit reached 1.31 billion yuan ($196.3 million) on 34% revenue growth, driven by computing-infrastructure and overseas expansion, contrasting with the outlook cuts Mercedes-Benz, BMW and Volkswagen reported for their China auto operations the same day.",
+    "source": "SCMP"
+  },
+  "prc_government": [
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "Li Chenggang (李成钢), Vice Minister of Commerce and International Trade Representative",
+      "action": "MOFCOM vice minister calls for reshaping 'more resilient' global value chains",
+      "document": null,
+      "detail": "Li told the 9th World Investment Forum in Doha (Oct. 25-27) that global value chains face risks from fragmentation, politicization and the marginalization of developing countries, and urged upholding multilateralism and support for the Global South's integration into supply chains.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_37da2d8e672e4c1e9e733ecaf31231d8.html"
+    },
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (unspecified)",
+      "action": "PBOC creates new swap facility to backstop bond market, calls it 'emergency support, not a bailout'",
+      "document": "PBOC Announcement [2026] No. 28",
+      "detail": "The central bank unveiled a swap facility letting securities firms and non-bank institutions facing large redemptions exchange assets for liquidity, framed by Chinese financial media as targeted support rather than an open-ended guarantee (救急不兜底).",
+      "source_label": "PBOC ZH (via Wallstreet CN)",
+      "url": "https://wallstreetcn.com/articles/3784539"
+    },
+    {
+      "ministry": "Ministry of National Defense",
+      "ministry_chinese": "国防部",
+      "official": "MND (unnamed spokesperson)",
+      "action": "China to send Manila-based defense attaché to 13th ADMM-Plus meeting",
+      "document": null,
+      "detail": "China's defense ministry said its military attaché posted in the Philippines will attend the 13th ASEAN Defense Ministers' Meeting-Plus, without elaborating on agenda items.",
+      "source_label": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16496447.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Control of the US House and Senate is at stake in the final two years of the Trump term, shaping the China policy agenda in Congress."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal export control suspensions set to lapse",
+      "detail": "The one-year suspension of BIS's Affiliates Rule and China's October 2025 rare-earth export controls is due to expire around Nov. 10 unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Leaders' Meeting opens in Shenzhen",
+      "detail": "China hosts APEC Nov. 18-19 under the theme 'Open, Innovation, Cooperation'; PLA Daily commentary previewed roughly 300 'APEC China Year' events, including the Suzhou trade ministers' statement."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Twenty-two mayoral and magistrate races, including the Taipei contest involving DPP candidate Puma Shen, will be read as a mid-term on President Lai Ching-te."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "China's annual state commemoration of the 1937 Nanjing Massacre."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.reuters.com/world/china/china-ai-bubble-has-already-burst-2026-10-26/",
+      "source": "Reuters China",
+      "category": "Technology",
+      "headline": "Reuters: China's AI Investment Boom 'Has Already Burst'",
+      "body_text": "Reuters reported that China's artificial intelligence investment boom has already peaked and begun to deflate. The report did not elaborate on specific companies or valuations in the available text."
+    },
+    {
+      "url": "https://www.scmp.com/tech/big-tech/article/3372231/zte-7-after-ai-pivot-computing-surge-drive-fivefold-increase-third-quarter-profit",
+      "source": "SCMP",
+      "category": "Technology",
+      "headline": "ZTE Shares Jump 7% on Fivefold Third-Quarter Profit Surge",
+      "body_text": "ZTE shares rose more than 7 percent in Hong Kong after the telecom equipment maker posted a *395 percent* jump in third-quarter net profit to 1.31 billion yuan ($196.3 million). Revenue climbed 34 percent, driven by computing infrastructure and overseas expansion."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/markets/currencies/ai-and-oil-worries-rattle-asian-currencies-from-taiwan-to-philippines",
+      "source": "Nikkei Asia China",
+      "category": "Finance",
+      "headline": "AI and Oil Price Worries Rattle Asian Currencies From Taiwan to Philippines",
+      "body_text": "Asian currencies including the Taiwan dollar and Philippine peso are weakening on concerns about AI-sector overinvestment and rising oil prices, Nikkei reported. Regional central banks have so far avoided major policy responses."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3372184/can-hong-kong-deliver-trying-build-its-yuan-credentials",
+      "source": "SCMP",
+      "category": "Finance",
+      "headline": "Hong Kong's Yuan Push Builds Offshore Market Infrastructure",
+      "body_text": "Hong Kong is reforming market infrastructure, including a larger offshore renminbi ecosystem, to advance yuan internationalization, SCMP reported. Chief Executive John Lee's first five-year plan, unveiled in September, named the push a strategic priority."
+    },
+    {
+      "url": "https://chinadigitaltimes.net/2026/10/translation-on-the-maextro-v800-brake-pedal-scandal-the-counterattacks-against-dongchedi-have-begun/",
+      "source": "China Digital Times",
+      "category": "Technology/Censorship",
+      "headline": "Censorship Campaign Targets Reviewer That Exposed Huawei-JAC EV Brake Flaw",
+      "body_text": "Faulty brake-pedal brackets on the Huawei/JAC-built Maextro V800 EV triggered online censorship, deleted opinion pieces and a government investigation, China Digital Times reported. A coordinated campaign has also sought to discredit Dongchedi, the review platform that first exposed the defect."
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/27/china-fiscal-debt-gdp-imf-real-estate-.html",
+      "source": "CNBC China",
+      "category": "PRC-Economy",
+      "headline": "China's Local Government Debt Strains Deepen as Fiscal Room Narrows",
+      "body_text": "Heavily indebted local governments are cutting back spending even as Beijing retains room to borrow at the central level, CNBC reported. The divergence raises the stakes for growth and for how China manages local debt tied to its property downturn."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/10/27/2003866660",
+      "source": "Taipei Times (direct)",
+      "category": "Automotive",
+      "headline": "Chinese Automakers Outsell Japanese Rivals in Europe for First Full Quarter",
+      "body_text": "Chinese brands captured *12.7 percent* of European car sales in Q3, led by hybrids, edging past Japanese makers' 11.9 percent, Taipei Times reported citing Dataforce. Chinese brands' share hit a record 14.5 percent in September, up from barely 1 percent five years ago."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.reuters.com/world/china/china-says-it-opposes-us-stigmatisation-confucius-institutes-after-pentagon-2026-10-26/",
+      "source": "Reuters China",
+      "headline": "China Rejects Pentagon Labeling of Confucius Institutes as Security Threat",
+      "body_text": "China's foreign ministry said it opposes the Pentagon's 'stigmatisation' of Confucius Institutes after the US defense department labeled the Chinese-funded centers a security threat, Reuters reported Oct. 26. Further detail on China's specific objections was not given in initial reporting.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://sinocism.com/p/fifth-plenum-begins-october-politburo",
+      "source": "Sinocism",
+      "headline": "US Treasury Proposes Tougher Outbound Investment Rules Targeting China",
+      "body_text": "Per Sinocism's roundup, the US Treasury proposed stricter outbound investment rules aimed at China, building on the EO 14105 program restricting US investment in PRC semiconductors, quantum computing and AI. The issue did not detail the proposed rule's specific scope or timeline.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://www.yahoo.com/news/world/articles/kremlin-begun-preparations-meeting-between-132800017.html",
+      "source": "Yahoo",
+      "headline": "Kremlin Says Preparations Underway for Possible Putin-Trump-Xi Summit",
+      "body_text": "The Kremlin said it has begun preparations for a potential summit involving **Vladimir Putin**, Donald Trump and Xi Jinping, according to wire reports. No date, venue or agenda was confirmed in initial reporting.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/feat/archives/2026/10/27/2003866672",
+      "source": "Taipei Times (direct)",
+      "headline": "Taiwan Faces $29.72 Billion US Arms Backlog Despite New F-16V Deliveries",
+      "body_text": "Taiwan received its first two F-16V Block 70 jets Oct. 2 at Chihhang Air Base, part of a 66-aircraft order, Taipei Times reported; the jets' Viper Shield electronic warfare suite remains only partly installed. Taiwan Security Monitor estimates a *$29.72 billion* US arms-order backlog against a legislature-approved framework authorizing up to NT$780 billion in purchases through 2033.",
+      "instrument": "Military"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/27/2003866686",
+      "source": "Taipei Times (direct)",
+      "headline": "Beijing Pressures Businesses Tied to Taipei Mayoral Candidate Puma Shen",
+      "body_text": "China is pressuring people and companies associated with DPP Taipei mayoral candidate **Puma Shen**, a source familiar with national security cases told the Taipei Times, after TV host Kevin Tsai attended Shen's campaign launch and faced backlash. Tsai apologized Oct. 25 and his 36-million-follower Weibo account was emptied of content, per Chinese media reports.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://apnews.com/article/japan-china-prime-minister-politics-7b036fa04eb545214572136f145ed0c3",
+      "source": "AP China",
+      "headline": "Former Japanese PM Yasuo Fukuda, Proponent of China Ties, Dies at 90",
+      "body_text": "Former Japanese prime minister **Yasuo Fukuda**, who signed the fourth China-Japan political document during his term and later chaired the Boao Forum for Asia, died at 90, AP reported. Xi Jinping sent a condolence message calling him 'a man of good faith and responsibility' and 'an old friend of the Chinese people,' per Xinhua.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.voachinese.com/a/china-indonesia-to-hold-sharp-blade-2026-joint-military-exercise-20261026/8215392.html",
+      "source": "美国之音中文 (VOA Chinese ZH)",
+      "headline": "China, Indonesia Launch 'Sharp Blade-2026' Counter-Terrorism Exercise",
+      "body_text": "China and Indonesia opened a joint army counter-terrorism exercise, 'Sharp Blade-2026,' VOA's Chinese service reported, with analysts saying Beijing intends to counterbalance the Philippines in the region. The exercise follows China's defense ministry confirming a separate opening ceremony for the drill.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.japantimes.co.jp/news/2026/10/27/japan/koizumi-asean-china/",
+      "source": "Japan Times China",
+      "headline": "Japan's Koizumi Heads to Philippines for ASEAN Defense Talks",
+      "body_text": "Japan's **Koizumi** is traveling to the Philippines for ASEAN defense talks, the Japan Times reported. A bilateral meeting with Chinese counterparts there is considered unlikely.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-27/merz-pitches-closer-ties-with-asia-warns-on-pressure-from-china",
+      "source": "Bloomberg China",
+      "headline": "Germany's Merz Pitches Closer EU-Asia Ties, Warns of China Pressure",
+      "body_text": "German Chancellor **Merz** called for closer EU ties with Asia and warned of pressure from China, Bloomberg reported. The remarks pair a push for stronger Asia ties with an explicit caution about Chinese economic leverage.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://weekly.caixin.com/2026-10-24/102496746.html",
+      "source": "财新 (Caixin ZH)",
+      "headline": "China, EU Hold Second Trade-Investment Consultation, Agree to Meet Again in March 2027",
+      "body_text": "Commerce Minister **Wang Wentao** and EU trade commissioner Maroš Šefčovič held the second meeting of the China-EU trade and investment consultation mechanism in Beijing Oct. 8-9, Caixin reported, covering export controls, intellectual property and WTO reform. The two sides agreed to hold a third round in March 2027, with a ministerial video call in January.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/27/arctic-shipping-china-and-russia-expand-grip-can-europe-fight-back.html",
+      "source": "CNBC China",
+      "headline": "China and Russia Tighten Grip on Arctic Shipping Routes",
+      "body_text": "China and Russia are expanding control over Arctic shipping lanes as warming opens new routes, CNBC reported, turning the region into a geopolitical contest with Europe. The report frames the Arctic as a new front in great-power competition over trade corridors.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.qstheory.cn/20261027/720d3c8e4962439ca1e23984f13c0029/c.html",
+      "source": "求是 (Qiushi ZH)",
+      "headline": "Xi Congratulates Lula on Brazil Re-Election, Cites 'China-Brazil Community of Destiny'",
+      "body_text": "Xi Jinping sent a congratulatory message to **Lula** after his re-election as Brazil's president, Xinhua reported, saying Lula 'has made important contributions to advancing China-Brazil relations.' Xi cited progress on a 'more just world and more sustainable planet' community-of-destiny framework between the two countries.",
+      "region": "Latin America"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/world/china/chinas-communist-party-opens-fifth-plenum-2026-10-26/",
+      "source": "Reuters China",
+      "category_tag": "PRC-Economy",
+      "headline": "Fifth Plenum Opens in Beijing With Xi Pressing Party Discipline",
+      "body": "The Fifth Plenum of the 20th Central Committee convened in Beijing on Oct. 26, with **Xi Jinping** presiding over a session focused on anti-corruption and 'full and strict governance of the Party,' Reuters reported. The appearance ends a *52-day* gap since Xi's last confirmed public appearance, according to tracking data. People's Daily's signed 任仲平 commentary and PLA Daily both reiterated the discipline theme ahead of the 21st Party Congress in 2027.",
+      "src_line": "Reuters; People's Daily; PLA Daily"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-27/alibaba-wins-challenge-to-pentagon-s-chinese-army-blacklisting",
+      "source": "Bloomberg China",
+      "category_tag": "Sanctions",
+      "headline": "US Judge Grants Alibaba Injunction Against Pentagon Blacklist Contract Curbs",
+      "body": "A US federal judge on Oct. 26 granted **Alibaba** a preliminary injunction barring the Pentagon from denying it federal contracts over its placement on a list of firms allegedly aiding China's military. Alibaba sued the US government in June after the designation, which also named Baidu, BYD and other Chinese firms; the company had fired dozens of its Washington lobbyists in response before Monday's ruling.",
+      "src_line": "Bloomberg; CNA"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/taiwan-rebuffs-chinas-commemorations-post-world-war-two-restoration-island-2026-10-27/",
+      "source": "Reuters China",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan Rejects Beijing's Framing of 1945 'Restoration' Commemorations",
+      "body": "Taiwan's government rebuffed Chinese commemorations marking the 81st anniversary of what Beijing calls Taiwan's 1945 'retrocession' from Japan, Reuters reported. Taiwan Affairs Office director **Song Tao** told a Fuzhou ceremony Oct. 25 that the event was 'an important achievement of China's victory in the War of Resistance against Japan' and reaffirmed Beijing's push for 'national reunification'; Taiwan's Mainland Affairs Council responded only that 'the Republic of China will continue to exist.'",
+      "src_line": "Reuters; HK01"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3372296/fragile-india-china-thaw-tested-reported-fresh-himalayan-border-face-offs",
+      "source": "SCMP China",
+      "category_tag": "Indo-Pacific",
+      "headline": "India Reports Fresh Border Face-Offs With Chinese Troops in Arunachal Pradesh",
+      "body": "**Shatrujeet Kapur**, director general of India's Indo-Tibetan Border Police, said 'confrontations with Chinese troops were continuing at multiple locations along the Arunachal Pradesh border,' SCMP reported. The reported face-offs test a fragile rapprochement between Beijing and New Delhi.",
+      "src_line": "SCMP"
+    },
+    {
+      "url": "https://www.wsj.com/economy/chinas-industrial-profit-growth-surged-in-september-fc3b5d58",
+      "source": "WSJ China",
+      "category_tag": "PRC-Economy",
+      "headline": "China's Industrial Profits Post Fastest Growth in Three Months",
+      "body": "China's industrial profit growth accelerated in September to its fastest pace in three months, the WSJ reported. CNBC and Bloomberg attributed the gain to the AI boom and higher commodity prices tied to the Iran war, which lifted earnings at miners, chipmakers and raw-material suppliers even as broader consumer demand stayed weak.",
+      "src_line": "WSJ; CNBC; Bloomberg"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.reuters.com/business/media-telecom/mbappe-dropped-by-chinese-brands-over-alleged-mao-meme-comments-2026-10-27/",
+      "source": "Reuters China",
+      "category": "Diplomacy",
+      "headline": "Chinese Brands Cut Ties With Mbappé Over Alleged Mao Remark",
+      "body_text": "Dongpeng and Mengniu ended endorsement deals with Kylian Mbappé after a video surfaced of him joking about an image resembling Mao Zedong.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/volkswagen-considers-using-chinese-software-europe-report-says-2026-10-26/",
+      "source": "Reuters China",
+      "category": "Technology",
+      "headline": "Volkswagen Considers Chinese Software for European Models",
+      "body_text": "Volkswagen is weighing the use of Chinese-developed software in vehicles sold in Europe, Reuters reported.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.asahi.com/ajw/articles/16996598",
+      "source": "Reuters China",
+      "category": "Technology",
+      "headline": "China's Lab-Grown Diamond Makers Target AI, Chip Sectors",
+      "body_text": "Chinese lab-grown diamond producers are pivoting toward AI and semiconductor applications as a new growth driver, Reuters reported.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3372189/taiwan-looks-autonomous-swarms-counter-beijings-grey-zone-pressure",
+      "source": "SCMP China",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Tests AI Drone Swarm to Counter Beijing's Grey-Zone Pressure",
+      "body_text": "Taiwan's Ocean Affairs Council completed a 20-aircraft drone-swarm simulation for coastguard surveillance against Chinese grey-zone activity.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202610270005",
+      "source": "Focus Taiwan",
+      "category": "Diplomacy",
+      "headline": "Saint Lucian Prime Minister Arrives in Taiwan for State Visit",
+      "body_text": "Saint Lucia's prime minister began a state visit to Taiwan, Taiwan's foreign ministry said, underscoring one of Taipei's remaining diplomatic allies.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/japan-s-sakana-ai-to-build-homegrown-model-to-cut-us-china-reliance",
+      "source": "Nikkei Asia China",
+      "category": "Technology",
+      "headline": "Japan's Sakana AI to Build Homegrown Model, Cutting US, China Reliance",
+      "body_text": "Japanese AI startup Sakana AI said it will develop proprietary models from scratch to reduce dependence on US and Chinese AI technology.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://news.china.com/socialgd/10000169/20261027/49820365.html",
+      "source": "中华网 (China.com ZH)",
+      "category": "Cross-Strait",
+      "headline": "TAO Adds 14 Individuals to Taiwan-Independence Sanctions List",
+      "body_text": "China's Taiwan Affairs Office sanctioned 14 more people it called 'diehard Taiwan independence elements,' without naming them.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://thediplomat.com/2026/10/taiwan-vatican-ties-the-dynamic-interplay-under-pope-leo-xiv/",
+      "source": "The Diplomat China",
+      "category": "Cross-Strait",
+      "headline": "Taiwan-Vatican Ties Examined Under Pope Leo XIV",
+      "body_text": "The Diplomat examined Taiwan's diplomatic relationship with the Holy See, one of Taipei's last official partners, under Pope Leo XIV.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/china-proposes-measures-against-foreign-entities-infringement-trade-secrets-2026-10-26/",
+      "source": "Reuters China",
+      "category": "Legal/Trade",
+      "headline": "China Proposes New Measures Against Foreign Entities' Trade Secret Infringement",
+      "body_text": "China proposed new measures targeting foreign entities accused of infringing domestic trade secrets, Reuters reported. Specific enforcement mechanisms were not detailed in available reporting."
+    },
+    {
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/gsk-hansohs-bone-cancer-drug-delays-disease-progression-late-stage-china-study-2026-10-26/",
+      "source": "Reuters China",
+      "category": "Health/Pharma",
+      "headline": "GSK, Hansoh's Bone Cancer Drug Delays Progression in Late-Stage China Study",
+      "body_text": "A bone cancer drug developed by GSK and China's Hansoh Pharmaceutical delayed disease progression in a late-stage China study, Reuters reported. Further trial data were not detailed in available reporting."
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-27/china-5-year-yield-hits-record-low-on-pboc-s-cash-injection",
+      "source": "Bloomberg China",
+      "headline": "China 5-Year Yield Hits Record Low on PBOC's Cash Injection",
+      "body_text": "China's five-year government bond yield hit a record low after the PBOC's latest cash injection, Bloomberg reported, coinciding with the central bank's new swap facility aimed at stabilizing the bond market.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-27/china-property-woes-crisis-zhuhai-huafa-62-billion-debt-zhuhai-tower-guangdong",
+      "source": "Bloomberg China",
+      "headline": "China Property Woes Bring Strains to Huafa's $62 Billion of Debt",
+      "body_text": "Zhuhai-based developer Huafa Group's *$62 billion* debt pile is coming under renewed strain amid China's prolonged property downturn, Bloomberg reported, citing stress linked to its Zhuhai Tower project in Guangdong.",
+      "companies": [
+        "Huafa Group"
+      ],
+      "sector": "property"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-27/mercedes-joins-bmw-vw-to-cut-outlook-on-china-market-slump",
+      "source": "Bloomberg China",
+      "headline": "Mercedes Joins BMW, VW With Outlook Cut After China Slump",
+      "body_text": "Mercedes-Benz cut its full-year outlook, joining BMW and Volkswagen in citing weaker China sales, Bloomberg reported.",
+      "companies": [
+        "Mercedes-Benz",
+        "BMW",
+        "Volkswagen"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/27/porsche-china-profit-recovery.html",
+      "source": "CNBC China",
+      "headline": "Porsche Profit Rebounds as It Cuts China Exposure",
+      "body_text": "Porsche reported a profit recovery for the first nine months of the year as it rapidly reduces its exposure to the Chinese auto market, CNBC reported.",
+      "companies": [
+        "Porsche"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://apnews.com/article/china-rich-list-bytedance-ai-hurun-d358339fac2c6ce627b7ca44328ab227",
+      "source": "AP China",
+      "headline": "ByteDance's Zhang Yiming Reclaims Top Spot on China's Rich List",
+      "body_text": "ByteDance founder **Zhang Yiming** reclaimed the top spot on the Hurun Rich List 2026 with a fortune of about *670 billion yuan*, driven by ByteDance's AI push, AP and Caixin reported.",
+      "companies": [
+        "ByteDance"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-27/chinese-households-are-buying-gold-s-dip-as-prices-test-4-000",
+      "source": "Bloomberg China",
+      "headline": "Chinese Households Are Buying Gold's Dip as Prices Test $4,000",
+      "body_text": "Chinese households are buying gold on the dip as prices test *$4,000*, Bloomberg reported, underscoring continued retail demand even as global gold prices pull back.",
+      "companies": [],
+      "sector": "finance"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "Song Tao",
+      "role": "Director, Taiwan Affairs Office",
+      "topic": "Taiwan's 1945 'restoration' and reunification",
+      "statement": "Per HK01: Taiwan's 1945 restoration was 'an important achievement of China's victory in the War of Resistance against Japan,' and Beijing remains firmly committed to 'national reunification.'",
+      "original_zh": "台湾光复是中国抗战胜利的重要成果",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "Song spoke at a Fuzhou ceremony Oct. 25 marking the 81st anniversary of Taiwan's 1945 retrocession; Taiwan's Mainland Affairs Council responded only that the Republic of China would continue to exist.",
+      "source": "HK01",
+      "url": ""
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Special envoy to the Middle East amid Iran tensions",
+      "statement": "China has consistently been committed to promoting talks for peace, and will soon send a relevant special envoy to visit Gulf countries in the Middle East to prevent the situation from further deteriorating.",
+      "original_zh": "中方一贯致力于劝和促谈，近期将派有关特使赴中东海湾地区国家访问，防止局势进一步恶化",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "The statement came amid reports the US and Israel could resume military action against Iran.",
+      "source": "MOFA briefing via Sohu",
+      "url": "https://www.sohu.com/a/1093408567_121347613?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Protest over UK border detentions of Chinese citizens",
+      "statement": "China expresses strong dissatisfaction and serious concern over the British police's arbitrary and excessive law enforcement actions, and has lodged solemn representations with the UK side.",
+      "original_zh": "中方对英国警方任意、过度执法行为表示强烈不满、严重关切，已向英方提出严正交涉",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "MOFA said it and the Chinese embassy in London had received multiple reports of Chinese citizens detained for extended questioning with phones and devices seized by UK border officials.",
+      "source": "MOFA briefing via Sina",
+      "url": "https://finance.sina.cn/2026-10-27/detail-iniwrzht4621878.d.html"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "President and CCP General Secretary",
+      "topic": "Condolence on death of former Japanese PM Fukuda",
+      "statement": "Mr. Fukuda was a Japanese politician of good faith and responsibility, and an old friend of the Chinese people, who signed the fourth China-Japan political document during his term, clarifying important principles for the development of bilateral relations.",
+      "original_zh": "福田先生是日本有信义、有担当的政治家，也是中国人民的老朋友，长期心系中日友好、秉持正确历史观，在任期间同中方签署中日第四个政治文件，为两国关系发展明确了重要原则。",
+      "addressed_to": "Japan",
+      "tone": "conciliatory",
+      "context": "Former Japanese prime minister Yasuo Fukuda, who later chaired the Boao Forum for Asia, died at 90, AP reported Oct. 27.",
+      "source": "Xinhua via Qiushi",
+      "url": "https://www.qstheory.cn/20261027/76ac285bffcc41c2b2fbaf2ce8f1d6e7/c.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Response to Mbappé brand cancellations",
+      "statement": "Words and actions that hurt the feelings of the Chinese people will naturally be resisted by all sectors of Chinese society.",
+      "original_zh": "伤害中国人民感情的言行自然会遭到中国社会各界的共同抵制",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "The comment followed Dongpeng and Mengniu ending endorsement deals with Kylian Mbappé over a video referencing an image resembling Mao Zedong.",
+      "source": "MOFA briefing via Sohu",
+      "url": "https://m.sohu.com/a/1093459031_121218495?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "AM",
+      "who": "Aalok Mehta",
+      "handle_context": "Director, Wadhwani AI Center, CSIS",
+      "platform_date": "Taipei Times · Oct 27, 2026",
+      "quote_text": "In Taiwan's case, they have maybe the strongest card in the world to play. They're home to the foundries that build and manufacture the most advanced chips in the world.",
+      "analyst_note": "Mehta, a former Google AI-policy employee, said the leverage could let Taiwan seek priority access to advanced US AI models or preferential computing-resource allocation.",
+      "badge_class": "sb-s",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/27/2003866685"
+    },
+    {
+      "avatar_initials": "SK",
+      "who": "Shatrujeet Kapur",
+      "handle_context": "Director General, Indo-Tibetan Border Police",
+      "platform_date": "SCMP · Oct 27, 2026",
+      "quote_text": "In the past few days, a situation arose where face-off[s] happened at several locations in Arunachal and it still continues.",
+      "analyst_note": "ITBP is India's paramilitary force responsible for guarding the Line of Actual Control with China.",
+      "badge_class": "sb-r",
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3372296/fragile-india-china-thaw-tested-reported-fresh-himalayan-border-face-offs"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/china/taiwan-rebuffs-chinas-commemorations-post-world-war-two-restoration-island-2026-10-27/",
+    "https://www.scmp.com/news/china/diplomacy/article/3372296/fragile-india-china-thaw-tested-reported-fresh-himalayan-border-face-offs",
+    "https://www.cnbc.com/2026/10/27/arctic-shipping-china-and-russia-expand-grip-can-europe-fight-back.html",
+    "https://news.china.com/socialgd/10000169/20261027/49820365.html",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/10/27/2003866686",
+    "https://www.voachinese.com/a/china-indonesia-to-hold-sharp-blade-2026-joint-military-exercise-20261026/8215392.html"
+  ],
+  "story_count": 101,
+  "oped_count": 11,
+  "academic_count": 0,
+  "source_count": 115,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-27.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-27.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
