@@ -1,0 +1,612 @@
+{
+  "digest_date": "Wednesday, October 28, 2026",
+  "re_line": "RE: China stocks rescued · Fifth Plenum purge · BYD banned at Kadena · Mbappé-Mao backlash · Cross-Strait meddling",
+  "market_indicators": {
+    "sse_composite": {
+      "value": "3,681.47",
+      "change_pct": 0.64,
+      "as_of": "Oct 28"
+    },
+    "hang_seng": {
+      "value": "23,094.83",
+      "change_pct": -2.36,
+      "as_of": "Oct 28"
+    },
+    "usd_cnh": {
+      "value": "6.6651",
+      "change_pct": 0.01,
+      "as_of": "Oct 28"
+    },
+    "brent": {
+      "value": "111.04",
+      "change_pct": -4.87,
+      "as_of": "Oct 28"
+    },
+    "usd_cny": {
+      "value": "6.6552",
+      "change_pct": -0.34,
+      "as_of": "Oct 28"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "China's 'national team' of state funds bought equities Wednesday after the CSI 300 index entered a technical bear market, with Hong Kong's Hang Seng down *2.36%* while Shanghai's Composite rose *0.64%*.",
+    "Beijing's anti-corruption purge tied to the ongoing Fifth Plenum has swept up a Beijing deputy mayor, a former top judge and a former spy chief, complicating succession planning ahead of the 21st Party Congress.",
+    "The US Air Force banned BYD vehicles from Kadena Air Base on Okinawa this week over security concerns, as Real Madrid and Chinese sponsors scrambled to contain backlash after Kylian Mbappé's Mao Zedong remark."
+  ],
+  "key_stat": {
+    "number": "$54.3B",
+    "label": "Foreign fund outflows from Taiwan since July",
+    "context": "Taiwan's central bank told the Legislative Yuan the outflow is more than double the $23.3 billion recorded in the first half of the year, and it sold $17.04 billion more than it bought to curb NT dollar volatility.",
+    "source": "Taipei Times"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "Pan Gongsheng (潘功胜), PBOC Governor",
+      "action": "PBOC creates new bond-market liquidity tool (BNSF)",
+      "document": "Bond Market NBFI Swap Facility announcement",
+      "detail": "The new facility lets systemically important bank wealth-management units and public fund managers borrow central bank bills against collateral to buy back redeemed fund holdings during systemic bond-market stress. Bank wealth products held *¥33 trillion* and public funds *¥38 trillion* in assets at end-2025.",
+      "source_label": "PBOC ZH",
+      "url": "https://k.sina.com.cn/article_2090512390_7c9ab00602003jjwg.html?from=finance"
+    },
+    {
+      "ministry": "Taiwan Affairs Office",
+      "ministry_chinese": "国台办",
+      "official": "Chen Binhua (陈斌华), TAO spokesperson",
+      "action": "TAO touts cross-strait fishery trade gains under 10-point policy package",
+      "document": null,
+      "detail": "Mainland imports of Taiwan agricultural products rose *18.5%* year-on-year in the first three quarters, with fishery imports up *35.5%*; Fujian alone imported 19,100 tonnes of Taiwan fishery products worth 585 million yuan between April and September, up 35.9%.",
+      "source_label": "TAO ZH",
+      "url": "http://www.81.cn/fyr/16496662.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "Wang Wentao (王文涛), Commerce Minister",
+      "action": "Wang Wentao meets European Parliament trade committee chair",
+      "document": null,
+      "detail": "Wang met European Parliament International Trade Committee chair Bernd Lange, discussing expanding two-way investment to advance EU-China trade, according to Chinese financial media.",
+      "source_label": "Yicai / MOFCOM-adjacent ZH",
+      "url": "https://www.yicai.com/brief/103413500.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "CCP Central Committee (Fifth Plenum)",
+      "action": "Anti-corruption purge widens ahead of discipline-focused plenum",
+      "detail": "A Beijing deputy mayor who met Walmart CEO John Furner last week has vanished from public life, the latest in a purge that has also ensnared a former top judge, a former spy chief and dozens of military generals, CNN reported.",
+      "url": "https://www.cnn.com/2026/10/28/china/china-plenum-xi-corruption-purge-analysis-hnk-intl"
+    },
+    {
+      "body": "CCP Central Committee (Fifth Plenum)",
+      "action": "Purges complicate succession planning ahead of 21st Party Congress",
+      "detail": "Xi Jinping's corruption purges are upending the hunt for China's next generation of top leaders, Bloomberg reported, without specifying which succession candidates have been affected in available reporting.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-27/xi-s-corruption-purges-upend-hunt-for-china-s-next-top-leaders"
+    },
+    {
+      "body": "CCDI / securities regulator",
+      "action": "Former anti-graft official at securities regulator given suspended death sentence",
+      "detail": "A former official tasked with anti-corruption work at China's securities regulator was handed a suspended death sentence, Reuters reported, without detailing the official's identity or specific charges in available reporting.",
+      "url": "https://www.reuters.com/world/china/china-hands-former-security-regulator-anti-graft-official-suspended-death-2026-10-27/"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Midterms will decide control of both chambers of Congress, shaping oversight of China policy including the Select Committee on the CCP."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal one-year suspensions due to lapse (approximate)",
+      "detail": "The suspension of BIS's Affiliates Rule extension and China's October 2025 rare-earth export controls, agreed at the Oct 30 2025 Busan truce, is due to lapse unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts APEC; Trump attendance and any Trump-Xi meeting on the margins remain unconfirmed."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Elections will fill 22 mayoral and magistrate seats and roughly 11,000 local offices, read as a mid-term on President Lai Ching-te."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "China's annual national commemoration of the 1937 Nanjing Massacre."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/china-greenlights-formal-operation-of-southern-power-market",
+      "source": "Bloomberg China",
+      "category": "Energy",
+      "headline": "China formally launches Southern Power Market",
+      "body_text": "China formally launched operations of its Southern Power Market Wednesday, part of Beijing's push to build regional electricity-trading hubs, Bloomberg reported. The report did not specify trading volumes or participant lists."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/china-robot-stocks-extend-rally-with-unitree-earnings-in-focus",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "China robot stocks rally ahead of Unitree earnings",
+      "body_text": "Chinese robotics shares extended a rally Wednesday ahead of humanoid-robot maker Unitree's earnings report. The gains follow a month in which China's broader AI-linked stocks entered a selloff tied to the CSI 300's bear market."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/chinese-government-to-speed-bond-sales-to-stimulate-growth",
+      "source": "Bloomberg China",
+      "category": "PRC-Economy",
+      "headline": "Beijing to speed bond sales to stimulate growth",
+      "body_text": "China's government plans to accelerate bond issuance to support growth, Bloomberg reported Wednesday. The report did not specify the size or timeline of the planned acceleration."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/28/2003866749",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Saint Lucian PM begins five-day Taiwan state visit",
+      "body_text": "Saint Lucian Prime Minister Philip J Pierre arrived in Taiwan for a five-day visit, his fourth since taking office in 2021, to meet President William Lai. Saint Lucia is one of *12* states that formally recognize Taiwan over Beijing."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/10/28/2003866721",
+      "source": "Taipei Times",
+      "category": "PRC-Economy",
+      "headline": "Foreign outflows drive NT dollar's sharp slide",
+      "body_text": "Taiwan's central bank said foreign institutional investors recorded *$54.3 billion* in net outflows since July, weakening the NT dollar about 2% against the US dollar. The bank sold $17.04 billion more than it bought to curb volatility."
+    },
+    {
+      "url": "https://asia.nikkei.com/editor-s-picks/interview/uae-bank-mashreq-injects-125m-into-hong-kong-business-as-china-ties-deepen",
+      "source": "Nikkei Asia China",
+      "category": "Finance",
+      "headline": "Mashreq Bank injects $125m into Hong Kong business",
+      "body_text": "Dubai's Mashreq Bank put *$125 million* into its Hong Kong operations, stepping up investment in China-related business, Nikkei Asia reported. The move reflects continued foreign-bank interest in Hong Kong as a China-facing hub."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/materials/japan-s-sumitomo-electric-offers-more-low-tungsten-tools-to-cut-china-reliance",
+      "source": "Nikkei Asia China",
+      "category": "Technology",
+      "headline": "Sumitomo Electric expands low-tungsten tool line to cut China reliance",
+      "body_text": "Japan's Sumitomo Electric is broadening its ultrahard tool lineup with reduced tungsten content as Chinese export curbs on tungsten affect global supply, Nikkei Asia reported. The report did not specify the reduction share."
+    },
+    {
+      "url": "https://cacs.mofcom.gov.cn/cacscms/article/myhbgjaj?articleId=189625&type=1",
+      "source": "MOFCOM ZH",
+      "category": "Trade",
+      "headline": "Pakistan launches anti-dumping probe on Chinese cotton yarn",
+      "body_text": "Pakistan has opened an anti-dumping investigation into Chinese cotton yarn imports, China's Commerce Ministry confirmed. It is the latest in a series of trade-remedy actions against Chinese exports this year."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/28/2003866737",
+      "source": "Taipei Times",
+      "headline": "US bans BYD vehicles from Kadena Air Base over security concerns",
+      "body_text": "The US Air Force's 18th Wing banned BYD vehicles -- including privately owned cars, taxis and delivery vehicles -- from Kadena Air Base on Okinawa this week. Lt. Col. Alli Stormer said the vehicles 'present an unacceptable and unmitigable risk to our personnel and our mission'; Kadena hosts the Typhon missile system, which can strike *1,600km* away.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-27/solidigm-dangles-new-45-billion-us-plant-to-upgrade-china-site",
+      "source": "Bloomberg China",
+      "headline": "Solidigm dangles $45 billion US plant to upgrade China site",
+      "body_text": "Solidigm is dangling a proposed *$45 billion* US manufacturing plant as part of an effort to upgrade its existing China facility, Bloomberg reported Wednesday. Further detail on the proposal's structure or timeline was not included in available reporting.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://www.scmp.com/news/asia/southeast-asia/article/3372404/malaysia-seizes-smuggled-ai-chips-worth-us12-million-kuala-lumpur-airport",
+      "source": "SCMP",
+      "headline": "Malaysia seizes $12 million in smuggled AI chips bound toward China",
+      "body_text": "Malaysian customs seized about *$12 million* worth of advanced AI chips this month, saying it is closing in on a syndicate smuggling US-origin semiconductors through Kuala Lumpur's airport. Malaysia imposed export controls on advanced AI chip movement last year under US pressure to stem flows into China; an Oct. 15 raid separately found 30 servers.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/10/28/u-s-china-tensions-expected-to-remain-elevated-but-targeted-jason-lui.html",
+      "source": "CNBC China",
+      "headline": "Strategist: US curbs on Chinese hardware could raise AI data center costs",
+      "body_text": "BNP Paribas strategist Jason Lui said potential US restrictions on Chinese hardware components could raise AI data-center costs and weigh on hyperscaler investment, CNBC reported. He said he expects US-China tensions to stay 'elevated but targeted' even as frequent Trump-Xi meetings keep communication open.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/chinas-new-export-curbs-draw-line-around-its-ai-crown-jewels-2026-10-28/",
+      "source": "Reuters China",
+      "headline": "China's new export curbs draw a line around its AI crown jewels",
+      "body_text": "China issued new export curbs intended to protect its domestic AI technology advantages, Reuters reported Wednesday. Specific products, thresholds or enforcement timelines were not detailed in available reporting.",
+      "instrument": "Export Controls"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/pakistan-denies-entry-to-taiwan-airlines-citing-one-china-policy",
+      "source": "Bloomberg China",
+      "headline": "Pakistan denies entry to Taiwan airlines, citing one-China policy",
+      "body_text": "Pakistan denied entry to Taiwan-registered airlines, citing its one-China policy, Bloomberg reported Wednesday. No further detail on the specific carrier or route was available in current reporting.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-xi-sends-condolences-over-death-former-japanese-pm-2026-10-27/",
+      "source": "Reuters China",
+      "headline": "Xi calls on Japan to protect political foundation of ties",
+      "body_text": "Xi Jinping sent condolences over the death of a former Japanese prime minister and called on Japan to protect the political foundation of bilateral ties, Reuters reported. Further detail on the content of Xi's message was not included in available reporting.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.economist.com/china/2026/10/27/kim-jong-uns-curious-visit-to-china",
+      "source": "Economist China",
+      "headline": "Kim Jong Un's curious visit to China",
+      "body_text": "The Economist examined what it called Kim Jong Un's 'curious visit' to China, published Oct. 27. Specific details of the trip were not included in the available summary.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/india-deploys-extra-forces-after-protests-over-dam-chinese-border-escalate-2026-10-27/",
+      "source": "Reuters China",
+      "headline": "India deploys extra forces after dam protests on China border escalate",
+      "body_text": "India deployed extra security forces after protests escalated over a dam project on its border with China, Reuters reported. The report did not specify the protests' scale or exact location in available summary text.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/france-minerals-envoy-says-rare-earths-diversification-china-possible-within-3-5-2026-10-28/",
+      "source": "Reuters China",
+      "headline": "France envoy: rare-earth diversification from China possible in 3-5 years",
+      "body_text": "France's minerals envoy said diversifying rare-earth supply chains away from China is achievable within three to five years, Reuters reported. The assessment reflects European efforts to reduce reliance on Chinese rare-earth exports after recurring supply disruptions this year.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/28/world/europe/spain-saic-ferrol-china.html",
+      "source": "NYT China",
+      "headline": "Proposed SAIC-linked car plant splits opinion in Spain's Ferrol",
+      "body_text": "A proposed Chinese-backed car plant tied to automaker SAIC Motor near Spain's port of Ferrol has split local opinion, the New York Times reported, with residents citing jobs against warnings about long-term dependency risk. The debate reflects a broader European argument over the costs and benefits of Chinese industrial investment.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/chinese-ev-imports-surge-in-thailand-ahead-of-planned-excise-tax",
+      "source": "Bloomberg China",
+      "headline": "Chinese EV imports surge in Thailand ahead of planned excise tax",
+      "body_text": "Chinese EV imports into Thailand surged ahead of a planned excise-tax change, Bloomberg reported Wednesday. The report did not specify the size of the import surge in the available summary.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/fortescue-says-iron-ore-deal-with-china-must-protect-australia",
+      "source": "Bloomberg China",
+      "headline": "Fortescue says any China iron-ore deal must protect Australia",
+      "body_text": "Australian miner Fortescue said any iron-ore agreement with China must protect Australian interests, Bloomberg reported. The statement comes amid continued scrutiny of China's position as the dominant buyer of Australian iron ore.",
+      "region": "Australia-Pacific"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/10/27/business/china-stocks-losses-government-intervention.html",
+      "source": "NYT China",
+      "category_tag": "PRC-Economy",
+      "headline": "Beijing's 'national team' buys stocks as CSI 300 enters bear market",
+      "body": "China's Communist Party deployed a 'national team' of state-owned investment funds and brokers to buy equities this week after the CSI 300 index entered a technical bear market, the New York Times reported. Hong Kong's Hang Seng fell *2.36%* Wednesday while Shanghai's Composite rose *0.64%*, a divergence that has persisted through the intervention.",
+      "src_line": "New York Times"
+    },
+    {
+      "url": "https://www.afp.com/en/china-says-takes-mbappe-apology-seriously-after-mao-remark",
+      "source": "AFP China",
+      "category_tag": "Diplomacy",
+      "headline": "China 'takes seriously' Mbappé's apology over Mao meme remark",
+      "body": "Foreign ministry spokesperson **Guo Jiakun** said Beijing 'takes seriously' an apology from Real Madrid's Kylian Mbappé after a resurfaced clip showed him joking about a meme depicting him as 'some guy, think he's a Chinese dictator,' understood as a reference to Mao Zedong. Chinese sponsors Dongpeng, Mengniu and Milkground cut ties with Mbappé, and state broadcaster CMG pulled La Liga broadcasts; Real Madrid separately apologized to Chinese fans.",
+      "src_line": "AFP"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3372314/us-japan-rehearse-coordinated-strikes-challenge-pla-control-waters-near-taiwan",
+      "source": "SCMP China",
+      "category_tag": "PLA",
+      "headline": "US, Japan rehearse coordinated strikes to challenge PLA control near Taiwan",
+      "body": "US and Japanese forces rehearsed coordinated anti-ship strikes and mobile missile deployments across Kyushu and Japan's southwestern islands during the *11-day* Keen Sword 27 exercise, now in its second week. The drills tested tactics to challenge Beijing's control of surrounding waters in a Taiwan conflict, including threatening Chinese warships from multiple directions and practicing runway repairs.",
+      "src_line": "South China Morning Post"
+    },
+    {
+      "url": "https://www.scmp.com/tech/big-tech/article/3372454/huaweis-tau-scaling-law-roll-out-reaches-base-stations-blow-us-chip-curbs",
+      "source": "SCMP",
+      "category_tag": "Technology",
+      "headline": "Huawei's 'Tau Scaling Law' reaches base stations, blunting US chip curbs",
+      "body": "**Huawei** is integrating elements of its 'Tau Scaling Law' chip design principle -- which it says helps overcome US export controls -- into next-generation wireless base stations, according to a company statement released Wednesday. The approach uses a 'time compression' concept and is already delivering results in Huawei's wireless network, the company said.",
+      "src_line": "South China Morning Post"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/28/2003866744",
+      "source": "Taipei Times",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan steps up police effort against China election interference",
+      "body": "Taiwan's National Police Agency will intensify efforts against election interference from China, gangs and local collaborators ahead of the Nov. 28 local elections, Interior Minister **Liu Shyh-fang** said. Legislator Michelle Lin cited bulletproof glass installed for Taipei mayoral candidate Puma Shen and surveillance of comedian Huang Yi-hao; Premier Cho Jung-tai said the Hong Kong financiers who allegedly funded the Shen operation have fled.",
+      "src_line": "Taipei Times"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/great-wall-motor-build-ora-5-compact-suv-bulgaria-2026-10-27/",
+      "source": "Reuters China",
+      "category": "Economy",
+      "headline": "Great Wall Motor to build Ora 5 SUV in Bulgaria",
+      "body_text": "Great Wall Motor will manufacture its Ora 5 compact SUV in Bulgaria, Reuters reported, expanding Chinese EV output in Europe.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-old-age-dependency-ratio-overtakes-children-first-time-2026-10-28/",
+      "source": "Reuters China",
+      "category": "Economy",
+      "headline": "China's old-age dependency ratio overtakes children for first time",
+      "body_text": "China's old-age dependency ratio has overtaken its child dependency ratio for the first time, Reuters reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16496641.html",
+      "source": "MND ZH",
+      "category": "PLA",
+      "headline": "China confirms defense consultations with France, Germany",
+      "body_text": "China's Ministry of National Defense confirmed a delegation held defense strategic consultations with France and Germany this week.",
+      "color_bar_class": "cb-red"
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/yw_214049/16496646.html",
+      "source": "MND ZH",
+      "category": "Korea",
+      "headline": "China identifies remains of 8 volunteer army soldiers from Korean War",
+      "body_text": "China identified the remains of eight People's Volunteer Army soldiers killed in Korea, the Defense Ministry said.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://sinocism.com/p/fifth-plenum-struggle-sessions-for",
+      "source": "Sinocism",
+      "category": "Diplomacy",
+      "headline": "Sinocism roundup: Fifth Plenum, Mbappé backlash, A-share swings",
+      "body_text": "Sinocism's newsletter covered the Fifth Plenum, the Mbappé controversy and a volatile day for China's A-share investors.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/28/2003866745",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "73.5% of Taiwanese view CCP unfavorably: poll",
+      "body_text": "A monthly poll found *73.5%* of Taiwanese view the CCP unfavorably, unchanged from last month, including more than half of KMT supporters.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/28/2003866757",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Taiwan says Fukushima discharge poses no detectable risk",
+      "body_text": "Taiwan's Nuclear Safety Commission said Japan's 25th Fukushima wastewater discharge round, releasing *7,800 tonnes*, poses no detectable risk to Taiwan's waters.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.taiwannews.com.tw/news/6466969",
+      "source": "Taiwan News",
+      "category": "Trade",
+      "headline": "Japan to impose 5-year anti-dumping duties on Taiwan steel",
+      "body_text": "Japan will impose five-year anti-dumping duties on Taiwan steel products, Taiwan News reported.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/10/28/2003866734",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "EU lawmakers, Taiwan co-host AI and drone tech forum",
+      "body_text": "European lawmakers and Taiwan's foreign ministry co-hosted a forum on AI and drone technology cooperation in Taipei, MEP Rihards Kols said.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-27/china-stock-premium-over-hong-kong-widens-on-state-intervention",
+      "source": "Bloomberg China",
+      "category": "Economy",
+      "headline": "China A-share premium over Hong Kong widens on state intervention",
+      "body_text": "Chinese A-shares' premium over Hong Kong-listed shares widened amid state intervention in mainland markets, Bloomberg reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-former-vice-premier-liu-yandong-has-died-xinhua-says-2026-10-28/",
+      "source": "Reuters China",
+      "category": "Diplomacy",
+      "headline": "Former Vice Premier Liu Yandong dies at 81",
+      "body_text": "China's former Vice Premier Liu Yandong, a onetime Politburo member, died in Beijing at 81, Xinhua said via Reuters.",
+      "color_bar_class": "cb-mid"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.afp.com/en/mercedes-benz-cuts-2026-profit-outlook-tough-china-market",
+      "source": "AFP China",
+      "headline": "Mercedes-Benz cuts 2026 profit outlook on China slump",
+      "body_text": "Mercedes-Benz became the third major German carmaker to cut its 2026 outlook, with core profit now seen flat at *€5.8 billion* versus a prior forecast of at least 15% growth; China deliveries fell *29%* in the first nine months.",
+      "companies": [
+        "Mercedes-Benz"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/volkswagen-strategy-shift-plans-globalise-china-developed-technology-2026-10-28/",
+      "source": "Reuters China",
+      "headline": "Volkswagen to globalize China-developed technology",
+      "body_text": "Volkswagen plans to globalize technology developed in its China operations as part of a strategy shift, Reuters reported.",
+      "companies": [
+        "Volkswagen"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/technology/tech-asia/hp-and-asus-shift-some-pc-making-back-to-china-due-to-ai-driven-cost-hikes",
+      "source": "Nikkei Asia China",
+      "headline": "HP, Asus shift some PC production back to China on AI cost hikes",
+      "body_text": "HP along with Taiwan's Asus and Acer are shifting some PC production back to China to combat soaring component costs driven by AI demand, Nikkei Asia reported.",
+      "companies": [
+        "HP",
+        "Asus",
+        "Acer"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-cxmt-start-advanced-ai-memory-production-despite-poor-yields-sources-say-2026-10-28/",
+      "source": "Reuters China",
+      "headline": "CXMT to start advanced AI memory production despite poor yields",
+      "body_text": "China's CXMT plans to begin advanced AI memory chip production despite poor manufacturing yields, sources told Reuters.",
+      "companies": [
+        "CXMT"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/legal/transactional/syngenta-aims-valuation-least-66-billion-with-ipo-sources-say-2026-10-27/",
+      "source": "Reuters China",
+      "headline": "Syngenta targets $66 billion valuation in Hong Kong IPO",
+      "body_text": "Syngenta is targeting a valuation of at least *$66 billion* in a planned Hong Kong listing, sources told Reuters, which would rank among the exchange's largest this year.",
+      "companies": [
+        "Syngenta"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.ft.com/content/0025f8af-d34a-4170-bbae-31dce32e45c6?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "Pop Mart sales fall up to 50% as Labubu fever ebbs",
+      "body_text": "Pop Mart's quarterly revenue fell as much as *50%* as demand for its Labubu dolls waned, the Financial Times reported.",
+      "companies": [
+        "Pop Mart"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.wsj.com/world/chinas-electric-carmakers-are-running-out-of-domestic-buyers-ce6c581d",
+      "source": "WSJ China",
+      "headline": "China's EV makers running out of domestic buyers",
+      "body_text": "China's electric-vehicle makers are running low on domestic buyers as the market matures, the Wall Street Journal reported in its daily markets roundup.",
+      "companies": [],
+      "sector": "auto"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Response to German Chancellor's decoupling remarks",
+      "statement": "We hope the German and European sides will stay objective and rational and work with China in the same direction, becoming mutually trustworthy and predictable partners.",
+      "original_zh": "希望德方、欧方保持客观理性，同中方相向而行，成为彼此可信赖、可预测的合作伙伴",
+      "addressed_to": "EU",
+      "tone": "conciliatory",
+      "context": "German Chancellor Merz said during a visit to Singapore that decoupling from China would be a 'huge mistake' and that Europe and Asia should strengthen their strategic alliance.",
+      "source": "MOFA presser ZH",
+      "url": "https://mil.news.sina.com.cn/2026-10-28/doc-iniwuqvx5903979.shtml"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "Chen Binhua",
+      "role": "TAO spokesperson",
+      "topic": "Response to TV host Kevin Tsai's Taiwan independence denial",
+      "statement": "On major questions of right and wrong, there is no room for ambiguity.",
+      "original_zh": "大是大非问题上，不存在任何模糊空间",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "Taiwanese TV host Kevin Tsai (Cai Kangyong) publicly denied supporting Taiwan independence and apologized to mainland internet users amid controversy over his remarks.",
+      "source": "TAO ZH",
+      "url": "https://news.ifeng.com/c/8xateYemrCJ"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "Chen Binhua",
+      "role": "TAO spokesperson",
+      "topic": "Taiwan's refusal to admit mainland actor Zhang Lingshe",
+      "statement": "Refusing to allow a mainland entertainer who is very popular with Taiwanese audiences to visit Taiwan is unpopular and will inevitably meet opposition.",
+      "original_zh": "拒绝广受台湾观众喜爱的大陆艺人赴台，不得人心，必遭反对",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "Taiwan's Mainland Affairs Council said mainland actor Zhang Lingshe had 'repeatedly denigrated Taiwan's status' in denying his entry application.",
+      "source": "TAO ZH",
+      "url": "https://news.bjd.com.cn/2026/10/28/90094119.shtml"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Response to Kylian Mbappé's apology over Mao remark",
+      "statement": "We take seriously the apology the individual concerned has made.",
+      "original_zh": "我们重视当事人作出的道歉",
+      "addressed_to": "other",
+      "tone": "routine",
+      "context": "Real Madrid footballer Kylian Mbappé apologized after a resurfaced clip showed him joking about a meme depicting Mao Zedong as a 'Chinese dictator.'",
+      "source": "MOFA presser ZH",
+      "url": "http://cn.chinadaily.com.cn/a/202610/28/WS6ae1b3aee4b09a165c792255.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "WK",
+      "who": "Wellington Koo",
+      "handle_context": "Taiwan Minister of National Defense",
+      "platform_date": "Taipei Times · Oct 28, 2026",
+      "quote_text": "We must stress that the People's Republic of China was established in 1949. The War of Resistance has absolutely nothing to do with the People's Republic of China, this is a clear, objective fact.",
+      "analyst_note": "Koo spoke after China released high-resolution satellite images of Taipei and an Eastern Theatre Command poster marking the 1945 anniversary of Japan's handover of Taiwan.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/28/2003866747"
+    },
+    {
+      "avatar_initials": "SY",
+      "who": "Shen Yu-chung",
+      "handle_context": "Taiwan Mainland Affairs Council Deputy Minister",
+      "platform_date": "Taipei Times · Oct 28, 2026",
+      "quote_text": "Whenever Trump and Xi meet, Beijing launches a cognitive warfare campaign to stir up anti-US sentiment in Taiwan and make Taiwanese question Washington's commitment to defending the nation.",
+      "analyst_note": "Shen made the remarks at a Taiwan Inspirations Association panel on Taiwan-US-China relations ahead of the Nov. 28 local elections.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/28/2003866748"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Former Vice Premier / CPPCC Vice Chairperson",
+      "name": "Liu Yandong (刘延东)",
+      "action": "died",
+      "detail": "Liu Yandong, who served as State Councilor and Vice Premier and sat on the 17th and 18th Politburo, died in Beijing on Oct. 28 at age 81, Xinhua reported.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.scmp.com/news/china/military/article/3372314/us-japan-rehearse-coordinated-strikes-challenge-pla-control-waters-near-taiwan",
+    "https://www.taipeitimes.com/News/front/archives/2026/10/28/2003866737",
+    "https://www.bloomberg.com/news/articles/2026-10-28/pakistan-denies-entry-to-taiwan-airlines-citing-one-china-policy",
+    "https://www.economist.com/china/2026/10/27/kim-jong-uns-curious-visit-to-china"
+  ],
+  "story_count": 101,
+  "oped_count": 4,
+  "academic_count": 0,
+  "source_count": 107,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-28.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-28.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
