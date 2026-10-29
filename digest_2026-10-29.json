@@ -1,0 +1,594 @@
+{
+  "digest_date": "Thursday, October 29, 2026",
+  "re_line": "Zhang Shengmin to Politburo · US bans BGI Genomics · Taiwan flags 50 vessels · Pakistan airspace flap · Mbappe-Mao fallout",
+  "market_indicators": {
+    "usd_cny": {
+      "value": "6.6507",
+      "change_pct": -0.41,
+      "as_of": "Oct 29"
+    },
+    "hang_seng": {
+      "value": "22,958.65",
+      "change_pct": 0.1,
+      "as_of": "Oct 29"
+    },
+    "brent": {
+      "value": "110.19",
+      "change_pct": -4.85,
+      "as_of": "Oct 29"
+    },
+    "sse_composite": {
+      "value": "3,651.43",
+      "change_pct": -1.06,
+      "as_of": "Oct 29"
+    },
+    "usd_cnh": {
+      "value": "6.6587",
+      "change_pct": -0.02,
+      "as_of": "Oct 29"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "Beijing promoted Zhang Shengmin, the PLA's top anti-corruption enforcer, to the Politburo following the Fifth Plenum's communique on party discipline.",
+    "Washington banned imports from BGI Genomics and MGI Tech over alleged Xinjiang forced-labor ties, drawing a sharp MOFA rebuttal invoking human rights as pretext.",
+    "Taiwan reported 50 Chinese vessels in a wide sweep of its waters as a brief, reversed Pakistani airspace ban on Taiwanese airlines fueled fresh Beijing-pressure suspicions."
+  ],
+  "key_stat": {
+    "number": "168",
+    "label": "Deaths in Hong Kong's Tai Po tower fire",
+    "context": "Hong Kong's Housing Bureau will replace the independent inspection unit blamed for 'slack' oversight ahead of the blaze, Hong Kong Free Press reported.",
+    "source": "Financial Times / Hong Kong Free Press"
+  },
+  "prc_government": [
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "Ministry of Commerce",
+      "action": "Publishes 2027 export quota totals",
+      "document": "2027年货物出口配额总量公告",
+      "detail": "MOFCOM set 2027 export quotas including *5.2 million kg* of licorice products and 1.6054 million head of live pigs for Hong Kong/Macau, continuing the suspension of phosphate rock and silver quota management in favor of licensing. Applications run Nov 1-15, 2026 with allocations finalized by Dec 15.",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/zcfb/dwmygl/art/2026/art_8324b318baf64feabb06f1cb22992f00.html"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM, NDRC, Ministry of Ecology and Environment, Customs",
+      "action": "Issues joint notice on Hainan Free Trade Port trade liberalization",
+      "document": "关于进一步提高海南自由贸易港贸易自由化便利化水平的通知",
+      "detail": "Four agencies jointly issued measures to further liberalize and facilitate trade in the Hainan Free Trade Port.",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_1396cc6581da478ebc9f3ee08b72a96b.html"
+    },
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "Pan Gongsheng, PBOC Governor",
+      "action": "Signals shift of main policy rate toward overnight repo",
+      "document": null,
+      "detail": "**Pan Gongsheng** said the central bank will study shifting its main open-market operations to overnight tenor to sharpen interest-rate precision. The 1-year and 5-year LPR held steady at 3.0% and 3.5% on Oct 20, with the PBOC running overnight reverse repos of up to *1 trillion yuan* daily from Oct 21 to Nov 2.",
+      "source_label": "PBOC (via China Economic Daily)",
+      "url": "http://paper.ce.cn/pc/content/202610/28/content_341017.html"
+    },
+    {
+      "ministry": "TAO",
+      "ministry_chinese": "国台办",
+      "official": "TAO spokesperson",
+      "action": "Reaffirms implementation of 'ten measures' for Taiwan residents",
+      "document": null,
+      "detail": "The Taiwan Affairs Office said it would continue pushing for full implementation of its 'ten measures' aimed at Taiwan residents and businesses operating on the mainland.",
+      "source_label": "TAO",
+      "url": "https://m.sohu.com/a/1094240368_267106?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "Politburo",
+      "action": "Promotes Zhang Shengmin to the Politburo",
+      "detail": "**Zhang Shengmin**, CMC vice chairman and the PLA's top anti-corruption enforcer from 2018 to July 2026, was promoted to the Politburo, SCMP reported, citing his official resume. Zhang, a Rocket Force general born August 1958 in Shaanxi, also serves as deputy secretary of the Central Commission for Discipline Inspection.",
+      "url": "https://www.scmp.com/news/china/military/article/3372591/china-promotes-general-zhang-shengmin-politburo"
+    },
+    {
+      "body": "20th Central Committee (Fifth Plenum)",
+      "action": "Releases Fifth Plenum communique on party self-governance",
+      "detail": "The Fifth Plenum, held Oct 26, adopted a decision on 'persistently advancing full and rigorous Party self-governance' after **Xi Jinping** delivered a work report on behalf of the Politburo, per the Ministry of National Defense and Qiushi.",
+      "url": "http://www.mod.gov.cn/gfbw/sy/tt_214026/16496912.html"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "A referendum on the Trump administration's China policy record heading into the term's second half."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal suspensions approach lapse",
+      "detail": "The one-year suspensions of the BIS Affiliates Rule and China's October 2025 rare-earth export controls are due to lapse around this date unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts APEC Nov 18-19; Trump attendance and any Trump-Xi meeting remain unconfirmed."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Twenty-two mayoral and magistrate races are at stake, read as a mid-term gauge on President Lai Ching-te amid a China critic's challenge in Taipei."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "Falls amid heightened China-Japan friction this week over the Sanrio/VIVANT dispute and MND criticism of Japan."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.ft.com/content/7f8eb778-80bc-446a-8e03-4c694bca2240?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category": "Hong Kong Governance",
+      "headline": "Hong Kong Leader Apologizes for Fire That Killed 168 People",
+      "body_text": "Hong Kong Chief Executive **John Lee** apologized for the Tai Po fire that killed *168 people*, calling it one of the worst blazes in the territory's history. The Housing Bureau will replace the independent inspection unit blamed for 'slack' oversight before the blaze."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinese-ai-model-carries-out-complex-cyberattacks-controlled-tests-researchers-2026-10-29/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "Chinese AI Model Carried Out Complex Cyberattacks in Controlled Tests",
+      "body_text": "Researchers said a Chinese AI model carried out complex, multi-stage cyberattacks in controlled testing environments, Reuters reported. No further operational detail on the model or test design was disclosed in initial reporting."
+    },
+    {
+      "url": "https://www.reuters.com/sustainability/cop/china-clean-tech-exports-cut-global-emissions-by-brazil-sized-amount-2026-2026-10-29/",
+      "source": "Reuters",
+      "category": "Energy",
+      "headline": "China's Clean-Tech Exports Seen Cutting Emissions by Brazil-Sized Amount",
+      "body_text": "China's clean-technology exports are projected to cut global emissions by an amount equivalent to Brazil's annual output in 2026, per a CREA analysis cited by Reuters."
+    },
+    {
+      "url": "https://www.economist.com/finance-and-economics/2026/10/28/chinas-stock-markets-are-the-great-global-exception",
+      "source": "The Economist",
+      "category": "PRC-Economy",
+      "headline": "China's Stock Markets Called a Global Exception",
+      "body_text": "The Economist examined why China's stock markets stand apart from broader global trends this year."
+    },
+    {
+      "url": "https://www.wsj.com/business/autos/china-cars-domestic-sale-declines-983ced7b",
+      "source": "WSJ",
+      "category": "PRC-Economy",
+      "headline": "China's Car Industry Wowing the World but Crashing at Home",
+      "body_text": "The WSJ reported that China's auto industry is winning overseas markets even as domestic car sales decline sharply."
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/29/world/asia/china-ai-videos-sun-wukong-lin-daiyu.html",
+      "source": "NYT",
+      "category": "Technology",
+      "headline": "Chinese Authorities Scrutinize AI Mash-Up Videos of Sun Wukong, Lin Daiyu",
+      "body_text": "Fan-made videos mixing beloved characters from Chinese classics, some generated with AI, have drawn the attention of authorities, the New York Times reported. The characters include Sun Wukong from 'Journey to the West' and Lin Daiyu from 'Dream of the Red Chamber.'"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/29/where-chinas-wealthy-are-turning-for-second-passports.html",
+      "source": "CNBC",
+      "category": "PRC-Economy",
+      "headline": "Wealthy Chinese Increasingly Willing to Renounce Citizenship for Second Passports",
+      "body_text": "A growing number of wealthy Chinese are willing to give up their citizenship to secure a foreign passport, CNBC reported. The report did not specify the top destination countries."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/29/2003866815",
+      "source": "Taipei Times",
+      "category": "Technology",
+      "headline": "Taiwan's AerosoarX Partners With US Firms on AI Drones",
+      "body_text": "Taiwanese drone maker **AerosoarX** signed cooperation agreements with US firms Rajant and SiMa.ai to build AI-enabled uncrewed systems combining mesh networking with onboard AI computing. Chairman **Max Lo** said the firm targets production readiness for a *15-inch* AI-enabled FPV drone by November."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/us-hits-chinese-trailers-with-tariffs-to-aid-domestic-producers",
+      "source": "Bloomberg",
+      "headline": "US Imposes Tariffs on Chinese Trailers to Aid Domestic Producers",
+      "body_text": "Bloomberg reported Oct 28 that Washington imposed new tariffs on Chinese-made trailers intended to support domestic producers. Further detail on the tariff rate or statutory authority was not available in initial reporting.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/palantir-s-defense-chief-sees-chinese-threat-to-taiwan-over-ai",
+      "source": "Bloomberg",
+      "headline": "Palantir Defense Chief Sees Chinese Threat to Taiwan Over AI",
+      "body_text": "Palantir's defense chief said China's advances in AI pose a threat to Taiwan, Bloomberg reported Oct 28.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-29/china-us-space-programs-compete-to-get-to-moon-then-mars",
+      "source": "Bloomberg",
+      "headline": "China and the US Compete for Space Dominance",
+      "body_text": "Bloomberg reported Oct 29 that China and the US are running competing lunar and Mars programs as part of broader space competition.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/29/2003866817",
+      "source": "Taipei Times",
+      "headline": "Indiana Treasurer Rejects Chinese Demands Over Taiwan Ties",
+      "body_text": "Indiana State Treasurer **Daniel Elliot** rejected a Chinese consulate letter urging him to avoid contact with Taiwanese officials after he attended Taiwan's Double Ten reception on Oct. 9. 'The Chinese Communist Party does not dictate how Indiana officials do their jobs,' Elliot said, adding the state's economic ties with Taiwan would continue.",
+      "instrument": "Diplomacy"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://en.mofa.gov.tw/News_Content.aspx?n=1328&sms=273&s=123312",
+      "source": "Taiwan MOFA",
+      "headline": "Taiwan MOFA Refutes Taiwan Claims in China-Russia Joint Communiqué",
+      "body_text": "Taiwan's Ministry of Foreign Affairs rejected what it called false claims about Taiwan contained in a China-Russia joint communiqué. No further detail on the communiqué's specific language was provided.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/china-critic-challenges-opposition-s-decades-old-grip-in-taipei",
+      "source": "Bloomberg",
+      "headline": "China Critic Tests Opposition's Decades-Old Grip in Taipei",
+      "body_text": "A prominent China critic is challenging the opposition party's decades-old grip on Taipei politics, Bloomberg reported, ahead of Taiwan's *Nov. 28* nine-in-one local elections.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.afp.com/en/hello-kitty-firm-apologises-scraps-japan-tv-tie-after-china-anger-0",
+      "source": "AFP",
+      "headline": "Sanrio Scraps 'VIVANT' Tie-Up After Chinese Backlash Over Spy Drama",
+      "body_text": "**Sanrio**, the Japanese company behind Hello Kitty, apologized and canceled its merchandise collaboration with the TV spy drama 'VIVANT' after Chinese criticism that the show was anti-China. Global Times had called the series 'notorious for smearing China' over a scene depicting Japan's spy unit being tortured by a Chinese-affiliated organization.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/merz-invites-japan-back-trade-alliance-china-asks-germany-be-rational-2026-10-28/",
+      "source": "Reuters",
+      "headline": "Merz Invites Japan to Back Trade Alliance as China Asks Germany to Be 'Rational'",
+      "body_text": "**Merz** invited Japan to back a trade alliance while China urged Germany to be 'rational' in economic ties, Reuters reported.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/germanys-steinmeier-says-china-must-avoid-one-sided-benefits-economic-ties-2026-10-29/",
+      "source": "Reuters",
+      "headline": "Germany's Steinmeier Says China Must Avoid One-Sided Benefits",
+      "body_text": "Germany's **Steinmeier** said China must avoid 'one-sided benefits' in its economic relationship with Germany, Reuters reported.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/29/india-china-us-israel-military-spending.html",
+      "source": "CNBC",
+      "headline": "India Approves $22 Billion in Military Spending Amid China Border Tensions",
+      "body_text": "India approved *$22 billion* in military spending, CNBC reported, with American, Israeli and Russian defense manufacturers expected to find substantial opportunities in India's expanding defense market. The spending comes amid ongoing tensions along India's border with China.",
+      "region": "India"
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/jswj/16496847.html",
+      "source": "MND",
+      "headline": "Chinese Naval Hospital Ship, Medical Team Conduct Joint Treatment in Ghana",
+      "body_text": "China's 'Jixiang Fangzhou' naval hospital ship and a Chinese medical team conducted joint medical treatment and diagnostics in Ghana, the Ministry of National Defense said.",
+      "region": "Africa"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/feat/archives/2026/10/29/2003866800",
+      "source": "Taipei Times",
+      "headline": "Taiwan, Philippines Deepen Economic Ties With New Offices, Worker Centers",
+      "body_text": "Taiwan's **Lin Chia-lung** confirmed plans for a second Taipei Economic and Cultural Office in Cebu, while the Philippines' Manila Economic and Cultural Office opened its largest overseas Filipino worker service center in Taipei this month. It is only the third such service center the Philippines has opened worldwide.",
+      "region": "ASEAN"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/10/28/business/us-china-biotech-trade-ban.html",
+      "source": "NYT",
+      "category_tag": "Sanctions",
+      "headline": "US Blocks Imports From BGI Genomics, MGI Tech Over Xinjiang Forced-Labor Ties",
+      "body": "The US government banned imports from **BGI Genomics** and MGI Tech, alleging the Chinese genomics firms are linked to forced labor and rights abuses against Uyghurs in Xinjiang, the New York Times reported. US officials have also raised national-security concerns over BGI's access to large volumes of genetic data. China's foreign ministry said the US was using 'human rights as a pretext to interfere in China's internal affairs.'",
+      "src_line": "NYT, Oct 28"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/taiwan-flags-obvious-threat-50-chinese-vessels-wide-sweep-waters-2026-10-29/",
+      "source": "Reuters",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan Flags 'Obvious' Threat From 50 Chinese Vessels in Wide Sweep of Waters",
+      "body": "Taiwan's defense authorities said *50* Chinese vessels were observed operating across a wide stretch of surrounding waters, calling the scale an 'obvious' threat, Reuters reported.",
+      "src_line": "Reuters, Oct 29"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-29/taiwan-suspects-china-behind-brief-pakistan-airspace-ban",
+      "source": "Bloomberg",
+      "category_tag": "Indo-Pacific",
+      "headline": "Taiwan Suspects China Behind Brief Pakistan Airspace Ban on Its Airlines",
+      "body": "Taiwan said it suspects Beijing's hand in a brief Pakistani ban on Taiwanese airlines' use of its airspace, which was abruptly reversed, Bloomberg reported. A Taiwan aircraft subsequently flew over Pakistan for the first time after the permit U-turn.",
+      "src_line": "Bloomberg, Oct 29"
+    },
+    {
+      "url": "https://www.afp.com/en/real-madrid-la-liga-apology-over-mbappe-shows-power-chinese-market",
+      "source": "AFP",
+      "category_tag": "Diplomacy",
+      "headline": "Mbappé-Mao Furor Shows Power of China's Market Over Global Sports",
+      "body": "A video clip showing **Kylian Mbappé** joking about a meme depicting him as Mao Zedong, whom he called a 'Chinese dictator,' prompted sponsors to drop him and state broadcaster CCTV to suspend Spanish league coverage, AFP reported. La Liga president **Javier Tebas**, Real Madrid and Mbappé all apologized; La Liga's international broadcast rights were valued at *€748 million* ($834 million) for the 2024-25 season, financed mainly by China and the US.",
+      "src_line": "AFP, Oct 2026"
+    },
+    {
+      "url": "https://www.channelnewsasia.com/business/byds-third-quarter-profit-growth-slows-falling-short-forecasts-6503026",
+      "source": "CNA",
+      "category_tag": "PRC-Economy",
+      "headline": "BYD's Q3 Profit Growth Slows to 28%, Missing Forecasts Despite Export Surge",
+      "body": "**BYD** reported Q3 net profit of *10 billion yuan* ($1.50 billion), up 28% year-on-year but below analyst estimates of 11.4 billion to 12.95 billion yuan, CNA reported. Revenue rose 13.6% to 221.5 billion yuan, ending a four-quarter streak of declines, as export growth offset persistent domestic weakness.",
+      "src_line": "CNA, Oct 29"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "http://www.afp.com/en/infos/ras-al-khaimah-signs-landmark-friendship-agreement-10-mous-during-historic-high-level-tour",
+      "source": "AFP",
+      "category": "Diplomacy",
+      "headline": "Ras Al Khaimah Signs Friendship Agreement, 10 MoUs With Fujian Province",
+      "body_text": "Ras Al Khaimah's ruler signed a friendship agreement and 10 MoUs with Fujian covering green supply chains, ports and cultural exchange.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/melexis-ceo-says-china-now-beats-europe-new-design-wins-2026-10-28/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "Melexis CEO Says China Now Beats Europe in New Design Wins",
+      "body_text": "Melexis's CEO said China now outperforms Europe in securing new chip design wins, Reuters reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/unitrees-q3-profit-down-174-on-year-test-chinas-robotics-sector-2026-10-28/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "Unitree's Quarterly Revenue Surges 70% in Test for China's Robotics Sector",
+      "body_text": "Robotics maker Unitree reported quarterly revenue surging *70%* year-on-year, Reuters reported.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-29/tencent-s-cloud-boss-plays-long-game-to-patch-leaky-ai-ship",
+      "source": "Bloomberg",
+      "category": "Technology",
+      "headline": "Tencent's Cloud Boss Plays Long Game to Fix 'Leaky' AI Ship",
+      "body_text": "Bloomberg profiled Tencent's cloud chief's effort to shore up gaps in the firm's AI infrastructure strategy.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://sinocism.com/p/fifth-plenum-watch-mbappe-mess-continues",
+      "source": "Sinocism",
+      "category": "Diplomacy",
+      "headline": "Sinocism: Fifth Plenum Watch, Mbappé Mess Continues, EU Hopes PRC Revalues RMB",
+      "body_text": "Sinocism's newsletter covered Fifth Plenum dynamics, the ongoing Mbappé fallout, and EU hopes for RMB revaluation.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.news.cn/20261029/115b553338d84265bb8ab3e0106e5647/c.html",
+      "source": "Xinhua ZH",
+      "category": "PRC-Economy",
+      "headline": "MOFCOM: This Year's CIIE Has Three Highlights",
+      "body_text": "MOFCOM said this year's China International Import Expo features larger scale, more product debuts and broader participation.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/business/banking-finance/article/3372448/beijing-wants-hong-kong-sow-seeds-digital-yuan-will-its-plans-bear-fruit",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "Beijing Wants Hong Kong to Sow the Seeds for the Digital Yuan",
+      "body_text": "SCMP examined Hong Kong's e-CNY interoperability tests as part of Beijing's push for yuan internationalization.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/graphics/CHINA-ECONOMY/TRADE-OBJECTS/moparrmewva/",
+      "source": "Reuters",
+      "category": "PRC-Economy",
+      "headline": "China's Export Mix Shifts From Toys to EVs and AI Hardware",
+      "body_text": "China now sells more cars abroad than Germany and the United States combined, while exports of complex machinery, high-end chemicals and data-center equipment surge, Reuters reported. Exports of longstanding staples like shoes, toys and furniture have declined or stagnated as a decade-long state-backed push moves manufacturing up the value chain."
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-29/volkswagen-swings-to-loss-after-writedown-china-market-slump",
+      "source": "Bloomberg",
+      "headline": "Volkswagen Swings to Loss After Writedown, China Market Slump",
+      "body_text": "**Volkswagen** swung to a loss after a writedown linked to its China business, Bloomberg reported.",
+      "companies": [
+        "Volkswagen"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-29/toyota-s-september-sales-fall-as-china-slump-enters-eighth-month",
+      "source": "Bloomberg",
+      "headline": "Toyota Monthly Sales Fall as China Slump Enters Eighth Month",
+      "body_text": "**Toyota**'s monthly sales fell as its China slump entered an eighth consecutive month, Bloomberg reported.",
+      "companies": [
+        "Toyota"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.wsj.com/business/autos/geely-profit-climbs-as-overseas-sales-offset-slowing-china-demand-6fe04706",
+      "source": "WSJ",
+      "headline": "Geely Profit Climbs as Overseas Sales Offset Slowing China Demand",
+      "body_text": "**Geely**'s profit climbed as overseas sales offset slowing demand in China, the WSJ reported.",
+      "companies": [
+        "Geely"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-29/copper-sold-out-everywhere-as-key-china-gauge-flashes-warning",
+      "source": "Bloomberg",
+      "headline": "Copper 'Sold Out Everywhere' as Key China Gauge Flashes Warning",
+      "body_text": "Copper is 'sold out everywhere' as a key China demand gauge flashes a warning signal, Bloomberg reported.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-29/chinese-tech-stocks-sink-even-as-chipmaker-sales-surge-1-800",
+      "source": "Bloomberg",
+      "headline": "Chinese Tech Stocks Sink Even as Chipmaker Sales Surge 1,800%",
+      "body_text": "Chinese tech stocks fell even as one chipmaker reported sales surging *1,800%*, Bloomberg reported, highlighting a gap between AI-hardware demand and investor sentiment toward tech equities.",
+      "companies": [],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-29/chinese-conglomerate-zhuhai-huafa-repays-overdue-trust-product",
+      "source": "Bloomberg",
+      "headline": "Chinese Conglomerate Zhuhai Huafa Repays Overdue Trust Product",
+      "body_text": "**Zhuhai Huafa** repaid an overdue trust product after a delayed payment, Bloomberg reported.",
+      "companies": [
+        "Zhuhai Huafa"
+      ],
+      "sector": "property"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/29/tencent-visa-citi-mastercard-.html",
+      "source": "CNBC",
+      "headline": "Tencent, Visa Deepen Payments Push in China After Regulatory Green Light",
+      "body_text": "**Tencent** and Visa are expanding their payments partnership in China following recent regulatory approvals for foreign financial firms, CNBC reported.",
+      "companies": [
+        "Tencent",
+        "Visa"
+      ],
+      "sector": "finance"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "US import ban on BGI Genomics, MGI Tech over Xinjiang forced-labor claims",
+      "statement": "We urge the US side to stop using human rights as a pretext to interfere in China's internal affairs.",
+      "original_zh": "敦促美方停止以人权为幌子，干涉中国内政",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "The US added BGI Genomics and MGI Tech to an import ban citing forced-labor ties to Xinjiang, per Reuters and NYT reporting the same day.",
+      "source": "MOFA via Sina Military",
+      "url": "https://mil.news.sina.com.cn/2026-10-29/doc-iniwwpnx8886926.shtml"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "US-Japan joint production of air-to-air missiles",
+      "statement": "The US and Japan developing bilateral relations and conducting security cooperation should not undermine regional peace and stability.",
+      "original_zh": "美日发展双边关系、开展安全合作，不应破坏地区和平稳定",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "The US and Japan announced plans to jointly produce air-to-air missiles in Japan, prompting the MOFA response.",
+      "source": "MOFA via Sina Military",
+      "url": "https://mil.news.sina.com.cn/2026-10-29/doc-iniwwpnz5337532.shtml"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Sanrio/VIVANT backlash over Japanese cultural products",
+      "statement": "There has always been a force within Japan that attempts to vilify and smear China through cultural products.",
+      "original_zh": "日本国内始终存在一股势力，企图通过文化产品丑化抹黑中国",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "The comment followed Sanrio's decision to scrap its Hello Kitty tie-up with the TV spy drama 'VIVANT' after Chinese criticism that the show vilified China.",
+      "source": "MOFA via 津云 (Enorth)",
+      "url": "http://news.enorth.com.cn/system/2026/10/29/059942801.shtml"
+    },
+    {
+      "body": "MND",
+      "body_chinese": "国防部",
+      "speaker": "MND Spokesperson",
+      "role": "Ministry of National Defense spokesperson",
+      "topic": "Philippines obstructing China's ADMM-Plus participation",
+      "statement": "The Philippine side cannot allow a small clique to run amok and provoke trouble in the South China Sea.",
+      "original_zh": "菲方不能任由一小撮人肆意妄为在南海挑衅生事",
+      "addressed_to": "Philippines",
+      "tone": "warning",
+      "context": "China's defense ministry said the Philippines obstructed China's participation in the ASEAN Defence Ministers' Meeting-Plus, which it said undermined ASEAN unity.",
+      "source": "MND",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16496877.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Kylian Mbappé's apology over Mao Zedong comments",
+      "statement": "We take seriously the apology the individual concerned has made.",
+      "original_zh": null,
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Mbappé apologized after a video showed him joking about a meme depicting him as Mao Zedong, calling him a 'Chinese dictator,' which triggered sponsor exits and a CCTV broadcast suspension of La Liga.",
+      "source": "AFP",
+      "url": "https://www.afp.com/en/real-madrid-apologise-china-over-mbappe-comments"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "DE",
+      "who": "Daniel Elliot",
+      "handle_context": "Indiana State Treasurer",
+      "platform_date": "Taipei Times · Oct 29, 2026",
+      "quote_text": "The Chinese Communist Party does not dictate how Indiana officials do their jobs.",
+      "analyst_note": "Elliot's statement followed a Chinese consulate letter urging him to avoid future interactions with Taiwanese officials after he attended Taiwan's Double Ten National Day reception on Oct. 9.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/29/2003866817"
+    },
+    {
+      "avatar_initials": "YQ",
+      "who": "Yan Qiang",
+      "handle_context": "veteran sports commentator",
+      "platform_date": "AFP · Oct 2026",
+      "quote_text": "Viewed from a calm, objective and emotion-free standpoint, this is clearly a very damaging incident.",
+      "analyst_note": "Yan was commenting on the fallout from Kylian Mbappé's remarks about Mao Zedong, which led Chinese sponsors and state broadcaster CCTV to cut ties with Real Madrid and La Liga.",
+      "badge_class": "sb-s",
+      "url": "https://www.afp.com/en/mbappe-real-madrid-and-la-liga-face-long-road-redemption-china"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "CMC Vice Chairman / Politburo member",
+      "name": "Zhang Shengmin",
+      "action": "promoted",
+      "detail": "Promoted to the Politburo per his official resume published by the Ministry of National Defense; continues as CMC vice chairman and deputy secretary of the Central Commission for Discipline Inspection, having led the PLA's anti-corruption campaign from 2018 to July 2026.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/china/taiwan-flags-obvious-threat-50-chinese-vessels-wide-sweep-waters-2026-10-29/",
+    "https://www.bloomberg.com/news/articles/2026-10-29/taiwan-suspects-china-behind-brief-pakistan-airspace-ban",
+    "https://en.mofa.gov.tw/News_Content.aspx?n=1328&sms=273&s=123312"
+  ],
+  "story_count": 100,
+  "oped_count": 3,
+  "academic_count": 0,
+  "source_count": 120,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-29.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-29.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
