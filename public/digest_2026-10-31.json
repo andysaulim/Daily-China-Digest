@@ -1,0 +1,622 @@
+{
+  "digest_date": "Saturday, October 31, 2026",
+  "re_line": "RE: Fifth Plenum purge deepens · PMI contraction · FCC test-lab clash · Xi-Steinmeier summit · Dongsha incursion",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "23,294.42",
+      "change_pct": 0.87,
+      "as_of": "Oct 30"
+    },
+    "brent": {
+      "value": "113.43",
+      "change_pct": -2.06,
+      "as_of": "Oct 30"
+    },
+    "usd_cnh": {
+      "value": "6.6515",
+      "change_pct": -0.07,
+      "as_of": "Oct 30"
+    },
+    "sse_composite": {
+      "value": "3,599.02",
+      "change_pct": -2.66,
+      "as_of": "Oct 30"
+    },
+    "usd_cny": {
+      "value": "6.6540",
+      "change_pct": -0.36,
+      "as_of": "Oct 31"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "China's Fifth Plenum closed with a record 33 CCP officials expelled, including former CMC Vice Chairman Zhang Youxia, while discipline chief Zhang Shengmin was added to the Politburo outside the normal congress cycle.",
+    "China's October manufacturing PMI fell to 49.3, the third contraction in four months, with new export orders weakening further.",
+    "MOFCOM warned of retaliation after the US FCC voted to bar China-based telecom testing labs from FCC work starting Dec 2028, while MOFA separately dismissed a New York Times report linking a Nvidia-connected Chinese executive to Chinese intelligence."
+  ],
+  "key_stat": {
+    "number": "13",
+    "label": "Chinese coast guard incursions Taiwan says it has repelled at Pratas (Dongsha) this year",
+    "context": "Taiwan's coast guard said it has expelled Chinese coast guard ships from Pratas waters 13 times and 16 vessel-sorties so far in 2026, after an Oct 31 dawn confrontation in which a Chinese vessel sailed in with its AIS transponder switched off.",
+    "source": "自由时报 (Liberty Times)"
+  },
+  "prc_government": [
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "Pan Gongsheng, PBOC Governor",
+      "action": "PBOC switches main policy rate to overnight reverse repo at 1.25%",
+      "document": "中国人民银行公告 (PBOC announcement, Oct 30)",
+      "detail": "Effective Nov 2, 2026, the PBOC will hold daily overnight reverse repo auctions at a fixed 1.25% rate, making it the de facto main policy rate; the 7-day reverse repo (currently 1.40%) becomes a supplementary tool used around tax periods and month-end.",
+      "source_label": "PBOC ZH",
+      "url": "https://m.sohu.com/a/1095450674_267106?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "ministry": "MOFA",
+      "ministry_chinese": "外交部",
+      "official": "Guo Jiakun, MOFA spokesperson",
+      "action": "MOFA rejects India's border 'pattern deviation' accusation",
+      "document": null,
+      "detail": "Guo denied India's claim that Chinese forces deviated from an 'established pattern' near the disputed eastern sector, calling it unsubstantiated and saying all Chinese patrol activity is normal sovereign conduct.",
+      "source_label": "MOFA presser ZH",
+      "url": "https://m.sohu.com/a/1095323288_122008941?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "People's Bank of China",
+      "action": "PBOC renews currency swap with South African Reserve Bank",
+      "document": "中国人民银行与南非储备银行双边本币互换协议",
+      "detail": "The State Council-approved renewal sets the swap at 30 billion yuan / 74 billion rand with a five-year term, aimed at deepening bilateral trade and investment facilitation.",
+      "source_label": "China News ZH",
+      "url": "https://www.chinanews.com.cn/cj/2026/10-30/10723559.shtml"
+    },
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "State Council",
+      "action": "China extends APEC Business Travel Card stay limit to 90 days",
+      "document": null,
+      "detail": "Maximum stay for APEC Business Travel Card holders in China is extended from 60 to 90 days effective Nov 1, 2026, ahead of the Nov 18-19 APEC Shenzhen summit.",
+      "source_label": "PBOC roundup ZH",
+      "url": "https://m.sohu.com/a/1095237266_99992453?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "CCP Central Committee / Fifth Plenum",
+      "action": "Record 33 officials expelled, including former CMC Vice Chairman",
+      "detail": "The Fifth Plenum concluded Oct 29 confirming the expulsion of 33 current and former officials, including former CMC Vice Chairman Zhang Youxia and ex-Xinjiang party secretary Ma Xingrui; only 279 of the 376 originally named full and alternate Central Committee members attended, the most empty seats at a plenum in modern CCP history.",
+      "url": "https://www.taipeitimes.com/News/world/archives/2026/10/31/2003866927"
+    },
+    {
+      "body": "Politburo",
+      "action": "Zhang Shengmin added to Politburo outside normal congress cycle",
+      "detail": "CMC Vice Chairman and top military discipline inspector Zhang Shengmin was elevated to the Politburo mid-cycle, which German outlet FAZ, cited by DW Chinese, called the first such addition outside a five-year party congress in more than three decades.",
+      "url": "https://www.dw.com/zh/%E5%BE%B7%E8%AF%AD%E5%AA%92%E4%BD%93%E4%B9%A0%E8%BF%91%E5%B9%B3%E7%9A%84%E6%B8%85%E6%B4%97%E8%A1%8C%E5%8A%A8%E4%BB%8D%E5%9C%A8%E7%BB%A7%E7%BB%AD/a-79809662"
+    },
+    {
+      "body": "Fifth Plenum",
+      "action": "Plenum adopts decision on sustained strict party governance",
+      "detail": "PLA Daily commentary calls for military-wide study of 'Xi Jinping Thought on Party Building,' tied to the plenum-passed decision on sustained full and strict party governance ahead of the 21st Party Congress.",
+      "url": "http://www.81.cn/pl_208541/16497327.html"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "AP reports Graphika identified China-linked Spamouflage accounts posing as US voters on X ahead of the vote; VOA reports over 45 million mail ballots already cast."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal suspensions approach lapse",
+      "detail": "The one-year suspensions of the BIS Affiliates ('50%') Rule and China's Oct 2025 rare-earth export controls, agreed at Busan, are due to lapse around this date unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 16,
+      "headline": "China Rare Earth Group asset-restructuring deadline",
+      "detail": "The company's shares, halted from Nov 2 for a planned share issuance to acquire rare-earth assets in Sichuan's Liangshan, must disclose a restructuring plan by this date or resume trading automatically."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts APEC Nov 18-19; Taiwan has not finalized its envoy, with TSMC chairman Wei Zhejia and Acer founder Stan Shih floated as candidates per China Times."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayoral and magistrate races and roughly 11,000 offices up for election, read as a mid-term test for President Lai Ching-te."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.nytimes.com/2026/10/31/world/asia/liu-yandong-dead.html",
+      "source": "NYT",
+      "category": "PRC-Politics",
+      "headline": "Liu Yandong, rare woman among China's political elite, dies at 80",
+      "body_text": "Liu Yandong, one of only six women to serve on the Politburo, has died at 80, the NYT reports. She rose through the Communist Youth League but was excluded from the party's top ranks despite a decades-long career."
+    },
+    {
+      "url": "https://www.reuters.com/legal/government/hong-kong-fire-exposes-entrenched-triad-networks-building-renovation-industry-2026-10-30/",
+      "source": "Reuters",
+      "category": "Hong Kong",
+      "headline": "Hong Kong fire exposes entrenched triad networks in renovation industry",
+      "body_text": "Reuters reports the Tai Po fire investigation has surfaced long-standing triad involvement in Hong Kong's building renovation sector. The disclosure follows Housing Secretary He Wing-yin's resignation over the disaster."
+    },
+    {
+      "url": "https://www.chinatimes.com/newspapers/20261031000446-260118",
+      "source": "China Times",
+      "category": "Cross-Strait",
+      "headline": "Taiwan's deputy foreign minister: 'good communication' on APEC Shenzhen invite",
+      "body_text": "Deputy Foreign Minister Chen Mingchi gave only a low-key confirmation of communication over China's APEC Shenzhen invitation. Taipei has not named its envoy; TSMC's Wei Zhejia and Acer's Stan Shih are floated candidates after Lin Hsin-yi declined."
+    },
+    {
+      "url": "https://www.21jingji.com/article/20261031/herald/34f1bb65674e00b240d564ee62ddf2d0.html",
+      "source": "21世纪经济报道",
+      "category": "PRC-Economy",
+      "headline": "China Rare Earth Group halts trading for major asset restructuring",
+      "body_text": "China Rare Earth Group will suspend trading from Nov 2 to pursue a share-for-assets deal absorbing Sichuan Liangshan rare-earth holdings. The firm's Q1-Q3 net profit rose 112.37% year-on-year to 408 million yuan."
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261031-9922332",
+      "source": "联合早报 (Lianhe Zaobao)",
+      "category": "Hong Kong",
+      "headline": "Hong Kong Housing Secretary resigns over Tai Po fire",
+      "body_text": "Housing Secretary He Wing-yin resigned Oct 29, the first official to step down over last November's deadly Tai Po fire. She was a 34-year government veteran and architect by training."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-31/china-metals-gold-nickel-rhenium-reserves-xinhua-strategic-resources",
+      "source": "Bloomberg",
+      "category": "Energy/Resources",
+      "headline": "China finds more gold, nickel and rhenium reserves, Xinhua says",
+      "body_text": "State media reported newly confirmed reserves of gold, nickel and rhenium, part of a continuing effort to document strategic mineral stocks. Bloomberg did not specify quantities in the report."
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3372773/china-poised-restore-military-presence-top-leadership-party-congress",
+      "source": "SCMP",
+      "category": "PLA",
+      "headline": "Beijing seen gradually restoring military seats in top leadership",
+      "body_text": "Analysts tell SCMP the party will gradually restore PLA representation at the top after the anti-corruption purge gutted military ranks, with the process expected to complete at next year's 21st Party Congress. The process follows this week's Fifth Plenum."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3372782/china-and-us-expand-military-drone-flights-near-japan-and-south-china-sea",
+      "source": "SCMP",
+      "headline": "China and US expand military drone flights near Japan, South China Sea",
+      "body_text": "SCMP reports China has increased uncrewed aircraft patrols through straits near Japan that enable PLA naval transit beyond the first island chain, coinciding with large Japan-US joint exercises. A US Marine detachment separately operated drones near disputed South China Sea islands.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://apnews.com/article/spamouflage-influence-election-china-322341a9bedb872e58002fd0743b2a58",
+      "source": "AP",
+      "headline": "Graphika finds China-linked Spamouflage accounts posing as US voters",
+      "body_text": "AP reports researcher Graphika identified China-linked Spamouflage network accounts impersonating US voters on X ahead of the Nov 3 midterms. The accounts are part of a long-running Chinese state-linked influence operation.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://m.sohu.com/a/1095025869_121019331?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+      "source": "MOFA presser ZH (via Sohu)",
+      "headline": "MOFA responds to FCC move to block Chinese carriers from direct US phone numbers",
+      "body_text": "China's foreign ministry responded after the FCC moved to bar Chinese telecom carriers from directly obtaining US phone numbers. The action is separate from the FCC's test-lab restriction announced the same week.",
+      "instrument": "Legal"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5624983",
+      "source": "自由时报 (Liberty Times)",
+      "headline": "Taiwan chases Chinese coast guard 'dark ship' out of Dongsha waters",
+      "body_text": "Taiwan's coast guard pursued China Coast Guard vessel CCG 3102 from restricted waters near Pratas (Dongsha) before dawn Oct 31 after it sailed in with its AIS transponder switched off. The Chinese ship broadcast a claim that the waters belonged to the 'People's Republic of China'; Taiwan's patrol ship rejected the claim and pursued it to within *1 nautical mile*.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3372764/beijing-drills-water-cannons-and-drones-near-disputed-south-china-sea-shoals",
+      "source": "SCMP",
+      "headline": "China Coast Guard drills water cannons, drones near Second Thomas, Sabina Shoal",
+      "body_text": "CCTV reported a China Coast Guard flotilla conducted law-enforcement training featuring water cannons and drones around Second Thomas Shoal and Sabina Shoal, framed as preparation against 'foreign infringement.' CCTV did not specify when the drills occurred.",
+      "region": "Indo-Pacific"
+    },
+    {
+      "url": "http://world.people.com.cn/n1/2026/1031/c1002-40824925.html",
+      "source": "人民网",
+      "headline": "China, Switzerland sign upgraded free-trade protocol",
+      "body_text": "MOFCOM confirmed China and Switzerland signed an upgraded FTA protocol in Beijing Oct 30, with zero-tariff treatment ultimately covering over *99 percent* of bilateral trade. The deal followed five rounds of talks launched Sept 2024 and concluded in Aug 2026; Swiss President Guy Parmelin met Xi Jinping the same day.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://news.cctv.com/2026/10/31/ARTIaxedx1qNjXRTBet2rJ3R261031.shtml",
+      "source": "央视新闻 (CCTV)",
+      "headline": "Nearly 10,000 rally in Tokyo against Takaichi's nuclear policy shift",
+      "body_text": "CCTV reports close to 10,000 people rallied outside Japan's Diet building on Oct 30 protesting the Takaichi government's moves to adjust nuclear policy and expand the military. The rally follows Takaichi's cabinet approval falling below 50% for the first time.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://thediplomat.com/2026/10/amid-india-china-border-tensions-mega-hydel-project-in-arunachal-pradesh-faces-local-heat/",
+      "source": "The Diplomat",
+      "headline": "India's Arunachal hydel project draws local protest amid China border tension",
+      "body_text": "Locals are protesting India's hydropower project on the Siang River in Arunachal Pradesh, which New Delhi says is important for national security amid border tensions with China. The report comes as MOFA this week rejected Indian accusations of Chinese patrol 'pattern deviation' in the eastern sector.",
+      "region": "India"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.washingtonpost.com/world/2026/10/30/china-plenum-xi-communist-party-discipline/19e684ba-d43f-11f1-9931-2a41b76fc976_story.html",
+      "source": "Washington Post",
+      "category_tag": "PLA",
+      "headline": "Fifth Plenum expels record 33 officials, confirms Zhang Youxia purge",
+      "body": "China's Fifth Plenum closed Oct 29 with a record 33 Central Committee members expelled from the CCP, including former CMC Vice Chairman **Zhang Youxia** and former Xinjiang party secretary Ma Xingrui, per the Taipei Times. Only 279 of the 376 originally named full and alternate Central Committee members attended, the most 'empty chairs' at a plenum in modern CCP history. CMC discipline chief Zhang Shengmin was separately elevated to the Politburo outside the normal party congress cycle.",
+      "src_line": "Washington Post · Taipei Times"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/chinas-october-factory-activity-contracts-fastest-pace-3-months-pmi-survey-shows-2026-10-31/",
+      "source": "Reuters",
+      "category_tag": "PRC-Economy",
+      "headline": "China's factory activity contracts for third time in four months",
+      "body": "China's official manufacturing PMI fell to *49.3* in October, the third contraction in four months, Reuters reports. New export orders weakened further, dragging on activity alongside soft domestic demand.",
+      "src_line": "Reuters"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-10-30/china-warns-of-retaliation-over-us-test-lab-restrictions",
+      "source": "Bloomberg",
+      "category_tag": "Sanctions",
+      "headline": "MOFCOM warns of retaliation over FCC test-lab restrictions",
+      "body": "The US Federal Communications Commission voted to bar China-based telecom testing, certification and accreditation labs from FCC-related work starting Dec 1, 2028, Bloomberg reports. **MOFCOM** said the US has repeatedly rebuffed Chinese proposals for a bilateral mutual-recognition agreement and will take 'necessary measures' if Washington proceeds.",
+      "src_line": "Bloomberg"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/china-germany-should-uphold-international-order-presidents-say-2026-10-30/",
+      "source": "Reuters",
+      "category_tag": "Diplomacy",
+      "headline": "Xi hosts Steinmeier, urges Berlin to keep 'pragmatic' China policy",
+      "body": "**Xi Jinping** told German President Frank-Walter Steinmeier Beijing wants to open a 'new chapter' in the countries' strategic partnership during talks in Beijing Oct 30, ahead of the 55th anniversary of diplomatic ties next year. Steinmeier, on his eighth China visit in 25 years, pressed Xi on the EU-China trade deficit and market access; Premier Li Qiang, meeting Steinmeier separately, said China is willing to import more German goods.",
+      "src_line": "Reuters"
+    },
+    {
+      "url": "https://www.wsj.com/world/china/china-scoops-up-data-that-could-aid-its-forces-in-waters-around-taiwan-7acaf563",
+      "source": "WSJ",
+      "category_tag": "Cross-Strait",
+      "headline": "China scoops up data that could aid forces in Taiwan waters",
+      "body": "The Wall Street Journal reports China is collecting data from waters around Taiwan that could aid PLA forces in a future contingency. The report lands the same week Taiwan's coast guard logged incursions by Chinese coast guard ships near both Kinmen and Pratas (Dongsha).",
+      "src_line": "WSJ"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.cnn.com/2026/10/31/china/mbappe-sanrio-china-controversies-intl-hnk",
+      "source": "CNN",
+      "category": "Diplomacy",
+      "headline": "What Mbappé and Hello Kitty have in common: they've both angered China",
+      "body_text": "CNN examines parallel boycott campaigns against French soccer star Kylian Mbappé and Sanrio after old remarks and a campaign resurfaced online.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.guancha.cn/ZhengZhi/2026_10_31_906565.shtml",
+      "source": "观察者网 (Guancha)",
+      "category": "PRC-Economy",
+      "headline": "Former Sinopec chairman Fu Chengyu under investigation",
+      "body_text": "Fu Chengyu, Sinopec's chairman from 2011-2015, is under investigation for 'serious violations of discipline and law,' the CCDI announced.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/economy/china-economy/article/3372740/shenzhen-too-pricey-cost-conscious-hongkongers-dig-deeper-mainland-china",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "Shenzhen too pricey? Hongkongers now shop deeper into mainland China",
+      "body_text": "SCMP reports rising Shenzhen prices are pushing cost-conscious Hong Kong retirees to Guangzhou and Zhongshan for cheaper meals and goods.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/politics/article/3372788/uk-minister-discusses-tech-collaboration-greater-bay-area-during-hong-kong-visit",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "UK minister raises Jimmy Lai case with Beijing's top Hong Kong diplomat",
+      "body_text": "UK Indo-Pacific minister Rosie Winterton raised Jimmy Lai's jailing with Beijing's top envoy in Hong Kong, Cui Jianchun, while discussing Greater Bay Area tech ties.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://weekly.caixin.com/2026-10-31/102499430.html",
+      "source": "财新周刊 (Caixin)",
+      "category": "Technology",
+      "headline": "Hengdian film studio partners with ByteDance's Volcano Engine on AI",
+      "body_text": "China's largest film-shooting base, Hengdian, made all sets free and over 130 sound stages rent-free, partnering with ByteDance's Volcano Engine on an AI production platform amid short-drama AI disruption.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://m.hkej.com/landing/mobarticle2/id/4552616/%E6%93%AC2030%E5%B9%B4%E5%89%8D%E5%AF%A6%E7%8F%BE%E4%B8%AD%E5%9C%8B%E4%BA%BA%E7%99%BB%E6%9C%88%20%E4%B9%98%E7%B5%84%E7%94%B13%E4%BA%BA%E7%B5%84%E6%88%90",
+      "source": "信报 (HKEJ)",
+      "category": "Technology",
+      "headline": "China targets 2030 crewed moon landing with 3-person crew, two to land",
+      "body_text": "China's manned space program deputy chief designer Wang Xiang said the lunar mission will use two Long March 10 rockets and lunar-orbit rendezvous docking, with two of three astronauts landing on the surface.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/31/2003866917",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Czech manufacturers eye drone assembly lines in Taiwan",
+      "body_text": "Former Czech lawmaker Marketa Pekarova Adamova said Czech drone and counter-UAV makers want to set up assembly in Taiwan, the Czech Republic being Taiwan's largest drone-component importer.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/society/article/3372819/new-renovation-body-may-offer-bigger-subsidies-ageing-hong-kong-districts",
+      "source": "SCMP",
+      "category": "Hong Kong",
+      "headline": "Hong Kong weighs bigger subsidies for ageing buildings after Tai Po fire",
+      "body_text": "Financial Secretary Paul Chan said a new Building Maintenance Support and Services Council may offer larger subsidies for older, poorer districts following the Tai Po fire inquiry.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.mac.gov.tw/en/News_Content.aspx?n=2BA0753CBE348412&sms=E828F60C4AFBAF90&s=4A5717A94FE29F8F",
+      "source": "Taiwan MAC",
+      "category": "Cross-Strait",
+      "headline": "Taiwan's MAC expresses condolences over Nagqu, Tibet earthquake",
+      "body_text": "Taiwan's Mainland Affairs Council expressed condolences over an earthquake in Nagqu, Tibet, and urged Taiwanese citizens in mainland China to ensure their safety.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/china-says-stealth-attack-drone-makes-first-takeoff-landing-amphibious-ship-2026-10-30/",
+      "source": "Reuters",
+      "category": "PLA",
+      "headline": "China's GJ-21 stealth drone completes first carrier deck landing",
+      "body_text": "China says its GJ-21 stealth attack drone made its first takeoff and landing on an amphibious assault ship, per Reuters. The milestone adds unmanned strike capability to China's expanding amphibious fleet."
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.wsj.com/business/earnings/memory-crunch-cements-cxmt-as-chinas-chip-champion-1f6c1476",
+      "source": "WSJ",
+      "headline": "Memory crunch cements CXMT as China's chip champion",
+      "body_text": "CXMT posted a third-quarter net profit and sales reportedly rising sevenfold year-on-year, following what Reuters calls Asia's biggest IPO this year.",
+      "companies": [
+        "CXMT"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.afp.com/en/carmaker-audi-cuts-outlook-again-china-us-woes",
+      "source": "AFP",
+      "headline": "Audi cuts profit outlook again on China competition, US tariffs",
+      "body_text": "Audi cut its 2026 profit margin forecast to 3-5% from 5-7%, with nine-month profit down *41 percent* to €1.22 billion, citing cutthroat China competition and US tariffs; parent VW plans to cut 120,000 jobs globally by 2030.",
+      "companies": [
+        "Audi",
+        "Volkswagen"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.ft.com/content/e0484ec6-f370-476f-8763-309f3d746ba9?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "Muji takes its China playbook global",
+      "body_text": "FT reports the Japanese minimalist retailer is applying lessons from localizing products in China to its expansion plans in Europe and the US.",
+      "companies": [
+        "Muji"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/markets/china-debt-crunch/pag-to-buy-51-of-china-evergrande-services-arm-for-510m",
+      "source": "Nikkei Asia",
+      "headline": "PAG to buy 51% of Evergrande Property Services for $510 million",
+      "body_text": "Hong Kong private equity firm PAG agreed to buy a 51% stake in Evergrande Property Services for HK$4 billion ($510 million).",
+      "companies": [
+        "PAG",
+        "China Evergrande",
+        "Evergrande Property Services"
+      ],
+      "sector": "property"
+    },
+    {
+      "url": "https://weekly.caixin.com/2026-10-31/102499329.html",
+      "source": "财新周刊 (Caixin)",
+      "headline": "Hong Kong, Singapore race for Asia's financial-center crown",
+      "body_text": "Central Hong Kong's Grade-A office vacancy fell to 7.2% by end-September 2026 per JLL data as hedge funds Jane Street, Point72 and QRT pre-lease entire floors.",
+      "companies": [
+        "Jane Street",
+        "Point72",
+        "QRT"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://weekly.caixin.com/2026-10-31/102499337.html",
+      "source": "财新周刊 (Caixin)",
+      "headline": "Huawei set to reclaim record revenue high this year",
+      "body_text": "Huawei's H1 2026 revenue rose 9.6% to 467.82 billion yuan, with R&D spending at 25.9% of revenue (~121.4 billion yuan); net profit fell over 30% to 23.43 billion yuan as the company reinvests through the AI cycle.",
+      "companies": [
+        "Huawei"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/10/31/2003866892",
+      "source": "Taipei Times",
+      "headline": "Citi opens new Client Center in Taiwan",
+      "body_text": "Citi launched a new Client Center in Taiwan, with executives calling Taiwan 'a strategically vital market' within its global network since 1964.",
+      "companies": [
+        "Citi"
+      ],
+      "sector": "finance"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFCOM",
+      "body_chinese": "商务部",
+      "speaker": "MOFCOM spokesperson",
+      "role": "Ministry of Commerce spokesperson",
+      "topic": "FCC test-lab restrictions on Chinese firms",
+      "statement": "China has repeatedly proposed negotiating a bilateral mutual recognition agreement, but the US side's attitude has been extremely negative and passive. If the US insists on its course, China will take further necessary measures to firmly safeguard its legitimate rights and interests.",
+      "original_zh": "中方此前多次提出商谈“双边互认协议”，但美方态度极其消极、负面...如美方一意孤行，中方将进一步采取必要措施，坚定维护自身正当权益。",
+      "addressed_to": "US",
+      "tone": "warning",
+      "context": "The FCC voted to bar China-based telecom testing, certification and accreditation labs from FCC-related work starting Dec 1, 2028.",
+      "source": "MOFCOM",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_2ecf68e79fba4758881d28d3afcb8a77.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "US action against Chinese telecom companies",
+      "statement": "The US side is generalizing the concept of national security and abusing state power to unjustifiably suppress Chinese enterprises; China firmly opposes and strongly deplores this.",
+      "original_zh": "美方泛化国家安全概念，滥用国家力量无理打压中国企业，中方对此表示坚决反对、强烈不满。",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Guo was responding at the Oct 30 regular briefing to the latest US regulatory move against Chinese telecom firms.",
+      "source": "MOFA presser ZH",
+      "url": "https://m.sohu.com/a/1095017077_267106?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "NYT report on Nvidia-linked executive",
+      "statement": "This is pure speculation and groundless smearing and vilification of China.",
+      "original_zh": "捕风捉影，纯属对中国的污蔑抹黑。",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "The NYT reported US intelligence agencies suspect a Chinese executive close to Nvidia's CEO of being a Chinese intelligence operative; Guo denied the claim.",
+      "source": "MOFA presser ZH",
+      "url": "https://m.sohu.com/a/1094968486_115479?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "India border friction",
+      "statement": "All patrol and control activities we carry out in border areas are normal exercises of a sovereign state's duties, aimed at safeguarding our own territorial sovereignty and maintaining overall stability along the border.",
+      "original_zh": "我方在边境地区开展的所有巡逻管控行动，都是主权国家的正常履职行为，目的是捍卫自身领土主权、维护边境整体稳定。",
+      "addressed_to": "India",
+      "tone": "firm",
+      "context": "India accused Chinese forces of deviating from an 'established pattern' near the eastern sector of the China-India border; Guo rejected the claim as unsubstantiated.",
+      "source": "MOFA presser ZH",
+      "url": "https://m.sohu.com/a/1095323288_122008941?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "CCP General Secretary, President",
+      "topic": "Germany state visit",
+      "statement": "China is willing to work with Germany to open a new chapter in the two countries' all-round strategic partnership and promote the building of a fairer and more reasonable global governance system.",
+      "original_zh": "中方愿同德方一道，开启两国全方位战略伙伴关系新篇章，推动构建更加公正合理的全球治理体系。",
+      "addressed_to": "EU",
+      "tone": "conciliatory",
+      "context": "Xi met German President Frank-Walter Steinmeier in Beijing Oct 30 during Steinmeier's eighth state visit to China in 25 years.",
+      "source": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16497208.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "JG",
+      "who": "Julian Gewirtz",
+      "handle_context": "Former China director, Biden NSC",
+      "platform_date": "SCMP (Substack) · Oct 31",
+      "quote_text": "Trump, strange as it is to say, is Chinamaxxing.",
+      "analyst_note": "Gewirtz made the comment describing Trump's May 2026 visit to Beijing's Temple of Heaven, per SCMP.",
+      "badge_class": "sb-s",
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3372691/donald-trumps-chinamaxxing-pushing-beijings-soft-power"
+    },
+    {
+      "avatar_initials": "SY",
+      "who": "Shen Yu-chung",
+      "handle_context": "Deputy Minister, Taiwan Mainland Affairs Council",
+      "platform_date": "China Times · Oct 31",
+      "quote_text": "The most fundamental gap across the strait lies in the institutional difference between democracy and authoritarianism.",
+      "analyst_note": "Shen spoke at a Taipei forum assessing the Fifth Plenum's cross-strait implications.",
+      "badge_class": "sb-p",
+      "url": "https://www.chinatimes.com/realtimenews/20261031002608-260409"
+    },
+    {
+      "avatar_initials": "NT",
+      "who": "Neil Thomas",
+      "handle_context": "Senior Fellow, Asia Society",
+      "platform_date": "Taipei Times (via X) · Oct 31",
+      "quote_text": "More empty seats underscores the plenum's focus on Xi's vision of strict internal discipline.",
+      "analyst_note": "Thomas was commenting on the record number of Central Committee absences at this week's Fifth Plenum.",
+      "badge_class": "sb-s",
+      "url": "https://www.taipeitimes.com/News/world/archives/2026/10/31/2003866927"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "CMC Vice Chairman",
+      "name": "Zhang Youxia",
+      "action": "dismissed",
+      "detail": "Confirmed expelled from the CCP at the Fifth Plenum; described by Taipei Times as the former second-in-command in China's military hierarchy, accused of undermining the CMC chairman responsibility system per German-media reporting.",
+      "predecessor": null
+    },
+    {
+      "position": "Xinjiang Party Secretary (former)",
+      "name": "Ma Xingrui",
+      "action": "dismissed",
+      "detail": "Expelled from the CCP at the Fifth Plenum along with 31 other officials.",
+      "predecessor": null
+    },
+    {
+      "position": "Politburo member / CMC Vice Chairman",
+      "name": "Zhang Shengmin",
+      "action": "appointed",
+      "detail": "Added to the Politburo outside the normal five-year party congress cycle; DW Chinese, citing German media, called it the first such mid-cycle addition in more than three decades.",
+      "predecessor": null
+    },
+    {
+      "position": "Hong Kong Secretary for Housing",
+      "name": "何永贤",
+      "action": "resigned",
+      "detail": "Resigned Oct 29, becoming the first official to step down over last November's Tai Po fire, Hong Kong's deadliest in decades; a 34-year government veteran and architect by training.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://news.ltn.com.tw/news/politics/breakingnews/5624983",
+    "https://www.taiwannews.com.tw/en/news/6469211",
+    "https://www.scmp.com/news/china/diplomacy/article/3372764/beijing-drills-water-cannons-and-drones-near-disputed-south-china-sea-shoals",
+    "https://www.wsj.com/world/china/china-scoops-up-data-that-could-aid-its-forces-in-waters-around-taiwan-7acaf563",
+    "https://www.reuters.com/world/china/china-says-stealth-attack-drone-makes-first-takeoff-landing-amphibious-ship-2026-10-30/"
+  ],
+  "story_count": 100,
+  "oped_count": 5,
+  "academic_count": 0,
+  "source_count": 101,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-31.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-10-31.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
