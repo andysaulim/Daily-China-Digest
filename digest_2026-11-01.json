@@ -1,0 +1,535 @@
+{
+  "digest_date": "Sunday, November 1, 2026",
+  "re_line": "Taiwan coast guard patrols · Nvidia spy claim · Zhang Youxia expelled · PBOC stock meeting · Xi-Steinmeier summit",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "23,294.42",
+      "change_pct": 0.87,
+      "as_of": "Oct 30"
+    },
+    "sse_composite": {
+      "value": "3,599.02",
+      "change_pct": -2.66,
+      "as_of": "Oct 30"
+    },
+    "usd_cny": {
+      "value": "6.6540",
+      "change_pct": -0.36,
+      "as_of": "Nov 01"
+    },
+    "brent": {
+      "value": "113.43",
+      "change_pct": -0.4,
+      "as_of": "Oct 30"
+    },
+    "usd_cnh": {
+      "value": "6.6515",
+      "change_pct": -0.07,
+      "as_of": "Oct 30"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "China's coast guard intensified patrols east of Taiwan and near Kinmen through the week, prompting Taipei to call the activity 'harassment' and reject Beijing's claim of jurisdiction over the waters.",
+    "Trump said Saturday the US would look 'very closely' at reports that Nvidia CEO Jensen Huang was targeted by a China-linked espionage operation, as Beijing's Washington embassy called the claim a baseless smear.",
+    "Taiwan's Mainland Affairs Council confirmed the Fifth Plenum expelled CMC Vice Chairman Zhang Youxia and PLA Chief of the Joint Staff Liu Zhenli among 33 officials purged from the party."
+  ],
+  "key_stat": {
+    "number": "26%",
+    "label": "Share of CCP Central Committee members purged under Xi since 2022",
+    "context": "The Fifth Plenum alone expelled 33 officials, including CMC Vice Chairman Zhang Youxia and PLA Chief of the Joint Staff Liu Zhenli, pushing cumulative departures to 96 of the 20th Central Committee's members.",
+    "source": "Taipei Times"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "Pan Gongsheng, Governor",
+      "action": "Switches main policy rate to overnight reverse repo",
+      "document": "PBOC Open Market Operations Announcement No. 13 [2026]",
+      "detail": "Beginning Nov 2, the PBOC will conduct daily overnight reverse repo auctions at a fixed rate of *1.25 percent*, demoting the 7-day reverse repo to a supplementary tool used mainly around tax dates and month-end.",
+      "source_label": "PBOC ZH",
+      "url": "https://finance.sina.cn/2026-10-31/detail-inixcnhn4797831.d.html?vt=4&wm=1029?q"
+    },
+    {
+      "ministry": "China Securities Regulatory Commission",
+      "ministry_chinese": "中国证监会",
+      "official": "Wu Qing, CSRC Party Secretary and Chairman",
+      "action": "Pledges to 'stabilize market, stabilize expectations' ahead of Nov 2 meeting",
+      "document": null,
+      "detail": "Wu chaired an expanded party committee meeting Oct 30 after the Shanghai Composite closed down *1.44 percent* at 3,599.02 on Friday, with PBOC and CSRC set to meet banks and brokerages Nov 2 on buyback-relending tools.",
+      "source_label": "CSRC via Sina Finance ZH",
+      "url": "https://finance.sina.com.cn/roll/2026-11-01/doc-inixfrfw7852652.shtml"
+    },
+    {
+      "ministry": "Ministry of Foreign Affairs",
+      "ministry_chinese": "外交部",
+      "official": "Ma Zhaoxu, Vice Foreign Minister",
+      "action": "Addresses G20 foreign ministers meeting in three sessions",
+      "document": null,
+      "detail": "Ma delivered China's remarks at all three stages of the G20 Foreign Ministers' Meeting, published by MOFA Nov 1.",
+      "source_label": "MOFA ZH",
+      "url": "https://www.fmprc.gov.cn/wjbxw_new/202611/t20261101_12050887.shtml"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM International Department head",
+      "action": "Explains China-Switzerland FTA upgrade protocol",
+      "document": "China-Switzerland FTA Upgrade Protocol",
+      "detail": "Nearly *300 tariff lines* will see further cuts under the protocol signed Oct 30 by Xi and the Swiss president, with zero-tariff coverage ultimately reaching more than *99 percent* of two-way trade.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://fta.mofcom.gov.cn/article/c/zhengwugk/202611/100287.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "CCP Central Committee",
+      "action": "Publishes full text of Fifth Plenum decision on Party discipline",
+      "detail": "The 'Decision on Persistently Advancing Full and Rigorous Party Self-Governance,' adopted Oct 26-29, was published in full Nov 1; Xi Jinping delivered the Politburo's work report and explained the draft Decision to the plenum.",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16497452.html"
+    },
+    {
+      "body": "PLA",
+      "action": "Military pledges loyalty to Xi after purge",
+      "detail": "PLA commentary following the Fifth Plenum stressed obedience to Xi Jinping's command, days after the plenum confirmed expulsion of 33 officials including the Central Military Commission's second-ranking vice chairman.",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/yw_214049/16497440.html"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 2,
+      "headline": "PBOC, CSRC to meet banks and brokerages on capital-market support tools",
+      "detail": "Regulators plan to discuss optimizing the stock buyback and share-increase re-lending facility after a month of heavy equity losses."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Outcome will shape the trajectory of China trade and tariff legislation for the remainder of the Trump term."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal one-year suspensions set to lapse",
+      "detail": "The BIS Affiliates (50%) Rule suspension and China's reciprocal rare-earth export-control suspension, both dated from Nov 10 2025, are due to expire absent an extension."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "Trump is scheduled to meet Xi Jinping on the sidelines after stops in Manila for ASEAN; Melania Trump's office says she will not attend."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayoral and magistrate races, including a Taipei contest between KMT's Chiang Wan-an and DPP's Shen Po-yang, read as a midterm on President Lai."
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/world/china/taiwan-says-china-harassing-shipping-with-east-coast-patrol-2026-11-01/",
+      "source": "Reuters China",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan Accuses China of 'Harassing' Shipping With East Coast Patrol",
+      "body": "Taiwan said Saturday that a Chinese coast guard formation patrolling waters east of the island amounts to harassment of shipping. China Coast Guard spokesman **Jiang Lue** said the Hushi-led formation has conducted 'routine law-enforcement patrols' east of Taiwan since October, while Taiwanese vessels separately tracked and drove off a coast guard ship near Kinmen.",
+      "src_line": "Reuters, Nov 1 2026"
+    },
+    {
+      "url": "https://www.afp.com/ar/node/3850534",
+      "source": "AFP China",
+      "category_tag": "US-China",
+      "headline": "Trump Says US Looking 'Very Closely' at Nvidia CEO Spy Allegations",
+      "body": "President **Trump** said Saturday the US would examine 'very closely' a report that Nvidia CEO **Jensen Huang** was targeted by a China-linked espionage operation run through a Singapore data-center executive. Beijing's Washington embassy dismissed the report as a baseless smear, while Trump called Huang 'a great, brilliant person' Washington wants to protect.",
+      "src_line": "AFP, Oct 31 2026"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/01/2003866956",
+      "source": "Taipei Times (direct)",
+      "category_tag": "PLA",
+      "headline": "Fifth Plenum Confirms CMC Vice Chairman Zhang Youxia Among 33 Officials Expelled",
+      "body": "Taiwan's Mainland Affairs Council said the Fifth Plenum (Oct 26-29) confirmed expulsion of CMC Vice Chairman **Zhang Youxia** and PLA Chief of the Joint Staff **Liu Zhenli** among 33 officials ousted from the party. Researcher **Chieh Chung** told a Taipei seminar that *96 Central Committee members*, 26 percent of its membership, have departed under a cloud, more than double the number purged from the 18th Central Committee, with experts split on whether the upheaval delays PLA invasion timelines or raises accident risk from inexperienced new commanders.",
+      "src_line": "Taipei Times, Nov 1 2026"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-01/china-to-convene-meeting-on-supporting-stock-market-reports-say",
+      "source": "Bloomberg China",
+      "category_tag": "PRC-Economy",
+      "headline": "China to Convene PBOC-CSRC Meeting to Shore Up Stock Market",
+      "body": "The PBOC, CSRC and banking regulators plan to meet brokerages and banks Nov 2 to discuss capital-market support tools, including optimizing the stock buyback and share-increase re-lending facility. CSRC chairman **Wu Qing** pledged Oct 30 to stabilize the market after the Shanghai Composite fell *1.44 percent* Friday and the ChiNext dropped 23.02 percent for October.",
+      "src_line": "Bloomberg; Sina Finance ZH, Nov 1 2026"
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/zyxw/202610/t20261030_12050467.shtml",
+      "source": "外交部 (MOFA ZH)",
+      "category_tag": "Diplomacy",
+      "headline": "Xi Hosts German President Steinmeier, Signs Swiss FTA Upgrade Same Day",
+      "body": "**Xi Jinping** held Great Hall of the People talks with German President Steinmeier on Oct 30, saying 'consistency is precious in governance' and that China's Germany policy is 'consistent, stable and predictable.' Hours earlier Xi met Swiss President **Parmelin**, and the two sides signed an upgraded China-Switzerland free trade agreement protocol.",
+      "src_line": "MOFA ZH, Oct 30 2026"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3372852/quad-diplomats-finalise-first-leaders-summit-two-years-trump-xi-meeting",
+      "source": "SCMP China",
+      "category_tag": "Indo-Pacific",
+      "headline": "Rubio: Quad 'Not an Anti-China' Coalition, Ahead of Trump-Xi Shenzhen Summit",
+      "body": "Secretary of State **Marco Rubio** said Saturday the Quadrilateral Security Dialogue is 'not an anti-China or anti-anybody coalition,' as diplomats finalized a leaders' summit in the Philippines next month. The statement comes weeks before Trump meets **Xi Jinping** in Shenzhen for the Nov 18-19 APEC summit.",
+      "src_line": "SCMP, Oct 31 2026"
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.wsj.com/pro/venture-capital/treasury-to-limit-chinese-biotech-deals-but-still-allow-licensing-36a38e48",
+      "source": "WSJ China",
+      "headline": "Treasury Prepares to Limit Chinese Biotech Deals, Still Allow Licensing",
+      "body_text": "Treasury is preparing rules restricting certain US investment in Chinese biotechnology firms while still permitting licensing deals. The approach would extend the outbound-investment framework under Executive Order 14105 beyond its existing semiconductor, quantum and AI scope.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://www.scmp.com/news/us/article/3372632/us-bans-chinese-labs-testing-electronics-ahead-trump-xi-meeting",
+      "source": "SCMP China",
+      "headline": "US Bars Chinese Labs From Testing Electronics Ahead of Trump-Xi Meeting",
+      "body_text": "The FCC voted to bar China-based labs from certifying electronics for the US market starting Dec 1, 2028. MOFCOM said it had repeatedly sought a bilateral mutual-recognition agreement but met an 'extremely negative' US response.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/01/2003866945",
+      "source": "Taipei Times (direct)",
+      "headline": "Rubio, Japan, Korea Foreign Ministers Reaffirm Taiwan Strait Peace at G20",
+      "body_text": "**Rubio** met his Japanese and South Korean counterparts on the sidelines of the G20 in Atlanta, with the three emphasizing peace across the Taiwan Strait and raising concerns over China's South China Sea and East China Sea conduct. Taiwan's foreign ministry thanked the three and urged continued 'concrete actions' to maintain regional stability.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3372888/us-first-lady-melania-trump-unlikely-travel-apec-summit-china",
+      "source": "SCMP China",
+      "headline": "Melania Trump Unlikely to Join Trump at APEC Shenzhen Summit",
+      "body_text": "First lady Melania Trump's office said she is 'not scheduled to attend the events in person' at the Nov 18-19 APEC summit in Shenzhen. Trump is set to visit the Philippines for the ASEAN summit before traveling to China to meet **Xi Jinping**.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/meta-builds-humanoid-robot-with-chinese-startup-fourier-information-says-2026-10-31/",
+      "source": "Reuters China",
+      "headline": "Meta Building Humanoid Robot With Chinese Startup Fourier",
+      "body_text": "Meta is developing a humanoid robot in partnership with Chinese robotics startup Fourier, per a report cited by Reuters. The deal underscores continued US tech-sector reliance on Chinese hardware suppliers even as Washington restricts chip exports and investment in sensitive PRC sectors.",
+      "instrument": "Investment"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.bbc.com/zhongwen/watch/cm3el2ewgvx0o/simp",
+      "source": "BBC中文 (BBC Chinese ZH)",
+      "headline": "Taipei Mayoral Candidates Clash in First TV Debate Ahead of Nov 28 Vote",
+      "body_text": "KMT incumbent **Chiang Wan-an** and DPP candidate **Shen Po-yang** (沈伯洋) held Taipei's first televised mayoral debate Saturday, covering urban renewal, the Songshan Airport relocation and food safety, with cross-strait issues also raised. The debate comes less than a month before Taiwan's Nov 28 nine-in-one local elections.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_11_01_906649.shtml",
+      "source": "观察者网 (Guancha ZH)",
+      "headline": "China's Defense Ministry Blasts Japan's Underwater Drone Surveillance Plan",
+      "body_text": "Japan's defense ministry will start research from fiscal 2027 on underwater drones to monitor foreign submarines, with a prototype targeted by fiscal 2035, per the report. China's Ministry of National Defense has previously called Japan's remilitarization a 'gray rhino' threatening the postwar order, the outlet noted.",
+      "region": "Japan"
+    },
+    {
+      "url": "http://world.people.com.cn/n1/2026/1101/c1002-40825397.html",
+      "source": "人民日报国际 (People's Daily World ZH)",
+      "headline": "Russian Federation Council Speaker Matviyenko to Visit China Nov 1-3",
+      "body_text": "Federation Council Speaker **Matviyenko** will lead a delegation to China from Nov 1-3 at the invitation of NPC Standing Committee Chairman **Zhao Leji**. The visit continues high-level legislative exchanges between Moscow and Beijing.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3372840/soft-power-display-chinas-first-lady-peng-liyuan-hosts-german-counterpart",
+      "source": "SCMP China",
+      "headline": "China's First Lady Hosts German Counterpart in Beijing Tea Reception",
+      "body_text": "**Peng Liyuan** hosted German first lady Elke Budenbender for a Beijing tea reception Friday, recalling her 2017 trip to Germany and praising Budenbender's work on women's and children's rights. The visit coincided with German President Steinmeier's state visit and Xi's Great Hall of the People talks.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://english.kyodonews.net/articles/-/90033",
+      "source": "Kyodo China",
+      "headline": "Japan, US, Australia, India Target China's Economic Policies",
+      "body_text": "Quad members Japan, the US, Australia and India are coordinating action against China's economic practices, as diplomats met on the sidelines of other multilateral gatherings. The grouping's leaders are set to hold their first summit in two years in the Philippines next month.",
+      "region": "Multilateral"
+    },
+    {
+      "url": "https://world.people.com.cn/n1/2026/1101/c1002-40825356.html",
+      "source": "人民日报国际 (People's Daily World ZH)",
+      "headline": "Chinese Broadcasters Showcase 50-Plus Titles at Cape Town TV Festival",
+      "body_text": "Sixteen Chinese media organizations, led by Jiangsu Broadcasting, exhibited more than 50 titles at the Oct 28-30 Africa TV Festival in Cape Town under a 'China joint pavilion.' Chinese deputy consul-general **Wang Xiao** called audiovisual content a bridge for China-Africa people-to-people ties.",
+      "region": "Africa"
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.taiwannews.com.tw/news/6469629",
+      "source": "Taiwan News",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Tracks Chinese Coast Guard Ship Inside Dongsha Restricted Waters",
+      "body_text": "Taiwan's coast guard said it tracked a Chinese coast guard vessel that entered restricted waters around Dongsha (Pratas) Island. The incursion follows a broader pattern of increased Chinese coast guard activity around Taiwan's outlying islands and east coast since October."
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202611010009",
+      "source": "Focus Taiwan",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Says China Has 'No Jurisdiction' After Coast Guard Patrol Claims",
+      "body_text": "Taiwan's government rejected China Coast Guard claims of administrative authority over waters east of the island, saying Beijing has 'no jurisdiction' there. The statement follows coast guard spokesman Jiang Lue's confirmation of a Hushi-formation patrol east of Taiwan since October."
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3372822/how-zhuhai-air-show-charted-chinas-path-catching-flying-high",
+      "source": "SCMP China",
+      "category": "Technology",
+      "headline": "Zhuhai Air Show Traces China's Path From Importer to Exporter",
+      "body_text": "SCMP traced the 30-year evolution of the Zhuhai air show from its 1996 debut, when China showcased the Russian-equipped J-8IIM fighter alongside imported Su-27s, to today's domestically built lineup. The feature underscores China's shift from importing advanced foreign jets to fielding indigenous fighter and weapons programs."
+    },
+    {
+      "url": "https://china.caixin.com/2026-11-01/102499624.html",
+      "source": "财新 (Caixin ZH)",
+      "category": "Diplomacy",
+      "headline": "Xinhua Sidebar Details Xi's Work Report to Fifth Plenum",
+      "body_text": "A Xinhua feature carried by Caixin said **Xi Jinping** delivered a work report on behalf of the Politburo and explained the draft Decision on full and rigorous Party governance, adopted Oct 26-29. The plenum focused exclusively on Party discipline themes.",
+      "companies": []
+    },
+    {
+      "url": "https://news.cctv.com/special/20261102/zjwz/index.shtml",
+      "source": "央视新闻 (CCTV ZH)",
+      "category": "Technology",
+      "headline": "World Internet Conference Wuzhen Summit Opens Nov 2-5",
+      "body_text": "The 2026 World Internet Conference Wuzhen Summit runs Nov 2-5 under the theme 'open source, open and shared,' with 27 sub-forums on AI governance, robotics and digital green development. The preview cites the Wuzhen data center's capacity at *1.8 quintillion calculations per second*."
+    },
+    {
+      "url": "https://china.huanqiu.com/article/4TqniVuPtWF",
+      "source": "环球网 (Global Times ZH)",
+      "category": "PRC-Economy",
+      "headline": "CSRC Fines Four Qingyue Technology Executives $28 Million Combined",
+      "body_text": "China's securities regulator fined four former executives of Qingyue Technology a combined *28 million yuan* for fabricating financial data in its 2020-2022 IPO prospectus, inflating one period's profit by 131.74 percent. Former chairman Gao Yudi received an eight-year market ban, the longest among the four."
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://finance.sina.com.cn/money/bond/wemedia/2026-11-01/doc-inixeyiu4175594.shtml",
+      "source": "中国人民银行 (PBOC ZH)",
+      "category": "PRC-Economy",
+      "headline": "PBOC Creates New Bond-Market Swap Facility for Systemic Stress",
+      "body_text": "PBOC's new Bond Market NBFI Swap Facility, unveiled Oct 26, lets qualifying asset managers swap into central bank bills only during systemic redemption-driven liquidity crises.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://m.sohu.com/a/1095237266_99992453?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+      "source": "中国人民银行 (PBOC ZH)",
+      "category": "Diplomacy",
+      "headline": "China Extends APEC Business Travel Card Stay to 90 Days",
+      "body_text": "Beijing extended the maximum stay for APEC Business Travel Card holders in China from 60 to 90 days, effective Nov 1.",
+      "color_bar_class": "cb-mid"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-01/china-s-upgraded-peru-trade-deal-takes-effect-widening-ties",
+      "source": "Bloomberg China",
+      "headline": "China's Upgraded Peru Trade Deal Takes Effect",
+      "body_text": "An upgraded China-Peru free trade agreement protocol entered into force, widening tariff and investment commitments between the two countries. MOFCOM's international trade department confirmed implementation details separately.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.hkej.com/instantnews/china/article/4552694/%E6%BB%AC%E6%B7%B1%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E9%A6%96%E4%B8%89%E5%AD%A3%E6%B7%A8%E5%88%A9%E6%BD%A4%E5%A2%9E8.5%25",
+      "source": "信报 (HKEJ ZH)",
+      "headline": "Shanghai, Shenzhen Listed Companies' Profit Rises 8.5% in First Three Quarters",
+      "body_text": "Companies listed on the Shanghai and Shenzhen exchanges posted combined net profit of *RMB 5.1 trillion* in the first three quarters, up *8.5 percent* year-on-year and the highest since 2022, per CCTV data. Analysts attributed the gain to domestic demand recovery, strong exports and supply-chain efficiency.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://weekly.caixin.com/2026-10-31/102499331.html",
+      "source": "财新 (Caixin ZH)",
+      "headline": "Yuan Rises 4% in 2026 Despite Record Negative US-China Rate Gap",
+      "body_text": "The 10-year China-US treasury yield spread fell to *negative 360 basis points*, a record low, yet the yuan has appreciated roughly 4 percent in 2026 even as the Fed resumed rate hikes. The Caixin Weekly column argued currency pricing has shifted from trade balances toward capital-flow and return-on-capital dynamics.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "http://m.ce.cn/bwzg/202611/t20261101_3279204.shtml",
+      "source": "经济日报 (Economic Daily ZH)",
+      "headline": "AI Chip Demand 'Devours' Memory Supply, Driving Device Price Hikes",
+      "body_text": "Roughly *70 percent* of advanced global memory-chip capacity now goes to AI data centers, squeezing supply for phones and PCs and pushing Apple to call the shortage a 'once-in-a-century flood.' SK Hynix and Micron have reportedly sold out 2026 HBM capacity, with the HBM market expected to exceed $60 billion this year.",
+      "companies": [
+        "Samsung",
+        "SK Hynix",
+        "Micron",
+        "Apple",
+        "Lenovo",
+        "Dell"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.ft.com/content/7e749777-dcee-4c11-9bdc-7f81bee80455?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "Toyota-Backed Thai Truckmaker Leans on Service Network Against Chinese EV Rivals",
+      "body_text": "Archion, backed by Toyota, is betting on its aftersales repair network to compete with Chinese EV makers in Thailand, after Thai floods highlighted service-quality gaps. The strategy comes as Chinese brands expand regional manufacturing to dodge tariffs and import quotas.",
+      "companies": [
+        "Archion",
+        "Toyota"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://news.cctv.com/2026/11/01/ARTIHJ9OA7aqe7FNzjxrRsGX261101.shtml",
+      "source": "央视新闻 (CCTV ZH)",
+      "headline": "140th Canton Fair's Third Phase Opens as Export Orders Accelerate",
+      "body_text": "The fair's third phase, marking its 70th anniversary, spans *515,000 square meters* with 25,000 booths and more than 12,000 exhibitors across toys, textiles, stationery and health/leisure categories.",
+      "companies": [],
+      "sector": "manufacturing"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFCOM",
+      "body_chinese": "商务部",
+      "speaker": "MOFCOM spokesperson",
+      "role": "Ministry of Commerce spokesperson",
+      "topic": "FCC ban on Chinese electronics-testing labs",
+      "statement": "China has repeatedly proposed negotiating a bilateral mutual recognition agreement, but the US side's attitude has been extremely negative. If the US insists on acting unilaterally, China will take further necessary measures to firmly safeguard its own legitimate rights and interests.",
+      "original_zh": "中方此前多次提出商谈\"双边互认协议\"，但美方态度极其消极、负面。如美方一意孤行，中方将进一步采取必要措施，坚定维护自身正当权益。",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "The FCC voted to bar China-based labs from certifying electronics for US market authorization starting Dec 1, 2028.",
+      "source": "中国人民银行 (via Sina ZH)",
+      "url": "https://m.sohu.com/a/1095237266_99992453?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "Embassy",
+      "body_chinese": "使馆",
+      "speaker": "Liu Chang",
+      "role": "Spokesperson, Chinese Embassy in Washington",
+      "topic": "Nvidia CEO espionage allegations",
+      "statement": "Per 香港01: the claim amounts to a baseless smear and defamation campaign against China.",
+      "original_zh": "反驳指这是美国对中国展开一场毫无根据的抹黑和诽谤的行动",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "The New York Times reported US intelligence concluded a China-linked Singapore executive had been targeting Nvidia CEO Jensen Huang.",
+      "source": "香港01 (HK01 ZH)",
+      "url": "https://www.hk01.com/%E5%8D%B3%E6%99%82%E5%9C%8B%E9%9A%9B/60405858/%E9%BB%83%E4%BB%81%E5%8B%B3%E6%8D%B2%E4%B8%AD%E5%9C%8B%E5%A5%B3%E8%AB%9C%E6%A1%88-%E7%89%B9%E6%9C%97%E6%99%AE%E9%A6%96%E5%BA%A6%E5%9B%9E%E6%87%89-%E5%B0%87%E4%BB%94%E7%B4%B0%E8%AA%BF%E6%9F%A5"
+    },
+    {
+      "body": "MND",
+      "body_chinese": "国防部",
+      "speaker": "Jiang Lue",
+      "role": "China Coast Guard spokesperson",
+      "topic": "Coast guard patrols east of Taiwan",
+      "statement": "Since October, the Hushi formation has continuously strengthened control of relevant waters, effectively safeguarding normal navigation and operational order, and earnestly protecting the lawful rights, interests and safety of life and property of Chinese nationals, including Taiwan compatriots.",
+      "original_zh": "10月以来，虎獅艦編隊持續加強相關海域管控，有力保障正常航行和作業秩序，切實維護包括台灣同胞在內的中國民眾合法正當權益和生命財產安全。",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "Statement follows the Hushi-led coast guard formation's Oct 31 patrol east of Taiwan and separate incursion near Kinmen.",
+      "source": "香港01 (HK01 ZH)",
+      "url": "https://www.hk01.com/%E5%8D%B3%E6%99%82%E4%B8%AD%E5%9C%8B/60405867/%E9%99%B8%E6%B5%B7%E8%AD%A6%E5%9C%A8%E5%8F%B0%E4%BB%A5%E6%9D%B1%E6%B5%B7%E5%9F%9F%E9%96%8B%E5%B1%95-%E5%B8%B8%E6%85%8B%E5%8C%96%E5%9F%B7%E6%B3%95%E5%B7%A1%E6%9F%A5"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "Ministry of Foreign Affairs spokesperson",
+      "topic": "US actions against Chinese companies",
+      "statement": "Per Sina/MOFA: the US has 'unreasonably suppressed Chinese enterprises,' prompting China's 'resolute opposition and strong dissatisfaction.'",
+      "original_zh": "美方无理打压中国企业 中方坚决反对、强烈不满",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Headline reaction published Oct 30 responding to an unspecified US action against Chinese firms.",
+      "source": "外交部发言人 (MOFA presser ZH, via Sina)",
+      "url": "https://finance.sina.cn/2026-10-30/detail-iniwywts5472699.d.html?from=wap"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "General Secretary, CCP",
+      "topic": "Anti-corruption campaign",
+      "statement": "As long as the soil and conditions that give rise to corruption exist, the fight against corruption cannot stop for a moment; the bugle call to charge must sound forever.",
+      "original_zh": "只要存在腐败问题产生的土壤和条件，反腐败斗争就一刻不能停，必须永远吹冲锋号",
+      "addressed_to": "domestic",
+      "tone": "firm",
+      "context": "Quote featured in state media coverage of the Fifth Plenum's decision on persistently advancing full and rigorous Party governance, adopted Oct 26-29.",
+      "source": "环球网 (Global Times ZH)",
+      "url": "https://china.huanqiu.com/article/4TqltxO9cAb"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "DT",
+      "who": "Donald Trump",
+      "handle_context": "President of the United States",
+      "platform_date": "AFP · Oct 31, 2026",
+      "quote_text": "I have a lot of respect for Jensen. I didn't know about the specific thing, but I hope he's going to be OK. He's a great, brilliant person, and we want to protect our brilliant people",
+      "analyst_note": "Huang advised Trump on AI policy and joined his May 2026 Beijing visit to meet Xi Jinping; the NYT reported a China-linked Singapore executive had been targeting him.",
+      "badge_class": "sb-p",
+      "url": "https://www.afp.com/ar/node/3850534"
+    },
+    {
+      "avatar_initials": "MR",
+      "who": "Marco Rubio",
+      "handle_context": "Secretary of State",
+      "platform_date": "SCMP · Oct 31, 2026",
+      "quote_text": "It is not an anti-China or anti-anybody coalition",
+      "analyst_note": "Rubio spoke as Quad diplomats finalized the first leaders' summit in two years, to be held in the Philippines ahead of Trump's scheduled Shenzhen meeting with Xi Jinping.",
+      "badge_class": "sb-p",
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3372852/quad-diplomats-finalise-first-leaders-summit-two-years-trump-xi-meeting"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "CMC Vice Chairman",
+      "name": "Zhang Youxia",
+      "action": "expelled",
+      "detail": "Taiwan's Mainland Affairs Council said the Fifth Plenum (Oct 26-29) confirmed Zhang's expulsion from the CCP, the most senior military figure purged since the Fourth Plenum's expulsion of He Weidong and Miao Hua a year earlier.",
+      "predecessor": null
+    },
+    {
+      "position": "PLA Chief of the Joint Staff",
+      "name": "Liu Zhenli",
+      "action": "expelled",
+      "detail": "Expelled from the CCP per Fifth Plenum confirmation, cited for failing to implement central directives, according to Taiwan's Mainland Affairs Council.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/china/taiwan-says-china-harassing-shipping-with-east-coast-patrol-2026-11-01/",
+    "https://www.taiwannews.com.tw/news/6469629",
+    "https://focustaiwan.tw/politics/202611010009",
+    "https://www.scmp.com/news/china/politics/article/3372875/beijing-ramps-maritime-patrols-around-taiwan-prompting-taipei-shadow-ships",
+    "http://world.people.com.cn/n1/2026/1101/c1002-40825397.html"
+  ],
+  "story_count": 100,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 74,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-01.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-01.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
