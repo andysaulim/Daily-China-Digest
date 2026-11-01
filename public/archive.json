@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-01",
+    "filename": "2026-11-01.html",
+    "re_line": "Taiwan coast guard patrols \u00b7 Nvidia spy claim \u00b7 Zhang Youxia expelled \u00b7 PBOC stock meeting \u00b7 Xi-Steinmeier summit",
+    "top_stories": 6,
+    "overnight_items": 6,
+    "word_count": 2739,
+    "sources": 74,
+    "pdf": true
+  },
+  {
     "date": "2026-10-31",
     "filename": "2026-10-31.html",
     "re_line": "RE: Fifth Plenum purge deepens \u00b7 PMI contraction \u00b7 FCC test-lab clash \u00b7 Xi-Steinmeier summit \u00b7 Dongsha incursion",
