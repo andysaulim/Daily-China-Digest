@@ -1,0 +1,504 @@
+{
+  "digest_date": "Monday, November 2, 2026",
+  "re_line": "Xi hosts Oman's Sultan · Taiwan CGA harassment accusation · October PMI back in contraction · PBOC swap facility demand doubles",
+  "market_indicators": {
+    "usd_cnh": {
+      "value": "6.6452",
+      "change_pct": -0.09,
+      "as_of": "Nov 02"
+    },
+    "usd_cny": {
+      "value": "6.6368",
+      "change_pct": -0.5,
+      "as_of": "Nov 02"
+    },
+    "brent": {
+      "value": "108.52",
+      "change_pct": -5.9,
+      "as_of": "Nov 02"
+    },
+    "hang_seng": {
+      "value": "23,393.32",
+      "change_pct": 0.78,
+      "as_of": "Nov 02"
+    },
+    "sse_composite": {
+      "value": "3,638.03",
+      "change_pct": -0.28,
+      "as_of": "Nov 02"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "Xi Jinping hosted Oman's Sultan Haitham bin Tariq for the first state visit by an Omani head of state since the two countries established ties, and said the Gulf 'should not become an arena for great-power rivalry.'",
+    "Taiwan's Coast Guard Administration accused China Coast Guard vessels, including the Hushi and Meishan, of harassing shipping and asserting 'fictional jurisdiction' off Taiwan's east coast, where Beijing has patrolled regularly since June.",
+    "China's official manufacturing PMI fell to 49.3 in October, back into contraction, while the private Caixin gauge also showed growth losing momentum as export orders eased."
+  ],
+  "key_stat": {
+    "number": "¥100B+",
+    "label": "Demand for PBOC's third securities-sector swap facility operation",
+    "context": "31 brokerages and fund firms applied for over ¥100 billion in the PBOC's SFISF swap operation set for Nov 3, more than double the ¥50 billion and ¥55 billion raised in the tool's first two rounds in Oct 2024 and Jan 2025.",
+    "source": "Caixin"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (institutional announcement)",
+      "action": "Launches third SFISF swap facility operation",
+      "document": "PBOC Open Market Operations Announcement",
+      "detail": "The PBOC will conduct a one-year securities, funds and insurance companies swap facility (SFISF) operation on Nov 3; 31 institutions applied for over ¥100 billion, exceeding the ¥50 billion and ¥55 billion raised in the tool's first two rounds.",
+      "source_label": "PBOC/Caixin",
+      "url": "https://finance.caixin.com/2026-11-02/102500038.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (institutional announcement)",
+      "action": "Conducts ¥541 billion overnight reverse repo as policy-rate anchor shifts",
+      "document": null,
+      "detail": "The central bank executed a ¥541 billion overnight reverse repo operation as it begins transitioning its primary policy-rate benchmark to the overnight repo rate, Chinese financial media reported Nov 2.",
+      "source_label": "PBOC ZH/China News Service",
+      "url": "https://www.chinanews.com.cn/cj/2026/11-02/10724883.shtml"
+    },
+    {
+      "ministry": "Ministry of Foreign Affairs",
+      "ministry_chinese": "外交部",
+      "official": "Mao Ning, MOFA spokesperson",
+      "action": "Announces Gabonese President's first state visit to China",
+      "document": null,
+      "detail": "President Oligui Nguema will visit China Nov 3-7 at Xi Jinping's invitation; Xi will hold a welcome ceremony and talks, Li Qiang and Zhao Leji will meet him separately, and he will attend the ninth China International Import Expo in Shanghai.",
+      "source_label": "MOFA/Xinhua ZH",
+      "url": "http://world.people.com.cn/n1/2026/1102/c1002-40826229.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "CCP Central Committee",
+      "action": "Fifth Plenum communique draws scrutiny over 'inner-party democracy' language",
+      "detail": "China observer Willy Lam said the fifth plenum's communique contained unusually detailed discussion of 'democratic centralism' and inner-party democracy that amounts to veiled criticism of Xi Jinping's one-man rule, Taipei Times reported. The plenum followed a record number of party expulsions amid an intensified anti-corruption purge.",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/02/2003867005"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "US midterm elections",
+      "detail": "Control of Congress at stake; the outcome shapes the trajectory of China trade and sanctions legislation for the remainder of Trump's term."
+    },
+    {
+      "month": "Nov",
+      "day": 3,
+      "headline": "Gabonese President Oligui Nguema's state visit to China (through Nov 7)",
+      "detail": "His first state visit since taking office; Xi Jinping hosts welcome ceremonies and talks, with Li Qiang and Zhao Leji meeting him separately, and he attends the ninth China International Import Expo in Shanghai."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal one-year suspensions set to lapse",
+      "detail": "The BIS Affiliates Rule extension and China's October 2025 rare-earth export controls were suspended for one year from Nov 10, 2025; status after the deadline remains unconfirmed."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting opens in Shenzhen",
+      "detail": "China hosts the Nov 18-19 summit; Taiwan has formally protested Beijing's handling of its invitation, saying China omitted the 'Chinese Taipei' designation."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayoral and magistrate races read as a mid-term referendum on President Lai Ching-te."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://factcheck.afp.com/doc.afp.com.D4NK4KE",
+      "source": "AFP",
+      "category": "Indo-Pacific",
+      "headline": "AFP Debunks Video Falsely Tied to India-China Border Skirmish",
+      "body_text": "AFP Fact Check found a viral video purporting to show a skirmish on the India-China border actually depicted a military drill in Karnataka, India. The clip had circulated widely online before AFP's verification debunked the claim."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/politics/article/3372991/beijing-urges-hong-kong-bring-more-governance-talent-integrity-competence",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Beijing Urges Hong Kong to Recruit More Governance Talent",
+      "body_text": "Beijing's Hong Kong and Macau Affairs Office urged the city to improve how it nurtures and appoints governance talent with 'integrity and competence.' It said Hong Kong would gain more room to open up only once national security was firmly safeguarded."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/society/article/3373007/meta-says-it-met-hong-kong-privacy-watchdog-over-ai-enabled-glasses-concerns",
+      "source": "SCMP",
+      "category": "Technology",
+      "headline": "Meta Briefs Hong Kong Privacy Watchdog on AI-Enabled Glasses",
+      "body_text": "Meta confirmed it met Hong Kong's privacy watchdog to discuss concerns over its AI-enabled smart glasses, days after the regulator warned the devices could enable covert recording. The glasses went on sale amid mounting international scrutiny."
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/global-legal-body-opens-hong-kong-office-boosts-city-s-law-hub-push",
+      "source": "Nikkei Asia",
+      "category": "Diplomacy",
+      "headline": "Rome-Based Legal Body Opens First Overseas Office in Hong Kong",
+      "body_text": "A Rome-based international legal body opened its first overseas liaison office in Hong Kong as part of the city's push to position itself as a regional legal-services hub. No further expansion plans were disclosed."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-robot-makers-have-mastered-moves-now-comes-race-brains-2026-11-01/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "China's Robot Makers Shift Focus From Movement to 'Brains'",
+      "body_text": "Reuters reported Chinese humanoid robot makers have mastered basic movement and are now racing to build the AI systems needed for machines to reason and adapt. The report frames this as the next competitive battleground beyond choreographed demonstrations."
+    },
+    {
+      "url": "https://www.scmp.com/business/markets/article/3372736/has-hong-kongs-ipo-boom-hit-wall-or-year-end-rush-still-come",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "Hong Kong's IPO Momentum Cools Sharply in Fourth Quarter",
+      "body_text": "Hong Kong's IPO pipeline slowed since October with only three new listings, all closing below their offer prices, amid market volatility and tighter regulatory scrutiny. Industry players said a year-end rush could still secure a top-three global ranking for 2026."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.reuters.com/world/china/chinas-slow-buying-us-farm-goods-tests-17-billion-trade-pledge-2026-11-02/",
+      "source": "Reuters",
+      "headline": "China's Farm Purchases Lag Behind $17 Billion US Trade Pledge",
+      "body_text": "Reuters reported China's purchases of US farm goods are lagging the *$17 billion*-a-year pledge made at the May 2026 summit between **Xi Jinping** and **Trump** in Beijing, part of a deal running through 2028. Beijing's buying pace has slowed in recent months, testing a commitment meant to help rebalance the bilateral trade relationship.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/02/world/asia/china-us-exports-ai-solar.html",
+      "source": "NYT",
+      "headline": "NYT: China Leverages Export Dominance in AI, Solar, Drone Tech Over Rivals",
+      "body_text": "The New York Times reported Beijing is making it harder for other countries, including the US, to shed dependence on Chinese solar, drone and drug-making technology, extending a leverage strategy first visible in rare-earth export controls. The piece frames the strategy as a signal that China's industrial dominance extends well beyond rare earths.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.wsj.com/world/china/china-xi-maritime-dominance-ef5f5c5a",
+      "source": "WSJ",
+      "headline": "WSJ: Xi Erodes Decades of US Maritime Dominance",
+      "body_text": "The Wall Street Journal reported **Xi Jinping** is changing decades of US dominance over the world's oceans, citing the expansion of China's naval and commercial shipping power. The piece places the shift within broader US-China strategic competition across the Indo-Pacific and beyond.",
+      "instrument": "Military"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.reuters.com/world/china/facing-chinese-pressure-taiwan-says-it-must-be-master-its-own-maritime-2026-11-02/",
+      "source": "Reuters",
+      "headline": "Taiwan Says It Must Be 'Master of Its Own Maritime Information'",
+      "body_text": "Taiwan said it must control its own maritime information as it faces continued Chinese pressure at sea, Reuters reported. The statement follows a string of Chinese coast guard patrols and survey-ship activity that Taipei says are testing its maritime sovereignty.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/02/2003866988",
+      "source": "Taipei Times",
+      "headline": "Taiwan Protests China's 'Discriminatory' APEC Invitation",
+      "body_text": "Taiwan's Ministry of Foreign Affairs lodged a protest after China sent an APEC invitation that did not address Taiwan by its official 'Chinese Taipei' designation, an official said. China hosts the Nov 18-19 Shenzhen summit, and Taipei said it would protect its rights as a full and equal APEC member.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://asia.nikkei.com/economy/trade/taiwan-and-japan-eye-trade-deal-akin-to-taipei-london-pact-sources-say",
+      "source": "Nikkei Asia",
+      "headline": "Taiwan, Japan Explore Trade Pact Modeled on Taipei-London Deal",
+      "body_text": "Japan and Taiwan are negotiating a broad trade pact modeled on the Taipei-London agreement, sources told Nikkei Asia. The talks come as Taipei seeks to diversify trade ties and deepen economic links with Tokyo.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-foreign-minister-pushes-dialogue-resolve-middle-east-conflict-2026-11-02/",
+      "source": "Reuters",
+      "headline": "Wang Yi Pushes Dialogue With Iran to Resolve Middle East Conflict",
+      "body_text": "**Wang Yi** met Iran's deputy secretary of the Supreme National Security Council, Ali Bagheri Kani, in Beijing and pushed for dialogue to resolve the Middle East conflict, Reuters reported. Wang said China supports Iran's efforts to safeguard its sovereignty and security.",
+      "region": "Middle East"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-02/china-s-5-000-ton-digging-machines-are-a-trade-war-risk-to-india",
+      "source": "Bloomberg",
+      "headline": "China's Giant Tunnel-Boring Machines Pose Trade War Risk to India",
+      "body_text": "Bloomberg reported Chinese manufacturers of 5,000-ton tunnel-boring machines are undercutting local and foreign rivals on price in India. The report frames the machinery exports as another front in China's industrial-overcapacity push into infrastructure equipment markets.",
+      "region": "India"
+    },
+    {
+      "url": "https://cn.yna.co.kr/view/ACK20261102003600881",
+      "source": "Yonhap (Chinese)",
+      "headline": "Daegu Court Hears Case of Chinese Student's Murder in South Korea",
+      "body_text": "A Daegu court began hearing the case of Zheng Changsheng, a Chinese national charged with murdering a Chinese exchange student in South Korea, Yonhap reported Nov 2. His defense said he admitted to all charges, including murder, dismembering and concealing the body, and obstructing official duties.",
+      "region": "Korea"
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16497601.html",
+      "source": "MND (Chinese)",
+      "headline": "Xi, Peru's President Exchange Messages on 55th Anniversary of Ties",
+      "body_text": "**Xi Jinping** and Peruvian President Keiko Fujimori exchanged congratulatory messages marking 55 years of China-Peru diplomatic relations, China's defense ministry website reported Nov 2.",
+      "region": "Latin America"
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/jswj/16497562.html",
+      "source": "MND (Chinese)",
+      "headline": "PLA Navy Hospital Ship Visits Togo",
+      "body_text": "China's Navy hospital ship Jixiang Fangzhou (Auspicious Ark) visited Togo, the Ministry of National Defense said Nov 2, without further details in today's dispatch.",
+      "region": "Africa"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://apnews.com/article/china-taiwan-coast-guard-pratas-islands-dfc441591994cb435e55eb8f3dc6aeda",
+      "source": "AP News",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan's Coast Guard Accuses China of Maritime Harassment",
+      "body": "Taiwan's Coast Guard Administration said China Coast Guard vessels, including the Hushi (CCG 1308) and Meishan (CCG 2303), are harassing shipping off Taiwan's east coast and trying to exert a 'fictional jurisdiction,' dispatching the cutter Ji An to monitor the area. The CGA said China has run regular patrols off the east coast since June, which officials say may rehearse a maritime blockade using overlapping military, paramilitary and civilian assets.",
+      "src_line": "AP News; ship detail per Taipei Times"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-02/xi-hosts-oman-s-sultan-for-rare-visit-to-china-with-hormuz-shipping-in-focus",
+      "source": "Bloomberg",
+      "category_tag": "Diplomacy",
+      "headline": "Xi Hosts Oman's Sultan, Warns Gulf Must Avoid Great-Power Rivalry",
+      "body": "**Xi Jinping** held talks with Oman's Sultan Haitham bin Tariq in Beijing, the first state visit by an Omani head of state since the two countries established ties 48 years ago. Xi said the Gulf region 'should not become an arena for great-power rivalry,' and Bloomberg said Hormuz Strait shipping security was a focus of the visit.",
+      "src_line": "Bloomberg"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/china-factory-growth-slows-october-export-orders-ease-private-pmi-shows-2026-11-02/",
+      "source": "Reuters",
+      "category_tag": "PRC-Economy",
+      "headline": "China's Factory Gauges Show Growth Losing Momentum in October",
+      "body": "China's official manufacturing PMI fell to *49.3* in October, slipping back into contraction, while Reuters reported the private Caixin PMI also showed growth losing momentum as export orders eased. The readings point to a broader slowdown in factory activity after months of acceleration.",
+      "src_line": "Reuters"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/02/2003867004",
+      "source": "Taipei Times",
+      "category_tag": "PLA",
+      "headline": "Four Chinese Survey Ships Suspected of Spying on Taiwan's Undersea Cables",
+      "body": "Japan's Yomiuri Shimbun reported four Chinese vessels spotted near Taiwan since May, the Xiangyang Hong 22, Tongji, Jia Geng and a ship identified as Mushanzi, are suspected of gathering intelligence on undersea cables, citing geospatial firm ingeniSPACE and Taiwanese authorities. The Xiangyang Hong 22, operated by China's Ministry of Natural Resources, has repeatedly sailed off northern Taiwan since May with irregular course changes near international cable routes.",
+      "src_line": "Taipei Times, citing Yomiuri Shimbun"
+    },
+    {
+      "url": "https://www.ft.com/content/2962ad57-cee1-4a63-82ba-17acfc09d812?syn-25a6b1a6=1",
+      "source": "FT",
+      "category_tag": "PRC-Economy",
+      "headline": "China's Chemical Exports Surge, Threatening New Trade-War Front",
+      "body": "Output of some key chemical ingredients has almost doubled over five years, the Financial Times reported, pressuring foreign rivals as Chinese producers flood global markets. The surge raises the prospect of fresh anti-dumping action from trading partners already contending with Chinese overcapacity in steel, solar and EVs.",
+      "src_line": "FT"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16497658.html",
+      "source": "MND (Chinese)",
+      "category": "PLA",
+      "headline": "China-Indonesia Counter-Terror Army Drill 'Sharp Blade-2026' Concludes",
+      "body_text": "China and Indonesia concluded their joint army counter-terrorism training exercise, the Ministry of National Defense announced Nov 2.",
+      "color_bar_class": "cb-red"
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/wjbxw_new/202611/t20261101_12050887.shtml",
+      "source": "MOFA (Chinese)",
+      "category": "Diplomacy",
+      "headline": "Vice FM Ma Zhaoxu Addresses G20 Foreign Ministers' Meeting",
+      "body_text": "Vice Foreign Minister Ma Zhaoxu spoke at the first session of the G20 foreign ministers' meeting, per MOFA's published remarks.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://china.chinadaily.com.cn/a/202611/02/WS6ae84017e4b09a165c792fa8.html",
+      "source": "MOFA/China Daily",
+      "category": "Diplomacy",
+      "headline": "MOFA Calls Lancang-Mekong Cooperation a Regional 'Golden Model'",
+      "body_text": "MOFA called Lancang-Mekong cooperation the most dynamic and promising 'golden model' of regional cooperation, China Daily reported.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://news.ifeng.com/c/8xj3iqbyEbD",
+      "source": "MOFA (Chinese)/Ifeng",
+      "category": "Diplomacy",
+      "headline": "MOFA Says China Has Dispatched Envoys to Middle East for Peace Talks",
+      "body_text": "MOFA said China has sent multiple special envoys to the Middle East to press for peace talks and de-escalation.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://user.guancha.cn/main/content?id=1764231",
+      "source": "Guancha",
+      "category": "Technology",
+      "headline": "Chinese PCB Makers Said to Supply Majority of Nvidia AI Server Boards",
+      "body_text": "A Guancha analysis said Chinese manufacturers supply roughly *65 percent* of the high-speed PCBs used in Nvidia's top AI server lines.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.guancha.cn/kegongliliang/2026_11_02_906335.shtml",
+      "source": "Guancha",
+      "category": "Technology",
+      "headline": "Chinese Camera Lens Brands Gain Ground Against Sony, Nikon",
+      "body_text": "Guancha reported Chinese lens makers such as Viltrox and Meike are gaining share in overseas reviews against Sony and Nikon.",
+      "color_bar_class": "cb-tech"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-02/byd-reports-higher-sales-for-sixth-month-on-exports-shares-gain",
+      "source": "Bloomberg",
+      "headline": "BYD Posts Higher Sales for Sixth Straight Month on Exports",
+      "body_text": "Bloomberg reported BYD posted higher sales for a sixth straight month in October, driven by exports, with shares gaining on the results.",
+      "companies": [
+        "BYD"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-02/hong-kong-chip-ipos-tap-intertwined-investors-boss-s-networks",
+      "source": "Bloomberg",
+      "headline": "Hong Kong Chip IPOs Draw on Overlapping Investor Networks",
+      "body_text": "Bloomberg reported Hong Kong's recent run of chip-sector IPOs draws on overlapping investor networks and company bosses' personal connections.",
+      "companies": [],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/11/02/pockets-of-opportunity-in-new-china-as-value-trap-begins-to-diminish.html",
+      "source": "CNBC",
+      "headline": "Lombard Odier Sees 'New China' Value Emerging in Frontier Tech",
+      "body_text": "Lombard Odier's John Woods said he sees emerging pockets of value in 'New China,' particularly frontier technology sectors backed by strong government support.",
+      "companies": [
+        "Lombard Odier"
+      ],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-02/chinese-steel-group-chides-mills-for-ignoring-output-curb-calls",
+      "source": "Bloomberg",
+      "headline": "Chinese Steel Group Chides Mills for Ignoring Output Curbs",
+      "body_text": "Bloomberg reported a Chinese steel industry group criticized mills for ignoring calls to curb output amid persistent overcapacity concerns.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/hsbc-open-hong-kong-ai-institute-following-singapore-launch-2026-11-02/",
+      "source": "Reuters",
+      "headline": "HSBC to Open Hong Kong AI Institute Following Singapore Launch",
+      "body_text": "HSBC will open an AI Institute in Hong Kong following a similar launch in Singapore, Reuters reported Nov 2.",
+      "companies": [
+        "HSBC"
+      ],
+      "sector": "finance"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "President",
+      "topic": "Gulf region great-power rivalry warning",
+      "statement": "The Middle East Gulf region must not become an arena for great-power rivalry and geopolitical conflict.",
+      "original_zh": "中东海湾地区不应成为大国博弈和地缘冲突的角力场",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "Xi made the remarks during a state visit by Oman's Sultan Haitham bin Tariq, the first by an Omani head of state since the two countries established ties.",
+      "source": "MND (Chinese)",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16497563.html"
+    },
+    {
+      "body": "Wang Yi",
+      "body_chinese": "王毅",
+      "speaker": "Wang Yi",
+      "role": "Foreign Minister, CFAC Office Director",
+      "topic": "Middle East conflict dialogue",
+      "statement": "The current conflict in the Middle East continues to drag on and spill over; dialogue and negotiation are the only way to resolve it.",
+      "original_zh": "当前中东地区战事延宕、外溢扩散，对话谈判才是解决之道",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Wang made the remarks meeting Iran's deputy Supreme National Security Council secretary Ali Bagheri Kani in Beijing on Nov 2.",
+      "source": "Global Times (Chinese)",
+      "url": "https://world.huanqiu.com/article/4TradoiThym"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Korean Peninsula root causes",
+      "statement": "Per Sohu: hopes relevant parties face up to the root causes of the Peninsula issue and make efforts to safeguard regional peace and stability.",
+      "original_zh": null,
+      "addressed_to": "other",
+      "tone": "routine",
+      "context": "Mao made the remarks at MOFA's Nov 2 regular press briefing.",
+      "source": "MOFA presser (Chinese)/Sohu",
+      "url": "https://m.sohu.com/a/1096153616_121443915?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Gabonese president's state visit",
+      "statement": "This visit marks President Oligui Nguema's first state visit to China since taking office.",
+      "original_zh": "此次访问是恩圭马总统就任以来首次对中国进行国事访问",
+      "addressed_to": "other",
+      "tone": "routine",
+      "context": "Mao announced the Nov 3-7 state visit at MOFA's Nov 2 regular press briefing.",
+      "source": "People's Daily/Xinhua",
+      "url": "http://world.people.com.cn/n1/2026/1102/c1002-40826229.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "FH",
+      "who": "Fred Hu (胡祖六)",
+      "handle_context": "CEO, Primavera Capital Group",
+      "platform_date": "Bloomberg TV/HKEJ · Nov 2, 2026",
+      "quote_text": "There's no inflation pressure, so China's central bank should have a lot of room to take much bolder actions than what we've seen so far.",
+      "analyst_note": "Hu made the remarks the same day China's financial regulators were reported to be convening banks and brokerages to discuss market-support tools.",
+      "badge_class": "sb-s",
+      "url": "https://www.hkej.com/instantnews/china/article/4553255/%E8%83%A1%E7%A5%96%E5%85%AD%3A%E5%85%A7%E5%9C%B0%E6%94%BF%E7%AD%96%E6%9C%89%E7%A9%BA%E9%96%93%E6%8E%A1%E6%9B%B4%E5%A4%A7%E8%86%BD%E8%A1%8C%E5%8B%95+"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Xiamen Municipal Party Secretary",
+      "name": "Lin Tao (林涛)",
+      "action": "confirmed",
+      "detail": "Lin Tao was elected Xiamen party secretary at the first plenary of the 14th Xiamen Municipal Committee on Nov 1, continuing in a post he has held since April 2026; he was promoted to Fujian provincial deputy party secretary in October while retaining the Xiamen post.",
+      "predecessor": "Cui Yonghui (崔永辉)"
+    },
+    {
+      "position": "Former State Council Vice Premier",
+      "name": "Liu Yandong",
+      "action": "deceased",
+      "detail": "Liu Yandong, a former State Council Vice Premier, has died, per a New York Times Chinese obituary; the piece said she was one of only six women to have served on the CCP Politburo.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://apnews.com/article/china-taiwan-coast-guard-pratas-islands-dfc441591994cb435e55eb8f3dc6aeda",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/11/02/2003867004",
+    "https://www.taipeitimes.com/News/front/archives/2026/11/02/2003866988"
+  ],
+  "story_count": 101,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 95,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-02.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-02.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
