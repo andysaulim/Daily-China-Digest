@@ -1,0 +1,539 @@
+{
+  "digest_date": "Tuesday, November 3, 2026",
+  "re_line": "PBOC FX reserve hike & stock rescue · Nvidia trims China exposure · Taiwan-APEC slight · Zhang Shengmin-Belousov meeting",
+  "market_indicators": {
+    "usd_cny": {
+      "value": "6.6607",
+      "change_pct": -0.11,
+      "as_of": "Nov 03"
+    },
+    "sse_composite": {
+      "value": "3,608.10",
+      "change_pct": -1.99,
+      "as_of": "Nov 03"
+    },
+    "usd_cnh": {
+      "value": "6.6723",
+      "change_pct": 0.41,
+      "as_of": "Nov 03"
+    },
+    "hang_seng": {
+      "value": "23,525.97",
+      "change_pct": 2.1,
+      "as_of": "Nov 03"
+    },
+    "brent": {
+      "value": "106.50",
+      "change_pct": -7.29,
+      "as_of": "Nov 03"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "The PBOC will raise the forex deposit reserve requirement ratio to 6% effective Nov 15, its first such hike in nearly five years, after regulators separately paused mainland IPOs and revived 2024-era stock-support tools following October's rout.",
+    "Nvidia told cloud-computing partners a majority of their data-centre clients must be non-Chinese, the FT reported, as CNN separately flagged US intelligence concern over CEO Jensen Huang's ties to a Singapore executive linked to an AI-chip smuggling probe.",
+    "CMC Vice Chairman Zhang Shengmin met Russian Defense Minister Belousov in Beijing and called for deeper military trust, while MOFA's Mao Ning declined to confirm the visit, saying 'I have no information to provide.'"
+  ],
+  "key_stat": {
+    "number": "6%",
+    "label": "New PBOC forex deposit reserve ratio, effective Nov 15",
+    "context": "First increase in this ratio in nearly five years, intended to slow the yuan's rally; offshore yuan fell more than 280 pips intraday to 6.675 on the announcement.",
+    "source": "Reuters / Cailianshe"
+  },
+  "prc_government": [
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "not named in source",
+      "action": "Signs Currency Swap and Digital-Payment MOU With Oman",
+      "document": "人民币/阿曼里亚尔双边本币互换协议",
+      "detail": "The PBOC and the Central Bank of Oman signed a RMB 30 billion (15 billion Omani rial) five-year currency swap agreement on Nov 2, plus an MOU on digital payment and CBDC cooperation.",
+      "source_label": "Xinhua ZH",
+      "url": "https://www.news.cn/20261103/746602d7a0f845d785cbd72d235866e0/c.html"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "not named in source",
+      "action": "Convenes 15th China-Greece Economic and Trade Joint Committee",
+      "document": null,
+      "detail": "The 15th session of the China-Greece Economic and Trade Joint Committee met in Ningbo, Zhejiang province.",
+      "source_label": "MOFCOM ZH",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_594b09bf42ca4e46a51d7fd4edc2127e.html"
+    },
+    {
+      "ministry": "State Council / MOFCOM",
+      "ministry_chinese": "国务院/商务部",
+      "official": "Ding Xuexiang, First-Ranked Vice Premier",
+      "action": "To Attend 9th China International Import Expo Opening",
+      "document": null,
+      "detail": "Ding Xuexiang will attend the opening ceremony and related events of the 9th CIIE, per MOFCOM's notice; no date was specified.",
+      "source_label": "MOFCOM ZH",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_6eb13619a27f421b9c134531f4432697.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "Fifth Plenum, 20th CCP Central Committee",
+      "action": "Zhang Shengmin Added to Politburo, First Mid-Term Addition in 32 Years",
+      "detail": "The Fifth Plenum co-opted CMC Vice Chairman Zhang Shengmin onto the Politburo, per Lianhe Zaobao, the first time in 32 years the CCP has added a Politburo member outside a Party Congress.",
+      "url": "https://www.zaobao.com.sg/news/china/story20261103-9940169"
+    },
+    {
+      "body": "CCP Secretariat",
+      "action": "Central Publicity Team Holds Mobilization Meeting on Fifth Plenum Spirit",
+      "detail": "Cai Qi attended and addressed a Beijing mobilization meeting on studying and implementing the Fifth Plenum's spirit, per PLA Daily; a study guidance booklet on the Plenum was published.",
+      "url": "http://tv.81.cn/zgjs/jsbd/16497696.html"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Russia-US-Ukraine Trilateral Talks in Abu Dhabi",
+      "detail": "Kremlin spokesman Peskov confirmed talks for Nov 10-11; US envoy Witkoff is to broker the session on ending the Ukraine conflict."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "BIS Affiliates Rule, China Rare-Earth Controls Suspension Set to Lapse",
+      "detail": "The one-year suspensions of the BIS 'Affiliates' export-control rule and China's Oct 2025 rare-earth controls, agreed at Busan, are due to lapse around Nov 10 absent an extension."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts APEC Nov 18-19; the FT reports Trump is traveling to Shenzhen, with Taiwan already disputing the protocol of its invitation."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan Nine-in-One Local Elections",
+      "detail": "Voters choose 22 mayors and magistrates and roughly 11,000 other offices in a vote read as a mid-term on President Lai Ching-te."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "China's annual state commemoration (国家公祭日)."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.economist.com/china/2026/11/02/a-new-path-to-political-power-in-china-runs-through-state-firms",
+      "source": "Economist China",
+      "category": "PRC-Economy",
+      "headline": "A New Path to Political Power in China Runs Through State Firms",
+      "body_text": "The Economist reports a growing number of rising Chinese officials are building political careers through state-owned enterprises rather than conventional party or government tracks. The piece is part of the magazine's ongoing coverage of Communist Party personnel dynamics."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-03/china-plans-broad-ai-guardrails-after-global-security-lapses",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "China Plans Broad AI Guardrails After Global Security Lapses",
+      "body_text": "China is drafting sweeping new guardrails for artificial intelligence following a string of global security lapses tied to AI systems, Bloomberg reported. The dispatch did not specify the scope or timeline of the planned rules."
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/chinas-lipstick-king-touts-ai-tokens-first-singles-day-festival-2026-11-03/",
+      "source": "Reuters China",
+      "category": "PRC-Economy",
+      "headline": "China's 'Lipstick King' Touts AI Tokens for Singles' Day",
+      "body_text": "Chinese livestreaming star Li Jiaqi, known as the \"Lipstick King,\" is promoting AI tokens as part of this year's Singles' Day shopping festival, a first for the event, Reuters reported."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3373067/hong-kong-will-rethink-playbook-offer-stability-amid-global-shifts-john-lee",
+      "source": "SCMP",
+      "category": "PRC-Economy",
+      "headline": "Hong Kong Will 'Rethink Playbook' Amid Global Shifts: John Lee",
+      "body_text": "Hong Kong leader **John Lee** said the city is pivoting toward commodity trading, fintech and green finance amid geopolitical shifts, addressing the Global Financial Leaders' Investment Summit. He said the city's first five-year plan provides a long-term roadmap while pledging continued investor stability."
+    },
+    {
+      "url": "https://www.scmp.com/news/china/science/article/3373061/chinese-drug-iza-bren-doubles-lung-cancer-survival-window-phase-3-trial",
+      "source": "SCMP",
+      "category": "Health",
+      "headline": "Chinese Drug Iza-Bren Doubles Lung Cancer Survival Window in Phase 3 Trial",
+      "body_text": "Sichuan Biokin Pharmaceutical's drug iza-bren showed a significant advantage over platinum-based chemotherapy in a phase 3 trial across *73 hospitals* in China involving 432 advanced lung cancer patients. Results were presented at the ESMO Congress in Madrid."
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/china-market-regulator-encourage-hong-kong-listings-2026-11-03/",
+      "source": "Reuters China",
+      "category": "PRC-Economy",
+      "headline": "China Market Regulator to Encourage Hong Kong Listings",
+      "body_text": "China's securities regulator will encourage more mainland companies to list in Hong Kong, Reuters reported, as Beijing works to diversify listing venues amid the domestic market's October rout."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.cnn.com/2026/11/02/us/video/jensen-huang-china-spy-plot-hnk-digvid",
+      "source": "CNN China",
+      "headline": "US Intelligence Flags Nvidia CEO's Ties to Chinese Businesswoman",
+      "body_text": "US intelligence agencies have expressed alarm over the relationship between **Jensen Huang** and Alice Huang, an executive at a Singapore-based company suspected of smuggling advanced AI chips to China, CNN reported. The report surfaces as Washington scrutinizes chip-diversion routes through Southeast Asia.",
+      "instrument": "Sanctions"
+    },
+    {
+      "url": "https://www.reuters.com/legal/government/major-automakers-urge-us-congress-pass-permanent-ban-chinese-vehicles-2026-11-02/",
+      "source": "Reuters China",
+      "headline": "Major Automakers Urge Congress to Pass Permanent Ban on Chinese Vehicles",
+      "body_text": "Major automakers are lobbying Congress to codify a permanent ban on Chinese-made vehicles rather than rely on the Commerce Department's Connected Vehicles Rule, Reuters reported. The push comes as US automakers face competitive pressure from Chinese EV exporters expanding overseas production.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/02/cnbcs-the-china-connection-newsletter-nvidias-humanoid-push-relies-on-china-made-robot-hands.html",
+      "source": "CNBC China",
+      "headline": "Nvidia's Humanoid Robot Push Relies on China-Made Robot Hands",
+      "body_text": "Nvidia's humanoid robot systems feature mechanical hands sourced from China-linked startups, CNBC reported, highlighting continued US tech dependence on Chinese component suppliers even as Washington tightens other restrictions. The newsletter frames the dependency as a supply-chain vulnerability for US robotics ambitions.",
+      "instrument": "Investment"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.politico.com/news/2026/11/01/taiwan-china-ships-standoff-01144657",
+      "source": "Politico",
+      "headline": "Taiwan Accuses China of Harassment After Standoff Between Ships",
+      "body_text": "Taiwan accused China of harassment following a standoff between vessels, Politico reported. The incident adds to a pattern of coast guard and gray-zone encounters logged by Taipei this year.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/03/2003867047",
+      "source": "Taipei Times",
+      "headline": "Beijing to Step Up Aggression After Fifth Plenum: MAC Official",
+      "body_text": "Mainland Affairs Council Deputy Minister **Shen Yu-chung** said China is expected to adopt more aggressive measures toward Taiwan following the Fifth Plenum, which endorsed Xi Jinping's internal discipline and anti-corruption priorities. Shen said Beijing is likely to prioritize national security and ideological control over its slowing economy.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202611030010",
+      "source": "Focus Taiwan",
+      "headline": "MOFA Buys Sydney Property for New Office, Suspends Belize Embassy Work",
+      "body_text": "Taiwan's foreign ministry purchased property in Sydney for a new representative office while suspending embassy operations in Belize, Focus Taiwan reported. The moves reflect Taipei's shifting diplomatic footprint amid continued pressure on its remaining formal allies.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/03/2003867048",
+      "source": "Taipei Times",
+      "headline": "Taiwan, Japan Might Sign Comprehensive Trade Pact by Year-End",
+      "body_text": "Japan is negotiating with the Lai Ching-te administration on a comprehensive economic agreement modeled on the UK-Taiwan Enhanced Trade Partnership, Nikkei Asia reported via Taipei Times. The draft covers economic resilience, disaster-risk drone cooperation, digital trade and sustainability, and could encourage Canada and the Philippines to pursue similar deals.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/defense/us-experts-warm-to-japanese-nuclear-subs-as-check-on-china-in-asian-waters",
+      "source": "Nikkei Asia China",
+      "headline": "US Experts Warm to Japanese Nuclear Subs as Check on China",
+      "body_text": "Some Washington experts, including a US Navy official, are growing receptive to Japan acquiring nuclear-powered submarines, Nikkei reported. The shift reflects concern over China's expanding naval presence in Asian waters.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://asia.nikkei.com/economy/north-korea-leans-on-china-and-russia-to-drive-3-economic-growth",
+      "source": "Nikkei Asia China",
+      "headline": "North Korea Leans on China and Russia to Drive 3% Economic Growth",
+      "body_text": "North Korea has maintained economic growth despite UN sanctions, supported by supply chains linking it to China and Russia, Nikkei reported from Seoul and Dalian. The report ties Pyongyang's resilience to deepening trade and logistics links with both neighbors.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/11/02/beijing-launches-diplomatic-flurry-amid-threat-renewed-us-war-with-iran/",
+      "source": "WaPo China",
+      "headline": "Beijing Launches Diplomatic Flurry Amid Threat of Renewed US-Iran War",
+      "body_text": "China hosted high-level talks with Iranian, Omani and Saudi officials in Beijing as **Wang Yi** pushed dialogue to resolve regional crises, the Washington Post reported. Three senior Chinese envoys are also touring seven countries across the Gulf and Horn of Africa.",
+      "region": "Middle East"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/czech-court-acquits-releases-chinese-man-accused-spying-news-agency-says-2026-11-02/",
+      "source": "Reuters China",
+      "headline": "Czech Court Acquits and Releases Chinese Man Accused of Spying",
+      "body_text": "A Czech court acquitted and released a Chinese man who had been accused of espionage, Reuters reported, citing a news agency account. No further detail on the charges or evidence was provided in the report.",
+      "region": "Europe"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/china-raise-forex-deposit-reserve-ratio-6-starting-november-15-2026-11-03/",
+      "source": "Reuters China",
+      "category_tag": "PRC-Economy",
+      "headline": "PBOC to Raise Forex Deposit Reserve Ratio to 6% to Slow Yuan Rally",
+      "body": "The **PBOC** will raise the foreign-exchange deposit reserve requirement ratio to *6%* effective Nov 15, the first such hike in nearly five years, Reuters and the WSJ reported. The offshore yuan fell more than 280 pips intraday to 6.675 after the announcement, which came alongside a separate pause on mainland IPOs and revived 2024-style stock-support tools following October's market rout.",
+      "src_line": "Reuters, WSJ"
+    },
+    {
+      "url": "https://www.ft.com/content/1902df70-1380-4588-bad5-171352b575f2?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category_tag": "Technology",
+      "headline": "Nvidia Orders Data-Centre Clients to Reduce China Exposure",
+      "body": "**Nvidia** has told cloud-computing partners that a majority of their data-centre clients must be non-Chinese, the Financial Times reported, with the account corroborated by Bloomberg and Reuters. The directive follows separate CNN reporting of US intelligence concern over CEO Jensen Huang's ties to a Singapore-based executive linked to an AI-chip smuggling investigation.",
+      "src_line": "Financial Times; also Bloomberg, Reuters"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-02/taiwan-says-china-sought-to-diminish-its-status-with-emailed-apec-invitation",
+      "source": "Bloomberg China",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan Says China Sought to Diminish Its Status With Emailed APEC Invitation",
+      "body": "Taiwan criticized China for what it called a diplomatic slight in the form of the invitation it received to the Nov 18-19 APEC summit in Shenzhen, Bloomberg reported. The dispute comes as China hosts the gathering and President Trump is reported to be attending.",
+      "src_line": "Bloomberg"
+    },
+    {
+      "url": "https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_11_03_906915.shtml",
+      "source": "观察者网 (Guancha ZH)",
+      "category_tag": "PLA",
+      "headline": "CMC Vice Chairman Zhang Shengmin Meets Russian Defense Minister Belousov",
+      "body": "**Zhang Shengmin** met Russian Defense Minister Belousov at the Diaoyutai State Guesthouse on Nov 3, marking the 30th anniversary of the China-Russia strategic partnership and the 25th anniversary of the two countries' Treaty of Good-Neighborliness. Belousov called bilateral ties \"unprecedented,\" while China's MOFA declined to confirm the visit at Tuesday's press briefing.",
+      "src_line": "Guancha; Lianhe Zaobao"
+    },
+    {
+      "url": "https://www.ft.com/content/73c1d1cc-6bb2-43a6-8532-7823e5c1a40b?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category_tag": "Diplomacy",
+      "headline": "US, Russia and China Discuss Meeting Between Trump, Putin and Xi",
+      "body": "The US, Russia and China are discussing a possible trilateral meeting involving **Trump**, Putin and Xi Jinping, the FT reported, noting Trump is traveling to Shenzhen in two weeks for the APEC summit. Beijing has separately signaled it does not want to be drawn into a three-way summit specifically on Ukraine, calling it a \"European conflict.\"",
+      "src_line": "Financial Times"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.hkej.com/instantnews/china/article/4556043/WGC%E5%89%8A%E5%85%A8%E5%B9%B4%E9%BB%83%E9%87%91%E6%8A%95%E8%B3%87%E9%9C%80%E6%B1%82%E5%A2%9E%E9%95%B7%E9%A0%90%E6%B8%AC",
+      "source": "HKEJ ZH",
+      "category": "Finance",
+      "headline": "World Gold Council: China, Poland Drove 86% of Q3 Central-Bank Gold Buying",
+      "body_text": "Global central banks bought 321.2 tonnes of gold in Q3, with China and Poland accounting for 86% of net purchases.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.hkej.com/instantnews/china/article/4556302/%E6%AD%90%E7%9B%9F%E6%89%B9%E5%87%86%E4%BA%AC%E6%9D%B1%E6%94%B6%E8%B3%BCCeconomy",
+      "source": "HKEJ ZH",
+      "category": "Investment",
+      "headline": "EU Approves JD.com's $2.5 Billion Acquisition of Ceconomy",
+      "body_text": "Brussels cleared the deal conditional on JD.com honoring remedies offered under the Foreign Subsidies Regulation probe.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.hkej.com/instantnews/china/article/4556215/%E8%A3%81%E5%93%A1%E4%B8%A8%E8%8F%AF%E6%99%A8%E5%AF%B6%E9%A6%AC%E5%82%B3%E8%A3%81%E5%93%A11800%E4%BA%BA",
+      "source": "HKEJ ZH",
+      "category": "Auto",
+      "headline": "BMW Brilliance Reportedly Cuts 1,800 Jobs, 10% of Workforce",
+      "body_text": "Most affected are frontline production roles; laid-off workers can claim unemployment benefits for up to two years.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/business/banking-finance/article/3373071/tokenised-gold-bar-advance-hong-kongs-ambitions-digital-metal-trading-hub",
+      "source": "SCMP",
+      "category": "Finance",
+      "headline": "Hong Kong Plans Tokenised Gold Bar to Boost Digital Metals Hub",
+      "body_text": "The city plans an interbank tokenised gold project referencing its HAU gold-price ticker, officials said at Fintech Week.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://hongkongfp.com/2026/11/03/govt-departments-received-180-complaints-about-smoking-fire-safety-before-wang-fuk-court-fire-report/",
+      "source": "Hong Kong Free Press",
+      "category": "Governance",
+      "headline": "HK Departments Received 180 Complaints Before Deadly Tai Po Fire",
+      "body_text": "An investigation found complaints about smoking and substandard renovation materials ahead of the blaze, per a report released last week.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://asia.nikkei.com/spotlight/your-week-in-asia/indonesia-gdp-us-midterm-elections-hong-kong-financial-summit",
+      "source": "Nikkei Asia China",
+      "category": "Diplomacy",
+      "headline": "Week Ahead: Hong Kong Financial Summit, Indonesia GDP, US Midterms",
+      "body_text": "Nikkei's weekly roundup flags Hong Kong's financial summit alongside US midterm results and Indonesian GDP data.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "http://tv.81.cn/zgjs/fwxgc/16497674.html",
+      "source": "PLA Daily ZH",
+      "category": "PLA",
+      "headline": "MND Dismisses Philippine Commentary on Liaoning Carrier Group as 'Theatrics'",
+      "body_text": "PLA media reported an Attack-21 drone landing trial aboard the Sichuan; MND said Manila should stop \"adding theatrics\" over carrier movements.",
+      "color_bar_class": "cb-red"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.ft.com/content/fec5981d-0c31-4f21-9a37-a1dd1526f530?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "China Halts Listings in Bid to Bolster Struggling Markets",
+      "body_text": "Regulators paused new mainland listings after the CSI 300 posted its *worst month in more than a decade* in October, the FT reported.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.reuters.com/business/media-telecom/teslas-china-made-ev-sales-rise-103-yy-october-2026-11-03/",
+      "source": "Reuters China",
+      "headline": "Tesla's China-Made EV Sales Rise 10.3% Y/Y in October",
+      "body_text": "Tesla's Shanghai-built EV sales climbed 10.3% from a year earlier in October, Reuters reported, citing China Passenger Car Association-style data.",
+      "companies": [
+        "Tesla"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-03/apple-sets-new-sales-highs-in-china-even-as-increased-costs-bite",
+      "source": "Bloomberg China",
+      "headline": "Apple Sets New Sales Highs in China Even as Costs Bite",
+      "body_text": "Apple posted record China sales despite rising costs, Bloomberg reported, without detailing the specific revenue figure in the dispatch.",
+      "companies": [
+        "Apple"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-03/huafa-s-62-billion-debt-strain-shakes-china-s-credit-market",
+      "source": "Bloomberg China",
+      "headline": "Huafa's $62 Billion Debt Strain Shakes China's Credit Market",
+      "body_text": "Developer Huafa's *$62 billion* debt load is rattling onshore credit markets, Bloomberg reported, adding to strain among Chinese property issuers.",
+      "companies": [
+        "Huafa"
+      ],
+      "sector": "property"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-03/china-soybean-oil-stocks-hit-record-as-crushing-outpaces-demand",
+      "source": "Bloomberg China",
+      "headline": "China Soybean Oil Stocks Hit Record as Crushing Outpaces Demand",
+      "body_text": "Soybean oil inventories hit a record as crushing capacity outstripped domestic demand, Bloomberg reported.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.reuters.com/business/finance/ai-investment-is-becoming-overly-concentrated-chinese-official-says-2026-11-03/",
+      "source": "Reuters China",
+      "headline": "AI Investment Is Becoming Overly Concentrated, Chinese Official Says",
+      "body_text": "A Chinese official warned that global AI investment is growing overly concentrated, Reuters reported, without specifying which markets or firms were referenced.",
+      "companies": [],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/commentary/reuters-open-interest/chinas-steady-thermal-coal-imports-mask-supply-shifts-amid-el-nino-2026-11-03/",
+      "source": "Reuters China",
+      "headline": "China's Steady Thermal Coal Imports Mask Supply Shifts Amid El Nino",
+      "body_text": "China's headline thermal coal import volumes held steady even as sourcing shifted among suppliers amid El Nino weather effects, Reuters reported.",
+      "companies": [],
+      "sector": "energy"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MND",
+      "body_chinese": "国防部",
+      "speaker": "Zhang Shengmin",
+      "role": "CMC Vice Chairman",
+      "topic": "China-Russia military cooperation",
+      "statement": "We are willing to work with the Russian side to thoroughly implement the important consensus reached by the two heads of state, continuously strengthen strategic communication, and enhance mutual trust in the military field.",
+      "original_zh": "我们愿同俄方一道，深入贯彻两国元首重要共识，持续加强战略沟通，增进军事领域互信。",
+      "addressed_to": "Russia",
+      "tone": "conciliatory",
+      "context": "Zhang made the remarks meeting Russian Defense Minister Belousov in Beijing on the 30th anniversary of the China-Russia strategic partnership.",
+      "source": "Guancha ZH",
+      "url": "https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_11_03_906915.shtml"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Sun Lei",
+      "role": "Deputy Permanent Representative of China to the UN",
+      "topic": "China's position on ICC jurisdiction",
+      "statement": "China does not agree that the International Criminal Court exercises jurisdiction over nationals of non-States Parties outside of situations referred by the Security Council.",
+      "original_zh": "中方不认同国际刑事法院在安理会移交情势之外管辖非缔约国国民。",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "China abstained on a Nov 2 UNGA resolution on the ICC's annual report, which passed 93-13-36 with the US, Russia and Israel voting against.",
+      "source": "观察者网 (Guancha ZH)",
+      "url": "https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_11_03_906914.shtml"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Unconfirmed visit of Russian Defense Minister to China",
+      "statement": "On this question, I currently have no information to provide.",
+      "original_zh": "这个问题目前我没有可以提供的信息。",
+      "addressed_to": "Russia",
+      "tone": "routine",
+      "context": "Asked at the Nov 3 regular press briefing whether Russian Defense Minister Belousov was visiting China, after Russian media reported a meeting with Zhang Shengmin.",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "url": "https://www.zaobao.com.sg/news/china/story20261103-9940169"
+    },
+    {
+      "body": "State Council",
+      "body_chinese": "国务院",
+      "speaker": "He Lifeng",
+      "role": "Vice Premier",
+      "topic": "Hong Kong's role in China's economic strategy",
+      "statement": "Per SCMP: He Lifeng said building Hong Kong \"remains a key strategy for China,\" outlining four priorities for the city's long-term development in a video address to the Global Financial Leaders' Investment Summit.",
+      "original_zh": null,
+      "addressed_to": "other",
+      "tone": "routine",
+      "context": "He addressed the summit as Hong Kong leader John Lee separately pledged to pivot toward commodity trading, fintech and green finance.",
+      "source": "SCMP",
+      "url": "https://www.scmp.com/plus/news/hong-kong/hong-kong-economy/article/3373123/hong-kong-seeks-balance-finance-growth-against-cyber-risks"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Omani Sultan Haitham's state visit",
+      "statement": "We are willing to work together with Oman to earnestly implement the important consensus reached by the two heads of state, and jointly promote the China-Oman strategic partnership to a higher level.",
+      "original_zh": "我们愿意同阿曼方面一道，深入落实两国元首达成的重要共识，携手推动中阿战略伙伴关系向更高水平迈进。",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Asked about Sultan Haitham bin Tarik's visit to Beijing, during which Xi Jinping and Li Qiang held talks with the Omani leader.",
+      "source": "环球时报 (Global Times ZH)",
+      "url": "https://world.huanqiu.com/article/4TsMXLPq277"
+    }
+  ],
+  "social_statements": [],
+  "personnel_changes": [
+    {
+      "position": "Hong Kong Secretary for Housing",
+      "name": "Winnie Ho Wing-yin",
+      "action": "removed",
+      "detail": "Beijing's State Council formally removed Ho from office on Nov 3 on the recommendation of Chief Executive John Lee, after she resigned last week to take responsibility for the deadly Tai Po fire; no successor was named.",
+      "predecessor": null
+    },
+    {
+      "position": "Politburo member (CMC Vice Chairman)",
+      "name": "Zhang Shengmin",
+      "action": "appointed",
+      "detail": "The Fifth Plenum co-opted Zhang onto the Politburo, the first mid-term Politburo addition in 32 years, per Lianhe Zaobao; he remains a CMC Vice Chairman.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.politico.com/news/2026/11/01/taiwan-china-ships-standoff-01144657",
+    "https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_11_03_906915.shtml",
+    "https://www.zaobao.com.sg/news/china/story20261103-9940169",
+    "https://asia.nikkei.com/economy/north-korea-leans-on-china-and-russia-to-drive-3-economic-growth",
+    "http://tv.81.cn/zgjs/fwxgc/16497674.html"
+  ],
+  "story_count": 101,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 109,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-03.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-03.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}

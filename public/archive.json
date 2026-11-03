@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-03",
+    "filename": "2026-11-03.html",
+    "re_line": "PBOC FX reserve hike & stock rescue \u00b7 Nvidia trims China exposure \u00b7 Taiwan-APEC slight \u00b7 Zhang Shengmin-Belousov meeting",
+    "top_stories": 5,
+    "overnight_items": 6,
+    "word_count": 2425,
+    "sources": 109,
+    "pdf": true
+  },
+  {
     "date": "2026-11-02",
     "filename": "2026-11-02.html",
     "re_line": "Xi hosts Oman's Sultan \u00b7 Taiwan CGA harassment accusation \u00b7 October PMI back in contraction \u00b7 PBOC swap facility demand doubles",
