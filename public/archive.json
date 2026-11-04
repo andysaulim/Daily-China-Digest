@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-04",
+    "filename": "2026-11-04.html",
+    "re_line": "RE: Trump-Putin-Xi summit talks \u00b7 PLA surge near Taiwan \u00b7 PBOC stock rescue \u00b7 Oracle drops Tencent deal",
+    "top_stories": 5,
+    "overnight_items": 9,
+    "word_count": 2892,
+    "sources": 115,
+    "pdf": true
+  },
+  {
     "date": "2026-11-03",
     "filename": "2026-11-03.html",
     "re_line": "PBOC FX reserve hike & stock rescue \u00b7 Nvidia trims China exposure \u00b7 Taiwan-APEC slight \u00b7 Zhang Shengmin-Belousov meeting",
