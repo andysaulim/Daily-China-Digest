@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-05",
+    "filename": "2026-11-05.html",
+    "re_line": "Wong gets 10 more years \u00b7 China blocks SoftBank-ABB deal \u00b7 Wang Yi warns Manila on SCS \u00b7 PBOC market rescue",
+    "top_stories": 6,
+    "overnight_items": 5,
+    "word_count": 2555,
+    "sources": 111,
+    "pdf": true
+  },
+  {
     "date": "2026-11-04",
     "filename": "2026-11-04.html",
     "re_line": "RE: Trump-Putin-Xi summit talks \u00b7 PLA surge near Taiwan \u00b7 PBOC stock rescue \u00b7 Oracle drops Tencent deal",
