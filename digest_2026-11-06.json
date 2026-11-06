@@ -1,0 +1,614 @@
+{
+  "digest_date": "Friday, November 6, 2026",
+  "re_line": "Trump-Putin-Xi APEC talk · Joshua Wong gets 10 more years · Huang summoned over China spy fears · yuan under strain",
+  "market_indicators": {
+    "sse_composite": {
+      "value": "3,649.18",
+      "change_pct": 0.31,
+      "as_of": "Nov 06"
+    },
+    "usd_cnh": {
+      "value": "6.6694",
+      "change_pct": 0.09,
+      "as_of": "Nov 06"
+    },
+    "hang_seng": {
+      "value": "24,481.86",
+      "change_pct": 5.1,
+      "as_of": "Nov 06"
+    },
+    "usd_cny": {
+      "value": "6.6601",
+      "change_pct": -0.01,
+      "as_of": "Nov 06"
+    },
+    "brent": {
+      "value": "98.82",
+      "change_pct": -5.68,
+      "as_of": "Nov 06"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "China confirmed contacts with Washington and Moscow over a possible Trump-Putin-Xi trilateral at the APEC summit in Shenzhen, the New York Times reported, with the gathering set for November 18-19.",
+    "Hong Kong sentenced democracy activist Joshua Wong to 10 more years in prison for foreign collusion, pushing his earliest release to late 2036.",
+    "Republican lawmakers asked Nvidia CEO Jensen Huang to brief Congress after reports he was targeted by Chinese intelligence, with Trump reportedly briefed on the findings roughly a year ago."
+  ],
+  "key_stat": {
+    "number": "1%",
+    "label": "PBOC's new rate for stock buyback re-lending",
+    "context": "The central bank cut the re-lending rate from 1.25% to 1% effective November 4, converting a temporary buyback-support facility into a permanent policy tool; more than 20 listed firms disclosed buyback plans citing the change.",
+    "source": "同花顺财经 (via PBOC)"
+  },
+  "prc_government": [
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson",
+      "action": "Opens anti-dumping probes into EU aramid fiber, vinylnorbornene imports",
+      "document": "MOFCOM Announcement No. 57 of 2026",
+      "detail": "China launched anti-dumping investigations into imports of para-aramid filament yarn and vinylnorbornene originating in the European Union, per a November 6 notice.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://www.mofcom.gov.cn/zcfb/gpmy/art/2026/art_b545d55da00c48f0b77e3dcb2e0cabcc.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (institutional announcement)",
+      "action": "Cuts stock buyback re-lending rate, makes it a permanent tool",
+      "document": null,
+      "detail": "PBOC lowered its re-lending rate for stock buybacks and share increases from 1.25% to 1% effective November 4, 2026, shifting the facility from a stage-specific measure to a long-term institutional tool; over 20 listed companies announced buyback plans in response.",
+      "source_label": "PBOC-linked financial media",
+      "url": "http://news.10jqka.com.cn/20261106/c681544470.shtml"
+    },
+    {
+      "ministry": "Commerce Ministry + National Financial Regulatory Administration",
+      "ministry_chinese": "商务部/金融监管总局",
+      "official": "Joint ministries (NFRA, MOFCOM, et al.)",
+      "action": "Seven ministries issue guidance on shipping insurance",
+      "document": "《关于加快航运保险高质量发展的指导意见》",
+      "detail": "The National Financial Regulatory Administration, MOFCOM and five other departments jointly issued guidance to accelerate high-quality development of China's shipping insurance sector.",
+      "source_label": "MOFCOM ZH",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_59e15dddb16b49559d6cc9253377493a.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM",
+      "action": "Launches 'Shop in China · 2026 Premium Consumption Month'",
+      "document": null,
+      "detail": "MOFCOM kicked off a month-long domestic consumption promotion campaign aimed at spurring retail spending.",
+      "source_label": "MOFCOM ZH",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_0332a3348cf048f3b988f49ad4507f31.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "NPC Standing Committee",
+      "action": "Passes cross-border corruption law",
+      "detail": "China's National People's Congress Standing Committee passed a cross-border anti-corruption law on November 6, comprising six chapters and 47 articles on international cooperation and legal liability, led by the National Supervisory Commission alongside foreign affairs, public security and finance departments, per Xinhua.",
+      "url": "https://www.reuters.com/world/asia-pacific/chinas-standing-committee-national-peoples-congress-passes-cross-border-2026-11-06/"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal suspensions due to lapse",
+      "detail": "The one-year suspensions of BIS's Affiliates (50%) Rule and China's Oct 2025 rare-earth export controls, agreed at Busan, are due to expire unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts APEC November 18-19; a possible Trump-Putin-Xi trilateral is under discussion, per today's NYT report."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Twenty-two mayors and magistrates and roughly 11,000 offices are up for election, read as a mid-term on President Lai Ching-te."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "国家公祭日 falls amid continued China-Japan friction over Takaichi's Taiwan remarks."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral (Miami)",
+      "detail": "The US hosts the G20 December 14-15; Xi Jinping's attendance is unconfirmed."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category": "Diplomacy",
+      "headline": "Shenzhen clears illicit chip and iPhone markets ahead of APEC",
+      "body_text": "Shenzhen has cleared out illicit markets selling smuggled chips and stolen iPhones ahead of hosting the APEC Economic Leaders' Meeting November 18-19, the Financial Times reported. The cleanup targets the city's informal electronics trade before the gathering of international leaders."
+    },
+    {
+      "url": "https://www.ft.com/content/58e795a0-af3e-4d49-85b8-d075bde1e358",
+      "source": "FT China",
+      "category": "PRC-Economy",
+      "headline": "Hong Kong financial fiesta shows no doubt in the AI trade",
+      "body_text": "No one at Hong Kong's annual financial conference doubted the AI trade, the Financial Times reported from the gathering. The sentiment contrasts with the global AI-driven selloff that has hit Asian tech and AI-linked stocks this week."
+    },
+    {
+      "url": "https://www.economist.com/china/2026/11/05/china-and-taiwan-are-fighting-over-sun-yat-sen",
+      "source": "Economist China",
+      "category": "Cross-Strait",
+      "headline": "China and Taiwan contest the legacy of Sun Yat-sen",
+      "body_text": "China and Taiwan are contesting the historical legacy of Sun Yat-sen, the Economist reported, as both sides invoke the republic's founding father to bolster rival claims to political legitimacy. The dispute resurfaces periodically around cross-strait anniversaries and tensions."
+    },
+    {
+      "url": "https://www.economist.com/culture/2026/11/05/chinese-tech-helps-repressive-african-governments-crush-dissent",
+      "source": "Economist China",
+      "category": "Technology",
+      "headline": "Chinese tech aids repressive African governments against dissent",
+      "body_text": "Chinese-made surveillance and censorship technology is helping repressive African governments crush dissent, the Economist reported. The report details how exported Chinese tools are being used to monitor and suppress opposition movements across the continent."
+    },
+    {
+      "url": "https://factcheck.afp.com/doc.afp.com.D64N99E",
+      "source": "AFP China",
+      "category": "Indo-Pacific",
+      "headline": "AFP debunks video falsely linked to India-China border tensions",
+      "body_text": "AFP Fact Check found a viral video falsely linked to India-China border tensions actually showed a Nepali festival. The clip had circulated online with inaccurate claims about a border confrontation."
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/11/04/china-ma-xingrui-politburo-corruption/f4c6d20e-d8d3-11f1-930a-e08f8086f5ac_story.html",
+      "source": "WaPo China",
+      "category": "Governance/Anti-Corruption",
+      "headline": "Former Politburo member Ma Xingrui charged with bribery",
+      "body_text": "Chinese prosecutors charged former Politburo member Ma Xingrui with taking bribes, the Washington Post reported November 4. The case marks the latest senior-level prosecution in Beijing's ongoing anti-corruption campaign."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/markets/taiwan-south-korea-japan-stock-markets-hit-hard-by-ai-sell-off",
+      "source": "Nikkei Asia China",
+      "category": "Indo-Pacific",
+      "headline": "Taiwan, South Korea, Japan markets hit hard by AI selloff",
+      "body_text": "Asian stock markets tied to the AI boom plunged Friday, led by Taiwan, South Korea and Japan, following an overnight tech selloff on Wall Street, Nikkei reported. The rout extended losses across chip and AI-linked names in all three markets."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-marriage-rate-third-quarter-tumbles-18-year-low-2026-11-06/",
+      "source": "Reuters China",
+      "category": "PRC-Economy",
+      "headline": "China's marriage rate hits 18-year low in third quarter",
+      "body_text": "China's marriage registrations fell to an 18-year low in the third quarter, Reuters reported, extending a multi-year decline in nuptials. The drop compounds Beijing's challenge in reversing falling birth rates tied to marriage trends."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.cnbc.com/2026/11/05/moonshot-ai-nvidia-chips-europe-china.html",
+      "source": "CNBC China",
+      "headline": "Chinese AI lab Moonshot leases European chips to skirt US curbs",
+      "body_text": "Chinese AI lab Moonshot AI has sought leasing agreements with 'neoclouds' in Europe to access Nvidia Blackwell chips, CNBC reported, circumventing US export restrictions on direct chip imports to China. The arrangement reflects continued efforts by Chinese AI firms to reach advanced US computing hardware despite the curbs.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://apnews.com/article/cuba-sanctions-castro-trump-rubio-china-93e6ce1f2cf83f2f4f74842babf694c6",
+      "source": "AP China",
+      "headline": "US escalates Cuba sanctions, designates two China-based suppliers",
+      "body_text": "The US escalated its economic campaign against Cuba, designating two additional China-based suppliers, AP reported. China's Foreign Ministry said it 'firmly opposes' the sanctions and vowed to protect the legitimate rights of its companies, per a November 6 MOFA statement.",
+      "instrument": "Sanctions"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/06/2003867257",
+      "source": "Taipei Times (direct)",
+      "headline": "Democrat-controlled Congress could force Taiwan arms sales resumption",
+      "body_text": "A Democrat-controlled Congress could force **Donald Trump** to resume arms sales to Taiwan next year, said **Wu Xinbo**, dean at Fudan University's Institute of International Studies, after Tuesday's midterm sweep gave Democrats both chambers. Trump has delayed a *$14 billion* Taiwan arms package for months amid talks with Beijing.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-05/binance-hack-funds-flow-to-chinese-launderers-chainalysis-says",
+      "source": "Bloomberg China",
+      "headline": "Binance hack funds flowed to Chinese launderers, Chainalysis finds",
+      "body_text": "Funds from a Binance hack flowed to Chinese money launderers, blockchain analytics firm Chainalysis found, Bloomberg reported November 5. The finding adds to scrutiny of China-based networks laundering proceeds from crypto exchange breaches.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.voachinese.com/a/8219613.html",
+      "source": "美国之音中文 (VOA Chinese ZH)",
+      "headline": "Taiwan defense minister: maintaining Congress contact on arms sales",
+      "body_text": "Taiwan's Defense Minister **Wellington Koo** said the ministry is maintaining continuous communication with the US Congress to ensure arms sales proceed on schedule, per VOA Chinese. The comment comes as a *$14 billion* US arms package to Taiwan remains delayed months after approval.",
+      "instrument": "Military"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.reuters.com/world/china/taipei-mayor-election-is-victory-democracy-over-china-whoever-wins-says-2026-11-06/",
+      "source": "Reuters China",
+      "headline": "Taipei mayoral race framed as 'victory for democracy over China'",
+      "body_text": "Taipei's mayoral race is 'a victory for democracy over China whoever wins,' a candidate told Reuters ahead of Taiwan's November 28 nine-in-one local elections. The remark frames the vote, covering 22 mayors and magistrates, against the backdrop of cross-strait pressure.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/06/2003867245",
+      "source": "Taipei Times (direct)",
+      "headline": "MAC: 131 Taiwanese targeted by Chinese transnational repression since 2005",
+      "body_text": "A total of *131* Taiwanese have been targeted a combined 149 times through Chinese transnational repression since 2005, Mainland Affairs Council Deputy Minister **Liang Wen-chieh** told a legislative session. The CCP has used nine methods including physical attacks, bounty-backed prosecutions, digital oppression and economic sanctions, he said.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3373577/tokyo-still-dodging-issue-year-takaichi-row-beijing-says",
+      "source": "SCMP China",
+      "headline": "Beijing says Tokyo still 'dodging the issue' a year after Takaichi row",
+      "body_text": "One year after Prime Minister **Sanae Takaichi's** Taiwan contingency remarks angered Beijing, foreign ministry spokesman Guo Jiakun said responsibility for the 'serious difficulties' in relations 'lay entirely with Tokyo,' per SCMP. Takaichi separately said Japan would pursue dialogue with China 'in the national interest,' per Kyodo.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://cacs.mofcom.gov.cn/article/gnwjmdt/sb/zo/202611/189696.html",
+      "source": "商务部 (MOFCOM ZH)",
+      "headline": "MOFCOM responds to EU fees on low-value imported goods",
+      "body_text": "China's Commerce Ministry responded to the EU's move to impose additional fees on low-value imported goods, per a Chinese trade remedy information site. The response follows Brussels' push to curb a surge of low-cost parcels, many originating from Chinese e-commerce platforms.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://us.china-embassy.gov.cn/eng/zgyw/202611/t20261106_12054981.htm",
+      "source": "Xi Activity (China Embassy)",
+      "headline": "Xi Jinping holds talks with Oman's Sultan Haitham in Beijing",
+      "body_text": "**Xi Jinping** held talks in Beijing with Oman's Sultan Haitham, according to China's embassy in the US. The meeting was part of a string of state visits Xi hosted this week, including Austria's chancellor and Gabon's president.",
+      "region": "Middle East"
+    },
+    {
+      "url": "https://www.latintimes.com/mexicos-sheinbaum-visit-china-apec-summit-pursue-meeting-xi-jinping-600958",
+      "source": "Xi Activity (Latin Times)",
+      "headline": "Mexico's Sheinbaum flies to China to pursue meeting with Xi",
+      "body_text": "Mexican President Sheinbaum is flying to China to pursue a meeting with **Xi Jinping** at the APEC summit, the Latin Times reported. Any Sheinbaum-Xi meeting would occur alongside the broader APEC gathering in Shenzhen November 18-19.",
+      "region": "Latin America"
+    },
+    {
+      "url": "https://www.aninews.in/news/world/asia/chinese-president-xi-jinping-likely-to-skip-asean-summit-in-manila-report20261105174810",
+      "source": "Xi Activity (ANI News)",
+      "headline": "Xi Jinping likely to skip ASEAN Summit in Manila, report says",
+      "body_text": "**Xi Jinping** is likely to skip the ASEAN Summit in Manila, ANI News reported, citing unnamed sources. His potential absence would mark a departure from his attendance pattern at the annual regional gathering.",
+      "region": "ASEAN"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/11/06/world/asia/china-trump-putin-xi-summit.html",
+      "source": "NYT China",
+      "category_tag": "Diplomacy",
+      "headline": "China in contact with US, Russia over possible Trump-Putin-Xi trilateral",
+      "body": "A possible trilateral summit bringing together **Xi Jinping**, **Vladimir Putin** and **Donald Trump** in China could bolster Xi's stature, but talks on Ukraine's future and limits on nuclear weapons would pose uncomfortable choices for Beijing, the New York Times reported November 6. The prospective summit is tied to China's hosting of the APEC Economic Leaders' Meeting in Shenzhen November 18-19.",
+      "src_line": "NYT · Nov 6, 2026"
+    },
+    {
+      "url": "https://apnews.com/article/hong-kong-joshua-wong-sentencing-national-security-f4b08dd23bab9912569e5cabd990c1ef",
+      "source": "AP China",
+      "category_tag": "Diplomacy",
+      "headline": "Hong Kong sentences Joshua Wong to 10 more years for foreign collusion",
+      "body": "Hong Kong sentenced democracy activist **Joshua Wong** to *10 more years* in prison on November 5 for colluding with foreign powers, the second time he has faced prosecution under the territory's National Security Law. Wong, 30, has already spent almost six years behind bars and is not due for release until late 2036.",
+      "src_line": "AP News · Nov 5, 2026"
+    },
+    {
+      "url": "https://www.ft.com/content/20119746-a285-482e-a0ae-336ce13b26bc?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category_tag": "Technology",
+      "headline": "Lawmakers summon Nvidia's Jensen Huang over Chinese spying concerns",
+      "body": "Top Republican lawmakers asked Nvidia CEO **Jensen Huang** to brief Congress after reports he was targeted by Chinese intelligence, the Financial Times and Reuters reported November 5. CNBC reported, citing the New York Times, that President **Trump** was briefed on the intelligence findings roughly a year ago.",
+      "src_line": "FT, Reuters, CNBC · Nov 5, 2026"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-06/china-s-10-year-yield-hits-record-intraday-low-on-ample-cash",
+      "source": "Bloomberg China",
+      "category_tag": "PRC-Economy",
+      "headline": "China's 10-year yield hits record low as yuan dilemma deepens",
+      "body": "China's benchmark 10-year government bond yield hit a record intraday low on haven demand, Bloomberg reported November 6, as the global AI-driven equity selloff pushed investors toward safety. Reuters separately described a 'yuan dilemma' of the currency trading too weak offshore and too strong onshore, while the PBOC tweaked foreign-exchange reserve rules to help steady the yuan, the Wall Street Journal reported.",
+      "src_line": "Bloomberg, Reuters, WSJ · Nov 5-6, 2026"
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16498370.html",
+      "source": "国防部 (MND ZH)",
+      "category_tag": "PLA",
+      "headline": "China confirms GJ-21 stealth drone's first shipborne takeoff, landing",
+      "body": "China's Ministry of National Defense confirmed the successful takeoff and landing of the **GJ-21** shipborne stealth drone at its early-November regular press briefing, calling it a milestone for new combat capabilities. The ministry spokesperson said China 'pursues a defensive defense policy.'",
+      "src_line": "MND routine briefing (ZH) · Nov 2026"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.cnbc.com/video/2026/11/06/china-offshore-market-is-a-value-play-amid-the-massive-ai-sell-off.html",
+      "source": "CNBC China",
+      "category": "PRC-Economy",
+      "headline": "China offshore market a 'value play' amid AI selloff, Nomura says",
+      "body_text": "Nomura's Julia Wang said China's offshore market offers value amid the AI selloff, calling Taiwan's chipmaker 'irreplaceable' despite record index drops.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/11/06/tim-moe-part-2-india-ai-hegde.html",
+      "source": "CNBC China",
+      "category": "PRC-Economy",
+      "headline": "Goldman Sachs: India, China H-shares offer refuge from AI selloff",
+      "body_text": "Goldman's Tim Moe said India and China H-shares could outperform in the AI-driven selloff given lower exposure to tech hardware stocks.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/11/06/gs.html",
+      "source": "CNBC China",
+      "category": "PRC-Economy",
+      "headline": "Goldman Sachs sees China internet stocks outperforming AI hardware names",
+      "body_text": "Tim Moe said Chinese internet stocks could outperform AI hardware peers as investors reassess exposure amid narrowing losses.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.afp.com/en/beijing-seeks-bolster-ai-shares",
+      "source": "AFP China",
+      "category": "PRC-Economy",
+      "headline": "Beijing moves to bolster AI shares amid global tech selloff",
+      "body_text": "AFP reported Chinese authorities are moving to support AI stocks as the sector slides amid a broader global technology selloff.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-06/china-s-ai-propelled-growth-may-take-a-blue-wave-hit-be-says",
+      "source": "Bloomberg China",
+      "category": "PRC-Economy",
+      "headline": "Democrats' midterm sweep could dent China's AI-driven growth, BE says",
+      "body_text": "Bloomberg Economics said the Democratic sweep of Congress could weigh on China's AI-propelled growth trajectory.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://sinocism.com/p/li-xi-on-the-plenum-resolution-cmg",
+      "source": "Sinocism",
+      "category": "Diplomacy",
+      "headline": "Sinocism: Li Xi on Plenum resolution, CMG's post-Plenum propaganda push",
+      "body_text": "Sinocism's roundup covered Li Xi's comments on the Plenum resolution and state media's post-Plenum propaganda work.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/s-chinese-firms-profit-margins-trail-global-peers-domestic-demand-stays-weak-2026-11-06/",
+      "source": "Reuters China",
+      "category": "PRC-Economy",
+      "headline": "Chinese firms' profit margins trail global peers on weak demand",
+      "body_text": "Reuters reported Chinese companies' profit margins continue to lag global peers as domestic demand stays weak.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/06/2003867258",
+      "source": "Taipei Times (direct)",
+      "category": "Cross-Strait",
+      "headline": "Two Chinese nationals sentenced for illegal entry into Taiwan by dinghy",
+      "body_text": "A Shilin court sentenced two Chinese men to nine and six months for crossing the Taiwan Strait by rubber dinghy in July.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-06/china-to-cut-diesel-exports-on-tight-stocks-energy-aspects-says",
+      "source": "Bloomberg China",
+      "category": "Energy",
+      "headline": "China to cut diesel exports on tight stocks, Energy Aspects says",
+      "body_text": "Energy Aspects said China will cut diesel exports as domestic stockpiles run tight, Bloomberg reported.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-06/how-china-uses-its-national-team-to-influence-the-stock-market",
+      "source": "Bloomberg China",
+      "headline": "Why China uses a 'national team' to influence stock trading",
+      "body_text": "Bloomberg examined how China's 'national team' of state-linked funds intervenes to influence stock trading, a mechanism deployed again this week amid the global AI-driven selloff.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-05/china-blocks-softbank-s-acquisition-of-abb-industrial-robot-unit",
+      "source": "Bloomberg China",
+      "headline": "China blocks SoftBank's $5.4bn bid for ABB's robotics unit",
+      "body_text": "China blocked SoftBank Group's *$5.4 billion* bid for ABB's robotics division, Bloomberg reported, citing the Financial Times. The move halts one of the largest recent cross-border robotics deals pending Chinese regulatory approval.",
+      "companies": [
+        "SoftBank Group",
+        "ABB"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.reuters.com/business/energy/chinas-q3-emissions-post-biggest-drop-since-pandemic-hormuz-crisis-curbs-fossil-2026-11-06/",
+      "source": "Reuters China",
+      "headline": "China's Q3 emissions post biggest drop since pandemic",
+      "body_text": "China's third-quarter carbon emissions posted their biggest drop since the pandemic as the Hormuz crisis curbed fossil fuel use, Reuters reported. Higher oil costs from the Middle East disruption pushed down fuel consumption across the quarter.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-top-flash-memory-chipmaker-targets-more-homegrown-tools-new-factory-2026-11-06/",
+      "source": "Reuters China",
+      "headline": "China's top flash memory chipmaker targets homegrown tools for new factory",
+      "body_text": "China's top flash memory chipmaker is targeting more homegrown toolmakers for its new factory, Reuters reported, reflecting Beijing's continued push for semiconductor equipment self-sufficiency amid US export controls.",
+      "companies": [],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.afp.com/en/german-carmakers-hit-dead-end-china-drives-past",
+      "source": "AFP China",
+      "headline": "German carmakers hit a 'dead end' as China drives past",
+      "body_text": "German carmakers have hit a dead end as Chinese rivals accelerate past them in home and export markets, AFP reported, describing mounting competitive pressure from Chinese EV makers.",
+      "companies": [],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/kimberly-clarks-china-diaper-woes-linger-it-stands-by-annual-outlook-2026-11-05/",
+      "source": "Reuters China",
+      "headline": "Kimberly-Clark's China diaper woes linger despite steady outlook",
+      "body_text": "Kimberly-Clark's China diaper business continues to struggle, Reuters reported, though the company is standing by its full-year earnings outlook amid a separate controversy affecting the unit.",
+      "companies": [
+        "Kimberly-Clark"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-05/german-wind-industry-seen-facing-5-6-billion-threat-from-china",
+      "source": "Bloomberg China",
+      "headline": "German wind industry faces €5.6 billion threat from China",
+      "body_text": "Germany's wind industry faces a *€5.6 billion* threat from Chinese competition, Bloomberg reported, citing industry estimates of potential losses to turbine makers as Chinese manufacturers expand in Europe.",
+      "companies": [],
+      "sector": "energy"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA Spokesperson",
+      "topic": "China-Japan relations, one year after Takaichi's Taiwan remarks",
+      "statement": "A year has passed, and Japan's authorities are still going in circles, still without showing the sincerity or taking the action needed to reflect on and correct their mistakes.",
+      "original_zh": "一年过去了，日本当局仍在原地打转，始终没有拿出反思纠错的诚意和行动",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "The statement marks one year since Prime Minister Sanae Takaichi's remarks on a Taiwan contingency, which Beijing says caused the current rift.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://news.bjd.com.cn/2026/11/06/12020463.shtml"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA Spokesperson",
+      "topic": "US sanctions on Chinese firms over Cuba cooperation",
+      "statement": "Per MOFA: China firmly opposes the new US sanctions on Chinese companies over Cuba cooperation and will take necessary measures to safeguard their legitimate rights and interests.",
+      "original_zh": null,
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "The comment followed Washington's designation of two additional China-based suppliers under its Cuba sanctions program.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://www.163.com/dy/article/LB2MKHT50514EGPO.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA Spokesperson",
+      "topic": "US-China trade relations and farm purchase commitments",
+      "statement": "Per MOFA: China and the US must work toward each other to promote the sustained and steady improvement of economic and trade relations.",
+      "original_zh": "中美要相向而行，推动经贸关系持续稳定向好发展",
+      "addressed_to": "US",
+      "tone": "conciliatory",
+      "context": "The remark came amid questions over whether Washington would cut tariffs before Beijing fulfills its pledge to purchase US farm goods, a commitment from the May 2026 Trump-Xi summit.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://wap.stockstar.com/detail/IG2026110600030252"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA Spokesperson",
+      "topic": "Canton Fair and CIIE as windows to the world",
+      "statement": "Per MOFA: the Canton Fair and China International Import Expo held back-to-back are an important window for China to connect with the world.",
+      "original_zh": "是中国连接全球的重要窗口",
+      "addressed_to": "other",
+      "tone": "routine",
+      "context": "The comment followed the opening of the ninth China International Import Expo days after the Canton Fair concluded.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-06/10727316.shtml"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office Spokesperson",
+      "topic": "Taiwanese firms at the ninth CIIE",
+      "statement": "Per TAO: more than 30 Taiwanese enterprises will take part in the ninth China International Import Expo.",
+      "original_zh": "台湾30多家企业将参加第九届进博会",
+      "addressed_to": "Taiwan",
+      "tone": "routine",
+      "context": "The announcement came as the ninth CIIE opened in Shanghai.",
+      "source": "国台办 (TAO ZH)",
+      "url": "https://www.jpchinapress.com/static/content/SS/2026-11-05/1567849249777037099.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "NS",
+      "who": "Neil Shearing",
+      "handle_context": "Chief Economist, Capital Economics",
+      "platform_date": "Taipei Times · Nov 6, 2026",
+      "quote_text": "judges that Washington is distracted or that Trump would be willing to agree terms to not intervene",
+      "analyst_note": "Shearing's note was cited in Taipei Times reporting on how a Democrat-controlled Congress might affect Beijing's calculus toward Taiwan over the remaining two years of Trump's term.",
+      "badge_class": "sb-s",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/06/2003867257"
+    },
+    {
+      "avatar_initials": "SW",
+      "who": "Shen Weizhong",
+      "handle_context": "Former Chinese Foreign Ministry official",
+      "platform_date": "Sinocism · Nov 6, 2026",
+      "quote_text": "The Chinese are very realistic that a new president might be very different (from Trump).",
+      "analyst_note": "Shen's comment was quoted in Sinocism's newsletter roundup, which also covered the Plenum resolution, post-Plenum propaganda work and Jensen Huang's reported China ties.",
+      "badge_class": "sb-s",
+      "url": "https://sinocism.com/p/li-xi-on-the-plenum-resolution-cmg"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Ambassador to the Czech Republic",
+      "name": "Zhou Qian (周谦)",
+      "action": "appointed",
+      "detail": "**Xi Jinping** signed a presidential order appointing Zhou Qian as China's ambassador to the Czech Republic, per Xinhua.",
+      "predecessor": "Feng Biao (冯飚)"
+    },
+    {
+      "position": "Ambassador to Italy and San Marino",
+      "name": "Hou Yue (侯悦)",
+      "action": "appointed",
+      "detail": "Hou Yue was appointed ambassador to Italy and San Marino under the same presidential order.",
+      "predecessor": "Jia Guide (贾桂德)"
+    },
+    {
+      "position": "Ambassador to New Zealand, Cook Islands and Niue",
+      "name": "Zhao Xing (赵星)",
+      "action": "appointed",
+      "detail": "Zhao Xing was appointed ambassador to New Zealand, the Cook Islands and Niue.",
+      "predecessor": "Wang Xiaolong (王小龙)"
+    },
+    {
+      "position": "Politburo member (former)",
+      "name": "Ma Xingrui (马兴瑞)",
+      "action": "charged",
+      "detail": "Chinese prosecutors charged former Politburo member Ma Xingrui with taking bribes, the Washington Post reported November 4, part of Beijing's ongoing anti-corruption campaign.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.bloomberg.com/news/articles/2026-11-05/micron-pauses-work-on-4-5-billion-taiwan-plant-after-labor-spat",
+    "https://www.reuters.com/world/china/taipei-mayor-election-is-victory-democracy-over-china-whoever-wins-says-2026-11-06/",
+    "https://www.taipeitimes.com/News/front/archives/2026/11/06/2003867245",
+    "https://www.nytimes.com/2026/11/06/world/asia/china-trump-putin-xi-summit.html",
+    "https://military.china.com/news/13004177/20261105/49843637.html"
+  ],
+  "story_count": 101,
+  "oped_count": 3,
+  "academic_count": 0,
+  "source_count": 115,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-06.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-06.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
