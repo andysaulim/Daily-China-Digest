@@ -1,0 +1,564 @@
+{
+  "digest_date": "Saturday, November 7, 2026",
+  "re_line": "Xi-Trump-Putin summit talks · Busan deal pressure · Nvidia spy case · PBOC cools yuan · Joshua Wong sentencing",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "24,481.86",
+      "change_pct": 5.1,
+      "as_of": "Nov 06"
+    },
+    "sse_composite": {
+      "value": "3,649.18",
+      "change_pct": 0.31,
+      "as_of": "Nov 06"
+    },
+    "usd_cnh": {
+      "value": "6.6717",
+      "change_pct": 0.12,
+      "as_of": "Nov 06"
+    },
+    "brent": {
+      "value": "98.32",
+      "change_pct": -6.16,
+      "as_of": "Nov 06"
+    },
+    "usd_cny": {
+      "value": "6.6710",
+      "change_pct": 0.15,
+      "as_of": "Nov 07"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "52.0"
+    }
+  },
+  "morning_memo": [
+    "Beijing confirmed via MOFA spokesperson Mao Ning that China is in talks with the US and Russia on a possible Xi-Trump-Putin trilateral summit alongside the Nov 18-19 APEC meeting in Shenzhen.",
+    "Treasury Secretary Scott Bessent and USTR Jamieson Greer told Vice Premier He Lifeng on a Friday video call that China must 'immediately' implement its Busan rare-earth and agriculture commitments ahead of the Trump-Xi meeting.",
+    "The PBOC raised the reserve requirement ratio on foreign-currency deposits from 4% to 6% effective Nov 15 to curb a 14-day yuan rally that pushed the currency through 6.65 per dollar on Nov 2."
+  ],
+  "key_stat": {
+    "number": "$24B",
+    "label": "Estimated FX liquidity frozen by PBOC's reserve-ratio hike",
+    "context": "Against roughly $1.2 trillion in banking-system FX deposits as of September, the two-percentage-point increase in the foreign-currency reserve requirement ratio locks up an estimated $24 billion in bank dollar liquidity; economists cited by China Economic Net note the last such hike was Dec 15, 2021.",
+    "source": "中国经济网 (China Economic Net)"
+  },
+  "prc_government": [
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "Li Qiang, Premier",
+      "action": "Chairs State Council executive meeting on economic trajectory and social assistance",
+      "document": "国务院常务会议纪要",
+      "detail": "The meeting studied Xi Jinping's remarks on the first three quarters' economic performance, called for accelerating major-project implementation, resolving local government debt and small-and-mid-size financial institution risks, and stabilizing capital markets, and reviewed social assistance policy for low-income and zero-employment households.",
+      "source_label": "MOFCOM (State Council readout)",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_12d65a0ba98a436b8c6b046863e591e7.html"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM",
+      "action": "Opens anti-dumping probes into EU and Japan chemical imports",
+      "document": "MOFCOM Announcements No. 56 and No. 57 of 2026",
+      "detail": "MOFCOM launched an anti-dumping investigation into imports of ethylidene norbornene from the EU and Japan (Announcement No. 56) and a separate probe into EU-origin para-aramid filament (Announcement No. 57).",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_f587eac1695442ba86f2db6135b943b9.html"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "Wang Wentao, Commerce Minister",
+      "action": "Launches China-Austria Entrepreneurs Committee",
+      "document": "Memorandum of Understanding on Establishing the China-Austria Entrepreneurs Committee",
+      "detail": "Wang Wentao and Austria's Hartmannsdorfer co-signed the MOU in Beijing on Nov 6, marking 55 years of diplomatic ties; the committee aims to align China's 15th Five-Year Plan with Austria's Industrial Strategy 2035, with over 100 business and political representatives attending.",
+      "source_label": "MOFCOM",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_d8695a17f3d342f9a60d3c3e232b013c.html"
+    },
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC",
+      "action": "Shifts policy rate anchor from 7-day to overnight reverse repo",
+      "document": "PBOC open market operations adjustment (announced Oct 30, 2026)",
+      "detail": "Effective Nov 2, the PBOC began daily overnight reverse repo auctions at a fixed rate, with 7-day reverse repos shifted to fixed-quantity, multi-price tenders used mainly around tax periods and month-end, intended to give the market a clearer short-end rate benchmark.",
+      "source_label": "PBOC (via 经济观察网)",
+      "url": "http://www.eeo.com.cn/2026/1107/1086999.shtml"
+    },
+    {
+      "ministry": "NDRC",
+      "ministry_chinese": "国家发展改革委",
+      "official": "NDRC and four other ministries",
+      "action": "Issues guidance on consumption infrastructure to drive investment-consumption cycle",
+      "document": "《关于加强消费基础设施建设促进消费投资良性互动的指导意见》",
+      "detail": "The five-ministry guidance lists 20 measures covering urban-rural commercial facilities, services and new consumption formats; MOFCOM separately reported that 2026 trade-in subsidies have driven over RMB2 trillion in related sales benefiting more than 250 million people.",
+      "source_label": "NDRC (via Caixin Weekly)",
+      "url": "https://weekly.caixin.com/2026-11-07/102502078.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "CCP Central Committee",
+      "action": "Issues notice on nominating delegates to the 21st Party Congress",
+      "detail": "The Central Committee circulated a notice deploying the election of delegates to the Communist Party's 21st National Congress.",
+      "url": "http://www.mod.gov.cn/gfbw/sy/tt_214026/16498594.html"
+    },
+    {
+      "body": "NPC (local elections)",
+      "action": "Xi Jinping votes in Beijing district/township people's congress elections",
+      "detail": "Xi cast his vote in the换届 election for district and township-level people's congress deputies in Beijing on Nov 7, per the Beijing municipal government.",
+      "url": "https://www.beijing.gov.cn/ywdt/dzyjs/202611/t20261107_4936608.html"
+    },
+    {
+      "body": "NPC Standing Committee",
+      "action": "Moves former provincial leaders into legislative posts",
+      "detail": "China is shifting former provincial leaders to legislature roles described as a form of 'soft retirement,' Reuters reported.",
+      "url": "https://www.reuters.com/world/china/china-shifts-former-provincial-leaders-legislature-soft-retirement-2026-11-06/"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal suspensions due to lapse",
+      "detail": "One-year suspensions of the BIS Affiliates Rule and China's Oct 2025 rare-earth export controls, agreed at Busan, are due to lapse around Nov 10 unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Leaders' Meeting opens in Shenzhen",
+      "detail": "China hosts APEC Nov 18-19; a Trump-Xi meeting and a possible Xi-Trump-Putin trilateral are both under discussion, per MOFA."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan's nine-in-one local elections",
+      "detail": "Voters choose 22 mayors and magistrates and roughly 11,000 local offices; prosecutors are probing over 2,300 vote-buying cases ahead of the vote."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "China's annual state commemoration (国家公祭日)."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral",
+      "detail": "The US hosts the G20 Dec 14-15; Xi Jinping's attendance has not been confirmed."
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.theguardian.com/world/2026/nov/07/ukraine-war-briefing-beijing-confirms-historic-xi-trump-putin-meeting-under-discussion",
+      "source": "Guardian China (direct)",
+      "category_tag": "Diplomacy",
+      "headline": "Beijing Confirms Talks on Possible Xi-Trump-Putin Trilateral Summit",
+      "body": "**Mao Ning**, a Chinese foreign ministry spokesperson, said Beijing \"is in communication with relevant parties regarding a meeting between the three heads of state,\" which could take place on the sidelines of the APEC summit in Shenzhen Nov 18-19. **Sun Yun** of the Stimson Center said Russia would likely use the summit to nudge China and the US toward Moscow's positions on Ukraine.",
+      "src_line": "Guardian; Mao Ning via MOFA briefing"
+    },
+    {
+      "url": "https://www.ft.com/content/391bb785-0247-4c39-b53b-35007187d603?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category_tag": "US-China",
+      "headline": "US Tells China to 'Immediately' Meet Busan Trade Deal Terms",
+      "body": "Washington told Beijing it has yet to fulfill commitments to increase supply of rare earths and other critical products, the FT reported. **Scott Bessent** and **Jamieson Greer** held a video call Friday with Vice Premier **He Lifeng**, with Bessent \"emphasising the importance of China fully and immediately implementing its commitments made in Busan\" and raising concerns about recent Chinese actions, per a Treasury statement.",
+      "src_line": "FT; SCMP"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/06/us/politics/chinese-spy-agency-nvidia-jensen-huang.html",
+      "source": "NYT China",
+      "category_tag": "Technology",
+      "headline": "US Officials Say Woman Close to Nvidia's Huang Was MSS Asset",
+      "body": "A memo circulating among US policymakers alleges **Alice Huang**, a Chinese executive who developed a relationship with Nvidia chief **Jensen Huang**, was an asset of China's Ministry of State Security, the NYT reported. US intelligence had separately warned the Nvidia CEO was involved with an executive recruited by China to gather information on the company, per the FT.",
+      "src_line": "NYT; FT"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-06/xi-taps-military-hatchet-man-to-rebuild-china-s-army-command",
+      "source": "Bloomberg China",
+      "category_tag": "PLA",
+      "headline": "Xi Taps Military 'Hatchet Man' to Rebuild PLA Army Command",
+      "body": "**Xi Jinping** has appointed an officer Bloomberg describes as a military \"hatchet man\" to rebuild the PLA Army's top command structure. The move follows the Fourth Plenum's October expulsion of **He Weidong** and **Miao Hua** from the party and the PLA.",
+      "src_line": "Bloomberg"
+    },
+    {
+      "url": "https://www.wsj.com/economy/central-banking/chinas-central-bank-tweaks-forex-reserve-rules-to-steady-yuan-ad7ca0a2",
+      "source": "WSJ China",
+      "category_tag": "PRC-Economy",
+      "headline": "PBOC Raises FX Reserve Ratio to Cool Yuan Rally",
+      "body": "China's central bank will raise the reserve requirement ratio on foreign-currency deposits from *4% to 6%* effective Nov 15, after the onshore yuan posted 14 straight days of gains and broke through 6.65 per dollar on Nov 2. **Wen Bin**, chief economist at China Minsheng Bank, said the last such hike was Dec 15, 2021.",
+      "src_line": "WSJ; 中国经济网"
+    },
+    {
+      "url": "https://www.reuters.com/business/finance/us-uk-others-condemn-sentencing-hong-kong-activist-joshua-wong-2026-11-06/",
+      "source": "Reuters China",
+      "category_tag": "Diplomacy",
+      "headline": "US, UK, Eight Others Condemn Added 10-Year Sentence for Joshua Wong",
+      "body": "The US, UK, Australia, Canada, France, Germany, Italy, Japan, the Netherlands and New Zealand issued a joint statement condemning the additional 10-year sentence imposed on Hong Kong democracy activist **Joshua Wong**, on top of a term he was already serving. Hong Kong authorities rejected the criticism as \"hypocritical,\" accusing the ten governments of distorting facts about the national security law, per SCMP.",
+      "src_line": "Reuters; SCMP"
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-07/beijing-vows-to-hit-back-against-us-sanctions-on-china-companies",
+      "source": "Bloomberg China",
+      "headline": "Beijing Vows to Retaliate Against US Sanctions on Chinese Firms",
+      "body_text": "China said it would hit back after Washington's latest Cuba-related sanctions round named two Chinese companies alongside French firms, Bloomberg reported. MOFA said it \"firmly supports Cuba in safeguarding its national sovereignty\" and would take all necessary measures to protect its firms' rights.",
+      "instrument": "Sanctions"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/politics/article/3373517/democratic-congress-guard-us-taiwan-policy-and-press-trump-arms-sales",
+      "source": "SCMP",
+      "headline": "Democratic Congress Expected to Press Trump on Taiwan Arms Sales",
+      "body_text": "A Democratic-controlled Congress may push for faster arms sales to Taiwan after the party's midterm wins, though analysts say no fundamental shift in broader US-China policy is likely, SCMP reported. Beijing is expected to take strong countermeasures if incoming Speaker Hakeem Jeffries \"crosses the red line\" on Taiwan, one analyst said.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://selectcommitteeontheccp.house.gov/media/press-releases/moolenaar-the-select-committee-on-china-should-continue-its-bipartisan-work-for-the-american-people-in-the-next-congress",
+      "source": "House Select CCP",
+      "headline": "Select Committee Chair Moolenaar Calls for Bipartisan China Work to Continue",
+      "body_text": "House Select Committee on the CCP Chairman **John Moolenaar** said the committee should continue its bipartisan work into the next Congress, per a committee press release.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-06/china-s-cool-response-to-blue-tsunami-masks-its-reasons-to-worry",
+      "source": "Bloomberg China",
+      "headline": "Beijing's Muted Response to Democratic Sweep Masks Deeper Unease",
+      "body_text": "China's official reaction to Democrats' sweeping US midterm gains has been subdued, Bloomberg reported. The muted response conceals concern within Chinese policy circles over the trajectory of trade and Taiwan policy.",
+      "instrument": "Diplomacy"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/07/2003867307",
+      "source": "Taipei Times (direct)",
+      "headline": "Taiwan Shuts Representative Office in Papua New Guinea",
+      "body_text": "Taiwan's MOFA said it would close its representative office in Papua New Guinea and halt LNG purchases from the country, citing Chinese pressure, after Port Moresby said in July it had decided to shut the office. Taiwan had planned to buy *500,000 tonnes* of spot LNG from PNG this year but will sign no new spot contracts.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/07/2003867305",
+      "source": "Taipei Times (direct)",
+      "headline": "Taiwan Activates NT$500 Billion Stabilization Fund After Record Stock Plunge",
+      "body_text": "Taiwan authorized activation of its NT$500 billion (*$15.26 billion*) National Stabilization Fund after the TAIEX plunged 3,737.67 points in early trading, the largest intraday drop on record, before paring losses. The Financial Supervisory Commission also tightened short-selling rules effective Monday, cutting the intraday securities-lending cap from 30% to 3% of average daily volume.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.voachinese.com/a/taiwan-legislator-indicted-for-violating-national-security-law-in-taking-funds-from-china-20261106/8219845.html",
+      "source": "美国之音中文 (VOA Chinese ZH)",
+      "headline": "Taiwan Indicts Independent Legislator Over Alleged China Funding",
+      "body_text": "Taiwanese prosecutors indicted independent legislator Kao Chin Su-mei on charges including violating the National Security Act over allegedly accepting funds from China, VOA Chinese reported.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.voachinese.com/a/taiwan-sea-drones-20261106/8219964.html",
+      "source": "美国之音中文 (VOA Chinese ZH)",
+      "headline": "Taiwan Invests in 'Asymmetric' Unmanned Vessels Against Gray-Zone Harassment",
+      "body_text": "Taiwan is investing in unmanned surface vessels as part of an asymmetric response to Chinese gray-zone activity at sea, VOA Chinese reported.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/japan-china-tensions/china-japan-row-over-takaichi-s-taiwan-comment-enters-2nd-year",
+      "source": "Nikkei Asia China",
+      "headline": "China-Japan Row Over Takaichi's Taiwan Remark Enters Second Year",
+      "body_text": "Saturday marks one year since Prime Minister **Sanae Takaichi**'s remark on a Taiwan contingency angered Beijing and stalled bilateral ties, Nikkei reported. China's defense ministry separately warned the \"international community must be highly vigilant\" against Japan restarting its \"war machine.\"",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3373651/manila-weighs-second-south-china-sea-legal-case-against-beijing-analyst",
+      "source": "SCMP",
+      "headline": "Manila Weighs Second South China Sea Legal Case Against Beijing",
+      "body_text": "The Philippines is preparing a potential second legal case against China over the South China Sea, said **Rommel Banlaoi**, president of the Philippine Society for International Security Studies, at a symposium in Sanya. He said authorities are \"already preparing the necessary legal documentation.\"",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/china-gabon-elevate-ties-pledge-deeper-mining-security-cooperation-2026-11-06/",
+      "source": "Reuters China",
+      "headline": "China, Gabon Elevate Ties, Pledge Deeper Mining and Security Cooperation",
+      "body_text": "China and Gabon agreed to elevate bilateral relations and deepen cooperation on mining and security, Reuters reported. The two countries also signed a memorandum concluding early-harvest arrangement talks under their economic partnership agreement, per MOFCOM.",
+      "region": "Africa"
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://apnews.com/article/china-pakistani-astronaut-space-station-5f41ab023758265d421bb4b57ebe931f",
+      "source": "AP China",
+      "category": "Technology",
+      "headline": "Pakistani Astronaut to Become First Foreigner on China's Space Station",
+      "body_text": "A Pakistani astronaut will join the crew of Shenzhou-24, becoming the first foreign national to board China's space station, AP reported. The mission reflects China's growing use of space cooperation to deepen ties with partner countries."
+    },
+    {
+      "url": "http://www.81.cn/ss_208539/16498646.html",
+      "source": "解放军报 (PLA Daily ZH)",
+      "category": "Diplomacy",
+      "headline": "Xinhua Launches Global AI Media Standards Initiative at Beijing Summit",
+      "body_text": "Xinhua launched a plan to co-develop AI application standards for media at the Seventh World Media Summit in Beijing, with 22 institutions joining including People's Daily, CMG and Russia's TASS. The plan aims to produce jointly validated standards within about two years."
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/taiwan-s-kmt-old-guard-fights-for-power-base-in-tight-taipei-mayoral-races",
+      "source": "Nikkei Asia China",
+      "category": "Cross-Strait",
+      "headline": "Taipei Mayor Chiang Wan-an Favored in Tight KMT Mayoral Races",
+      "body_text": "Taipei Mayor Chiang Wan-an was expected to cruise to re-election in Taiwan's Nov 28 local elections alongside other KMT veterans, Nikkei reported. The races are seen as a test of KMT organizational strength ahead of the vote."
+    },
+    {
+      "url": "https://asia.nikkei.com/techasia/taiwan-s-chipmakers-shine-brightest-in-living-memory",
+      "source": "Nikkei Asia China",
+      "category": "Technology",
+      "headline": "Taiwan's Memory Chipmakers See Brightest Period 'In Living Memory'",
+      "body_text": "Executives at Taiwanese memory chipmakers including Winbond described current conditions as the industry's strongest in memory, Nikkei reported from Taipei. The optimism reflects surging global demand tied to AI infrastructure buildout."
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/china-contact-with-real-madrid-laliga-over-mbappes-mao-comments-2026-11-06/",
+      "source": "Reuters China",
+      "category": "Diplomacy",
+      "headline": "China in Contact With Real Madrid, LaLiga Over Mbappe's Mao Comments",
+      "body_text": "China is in contact with Real Madrid and LaLiga over comments forward Kylian Mbappe made referencing Mao Zedong, Reuters reported. Details of the comments and Beijing's specific objection were not disclosed."
+    },
+    {
+      "url": "https://www.reuters.com/legal/litigation/how-chinas-clean-tech-machine-is-reshaping-global-climate-fight-2026-11-06/",
+      "source": "Reuters China",
+      "category": "Energy",
+      "headline": "China's Clean-Tech Export Machine Reshapes Global Climate Fight",
+      "body_text": "China's clean-energy manufacturing base is reshaping the global response to climate change, Reuters reported. The feature examines how Chinese solar, battery and EV exports are becoming central to other countries' decarbonization plans."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/politics/article/3373638/hypocritical-hong-kong-hits-back-criticism-joshua-wongs-sentence",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Hong Kong Calls Joint Criticism of Joshua Wong Sentence 'Hypocritical'",
+      "body_text": "Hong Kong rejected a joint statement from ten governments over Joshua Wong's sentencing, accusing them of distorting facts and smearing the city's national security law, SCMP reported. The ten countries had jointly condemned the sentencing on Friday."
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://focustaiwan.tw/politics/202611070004",
+      "source": "Focus Taiwan",
+      "category": "Cross-Strait",
+      "headline": "Taiwan MOFA Condemns China Over Statement Undermining ROC Sovereignty",
+      "body_text": "Taiwan's MOFA condemned a Chinese government statement it said undermines the Republic of China's sovereignty.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://weekly.caixin.com/2026-11-07/102502102.html",
+      "source": "财新 (Caixin ZH)",
+      "category": "Technology",
+      "headline": "Humanoid Robots Still Can't Do What Factory Robots Can't",
+      "body_text": "Caixin reports humanoid robots still cannot perform tasks industrial robots cannot already do on auto factory floors.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/education/prep-schools-help-chinese-students-get-into-japan-s-top-universities",
+      "source": "Nikkei Asia China",
+      "category": "Diplomacy",
+      "headline": "Japanese Prep Schools Coach Chinese Students for Top Universities",
+      "body_text": "Japanese prep schools are coaching growing numbers of Chinese students aiming for Japan's most selective universities, Nikkei reports.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.hk01.com/%E5%8D%B3%E6%99%82%E5%9C%8B%E9%9A%9B/60408201/%E5%85%A7%E5%9C%B0%E8%A8%AA%E6%97%A5%E9%81%8A%E5%AE%A2%E6%9C%AA%E8%A6%8B%E5%BE%A9%E7%94%A6-%E6%97%A5%E6%9C%AC%E7%A8%B1%E5%8A%9B%E6%8E%A8%E5%9C%B0%E6%96%B9%E6%97%85%E9%81%8A%E5%90%B8%E5%BC%95%E5%90%84%E5%9C%8B%E5%9B%9E%E9%A0%AD%E5%AE%A2",
+      "source": "香港01 (HK01 ZH)",
+      "category": "Diplomacy",
+      "headline": "Mainland Chinese Tourism to Japan Still Hasn't Recovered",
+      "body_text": "Mainland Chinese visits to Japan have not recovered, prompting Tokyo to promote regional tourism to attract other markets, HK01 reports.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.jfdaily.com/news/detail?id=1208524",
+      "source": "上观新闻 (via MOFA presser ZH)",
+      "category": "Diplomacy",
+      "headline": "MOFA: Major Trade Expos 'Succeeding One Another' to Boost Development",
+      "body_text": "MOFA said major trade expos are \"succeeding one another\" to empower development and benefit livelihoods, citing the CIIE.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/ge-aerospace-says-it-signs-record-129-billion-deals-china-expo-2026-11-06/",
+      "source": "Reuters China",
+      "headline": "GE Aerospace Signs Record $12.9 Billion in Deals at China Expo",
+      "body_text": "GE Aerospace said it signed a record *$12.9 billion* in deals at a China trade expo, Reuters reported.",
+      "companies": [
+        "GE Aerospace"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-07/china-s-ndrc-flags-weak-demand-as-challenge-for-nation-s-economy",
+      "source": "Bloomberg China",
+      "headline": "China's NDRC Flags Weak Demand as Economic Challenge",
+      "body_text": "China's National Development and Reform Commission flagged weak domestic demand as a key challenge facing the economy, Bloomberg reported.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-07/trafigura-snaps-up-copper-in-asia-as-china-faces-supply-crunch",
+      "source": "Bloomberg China",
+      "headline": "Trafigura Snaps Up Copper in Asia as China Faces Supply Crunch",
+      "body_text": "Trading house Trafigura is buying up copper across Asia as China faces a supply crunch, Bloomberg reported.",
+      "companies": [
+        "Trafigura"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-07/china-extends-gold-buying-streak-to-two-years-as-prices-drop",
+      "source": "Bloomberg China",
+      "headline": "China Extends Gold-Buying Streak to Two Years as Prices Drop",
+      "body_text": "China extended its central-bank gold-buying streak to *two years* even as prices fell, Bloomberg reported.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.reuters.com/business/media-telecom/softbank-abb-explore-china-carve-out-salvage-robotics-deal-bloomberg-news-2026-11-07/",
+      "source": "Reuters China",
+      "headline": "SoftBank, ABB Explore China Carve-Out to Salvage Robotics Deal",
+      "body_text": "Chinese authorities have moved to block SoftBank's *$5.4 billion* purchase of ABB's robotics division, per Nikkei reporting; SoftBank and ABB are now exploring a China carve-out to salvage the deal, Reuters reported.",
+      "companies": [
+        "SoftBank",
+        "ABB"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.afp.com/en/just-cars-chinese-motorcycles-out-conquer-europe",
+      "source": "AFP China",
+      "headline": "Chinese Motorcycle Makers Push Into Europe",
+      "body_text": "Chinese motorcycle makers are expanding into Europe, following the path already cut by the country's carmakers, AFP reported.",
+      "companies": [],
+      "sector": "auto"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/japanese-companies-caught-in-crossfire-of-beijing-tokyo-rift",
+      "source": "Nikkei Asia China",
+      "headline": "Japanese Companies Caught in Crossfire of Beijing-Tokyo Rift",
+      "body_text": "Business between Japan and China remains chilled a year into the diplomatic rift triggered by PM Sanae Takaichi's Taiwan remark, Nikkei reported.",
+      "companies": [],
+      "sector": "macro"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "Foreign Ministry spokesperson",
+      "topic": "US sanctions on Chinese firms over Cuba ties",
+      "statement": "Per MOFA: China firmly supports Cuba in safeguarding its national sovereignty and will take all necessary measures to firmly safeguard the legitimate rights and interests of its own enterprises.",
+      "original_zh": "中方坚定支持古巴维护国家主权，将采取一切必要措施坚定维护本国企业的正当权益",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Washington's latest Cuba-related sanctions round named two Chinese companies, per Bloomberg reporting Nov 7.",
+      "source": "外交部发言人 (via 极目新闻)",
+      "url": "https://www.ctdsb.net/c1679_202611/2898419.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "Foreign Ministry spokesperson",
+      "topic": "US-China trade relations ahead of Shenzhen summit",
+      "statement": "Per MOFA: China and the United States should move toward each other to keep bilateral economic and trade relations on a sustained, stable path of improvement.",
+      "original_zh": "中美要相向而行推动经贸关系持续稳定向好发展",
+      "addressed_to": "US",
+      "tone": "conciliatory",
+      "context": "Comment came at the Nov 6 MOFA briefing as Bessent and Greer pressed Beijing on Busan deal implementation.",
+      "source": "外交部发言人 (via 新华网)",
+      "url": "https://www.news.cn/world/20261106/b0547da76cf14960ad65525c231a41ef/c.html"
+    },
+    {
+      "body": "MND",
+      "body_chinese": "国防部",
+      "speaker": "MND spokesperson",
+      "role": "Defense Ministry spokesperson",
+      "topic": "Japan's defense posture",
+      "statement": "Per MND: The international community must stay highly vigilant against Japan restarting its 'war machine.'",
+      "original_zh": "国际社会须高度警惕日本重启\"战争机器\"",
+      "addressed_to": "Japan",
+      "tone": "warning",
+      "context": "Statement comes as the China-Japan dispute over PM Takaichi's Taiwan remark enters its second year, per Nikkei.",
+      "source": "国防部 (via 求是)",
+      "url": "https://www.qstheory.cn/20261107/e497295487254bddb057bfb38f5f55b0/c.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "Foreign Ministry spokesperson",
+      "topic": "State of China-Japan relations",
+      "statement": "Per MOFA: China-Japan relations currently face serious difficulties, and the responsibility for this lies entirely with Japan.",
+      "original_zh": "当前中日关系面临严重困难，责任完全在日本一方",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Comment marks roughly one year since PM Sanae Takaichi's remarks on a Taiwan contingency prompted the diplomatic rift, per Nikkei.",
+      "source": "外交部发言人 (via 凤凰网)",
+      "url": "https://news.ifeng.com/c/8xpgZMOXlVE"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "CC",
+      "who": "Chiu Chui-cheng",
+      "handle_context": "Mainland Affairs Council Chairman, Taiwan",
+      "platform_date": "UDN · Nov 7, 2026",
+      "quote_text": "The Chinese Communists are using every possible means to obstruct and suppress Taiwan's diplomatic space, but we will not back down.",
+      "analyst_note": "Comment follows Taiwan's announcement it would close its representative office in Papua New Guinea and halt LNG purchases after Chinese pressure.",
+      "badge_class": "sb-p",
+      "url": "https://udn.com/news/story/7331/9863898"
+    },
+    {
+      "avatar_initials": "RB",
+      "who": "Rommel Banlaoi",
+      "handle_context": "President, Philippine Society for International Security Studies",
+      "platform_date": "SCMP · Nov 7, 2026",
+      "quote_text": "Indeed, the Philippines is considering filing another case against China, and authorities are already preparing the necessary legal documentation.",
+      "analyst_note": "Remarks made at a South China Sea symposium in Sanya, China.",
+      "badge_class": "sb-p",
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3373651/manila-weighs-second-south-china-sea-legal-case-against-beijing-analyst"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Shenyang Municipal Party Secretary",
+      "name": "Huo Bugang (霍步刚)",
+      "action": "elected",
+      "detail": "Huo Bugang was elected Shenyang party secretary at the first plenary session of the 15th Shenyang Municipal Party Committee on Nov 7, per Xinhua.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.taipeitimes.com/News/front/archives/2026/11/07/2003867307",
+    "https://www.voachinese.com/a/taiwan-sea-drones-20261106/8219964.html",
+    "https://www.scmp.com/news/china/diplomacy/article/3373651/manila-weighs-second-south-china-sea-legal-case-against-beijing-analyst",
+    "https://www.voachinese.com/a/taiwan-legislator-indicted-for-violating-national-security-law-in-taking-funds-from-china-20261106/8219845.html"
+  ],
+  "story_count": 97,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 103,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-07.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-07.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}

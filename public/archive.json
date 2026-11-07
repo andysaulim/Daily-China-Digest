@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-07",
+    "filename": "2026-11-07.html",
+    "re_line": "Xi-Trump-Putin summit talks \u00b7 Busan deal pressure \u00b7 Nvidia spy case \u00b7 PBOC cools yuan \u00b7 Joshua Wong sentencing",
+    "top_stories": 6,
+    "overnight_items": 7,
+    "word_count": 2573,
+    "sources": 103,
+    "pdf": true
+  },
+  {
     "date": "2026-11-06",
     "filename": "2026-11-06.html",
     "re_line": "Trump-Putin-Xi APEC talk \u00b7 Joshua Wong gets 10 more years \u00b7 Huang summoned over China spy fears \u00b7 yuan under strain",
