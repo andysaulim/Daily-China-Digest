@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-08",
+    "filename": "2026-11-08.html",
+    "re_line": "Xi-Trump-Putin summit talks confirmed \u00b7 Hegseth-Paparo China visit floated \u00b7 PBOC hikes FX reserve ratio \u00b7 Nvidia's Huang probed over alleged spy tie",
+    "top_stories": 5,
+    "overnight_items": 8,
+    "word_count": 2621,
+    "sources": 75,
+    "pdf": true
+  },
+  {
     "date": "2026-11-07",
     "filename": "2026-11-07.html",
     "re_line": "Xi-Trump-Putin summit talks \u00b7 Busan deal pressure \u00b7 Nvidia spy case \u00b7 PBOC cools yuan \u00b7 Joshua Wong sentencing",

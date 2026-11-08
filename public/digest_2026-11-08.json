@@ -1,0 +1,528 @@
+{
+  "digest_date": "Sunday, November 8, 2026",
+  "re_line": "Xi-Trump-Putin summit talks confirmed · Hegseth-Paparo China visit floated · PBOC hikes FX reserve ratio · Nvidia's Huang probed over alleged spy tie",
+  "market_indicators": {
+    "usd_cny": {
+      "value": "6.6710",
+      "change_pct": 0.15,
+      "as_of": "Nov 08"
+    },
+    "usd_cnh": {
+      "value": "6.6717",
+      "change_pct": 0.12,
+      "as_of": "Nov 06"
+    },
+    "sse_composite": {
+      "value": "3,649.18",
+      "change_pct": 0.31,
+      "as_of": "Nov 06"
+    },
+    "brent": {
+      "value": "98.32",
+      "change_pct": -5.1,
+      "as_of": "Nov 06"
+    },
+    "hang_seng": {
+      "value": "24,481.86",
+      "change_pct": 5.1,
+      "as_of": "Nov 06"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "Beijing confirmed for the first time it is discussing a Xi-Trump-Putin trilateral meeting, likely this month on the sidelines of the Shenzhen APEC summit, MOFA spokeswoman Mao Ning said.",
+    "US Defense Secretary Pete Hegseth and INDOPACOM commander Adm. Samuel Paparo may visit China soon, which would be the first PACOM commander trip to Beijing since 2015, according to the National Committee on US-China Relations president.",
+    "The PBOC raised banks' foreign-currency reserve requirement ratio from 4% to 6%, effective Nov. 15, the first such hike since December 2021, after the yuan broke through 6.65 per dollar on Nov. 2."
+  ],
+  "key_stat": {
+    "number": "$24B",
+    "label": "FX liquidity frozen by PBOC's reserve-ratio hike",
+    "context": "The two-point increase in the foreign-currency deposit reserve ratio, from 4% to 6% effective Nov. 15, is calculated against roughly $1.2 trillion in foreign-currency deposits as of September and is the first such move since Dec. 15, 2021.",
+    "source": "Economic Daily (中国经济网)"
+  },
+  "prc_government": [
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "Li Qiang, Premier",
+      "action": "Executive meeting orders stock-market stabilization, local debt risk resolution",
+      "document": null,
+      "detail": "The Nov. 6 State Council executive meeting called for improving the capital-market stabilization mechanism and enhancing the stock market's 'inherent stability,' alongside continued resolution of local government debt and small/mid financial institution risk.",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/xwfb/ldrhd/art/2026/art_d530d620020d485496d642c211131a1d.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "CCP Central Committee",
+      "action": "Raises delegate count to 2,360 for 2027 Party Congress",
+      "detail": "Bloomberg reported Beijing has increased the number of delegates to the 21st Party Congress, due in 2027, to 2,360; the Central Organization Department separately confirmed delegate-election procedures are underway.",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-08/china-raises-delegate-count-to-2-360-for-2027-party-congress"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 9,
+      "headline": "NBS releases October CPI, PPI data",
+      "detail": "China's National Bureau of Statistics publishes October consumer and producer price indices Monday."
+    },
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-deal suspensions approach lapse",
+      "detail": "The one-year suspensions of BIS's Affiliates (\"50%\") Rule and China's October 2025 rare-earth export controls, both dated from Nov. 10, 2025, approach expiry unless extended."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts APEC; multiple outlets report a possible Xi-Trump-Putin trilateral on the sidelines, alongside a bilateral Xi-Trump meeting to maintain the Busan trade truce."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors and magistrates and roughly 11,000 offices are contested, read as a mid-term referendum on President Lai Ching-te."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral (Miami)",
+      "detail": "The US hosts G20; China Times reports Xi and Trump are expected to meet again here following the Shenzhen APEC encounter."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://udn.com/news/story/7332/9864785?from=udn-relatednews_ch2",
+      "source": "UDN (联合报)",
+      "category": "Technology",
+      "headline": "China to fly first Pakistani astronaut to Tiangong on Shenzhou-24",
+      "body_text": "China's manned space agency said a Pakistani astronaut will join the Shenzhou-24 crew as a payload specialist, marking Tiangong's first foreign visitor. The two countries signed a selection-and-training agreement in Islamabad in February 2025; two Pakistani candidates completed training in China."
+    },
+    {
+      "url": "https://ec.ltn.com.tw/article/breakingnews/5633379",
+      "source": "Liberty Times (自由时报)",
+      "category": "Technology",
+      "headline": "Nvidia CEO's daughter cancels Seoul trip after father's spy-link report",
+      "body_text": "Madison Huang, Nvidia's head of physical-AI marketing, scrapped a planned meeting with South Korea's deputy PM and a keynote at Nvidia AI Day Seoul, citing 'family reasons.' The cancellation follows a report that US intelligence believes her father Jensen Huang had a romantic relationship with an executive recruited by China."
+    },
+    {
+      "url": "https://www.hkej.com/instantnews/current/article/4560654/%E8%8B%B1%E7%9A%87%E6%93%9A%E5%A0%B1%E5%B0%87%E6%85%8E%E9%87%8D%E8%80%83%E6%85%AE%E8%A8%AA%E8%8F%AF",
+      "source": "Hong Kong Economic Journal (信报)",
+      "category": "Diplomacy",
+      "headline": "King Charles III reportedly weighing a China visit",
+      "body_text": "AFP cited a Buckingham Palace aide saying the king is carefully weighing a visit to China, which his aides described as a country of 'great importance and great complexity.' Charles last visited in 1997 for the Hong Kong handover; his mother was the only British monarch to visit the mainland, in 1986."
+    },
+    {
+      "url": "https://news.cctv.com/2026/11/08/ARTIrNErd4eK9D1H0xtBFTLk261108.shtml",
+      "source": "CCTV News",
+      "category": "Defense",
+      "headline": "Japan's defense minister floats restructuring JSDF service branches",
+      "body_text": "Defense Minister Shinjiro Koizumi said Japan should explore breaking down organizational barriers between the Ground, Maritime and Air Self-Defense Forces as part of the year-end revision of Japan's security strategy documents. He cited shrinking population as a constraint on maintaining troop numbers."
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/wzll/kj/16498699.html",
+      "source": "MND (国防部)",
+      "category": "PLA",
+      "headline": "China's first female carrier-based aviation pilot cadets graduate",
+      "body_text": "The PLA Navy's first cohort of women trained as carrier-based fighter pilots completed their course and were assigned to frontline units, per a Defense Ministry release. No further operational details were given."
+    },
+    {
+      "url": "https://www.zaochenbao.com/news/china/202611/0784985.html",
+      "source": "Morning Post (早晨报)",
+      "category": "Diplomacy",
+      "headline": "He Lifeng to chair second China-Canada economic and financial dialogue",
+      "body_text": "Vice Premier He Lifeng will travel to Canada to co-chair the second round of the bilateral Economic and Financial Strategic Dialogue, per Chinese reporting. No agenda details were disclosed."
+    },
+    {
+      "url": "https://www.globaltimes.cn/page/202611/1373821.shtml",
+      "source": "Global Times",
+      "category": "Diplomacy",
+      "headline": "FM says Japan bears 'full responsibility' for strained ties, a year after Takaichi's Taiwan remarks",
+      "body_text": "China's foreign ministry marked the one-year anniversary of Prime Minister Sanae Takaichi's remarks on Taiwan by again placing blame for the diplomatic rupture squarely on Tokyo. The headline did not carry further detail on any new measures."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/08/2003867361",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Taiwan's MOFA condemns China over Gabon joint statement citing UN 2758",
+      "body_text": "Taipei accused Beijing of pressuring Gabon into a joint statement distorting UN Resolution 2758, which it noted never mentions Taiwan, after Xi Jinping's Nov. 6 meeting with Gabonese President Brice Clotaire Oligui Nguema. MOFA said the ROC 'has never been ruled by the People's Republic of China.'"
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.chinatimes.com/newspapers/20261108000442-260109",
+      "source": "China Times (中国时报)",
+      "headline": "Bessent, Greer warn He Lifeng to honor Busan truce ahead of APEC, G20",
+      "body_text": "Treasury Secretary Scott Bessent and USTR Jamieson Greer held a call Nov. 6 with Vice Premier He Lifeng warning Beijing must implement last year's Busan truce commitments, per FT reporting cited by China Times. Xi and Trump are expected to meet again at the Shenzhen APEC summit and the Doral G20.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://www.ctdsb.net/c1679_202611/2898419.html",
+      "source": "MOFA presser (外交部发言人)",
+      "headline": "MOFA protests new US Cuba sanctions naming two Chinese companies",
+      "body_text": "China's foreign ministry said it 'firmly supports' Cuba's sovereignty and will take 'all necessary measures' to protect the legitimate rights of the two Chinese firms added to the latest US sanctions list on Cuba. No further designation details were given in the release.",
+      "instrument": "Sanctions"
+    },
+    {
+      "url": "https://udn.com/news/story/7333/9865148",
+      "source": "UDN (联合报)",
+      "headline": "US agri-food exporters cite tariff, market-access friction at CIIE",
+      "body_text": "US meat and soybean trade representatives at Shanghai's import expo said Chinese customs inspection standards and tariffs remain the main hurdles to the China market, even as buyers return. An Indiana soybean grower said farmers welcome renewed Chinese purchases but 'shouldn't focus too much on any single market.'",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://asia.nikkei.com/spotlight/hong-kong-security-law/hong-kong-s-joshua-wong-sentence-sparks-war-of-words-with-us-europe",
+      "source": "Nikkei Asia",
+      "headline": "Joshua Wong's 10-year sentence triggers US-Europe rebuke of Beijing",
+      "body_text": "The prison sentence handed to Hong Kong democracy activist Joshua Wong Chi-fung has drawn condemnation from Washington and European capitals. The dispute adds to friction over Hong Kong's national security law enforcement.",
+      "instrument": "Legal"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://apnews.com/article/taiwan-china-election-communist-party-8a5d0366b5d72e73f41bd7b9ccbb1f6d",
+      "source": "AP",
+      "headline": "Taiwan detains Communist Party leader over alleged Chinese election sponsorship",
+      "body_text": "Taiwan prosecutors detained a local Chinese Communist Party-affiliated leader on suspicion of receiving Chinese sponsorship tied to an upcoming election. The case adds to an already large vote-buying probe ahead of the Nov. 28 local elections.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/08/2003867350",
+      "source": "Taipei Times",
+      "headline": "IPAC names Taiwan Strait peace, anti-coercion resilience as top 2027 priorities",
+      "body_text": "The Inter-Parliamentary Alliance on China's summit in The Hague, with 52 lawmakers from 30 countries, voted Taiwan Strait peace and resilience against Chinese economic coercion as its priorities for the coming year. Dutch co-chair Jan Paternotte cited Taiwan's role in semiconductors and strait shipping volumes as grounds for global concern.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/zyxw/202611/t20261106_12055044.shtml",
+      "source": "MOFA (外交部)",
+      "headline": "Xi and Gabon's president upgrade ties to 'community of destiny,' sign zero-tariff deals",
+      "body_text": "Xi Jinping and Gabonese President Brice Clotaire Oligui Nguema announced a 'new-era China-Gabon community of common destiny' during a Nov. 6 state visit, signing documents on the Global Security Initiative, zero-tariff treatment and Chinese-language education. Gabon reaffirmed the one-China principle and endorsed Xi's four global initiatives.",
+      "region": "Africa"
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/zyxw/202611/t20261106_12055126.shtml",
+      "source": "MOFA (外交部)",
+      "headline": "Politburo Standing Committee's Cai Qi meets North Korean party delegation",
+      "body_text": "Cai Qi told a visiting Workers' Party of Korea delegation led by international department head Kim Song-nam that the two sides should implement the consensus from Xi's June visit to Pyongyang. The meeting followed Kim Jong Un's recent surprise same-day China trip via a new Yalu River bridge.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.dw.com/zh/%E4%B8%AD%E5%8D%B0%E8%BE%B9%E5%A2%83%E4%B8%BA%E4%BD%95%E5%86%8D%E8%B5%B7%E6%B3%A2%E6%BE%9C/a-79855892",
+      "source": "DW Chinese",
+      "headline": "India reports fresh China border face-offs in Arunachal Pradesh",
+      "body_text": "India's border police chief Shatrujeet Kapur said Chinese and Indian forces faced off at multiple points along the disputed line in Arunachal Pradesh, which Beijing calls South Tibet. MOFA spokesperson Guo Jiakun said China conducts 'normal patrol and management activities' in the area and abides by prior bilateral agreements.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/astellas-employee-imprisoned-china-be-released-december-japanese-media-report-2026-11-08/",
+      "source": "Reuters",
+      "headline": "Astellas employee jailed in China on spying charge set for December release",
+      "body_text": "A Japanese Astellas Pharma executive imprisoned in China on espionage charges is expected to be released in mid-December after completing his sentence, Japanese media reported. He is among several Japanese nationals detained in China under its anti-espionage law since 2015.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.channelnewsasia.com/asia/philippines-china-rebukes-public-comments-6534176",
+      "source": "CNA",
+      "headline": "Manila rebukes own officials over China remarks ahead of regional summit",
+      "body_text": "The Philippines' Department of Foreign Affairs issued a rare warning to government agencies to speak with 'a unified voice' on China, after senators called for Beijing's ambassador to be declared persona non grata over 'easily win' remarks. Beijing had accused Manila of 'erecting multiple obstacles' to its attendance at an ASEAN defense ministers' meeting.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/zyxw/202611/t20261107_12055302.shtml",
+      "source": "MOFA (外交部)",
+      "headline": "Han Zheng visits Georgia, pledges continued support on Taiwan and Xinjiang issues",
+      "body_text": "Vice President Han Zheng met Georgian President Mikheil Kavelashvili and PM Irakli Kobakhidze in Tbilisi, thanking Georgia for backing China's position on Taiwan and Xinjiang and pledging reciprocal support for Georgian sovereignty. The visit follows the June 2026 upgrade of ties to a comprehensive strategic partnership.",
+      "region": "Russia-Central Asia"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/08/2003867352",
+      "source": "Taipei Times",
+      "category_tag": "Diplomacy",
+      "headline": "Beijing confirms talks underway on a Xi-Trump-Putin trilateral meeting",
+      "body": "MOFA spokeswoman **Mao Ning** said China 'is in communication with relevant parties regarding a meeting between the three heads of state,' the first Chinese confirmation of discussions for a historic three-way summit. The gathering, if it happens, would take place this month on the sidelines of the APEC summit China is hosting in Shenzhen. USTR **Jamieson Greer** separately pressed Vice Premier **He Lifeng** in a Friday call to take 'concrete actions' on past commitments, a sign of persistent friction even as the truce holds.",
+      "src_line": "Taipei Times"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261108-9965466",
+      "source": "Lianhe Zaobao (联合早报)",
+      "category_tag": "US-China",
+      "headline": "Hegseth and INDOPACOM's Paparo may visit China soon, says US-China relations group head",
+      "body": "The president of the National Committee on US-China Relations said at a Sanya maritime forum that Defense Secretary **Pete Hegseth** and Adm. **Samuel Paparo** may visit China 'very soon,' which would be the first PACOM commander trip to Beijing since 2015. The two militaries held a crisis-communication working group in Washington Nov. 2-3, and Paparo met PLA Eastern Theater Commander Yang Zhibin in Canada in August, restoring a theater-level channel dormant for two years. The Pentagon and INDOPACOM said they have nothing to announce, and Hegseth faces domestic pressure over his position following Republican midterm losses.",
+      "src_line": "Lianhe Zaobao"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/08/2003867351",
+      "source": "Taipei Times",
+      "category_tag": "PLA",
+      "headline": "AEI-ISW report flags possible large unannounced PLA Taiwan-isolation exercise",
+      "body": "The American Enterprise Institute and the Institute for the Study of War said China may be conducting an unannounced exercise simulating Taiwan's isolation, larger than last year's 'Justice Mission 2025,' drawing forces from the eastern, northern and southern theater commands. NSC Secretary-General **Joseph Wu** said *more than 100* PLA Navy and Coast Guard vessels are operating in the western Pacific, with the Liaoning carrier group having transited the Basilan Strait between Oct. 23 and the prior Monday.",
+      "src_line": "Taipei Times"
+    },
+    {
+      "url": "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category_tag": "Technology",
+      "headline": "US intelligence believes Nvidia's Huang had romantic tie to alleged Chinese spy",
+      "body": "US intelligence officials warned Nvidia CEO **Jensen Huang** that he was involved with an executive recruited by China to gather information on the company, according to the FT. The report emerged as Huang's daughter, Nvidia physical-AI marketing executive Madison Huang, abruptly cancelled a Seoul trip citing 'family reasons.'",
+      "src_line": "Financial Times"
+    },
+    {
+      "url": "http://paper.ce.cn/pc/content/202611/06/content_341426.html",
+      "source": "Economic Daily (中国经济网)",
+      "category_tag": "PRC-Economy",
+      "headline": "PBOC raises FX reserve ratio to 6% for first time since 2021, cooling yuan rally",
+      "body": "The central bank will raise banks' foreign-currency deposit reserve requirement ratio from 4% to *6%* effective Nov. 15, freezing an estimated $24 billion in FX liquidity. The move follows a yuan rally that broke through 6.65 per dollar on Nov. 2 after 14 straight trading-day gains and a 4.2% appreciation over the first nine months of 2026.",
+      "src_line": "Economic Daily"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.scmp.com/news/hong-kong/society/article/3373653/canadian-plan-clear-hongkonger-migration-backlog-welcomed-questions-remain",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Canada plans to clear 30,000-case Hongkonger migration backlog by 2027",
+      "body_text": "Ottawa added quota spaces to its Hong Kong immigration pathway; advocates call the goal achievable but uncertain.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://world.people.com.cn/n1/2026/1108/c1002-40829973.html",
+      "source": "People's Daily World",
+      "category": "Maritime",
+      "headline": "Seventh Ocean Cooperation and Governance Forum opens in Sanya",
+      "body_text": "400-plus officials and experts from 30-plus countries discussed South China Sea maritime safety rules and Arctic governance.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://world.people.com.cn/n1/2026/1108/c1002-40829995.html",
+      "source": "People's Daily World",
+      "category": "Diplomacy",
+      "headline": "China-Pacific development dialogue held alongside CIIE",
+      "body_text": "Samoa's and Solomon Islands' envoys pressed for tariff-free access for Pacific island exports to China.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.guancha.cn/CaiJing/2026_11_08_907534.shtml",
+      "source": "Guancha (观察者网)",
+      "category": "Economy",
+      "headline": "Nestlé, Danone, Coca-Cola bottler detail fresh China investment at CIIE",
+      "body_text": "Nestlé cited nearly 1 billion yuan in new 2026 China investment; Swire Coca-Cola reaffirmed its 12-billion-yuan, ten-year China plan.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-08/ai-slump-revives-asia-s-forgotten-trades-from-china-to-india",
+      "source": "Bloomberg",
+      "headline": "AI slump revives Asia's 'forgotten trades' from China to India",
+      "body_text": "Investors are rotating back into pre-AI-boom Asian sectors as the AI trade cools, Bloomberg reports.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-08/china-set-to-lead-world-in-energy-investment-in-2026-cctv-says",
+      "source": "Bloomberg",
+      "headline": "China set to lead world in energy investment in 2026, state broadcaster says",
+      "body_text": "CCTV reported China will top global energy-investment rankings this year, per Bloomberg's pickup of the state broadcast.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/business-deals/china-blocks-softbank-s-5.4bn-deal-for-abb-robotics-division",
+      "source": "Nikkei Asia",
+      "headline": "China blocks SoftBank's $5.4 billion purchase of ABB's robotics unit",
+      "body_text": "Chinese regulators moved to halt SoftBank's planned acquisition of Swiss-Swedish group ABB's robotics division. ABB's robotics business, with global headquarters in Shanghai, was notably absent from ABB's CIIE booth this week.",
+      "companies": [
+        "SoftBank",
+        "ABB"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.21jingji.com/article/20261108/herald/3576d4a0e477ff6e9c25cfb68da3e13d.html",
+      "source": "21st Century Business Herald",
+      "headline": "Huaxin Building Materials to buy Brazil's CSN Cimentos for $1.64 billion",
+      "body_text": "Huaxin will pay roughly 9.03 billion reais ($1.64 billion) for 99.99% of CSN Cimentos, Brazil's No. 2 cement maker with *17 million tons/year* of capacity, marking the first entry by a Chinese cement firm into Brazil.",
+      "companies": [
+        "Huaxin Building Materials",
+        "CSN Cimentos"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://news.cctv.com/2026/11/08/ARTIOdXznNcoPMkdSYF6T0l6261108.shtml",
+      "source": "CCTV News",
+      "headline": "China's second domestically built large cruise ship docks alongside the first",
+      "body_text": "The newly delivered 'Adora Flower City' met sister ship 'Adora Magic City' at Shanghai's Wusongkou port, marking China's shift from a single prototype to series production of large cruise liners.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://world.people.com.cn/n1/2026/1108/c1002-40830003.html",
+      "source": "People's Daily World",
+      "headline": "Fuqing nuclear plant showcases 'Hualong One' reactor exports",
+      "body_text": "China's state nuclear operator said *47* Hualong One units are now approved or under construction worldwide, with each unit generating enough power for a mid-sized developed country's population of one million.",
+      "companies": [
+        "CNNC"
+      ],
+      "sector": "energy"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Xi-Trump-Putin trilateral meeting discussions",
+      "statement": "China is in communication with relevant parties regarding a meeting between the three heads of state.",
+      "original_zh": null,
+      "addressed_to": "other",
+      "tone": "routine",
+      "context": "Asked about reports of a possible three-way summit timed to the Shenzhen APEC meeting this month.",
+      "source": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/08/2003867352"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA spokesperson",
+      "topic": "US sanctions on Cuba naming Chinese firms",
+      "statement": "China firmly supports Cuba in safeguarding its national sovereignty, and will take all necessary measures to firmly safeguard the legitimate rights and interests of its own enterprises.",
+      "original_zh": "中方坚定支持古巴维护国家主权，将采取一切必要措施坚定维护本国企业的正当权益",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Responding to a new round of US sanctions on Cuba that named two Chinese companies.",
+      "source": "极目新闻 via MOFA presser",
+      "url": "https://www.ctdsb.net/c1679_202611/2898419.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA spokesperson",
+      "topic": "US-China trade relations",
+      "statement": "China and the US must move toward each other to promote the sustained, steady and sound development of economic and trade relations.",
+      "original_zh": "中美要相向而行推动经贸关系持续稳定向好发展",
+      "addressed_to": "US",
+      "tone": "conciliatory",
+      "context": "Statement issued as Treasury and USTR officials pressed He Lifeng on Busan-deal implementation ahead of the Shenzhen APEC summit.",
+      "source": "China Daily",
+      "url": "https://cn.chinadaily.com.cn/a/202611/06/WS6aedde9fe4b0e14252fc9b21.html"
+    },
+    {
+      "body": "State Council",
+      "body_chinese": "国务院",
+      "speaker": "Li Qiang",
+      "role": "Premier",
+      "topic": "Economic policy, stock-market stabilization",
+      "statement": "Improve the capital market stabilization mechanism, enhance the stock market's inherent stability, and promote stable and healthy development of the capital market.",
+      "original_zh": "完善资本市场稳市机制，增强股市内在稳定性，促进资本市场平稳健康发展",
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "From the readout of the Nov. 6 State Council executive meeting on fourth-quarter economic priorities.",
+      "source": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/xwfb/ldrhd/art/2026/art_d530d620020d485496d642c211131a1d.html"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "President",
+      "topic": "China-Gabon relations",
+      "statement": "China is willing to be a reliable friend and partner in Gabon's independent and autonomous development.",
+      "original_zh": "中方愿做加方独立自主发展的可靠朋友和伙伴",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Remarks during the Nov. 6 state visit of Gabonese President Brice Clotaire Oligui Nguema, during which the two sides elevated ties to a 'community of common destiny.'",
+      "source": "MOFA",
+      "url": "https://www.fmprc.gov.cn/zyxw/202611/t20261106_12055044.shtml"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "SY",
+      "who": "Sun Yun",
+      "handle_context": "Director, China Program, Stimson Center",
+      "platform_date": "Taipei Times · Nov 8, 2026",
+      "quote_text": "I think it will happen. The question is the format and the content.",
+      "analyst_note": "Comment on prospects for a Xi-Trump-Putin trilateral meeting Beijing has confirmed discussing for this month's Shenzhen APEC summit.",
+      "badge_class": "sb-s",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/08/2003867352"
+    },
+    {
+      "avatar_initials": "SO",
+      "who": "Stephen Orlins (欧伦斯)",
+      "handle_context": "President, National Committee on US-China Relations",
+      "platform_date": "Lianhe Zaobao · Nov 6-8, 2026",
+      "quote_text": "As far as I understand, Secretary Hegseth and Admiral Paparo may visit China very soon.",
+      "analyst_note": "Said via video address to the Global Ocean Cooperation and Governance Forum in Sanya; a Paparo visit would be INDOPACOM's first to China since 2015.",
+      "badge_class": "sb-p",
+      "url": "https://www.zaobao.com.sg/news/china/story20261108-9965466"
+    },
+    {
+      "avatar_initials": "SK",
+      "who": "Shatrujeet Kapur",
+      "handle_context": "Director-General, India border police force",
+      "platform_date": "DW Chinese · Oct 2026 remarks",
+      "quote_text": "Dealing with China through conventional means could be difficult, because their PLA and border forces are far ahead in military investment and modernization.",
+      "analyst_note": "Comment followed renewed reports of China-India troop face-offs in Arunachal Pradesh along the unresolved Line of Actual Control.",
+      "badge_class": "sb-r",
+      "url": "https://www.dw.com/zh/%E4%B8%AD%E5%8D%B0%E8%BE%B9%E5%A2%83%E4%B8%BA%E4%BD%95%E5%86%8D%E8%B5%B7%E6%B3%A2%E6%BE%9C/a-79855892"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Carrier-based aviation pilots",
+      "name": "First cohort of women aviators (unnamed)",
+      "action": "graduated",
+      "detail": "The PLA Navy's first group of female carrier-based fighter pilot cadets completed training and were assigned to frontline units, per a Defense Ministry release.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.taipeitimes.com/News/front/archives/2026/11/08/2003867351",
+    "https://apnews.com/article/taiwan-china-election-communist-party-8a5d0366b5d72e73f41bd7b9ccbb1f6d",
+    "https://www.fmprc.gov.cn/zyxw/202611/t20261106_12055126.shtml",
+    "https://www.zaobao.com.sg/news/china/story20261108-9965466",
+    "https://www.dw.com/zh/%E4%B8%AD%E5%8D%B0%E8%BE%B9%E5%A2%83%E4%B8%BA%E4%BD%95%E5%86%8D%E8%B5%B7%E6%B3%A2%E6%BE%9C/a-79855892"
+  ],
+  "story_count": 93,
+  "oped_count": 3,
+  "academic_count": 0,
+  "source_count": 75,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-08.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-08.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
