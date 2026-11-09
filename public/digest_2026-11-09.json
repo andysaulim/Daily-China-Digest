@@ -1,0 +1,607 @@
+{
+  "digest_date": "Monday, November 9, 2026",
+  "re_line": "Nvidia spy scandal · China PPI hits 4-yr high · Trump eyes Xi-Putin APEC summit · Taiwan detains CCP-linked candidate",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "24,448.95",
+      "change_pct": 4.51,
+      "as_of": "Nov 09"
+    },
+    "brent": {
+      "value": "94.71",
+      "change_pct": 0.1,
+      "as_of": "Nov 09"
+    },
+    "usd_cnh": {
+      "value": "6.6700",
+      "change_pct": -0.03,
+      "as_of": "Nov 09"
+    },
+    "sse_composite": {
+      "value": "3,660.79",
+      "change_pct": 1.46,
+      "as_of": "Nov 09"
+    },
+    "usd_cny": {
+      "value": "6.6609",
+      "change_pct": 0.19,
+      "as_of": "Nov 09"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "Nvidia's board opened an investigation into CEO Jensen Huang after he admitted an affair with a woman US officials say was a Chinese intelligence asset, while Beijing's foreign ministry dismissed the spy claims as slander.",
+    "China's producer prices rose 5.7 percent year-on-year in October, the fastest pace in more than four years, as Beijing extended its retaliatory-tariff and port-fee pauses with Washington by two months.",
+    "Trump said he expects to meet both Xi Jinping and Putin at next week's APEC summit in China, as Taiwan detained a local Communist Party leader accused of running for office on CCP funding."
+  ],
+  "key_stat": {
+    "number": "$1.5 trillion",
+    "label": "Europe's estimated rare-earth import exposure to China",
+    "context": "Bloomberg reports the figure is driving the EU to copy elements of Beijing's own resource-security model as it tries to cut reliance on Chinese rare-earth supply chains.",
+    "source": "Bloomberg"
+  },
+  "prc_government": [
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson",
+      "action": "China extends suspension of countermeasures on Hanwha Ocean's US subsidiaries",
+      "document": null,
+      "detail": "MOFCOM said it would continue suspending retaliatory measures against five US-related subsidiaries of South Korea's Hanwha Ocean for another two months.",
+      "source_label": "MOFCOM",
+      "url": "http://www.81.cn/fyr/16498886.html"
+    },
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "Li Qiang, Premier",
+      "action": "Li Qiang signs order promulgating Traditional Chinese Medicine knowledge protection regulation",
+      "document": "《中医药传统知识保护条例》",
+      "detail": "Premier Li Qiang signed a State Council order publishing new regulations protecting traditional knowledge associated with traditional Chinese medicine.",
+      "source_label": "State Council",
+      "url": "https://www.moj.gov.cn/pub/sfbgw/gwxw/xwyw/202611/t20261109_541613.html"
+    },
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": null,
+      "action": "PBOC conducts CNY182 billion overnight reverse repo, net liquidity withdrawal",
+      "document": null,
+      "detail": "The central bank conducted a 182 billion yuan overnight reverse repo operation on Nov. 9, resulting in a net withdrawal of 44 billion yuan, continuing the shift to overnight reverse repos as the primary rate anchor adopted Oct. 30.",
+      "source_label": "PBOC",
+      "url": "https://www.guandian.cn/article/20261109/624829.html"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson",
+      "action": "MOFCOM opens anti-dumping probes into two EU-origin chemical products",
+      "document": null,
+      "detail": "MOFCOM's spokesperson answered questions on anti-dumping investigations into EU-origin para-aramid filament yarn and ethylidene norbornene imports.",
+      "source_label": "MOFCOM",
+      "url": "https://cacs.mofcom.gov.cn/article/gnwjmdt/sb/zo/202611/189704.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "CCP Central Organization Department",
+      "action": "Organization Department outlines 21st Party Congress delegate election process",
+      "detail": "The head of the Central Organization Department answered questions on procedures for electing delegates to the 21st National Congress, carried via the Ministry of National Defense's website, following the Fourth Plenum's discipline push.",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/yw_214049/16498736.html"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 10,
+      "headline": "Busan-era export-control suspensions due to lapse",
+      "detail": "The one-year suspensions of the BIS Affiliates ('50%') Rule and China's Oct. 2025 rare-earth controls, agreed at the Oct. 30 2025 Busan truce, are due to expire around this date absent extension; today's articles report only the tariff/port-fee truce being extended to January, not the export-control suspensions."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting opens in Shenzhen",
+      "detail": "Trump said Monday he expects to meet both Xi Jinping and Putin at the summit, per Reuters, with Ukraine and Iran denuclearization reportedly on the agenda."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors and magistrates and roughly 11,000 offices are at stake, read as a mid-term on President Lai; prosecutors have detained a local party leader over alleged CCP election funding ahead of the vote."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "China's annual state commemoration (国家公祭日)."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral (Miami)",
+      "detail": "The US hosts; Xi Jinping's attendance has not been confirmed."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.reuters.com/world/china/apartment-building-fire-northern-china-kills-14-2026-11-09/",
+      "source": "Reuters",
+      "category": "Domestic",
+      "headline": "Apartment Building Fire Kills 14 in China's Taiyuan",
+      "body_text": "A residential building fire in the northern Chinese city of Taiyuan killed 14 people, Reuters reported Monday. The initial report did not specify a cause or give an injury count beyond the death toll, citing local authorities."
+    },
+    {
+      "url": "https://apnews.com/article/china-beijing-jiaquan-church-pastor-arrested-36b57ad234169e41678e13f9562c9f38",
+      "source": "AP",
+      "category": "Human Rights",
+      "headline": "Beijing Underground Church Pastor Arrested, Wife Says",
+      "body_text": "A pastor at an underground church in Beijing has been arrested, his wife told the AP, highlighting continued pressure on China's unregistered Christian congregations. The report did not specify formal charges or a detention date."
+    },
+    {
+      "url": "https://www.ft.com/content/ff0e9974-b855-4b9a-a8c9-0782e7af16ff?syn-25a6b1a6=1",
+      "source": "FT",
+      "category": "Technology",
+      "headline": "Democrats' Midterm Win Gives China a 'Window to Catch Up' on AI",
+      "body_text": "Analysts told the FT that the Democratic Party's midterm triumph gives China a chance to close the AI gap, warning of impact on exporters if new lawmakers curb US data-center construction. The piece links domestic US politics to the pace of the AI race with Beijing."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/features/2026-11-08/china-s-debt-collectors-are-struggling-alongside-borrowers-who-can-t-pay",
+      "source": "Bloomberg",
+      "category": "Finance",
+      "headline": "China's Debt Collectors Chase 100 Million Defaulters",
+      "body_text": "China's bad-debt collection industry is pursuing roughly *100 million* defaulters nationwide, Bloomberg reported, with collectors themselves struggling as borrowers run short of cash. The figure underscores the scale of household debt stress amid the prolonged property downturn."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-09/cross-border-yuan-flows-on-china-s-network-head-for-record-year",
+      "source": "Bloomberg",
+      "category": "Finance",
+      "headline": "Cross-Border Yuan Flows Head for Record Year",
+      "body_text": "Cross-border yuan flows on China's international payment network are on track for a record year, Bloomberg reported, as Beijing pushes renminbi internationalization. The trend follows a string of PBOC moves this year widening offshore yuan use."
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/u.s.-midterm-elections/why-china-takes-a-back-seat-for-democrats-after-us-midterms",
+      "source": "Nikkei Asia",
+      "category": "Congress",
+      "headline": "China Policy Takes 'Back Seat' for Democrats After Midterms",
+      "body_text": "The Democratic Party's landslide midterm win brings sharper congressional scrutiny of Trump's agenda, but China policy will take a back seat to domestic fights, Nikkei Asia reported. The piece cites competing priorities among newly empowered committee chairs."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/09/2003867399",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Bars Chinese-Owned Yachts From Its Ports",
+      "body_text": "Taiwan's Maritime and Port Bureau barred Chinese-owned yachts from entering its ports under revised guidelines, expanding restrictions that already covered Chinese-registered vessels. Violators face fines of up to *NT$300,000* and may be ordered to depart immediately."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-09/china-starts-marketing-green-bonds-for-debut-sales-in-canada",
+      "source": "Bloomberg",
+      "category": "Finance",
+      "headline": "China Markets Green Bonds for Debut Sale in Canada",
+      "body_text": "China began marketing green bonds for its first-ever sale in Canada, Bloomberg reported Monday, as Chinese issuers diversify funding across new currency markets. Size and tenor details were not given in the available summary."
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/11/09/ai-an-existential-race-buildout.html",
+      "source": "CNBC",
+      "category": "Technology",
+      "headline": "AI Is an 'Existential Competition' Between China and US",
+      "body_text": "AI is an 'existential competition' between China and the US, so the buildout will continue despite recent volatility, Federated Hermes' Martin Schulz told CNBC. He said AI spending could be deferred in places but not derailed by midterm results or last week's selloff."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.cnbc.com/2026/11/08/jensen-huang-nvidia-china-spy-congress.html",
+      "source": "CNBC",
+      "headline": "Jensen Huang Faces Bipartisan Congressional Scrutiny Over China Spy Link",
+      "body_text": "Lawmakers want to question Nvidia CEO **Jensen Huang** following reports about his relationship with an alleged Chinese intelligence asset, CNBC reported, with both parties signaling interest in hearings. The scrutiny lands amid continued congressional focus on Nvidia's chip-export exposure to China.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-09/soybeans-rise-as-us-presses-china-to-boost-farm-goods-purchases",
+      "source": "Bloomberg",
+      "headline": "Soybeans Rise as US Presses China on Farm Purchases",
+      "body_text": "Soybean futures rose Monday as Washington pushed Beijing to accelerate agricultural purchases under its trade-deal commitments, Bloomberg reported. The May 2026 Trump-Xi summit outcome calls for China to buy at least *$17 billion* per year of US farm goods through 2028.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/china-extends-suspension-port-fees-us-linked-ships-2026-11-09/",
+      "source": "Reuters",
+      "headline": "China Extends Port-Fee Suspension on US-Linked Vessels",
+      "body_text": "China extended by two months its suspension of special port fees on US-linked ships, Reuters reported Monday, mirroring the same-day extension of its retaliatory tariff pause. The fee suspension traces to reciprocal measures agreed after the Busan and May 2026 Trump-Xi summits.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://cn.nytimes.com/business/20261109/nvidia-chips-chinese-firms/",
+      "source": "NYT Chinese",
+      "headline": "NYT Finds Approved Nvidia Chip Buyers Operating From Empty Chinese Offices",
+      "body_text": "US Commerce has approved dozens of Chinese companies to purchase and process Nvidia chips, but a New York Times investigation found two approved firms' registered China offices vacant, with ties to blacklisted companies. The findings raise questions about Entity List enforcement amid expanded chip-export approvals.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.dw.com/en/us-asks-china-to-uphold-busan-trade-deal-commitments/a-79882939",
+      "source": "DW",
+      "headline": "US Presses China to Uphold Busan Trade Commitments Before Trump-Xi Meeting",
+      "body_text": "Washington asked Beijing to uphold its Busan-deal commitments ahead of the expected Trump-Xi meeting at APEC next week, DW reported. The request covers both tariff compliance and the farm-purchase pledge from the May 2026 summit.",
+      "instrument": "Diplomacy"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/09/2003867398",
+      "source": "Taipei Times",
+      "headline": "US Protests PNG's Closure of Taiwan Office, Calls It Beijing 'Intimidation'",
+      "body_text": "A US State Department spokesman said Washington is 'deeply concerned' by Papua New Guinea's closure of Taiwan's representative office in Port Moresby, calling it 'yet another example of Beijing's intimidation campaign against Taiwan.' Taiwan closed the office Friday after PNG renewed demands it be shut, per Taiwan's foreign ministry.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/09/2003867408",
+      "source": "Taipei Times",
+      "headline": "Taiwan Drafts Harsher Penalties for China Transnational-Repression Collaborators",
+      "body_text": "Taiwan's Ministry of Justice is drafting amendments to the Anti-Infiltration Act to impose harsher penalties on people who assist Beijing's transnational repression, an official said. A National Security Bureau report to the Legislative Yuan described two main PRC tactics: public political warnings and transnational intimidation of overseas critics.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-08/japan-works-to-shield-takaichi-from-any-xi-snub-at-china-summit",
+      "source": "Bloomberg",
+      "headline": "Japan Works to Shield Takaichi From Possible Xi Snub at APEC",
+      "body_text": "Japanese officials are working to protect Prime Minister **Sanae Takaichi** from a potential diplomatic snub by Xi Jinping at next week's APEC summit in China, Bloomberg reported. Tokyo-Beijing relations have remained strained over Taiwan-related remarks for roughly a year, per a separate Mainichi editorial.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/astellas-employee-jailed-in-china-on-spy-charge-set-for-december-release",
+      "source": "Nikkei Asia",
+      "headline": "Jailed Astellas Executive Expected to Be Released From China in December",
+      "body_text": "A Japanese Astellas Pharma executive imprisoned in China on espionage charges is expected to be released in mid-December after completing his sentence, Nikkei Asia reported. The case has been a recurring irritant in Tokyo-Beijing relations.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/malaysia-taiwan-fraying-ties-threaten-future-chip-investments",
+      "source": "Nikkei Asia",
+      "headline": "Malaysia-Taiwan Strains Threaten Future Chip Investments",
+      "body_text": "The cancellation of planned Malaysia-Taiwan trade talks highlights growing bilateral strain, Nikkei Asia reported, with implications for future semiconductor investment flows. The report ties the friction to shifting positioning under Malaysia's government.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/features/2026-11-09/rare-earths-eu-taps-china-playbook-to-cut-dependence-on-imports",
+      "source": "Bloomberg",
+      "headline": "Europe Taps China's Playbook to Cut Rare-Earth Dependence",
+      "body_text": "Facing an estimated *$1.5 trillion* rare-earth exposure risk, European industry is replicating elements of Beijing's own resource-security model to reduce reliance on Chinese supply chains, Bloomberg reported. The push reflects growing European anxiety over China's dominance of critical-minerals processing.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.ft.com/content/063bd942-cb44-494a-ad8d-5ca6ebbfcc4c?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "UK Diplomacy Suffers Exodus of China Experts",
+      "body_text": "A shortage of Beijing specialists within Whitehall is undermining Britain's ability to make policy at a time of geopolitical upheaval, the FT reported. The exodus comes as London weighs a more engaged posture toward Beijing, including a possible royal visit.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.ft.com/content/aac270dd-1117-4633-be1b-c286d7f971a2?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "Beijing Weighs Hosting UN Climate Talks in 2028",
+      "body_text": "China is weighing the pros and cons of hosting the UN climate talks (COP33) in 2028, the FT reported, a decision it said could 'make or break' the global climate fight. No formal decision has been announced.",
+      "region": "Multilateral"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/09/2003867411",
+      "source": "Taipei Times",
+      "headline": "Panamanian Lawmaker Urges Taiwan to Open Trade Office in Panama",
+      "body_text": "Panamanian legislator Jhonathan Vega called on Taiwan to establish a trade office in Panama to deepen economic ties, citing the Panama Canal's strategic trade role. Panama's National Assembly formed a 50-member cross-party group this year to promote exchanges with Taiwan's Legislative Yuan.",
+      "region": "Latin America"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.ft.com/content/1397e2f4-d7f5-4cbb-a4d9-04ecf661d1aa?syn-25a6b1a6=1",
+      "source": "FT",
+      "category_tag": "Technology",
+      "headline": "Nvidia Board Opens Probe After CEO Jensen Huang Admits Affair With Suspected Chinese Spy",
+      "body": "Nvidia's board launched an independent investigation after CEO **Jensen Huang** admitted to an extramarital affair with a woman US officials say was recruited by China's Ministry of State Security; shares fell *4 percent* Monday, per CNBC. A memo circulating among senior Trump administration officials alleges the woman, identified as Alice Huang, worked to push Nvidia toward selling advanced chips to China, per NYT Chinese reporting. Beijing's foreign ministry dismissed the 'Chinese spy' allegations as 'purely slander,' while President Trump said he still backs Huang.",
+      "src_line": "FT, CNBC, AP, NYT Chinese, MOFA"
+    },
+    {
+      "url": "https://www.wsj.com/economy/china-producer-inflation-accelerates-to-over-four-year-high-a31d4985",
+      "source": "WSJ",
+      "category_tag": "PRC-Economy",
+      "headline": "China's Producer Prices Hit Four-Year High as Consumer Inflation Slows",
+      "body": "China's producer price index rose *5.7 percent* year-on-year in October, the fastest pace in more than four years and above the 5.3 percent consensus in a Reuters poll of economists. Consumer prices edged down over the same period, Reuters reported, as an energy-driven cost crunch outpaced weak domestic demand, per the FT.",
+      "src_line": "WSJ, Reuters, FT, CNBC"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/china-extends-suspension-24-tariff-us-imports-two-months-2026-11-09/",
+      "source": "Reuters",
+      "category_tag": "US-China",
+      "headline": "China Extends Retaliatory Tariff Suspension on US Imports by Two Months",
+      "body": "China's General Administration of Customs issued Announcement No. 58 extending for two months the suspension of several 2025 retaliatory tariff and countermeasure notices against the US, keeping the countermeasure rate at *10 percent* rather than reverting higher. A parallel extension suspends special port fees on US-linked vessels through the same period, Reuters separately reported.",
+      "src_line": "Reuters, Bloomberg, MOFCOM"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/trump-thinks-he-will-meet-xi-putin-china-apec-summit-2026-11-09/",
+      "source": "Reuters",
+      "category_tag": "Diplomacy",
+      "headline": "Trump Says He Expects to Meet Xi and Putin at China's APEC Summit",
+      "body": "President **Trump** said Monday he thinks he will meet both **Xi Jinping** and Russian President Vladimir Putin at the APEC summit in China next week, with Ukraine and Iran denuclearization reportedly on the agenda, per Reuters and Kyodo. Japanese officials are separately working to shield Prime Minister Sanae Takaichi from any diplomatic snub by Xi at the same gathering, Bloomberg reported.",
+      "src_line": "Reuters, Kyodo, Bloomberg"
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/11/08/taiwan-china-election-communist-party/4401b1be-db4e-11f1-930a-e08f8086f5ac_story.html",
+      "source": "Washington Post",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan Detains Communist Party Leader Over Alleged Chinese Election Funding",
+      "body": "Taiwan prosecutors detained **Lin De-wang** (林德旺), chairman of the Taiwan People's Communist Party, on allegations he received direction and funding from the Chinese Communist Party to run in a local borough-chief race, per the Washington Post and VOA Chinese. The case lands three weeks before Taiwan's Nov. 28 nine-in-one local elections.",
+      "src_line": "Washington Post, VOA Chinese"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3373741/pla-rehearsing-operations-keep-us-forces-out-taiwan-conflict",
+      "source": "SCMP",
+      "category_tag": "PLA",
+      "headline": "Analysts Ask if PLA Naval Deployments Are Rehearsing Anti-Access Operations for Taiwan",
+      "body": "Recent Chinese naval deployments in the western Pacific and South China Sea have prompted analysts to question whether Beijing is rehearsing operations to keep US and allied forces out of a Taiwan conflict, SCMP reported. A Nov. 6 assessment by the Institute for the Study of War said the PLA could be conducting a major exercise, though Beijing has not announced any large-scale drill tied to the activity.",
+      "src_line": "SCMP"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.taiwannews.com.tw/en/news/6473864",
+      "source": "Taiwan News",
+      "category": "Energy",
+      "headline": "Groups Warn Nuclear Restart Could Slow Taiwan Renewables",
+      "body_text": "Environmental groups warn a nuclear-plant restart could slow Taiwan's renewable energy growth, per Taiwan News.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://asia.nikkei.com/editor-s-picks/interview/taiwan-chipmaker-ceo-warns-memory-price-rises-are-unsustainable",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Winbond CEO Warns Memory Price Rises Are Unsustainable",
+      "body_text": "Winbond's CEO said relentless memory-chip price rises are unsustainable, Nikkei Asia reported, as Taiwan's chipmakers face surging component costs.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://cn.nikkei.com/politicsaeconomy/politicsasociety/64640-2026-11-09-08-42-30.html",
+      "source": "Nikkei Chinese",
+      "category": "Diplomacy",
+      "headline": "China's MOFA Says Japan 'Still Going in Circles'",
+      "body_text": "China's Foreign Ministry said Japan is 'still going around in circles,' Nikkei Chinese reported, amid ongoing bilateral friction.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.mofa.go.jp/press/release/pressite_000001_02832.html",
+      "source": "Japan MOFA",
+      "category": "Indo-Pacific",
+      "headline": "Japan, Philippines Sign First-Ever OSA Defense Equipment Transfer",
+      "body_text": "Japan and the Philippines signed notes for Tokyo's first Official Security Assistance defense-equipment transfer project.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://m.jiemian.com/article/15312814.html",
+      "source": "Jiemian",
+      "category": "Indo-Pacific",
+      "headline": "Philippines' MOFA Rarely Criticizes 'Certain Officials'' China Remarks",
+      "body_text": "The Philippines' foreign ministry rarely criticized 'certain officials'' remarks on China-related matters, Jiemian reported, without naming them.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.dw.com/zh/%E6%9F%A5%E5%B0%94%E6%96%AF%E4%B8%89%E4%B8%96%E5%B8%8C%E6%9C%9B%E8%AE%BF%E5%8D%8E/a-79890994",
+      "source": "DW Chinese",
+      "category": "Diplomacy",
+      "headline": "UK Royal Aide Says King Charles Weighing China Visit",
+      "body_text": "A senior UK royal aide said King Charles III is considering a China visit, which would mark only the second ever by a British monarch, per DW Chinese.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_f7c0cf685e8445b79fa53be3ffb0a857.html",
+      "source": "MOFCOM",
+      "category": "Diplomacy",
+      "headline": "China, Singapore Hold First Senior-Officials Exchange Program",
+      "body_text": "China and Singapore held the first senior-officials exchange program under a new bilateral initiative, MOFCOM announced.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202611090010",
+      "source": "Focus Taiwan",
+      "category": "Indo-Pacific",
+      "headline": "Taiwan Yet to Select New Envoy to Marshall Islands",
+      "body_text": "Taiwan has yet to appoint a new envoy to the Marshall Islands, its foreign ministry said Monday, per Focus Taiwan.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.thewirechina.com/2026/11/08/china-is-defanging-the-dollar-not-dethroning-it/",
+      "source": "The Wire China",
+      "category": "Finance",
+      "headline": "China's Renminbi Trade Aims to 'Defang,' Not Dethrone, the Dollar",
+      "body_text": "China's renminbi trade with Russia and Iran aims to 'de-weaponize' the dollar rather than replace it globally, the Wire China argued.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/chinas-export-growth-expected-have-remained-strong-october-2026-11-09/",
+      "source": "Reuters",
+      "category": "PRC-Economy",
+      "headline": "Poll: China's October Export Growth Seen Staying Strong",
+      "body_text": "A Reuters poll of economists expects China's October export growth to have remained strong, with trade data due this week. The forecast comes as Beijing extends its tariff and port-fee truce with Washington through January."
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.wsj.com/economy/central-banking/china-forex-reserves-edged-up-in-october-89c34113",
+      "source": "WSJ",
+      "headline": "China's Forex Reserves Edged Up in October",
+      "body_text": "China's foreign exchange reserves edged up in October, the WSJ reported, without specifying the exact dollar figure in the available summary.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.reuters.com/business/finance/chinese-banks-boost-dollar-deposit-rates-sources-say-beijing-seeks-smooth-yuan-2026-11-09/",
+      "source": "Reuters",
+      "headline": "Chinese Banks Boost Dollar Deposit Rates to Smooth Yuan Rally",
+      "body_text": "Chinese banks are raising dollar deposit rates to help smooth the yuan's rally, sources told Reuters, as Beijing manages currency-appreciation pressure.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-09/china-s-national-team-ramps-up-etf-buying-to-record-high",
+      "source": "Bloomberg",
+      "headline": "China's 'National Team' Ramps Up ETF Buying to Record High",
+      "body_text": "China's state-backed 'national team' funds ramped up ETF purchases to a record high, Bloomberg reported, extending a buying spree that began during October's bear-market rout.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-09/china-car-exports-to-slow-from-supercharged-growth-group-says",
+      "source": "Bloomberg",
+      "headline": "China Car Exports Forecast to Slow From 'Supercharged' Pace",
+      "body_text": "An industry group expects China's car export growth to slow from its recent 'supercharged' pace, Bloomberg reported, without giving a specific forecast figure in the available summary.",
+      "companies": [],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-08/sudden-distress-at-top-rated-firm-tests-china-s-rating-crackdown",
+      "source": "Bloomberg",
+      "headline": "Sudden Distress at Top-Rated Firm Tests China's Rating Crackdown",
+      "body_text": "A previously top-rated Chinese company showed sudden financial distress, Bloomberg reported, testing Beijing's post-crackdown bond-rating reforms without naming the issuer in the available summary.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-09/china-s-cheap-domestic-gas-curbs-lng-buying-as-winter-nears",
+      "source": "Bloomberg",
+      "headline": "China's Cheap Domestic Gas Curbs LNG Buying as Winter Nears",
+      "body_text": "Cheap domestic natural gas is curbing China's appetite for imported LNG heading into winter, Bloomberg reported, as lower-cost domestic supply competes with seaborne cargoes.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://wap.ftchinese.com/story/001111307",
+      "source": "FT Chinese",
+      "headline": "HKU Study: ByteDance's Seedance Leads 12-Model Video-AI Benchmark, Trails on Safety",
+      "body_text": "A University of Hong Kong AIEL study of 12 video-generation AI models found ByteDance's Seedance 2.0 Pro scored highest on pure visual quality at *3.84 out of 5*, ahead of Google DeepMind's Veo 3.1 (3.47) and Shengshu Technology's Vidu Q3 Pro (3.44); on safety, Hailuo 2.3 topped the field at 3.63 while Seedance ranked sixth at 3.12.",
+      "companies": [
+        "ByteDance",
+        "Google DeepMind",
+        "Kuaishou",
+        "Alibaba",
+        "Shengshu Technology"
+      ],
+      "sector": "tech"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Nvidia 'Chinese spy' allegations",
+      "statement": "The so-called 'Chinese spy' narrative is purely a smear and slander.",
+      "original_zh": "所谓'中国间谍'论调纯属污蔑抹黑",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Asked about reports that Nvidia CEO Jensen Huang's affair partner was a Chinese intelligence asset, spokesperson Guo Jiakun rejected the claim at the Nov. 9 briefing.",
+      "source": "China Daily / MOFA presser",
+      "url": "https://cn.chinadaily.com.cn/a/202611/09/WS6af18d43e4b0e14252fca0f4.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "US chip exports to China",
+      "statement": "China's position on the issue of US chips exported to China is consistent; for specifics, we suggest asking the competent Chinese authorities.",
+      "original_zh": "中方在美国输华芯片问题上的立场是一贯的，具体情况建议向中方主管部门询问。",
+      "addressed_to": "US",
+      "tone": "routine",
+      "context": "A reporter asked about US chip sales to China at the Nov. 9 MOFA briefing amid congressional scrutiny of Nvidia's exports.",
+      "source": "Sina Finance / MOFA presser",
+      "url": "https://finance.sina.cn/2026-11-09/detail-iniycmua3352294.d.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Cuban Foreign Minister's visit to China",
+      "statement": "Cuban Communist Party and government special envoy, Political Bureau member of the Cuban Communist Party Central Committee, and Foreign Minister Bruno Rodríguez Parrilla will pay an official visit to China from November 10 to 13.",
+      "original_zh": "古巴党和政府特使、古共中央政治局委员、外交部长布鲁诺·罗德里格斯·帕里利亚将于11月10日至13日对中国进行正式访问。",
+      "addressed_to": "other",
+      "tone": "routine",
+      "context": "Announced at the Nov. 9 MOFA regular press briefing.",
+      "source": "Sina Finance / MOFA presser",
+      "url": "https://finance.sina.cn/2026-11-09/detail-iniycmtw2950623.d.html?vt=4&pos=108&his=0"
+    },
+    {
+      "body": "MND",
+      "body_chinese": "国防部",
+      "speaker": "Liang Daitong",
+      "role": "PLA Daily commentator",
+      "topic": "Japan's offensive weapons deployment",
+      "statement": "The Asia-Pacific is a highland of peace and development, not a frontline of confrontation and conflict; the international community must maintain high vigilance against Japan's retrogressive actions and resolutely curb them.",
+      "original_zh": "亚太是和平与发展的高地，不是对抗与冲突的前沿，对于日本倒行逆施之举，国际社会必须保持高度警惕，坚决加以遏制。",
+      "addressed_to": "Japan",
+      "tone": "warning",
+      "context": "The commentary responded to Japan's 'Sharp Sword 27' (利剑27) joint exercise with the US, during which Japan deployed its Type 25 ground-to-ship missile for the first time.",
+      "source": "PLA Daily",
+      "url": "http://www.81.cn/yw_208727/16498780.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "CT",
+      "who": "Cui Tiankai",
+      "handle_context": "Former Chinese Ambassador to the US (2013-2021)",
+      "platform_date": "SCMP · Nov 9, 2026",
+      "quote_text": "China's development has never aimed to replace or challenge the US – it never has. Naturally, I also hope the US can resolve its own issues and that its future development will not come at the expense of China's interests.",
+      "analyst_note": "Cui served as China's longest-serving ambassador to Washington from 2013 to 2021.",
+      "badge_class": "sb-s",
+      "url": "https://www.scmp.com/news/china/politics/article/3373707/us-must-stop-blaming-china-problems-home-former-envoy-cui-tiankai"
+    },
+    {
+      "avatar_initials": "US",
+      "who": "US Department of State spokesman",
+      "handle_context": "US Department of State (unnamed)",
+      "platform_date": "Taipei Times · Nov 9, 2026",
+      "quote_text": "We are deeply concerned by reports that the government of Papua New Guinea has unilaterally ordered the closure of the Taipei Economic Office in Port Moresby.",
+      "analyst_note": "Taiwan closed its PNG representative office Friday after Port Moresby renewed demands it be shut, per Taiwan's Ministry of Foreign Affairs.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/09/2003867398"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.scmp.com/news/china/military/article/3373741/pla-rehearsing-operations-keep-us-forces-out-taiwan-conflict",
+    "https://www.washingtonpost.com/world/2026/11/08/taiwan-china-election-communist-party/4401b1be-db4e-11f1-930a-e08f8086f5ac_story.html",
+    "https://www.taipeitimes.com/News/front/archives/2026/11/09/2003867398",
+    "https://www.reuters.com/world/china/trump-thinks-he-will-meet-xi-putin-china-apec-summit-2026-11-09/"
+  ],
+  "story_count": 101,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 97,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-09.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-09.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
