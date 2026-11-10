@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-10",
+    "filename": "2026-11-10.html",
+    "re_line": "RE: Nvidia-Huang spy scandal fallout \u00b7 China's $1T trade surplus \u00b7 WuXi AppTec delisted \u00b7 PLA Western Pacific drills \u00b7 Trump-Xi-Putin summit prep",
+    "top_stories": 5,
+    "overnight_items": 6,
+    "word_count": 2533,
+    "sources": 117,
+    "pdf": true
+  },
+  {
     "date": "2026-11-09",
     "filename": "2026-11-09.html",
     "re_line": "Nvidia spy scandal \u00b7 China PPI hits 4-yr high \u00b7 Trump eyes Xi-Putin APEC summit \u00b7 Taiwan detains CCP-linked candidate",

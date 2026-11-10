@@ -14,17 +14,17 @@ GitHub's scheduler is best effort and has deferred or dropped the whole day's sl
 
 | Metric | Value |
 | --- | --- |
-| Last generated | Nov 9, 2026 at 7:14 AM ET |
-| Digest date | Monday, November 9, 2026 |
-| Articles collected | 803 from 97 sources |
-| Sources cited in digest | 24 |
-| Google News URLs canonicalised | 725/725 |
-| Items enriched with article text | 86 |
-| Top stories / overnight / official line | 6 / 9 / 4 |
-| Word count | ~2,963 |
+| Last generated | Nov 10, 2026 at 7:15 AM ET |
+| Digest date | Tuesday, November 10, 2026 |
+| Articles collected | 934 from 117 sources |
+| Sources cited in digest | 19 |
+| Google News URLs canonicalised | 843/843 |
+| Items enriched with article text | 84 |
+| Top stories / overnight / official line | 5 / 6 / 4 |
+| Word count | ~2,533 |
 | Validation attempts | 1 |
 | Health alerts | 1 |
-| Estimated model cost | $0.80 |
+| Estimated model cost | $0.92 |
 | Xi appeared | No |
 
 ## How It Works
