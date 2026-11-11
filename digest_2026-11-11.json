@@ -1,0 +1,598 @@
+{
+  "digest_date": "Wednesday, November 11, 2026",
+  "re_line": "Nvidia spy scandal snares Entity List · China surplus tops $1tn · Taiwan APEC envoy · SCS code of conduct talks",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "24,315.92",
+      "change_pct": 1.66,
+      "as_of": "Nov 11"
+    },
+    "usd_cny": {
+      "value": "6.6591",
+      "change_pct": -0.21,
+      "as_of": "Nov 11"
+    },
+    "usd_cnh": {
+      "value": "6.6685",
+      "change_pct": -0.11,
+      "as_of": "Nov 11"
+    },
+    "sse_composite": {
+      "value": "3,680.64",
+      "change_pct": -0.25,
+      "as_of": "Nov 11"
+    },
+    "brent": {
+      "value": "92.67",
+      "change_pct": -5.75,
+      "as_of": "Nov 11"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "cpi_yoy": "+0.7%",
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "The Commerce Department delayed adding Singapore's Megaspeed to the Entity List after the firm was tied to Alice Huang, the alleged Chinese spy who had an affair with Nvidia CEO Jensen Huang, the Financial Times reports.",
+    "China's trade surplus topped $1 trillion for a second straight year as October exports jumped 35%, even as subdued Singles Day sales signaled weak domestic demand, AP reports.",
+    "Taiwan named the Acer founder as its APEC envoy and is demanding written guarantees from Beijing ahead of the Nov. 18-19 Shenzhen summit, Reuters reports."
+  ],
+  "key_stat": {
+    "number": "$10 billion",
+    "label": "Foreign capital pulled out of Taiwan since Nov. 1",
+    "context": "Central bank Governor Yang Chin-long said the outflow spans eight consecutive sessions of net foreign selling even as the TAIEX posted its second-largest single-day point gain on record this week.",
+    "source": "Taipei Times"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": null,
+      "action": "PBOC shifts policy rate anchor to overnight reverse repo",
+      "document": null,
+      "detail": "Since Nov. 2 the central bank has run daily overnight reverse-repo operations at 1.25%, moving the 7-day repo to a multi-price tender used mainly at month-end and tax periods, aligning China's framework with Fed/ECB overnight-rate practice.",
+      "source_label": "南方财经 (Southern Finance ZH)",
+      "url": "https://m.sfccn.com/2026/11-11/4OMDE0ODlfMjMwMDc4OA.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": null,
+      "action": "PBOC releases Q3 monetary policy report",
+      "document": "三季度货币政策执行报告",
+      "detail": "The report signals a shift in loan-rate pricing away from sole reliance on the LPR benchmark toward a more diversified set of reference rates, while maintaining a moderately accommodative stance.",
+      "source_label": "Jiemian",
+      "url": "https://www.jiemian.com/article/15322542.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": null,
+      "action": "PBOC gauges tax on bond interest income",
+      "document": null,
+      "detail": "The central bank is surveying banks on a possible 25% tax on bond interest income as yields hover near record lows, Bloomberg reports, a move that would mark the end of a long-standing tax exemption.",
+      "source_label": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/china-gauges-tax-on-bond-interest-with-yields-near-record-low"
+    },
+    {
+      "ministry": "Ministry of Finance",
+      "ministry_chinese": "财政部",
+      "official": null,
+      "action": "China issues RMB4 billion green sovereign bond in Canada",
+      "document": "人民币绿色主权债券",
+      "detail": "The Ministry of Finance priced RMB2 billion of 3-year notes at 1.4% and RMB2 billion of 5-year notes at 1.5%, drawing orders of RMB54 billion, 13.5 times the offer size, with 77% of buyers from Asia-Pacific.",
+      "source_label": "求是 (Qiushi ZH) via Xinhua",
+      "url": "https://www.qstheory.cn/20261111/10fbcc97ae034ceeb94cde1c27337273/c.html"
+    },
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "Li Qiang, Premier",
+      "action": "Li Qiang to visit Thailand, attend China-ASEAN summit in Manila",
+      "document": null,
+      "detail": "Premier Li Qiang will travel to Thailand and then attend the China-ASEAN leaders' meeting in Manila, where Donald Trump is also expected, the Foreign Ministry confirmed.",
+      "source_label": "China News Service",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-11/10730189.shtml"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen (through Nov. 19)",
+      "detail": "China hosts for the first time; Taiwan has named the Acer founder as its envoy and is seeking written guarantees from Beijing, while a China-Japan leaders' meeting is seen as unlikely per Kyodo sources."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors/magistrates and roughly 11,000 offices up for election, read as a mid-term referendum on President Lai Ching-te."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day (国家公祭日)",
+      "detail": "Annual state commemoration."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral (Miami), through Dec. 15",
+      "detail": "US hosts; Xi attendance to be confirmed."
+    },
+    {
+      "month": "Jan",
+      "day": 15,
+      "headline": "Section 232 semiconductor tariff first anniversary",
+      "detail": "Marks one year since the 25% national-security tariff on certain advanced logic chips took effect."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.wsj.com/tech/ai/tsmc-approves-up-to-1-billion-investment-plan-in-anthropic-openai-3e4b4997",
+      "source": "WSJ",
+      "category": "Technology",
+      "headline": "TSMC approves up to $1 billion investment in Anthropic, OpenAI",
+      "body_text": "TSMC's board approved an investment plan of up to *$1 billion* in the two US AI labs. The move deepens TSMC's financial stake in the foundational AI model race it already supplies with chips."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/carney-says-he-will-tell-xi-that-outsiders-should-not-meddle-canadas-affairs-2026-11-10/",
+      "source": "Reuters",
+      "category": "Diplomacy",
+      "headline": "Carney says he will tell Xi outsiders should not meddle in Canada's affairs",
+      "body_text": "Canadian Prime Minister Mark Carney said he plans to raise foreign-interference concerns directly with **Xi Jinping**. China's foreign ministry has denied interference in Canadian affairs ahead of the expected meeting."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/chinese-lithium-giant-says-price-swings-have-turned-more-extreme",
+      "source": "Bloomberg",
+      "category": "Energy",
+      "headline": "Chinese lithium giant says price swings have turned more extreme",
+      "body_text": "A major Chinese lithium producer said price volatility in the battery-metal market has intensified. The swings complicate planning for EV and battery supply chains already under margin pressure."
+    },
+    {
+      "url": "https://www.afp.com/en/sri-lanka-launches-pilot-chinese-flying-taxi-service",
+      "source": "AFP",
+      "category": "Technology",
+      "headline": "Sri Lanka launches pilot of Chinese flying taxi service",
+      "body_text": "Sri Lanka began a pilot program for a Chinese-made flying taxi service. The trial extends China's push to export advanced air-mobility technology into South Asia."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/features/2026-11-10/honor-of-kings-whiteout-survival-help-china-seize-mobile-gaming-crown-from-us",
+      "source": "Bloomberg",
+      "category": "Technology",
+      "headline": "Chinese mobile games seize $121 billion gaming crown from US",
+      "body_text": "Titles like Honor of Kings and Whiteout Survival have helped Chinese developers overtake the US in the *$121 billion* mobile gaming market, Bloomberg reports. The shift reflects years of overseas localization investment by Chinese studios."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-10/china-s-iron-ore-buying-clout-makes-each-deal-a-market-event",
+      "source": "Bloomberg",
+      "category": "Energy",
+      "headline": "China's iron ore buying clout makes each deal a market event",
+      "body_text": "China's dominance of global iron ore demand means individual Chinese purchasing decisions now move the market. Bloomberg notes the concentration gives Beijing outsized pricing leverage over suppliers."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.reuters.com/world/china/us-china-should-stay-clear-eyed-ai-cooperation-competition-bessent-says-2026-11-11/",
+      "source": "Reuters",
+      "headline": "Bessent says US, China should stay 'clear-eyed' on AI cooperation and competition",
+      "body_text": "Treasury Secretary **Scott Bessent** said Washington and Beijing should cooperate and compete on AI without illusions. He noted the two sides agreed during Xi's September visit to launch an AI dialogue with a communications channel to defuse incidents.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/us-envoy-to-china-says-relations-are-bumpy-after-nvidia-affair",
+      "source": "Bloomberg",
+      "headline": "US envoy to China says ties are 'bumpy' after Nvidia affair",
+      "body_text": "Ambassador **David Perdue** described US-China relations as bumpy following the disclosure of Jensen Huang's affair with an alleged Chinese spy. The remark is the first on-record US diplomatic acknowledgment of friction stemming from the scandal.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.reuters.com/world/schumer-says-congress-must-have-answers-trump-defense-nvidia-ceo-2026-11-10/",
+      "source": "Reuters",
+      "headline": "Schumer says Congress must have answers on Nvidia CEO defense",
+      "body_text": "Senator Chuck Schumer said Congress needs answers after the Trump administration defended Nvidia CEO Jensen Huang amid the spy allegations. US lawmakers are pushing for tighter chip-export rules in response.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.reuters.com/world/pla-linked-chinese-university-bought-nvidia-h200-chips-despite-us-blacklist-2026-11-11/",
+      "source": "Reuters",
+      "headline": "PLA-linked Chinese university bought Nvidia H200 chips despite US blacklist",
+      "body_text": "A Chinese university with PLA links obtained Nvidia H200 chips despite being on the US blacklist, Reuters reports. The purchase underscores continued leakage of restricted AI hardware into sanctioned Chinese institutions.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.ft.com/content/52b5f9a8-346f-4dae-8a16-14d5d9eb1244?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "How Singapore became a route for Nvidia chips to China",
+      "body_text": "FT traces how Singapore-based networks, including the one tied to the alleged Chinese spy in the Jensen Huang affair, have moved Nvidia chips toward China. The report says the case exposes gaps in Washington's grip on AI hardware flows through Southeast Asia.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-10/wuxi-apptec-removed-from-pentagon-s-chinese-military-firms-list",
+      "source": "Bloomberg",
+      "headline": "WuXi AppTec removed from Pentagon's Chinese military firms list",
+      "body_text": "The Pentagon removed WuXi AppTec from its Section 1260H list of alleged Chinese military-linked companies. The delisting eases a designation that had weighed on the contract-research giant's US business ties.",
+      "instrument": "Entity List"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.japantimes.co.jp/business/2026/11/11/nvidia-huang-affair-taiwan/",
+      "source": "Japan Times",
+      "headline": "Jensen Huang's woes evoke sympathy and disbelief in his birthplace Taiwan",
+      "body_text": "Taiwanese reaction to the Jensen Huang spy scandal has mixed sympathy with disbelief, the Japan Times reports. Huang, born in Taiwan, remains a prominent symbol of the island's tech diaspora.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://english.kyodonews.net/articles/-/90982",
+      "source": "Kyodo",
+      "headline": "China-Japan summit unlikely at APEC amid continued tensions: sources",
+      "body_text": "A China-Japan leaders' meeting at the Nov. 18-19 APEC summit in Shenzhen is considered unlikely, Kyodo sources say. Summit-level dialogue has remained stalled since Prime Minister Sanae Takaichi's remarks on a Taiwan contingency last November.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/eyeing-china-japan-to-push-for-trade-transparency-at-apec-summit",
+      "source": "Nikkei Asia",
+      "headline": "Eyeing China, Japan to push for trade transparency at APEC summit",
+      "body_text": "Tokyo plans to propose language on trade transparency for the APEC leaders' declaration, Nikkei reports. The push is aimed implicitly at Chinese industrial practices.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/11/2003867521",
+      "source": "Taipei Times",
+      "headline": "Taiwan suspends investment talks with Malaysia",
+      "body_text": "Taiwan's MOFA confirmed it suspended bilateral investment negotiations with Malaysia after Prime Minister Anwar Ibrahim said in August he saw Taiwan 'as part of China, period.' Taiwanese semiconductor firms with Malaysia operations have voiced concern over the political fallout.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3374097/india-forms-specialist-police-commando-units-patrol-disputed-border-china",
+      "source": "SCMP",
+      "headline": "India forms specialist commando units to patrol disputed China border",
+      "body_text": "India has formed specialized Shaurya platoons within the Indo-Tibetan Border Police to patrol the 3,000km frontier with Tibet, per Indian media reports cited by SCMP. The move is expected to spur Beijing to accelerate its own infrastructure and force projection along the line.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/german-military-bans-commercially-available-chinese-drones-spiegel-reports-2026-11-10/",
+      "source": "Reuters",
+      "headline": "German military to stop using Chinese-made drones over security concerns",
+      "body_text": "Germany's military will stop using commercially available Chinese-made drones, Der Spiegel reports via Reuters. The decision cites security risks tied to Chinese-manufactured hardware.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/russian-push-to-escape-dollar-for-yuan-collapses-under-sanctions",
+      "source": "Bloomberg",
+      "headline": "Russia's push to replace dollar with yuan collapses under sanctions",
+      "body_text": "Russia's effort to pivot trade settlement to the yuan has collapsed as sanctions complicate even renminbi transactions, Bloomberg reports. Chinese banks have grown more cautious about facilitating Russian payments for fear of secondary sanctions.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/china-backs-cuba-opposing-sanctions-blockades-pledges-firm-support-xinhua-2026-11-11/",
+      "source": "Reuters",
+      "headline": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support'",
+      "body_text": "**Wang Yi** met Cuban envoy and Politburo member and Foreign Minister Rodriguez in Beijing and pledged firm support against sanctions and foreign interference, Xinhua reported. Wang called on China and Cuba to jointly oppose 'power politics.'",
+      "region": "Latin America"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.ft.com/content/afb6c960-a910-4d67-9588-73ba3bea5b06?syn-25a6b1a6=1",
+      "source": "FT",
+      "category_tag": "Sanctions",
+      "headline": "Commerce Department delays Megaspeed's Entity List addition amid Nvidia spy scandal",
+      "body": "The US Commerce Department delayed adding Singapore-based server maker Megaspeed to its Entity List trade blacklist, the Financial Times reports, after the company surfaced in connection with Alice Huang, the alleged Chinese spy who had an affair with Nvidia CEO **Jensen Huang**. The delay drew criticism from lawmakers already demanding tighter chip-export enforcement in the wake of the scandal.",
+      "src_line": "FT, prestige outlet"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/taiwan-appoints-acer-founder-its-apec-summit-envoy-2026-11-11/",
+      "source": "Reuters",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan names Acer founder as APEC envoy, seeks written guarantees from Beijing",
+      "body": "Taiwan appointed the Acer founder as its envoy to the Nov. 18-19 APEC Economic Leaders' Meeting in Shenzhen, Reuters reports, with Taipei calling for written guarantees from Beijing on the terms of its participation. The appointment comes as China hosts APEC for the first time amid a tense cross-strait climate ahead of Taiwan's Nov. 28 local elections.",
+      "src_line": "Reuters, prestige outlet"
+    },
+    {
+      "url": "https://apnews.com/article/south-china-sea-code-of-conduct-southeast-asia-8ef757e6ed486a5632e4c2299ee00064",
+      "source": "AP",
+      "category_tag": "Indo-Pacific",
+      "headline": "China and ASEAN advance South China Sea code of conduct but miss 2026 deadline",
+      "body": "China and ASEAN made progress on a long-negotiated Code of Conduct for the South China Sea but will not complete the pact this year, AP reports. Talks have dragged for years over disputed features including Scarborough Shoal and Second Thomas Shoal.",
+      "src_line": "AP, prestige outlet"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/us-federal-employees-work-taiwan-government-offices-under-scheme-to-strengthen-2026-11-11/",
+      "source": "Reuters",
+      "category_tag": "US-China",
+      "headline": "US federal employees to embed in Taiwan government offices under new scheme",
+      "body": "US federal employees will work inside Taiwan government offices under a new program intended to deepen bilateral ties, Reuters reports. The arrangement marks a new form of direct US civil-service presence inside Taiwan's administration.",
+      "src_line": "Reuters, prestige outlet"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/11/alibaba-pr.html",
+      "source": "CNBC",
+      "category_tag": "Technology",
+      "headline": "Alibaba's chip unit T-Head to list in Hong Kong as Nvidia rival",
+      "body": "**Alibaba** confirmed plans to list its chip subsidiary T-Head on the Hong Kong Stock Exchange, having filed confidentially on Sept. 11. T-Head designs processors positioned to compete with Nvidia inside China's data centers.",
+      "src_line": "CNBC, prestige outlet"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://apnews.com/article/nvidia-jensen-huang-ai-affair-104bcfb52f724bdf15c4d460cfaba139",
+      "source": "AP",
+      "category": "Technology",
+      "headline": "Alice Huang, alleged spy linked to Nvidia CEO, is a Chinese banker turned tech exec",
+      "body_text": "AP profiles Alice Huang, the Chinese banker-turned-tech executive at the center of the Jensen Huang affair.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.ft.com/content/3238d92b-4074-478d-a7f2-d78b9e154fc7?syn-25a6b1a6=1",
+      "source": "FT",
+      "category": "Technology",
+      "headline": "Alice Huang's tangled web of connections",
+      "body_text": "FT reports Huang built her career alongside a man with a history of crossing regulators.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.afp.com/en/nvidia-ceo-affair-revives-push-tougher-us-line-china",
+      "source": "AFP",
+      "category": "Sanctions",
+      "headline": "Nvidia CEO affair revives push for tougher US line on China",
+      "body_text": "AFP reports the scandal is fueling renewed congressional pressure for stricter China tech controls.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.washingtonpost.com/national-security/2026/11/10/chinas-spies-have-long-been-rampant-silicon-valley/",
+      "source": "WaPo",
+      "category": "Sanctions",
+      "headline": "China's spies have long been rampant in Silicon Valley",
+      "body_text": "WaPo's national security desk situates the Huang affair within a longer pattern of Chinese intelligence activity in the Valley.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.reuters.com/legal/litigation/drugmakers-tap-china-ai-app-boom-reach-doctors-crackdown-upends-marketing-2026-11-11/",
+      "source": "Reuters",
+      "category": "Business",
+      "headline": "Drugmakers tap China AI app boom to reach doctors amid marketing crackdown",
+      "body_text": "Pharmaceutical firms are using AI apps to reach Chinese physicians as a marketing crackdown upends traditional channels.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/chinas-car-sales-seen-falling-below-19-million-units-first-time-since-2014-2026-11-11/",
+      "source": "Reuters",
+      "category": "Business",
+      "headline": "China's car sales seen falling below 19 million units, first time since 2014",
+      "body_text": "Industry forecasts point to China's weakest annual car sales total in over a decade.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.taiwannews.com.tw/en/news/6475027",
+      "source": "Taiwan News",
+      "category": "Cross-Strait",
+      "headline": "Cheng Li-wun says resignation unlikely if KMT loses local elections",
+      "body_text": "The KMT chair signaled she would stay on regardless of the Nov. 28 election outcome.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/11/2003867529",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Taiwan to launch global drone alliance: ministry",
+      "body_text": "MOFA unveiled the Global UAV Alliance for Resilience and Democracy (GUARD) to build secure drone supply chains among democracies.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3373969/xi-and-trump-set-apec-talks-major-deliverables-expected-wait-g20",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Xi and Trump set for APEC talks, but major deliverables expected to wait for G20",
+      "body_text": "SCMP reports expectations are low for substantive breakthroughs at Shenzhen, with bigger deals pushed to the December G20 in Doral.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/nomura-weighs-rebuilding-its-hong-kong-equity-capital-markets-business-sources-2026-11-11/",
+      "source": "Reuters",
+      "category": "Finance",
+      "headline": "Nomura weighs rebuilding Hong Kong equity capital markets business",
+      "body_text": "Nomura is considering rebuilding its Hong Kong ECM operations, sources told Reuters. The move would follow renewed listing activity on the exchange, including chip-sector IPOs."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/still-possible-chipmaker-nexperia-could-reunite-with-chinese-operations-ceo-says-2026-11-10/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "Nexperia CEO says reunion with Chinese operations still possible",
+      "body_text": "Nexperia's CEO said it remains possible the chipmaker could reunite with its Chinese operations. The comment follows a dispute over control of the company's China-based business."
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/11/2003867505",
+      "source": "Taipei Times",
+      "headline": "Capital outflows weigh on Taiwan dollar",
+      "body_text": "Foreign institutional investors pulled roughly *$10 billion* from Taiwan since Nov. 1, with the NT dollar closing at NT$32.882 after an eighth straight session of net foreign selling, central bank Governor Yang Chin-long said.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/chinese-flash-memory-giant-ymtc-said-to-target-ipo-in-early-2027",
+      "source": "Bloomberg",
+      "headline": "Chinese flash memory giant YMTC said to target IPO in early 2027",
+      "body_text": "YMTC is targeting an IPO in early 2027, Bloomberg reports, joining a wave of Chinese chipmakers seeking public listings.",
+      "companies": [
+        "YMTC"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.wsj.com/business/autos/nissan-posts-quarterly-loss-cuts-sales-view-on-china-slump-d5cbb640",
+      "source": "WSJ",
+      "headline": "Nissan posts quarterly loss, cuts sales view on China slump",
+      "body_text": "Nissan swung to a quarterly loss and cut its annual sales forecast for a second time in months as China competition intensifies.",
+      "companies": [
+        "Nissan"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/volkswagens-china-ev-venture-has-no-new-models-planned-next-two-years-sources-2026-11-11/",
+      "source": "Reuters",
+      "headline": "Volkswagen's China EV venture has no new models planned for next two years",
+      "body_text": "Sources tell Reuters Volkswagen's China EV joint venture has no new model launches scheduled through 2028.",
+      "companies": [
+        "Volkswagen"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/vw-china-ev-sales-climb-to-monthly-record-in-sign-of-turnaround",
+      "source": "Bloomberg",
+      "headline": "Volkswagen China EV sales climb to monthly record",
+      "body_text": "Volkswagen's China EV sales hit a monthly record, Bloomberg reports, a potential sign of turnaround for the automaker's China business.",
+      "companies": [
+        "Volkswagen"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/china-s-copper-crunch-puts-industry-on-defensive-as-costs-soar",
+      "source": "Bloomberg",
+      "headline": "China's copper crunch puts industry on defensive as costs soar",
+      "body_text": "A copper supply crunch is pushing Chinese manufacturers onto the defensive as input costs rise sharply.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://apnews.com/article/china-economy-consumer-shopping-singles-3076aecc8a3cda0963217bccd43db4dd",
+      "source": "AP",
+      "headline": "Subdued Singles Day sales signal weak Chinese consumer appetite",
+      "body_text": "China's Singles Day online shopping festival posted subdued sales growth, AP reports, pointing to continued softness in consumer spending.",
+      "companies": [],
+      "sector": "macro"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Response to Canadian PM remarks on interference",
+      "statement": "China has no interest in interfering in Canada's internal affairs.",
+      "original_zh": "中方没兴趣干涉加拿大内政",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "Comes ahead of a planned Carney-Xi meeting where Canadian PM Mark Carney said he will raise foreign-interference concerns.",
+      "source": "China.com / MOFA presser",
+      "url": "https://news.china.com/socialgd/10000169/20261111/49862966.html"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "Zhang Han",
+      "role": "TAO spokesperson",
+      "topic": "Cross-strait semiconductor supply chains amid Jensen Huang affair",
+      "statement": "Cross-strait industrial exchange and cooperation between enterprises on both sides conform to the laws of the market economy and serve the interests of enterprises on both sides of the Strait; including in semiconductors, the stability and resilience of cross-strait industrial and supply chains is both an objective fact and a practical necessity.",
+      "original_zh": "两岸产业交流合作、两岸企业携手发展，符合市场经济规律，符合两岸企业利益。包括半导体在内，两岸产业链供应链保持稳定强韧，既是客观事实，也是现实需求。",
+      "addressed_to": "Taiwan",
+      "tone": "routine",
+      "context": "Asked at TAO's regular presser whether the Jensen Huang spy scandal would deepen cross-strait tech industry distrust.",
+      "source": "Ifeng / TAO presser",
+      "url": "https://news.ifeng.com/c/8xy0V2KQa0v"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "US lawmakers' calls to tighten AI chip restrictions",
+      "statement": "China's position on the issue of US chips exported to China is consistent.",
+      "original_zh": "中方在美国输华芯片问题上的立场是一贯的",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Responding to US lawmakers citing the Jensen Huang affair to demand tighter AI chip export restrictions.",
+      "source": "Guandian / MOFA presser",
+      "url": "https://www.guandian.cn/article/20261111/626060.html"
+    },
+    {
+      "body": "PBOC",
+      "body_chinese": "中国人民银行",
+      "speaker": null,
+      "role": "PBOC",
+      "topic": "Market stability pledge",
+      "statement": "Per PBOC: the central bank will maintain the stable operation of stock, bond and foreign-exchange markets.",
+      "original_zh": "维护股票、债券、外汇等金融市场平稳运行",
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "Follows release of the PBOC's third-quarter monetary policy report and the rollout of the new overnight-repo rate anchor.",
+      "source": "Sohu / PBOC",
+      "url": "https://m.sohu.com/a/1100256331_120988576?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "CZ",
+      "who": "Chiang Zhen-wei",
+      "handle_context": "Head of Taiwan MOFA's drone diplomacy task force",
+      "platform_date": "Taipei Times · Nov. 11, 2026",
+      "quote_text": "Through GUARD, Taiwan aims to expand domestic drone makers' access to the international market and help safeguard a resilient and trustworthy UAV ecosystem for democracies.",
+      "analyst_note": "Statement came as Taiwan's MOFA launched the Global UAV Alliance for Resilience and Democracy on the anniversary of its drone diplomacy project.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/11/2003867529"
+    },
+    {
+      "avatar_initials": "AI",
+      "who": "Anwar Ibrahim",
+      "handle_context": "Prime Minister of Malaysia",
+      "platform_date": "Taipei Times · Nov. 11, 2026",
+      "quote_text": "He saw Taiwan 'as part of China, period,' adding that this was 'accepted by all.'",
+      "analyst_note": "The August remark prompted Taiwan to suspend bilateral investment talks with Malaysia, confirmed by MOFA this week.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/11/2003867521"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Taiwan APEC Summit Envoy",
+      "name": "Acer founder (name not specified in source)",
+      "action": "appointed",
+      "detail": "Taiwan appointed the Acer founder as its envoy to the Nov. 18-19 APEC Economic Leaders' Meeting in Shenzhen, with Taipei seeking written guarantees from Beijing on participation terms.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/asia-pacific/taiwan-appoints-acer-founder-its-apec-summit-envoy-2026-11-11/",
+    "https://apnews.com/article/south-china-sea-code-of-conduct-southeast-asia-8ef757e6ed486a5632e4c2299ee00064",
+    "https://www.taipeitimes.com/News/front/archives/2026/11/11/2003867521"
+  ],
+  "story_count": 100,
+  "oped_count": 5,
+  "academic_count": 0,
+  "source_count": 114,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-11.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-11.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}

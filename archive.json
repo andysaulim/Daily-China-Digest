@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-11",
+    "filename": "2026-11-11.html",
+    "re_line": "Nvidia spy scandal snares Entity List \u00b7 China surplus tops $1tn \u00b7 Taiwan APEC envoy \u00b7 SCS code of conduct talks",
+    "top_stories": 5,
+    "overnight_items": 6,
+    "word_count": 2496,
+    "sources": 114,
+    "pdf": true
+  },
+  {
     "date": "2026-11-10",
     "filename": "2026-11-10.html",
     "re_line": "RE: Nvidia-Huang spy scandal fallout \u00b7 China's $1T trade surplus \u00b7 WuXi AppTec delisted \u00b7 PLA Western Pacific drills \u00b7 Trump-Xi-Putin summit prep",
