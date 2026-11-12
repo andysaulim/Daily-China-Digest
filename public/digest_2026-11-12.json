@@ -1,0 +1,638 @@
+{
+  "digest_date": "Thursday, November 12, 2026",
+  "re_line": "RE: Xi's reunification speech · Nvidia spy scandal fallout · China trade surplus tops $1T · G7 warns on Taiwan · ROK FM visits Beijing",
+  "market_indicators": {
+    "sse_composite": {
+      "value": "3,655.83",
+      "change_pct": 0.18,
+      "as_of": "Nov 12"
+    },
+    "hang_seng": {
+      "value": "24,008.55",
+      "change_pct": -3.18,
+      "as_of": "Nov 12"
+    },
+    "usd_cny": {
+      "value": "6.6577",
+      "change_pct": -0.45,
+      "as_of": "Nov 12"
+    },
+    "usd_cnh": {
+      "value": "6.6671",
+      "change_pct": -0.08,
+      "as_of": "Nov 12"
+    },
+    "brent": {
+      "value": "92.31",
+      "change_pct": -0.28,
+      "as_of": "Nov 12"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "Xi Jinping told a Beijing ceremony marking Sun Yat-sen's 160th birthday that Taiwan's reunification 'must be realized' and 'history cannot be stopped,' his first state-media-confirmed appearance in 68 days per tracking data, six days before the Shenzhen APEC summit.",
+    "Nvidia CEO Jensen Huang's affair with alleged Chinese intelligence target Alice Huang has triggered a Washington firestorm, a Bessent-Lutnick clash over Megaspeed chip access, Senate Democrats demanding Nvidia export records, and a new push to blacklist memory maker CXMT.",
+    "China's cumulative trade surplus surged past $1 trillion in October per the WSJ, as the PBOC's Q3 policy report signaled it will hold off further easing while US container imports hit a record volume on a spike in Chinese shipments."
+  ],
+  "key_stat": {
+    "number": "2.7%",
+    "label": "Share of pledged Trump-era Asia trade-deal financing actually delivered",
+    "context": "Japan, South Korea and Taiwan have realized only $37.5 billion of a pledged $1.4 trillion in financing and FDI under 2025-26 tariff-relief pacts with Washington, per FT analysis of fDi Intelligence data.",
+    "source": "Financial Times"
+  },
+  "prc_government": [
+    {
+      "ministry": "Foreign Ministry",
+      "ministry_chinese": "外交部",
+      "official": "Mao Ning, MOFA spokesperson",
+      "action": "MOFA announces South Korean FM Cho Hyun's Nov. 13-14 Beijing visit",
+      "document": null,
+      "detail": "Spokesperson Mao Ning said South Korea's Foreign Minister Cho Hyun will visit China Nov. 13-14 and meet Wang Yi, their first talks in three months, ahead of President Lee Jae-myung's APEC trip to Shenzhen.",
+      "source_label": "MOFA ZH",
+      "url": "https://www.21jingji.com/article/20261112/herald/591e14feac0455f54f0115b03d71fa81.html"
+    },
+    {
+      "ministry": "Commerce Ministry",
+      "ministry_chinese": "商务部",
+      "official": "Wang Wentao, Commerce Minister",
+      "action": "Wang Wentao holds video call with UK Trade Secretary Reynolds",
+      "document": null,
+      "detail": "Commerce Minister Wang Wentao held a video call with the UK's Secretary of State for Business and Trade, Jonathan Reynolds, per MOFCOM's own release.",
+      "source_label": "MOFCOM",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_c01414979d034c518ce5fda201aeb3e6.html"
+    },
+    {
+      "ministry": "Taiwan Affairs Office",
+      "ministry_chinese": "国台办",
+      "official": "TAO spokesperson",
+      "action": "TAO calls mainland the 'best choice' for Taiwanese manufacturers' investment",
+      "document": null,
+      "detail": "At its routine briefing, the Taiwan Affairs Office said the mainland remains the best investment destination for Taiwan-funded manufacturing enterprises.",
+      "source_label": "TAO ZH",
+      "url": "https://www.news.cn/tw/20261111/63b1bb509c2d4e4fab9c3a2e821d67d1/c.html"
+    },
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "People's Bank of China",
+      "action": "PBOC Q3 policy report signals restraint on further easing",
+      "document": "Q3 2026 China Monetary Policy Execution Report",
+      "detail": "The central bank said it would continue a 'moderately loose' monetary policy and step up two tools supporting capital markets, while saying current loan rates are 'already low,' per WSJ and PBOC's own release.",
+      "source_label": "WSJ / PBOC ZH",
+      "url": "https://www.wsj.com/economy/central-banking/chinas-central-bank-signals-easing-restraint-as-growth-holds-up-15c19e61"
+    },
+    {
+      "ministry": "NDRC",
+      "ministry_chinese": "国家发展改革委",
+      "official": "NDRC Price Monitoring Center",
+      "action": "NDRC cuts retail gasoline, diesel prices",
+      "document": "Retail fuel price adjustment notice",
+      "detail": "Effective Nov. 12 at midnight, wholesale gasoline and diesel prices were cut 645 yuan and 625 yuan per ton respectively, translating to retail cuts of 0.51 yuan and 0.54 yuan per liter under China's 10-working-day price mechanism.",
+      "source_label": "PLA Daily ZH (via NDRC)",
+      "url": "http://www.81.cn/ss_208539/16499370.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 13,
+      "headline": "ROK FM Cho Hyun visits Beijing, meets Wang Yi",
+      "detail": "South Korea's foreign minister travels to China Nov. 13-14 for talks and dinner with Wang Yi, their first meeting in three months, ahead of President Lee's APEC trip."
+    },
+    {
+      "month": "Nov",
+      "day": 16,
+      "headline": "ROK President Lee visits Manila then Shenzhen",
+      "detail": "President Lee Jae-myung travels to the Philippines for the ASEAN summit before attending the APEC Leaders' Meeting in Shenzhen, Nov. 16-19."
+    },
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting, Shenzhen",
+      "detail": "China hosts the APEC summit; a Trump-Xi meeting and a possible Trump-Xi-Putin trilateral are under discussion but unconfirmed."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors and magistrates and roughly 11,000 offices are contested, read as a mid-term referendum on President Lai."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "Annual state commemoration (国家公祭日) of the 1937 Nanjing Massacre."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/hosin-amicro-set-to-trade-in-hong-kong-as-ipos-gather-pace",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "Hosin, Amicro set to trade in Hong Kong as IPOs gather pace",
+      "body_text": "Hosin and Amicro are set to begin trading in Hong Kong, Bloomberg reports, as the city's IPO pipeline continues to gather pace. The listings add to a run of new Hong Kong debuts this quarter."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/china-books-120-000-tons-of-french-wheat-as-global-prices-slump",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "China books French, Argentine wheat as global prices slump",
+      "body_text": "China booked cargoes of French and Argentine wheat as global prices slumped, Bloomberg reports. The purchases reflect Beijing diversifying agricultural sourcing amid soft global grain prices."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/markets/commodities/russian-crude-oil-prices-jump-on-china-india-demand",
+      "source": "Nikkei Asia",
+      "category": "Energy",
+      "headline": "Russian crude oil prices jump on China, India demand",
+      "body_text": "Russian crude, still under international sanctions, is trading at an unusually high premium over benchmark prices, Nikkei reports, driven by Chinese and Indian purchasing. The premium shift reflects continued buying from both countries despite Western sanctions."
+    },
+    {
+      "url": "https://asia.nikkei.com/spotlight/supply-chain/taiwan-s-foxconn-has-strong-confidence-in-2027-due-to-ai-demand",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Foxconn says it has 'strong confidence' in 2027 on AI server demand",
+      "body_text": "Foxconn, the world's largest contract AI server maker, said it expects double-digit percentage revenue growth in 2027 on AI demand, Nikkei reports."
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/malaysia-seeks-taiwan-meeting-restart-as-anwar-defends-china-stance",
+      "source": "Nikkei Asia",
+      "category": "Indo-Pacific",
+      "headline": "Malaysia seeks Taiwan meeting restart as Anwar defends China stance",
+      "body_text": "Malaysia will continue trade cooperation with Taiwan without compromising its 'One China' policy, Prime Minister Anwar Ibrahim said, per Nikkei, as Kuala Lumpur seeks to restart high-level meetings with Taipei."
+    },
+    {
+      "url": "https://www.economist.com/china/2026/11/11/xi-jinpings-chief-ideologue-is-worried",
+      "source": "The Economist",
+      "category": "Diplomacy",
+      "headline": "Xi Jinping's chief ideologue is worried",
+      "body_text": "The Economist reports that a senior ideologue in Xi Jinping's inner circle is voicing concern, per the outlet's headline; further detail was not available in the provided summary."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.reuters.com/world/china/lutnick-stalled-trump-crackdown-diversion-nvidia-chips-china-axios-reports-2026-11-11/",
+      "source": "Reuters",
+      "headline": "Lutnick stalled Trump crackdown on Nvidia chip diversion to China, Axios reports",
+      "body_text": "**Donald Trump** authorized crackdowns on firms routing Nvidia chips to China at least three times, but Commerce Secretary **Howard Lutnick** stalled action each time, Axios reported via Reuters. Treasury Secretary **Scott Bessent** separately confronted Lutnick over why Megaspeed was not barred from buying advanced chips, per NYT's Chinese edition.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.wsj.com/politics/policy/top-democrats-target-trump-administrations-nvidia-china-records-0c212746",
+      "source": "WSJ",
+      "headline": "Top Democrats target Trump administration's Nvidia-China export records",
+      "body_text": "Senior Democratic senators demanded the administration preserve records tied to Nvidia chip exports to China amid the Jensen Huang spy scandal, WSJ reports. The demand follows separate reporting that Senate Democrats pressed for preservation of export-control documentation.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.cnn.com/2026/11/12/business/video/nvidia-chips-china-university",
+      "source": "CNN",
+      "headline": "Chinese university linked to PLA bought Nvidia H200 chips despite blacklist",
+      "body_text": "A Chinese university linked to the People's Liberation Army bought two Nvidia H200 chips last month, per a filing on the university's own website, circumventing a US blocklist, CNN reports. China's Foreign Ministry said Thursday its position on chip exports is 'consistent' and rejected US 'generalizing' of national security concepts.",
+      "instrument": "Entity List"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/china-says-us-should-not-use-huang-scandal-to-justify-tech-curbs",
+      "source": "Bloomberg",
+      "headline": "China says US should not use Huang scandal to justify tech curbs",
+      "body_text": "China's government said Washington should not use the Jensen Huang affair to justify new technology restrictions, Bloomberg reports. MOFA spokesperson **Mao Ning** said the US should 'stop fabricating so-called spy narratives' to find excuses for a tech blockade.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinese-ai-firms-rush-secure-nvidia-chip-capacity-spy-scandal-stirs-fear-us-2026-11-12/",
+      "source": "Reuters",
+      "headline": "Chinese AI firms rush to secure Nvidia chip capacity on fear of new US curbs",
+      "body_text": "Chinese AI companies are rushing to lock in Nvidia chip supply as the scandal around **Jensen Huang** stirs fears Washington will tighten export controls, Reuters reports. The rush follows the separate finding that a PLA-linked university bought blacklisted H200 chips.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/alleged-chinese-spy-at-center-of-nvidia-firestorm-is-in-beijing",
+      "source": "Bloomberg",
+      "headline": "Alleged spy at center of Nvidia firestorm is in Beijing",
+      "body_text": "Alice Huang, the Megaspeed executive US officials believe was working for Chinese intelligence, is currently in Beijing, Bloomberg reports. China's Foreign Ministry said it was 'not aware' of the situation when asked, while Taiwan's immigration agency confirmed she entered Taiwan eight times on a Hong Kong passport and is now barred from returning.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/us-auto-workers-union-urges-congress-keep-its-eye-chinese-automakers-2026-11-11/",
+      "source": "Reuters",
+      "headline": "US auto workers union urges Congress to keep watch on Chinese automakers",
+      "body_text": "The United Auto Workers union urged Congress to continue monitoring Chinese automakers' encroachment on the US market, Reuters reports.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/us-container-imports-set-all-time-volume-record-october-chinese-imports-spike-2026-11-11/",
+      "source": "Reuters",
+      "headline": "US container imports hit record volume in October as Chinese imports spike",
+      "body_text": "US container imports set an all-time volume record in October with Chinese shipments spiking, according to data provider Descartes, Reuters reports. The surge adds context to China's cumulative trade surplus pushing past $1 trillion for the year.",
+      "instrument": "Tariff"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/12/2003867588",
+      "source": "Taipei Times",
+      "headline": "Taiwan names Acer founder Stan Shih as APEC envoy",
+      "body_text": "Taiwan's Presidential Office named Acer founder **Stan Shih** as its envoy to next week's APEC summit in Shenzhen, representing President **Lai Ching-te**. Spokeswoman Karen Kuo called him 'a key figure in the development of Taiwan's technology industry' with deep knowledge of AI and the digital economy.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/taiwan-is-taking-part-apec-china-summit-an-equal-basis-president-says-2026-11-12/",
+      "source": "Reuters",
+      "headline": "Taiwan says it is taking part in APEC China summit on 'equal basis'",
+      "body_text": "Taiwan's president said the island is participating in next week's Shenzhen APEC summit on an 'equal basis,' Reuters reports. Taipei is pressing Beijing for written assurances on equal participation ahead of the China-hosted gathering.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/12/2003867589",
+      "source": "Taipei Times",
+      "headline": "Alleged Chinese spy in Nvidia affair barred from re-entering Taiwan",
+      "body_text": "Alice Huang, accused of spying for China during her affair with **Jensen Huang**, entered Taiwan on a Hong Kong passport but her entry permit has since been revoked, Interior Minister **Liu Shyh-fang** told lawmakers. NIA Director-General Lin Horng-en said authorities are 'aware of all her entry and exit records' and are cooperating with national security units.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/12/2003867587",
+      "source": "Taipei Times",
+      "headline": "AIT launches program placing US federal staff inside Taiwan government offices",
+      "body_text": "The American Institute in Taiwan unveiled the Taiwan Fellowship Program, under which US federal employees spend up to a year in Mandarin training before working in Taiwanese ministries or legislative offices. The program was authorized under a 2022 law but AIT did not explain the nearly three-year delay in implementation.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261112-9986769",
+      "source": "Lianhe Zaobao",
+      "headline": "South Korea's foreign minister to visit Beijing for first Wang Yi meeting in three months",
+      "body_text": "South Korea's foreign minister **Cho Hyun** will visit China Nov. 13-14 and meet **Wang Yi**, their first talks since Wang's August Seoul visit, the two governments announced. The visit precedes President **Lee Jae-myung**'s Nov. 16-19 trip to Manila and Shenzhen for the ASEAN and APEC summits.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/south-koreas-president-lee-visit-philippines-attend-apec-summit-china-2026-11-12/",
+      "source": "Reuters",
+      "headline": "South Korea's Lee to visit Philippines, attend APEC summit in China",
+      "body_text": "President **Lee Jae-myung** will visit the Philippines before attending the APEC Leaders' Meeting in Shenzhen, Reuters reports. The trip follows his foreign minister's China visit the same week for talks with Wang Yi.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.afp.com/de/node/3850021",
+      "source": "AFP",
+      "headline": "Sanrio apologizes, scraps Japanese TV tie-up after Chinese backlash",
+      "body_text": "Sanrio, the company behind Hello Kitty, apologized and scrapped a Japanese TV tie-up following Chinese anger, AFP reports. The reversal follows Beijing's earlier objection to a planned collaboration tied to the Japanese spy drama 'Vivant.'",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/11/10/south-china-sea-code-of-conduct-southeast-asia/bcd40044-dd7c-11f1-912c-4fbb80d73f7f_story.html",
+      "source": "Washington Post",
+      "headline": "China and ASEAN make progress on South China Sea code of conduct but miss 2026 deadline",
+      "body_text": "China and ASEAN negotiators made progress on a long-delayed South China Sea code of conduct but will not complete the pact this year, the Washington Post reports. Talks have dragged for years amid continued Chinese activity near contested features.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/india-s-beml-to-build-tunneling-machines-to-cut-china-reliance",
+      "source": "Bloomberg",
+      "headline": "India's BEML to build tunneling machines to cut China reliance",
+      "body_text": "India's state-owned BEML will build tunnel-boring machines domestically to reduce reliance on Chinese equipment, Bloomberg reports. The move is part of a broader Indian push to localize industrial equipment supply chains amid border tensions with China.",
+      "region": "India"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/world/china/chinas-xi-says-taiwan-reunification-must-happen-history-cannot-be-stopped-2026-11-12/",
+      "source": "Reuters",
+      "category_tag": "Cross-Strait",
+      "headline": "Xi says Taiwan 'reunification' must happen, 'history cannot be stopped'",
+      "body": "**Xi Jinping** told a Beijing ceremony marking Sun Yat-sen's 160th birthday that Taiwan's reunification must be realized and that history cannot be stopped, Reuters reports, with China's Ministry of National Defense confirming he delivered the keynote address. It was Xi's first state-media-confirmed public appearance in *68 days*, per tracking data. The speech lands six days before the Shenzhen APEC summit, which Taiwan is attending on what it calls an 'equal basis.'",
+      "src_line": "Reuters; confirmed by China's Ministry of National Defense (MND ZH)"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/11/world/asia/china-us-nvidia.html",
+      "source": "NYT",
+      "category_tag": "Technology",
+      "headline": "Nvidia spy scandal exposes 'fierce spy war' behind Trump-Xi diplomacy",
+      "body": "US officials suspected that **Jensen Huang**'s romantic partner, Megaspeed executive Alice Huang, was a target of Chinese intelligence, the New York Times reports, a disclosure landing days before the Shenzhen APEC summit. Nvidia's board held emergency sessions this week over the CEO's conduct, and China's Ministry of State Security has been thrust into unusual public scrutiny. Beijing's Foreign Ministry dismissed the 'spy narrative' as a pretext for a 'tech blockade.'",
+      "src_line": "NYT (prestige); CNBC, Bloomberg corroborating"
+    },
+    {
+      "url": "https://www.wsj.com/world/china/chinas-trade-surplus-surged-past-1-trillion-in-october-967968c9",
+      "source": "WSJ",
+      "category_tag": "PRC-Economy",
+      "headline": "China's trade surplus surges past $1 trillion for the year",
+      "body": "China's cumulative trade surplus surged past *$1 trillion* in October, the Wall Street Journal reports, underscoring Beijing's growing reliance on exports to sustain growth. The figure comes as US container imports hit an all-time volume record in October with Chinese shipments spiking, per data provider Descartes.",
+      "src_line": "WSJ; Reuters (Descartes data)"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/g7-foreign-ministers-say-chinas-actions-east-taiwan-threaten-stability-2026-11-12/",
+      "source": "Reuters",
+      "category_tag": "Indo-Pacific",
+      "headline": "G7 foreign ministers say China's actions east of Taiwan threaten stability",
+      "body": "G7 foreign ministers issued a joint statement warning that China's actions east of Taiwan threaten regional stability, Reuters reports. China's Foreign Ministry addressed the statement the same day at its Thursday press briefing.",
+      "src_line": "Reuters; MOFA response (ZH)"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-foreign-minister-says-call-with-rubio-was-positive-constructive-2026-11-11/",
+      "source": "Reuters",
+      "category_tag": "Diplomacy",
+      "headline": "US, China agree leader-level talks could advance denuclearization amid Russia trilateral discussion",
+      "body": "**Wang Yi** and Secretary of State **Marco Rubio** discussed a possible US-China-Russia trilateral and agreed on the importance of leader-level talks to advance denuclearization, Reuters reports, in a call ahead of the Shenzhen APEC summit. China's Foreign Ministry called the call 'positive' and 'constructive.'",
+      "src_line": "Reuters"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/12/lutnick-cxmt-china-cotton.html",
+      "source": "CNBC",
+      "category_tag": "Sanctions",
+      "headline": "Senator Cotton urges Lutnick to add China's CXMT to Entity List",
+      "body": "Sen. **Tom Cotton** is urging Commerce Secretary **Howard Lutnick** to add Chinese memory maker CXMT to the Entity List, CNBC reports, as the fast-growing firm expands in DRAM and pushes into HBM production. The push lands the same week Lutnick faces separate reports that he stalled White House-authorized crackdowns on Nvidia chip diversion to China.",
+      "src_line": "CNBC"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.cnbc.com/video/2026/11/12/relief-rally-for-china-ai-stocks-ahead-as-selloff-was-overdone.html",
+      "source": "CNBC",
+      "category": "Technology",
+      "headline": "BofA sees relief rally ahead for China AI stocks after 'overdone' selloff",
+      "body_text": "BofA's Winnie Wu told CNBC the recent China AI stock selloff was overdone despite advances across the chip supply chain.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/11/11/china-tech-trust-is-broken-says-fmr-cisco-ceo-john-chambers.html",
+      "source": "CNBC",
+      "category": "Technology",
+      "headline": "Former Cisco CEO John Chambers says 'China tech trust is broken'",
+      "body_text": "Chambers told CNBC the Jensen Huang affair underscores a broader breakdown in US-China tech trust.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/12/china-ministry-state-security-nvidia-ceo.html",
+      "source": "CNBC",
+      "category": "Technology",
+      "headline": "China's Ministry of State Security thrust into spotlight by Nvidia affair",
+      "body_text": "CNBC reports the Jensen Huang scandal has drawn unusual public attention to China's Ministry of State Security.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://sinocism.com/p/sharp-china-the-jensen-firestorm",
+      "source": "Sinocism",
+      "category": "Technology",
+      "headline": "Sinocism: 'Sharp China' dissects Jensen firestorm, Megaspeed, APEC countdown",
+      "body_text": "Andrew and Bill discuss Nvidia board moves, Axios reporting on Lutnick, and the Busan truce ahead of the Trump-Xi summit.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/12/world/asia/china-spy-espionage-romance.html",
+      "source": "NYT",
+      "category": "Technology",
+      "headline": "NYT: In China's spy operations, romance can be a long game",
+      "body_text": "NYT examines the history of intimate relationships as an espionage tool, framed by the Jensen Huang affair.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.wsj.com/business/nvidia-short-seller-culper-jensen-huang-0e0cec38",
+      "source": "WSJ",
+      "category": "Technology",
+      "headline": "The short-seller who flagged Jensen Huang's 'China problem' before the scandal",
+      "body_text": "WSJ profiles the 31-year-old Culper Research trader who shorted Nvidia after raising China-exposure concerns.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.ft.com/content/278528e2-dd2d-4020-853d-2a7a9d49a359?syn-25a6b1a6=1",
+      "source": "FT",
+      "category": "PRC-Economy",
+      "headline": "China warns of 'severe' punishment for offshore trust tax evaders",
+      "body_text": "FT reports personal income tax revenue jumped *90 percent* as Beijing tightens scrutiny of its wealthiest citizens' offshore holdings.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-10/nvidia-s-bull-case-hinges-on-ceo-huang-surviving-china-spy-probe",
+      "source": "Bloomberg",
+      "category": "Technology",
+      "headline": "Nvidia's bull case hinges on Huang surviving China spy probe",
+      "body_text": "Bloomberg reports Nvidia's stock narrative now depends on whether Jensen Huang keeps his job amid the China espionage allegations.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/alphabet-eyes-3-billion-hong-kong-singapore-bond-sale-sources-say-2026-11-11/",
+      "source": "Reuters",
+      "category": "Finance",
+      "headline": "Alphabet eyes $3 billion Hong Kong, Singapore bond sale",
+      "body_text": "Alphabet is weighing a *$3 billion* bond sale across Hong Kong and Singapore markets, Reuters reports, citing people familiar with the matter. The move would tap Asian debt markets rather than Alphabet's usual US issuance."
+    },
+    {
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/china-approves-eli-lillys-weight-loss-pill-orforglipron-2026-11-12/",
+      "source": "Reuters",
+      "category": "PRC-Economy",
+      "headline": "Eli Lilly becomes first drugmaker with GLP-1 pill approved in China",
+      "body_text": "China approved Eli Lilly's oral GLP-1 weight-loss drug orforglipron, Reuters reports, making it the first such pill cleared in the Chinese market."
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/germany-s-carmakers-accelerate-cuts-at-home-on-china-reckoning",
+      "source": "Bloomberg",
+      "headline": "Germany's carmakers accelerate home-market cuts amid China reckoning",
+      "body_text": "German automakers are accelerating job and production cuts at home as they reckon with lost China market share, Bloomberg reports.",
+      "companies": [],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/mercedes-ceo-flags-pivot-to-new-100-china-for-china-strategy",
+      "source": "Bloomberg",
+      "headline": "Mercedes CEO flags pivot to '100% China for China' strategy",
+      "body_text": "Mercedes-Benz's CEO outlined a pivot to a '100% China for China' production and design strategy, Bloomberg reports.",
+      "companies": [
+        "Mercedes-Benz"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.washingtonpost.com/business/2026/11/10/china-economy-consumer-shopping-singles/5ccfa2e2-dd82-11f1-912c-4fbb80d73f7f_story.html",
+      "source": "Washington Post",
+      "headline": "China's Singles' Day shopping festival fails to shake off weak consumer spending",
+      "body_text": "China's Singles' Day shopping festival struggled to overcome weak consumer spending this year, the Washington Post reports.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.reuters.com/business/energy/chinas-cnooc-reports-major-ultra-deep-gas-discovery-bohai-sea-2026-11-12/",
+      "source": "Reuters",
+      "headline": "CNOOC reports major ultra-deep gas discovery in Bohai Sea",
+      "body_text": "CNOOC reported a major ultra-deep natural gas discovery in the Bohai Sea, Reuters reports, with state media separately citing a drilling breakthrough at *5,770 meters* depth.",
+      "companies": [
+        "CNOOC"
+      ],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/china-takes-aim-at-western-dominance-of-the-gas-turbine-industry",
+      "source": "Bloomberg",
+      "headline": "China takes aim at Western dominance of the gas-turbine industry",
+      "body_text": "China is moving to challenge Western dominance of the gas-turbine industry, Bloomberg reports, part of a broader energy-equipment self-sufficiency push.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/hsbc-explores-bolstering-singapore-to-balance-china-reliance",
+      "source": "Bloomberg",
+      "headline": "HSBC explores bolstering Singapore operations to balance China reliance",
+      "body_text": "HSBC is exploring ways to bolster its Singapore operations to reduce reliance on China, Bloomberg reports.",
+      "companies": [
+        "HSBC"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-11/coach-ralph-lauren-defy-china-retail-slump-as-badge-of-new-cool",
+      "source": "Bloomberg",
+      "headline": "Coach, Ralph Lauren defy China retail slump as badge of new cool",
+      "body_text": "Coach and Ralph Lauren are bucking China's broader retail slump, Bloomberg reports, as the brands gain traction as status labels among younger Chinese consumers.",
+      "companies": [
+        "Coach",
+        "Ralph Lauren"
+      ],
+      "sector": "manufacturing"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Jensen Huang espionage allegations",
+      "statement": "The US side should stop fabricating so-called spy narratives to find excuses for implementing technological blockades.",
+      "original_zh": "美方应当停止编造所谓的间谍叙事、为实施科技封锁寻找借口",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Mao Ning was responding to reporters' questions about the Jensen Huang affair and reports that a Chinese university bought blacklisted Nvidia H200 chips.",
+      "source": "MOFA ZH (上观新闻)",
+      "url": "https://www.jfdaily.com/news/detail?id=1212768"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "US chip export controls and the Entity List",
+      "statement": "China's position on the issue of chips exported to China by the US is consistent, and China firmly opposes the US generalizing the concept of national security, setting up all kinds of discriminatory lists, and unjustifiably suppressing Chinese institutions.",
+      "original_zh": "中方在美国输华芯片问题上的立场是一贯的，且坚决反对美方泛化国家安全概念、划设各种名目的歧视性清单、无理打压中国机构",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Statement came after reports a PLA-linked Chinese university acquired Nvidia H200 chips circumventing the US blacklist.",
+      "source": "HKEJ (信报)",
+      "url": "https://www.hkej.com/instantnews/current/article/4563820/%E5%A4%96%E4%BA%A4%E9%83%A8%E7%B1%B2%E7%BE%8E%E6%96%B9%E5%81%9C%E6%AD%A2%E7%B7%A8%E9%80%A0%E9%96%93%E8%AB%9C%E6%95%8D%E4%BA%8B"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "Zhang Han",
+      "role": "TAO spokesperson",
+      "topic": "Cross-strait semiconductor supply chain amid Nvidia affair",
+      "statement": "Cross-strait industrial exchange and cooperation, and cross-strait enterprises working together for development, conform to the laws of the market economy and serve the interests of enterprises on both sides; including in semiconductors, the fact that cross-strait industrial and supply chains remain stable and resilient is both an objective fact and a practical need.",
+      "original_zh": "两岸产业交流合作、两岸企业携手发展，符合市场经济规律，符合两岸企业利益。包括半导体在内，两岸产业链供应链保持稳定强韧，既是客观事实，也是现实需求。",
+      "addressed_to": "Taiwan",
+      "tone": "conciliatory",
+      "context": "Asked at a routine briefing whether the Jensen Huang controversy would deepen cross-strait tech distrust.",
+      "source": "财联社 (Cailianshe)",
+      "url": "https://www.cls.cn/detail/2531396"
+    },
+    {
+      "body": "MOFCOM",
+      "body_chinese": "商务部",
+      "speaker": "He Yadong",
+      "role": "MOFCOM spokesperson",
+      "topic": "China-US reciprocal tariff-cut framework implementation",
+      "statement": "The $30 billion-for-$30 billion reciprocal tariff-reduction framework arrangement is conducive to stabilizing and expanding China-US bilateral trade, and the business communities of both countries have high expectations for it.",
+      "original_zh": "300亿美元对300亿美元对等降税框架安排有利稳定和拓展中美双边贸易，两国工商界对此都抱有较高期待",
+      "addressed_to": "US",
+      "tone": "conciliatory",
+      "context": "He Yadong said China and the US are in close communication on tax cuts, trade and investment at MOFCOM's Nov. 12 routine briefing.",
+      "source": "UDN (联合报)",
+      "url": "https://udn.com/news/story/7331/9874838"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "KK",
+      "who": "Karen Kuo",
+      "handle_context": "Presidential Office spokeswoman, Taiwan",
+      "platform_date": "Taipei Times · Nov 12, 2026",
+      "quote_text": "Taiwan has continued to participate in all APEC meetings on an equal basis. This is standard APEC practice and has nothing to do with the so-called one China principle.",
+      "analyst_note": "Statement accompanied the naming of Acer founder Stan Shih as Taiwan's APEC envoy to next week's Shenzhen summit.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/12/2003867588"
+    },
+    {
+      "avatar_initials": "LS",
+      "who": "Liu Shyh-fang",
+      "handle_context": "Minister of the Interior, Taiwan",
+      "platform_date": "Taipei Times · Nov 12, 2026",
+      "quote_text": "She did indeed enter the country, but she is currently overseas.",
+      "analyst_note": "Liu confirmed to the Legislative Yuan that Alice Huang used a Hong Kong passport to enter Taiwan before her entry permit was revoked.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/12/2003867589"
+    },
+    {
+      "avatar_initials": "LH",
+      "who": "Lin Horng-en",
+      "handle_context": "Director-General, National Immigration Agency, Taiwan",
+      "platform_date": "Taipei Times · Nov 12, 2026",
+      "quote_text": "We are aware of all her entry and exit records.",
+      "analyst_note": "Lin said the agency is cooperating with national security units on the investigation into Alice Huang's prior entries.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/12/2003867589"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Beijing Municipal Party Committee Standing Committee member / Secretary, Municipal Discipline Inspection Commission",
+      "name": "Qin Bin (秦斌)",
+      "action": "appointed",
+      "detail": "Qin Bin was named to the Beijing Municipal Party Committee Standing Committee and as secretary of the city's discipline inspection commission, per state media listings.",
+      "predecessor": null
+    },
+    {
+      "position": "Taiwan APEC envoy (representing President Lai Ching-te)",
+      "name": "Stan Shih (施振榮)",
+      "action": "appointed",
+      "detail": "Acer founder Stan Shih was named Taiwan's envoy to the Shenzhen APEC Leaders' Meeting; he previously served as Taiwan's envoy to the 2007 APEC summit in Australia.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/china/chinas-xi-says-taiwan-reunification-must-happen-history-cannot-be-stopped-2026-11-12/",
+    "https://www.reuters.com/world/china/g7-foreign-ministers-say-chinas-actions-east-taiwan-threaten-stability-2026-11-12/",
+    "https://www.taipeitimes.com/News/front/archives/2026/11/12/2003867589",
+    "https://www.taipeitimes.com/News/front/archives/2026/11/12/2003867587",
+    "https://www.reuters.com/world/china/chinas-foreign-minister-says-call-with-rubio-was-positive-constructive-2026-11-11/"
+  ],
+  "story_count": 97,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 116,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-12.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-12.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
