@@ -1,0 +1,622 @@
+{
+  "digest_date": "Saturday, November 14, 2026",
+  "re_line": "Trump-Xi-Putin trilateral set for Nov 19 · Nvidia spy fallout hits AI race · PLA 100-ship drill · Trade Council meets",
+  "market_indicators": {
+    "sse_composite": {
+      "value": "3,634.35",
+      "change_pct": -0.72,
+      "as_of": "Nov 13"
+    },
+    "brent": {
+      "value": "95.84",
+      "change_pct": 3.53,
+      "as_of": "Nov 13"
+    },
+    "usd_cny": {
+      "value": "6.6712",
+      "change_pct": -0.07,
+      "as_of": "Nov 14"
+    },
+    "hang_seng": {
+      "value": "23,637.60",
+      "change_pct": -3.45,
+      "as_of": "Nov 13"
+    },
+    "usd_cnh": {
+      "value": "6.6738",
+      "change_pct": 0.02,
+      "as_of": "Nov 13"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "Trump will hold a first-ever trilateral summit with Xi Jinping and Vladimir Putin in Shenzhen on Nov 19, covering nuclear non-proliferation and the Iran war, with Ukraine and the Nvidia spy scandal kept off the agenda.",
+    "The US-China Board of Trade held its first formal session Nov 13, five days before the Trump-Xi meeting, covering the $30-billion-for-$30-billion reciprocal tariff lists and farm purchases, with He Lifeng having pressed Bessent and Greer on Nov 6 over US trade restrictions.",
+    "A senior Taiwan security official said China massed more than 100 vessels in an unannounced 'silent intimidation' exercise across the western Pacific in early November, including a submarine-launched ICBM test from the Yellow Sea."
+  ],
+  "key_stat": {
+    "number": "$3 billion+",
+    "label": "Value of China AI data-center projects still tied to restricted Nvidia chips",
+    "context": "VOA Chinese reports Reuters reviewed more than 150 China-related procurement and construction documents showing over $3 billion in projects still dependent on export-restricted Nvidia processors, despite Jensen Huang's own account that Nvidia's China market share fell from 95 percent to zero.",
+    "source": "VOA Chinese (citing Reuters)"
+  },
+  "prc_government": [
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": null,
+      "action": "PBOC Conducts ¥200 Billion Six-Month Reverse Repo, Nets ¥100 Billion Withdrawal",
+      "document": "PBOC open-market buyout reverse repo tender announcement",
+      "detail": "The PBOC will conduct a ¥200 billion six-month buyout reverse repo operation on Nov 16, maturing May 15, 2027; with ¥300 billion maturing this month the operation nets a ¥100 billion liquidity withdrawal, part of a combined ¥300 billion net withdrawal across both reverse-repo tenors in November versus a ¥400 billion net injection in October, per Sina citing Dongfang Jincheng analyst Wang Qing.",
+      "source_label": "PBOC (via Sina)",
+      "url": "https://finance.sina.cn/2026-11-13/detail-iniyqwtx1244448.d.html?vt=4"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": null,
+      "action": "Seven Agencies Issue Guidance on Shipping Insurance Development",
+      "document": "Guidance on Accelerating High-Quality Development of Shipping Insurance",
+      "detail": "The financial regulator, transport ministry, NDRC, finance ministry, MOFCOM, PBOC and SASAC jointly issued guidance on upgrading China's marine insurance sector, days after a WSJ report on Beijing's ambitions to challenge London's centuries-old dominance of ship insurance underwriting.",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/zfxxgk/gkml/art/2026/art_d5548beebccd44be95c67441303ccb59.html"
+    },
+    {
+      "ministry": "Customs",
+      "ministry_chinese": "海关总署",
+      "official": null,
+      "action": "October Trade Hits ¥4.87 Trillion, Up 31.2 Percent Year-on-Year",
+      "document": null,
+      "detail": "The General Administration of Customs spokesperson described October trade performance as showing 'stronger resilience and vitality,' per Economic Daily; electromechanical exports rose 25.2 percent over the first ten months and now account for 64.7 percent of total exports, with integrated circuit and storage-device exports doubling.",
+      "source_label": "Economic Daily (citing GACC)",
+      "url": "http://m.ce.cn/bwzg/202611/t20261114_3294153.shtml"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting Opens in Shenzhen",
+      "detail": "China hosts the 33rd APEC Leaders' Meeting Nov 18-19 under the theme 'Building an Asia-Pacific Community, Advancing Common Prosperity.'"
+    },
+    {
+      "month": "Nov",
+      "day": 19,
+      "headline": "Trump-Xi-Putin Trilateral Meeting",
+      "detail": "The White House confirmed the first-ever three-way meeting between the US, China and Russian leaders on the sidelines of APEC Shenzhen, with nuclear non-proliferation and the Iran war on the agenda."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan Nine-in-One Local Elections",
+      "detail": "Voters choose 22 mayors and magistrates and roughly 11,000 local offices, read as a mid-term on President Lai Ching-te."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "China's annual state commemoration (国家公祭日) of the 1937 Nanjing Massacre."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral",
+      "detail": "The US hosts the G20 summit Dec 14-15 in Doral, Florida; Xi Jinping's attendance remains unconfirmed."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/china-fires-researchers-after-child-dies-in-gene-editing-trial",
+      "source": "Bloomberg",
+      "category": "Technology",
+      "headline": "China Fires Researchers After Child Dies in Gene-Editing Trial",
+      "body_text": "Bloomberg reports Chinese authorities dismissed researchers following the death of a child enrolled in a gene-editing clinical trial. The report does not specify the institution or the genetic condition being treated."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-14/china-s-market-regulator-warns-of-global-asset-repricing-risks",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "China's Market Regulator Warns of Global Asset Repricing Risks",
+      "body_text": "Bloomberg reports China's securities regulator warned of risks from a potential global asset repricing. The warning came as Hong Kong's Hang Seng Index fell *3.45 percent* on Nov 13."
+    },
+    {
+      "url": "https://www.reuters.com/world/asia-pacific/what-we-know-about-chinese-businesswoman-alice-huang-2026-11-14/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "What We Know About Chinese Businesswoman Alice Huang",
+      "body_text": "Reuters profiles Alice Huang, the former Megaspeed executive at the center of the Jensen Huang spy allegations, detailing her corporate background. Singapore's Home Affairs Ministry said she left the company in February amid a probe into possible violations."
+    },
+    {
+      "url": "https://asia.nikkei.com/spotlight/society/crime/meta-chat-app-line-help-taiwan-combat-online-fraud",
+      "source": "Nikkei Asia",
+      "category": "Indo-Pacific",
+      "headline": "Meta, Line Help Taiwan Combat Online Fraud",
+      "body_text": "Taiwan is curbing online fraud through information-sharing between police and platform operators Meta and Line, Nikkei Asia reports. The partnership reflects Taipei's push to involve private tech platforms in anti-fraud enforcement."
+    },
+    {
+      "url": "https://www.theguardian.com/world/2026/nov/14/yalta-trump-xi-putin-china-apec",
+      "source": "The Guardian",
+      "category": "Multilateral",
+      "headline": "Excluded Nations Fear 'Yalta 2.0' From Trump-Xi-Putin Summit",
+      "body_text": "The Guardian reports Ukraine's Zelenskyy and other excluded governments fear a 'Yalta 2.0' carve-up from the planned trilateral in Shenzhen. Those excluded from the table include Ukraine, eastern European and Baltic states, Taiwan, and Iran."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/ex-nvidia-ceo-misled-top-lawyer-affair-with-chinese-businesswoman-sources-say-2026-11-14/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "Ex-Nvidia CEO Misled Top Lawyer on Affair With Chinese Businesswoman",
+      "body_text": "Reuters reports Jensen Huang misled Nvidia's top lawyer about his affair with Alice Huang, citing unnamed sources. The disclosure adds detail to the company's internal response before Huang's resignation this week."
+    },
+    {
+      "url": "https://www.cnn.com/2026/11/13/us/video/was-alice-hueng-a-spy-for-china-or-not-the-confusion-explained",
+      "source": "CNN",
+      "category": "Technology",
+      "headline": "Was Alice Huang a Spy for China? The Confusion Explained",
+      "body_text": "CNN's national security analyst breaks down conflicting assessments of whether Alice Huang acted as a Chinese intelligence asset, as Congress presses Nvidia's former CEO for answers. US officials have offered differing characterizations of her status."
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/11/13/china-pushes-women-toward-traditional-roles-it-once-rejected/",
+      "source": "Washington Post",
+      "category": "PRC-Economy",
+      "headline": "Chinese 'Manosphere' Emerges as Women Exit the Workforce",
+      "body_text": "The Washington Post reports a rising Chinese online 'manosphere' culture coincides with women dropping out of the workforce, pushing traditional gender roles the state once rejected. The report ties the trend to broader demographic and labor-market pressures."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/14/2003867699",
+      "source": "Taipei Times",
+      "headline": "House Speaker Johnson Sees 'Developing Consensus' for Tighter China Chip Curbs",
+      "body_text": "House Speaker **Mike Johnson** told reporters Thursday there is a developing consensus in Congress to limit China's access to advanced AI chips, after the Nvidia spy scandal forced CEO **Jensen Huang's** resignation. Congressional Republicans want to attach new chip-export restrictions to the annual defense authorization bill, with lawmakers pushing at least four separate bills on chip exports.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.scmp.com/economy/global-economy/article/3374328/china-could-tighten-rare-earths-exports-if-us-escalates-chip-curbs-over-nvidia-analysts",
+      "source": "SCMP",
+      "headline": "China Could Tighten Rare-Earth Controls if US Escalates Chip Curbs, Analysts Say",
+      "body_text": "Chinese analysts told SCMP that Beijing could retaliate with tighter rare-earth export controls if Washington further restricts chip sales following Jensen Huang's resignation from Nvidia. They expect broader US-China trade talks to stay on track ahead of the Trump-Xi meeting next week.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/banned-nvidia-chips-installed-at-china-data-center-linked-to-alice-huang",
+      "source": "Bloomberg",
+      "headline": "Banned Nvidia Chips Found at China Data Center Linked to Alice Huang",
+      "body_text": "Bloomberg reports a firm linked to **Alice Huang**, the Megaspeed executive at the center of the Jensen Huang scandal, procured export-restricted Nvidia chips for installation at a China data center. The report adds to findings of more than *$3 billion* in China AI projects still dependent on US-restricted Nvidia processors.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/11/13/bessent-blames-lutnicks-commerce-dept-over-nvidia-chip-leakage-to-china.html",
+      "source": "CNBC",
+      "headline": "Bessent Points to Commerce Department Over Nvidia Chip 'Leakage' to China",
+      "body_text": "Treasury Secretary **Scott Bessent** said Friday his department has long supported restrictions on Megaspeed, the Singapore-based Nvidia partner at the center of the spy scandal, saying the Commerce Department is in charge and 'you will have to ask them about their internal processes.' The comment followed criticism of Commerce Secretary **Howard Lutnick's** department over chip-export enforcement gaps.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/anthropic-ipo-share-orders-from-china-are-said-to-be-rebuffed",
+      "source": "Bloomberg",
+      "headline": "Anthropic IPO Share Orders From China Said to Be Rebuffed",
+      "body_text": "Bloomberg reports that orders for Anthropic's IPO shares originating from China were turned away, amid heightened US scrutiny of Chinese capital flows into AI companies. The report did not specify the volume of rebuffed orders.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://www.wsj.com/politics/policy/china-vapes-trump-administration-c03af406",
+      "source": "WSJ",
+      "headline": "WSJ: Powerful Trump Allies Aided a Chinese Vape Operation",
+      "body_text": "The Wall Street Journal reports associates of President Trump assisted a Chinese vaping operation, in an investigation into regulatory and enforcement gaps. The report did not specify the names of the Trump allies or the agencies involved.",
+      "instrument": "Legal"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.washingtonpost.com/world/2026/11/13/taiwan-china-transnational-repression/b4a3a49e-dfd7-11f1-912c-4fbb80d73f7f_story.html",
+      "source": "Washington Post",
+      "headline": "Violent Attacks on China Critics in Taiwan Raise Transnational Repression Concerns",
+      "body_text": "The Washington Post reports a pattern of violent attacks targeting critics of Beijing in Taiwan, raising concerns about Chinese transnational repression operations on the island. The report does not detail a specific incident count beyond describing the broader pattern.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.bbc.com/zhongwen/articles/c6kg7mdzj12no/simp",
+      "source": "BBC Chinese",
+      "headline": "Why Taiwan's Village Chiefs Are Accused of Being Beijing's United Front Targets",
+      "body_text": "BBC Chinese reports Taiwan security officials investigated more than *400* delegations of village and neighborhood chiefs who traveled to China ahead of the 2024 presidential election, amid concerns Beijing uses grassroots networks to influence local politics. Taiwan's mainland affairs office denies interfering in elections; travel to China is not illegal unless funded by Chinese state entities to campaign for candidates, which would violate Taiwan's Anti-Infiltration Act.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/south-korea-should-not-fear-chinas-rise-foreign-minister-says-2026-11-14/",
+      "source": "Reuters",
+      "headline": "South Korea Should Not Fear China's Rise, Foreign Minister Says",
+      "body_text": "South Korean Foreign Minister **Cho Hyun** said Seoul should not fear China's rise, Reuters reports, in remarks made around his meeting with Chinese Foreign Minister **Wang Yi** in Beijing. The talks come as Seoul continues efforts to restore ties with Beijing ahead of the APEC summit.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/14/business/zhang-liang-china-panama.html",
+      "source": "New York Times",
+      "headline": "China's Former 'Man in Panama' Now a Wanted Extradition Target",
+      "body_text": "The New York Times profiles **Zhang Liang**, a Chinese businessman who arrived in Panama with money and political influence before selling a port stake when his fortunes turned; Beijing now wants him extradited. The case touches on Chinese state interests in Panama Canal-adjacent infrastructure.",
+      "region": "Latin America"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/guyana-hydro-project-draws-us-chinese-bids-in-funding-fight",
+      "source": "Bloomberg",
+      "headline": "Guyana Hydro Project Draws Competing US, Chinese Bids",
+      "body_text": "Bloomberg reports a hydroelectric project in Guyana has drawn competing bids from US and Chinese financiers, reflecting broader competition over Latin American infrastructure financing. The report does not specify the project's cost or named bidders.",
+      "region": "Latin America"
+    },
+    {
+      "url": "https://www.ft.com/content/3cc097d4-00af-4ece-8c86-d1bc9af7664d?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "headline": "China Drops Bid to Host Future UN Climate Summit",
+      "body_text": "The Financial Times reports China has decided against bidding to host a future COP summit, as the EU presses Beijing to back swift publication of key IPCC climate reports. The dispute reflects broader friction over international climate science governance.",
+      "region": "Multilateral"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/trump-to-meet-with-xi-putin-nov-19-in-china-white-house-says",
+      "source": "Bloomberg",
+      "category_tag": "Diplomacy",
+      "headline": "Trump to Hold First-Ever Trilateral Summit With Xi, Putin on Nov 19 in Shenzhen",
+      "body": "President **Trump** will hold a first-ever trilateral meeting with **Xi Jinping** and **Vladimir Putin** on Nov 19 on the sidelines of the APEC summit in Shenzhen, the White House confirmed Friday. Officials say the agenda covers nuclear non-proliferation and the Iran war, and that Ukraine and the **Jensen Huang** spy scandal will not be raised with Xi, per NYT and FT reporting.",
+      "src_line": "Bloomberg, Nov 13, 2026"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/13/business/jensen-huang-nvidia-china-asia.html",
+      "source": "New York Times",
+      "category_tag": "Technology",
+      "headline": "Jensen Huang's Ouster Seen Accelerating China's AI Self-Reliance Drive",
+      "body": "**Jensen Huang's** resignation as Nvidia CEO this week removes a figure who functioned as a diplomatic bridge between chipmakers and governments across Asia, the New York Times reports, with the fallout likely to accelerate China's drive for semiconductor self-reliance. The scandal centers on Huang's relationship with **Alice Huang**, a former executive at Nvidia partner Megaspeed, now under US scrutiny over whether she helped China obtain export-restricted AI chips.",
+      "src_line": "NYT, Nov 13, 2026"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/14/2003867710",
+      "source": "Taipei Times",
+      "category_tag": "PLA",
+      "headline": "Taiwan: China Massed Over 100 Vessels in 'Silent Intimidation' Drills",
+      "body": "A senior Taiwan security official told the Taipei Times that China conducted an unannounced, large-scale exercise across the western Pacific and around Taiwan in early November, at one point massing *more than 100* naval and coast guard vessels and simulating attacks on other militaries and cities including Taiwan's. The official said a Chinese submarine launched an intercontinental ballistic missile from the Yellow Sea onto the mainland during the drills, calling the exercise 'a robber hiding a gun in the pocket of a coat, with the muzzle pointed at the bank teller.' Officials said the drills were larger than 'Justice Mission 2025' a year earlier, one of the largest Chinese naval deployments to date.",
+      "src_line": "Taipei Times, Nov 14, 2026"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261114-9996693",
+      "source": "Lianhe Zaobao",
+      "category_tag": "US-China",
+      "headline": "US, China Hold First Board of Trade Meeting Ahead of Xi-Trump Summit",
+      "body": "The US-China Board of Trade held its first formal meeting Friday via video link, five days before Trump and Xi meet in Shenzhen, Lianhe Zaobao reports citing Xinhua and USTR statements. Discussions covered tariffs, the *$30 billion-for-$30 billion* reciprocal tariff-reduction lists agreed in September, and agricultural trade, with **He Lifeng** having pressed Bessent and Greer on Nov 6 over 'serious concern' about recent US trade restrictions.",
+      "src_line": "Lianhe Zaobao, Nov 14, 2026 (via Xinhua, USTR)"
+    },
+    {
+      "url": "https://www.aljazeera.com/news/2026/11/12/xi-jinping-says-taiwans-complete-reunification-with-china-will-happen",
+      "source": "Al Jazeera",
+      "category_tag": "Cross-Strait",
+      "headline": "Xi Says Taiwan's 'Complete Reunification' Will Happen; Taipei Rejects Remarks",
+      "body": "**Xi Jinping** said Taiwan's 'complete reunification' with China will happen, reiterating Beijing's 'one country, two systems' framework, in remarks made around the 160th anniversary of Sun Yat-sen's birth. Taiwan's government rejected the comments, per separate reporting.",
+      "src_line": "Al Jazeera, Nov 12, 2026"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.wsj.com/logistics-report/china-looks-to-shake-up-centuries-old-business-of-insuring-ships-982e11b9",
+      "source": "WSJ",
+      "category": "Business",
+      "headline": "China Moves to Shake Up Global Ship-Insurance Market",
+      "body_text": "WSJ reports China is building capacity to challenge London's centuries-old dominance of marine insurance underwriting.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.washingtonpost.com/technology/2026/11/13/behind-jensen-huangs-spy-scandal-shadow-war-trumps-ear-china/",
+      "source": "Washington Post",
+      "category": "Technology",
+      "headline": "WaPo: Shadow War Over Trump's Ear on China Policy",
+      "body_text": "Washington Post reports rival advisers are vying for influence over Trump's China policy amid the Nvidia scandal fallout.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.ft.com/content/3efa9733-fbb4-47c2-83ba-b01e548ef277?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category": "Technology",
+      "headline": "FT Profiles Jensen Huang's Years-Long Courtship of Beijing",
+      "body_text": "FT details Jensen Huang's long effort to build ties with Beijing, now under intense scrutiny after his resignation.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.ft.com/content/6034dd16-8c7d-4b3e-bc4e-942a6c8529dd?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category": "Diplomacy",
+      "headline": "Trump Won't Raise Nvidia Spy Issue With Xi, Officials Say",
+      "body_text": "FT reports Trump will not raise the Nvidia espionage allegations with Xi Jinping during their Shenzhen summit next week.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/nvidia-scandal-raises-new-concerns-about-scale-of-chinese-spying",
+      "source": "Bloomberg",
+      "category": "Technology",
+      "headline": "Nvidia Scandal Raises Concerns Over Scale of Chinese Spying",
+      "body_text": "Bloomberg reports the scandal has intensified US concern about the breadth of Chinese intelligence-gathering in Silicon Valley.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://apnews.com/article/nvidia-trump-xi-huang-ai-rivalry-aba7f92a1ec2f0f9e4b4da206d640d61",
+      "source": "AP",
+      "category": "Technology",
+      "headline": "Nvidia Scandal Heightens US-China AI Rivalry Ahead of Trump Visit",
+      "body_text": "AP reports the scandal is sharpening Washington's AI rivalry with Beijing just before Trump's trip to China.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.afp.com/en/nvidia-scandal-looms-over-us-china-ai-talks",
+      "source": "AFP",
+      "category": "Technology",
+      "headline": "Nvidia Scandal Looms Over US-China AI Talks",
+      "body_text": "AFP reports the scandal is casting a shadow over upcoming US-China artificial intelligence discussions.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-14/china-to-meet-all-new-power-demand-with-clean-energy-cctv-says",
+      "source": "Bloomberg",
+      "category": "Energy",
+      "headline": "China to Meet All New Power Demand With Clean Energy: CCTV",
+      "body_text": "CCTV says China will meet all incremental electricity demand with clean energy sources going forward, per Bloomberg.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202611140009",
+      "source": "Focus Taiwan",
+      "category": "Cross-Strait",
+      "headline": "Five Allies Back Taiwan's COP31 Participation: MOFA",
+      "body_text": "Taiwan's foreign ministry says five allied countries are backing its participation in the COP31 climate talks in Antalya.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://money.udn.com/money/story/5603/9878854",
+      "source": "UDN",
+      "category": "Business",
+      "headline": "Japan's 'Shiroi Koibito' Maker Warns of Counterfeits in China",
+      "body_text": "Hokkaido candy maker Ishiya says China has busted underground factories producing fake Shiroi Koibito cookies, warns against online purchases.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.afp.com/en/infos/velocifero-takes-action-against-counterfeiting-china",
+      "source": "AFP",
+      "category": "Business",
+      "headline": "Velocifero Takes Legal Action Against Counterfeiting in China",
+      "body_text": "Italian scooter brand Velocifero is pursuing legal action against counterfeit operations producing fake products in China, AFP reports.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/factbox-chinas-3-billion-plus-pipeline-nvidia-powered-ai-data-centres-2026-11-13/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "Factbox: China's $3 Billion AI Data-Center Pipeline Tied to Nvidia",
+      "body_text": "Reuters factbox details over *$3 billion* in Chinese AI data-center projects still reliant on export-restricted Nvidia chips.",
+      "color_bar_class": "cb-tech"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.guancha.cn/CaiJing/2026_11_14_908360.shtml",
+      "source": "Guancha",
+      "headline": "CSRC Chairman Wu Qing Outlines Six Research Priorities for Capital Markets",
+      "body_text": "CSRC Chairman **Wu Qing** told a Shanghai capital markets forum that regulators must deepen research into market-stability mechanisms, AI's dual-use impact on markets, and China's role in global financial governance. He cited China's *more than 200 million* retail stock investors as a market structure with 'no global precedent.'",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.ft.com/content/1505df5d-14e0-4095-8a88-fd23a165a821?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "headline": "China's Beaten-Down Tech Stocks Draw Interest Despite Nvidia Scandal Spillover",
+      "body_text": "Hong Kong-listed Chinese AI stocks sold off Friday, with MiniMax and Z.ai leading declines after **Jensen Huang's** ouster raised questions about global AI investment flows; the STAR 50 index has fallen roughly *40 percent* from its summer peak, though FT notes opportunities remain in China's AI supply-chain 'picks and shovels.'",
+      "companies": [
+        "MiniMax",
+        "Z.ai"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/markets/emerging/byd-launches-luxury-brand-denza-india-taking-mercedes-toyota-2026-11-13/",
+      "source": "Reuters",
+      "headline": "BYD Launches Denza Luxury Brand in India",
+      "body_text": "BYD launched its Denza luxury EV brand in India, aiming to compete with Mercedes-Benz and Toyota in the premium segment, Reuters reports.",
+      "companies": [
+        "BYD",
+        "Denza",
+        "Mercedes-Benz",
+        "Toyota"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://focustaiwan.tw/business/202611140005",
+      "source": "Focus Taiwan",
+      "headline": "TSMC Secures Record NT$167.6 Billion in Subsidies From Four Governments",
+      "body_text": "TSMC has received a record *NT$167.6 billion* in combined subsidies from the US, Japan, Germany and China this year, Focus Taiwan reports.",
+      "companies": [
+        "TSMC"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.21jingji.com/article/20261114/herald/bb79e7eeb934133a447bf571c26f74b5.html",
+      "source": "21st Century Business Herald",
+      "headline": "China Jushi, Sinoma Announce Cancellation-Style Share Buybacks",
+      "body_text": "China Jushi plans to repurchase *¥150-250 million* in shares for cancellation, while China National Materials plans a similar buyback; chip designer Hygon Information completed cancellation of 520,125 shares originally bought back in 2023.",
+      "companies": [
+        "China Jushi",
+        "China National Materials",
+        "Hygon Information"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "http://www.21jingji.com/article/20261114/herald/659ce532ea47413650ace2b1a2be8fc5.html",
+      "source": "21st Century Business Herald",
+      "headline": "Hedge Fund Jinglin Asset Rebuys Nvidia, Meta, Alibaba Stakes",
+      "body_text": "Jinglin Asset Management's Hong Kong unit disclosed in a 13F filing that its US holdings rose to *$2.95 billion* by Q3-end, up about 35 percent from Q2, after rebuying Nvidia, Meta and Alibaba shares and sharply increasing its TSMC stake.",
+      "companies": [
+        "Jinglin Asset Management",
+        "Nvidia",
+        "Meta",
+        "Alibaba",
+        "TSMC"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.yicai.com/news/103440543.html",
+      "source": "Yicai",
+      "headline": "China's October Social Financing Stock Rose 7.2% Year-on-Year",
+      "body_text": "China's outstanding aggregate social financing reached *¥469.16 trillion* at end-October, up 7.2 percent year-on-year, while M2 rose 7.1 percent to ¥359.06 trillion, Yicai reports citing PBOC data.",
+      "companies": [],
+      "sector": "macro"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Trump-Xi-Putin trilateral meeting",
+      "statement": "Regarding the meeting between the Chinese, Russian and American heads of state, we maintain communication with relevant parties, and if there is further information we will release it in a timely manner.",
+      "original_zh": "对于中俄美三国元首的会晤，我们同相关方保持着沟通，如果有进一步的信息我们会及时发布。",
+      "addressed_to": "US",
+      "tone": "routine",
+      "context": "Asked at the Nov 13 MOFA briefing about the White House's confirmation of a Trump-Xi-Putin trilateral meeting in Shenzhen.",
+      "source": "China Daily (via MOFA briefing)",
+      "url": "https://cn.chinadaily.com.cn/a/202611/13/WS6af6c57de4b0e14252fcb01d.html"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office",
+      "topic": "Sun Yat-sen 160th anniversary commemorations",
+      "statement": "We solemnly commemorate Mr. Sun Yat-sen in order to inherit and carry forward his lofty spirit of safeguarding national reunification and striving for national rejuvenation.",
+      "original_zh": "我们隆重纪念孙中山先生，是要继承和发扬他维护国家统一、致力民族振兴的崇高精神风范",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "Statement came as multiple mainland cities held events marking the 160th anniversary of Sun Yat-sen's birth, days after Xi Jinping's own address on Taiwan reunification.",
+      "source": "Sohu (TAO)",
+      "url": "https://www.sohu.com/a/1100858957_161795?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "Xinhua commentary",
+      "body_chinese": "新华社",
+      "speaker": "Xinhua",
+      "role": "state news agency",
+      "topic": "US-China Board of Trade first meeting",
+      "statement": "Per Xinhua: the two sides will continue to strengthen communication through the Trade Council, lengthen the list of cooperation and shorten the list of problems, helping build a China-US economic relationship that is constructive, stable, respectful, fair and reciprocal.",
+      "original_zh": "双方将通过贸易理事会继续加强沟通，推动解决各自经贸关切，不断拉长合作清单，压缩问题清单，助力构建基于尊重、公平、对等的中美建设性战略稳定关系。",
+      "addressed_to": "US",
+      "tone": "conciliatory",
+      "context": "Statement followed the first formal session of the US-China Board of Trade, held by video link Nov 13, five days before the Trump-Xi meeting in Shenzhen.",
+      "source": "Lianhe Zaobao (citing Xinhua)",
+      "url": "https://www.zaobao.com.sg/news/china/story20261114-9996693"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "China's market opening after CIIE closes",
+      "statement": "The appeal of the Chinese market stems from its huge scale and potential, and also from China's institutional strengths. Stable policy expectations, a continuously optimized business environment and ever-improving legal safeguards are the most effective reassurance.",
+      "original_zh": "中国市场的吸引力源自巨大体量和潜力，也来自中国的制度优势。稳定的政策预期，持续优化的营商环境，不断完善的法律保障，是最有效的定心丸。",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Asked about record exhibitor numbers and deal value at the ninth China International Import Expo, which closed in Shanghai.",
+      "source": "People's Daily (via Xinhua)",
+      "url": "http://world.people.com.cn/n1/2026/1114/c1002-40833628.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Thai concerns over Myanmar mining pollution",
+      "statement": "I can tell you that the Chinese government has always required enterprises to fulfill social responsibility and strictly protect the environment.",
+      "original_zh": "我可以告诉你的是，中国政府一贯要求企业履行社会责任，严格保护环境",
+      "addressed_to": "other",
+      "tone": "routine",
+      "context": "Responding to a question on Thai concerns that mining by Chinese companies in Myanmar may be causing arsenic contamination of rivers flowing into Thailand.",
+      "source": "Sina",
+      "url": "https://wap.cj.sina.cn/7x24/5212595"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "SB",
+      "who": "Scott Bessent",
+      "handle_context": "US Treasury Secretary",
+      "platform_date": "CNBC · Nov 13, 2026",
+      "quote_text": "The Commerce Department is in charge, and you will have to ask them about their internal processes.",
+      "analyst_note": "Bessent made the comment after being asked about restrictions on Megaspeed, the Nvidia partner at the center of the Jensen Huang affair scandal.",
+      "badge_class": "sb-p",
+      "url": "https://www.cnbc.com/video/2026/11/13/bessent-blames-lutnicks-commerce-dept-over-nvidia-chip-leakage-to-china.html"
+    },
+    {
+      "avatar_initials": "MJ",
+      "who": "Mike Johnson",
+      "handle_context": "US House Speaker (R-LA)",
+      "platform_date": "Taipei Times · Nov 14, 2026",
+      "quote_text": "I think there's a developing consensus in Congress that is an important position to take.",
+      "analyst_note": "Johnson spoke after the Nvidia spy scandal forced CEO Jensen Huang's resignation; Congressional Republicans are pushing to attach new chip-export restrictions to the NDAA.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/14/2003867699"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Shanxi Vice Governor",
+      "name": "Ju Zhen (鞠振)",
+      "action": "appointed",
+      "detail": "The Shanxi provincial people's congress standing committee confirmed Ju Zhen's appointment as vice governor on Nov 14, per Jiemian.",
+      "predecessor": null
+    },
+    {
+      "position": "NPC Standing Committee Environment and Resources Protection Committee Deputy Director",
+      "name": "Wang Zhonglin (王忠林)",
+      "action": "placed under investigation",
+      "detail": "Wang Zhonglin, deputy director of the 14th NPC Standing Committee's Environment and Resources Protection Committee, is under investigation, per Yicai's evening roundup.",
+      "predecessor": null,
+      "url": "https://global.chinadaily.com.cn/a/202611/13/WS6af70b88e4b03ebf8519c502.html"
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.taipeitimes.com/News/front/archives/2026/11/14/2003867710",
+    "https://www.bbc.com/zhongwen/articles/c6kg7mdzj12no/simp",
+    "https://www.washingtonpost.com/world/2026/11/13/taiwan-china-transnational-repression/b4a3a49e-dfd7-11f1-912c-4fbb80d73f7f_story.html",
+    "https://www.aljazeera.com/news/2026/11/12/xi-jinping-says-taiwans-complete-reunification-with-china-will-happen"
+  ],
+  "story_count": 97,
+  "oped_count": 2,
+  "academic_count": 0,
+  "source_count": 103,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-14.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-14.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
