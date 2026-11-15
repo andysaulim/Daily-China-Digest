@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-15",
+    "filename": "2026-11-15.html",
+    "re_line": "Trump-Xi-Putin trilateral Nov 19 \u00b7 Manila-Canberra defence pact \u00b7 first US-China Trade Council \u00b7 PBOC FX ratio to 6%",
+    "top_stories": 5,
+    "overnight_items": 8,
+    "word_count": 3236,
+    "sources": 83,
+    "pdf": true
+  },
+  {
     "date": "2026-11-14",
     "filename": "2026-11-14.html",
     "re_line": "Trump-Xi-Putin trilateral set for Nov 19 \u00b7 Nvidia spy fallout hits AI race \u00b7 PLA 100-ship drill \u00b7 Trade Council meets",
