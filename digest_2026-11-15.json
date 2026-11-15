@@ -1,0 +1,557 @@
+{
+  "digest_date": "Sunday, November 15, 2026",
+  "re_line": "Trump-Xi-Putin trilateral Nov 19 · Manila-Canberra defence pact · first US-China Trade Council · PBOC FX ratio to 6%",
+  "market_indicators": {
+    "sse_composite": {
+      "value": "3,634.35",
+      "change_pct": -0.72,
+      "as_of": "Nov 13"
+    },
+    "brent": {
+      "value": "95.84",
+      "change_pct": 4.75,
+      "as_of": "Nov 13"
+    },
+    "hang_seng": {
+      "value": "23,637.60",
+      "change_pct": -3.45,
+      "as_of": "Nov 13"
+    },
+    "usd_cnh": {
+      "value": "6.6738",
+      "change_pct": 0.02,
+      "as_of": "Nov 13"
+    },
+    "usd_cny": {
+      "value": "6.6712",
+      "change_pct": -0.07,
+      "as_of": "Nov 15"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "The White House and the Kremlin both confirmed that Trump, Xi and Putin will hold a first-of-its-kind trilateral in Shenzhen on Nov 19 alongside APEC, with nuclear proliferation and the Iran war on the agenda and Ukraine off it.",
+    "Manila and Canberra signed a defence cooperation arrangement cutting the procedural burden under their Status of Visiting Forces Agreement, with Albanese pledging more Australian investment in maritime domain awareness and drone technology.",
+    "MOFCOM disclosed that the first Trade Council meeting under the China-US economic consultation mechanism was held by video on Nov 13, covering tariffs, the '$30 billion for $30 billion' reciprocal tariff-cut arrangement and farm trade."
+  ],
+  "key_stat": {
+    "number": "$1.04T",
+    "label": "China goods trade surplus, first 10 months of 2026",
+    "context": "The surplus crossed $1 trillion a month earlier than in 2025, when the full-year figure was $1.2 trillion; October exports rose 35.2% year on year on AI-related demand.",
+    "source": "HK01, citing General Administration of Customs data"
+  },
+  "prc_government": [
+    {
+      "ministry": "State Council General Office / Central Military Commission General Office",
+      "ministry_chinese": "国务院办公厅、中央军委办公厅",
+      "official": "Not named in notice",
+      "action": "Joint document orders end-to-end transparency in military conscription",
+      "document": "《关于推进全链路阳光征兵的实施意见》 (Implementing Opinions on Promoting Full-Chain Sunshine Conscription)",
+      "detail": "The document covers the more than ten steps from registration to final assignment, involving the people's armed forces, health, public security, education and human resources departments. PLA Daily's commentary ties it to the Fourth Plenum language on strengthening constraints and supervision over the exercise of power, and to bringing in recruits capable of informatized and intelligentized warfare.",
+      "source_label": "PLA Daily",
+      "url": "http://www.81.cn/yw_208727/16499756.html"
+    },
+    {
+      "ministry": "National Financial Regulatory Administration (with six other bodies)",
+      "ministry_chinese": "金融监管总局、交通运输部、国家发展改革委、财政部、商务部、中国人民银行、国务院国资委",
+      "official": "Not named in notice",
+      "action": "Seven agencies issue joint guidance on shipping insurance",
+      "document": "《关于加快航运保险高质量发展的指导意见》 (Guiding Opinions on Accelerating High-Quality Development of Shipping Insurance)",
+      "detail": "The guidance was published through MOFCOM's government information disclosure channel. Signatories include the transport ministry, NDRC, finance ministry, MOFCOM, the PBOC and SASAC.",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/zfxxgk/gkml/art/2026/art_d5548beebccd44be95c67441303ccb59.html"
+    },
+    {
+      "ministry": "Ministry of Transport",
+      "ministry_chinese": "交通运输部",
+      "official": "Not named in notice",
+      "action": "First batch of 'AI + transport' application scenarios released",
+      "document": "首批“人工智能+交通运输”场景清单",
+      "detail": "The list is the first tranche under the AI-plus industrial programme applied to the transport sector, carried on the central ministry news channel of the Beijing government portal.",
+      "source_label": "State Council portal / Beijing",
+      "url": "https://www.beijing.gov.cn/ywdt/zybwdt/202611/t20261115_4946543.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "CCP Central Committee",
+      "action": "Issues Regulations on the Work of Local Party Committees",
+      "detail": "The Central Committee printed and circulated 《中国共产党地方委员会工作条例》, carried on the Ministry of National Defense's authoritative-releases page. The text follows the Fourth Plenum's emphasis on constraints and supervision over the exercise of power.",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/yw_214049/16499834.html"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting opens in Shenzhen",
+      "detail": "Xi chairs; MOFA has confirmed his attendance at the 33rd leaders' meeting and related events. The FT reports the agenda has been substantially slimmed and the usual closed-door leaders' retreat dropped."
+    },
+    {
+      "month": "Nov",
+      "day": 19,
+      "headline": "Trump-Xi-Putin trilateral, Shenzhen",
+      "detail": "Confirmed by the White House on Nov 13 and by Kremlin spokesman Peskov. Nuclear non-proliferation is the stated agenda item."
+    },
+    {
+      "month": "Nov",
+      "day": 20,
+      "headline": "PBOC loan prime rate fixing",
+      "detail": "Monthly LPR announcement, five days after the FX deposit reserve ratio rose to 6% and amid a net November drain of 300 billion yuan through outright reverse repos."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors and magistrates and roughly 11,000 offices, read in Washington and Beijing as a mid-term on the Lai administration."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral",
+      "detail": "The United States hosts on Dec 14-15; Xi's attendance is unconfirmed."
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/11/13/us/politics/trump-putin-xi-china-nuclear-proliferation.html",
+      "source": "The New York Times",
+      "category_tag": "Diplomacy",
+      "headline": "Trump, Xi and Putin to Hold First Three-Way Meeting in Shenzhen on Nov 19",
+      "body": "**Donald Trump**, **Xi Jinping** and **Vladimir Putin** will meet together on Nov 19 on the sidelines of the APEC summit in Shenzhen, confirmed by a White House spokesperson on Friday and by Kremlin spokesman **Peskov** to TASS. Nuclear proliferation leads the agenda and Trump plans to raise the war against Iran; he is not expected to raise Russia's war in Ukraine or the scandal that has engulfed **Jensen Huang**.",
+      "src_line": "NYT · White House and Kremlin confirmations"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/philippines-australia-sign-defence-pact-with-eye-china-2026-11-15/",
+      "source": "Reuters",
+      "category_tag": "Indo-Pacific",
+      "headline": "Philippines and Australia Sign Defence Cooperation Arrangement in Manila",
+      "body": "Defense Secretary **Gilberto Teodoro** said the arrangement streamlines implementation of the two countries' Status of Visiting Forces Agreement, describing it as an anti-red-tape measure covering land, sea, air and humanitarian and disaster response. Prime Minister **Anthony Albanese** witnessed the signing while in Manila for the ASEAN summit and announced increased Australian investment in maritime domain awareness, including drone technology, equipment and training.",
+      "src_line": "Reuters · Bloomberg · HKEJ"
+    },
+    {
+      "url": "https://www.cnn.com/2026/11/14/tech/china-megaspeed-nvidia-scandal-hnk-intl",
+      "source": "CNN",
+      "category_tag": "Technology",
+      "headline": "Nvidia Scandal Exposes Singapore-Routed Loophole Feeding China US Chips",
+      "body": "CNN traces the channel to Megaspeed International, headquartered in a curved glass tower overlooking Singapore's Marina Bay district, the kind of fast-growing start-up the city-state has courted. The reporting follows **Jensen Huang**'s resignation on Thursday as Nvidia president, CEO and director after he acknowledged a relationship with a woman US authorities believe was spying for China.",
+      "src_line": "CNN · Washington Post"
+    },
+    {
+      "url": "https://m.sfccn.com/2026/11-15/1NMDE0MDZfMjMwNTY1NQ.html",
+      "source": "Southern Finance (南方财经)",
+      "category_tag": "PRC-Economy",
+      "headline": "PBOC's FX Deposit Reserve Ratio Rise to 6% Takes Effect",
+      "body": "The increase from 4% to 6% took effect Nov 15; the PBOC last moved the ratio on Sep 15 2023, cutting it from 6% to 4%, and last raised it in December 2021, from 7% to 9%. Minsheng Bank chief economist **Wen Bin** estimated the two-point rise freezes roughly *$24 billion* of foreign-currency liquidity against about $1.2 trillion of FX deposits at end-September. The yuan appreciated 4.2% against the dollar in the first nine months and about 0.8% in October, with 14 consecutive sessions of gains from Oct 14.",
+      "src_line": "Southern Finance · PBOC"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/15/2003867776",
+      "source": "Taipei Times",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan Coast Guard Tracks China Coast Guard 2503 After Radio Clash Off Orchid Island",
+      "body": "The CGA vessel Hualien detected China Coast Guard ship 2503 at about 3pm Thursday, *40 nautical miles* southeast of Orchid Island and 14 nautical miles outside Taiwan's restricted waters; the Chinese vessel broadcast that it was conducting a law enforcement patrol east of Taiwan and that Taiwan is part of China. The Taiwanese vessel replied that the Republic of China (Taiwan) is a sovereign and independent country and demanded the ship leave; by 8am Saturday 2503 was about 67 nautical miles southeast of the Port of Hualien.",
+      "src_line": "Taipei Times · Coast Guard Administration"
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_6d9023bbcdd04810a810ef2059ecad2f.html",
+      "source": "MOFCOM",
+      "headline": "First Trade Council Meeting Held Under China-US Economic Consultation Mechanism",
+      "body_text": "MOFCOM said on Nov 14 that the two sides held the inaugural Trade Council meeting by video link on Nov 13, with talks on tariffs, the \"$30 billion for $30 billion\" reciprocal tariff-reduction arrangement, agricultural trade and other concerns. The ministry said the council will be used to lengthen the cooperation list and shorten the problem list.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://www.wsj.com/world/nvidia-china-espionage-spy-hacking-ai-174c366b",
+      "source": "The Wall Street Journal",
+      "headline": "WSJ: Vast Chinese Spying Operation Sits Behind the Nvidia Affair",
+      "body_text": "The Journal reports that the case that ended **Jensen Huang**'s tenure sits inside a far larger Chinese intelligence effort aimed at Western technology and AI. The piece ran alongside the paper's Nov 14 10-Point summary of the same operation.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.washingtonpost.com/politics/2026/11/14/nvidia-trump-xi-huang-ai-rivalry/3b90bccc-dfeb-11f1-912c-4fbb80d73f7f_story.html",
+      "source": "The Washington Post",
+      "headline": "Nvidia Scandal Sharpens AI Rivalry Days Before Trump's China Trip",
+      "body_text": "The Post reports the espionage case is hardening the US-China artificial intelligence contest in the week **Trump** travels to Shenzhen. US officials have said the president does not plan to raise the Nvidia matter with **Xi Jinping**.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.hk01.com/%E4%B8%AD%E5%9C%8B%E8%A7%80%E5%AF%9F/60410942/%E7%84%A1%E4%BA%BA%E5%9C%A8%E6%84%8F%E7%9A%84%E9%9B%9911-%E8%B2%B7%E8%B2%B7%E8%B2%B7-%E7%9A%84%E5%BF%AB%E6%A8%82%E4%B8%8D%E5%86%8D",
+      "source": "HK01 (ZH)",
+      "headline": "Chinese Firms and Labs Reported Buying Restricted Nvidia Compute at Steep Premiums",
+      "body_text": "HK01, summarising UK and US reporting this week, says AI developer Moonshot AI rented servers in China carrying Nvidia B300 processors at a premium *350 percent* above market, and that Entity-Listed Northwestern Polytechnical University procured two Nvidia H200 chips last month through a Shaanxi supplier. It cites a Reuters tally of more than $3 billion of compute projects inside China using controlled Nvidia processors.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://m.sohu.com/a/1101504369_163278?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+      "source": "MOFA spokesperson (ZH)",
+      "headline": "MOFA Responds After US Intelligence Official Calls 'Chinese Spy' Label Inaccurate",
+      "body_text": "The foreign ministry was asked at its briefing about a US intelligence official's statement that characterising Huang Le as a \"Chinese spy\" was not accurate. The exchange is Beijing's first podium engagement with the case that ended Jensen Huang's Nvidia tenure.",
+      "instrument": "Diplomacy"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.dw.com/en/china-taiwan-xi-jinping-reunification/a-79929738",
+      "source": "DW",
+      "headline": "Xi Renews Reunification Call in Remarks Marking Sun Yat-sen Anniversary",
+      "body_text": "**Xi Jinping** repeated that reunification with Taiwan must happen and framed it as the Communist Party's historic mission, in remarks tied to the 160th anniversary of the birth of ROC founder Sun Yat-sen. Taipei rejected the remarks.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://cn.yna.co.kr/view/ACK20261115000100881",
+      "source": "Yonhap Chinese",
+      "headline": "China Briefed Seoul on Kim Jong Un's Dandong Visit, ROK Official Says",
+      "body_text": "A senior ROK foreign ministry official said in Beijing on Nov 14 that **Wang Yi** used his Nov 13 talks with Foreign Minister **Cho Hyun** at Diaoyutai to brief Seoul on recent China-DPRK exchanges, including Kim Jong Un's visit to Dandong last month and a delegation led by WPK Central Committee secretary Kim Song Nam, saying the relationship centres on economic cooperation. The official said he left the meeting judging a DPRK-US summit unlikely, and that Seoul told Beijing the North's nuclear status must not be recognised.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/asean-falls-short-on-myanmar-crisis-south-china-sea-pact-at-manila-summit",
+      "source": "Nikkei Asia",
+      "headline": "ASEAN Summit Opens in Manila Without Progress on Myanmar or South China Sea Code",
+      "body_text": "Leaders convened Sunday seeking concrete cooperation on energy security and the digital economy, with the Myanmar crisis and a South China Sea code of conduct again unresolved. The 49th summit runs under Philippine chairmanship.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.mfa.gov.cn/zyxw/202611/t20261115_12059569.shtml",
+      "source": "MOFA (ZH)",
+      "headline": "Li Qiang Meets Thai King, Then Lands in Manila for China-ASEAN Summit",
+      "body_text": "**Li Qiang** met King Maha Vajiralongkorn in Bangkok, conveying greetings from **Xi Jinping** and citing China-Thailand trade growth \"against the trend\" amid international turbulence; he also joined Thai Prime Minister Anutin at a China-Thailand entrepreneurs' symposium. He arrived in the Philippines on Nov 15 for the ASEAN summit.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.ft.com/content/fb667289-ae81-42c7-8eb8-ebda09dceff7?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "headline": "FT: Shenzhen APEC Staged as a Showcase of a China-Ordered World",
+      "body_text": "The FT reports the Shenzhen meeting will be among the most tightly secured since APEC began convening in 1989, with the agenda substantially pared back and no closed-door leaders' retreat, a departure from standard practice. Trump's and Putin's expected attendance drove the changes.",
+      "region": "Multilateral"
+    },
+    {
+      "url": "https://mainichi.jp/english/articles/20261115/p2g/00m/0na/016000c",
+      "source": "Mainichi",
+      "headline": "Tokyo Wary That US, China and Russia Could Align at Three-Way Summit",
+      "body_text": "Japanese officials are concerned the Shenzhen trilateral could produce warmth between Washington, Beijing and Moscow at Tokyo's expense. The Japan Times separately reported the meeting is expected to be short on substance and rich in symbolism.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/15/2003867755",
+      "source": "Taipei Times",
+      "headline": "Five Diplomatic Allies Back Taiwan's Climate Participation at COP31",
+      "body_text": "The Marshall Islands, Palau, Eswatini, Tuvalu and St Kitts and Nevis voiced support at the leaders' summit in Antalya on Wednesday and Thursday, Taiwan's foreign ministry said. Marshall Islands President **Hilda Heine** said all voices including Taiwan's should be heard; Palau's **Surangel Whipps Jr** called Taiwan an important partner in disaster resilience, energy transition and food security.",
+      "region": "Multilateral"
+    },
+    {
+      "url": "https://www.news.cn/world/20261115/bb189dcaf8e3452d809c87e45f17f220/c.html",
+      "source": "Xinhua",
+      "headline": "IRGC Says Two Tankers Struck Mines in the Strait of Hormuz",
+      "body_text": "Iran's Islamic Revolutionary Guard Corps navy said on Nov 15 that two tankers exploded and caught fire in the southern Strait of Hormuz after switching off navigation and automatic identification systems to pass through unauthorised channels. Two further tankers turned back after warnings from the IRGC's shipping safety control centre; Brent settled at $95.84 on Nov 13, up 4.75%.",
+      "region": "Middle East"
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.channelnewsasia.com/east-asia/drone-ownership-ban-comes-force-in-beijing-over-security-concerns-6552761",
+      "source": "CNA",
+      "category": "Security",
+      "headline": "Beijing's Ban on Owning Drones Takes Effect Across the Municipality",
+      "body_text": "The ban, announced in September, took force Sunday across Beijing's roughly 16,400 sq km of urban and rural territory, outlawing the possession and storage of unmanned aerial vehicles and the transport of drones or components into the city. Owners had to resell devices at approved buy-back points or move them outside the enforcement area."
+    },
+    {
+      "url": "https://www.wsj.com/world/china/china-poached-this-top-harvard-professor-now-he-wants-others-to-join-him-1e03222d",
+      "source": "The Wall Street Journal",
+      "category": "Technology",
+      "headline": "WSJ Profiles Harvard Professor Recruited by China Now Courting Peers",
+      "body_text": "The Journal reports on a senior Harvard professor who moved to China and is working to bring other Western researchers with him. The piece lands as US-China scientific talent flows draw renewed congressional scrutiny."
+    },
+    {
+      "url": "https://www.reuters.com/video/watch/idRW841714112026RP1/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "COMAC Electric Aircraft Completes First Crewed Flight, State Media Say",
+      "body_text": "State media reported the first crewed flight of the state planemaker's electric aircraft. COMAC's commercial programmes remain the centrepiece of China's push to displace Boeing and Airbus content in its domestic fleet."
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3374448/could-beijings-hq-17-air-defence-system-defend-pla-amphibious-forces-taiwan-strikes",
+      "source": "SCMP",
+      "category": "PLA",
+      "headline": "SCMP Examines HQ-17 Cover for PLA Amphibious Forces Crossing the Strait",
+      "body_text": "A nighttime drill broadcast by CCTV on June 11 showed how the HQ-17 air-defence system could shield amphibious armoured vehicles as they assemble and move into open water. Massing vehicles, weapons and supplies along the coast would expose PLA forces to Taiwanese drone, rocket and missile strikes."
+    },
+    {
+      "url": "https://www.cnn.com/2026/11/14/world/video/meanwhile-in-asia-data-center-expansion-china-hnk-vrtc-digvid",
+      "source": "CNN",
+      "category": "Technology",
+      "headline": "Data Centres Draw Backlash in the US, Welcome in China",
+      "body_text": "CNN's **Simone McCarthy** contrasts widespread American local opposition to data-centre construction with Chinese communities treating the same build-out as an economic asset. The divergence shapes the two countries' compute expansion costs."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/15/2003867777",
+      "source": "Taipei Times",
+      "category": "Technology",
+      "headline": "Taiwan Reckons With the Void Left by Huang's Exit From Nvidia",
+      "body_text": "Taiwanese commentators say **Jensen Huang**, mobbed on visits to his birthplace, gave a diplomatically isolated island a sense of global recognition, and question whether his successor will keep the same ties to Taiwan's technology industry. National Taiwan University political scientist **Lev Nachman** noted Huang's practice of speaking Taiwanese rather than Mandarin and frequenting night markets."
+    },
+    {
+      "url": "http://www.81.cn/yw_208727/16499745.html",
+      "source": "PLA Daily",
+      "category": "PLA",
+      "headline": "PLA Hosts UN Peacekeeping Drone Course for Foreign Officers in Xi'an",
+      "body_text": "The MND Peacekeeping Affairs Center and Air Force Engineering University ran a three-week course in Xi'an that concluded in early November, mixing foreign and Chinese students across UAV deployment, command and control, and counter-drone technique, all framed on the UN's consent, impartiality and self-defence principles. It closed with a two-day exercise, \"Peace Wings-2026\", built on a civil-war protection-of-civilians scenario."
+    },
+    {
+      "url": "https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_11_15_908439.shtml",
+      "source": "Guancha (ZH)",
+      "category": "Energy",
+      "headline": "Yemeni Government Forces Withdraw From Bab el-Mandeb Area, Ceding Control to Houthis",
+      "body_text": "The Saudi-backed government's southern forces announced on Nov 15 they are redeploying from Zubab airport and the Bab el-Mandeb area west of Taiz toward Aden, citing Houthi massing and threats to the capital. The Houthis had seized the strait in September; a government counter-offensive launched in October failed to hold it."
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://finance.sina.cn/2026-11-13/detail-iniyqwtx1244448.d.html?vt=4",
+      "source": "Sina Finance / Jiemian",
+      "headline": "PBOC Drains 300 Billion Yuan Through Outright Reverse Repos in November",
+      "body_text": "The central bank will conduct a 200 billion yuan six-month outright reverse repo on Nov 16 against 300 billion yuan maturing, and has already cut the three-month tranche by 200 billion, producing a combined net November drain of 300 billion yuan versus a 400 billion net injection in October. Dongfang Jincheng's **Wang Qing** linked the move to curbing the slide in funding rates, with DR001 averaging 1.28% in October and 1.30% month-to-date against 1.39% from June to September.",
+      "companies": [
+        "People's Bank of China"
+      ],
+      "sector": "macro"
+    },
+    {
+      "url": "http://www.21jingji.com/article/20261115/herald/8c697003b5f0d0c903159d2720376d26.html",
+      "source": "21st Century Business Herald",
+      "headline": "Gold Retreats More Than 30% From Its 2026 High, Dragging Chinese Jewellery Prices",
+      "body_text": "Spot gold was quoted at $3,883.98 an ounce on Nov 13, down more than $185 on the week and more than *30 percent* below the year's high of $5,598.75. Chow Sang Sang quoted pure gold jewellery at 1,166 yuan a gram and Lao Feng Xiang at 1,168 yuan, down about 70 yuan in four days and more than 500 yuan below the Jan 29 peak above 1,700 yuan.",
+      "companies": [
+        "Chow Sang Sang",
+        "Lao Feng Xiang",
+        "Standard Chartered",
+        "China Securities"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.guancha.cn/CaiJing/2026_11_15_908245.shtml",
+      "source": "Guancha (ZH), citing Bloomberg",
+      "headline": "New Southeast Asian Factories Buy Chinese Machinery, Squeezing Japanese Suppliers",
+      "body_text": "Capital goods and intermediate products now account for more than 90% of China's exports to ASEAN, which grew over 30% year on year through October, while Japan's machinery sales to the bloc fell from $30 billion in 2012 to $18 billion in 2023. In Rayong's industrial park, Chinese firms supplied 46% of investment last year against 19% a decade earlier, with the Japanese share down from 37% to 25%.",
+      "companies": [
+        "Midea",
+        "BYD",
+        "Toyota",
+        "Amata",
+        "Lowy Institute"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "http://www.21jingji.com/article/20261115/herald/4afb205ee659aa75a5dffd26f56cc495.html",
+      "source": "21st Century Business Herald",
+      "headline": "AI-Hardware Funds Hit Liquidation Thresholds After Sector Selloff",
+      "body_text": "Changsheng Growth Selection Mixed entered liquidation after 50 consecutive working days with net assets below 50 million yuan as of Nov 13; it is down 33.27% this year with Naura, Centec and Hygon among its top holdings. Bank of China Growth Preferred Equity, Bosera Quality Selection and Penghua Digital Economy have issued liquidation warnings, with three-month losses of 28.52%, 33.92% and 18.23% respectively.",
+      "companies": [
+        "Changsheng Fund",
+        "Bank of China Fund",
+        "Bosera",
+        "Penghua",
+        "Naura",
+        "Cambricon"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://ai.ftchinese.com/interactive/302365",
+      "source": "FT Chinese",
+      "headline": "Nvidia Carries No D&O Policy as Litigation Risk Mounts After Huang's Exit",
+      "body_text": "Two people familiar with the policies told the FT that Nvidia insures executives' and directors' personal assets up to *$900 million* but holds no directors-and-officers liability cover, leaving the company itself unprotected against damages and legal costs arising from executive conduct. **Jensen Huang** resigned Thursday.",
+      "companies": [
+        "Nvidia"
+      ],
+      "sector": "tech"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "CCP General Secretary and President",
+      "topic": "Asia-Pacific community of common destiny, on the eve of APEC Shenzhen",
+      "statement": "Drawing lines along ideological grounds and forming small geopolitical circles has no future in the end. The Asia-Pacific cannot and should not return to the state of confrontation and division of the Cold War period.",
+      "original_zh": "以意识形态划线、搞地缘政治小圈子，终究是没有前途的。亚太地区不能也不应该回到冷战时期的对立和割裂状态。",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "Qiushi published a compilation of Xi's APEC remarks, including his Nov 16 2023 written speech to the APEC CEO Summit in San Francisco, days before he chairs the Shenzhen leaders' meeting.",
+      "source": "Qiushi via Ministry of National Defense",
+      "url": "http://www.mod.gov.cn/gfbw/sy/tt_214026/16499825.html"
+    },
+    {
+      "body": "MOFCOM",
+      "body_chinese": "商务部",
+      "speaker": "Ministry of Commerce",
+      "role": "ministry statement carried by Xinhua",
+      "topic": "First Trade Council meeting under the China-US economic consultation mechanism",
+      "statement": "Guided by the important consensus of the two heads of state, and centred on implementing the earlier outcomes of the China-US economic and trade consultations, the two sides held candid, in-depth and constructive exchanges on tariffs, the \"30 billion for 30 billion\" reciprocal tariff-reduction arrangement, agricultural trade and other issues of concern to each side.",
+      "original_zh": "双方以中美元首会晤重要共识为引领，围绕落实前期中美经贸磋商成果，就关税、“300亿对300亿”对等降税安排、农产品贸易以及各自关心的其他议题进行了坦诚、深入、建设性的交流。",
+      "addressed_to": "US",
+      "tone": "routine",
+      "context": "The video-link meeting was held Nov 13 and disclosed by MOFCOM on Nov 14, four days before APEC Shenzhen.",
+      "source": "Qiushi / Xinhua",
+      "url": "https://www.qstheory.cn/20261115/664d2c3496164076abf82b96edbef25c/c.html"
+    },
+    {
+      "body": "Premier",
+      "body_chinese": "李强",
+      "speaker": "Li Qiang",
+      "role": "Premier of the State Council",
+      "topic": "China-Thailand relations during the Bangkok leg of his trip",
+      "statement": "\"China and Thailand are as close as one family\", this is the unique advantage of China-Thailand relations. It is reflected in practical results across all fields of the two countries, and especially in the current turbulent international situation, China-Thailand economic and trade cooperation has grown against the trend, which is all the more commendable.",
+      "original_zh": "“中泰一家亲”，这是中泰关系的独特优势，体现在两国各领域务实成果，特别是当前动荡国际形势下，中泰经贸合作逆势增长，尤为难能可贵。",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Li met King Maha Vajiralongkorn in Bangkok before flying to Manila on Nov 15 for the China-ASEAN summit.",
+      "source": "MOFA (ZH)",
+      "url": "https://www.mfa.gov.cn/zyxw/202611/t20261115_12059569.shtml"
+    },
+    {
+      "body": "PBOC",
+      "body_chinese": "中国人民银行",
+      "speaker": "People's Bank of China",
+      "role": "published policy position on the exchange rate",
+      "topic": "FX deposit reserve ratio rise to 6% and yuan appreciation",
+      "statement": "Per Southern Finance, citing the PBOC's published position: the central bank does not preset a target level for the exchange rate, but if the rate swings sharply over the short term and the market shows \"herd effects\" and irrational expectations, the central bank will introduce market-based measures to prevent destructive short-term overshooting.",
+      "original_zh": "不预设汇率目标水平，但如果汇率短期大幅波动，市场出现“羊群效应”和非理性预期，央行将出台市场化措施，防止汇率短期破坏性超调。",
+      "addressed_to": "domestic",
+      "tone": "firm",
+      "context": "The two-percentage-point increase in the FX deposit reserve ratio took effect Nov 15 after 14 straight sessions of yuan gains from Oct 14.",
+      "source": "Southern Finance (南方财经)",
+      "url": "https://m.sfccn.com/2026/11-15/1NMDE0MDZfMjMwNTY1NQ.html"
+    }
+  ],
+  "social_statements": [],
+  "also_today": [
+    {
+      "url": "https://www.bloomberg.com/opinion/articles/2026-11-15/american-support-for-taiwan-looks-alarmingly-fragile",
+      "source": "Bloomberg Opinion",
+      "category": "Cross-Strait",
+      "headline": "Bloomberg Opinion: American Support for Taiwan Looks Alarmingly Fragile",
+      "body_text": "Published two weeks before Taiwan's Nov 28 local elections and days before the Shenzhen summit.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.straitstimes.com/asia/rift-deepens-between-the-philippines-china-over-south-china-sea1",
+      "source": "The Straits Times",
+      "category": "Indo-Pacific",
+      "headline": "Straits Times: Philippines-China Rift Deepens Over the South China Sea",
+      "body_text": "Runs as ASEAN leaders meet in Manila without agreement on a code of conduct.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261114-9999034",
+      "source": "Lianhe Zaobao",
+      "category": "Technology",
+      "headline": "PRC State Media: Huang's Departure Does Not Change China's Direction",
+      "body_text": "Beijing Daily's Changan Street Zhishi said domestic substitution is long and arduous but the only option, conceding short-term pressure on large-model training if US chip controls tighten.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.news.cn/world/20261115/7ba192b9086f4ae6bbc9f86fee874675/c.html",
+      "source": "Xinhua",
+      "category": "Diplomacy",
+      "headline": "COP31 China Pavilion Hosts Global Urban Sustainability Dialogue in Antalya",
+      "body_text": "Delegates from Shandong, Sichuan and Fujian joined counterparts from Albuquerque, Niteroi and Renca plus the UK climate envoy on Nov 14.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.jiemian.com/article/15334323.html",
+      "source": "Jiemian",
+      "category": "Science",
+      "headline": "Science Paper With Tsinghua Co-Authors Says Cryosphere Has Breached Safe Limits",
+      "body_text": "Researchers from Stockholm University, Tsinghua and the Potsdam Institute find parts of the global cryosphere degrading irreversibly.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://news.cctv.com/2026/11/15/ARTIzy5HHksgxsIReP1OCQ2j261115.shtml",
+      "source": "CCTV",
+      "category": "Economy",
+      "headline": "Shenzhen Airport Border Crossings Top 6.06 Million This Year, Up 5%",
+      "body_text": "The milestone came 15 days earlier than in 2025, days before the city hosts APEC.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.yicai.com/news/103440995.html",
+      "source": "Yicai",
+      "category": "Middle East",
+      "headline": "Bahrain Says It Intercepted and Destroyed Multiple Air Targets From Iran",
+      "body_text": "The Bahrain Defence Force issued the statement on the morning of Nov 15.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://weekly.caixin.com/2026-11-14/102504760.html",
+      "source": "Caixin Weekly",
+      "category": "US Politics",
+      "headline": "Caixin Weekly Asks How Far a Democratic Congress Will Rewrite US Foreign Policy",
+      "body_text": "The cover piece frames a 60-day window for Trump diplomacy, noting a fourth round of US-Russia-Ukraine talks in Abu Dhabi on Nov 10-11.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://china.huanqiu.com/article/4U2RuysFduC",
+      "source": "Global Times (ZH)",
+      "category": "Economy",
+      "headline": "Shandong's Rushan Opens Probe Into Low-Cost Property Tours Targeting the Elderly",
+      "body_text": "City departments formed a task force after CCTV exposed discount viewing trips and rent-to-pay-mortgage sales pitches at Yintan developments.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.news.cn/20261115/2d59e121a5334bb58183260e912789fe/c.html",
+      "source": "Xinhua",
+      "category": "Infrastructure",
+      "headline": "Urumqi Metro Line 2 North Section Opens With Interchange to the High-Speed Station",
+      "body_text": "The 13.94 km underground stretch has ten stations and connects to Line 1 at Nanmen and to Urumqi's high-speed rail station.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.nytimes.com/2026/11/13/us/politics/trump-putin-xi-china-nuclear-proliferation.html",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/11/15/2003867776",
+    "https://www.reuters.com/world/china/philippines-australia-sign-defence-pact-with-eye-china-2026-11-15/",
+    "https://www.dw.com/en/china-taiwan-xi-jinping-reunification/a-79929738",
+    "https://cn.yna.co.kr/view/ACK20261115000100881",
+    "https://www.mofcom.gov.cn/syxwfb/art/2026/art_6d9023bbcdd04810a810ef2059ecad2f.html"
+  ],
+  "story_count": 86,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 83,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-15.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-15.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
