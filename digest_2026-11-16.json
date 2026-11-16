@@ -1,0 +1,578 @@
+{
+  "digest_date": "Monday, November 16, 2026",
+  "re_line": "Xi-Trump-Putin trilateral confirmed · China Oct data miss · Bessent's Nvidia ultimatum · ASEAN-China SCS talks stall",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "23,753.84",
+      "change_pct": -2.84,
+      "as_of": "Nov 16"
+    },
+    "usd_cny": {
+      "value": "6.6665",
+      "change_pct": -0.09,
+      "as_of": "Nov 16"
+    },
+    "sse_composite": {
+      "value": "3,602.57",
+      "change_pct": -1.67,
+      "as_of": "Nov 16"
+    },
+    "brent": {
+      "value": "94.81",
+      "change_pct": 2.21,
+      "as_of": "Nov 16"
+    },
+    "usd_cnh": {
+      "value": "6.6674",
+      "change_pct": -0.1,
+      "as_of": "Nov 16"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "50.1"
+    }
+  },
+  "morning_memo": [
+    "China confirmed the first-ever Xi-Trump-Putin trilateral will take place Thursday in Shenzhen, calling it of 'groundbreaking significance.'",
+    "China's October industrial output, retail sales and investment all missed estimates, with CNBC noting deepening reliance on exports as domestic demand fades.",
+    "Treasury Secretary Bessent gave Nvidia's board ten days to explain alleged chip transshipment to China via Singapore-registered Megaspeed International, while Moolenaar secured closed-door testimony from Jensen Huang."
+  ],
+  "key_stat": {
+    "number": "10",
+    "label": "Days Bessent gave Nvidia's board to respond on China chip diversion",
+    "context": "Commerce Secretary Lutnick has separately agreed to testify before Congress on the matter, per Lianhe Zaobao.",
+    "source": "联合早报 (Lianhe Zaobao ZH)"
+  },
+  "prc_government": [
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "Ling Ji, Vice Minister of Commerce and Deputy International Trade Representative",
+      "action": "Outlines measures to support the rise of central China region",
+      "document": null,
+      "detail": "MOFCOM said it has designated *30* processing-trade gradient-transfer pilot zones and 9 national processing-trade industrial parks, and named 17 regions including Wuhan and Hefei to build national service-industry innovation demonstration zones.",
+      "source_label": "Global Times ZH (MOFCOM presser)",
+      "url": "https://china.huanqiu.com/article/4U3IG306NS3"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM International Trade Department",
+      "action": "Confirms China-ASEAN Free Trade Area 3.0 upgrade protocol takes effect",
+      "document": "China-ASEAN FTA 3.0 Upgrade Protocol",
+      "detail": "MOFCOM held a press Q&A confirming implementation of the upgraded protocol, timed to this week's ASEAN summit in Manila.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_65147a7e64d542ac8826ee1da0b15791.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": null,
+      "action": "Nets roughly ¥300 billion liquidity withdrawal in November via reverse repo operations",
+      "document": null,
+      "detail": "PBOC conducted a *¥200 billion* six-month outright reverse repo auction Nov 16 maturing May 15, 2027; combined with a reduced three-month operation, November's two tenors show a net ¥300bn withdrawal versus October's ¥400bn net injection, analysts said.",
+      "source_label": "PBOC ZH (Southern Finance)",
+      "url": "https://m.sfccn.com/2026/11-16/2MMDE0MDZfMjMwNjU2MA.html"
+    },
+    {
+      "ministry": "General Administration of Customs (Nanning)",
+      "ministry_chinese": "海关",
+      "official": null,
+      "action": "Reports Guangxi foreign trade growth of 10.9% in first 10 months",
+      "document": null,
+      "detail": "Nanning Customs said Guangxi's foreign trade import-export volume grew *10.9 percent* year-on-year in the January-October period.",
+      "source_label": "Nanning Customs ZH",
+      "url": "http://nanning.customs.gov.cn/nanning_customs/2026-11/16/article_2026111617383769719.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 18,
+      "headline": "APEC Economic Leaders' Meeting opens in Shenzhen",
+      "detail": "China hosts the 33rd APEC summit Nov 18-19; Trump, Xi and Putin are all expected to attend, with a trilateral meeting set for Nov 19."
+    },
+    {
+      "month": "Nov",
+      "day": 19,
+      "headline": "First-ever Xi-Trump-Putin trilateral summit",
+      "detail": "MOFA says the meeting carries 'groundbreaking significance' and will cover nuclear non-proliferation and the Middle East; Ukraine is not expected on the agenda per NYT Chinese."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayoral and magistrate races; a Taiwan Brain Trust poll released Nov 15 shows DPP's Puma Shen leading incumbent KMT Taipei Mayor Chiang Wan-an 46.3% to 42.2%."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "Annual state commemoration (国家公祭日)."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral",
+      "detail": "US hosts; Xi attendance to be confirmed."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.bloomberg.com/news/features/2026-11-15/futuristic-shenzhen-shows-trump-the-difficulty-of-stopping-xi-jinping-s-china",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "Futuristic Shenzhen Shows Trump the Difficulty of Stopping China's Tech Rise",
+      "body_text": "Bloomberg's feature on APEC host city Shenzhen describes driverless taxis, robotics firms and AI infrastructure as evidence of how hard it will be for Washington to slow China's technology advance. The piece frames the city as backdrop to Trump's visit for the APEC summit and trilateral talks with Xi and Putin."
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3374504/can-new-four-country-defence-hub-counter-china-south-china-sea",
+      "source": "SCMP China",
+      "category": "Indo-Pacific",
+      "headline": "Can a New Four-Country Defense Hub Counter China in the South China Sea?",
+      "body_text": "The US, Japan, Australia and the Philippines plan a joint defense coordination centre in the Philippines under an agreement reached Oct 28 and made public Nov 10, SCMP reported. The hub aims to improve intelligence sharing and joint surveillance against Chinese activity in disputed waters."
+    },
+    {
+      "url": "https://www.ft.com/content/38f869f7-2523-4f4f-b1ea-9e0b2ced8c74?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category": "Diplomacy",
+      "headline": "Neighbours of China's London 'Mega' Embassy Struggle to Sell Flats",
+      "body_text": "Beijing owns the freehold to about 100 flats near the Tower of London tied to its planned 'mega' embassy, the FT reported. Residents cite fears of surveillance, nuisance and leasehold complications depressing sale prices."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/electric-vehicles/hungary-tightens-oversight-of-chinese-south-korean-battery-plants",
+      "source": "Nikkei Asia China",
+      "category": "Sanctions",
+      "headline": "Hungary Tightens Oversight of Chinese, South Korean Battery Plants",
+      "body_text": "Hungary is tightening regulatory scrutiny of Asian battery manufacturers including Dongwha Electrolyte, BYD and CATL, Nikkei Asia reported. The piece describes a 'tightening regulatory noose' on the firms' Hungarian plants."
+    },
+    {
+      "url": "https://www.afp.com/en/hong-kong-rolls-out-ai-facial-recognition-across-cctv-network",
+      "source": "AFP China",
+      "category": "Technology",
+      "headline": "Hong Kong Rolls Out AI Facial Recognition Across CCTV Network",
+      "body_text": "Hong Kong has rolled out AI-powered facial recognition across its citywide CCTV network, AFP reported Monday. The report did not detail which authority operates the system or its specific coverage area."
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/11/15/southeast-asian-leaders-open-asean-summit-with-south-china-sea-energy-agenda/",
+      "source": "WaPo China",
+      "category": "Indo-Pacific",
+      "headline": "Southeast Asian Leaders Open ASEAN Summit With SCS, Energy on Agenda",
+      "body_text": "Southeast Asian leaders opened their summit in Manila with the South China Sea dispute and regional energy cooperation on the agenda, the Washington Post reported. Talks with China on a maritime code of conduct continued in parallel."
+    },
+    {
+      "url": "https://www.wsj.com/articles/how-jensen-huang-built-a-business-to-feed-chinese-appetite-for-american-chips-6c88ecce",
+      "source": "WSJ China",
+      "category": "Technology",
+      "headline": "How Jensen Huang Built a Business Feeding Chinese Appetite for American Chips",
+      "body_text": "WSJ traced how former Nvidia CEO Jensen Huang built the company's China business over decades, supplying American chips to meet surging Chinese demand. The piece provides context for current scrutiny of Nvidia's board over alleged export-control evasion."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/inside-chinas-drive-build-an-ai-native-generation-2026-11-16/",
+      "source": "Reuters China",
+      "category": "Technology",
+      "headline": "Insight: Inside China's Drive to Build an AI-Native Generation",
+      "body_text": "Reuters examined China's push to raise an 'AI-native' generation, integrating AI tools into education and daily life. The effort comes as Beijing races to build domestic AI capability amid US export controls."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/malaysia-ytl-power-scrutinized-amid-nvidia-turmoil-alleged-china-links",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "Malaysia's YTL Power Scrutinized Amid Nvidia Turmoil, Alleged China Links",
+      "body_text": "Malaysia's YTL Power is facing scrutiny over alleged China links amid fallout from Nvidia's leadership turmoil, Bloomberg reported. Regulators are examining data-center and chip-supply exposure across Southeast Asia."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.cnbc.com/2026/11/16/cantwell-lutnick-ai-chip-china.html",
+      "source": "CNBC China",
+      "headline": "Cantwell Urges Lutnick to Halt AI Chip Sales to China Ahead of Xi Meeting",
+      "body_text": "Sen. Cantwell urged Commerce Secretary Howard Lutnick to halt AI chip sales to China ahead of this week's Trump-Xi summit, CNBC and Reuters reported Monday, accusing the department of failing to stem the flow of advanced chips. CNBC noted Lutnick has faced criticism over his close relationship with Nvidia CEO Jensen Huang.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.reuters.com/business/media-telecom/chip-tensions-loom-over-trump-xi-summit-us-china-push-ai-safety-steps-2026-11-16/",
+      "source": "Reuters China",
+      "headline": "Chip Tensions Loom Over Trump-Xi Summit as Both Sides Push AI Safety Steps",
+      "body_text": "Chip tensions loom over this week's Trump-Xi summit even as Washington and Beijing push new AI safety measures, Reuters reported Monday. The talks come as US allies separately moved to tighten AI supply-chain controls on China.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/15/business/fda-lung-cancer-drug-china.html",
+      "source": "NYT China",
+      "headline": "FDA Rejects China-Originated Lung Cancer Drug Ivonescimab",
+      "body_text": "The FDA rejected Summit Therapeutics' ivonescimab, a China-originated lung cancer drug that had become 'a symbol of China's rise in drug development,' the New York Times reported. The rejection is a setback for the pipeline of Chinese-origin biologics seeking US approval.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://cn.nytimes.com/world/20261116/nvidia-trump-huang-china-xi/",
+      "source": "纽约时报中文网 (NYT Chinese ZH)",
+      "headline": "Nvidia Espionage Scandal Clouds This Week's Trump-Xi Summit",
+      "body_text": "Jensen Huang accompanied Trump at both of his previous meetings with Xi this year, and the conclusion of a probe into Huang's status as a Chinese intelligence target has not changed Trump's assessment of him, NYT's Chinese edition reported. Trump has not yet pressed Xi on Chinese intelligence activity tied to the case, per the report.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/11/16/jensen-huang-comeback-nvidia-and-us-china-tensions.html",
+      "source": "CNBC China",
+      "headline": "What Would a Jensen Huang Comeback Mean for Nvidia and US-China Relations?",
+      "body_text": "CNBC examined what a Jensen Huang return to Nvidia's helm would mean for the chipmaker and for US-China relations, amid reports of a possible comeback bid days after his resignation. The segment comes as Treasury Secretary Bessent calls for a leadership shakeup over alleged China chip diversion.",
+      "instrument": "Technology"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://cn.nytimes.com/china/20261116/china-military-purge-zhang-shengmin-taiwan/",
+      "source": "纽约时报中文网 (NYT Chinese ZH)",
+      "headline": "Xi's Military Purge Continues as Zhang Shengmin Rises: Good News for Taiwan?",
+      "body_text": "Xi Jinping's continuing purge of the PLA and the rise of Zhang Shengmin could persist for years as a loyalty campaign, analysts told NYT's Chinese edition. Taiwanese officials said uncertainty in the PLA's leadership may be hindering Beijing's preparations for a Taiwan contingency.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/16/2003867815",
+      "source": "Taipei Times",
+      "headline": "Taiwan to Extend RedNote Access Restrictions for Another Year",
+      "body_text": "Taiwan's Ministry of the Interior is expected to extend restrictions on Xiaohongshu for another year from Dec 3, the Taipei Times reported, after fraud cases linked to the platform fell *77.2 percent* since the Dec 2025 block. The National Security Bureau said Xiaohongshu failed all 15 of its security indicators.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/16/2003867803",
+      "source": "Taipei Times",
+      "headline": "Hong Kong-Based Facebook Page Suspected of Harvesting Taiwan Military Personnel Data",
+      "body_text": "A Facebook page called 'Dreaming of China,' administered from Hong Kong and tied to the Qinhuangdao-based Borderless Group, shifted this month from historical content to profiles of serving and retired Taiwanese generals, officials told the Taipei Times. More than 300 posts have been published since September seeking to identify military personnel and their networks.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/16/2003867825",
+      "source": "Taipei Times",
+      "headline": "DPP's Puma Shen Leads KMT's Chiang Wan-an in Taipei Mayoral Poll",
+      "body_text": "DPP candidate Puma Shen led incumbent KMT Mayor Chiang Wan-an 46.3 percent to 42.2 percent in a Taiwan Brain Trust poll released Saturday, the Taipei Times reported. Independent voters favored Shen 52.1 percent to 27.1 percent ahead of the Nov 28 nine-in-one elections.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/philippines-stresses-diplomacy-as-marcos-heads-to-china-for-apec",
+      "source": "Bloomberg China",
+      "headline": "Philippines Stresses Diplomacy as Marcos Heads to China for APEC",
+      "body_text": "President Marcos is traveling to Shenzhen for APEC after the ASEAN summit in Manila, Bloomberg reported, with Manila emphasizing diplomacy even as it deepens defense ties with Washington, Canberra and Tokyo. The trip follows ASEAN and China's failure to conclude a South China Sea code of conduct at the same summit.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/16/business/trump-paxsilica-philippines-ai.html",
+      "source": "NYT China",
+      "headline": "Trump's AI Push in the Philippines Draws Fierce Local Opposition",
+      "body_text": "A planned American-led AI hub in the Philippines has sparked opposition over fears of displacement, resource strain and threats to national sovereignty, the New York Times reported. The project involves Nvidia-linked infrastructure as Washington seeks AI footholds across Southeast Asia.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/16/2003867806",
+      "source": "Taipei Times",
+      "headline": "Philippines, Australia Sign Defense Arrangement Streamlining Joint Military Activities",
+      "body_text": "The Philippines and Australia signed a defense cooperation arrangement Sunday simplifying coordination under their bilateral Status of Visiting Forces Agreement, Philippine Defense Secretary Gilberto Teodoro Jr said. The deal bolsters Manila's 'credible deterrence posture,' including in the South China Sea; China's defense and foreign ministries did not respond to requests for comment.",
+      "region": "Australia-Pacific"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/gn/2026/11-16/10732979.shtml",
+      "source": "中国新闻网 (China News ZH)",
+      "headline": "Wang Huning Meets Nauru President, Welcomes Commitment to One-China Principle",
+      "body_text": "CPPCC Chairman Wang Huning met Nauru President Adeang in Beijing Monday, with Adeang reaffirming Nauru will 'firmly adhere to the one-China principle,' per China News. Nauru restored diplomatic relations with Beijing after switching from Taipei.",
+      "region": "Australia-Pacific"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/un-ready-support-any-denuclearisation-effort-us-china-russia-talks-2026-11-16/",
+      "source": "Reuters China",
+      "headline": "UN Says It Is Ready to Support Any Denuclearization Effort From US-China-Russia Talks",
+      "body_text": "The United Nations said Monday it is ready to support any denuclearization effort that emerges from this week's US-China-Russia talks in Shenzhen, Reuters reported.",
+      "region": "Multilateral"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/world/china/china-says-xi-putin-trump-meeting-has-groundbreaking-significance-2026-11-16/",
+      "source": "Reuters China",
+      "category_tag": "Diplomacy",
+      "headline": "China Confirms First-Ever Xi-Trump-Putin Trilateral for Thursday in Shenzhen",
+      "body": "China confirmed Monday that **Xi Jinping**, **Donald Trump** and **Vladimir Putin** will hold the first-ever face-to-face trilateral between the three countries' leaders on Thursday in Shenzhen, Trump's *third* face-to-face meeting with Xi this year, per NYT's Chinese edition. MOFA spokesperson **Mao Ning** called the meeting of 'groundbreaking significance,' saying it will cover safeguarding world peace and the strategic stability of major-power relations. CNBC reports the agenda includes nuclear non-proliferation and the Middle East war; Ukraine and the Jensen Huang espionage case are not expected to come up.",
+      "src_line": "Reuters / CNBC / MOFA / NYT Chinese"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/16/china-retail-sales-october-industrial-output-investment.html",
+      "source": "CNBC China",
+      "category_tag": "PRC-Economy",
+      "headline": "China's October Slowdown Deepens as Output, Retail Sales, Investment Miss",
+      "body": "China's industrial output, retail sales and fixed-asset investment all missed consensus forecasts in October, Reuters and CNBC reported Monday. CNBC said 'a deepening reliance on external demand leaves China more exposed to shocks abroad as domestic momentum fades.' The FT reported Beijing is pushing to speed up budget spending to offset the weaker growth.",
+      "src_line": "Reuters / CNBC / FT / Bloomberg"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/world/story20261116-10003282",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "category_tag": "Sanctions",
+      "headline": "Bessent Gives Nvidia Board 10-Day Deadline Over Alleged China Chip Diversion",
+      "body": "Treasury Secretary **Scott Bessent** said Sunday that Nvidia's board should recruit an outside successor and called for a 'dramatic shakeup' of the company's leadership, questioning whether it ignored signs that advanced chips were rerouted to China through shell companies to inflate revenue, Lianhe Zaobao reported, citing Fox News. Bessent gave Nvidia's board and outside counsel *ten days* to respond on the Singapore-registered Megaspeed International, which multiple US agencies have pushed to blacklist. House Select Committee on the CCP Chairman **John Moolenaar** said Nvidia founder **Jensen Huang** agreed to closed-door testimony on his relationship with former Megaspeed executive Alice Huang, with a date still pending.",
+      "src_line": "Lianhe Zaobao (citing FT/Fox News)"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/asean-china-fail-conclude-south-china-sea-code-conduct-2026-11-15/",
+      "source": "Reuters China",
+      "category_tag": "Indo-Pacific",
+      "headline": "ASEAN, China Fail to Conclude South China Sea Code of Conduct",
+      "body": "ASEAN and China failed to conclude a code of conduct for the South China Sea at talks Sunday on the sidelines of the bloc's Manila summit, Reuters reported. Premier **Li Qiang** told the 29th China-ASEAN Summit Monday that relations with the bloc were 'extraordinary,' Chinese state media said, as the region awaits Trump's expected APEC attendance in Shenzhen this week.",
+      "src_line": "Reuters / Xinhua"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/us-allies-agree-to-guard-ai-supply-chains-from-china-ft-says",
+      "source": "Bloomberg China",
+      "category_tag": "Technology",
+      "headline": "US and Allies Sign Accord to Guard AI Supply Chains From China Ahead of Summit",
+      "body": "The US and unnamed allied governments signed an agreement to exclude China from AI supply chains, the FT reported Sunday, timed to land ahead of **Trump**'s meeting with **Xi** this week. Reuters separately reported the US and allies are moving to 'protect AI tech and infrastructure amid China rivalry,' though neither report specified signatories or scope. China's foreign ministry responded Monday that AI 'should not be turned into a closed, exclusionary small circle.'",
+      "src_line": "FT / Bloomberg / Reuters / MOFA"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.cnn.com/2026/11/15/travel/us-china-apec-trump-xi-shenzhen-hnk-intl",
+      "source": "CNN China",
+      "category": "Diplomacy",
+      "headline": "CNN Profiles Shenzhen Ahead of Trump's APEC Visit",
+      "body_text": "CNN profiles Shenzhen, APEC's host city, ahead of Trump's visit, the city has more billionaires than any outside New York.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://apnews.com/article/canada-carney-trump-china-trade-autos-cbb2d3f90eed95925ffa4cb9a4b25239",
+      "source": "AP China",
+      "category": "Trade",
+      "headline": "Carney Says Canada Could Turn to Chinese Automakers if Trump Talks Fail",
+      "body_text": "Canadian PM Carney says Canada could turn to Chinese automakers if trade talks with Trump fail, AP reports.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/alibaba-unveils-new-flagship-ai-model-with-safety-upgrades-2026-11-16/",
+      "source": "Reuters China",
+      "category": "Technology",
+      "headline": "Alibaba Unveils New Flagship AI Model With Safety Upgrades",
+      "body_text": "Alibaba unveiled a new flagship AI model with safety upgrades Monday, Reuters reported, in a riposte to US rivals.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/chinese-aluminum-output-drops-but-still-on-course-for-record",
+      "source": "Bloomberg China",
+      "category": "Economy",
+      "headline": "Chinese Aluminum Output Drops But Still on Course for Record",
+      "body_text": "Chinese aluminum output dropped in October but remains on course for a record year, Bloomberg reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/china-s-iron-ore-clout-may-cost-australian-miners-8-billion-goldman-says",
+      "source": "Bloomberg China",
+      "category": "Economy",
+      "headline": "China's Iron Ore Clout May Cost Miners $8 Billion, Goldman Says",
+      "body_text": "China's iron-ore market clout could cost global miners *$8 billion*, Goldman Sachs estimated, per Bloomberg.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://cn.nytimes.com/asia-pacific/20261116/jensen-huang-taiwan/",
+      "source": "纽约时报中文网 (NYT Chinese ZH)",
+      "category": "Cross-Strait",
+      "headline": "Taiwanese React to 'National Dad' Jensen Huang Scandal",
+      "body_text": "Taiwanese dubbed Jensen Huang the 'national dad'; many still back him despite the China-espionage scandal, per NYT Chinese.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.scmp.com/week-asia/politics/article/3374611/why-philippines-based-asean-maritime-centre-may-be-more-aspirational-practical",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "ASEAN's Proposed Maritime Centre May Be 'Aspirational' Not Practical",
+      "body_text": "ASEAN's proposed Philippines-based maritime centre may be more 'aspirational' than practical given overlapping mandates, analysts told SCMP.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://apnews.com/article/china-shenzhen-apec-technology-df655739f3881e2025c873c13b1fed70",
+      "source": "AP China",
+      "category": "Technology",
+      "headline": "AP Tours Shenzhen's Driverless Taxis and Robotics Firms Ahead of APEC",
+      "body_text": "AP's video tour of Shenzhen's driverless taxis and robotics firms previews China's tech showcase for APEC visitors this week.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.ft.com/content/5621d364-c767-4b40-a090-054042d1c49b?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category": "Diplomacy",
+      "headline": "FT Likens This Week's Overlapping Summits to 'Yalta 2.0'",
+      "body_text": "FT likens this week's overlapping ASEAN, APEC and trilateral summits to 'Yalta 2.0,' with the Trump-Xi-Putin sit-down as the central event.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/chinese-iron-ore-futures-hit-four-year-low-on-weak-steel-outlook",
+      "source": "Bloomberg China",
+      "category": "PRC-Economy",
+      "headline": "Chinese Iron Ore Futures Hit Four-Year Low on Weak Steel Outlook",
+      "body_text": "Chinese iron ore futures fell to their lowest level in four years Monday on a weakening steel demand outlook, Bloomberg reported. The drop adds pressure on global miners already facing Beijing's push for pricing leverage."
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.ft.com/content/9daa3a26-c49c-4c94-91af-0d4c2116d2e4?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "New World Development Shares Tumble 40% on Rights Issue Plan",
+      "body_text": "New World Development shares plunged *40 percent* Monday after the Hong Kong developer proposed a rights issue offering new stock at an 80% discount, the FT reported. The ailing property group aims to use the proceeds to slash its debt load.",
+      "companies": [
+        "New World Development"
+      ],
+      "sector": "property"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/copper-sinks-to-four-month-low-on-tech-rout-china-growth-woes",
+      "source": "Bloomberg China",
+      "headline": "Copper Sinks to Four-Month Low on Tech Rout, China Growth Woes",
+      "body_text": "Copper prices sank to a four-month low Monday on a technology-sector rout and renewed concerns over China's growth slowdown, Bloomberg reported.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/china-home-price-slump-drags-on-despite-latest-stimulus-push",
+      "source": "Bloomberg China",
+      "headline": "China Home Price Slump Drags On Despite Latest Stimulus Push",
+      "body_text": "China's home price slump is dragging on despite Beijing's latest stimulus push, Bloomberg reported Monday, as October's broader activity data also missed forecasts.",
+      "companies": [],
+      "sector": "property"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/china-car-ev-output-slows-four-year-low-domestic-demand-drops",
+      "source": "Bloomberg China",
+      "headline": "China Car Output Slows to Four-Year Low as Domestic Demand Drops",
+      "body_text": "China's car output slowed to a four-year low in October as domestic demand dropped, Bloomberg reported, even as exports continue to climb.",
+      "companies": [],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.wsj.com/economy/chinas-domestic-demand-continues-to-disappoint-cbc24852",
+      "source": "WSJ China",
+      "headline": "Demand for Chinese Goods Is Soaring but Economic Momentum Slows at Home",
+      "body_text": "Demand for Chinese exports is soaring even as economic momentum slows at home, the WSJ reported, highlighting China's deepening split between external and domestic demand.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/australia-warns-china-iron-ore-push-could-breach-trade-rules",
+      "source": "Bloomberg China",
+      "headline": "Australia Warns China Iron Ore Push Could Breach Trade Rules",
+      "body_text": "Australia warned that China's push into the iron ore market could breach international trade rules, Bloomberg reported, as Chinese buyers increasingly use state-backed purchasing leverage against global miners.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/china-s-teapot-refiners-turn-to-trading-giants-as-iran-oil-ebbs",
+      "source": "Bloomberg China",
+      "headline": "China's Teapot Refiners Turn to Trading Giants as Iran Oil Ebbs",
+      "body_text": "China's independent 'teapot' refiners are turning to major trading houses to secure crude as Iranian oil supply ebbs, Bloomberg reported Monday.",
+      "companies": [],
+      "sector": "energy"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Xi-Trump-Putin trilateral summit in Shenzhen",
+      "statement": "This is the first-ever face-to-face meeting of the leaders of China, Russia and the United States; it will involve an in-depth exchange of views on safeguarding world peace and promoting the strategic stability of major-power relations, and carries groundbreaking significance.",
+      "original_zh": "这是中俄美三国元首历史上首次面对面会晤，将围绕维护世界和平、促进大国关系战略稳定深入交换意见，具有开创性意义。",
+      "addressed_to": "US",
+      "tone": "conciliatory",
+      "context": "Statement made at the Nov 16 MOFA press briefing confirming the Thursday Shenzhen summit.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://finance.sina.cn/2026-11-16/detail-iniyxiqz1189654.d.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "AI governance, response to allied AI supply-chain accord",
+      "statement": "Artificial intelligence is the common wealth of all humanity; it should not be turned into a closed, exclusionary 'small circle.'",
+      "original_zh": "人工智能是全人类的共同财富，不应当搞封闭排他的\"小圈子\"",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Statement follows reports that the US and allies agreed to exclude China from AI supply chains ahead of the Trump-Xi summit.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://news.china.com/socialgd/10000169/20261116/49877760.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Mao Ning",
+      "role": "MOFA spokesperson",
+      "topic": "Japan-abandoned chemical weapons in China",
+      "statement": "China urges Japan to thoroughly eliminate, at an early date, the harm caused by chemical weapons it abandoned in China, and return a clean land to the Chinese people.",
+      "original_zh": "敦促日方早日彻底清除日遗化武毒害，还中国人民净土",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Comment made at the Nov 16 MOFA press briefing.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "http://m.cyol.com/gb/news/articles/2026-11/16/content_KabR3BcBA3.html"
+    },
+    {
+      "body": "Premier",
+      "body_chinese": "李强",
+      "speaker": "Li Qiang",
+      "role": "Premier of the State Council",
+      "topic": "China-ASEAN relations ahead of Trump's APEC visit",
+      "statement": "Per Reuters: Li Qiang described ties with ASEAN as 'extraordinary' ahead of Trump's expected APEC visit this week.",
+      "original_zh": null,
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Remarks made at the 29th China-ASEAN Summit in Manila, Nov 16, as talks on a South China Sea code of conduct failed to conclude.",
+      "source": "Reuters China",
+      "url": "https://www.reuters.com/world/china/chinese-premier-lauds-extraordinary-ties-with-asean-ahead-trump-visit-2026-11-16/"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "GT",
+      "who": "Gilberto Teodoro Jr",
+      "handle_context": "Philippine Secretary of National Defense",
+      "platform_date": "Taipei Times · Nov 16, 2026",
+      "quote_text": "Rather than 100 steps to do a single thing, it will just now take 10",
+      "analyst_note": "Statement made after Manila and Canberra signed a defense cooperation arrangement Nov 15 simplifying coordination under their Status of Visiting Forces Agreement.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/16/2003867806"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.taipeitimes.com/News/front/archives/2026/11/16/2003867806",
+    "https://www.scmp.com/news/china/military/article/3374504/can-new-four-country-defence-hub-counter-china-south-china-sea",
+    "https://www.reuters.com/world/china/asean-china-fail-conclude-south-china-sea-code-conduct-2026-11-15/",
+    "https://www.taipeitimes.com/News/front/archives/2026/11/16/2003867803"
+  ],
+  "story_count": 97,
+  "oped_count": 3,
+  "academic_count": 0,
+  "source_count": 101,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-16.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-16.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
