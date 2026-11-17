@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-17",
+    "filename": "2026-11-17.html",
+    "re_line": "APEC Shenzhen opens \u00b7 US tightens AI chip curbs \u00b7 Trump-Xi-Putin trilateral looms \u00b7 Russian jets near Taiwan/Japan/Korea",
+    "top_stories": 6,
+    "overnight_items": 8,
+    "word_count": 2640,
+    "sources": 118,
+    "pdf": true
+  },
+  {
     "date": "2026-11-16",
     "filename": "2026-11-16.html",
     "re_line": "Xi-Trump-Putin trilateral confirmed \u00b7 China Oct data miss \u00b7 Bessent's Nvidia ultimatum \u00b7 ASEAN-China SCS talks stall",
