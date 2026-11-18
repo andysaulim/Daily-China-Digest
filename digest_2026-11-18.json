@@ -1,0 +1,596 @@
+{
+  "digest_date": "Wednesday, November 18, 2026",
+  "re_line": "RE: Trump-Xi-Putin Shenzhen Trilateral · Nvidia Halts H200 Shipments · Russian Jets Trigger Taiwan ADIZ, Japan Scrambles",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "23,294.75",
+      "change_pct": -4.2,
+      "as_of": "Nov 18"
+    },
+    "usd_cnh": {
+      "value": "6.6663",
+      "change_pct": 0.02,
+      "as_of": "Nov 18"
+    },
+    "brent": {
+      "value": "89.99",
+      "change_pct": -6.1,
+      "as_of": "Nov 18"
+    },
+    "sse_composite": {
+      "value": "3,587.83",
+      "change_pct": -1.86,
+      "as_of": "Nov 18"
+    },
+    "usd_cny": {
+      "value": "6.6545",
+      "change_pct": -0.24,
+      "as_of": "Nov 18"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "cpi_yoy": "+0.7%",
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "Xi Jinping personally greeted Donald Trump at Shenzhen Bao'an International Airport on Nov 18, the first time Xi has received a foreign leader on the tarmac in his 13-plus years in power, ahead of a trilateral summit with Vladimir Putin.",
+    "Nvidia's interim CEO confirmed the company has stopped shipping H200 AI chips to China despite US government approval; MOFA spokesperson Guo Jiakun said China has 'repeatedly clarified its principled position' on the matter when asked about it at the Nov 18 briefing.",
+    "Taiwan's MND detected Russian aircraft exiting its ADIZ south of Taitung County on Nov 17, the same day Japan lodged a 'strong protest' with Moscow over an airspace violation off Fukuoka, both ahead of Putin's arrival in Shenzhen."
+  ],
+  "key_stat": {
+    "number": "¥700.2 billion",
+    "label": "PBOC overnight reverse repo operation, Nov 18",
+    "context": "The operation, on the final day of this month's tax-payment window, held the rate at 1.25% and produced a net liquidity withdrawal of about CNY13.8 billion versus maturing repos, per analysts cited by Phoenix Finance.",
+    "source": "凤凰网财经 (Phoenix Finance), via PBOC tracker"
+  },
+  "prc_government": [
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC",
+      "action": "Conducts CNY700.2bn overnight reverse repo, holds rate at 1.25%",
+      "document": null,
+      "detail": "The Nov 18 operation fell on the final day of this month's tax-payment window; a slightly larger maturity left a net withdrawal of about CNY13.8 billion, described by analysts as a passive adjustment rather than active tightening.",
+      "source_label": "PBOC ZH",
+      "url": "https://finance.ifeng.com/c/8y9QsE0OEAS"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson",
+      "action": "Confirms outcomes of China-Canada trade consultations",
+      "document": null,
+      "detail": "The spokesperson addressed the results of China-Canada economic and trade consultations the same day Canada and China announced an expanded trade pact with deeper tariff cuts, per the WSJ.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://cacs.mofcom.gov.cn/article/gnwjmdt/sb/sbqt/202611/189808.html"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson",
+      "action": "Responds to new US Commerce curbs on remote access to advanced semiconductors",
+      "document": null,
+      "detail": "The spokesperson fielded questions on the US Commerce Department's newly announced measures restricting remote access to advanced semiconductors, amid Beijing's broader warning it would retaliate against new AI chip restrictions.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://cacs.mofcom.gov.cn/article/gnwjmdt/sb/zm/202611/189807.html"
+    },
+    {
+      "ministry": "TAO",
+      "ministry_chinese": "国台办",
+      "official": "TAO spokesperson",
+      "action": "Urges Taiwan to lift curbs on mainland students after enrollment drops by half",
+      "document": null,
+      "detail": "Responding to Taiwan's release of this year's mainland-student enrollment data showing roughly a 50 percent drop from last year, TAO said Taiwan should remove 'unreasonable restrictions' on mainland students applying to study there.",
+      "source_label": "TAO ZH",
+      "url": "https://i.ifeng.com/c/8y9SixD2fWN"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 19,
+      "headline": "APEC Economic Leaders' Meeting concludes in Shenzhen",
+      "detail": "Trump, Xi and Putin are holding a trilateral summit alongside the APEC Leaders' Meeting Nov 18-19; Trump's trip began in Manila."
+    },
+    {
+      "month": "Nov",
+      "day": 20,
+      "headline": "PBOC monthly LPR decision",
+      "detail": "The loan prime rate is set on the 20th of each month, following the Nov 18 reverse repo operation that held the policy rate at 1.25%."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors and magistrates and roughly 11,000 offices are up for election; Sinocism reports China 'barely factors' into voter decisions, with housing and employment dominating."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "China's annual national commemoration (国家公祭日) falls roughly three weeks after the Shenzhen APEC summit."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit opens in Doral, Miami",
+      "detail": "The US hosts the G20 Dec 14-15; Xi's attendance has not been confirmed."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.cnn.com/2026/11/17/china/trump-us-china-tech-asia-summit-intl-hnk",
+      "source": "CNN China",
+      "category": "Technology",
+      "headline": "CNN Analysis: US Curbs Won't Stop China's Tech Rise, Xi Showcases Shenzhen",
+      "body_text": "Xi is using the Shenzhen summit to showcase China's technological rise despite years of US export controls, CNN reported Nov 17. The analysis argues Washington's restrictions have not slowed Beijing's tech ambitions."
+    },
+    {
+      "url": "https://www.nytimes.com/live/2026/11/18/world/trump-china-asia-apec/a-tropical-chinese-city-is-half-empty-and-ready-for-the-summit",
+      "source": "NYT China",
+      "category": "Diplomacy",
+      "headline": "Shenzhen Empties Out, Ramps Up Surveillance Ahead of APEC",
+      "body_text": "Shenzhen has undertaken elaborate preparations, from landscaping to extensive surveillance, ahead of the APEC summit, the NYT reported Nov 18. The city appeared half-empty as authorities cleared space for the gathering."
+    },
+    {
+      "url": "https://www.afp.com/en/chinese-robots-learn-humans-tech-hub-shenzhen",
+      "source": "AFP China",
+      "category": "Technology",
+      "headline": "Chinese Robots Learn From Humans in Tech Hub Shenzhen",
+      "body_text": "Robots in Shenzhen are being trained to learn tasks by observing humans, AFP reported Nov 18, coinciding with the city's turn in the global spotlight for APEC."
+    },
+    {
+      "url": "https://www.cnn.com/2026/11/17/world/video/china-censors-cnn-nvidia-scandal-coverage-ldn-digvid-vrtc",
+      "source": "CNN China",
+      "category": "Technology",
+      "headline": "China Censors CNN's Live Coverage of Nvidia Spy-Scandal Report",
+      "body_text": "CNN's live feed was cut in China when its report on the investigation into Alice Huang's suspected ties to China's spy agency aired, CNN said Nov 17. Beijing denies the claims underlying the probe."
+    },
+    {
+      "url": "https://sinocism.com/p/taiwan-elections-show-what-the-people",
+      "source": "Sinocism",
+      "category": "Cross-Strait",
+      "headline": "Sinocism: Local Issues, Not China, Drive Taiwan Voter Choice",
+      "body_text": "China 'barely factors' into Taiwanese voters' decisions ahead of the Nov 28 local elections, with housing, employment and public safety driving choices, per Tim Culpan's guest post."
+    },
+    {
+      "url": "https://apnews.com/article/trump-xi-marcos-apec-china-philippines-3fc8110f4b4414bfb2c03596f61da862",
+      "source": "AP China",
+      "category": "Diplomacy",
+      "headline": "AP: Tech Snafus Dog Trump's Asia Trip Even as He Seeks to Project Strength",
+      "body_text": "Trump sought to project strength during his China stop, but a series of technological glitches on the trip raised concerns back home, AP reported Nov 18."
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/11/18/trump-arrives-shenzhen-china-where-xi-jinpings-family-history-runs-deep/",
+      "source": "WaPo China",
+      "category": "Diplomacy",
+      "headline": "WaPo: Trump Arrives in Shenzhen, a City Tied to Xi's Family History",
+      "body_text": "Trump arrived in Shenzhen, a city with deep ties to Xi's family history, the Washington Post reported Nov 18, ahead of the trilateral with Putin."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/china-warns-us-of-retaliation-over-chip-curbs-urges-dialogue",
+      "source": "Bloomberg China",
+      "headline": "China Warns of Retaliation If US Imposes New AI Chip Curbs",
+      "body_text": "Beijing warned Washington it would retaliate if the US imposes new AI chip export restrictions, Bloomberg reported Nov 17, while urging continued dialogue. The warning landed a day before Trump and Xi met in Shenzhen.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/trump-administration-weighs-forcing-us-firms-disclose-chinese-ai-use-2026-11-18/",
+      "source": "Reuters China",
+      "headline": "Trump Administration Weighs Forcing US Firms to Disclose Chinese AI Use",
+      "body_text": "The Trump administration is considering a rule requiring US companies to disclose their use of Chinese AI technology, Reuters reported Nov 18, citing sources. The proposal would add to a widening set of AI-related restrictions.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.reuters.com/world/trumps-china-data-center-curb-advances-despite-amazon-google-meta-lobbying-2026-11-17/",
+      "source": "Reuters China",
+      "headline": "China Data Center Curb Advances Despite Big Tech Lobbying",
+      "body_text": "A rule restricting China-linked data centers is advancing despite lobbying from Amazon, Google and Meta, Reuters reported Nov 17. It would require Southeast Asian data centers to seek US approval before buying advanced AI chips.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/banks-pause-480-million-chip-loan-tied-to-china-s-bytedance",
+      "source": "Bloomberg China",
+      "headline": "Banks Pause $480 Million Chip Loan Tied to ByteDance",
+      "body_text": "Banks paused a *$480 million* loan tied to chip purchases linked to **ByteDance**, Bloomberg reported Nov 17, amid a broader clampdown on loopholes used to finance Chinese AI chip purchases.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/us-lawmakers-want-mercedes-benz-disclose-details-chinese-ties-2026-11-17/",
+      "source": "Reuters China",
+      "headline": "US Lawmakers Press Mercedes-Benz on Chinese Ties",
+      "body_text": "US lawmakers asked Mercedes-Benz to disclose details of its ties to China, Reuters reported Nov 17. The request adds the German automaker to a growing list of firms facing congressional scrutiny over China links.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://apnews.com/article/huawei-trade-secrets-china-75cd54a3a8c17717f1da4895c34e4a03",
+      "source": "AP China",
+      "headline": "Prosecutors Cast Huawei as 'Villain' in Trade Secrets Trial Closings",
+      "body_text": "US prosecutors described **Huawei** as a villain in closing arguments of its trade secrets trial, AP reported Nov 17, while the company's lawyer disputed the characterization.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/trump-quad-india-australia-japan-economic-security-talks-before-xi-meeting",
+      "source": "Bloomberg China",
+      "headline": "Trump Pushes AI Cooperation With Quad Leaders Before Xi Meeting",
+      "body_text": "Trump held talks on AI cooperation with Quad leaders from Japan, Australia and India ahead of meeting Xi, Bloomberg reported Nov 17. The consultation was timed immediately before the Shenzhen trilateral.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.wsj.com/world/u-s-enters-unprecedented-three-way-nuclear-rivalry-with-china-and-russia-2f2385c3",
+      "source": "WSJ China",
+      "headline": "WSJ: US Enters Three-Way Nuclear Rivalry With China, Russia",
+      "body_text": "The US has entered an unprecedented three-way nuclear rivalry with China and Russia, the WSJ reported Nov 18, as Trump, Xi and Putin convene together for the first time.",
+      "instrument": "Military"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.reuters.com/world/china/taiwans-apec-envoy-says-he-will-speak-with-other-members-china-hosted-summit-2026-11-18/",
+      "source": "Reuters China",
+      "headline": "Taiwan Says It Is in 'Close Contact' With US Ahead of APEC Trilateral",
+      "body_text": "Taiwan's APEC envoy said he would be in close contact with the US and speak with other members at the China-hosted summit, Reuters reported Nov 18. Taipei is monitoring the trilateral for any cross-strait implications.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.reuters.com/world/chinas-xi-calls-free-open-trade-apec-summit-2026-11-18/",
+      "source": "Reuters China",
+      "headline": "Xi, Putin Blast Western 'Protectionism' and Sanctions as Trump Lands in China",
+      "body_text": "**Xi Jinping** called for open trade and **Vladimir Putin** condemned sanctions in APEC opening remarks, Reuters reported Nov 18, hours before Trump's arrival in Shenzhen. Both leaders spoke to the APEC CEO Summit ahead of the trilateral.",
+      "region": "Multilateral"
+    },
+    {
+      "url": "https://www.cnn.com/trump-xi-putin-meeting-europe-fears-intl",
+      "source": "CNN China",
+      "headline": "Europe Watches Nervously as Trump, Xi, Putin Meet Behind Closed Doors",
+      "body_text": "European officials expressed concern over what Trump, Xi and Putin might discuss privately in Shenzhen, CNN reported Nov 18, noting the three control the large majority of the world's nuclear arsenal. No agenda for the private talks has been disclosed.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.ft.com/content/1e114e7d-59b4-4642-b720-c3e706d9a5c1?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "Defense Minister Dong Jun Makes Surprise Visit to Italy",
+      "body_text": "**Dong Jun** made a surprise visit to Rome, the first by a Chinese defense minister in 18 years, the FT reported Nov 17. The trip comes as strains grow between Beijing and the EU.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinese-steel-imports-remain-threat-indian-industry-tata-steel-ceo-says-2026-11-18/",
+      "source": "Reuters China",
+      "headline": "Tata Steel CEO: Chinese Steel Imports Remain Threat to Indian Industry",
+      "body_text": "Chinese steel imports remain a threat to India's domestic industry, Tata Steel's CEO said, per Reuters Nov 18. The comment follows continued calls from Indian industry for stronger trade protections.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/17/world/asia/putin-kim-jong-un-north-korea-china-meeting.html",
+      "source": "NYT China",
+      "headline": "Kremlin Says Putin Open to Meeting Kim Jong Un in China",
+      "body_text": "**Vladimir Putin** could meet **Kim Jong-un** if the North Korean leader travels to Shenzhen for APEC, the Kremlin said, per the NYT Nov 17. North Korea has not confirmed whether Kim will attend.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://cn.yna.co.kr/view/ACK20261118001300881",
+      "source": "韩联社中文 (Yonhap Chinese ZH)",
+      "headline": "Xi, South Korea's Lee Hold Third Summit in Shenzhen",
+      "body_text": "**Lee Jae-myung** met Xi in Shenzhen on Nov 18 for their third summit, after meetings in Gyeongju last November and Beijing in January, Yonhap's Chinese service reported. The *34-minute* talks covered trade and investment cooperation.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/sheinbaum-offers-new-era-of-mexico-china-ties-after-trade-spat",
+      "source": "Bloomberg China",
+      "headline": "Mexico's Sheinbaum Offers 'New Era' of Ties With China",
+      "body_text": "**Claudia Sheinbaum** offered a 'new era' of Mexico-China relations after a prior trade spat, Bloomberg reported Nov 17. Trump separately plans to meet Sheinbaum during his stop in China.",
+      "region": "Latin America"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/17/business/southeast-asia-china-ai-chips.html",
+      "source": "NYT China",
+      "headline": "New US AI Chip Rules Rattle Southeast Asia's Data Center Boom",
+      "body_text": "New US restrictions could jeopardize billions in Southeast Asian data-center investment built on Chinese demand, the NYT reported Nov 17. Indonesia, Malaysia, Singapore and Thailand now face a harder balance between Washington and Beijing.",
+      "region": "ASEAN"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/11/18/world/asia/xi-trump-china-arrival.html",
+      "source": "NYT China",
+      "category_tag": "Diplomacy",
+      "headline": "Xi Greets Trump at Shenzhen Airport in Unprecedented Gesture Ahead of Trilateral",
+      "body": "**Xi Jinping** personally received **Donald Trump** at Shenzhen Bao'an International Airport on Nov 18, the first time Xi has greeted a foreign leader on the tarmac in more than a decade in power, the NYT reported. Trump arrived for the APEC Economic Leaders' Meeting and a three-way summit with Russian President Vladimir Putin, capping a 48-hour swing through Asia that began in Manila.",
+      "src_line": "NYT, Nov 18, 2026"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/18/2003867931",
+      "source": "Taipei Times (direct)",
+      "category_tag": "PLA",
+      "headline": "Russian Aircraft Enter Taiwan ADIZ, Japanese Airspace as Putin Heads to Shenzhen",
+      "body": "Taiwan's Ministry of National Defense said two Russian military aircraft flew off the island's east coast and exited its ADIZ south of Taitung County on Nov 17. Japan lodged a 'strong protest' with Moscow after two suspected Russian aircraft violated its airspace off Okinoshima, Fukuoka, the same day, prompting JASDF fighter scrambles, Chief Cabinet Secretary Minoru Kihara said.",
+      "src_line": "Taipei Times, citing Taiwan MND and Japan's Chief Cabinet Secretary"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/nvidia-stops-shipping-us-approved-ai-chips-china-2026-11-18/",
+      "source": "Reuters China",
+      "category_tag": "Technology",
+      "headline": "Nvidia Halts H200 AI Chip Shipments to China Despite US Approval",
+      "body": "**Nvidia**'s interim CEO said the company has stopped shipping H200 AI chips to China even though Washington had approved the exports, Reuters reported Nov 18. MOFA spokesperson Guo Jiakun said China has 'repeatedly clarified its principled position' on US chip sales to China when asked about the halt.",
+      "src_line": "Reuters, Nov 18, 2026"
+    },
+    {
+      "url": "https://www.reuters.com/world/us/us-democratic-senator-introduces-bill-end-chinas-trade-status-ahead-trump-xi-2026-11-17/",
+      "source": "Reuters China",
+      "category_tag": "US-China",
+      "headline": "Democratic Senator Introduces Bill to End China's Trade Status Ahead of Trump-Xi Meeting",
+      "body": "A Democratic senator introduced a bill to end China's permanent normal trade relations status on Nov 17, timed to Trump's arrival in Shenzhen for the Xi summit, Reuters reported. The move came the same week House members separately pressed Mercedes-Benz to disclose its Chinese ties.",
+      "src_line": "Reuters, Nov 17, 2026"
+    },
+    {
+      "url": "https://www.wsj.com/economy/central-banking/chinas-central-bank-signals-easing-restraint-as-growth-holds-up-15c19e61",
+      "source": "WSJ China",
+      "category_tag": "PRC-Economy",
+      "headline": "China's Central Bank Signals Restraint on Further Easing as Growth Holds Up",
+      "body": "The PBOC signaled limited appetite for further monetary easing as recent growth data held up, the WSJ reported Nov 18. The signal follows the PBOC's Nov 18 overnight reverse repo of *CNY700.2 billion* at an unchanged 1.25% rate, conducted on the final day of this month's tax-payment window.",
+      "src_line": "WSJ, Nov 18, 2026"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.reuters.com/technology/rockstar-promotes-gta-vi-china-despite-lack-sales-approval-2026-11-18/",
+      "source": "Reuters China",
+      "category": "Technology",
+      "headline": "Rockstar Promotes GTA VI in China Without Sales Approval",
+      "body_text": "Rockstar is promoting GTA VI in China despite lacking official sales approval, Reuters reported Nov 18.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNS0UyLVpaaDN6VWhzREJKV1dQLTJEcnRaZ2stNFVianJxVXpjVWZFckRLS0d3dHR1aEUzbGxmdmlrSm95U2p2UnlONkFSTl9lMFpBNVB5dHp1dWlqRmFvdTdyZk5Iam9weDVSY1FWcWhrQVY1RWZUNmVHZndIOTZVQkQwWEdqdTAwUEozdG9Yajgxelp3Z01Eam9pN1p5Vl9aZERHcHYwSU5UNjNtUEhiWC02d1c0dw?oc=5",
+      "source": "Reuters China",
+      "category": "Energy",
+      "headline": "Vestas CEO Calls for Tougher EU Rules on Chinese Wind Software",
+      "body_text": "Vestas's chief executive called for tougher EU rules on Chinese software used in wind turbines, Reuters reported Nov 17.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/brazil-contests-eu-review-anglo-americans-nickel-mine-sale-chinas-mmg-2026-11-17/",
+      "source": "Reuters China",
+      "category": "Trade",
+      "headline": "Brazil Contests EU Review of Anglo American Nickel Mine Sale to China's MMG",
+      "body_text": "Brazil is contesting an EU review of Anglo American's sale of a nickel mine to China's MMG, Reuters reported Nov 17.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/18/apec-trump-xi-putin-shenzhen.html",
+      "source": "CNBC China",
+      "category": "Diplomacy",
+      "headline": "Three Things to Watch as Trump, Xi, Putin Meet in Shenzhen",
+      "body_text": "CNBC outlined three dynamics to watch as Trump, Xi and Putin convene alongside the APEC leaders' meeting in Shenzhen.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/18/2003867946",
+      "source": "Taipei Times (direct)",
+      "category": "Cross-Strait",
+      "headline": "PNG's Marape Tells Xi Closing Taiwan Office 'Wasn't Easy'",
+      "body_text": "Papua New Guinea's PM James Marape told Xi closing Taiwan's office in PNG 'wasn't easy' amid domestic challenges, Taipei Times reported Nov 18.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/18/2003867948",
+      "source": "Taipei Times (direct)",
+      "category": "Cross-Strait",
+      "headline": "KMT Denies Circulating 10-Year Unification Plan Is Party Policy",
+      "body_text": "Taiwan's KMT denied a circulating 10-year 'peaceful unification' proposal represents party policy, Taipei Times reported Nov 18.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/17/world/asia/xi-apec.html",
+      "source": "NYT China",
+      "category": "Diplomacy",
+      "headline": "NYT: Spy Scandal, Trade Friction Cloud Xi's APEC Moment",
+      "body_text": "Xi faces export worries, a spy scandal and an unpredictable Trump floating a Kim Jong-un meeting at his Shenzhen summit, NYT reported Nov 17.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/asics-steps-up-china-push-with-goal-to-more-than-double-stores",
+      "source": "Bloomberg China",
+      "category": "Business",
+      "headline": "Asics Aims to More Than Double China Stores",
+      "body_text": "Asics plans to more than double its store count in China as part of an expanded market push, Bloomberg reported Nov 18.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/peru-s-fujimori-appeals-to-xi-for-chinese-help-against-el-nino",
+      "source": "Bloomberg China",
+      "category": "Diplomacy",
+      "headline": "Peru's Fujimori Appeals to Xi for Help Against El Niño",
+      "body_text": "Peru's president Fujimori appealed to Xi for Chinese assistance ahead of an anticipated El Niño event, Bloomberg reported Nov 17.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.reuters.com/legal/litigation/authorities-raid-factory-making-illegal-chinese-vapes-us-2026-11-17/",
+      "source": "Reuters China",
+      "category": "Legal",
+      "headline": "US Raids Factory Making Illegal Chinese Vapes",
+      "body_text": "US authorities raided a factory producing illegal Chinese-origin vapes, Reuters reported Nov 17 in an exclusive.",
+      "color_bar_class": "cb-lt"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.wsj.com/world/canada-and-china-draw-closer-with-expanded-trade-pact-b4566a38",
+      "source": "WSJ China",
+      "headline": "Canada, China Expand Trade Pact, Cutting Tariffs Further",
+      "body_text": "Canada and China agreed to cut tariffs further under an expanded trade pact, the WSJ reported Nov 18, as Ottawa diversifies from reliance on the US.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/bhp-rio-tinto-executives-meet-china-leaders-iron-ore-pressure-builds-2026-11-18/",
+      "source": "Reuters China",
+      "headline": "BHP, Rio Tinto Executives to Meet China Leaders Amid Iron Ore Pressure",
+      "body_text": "Executives from BHP and Rio Tinto are set to meet Chinese leaders as pressure builds in the iron ore market, Reuters reported Nov 18.",
+      "companies": [
+        "BHP",
+        "Rio Tinto"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.reuters.com/business/energy/china-gas-doubles-volume-20-yr-lng-deal-with-venture-global-2026-11-18/",
+      "source": "Reuters China",
+      "headline": "China Gas Doubles Volume in 20-Year LNG Deal With Venture Global",
+      "body_text": "China Gas doubled the contracted volume in its 20-year LNG supply deal with Venture Global, Reuters reported Nov 18.",
+      "companies": [
+        "China Gas",
+        "Venture Global"
+      ],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-jetour-reaches-deal-produce-vehicles-brazil-sources-say-2026-11-17/",
+      "source": "Reuters China",
+      "headline": "Jetour Reaches Deal to Produce Vehicles in Brazil",
+      "body_text": "China's Jetour reached a deal to produce vehicles in Brazil, according to sources cited by Reuters Nov 17.",
+      "companies": [
+        "Jetour"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/china-bank-rally-gains-momentum-as-global-ai-trade-unravels",
+      "source": "Bloomberg China",
+      "headline": "China Bank Stock Rally Gains Momentum as Global AI Trade Unravels",
+      "body_text": "Chinese bank stocks extended a rally as the global AI trade unwound elsewhere, Bloomberg reported Nov 17.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/chinas-jdcom-misses-third-quarter-estimates-weak-consumer-demand-2026-11-17/",
+      "source": "Reuters China",
+      "headline": "JD.com Shares Fall Despite In-Line Third-Quarter Results",
+      "body_text": "JD.com shares fell even after third-quarter results came in roughly in line with estimates, Reuters reported Nov 17, with weak consumer demand cited.",
+      "companies": [
+        "JD.com"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-hongqi-evaluating-partners-including-vw-stellantis-build-cars-europe-2026-11-17/",
+      "source": "Reuters China",
+      "headline": "Hongqi Evaluates VW, Stellantis as Partners to Build Cars in Europe",
+      "body_text": "China's Hongqi is evaluating partners including Volkswagen and Stellantis to build cars in Europe, Reuters reported Nov 17.",
+      "companies": [
+        "Hongqi",
+        "Volkswagen",
+        "Stellantis"
+      ],
+      "sector": "auto"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "TAO spokesperson",
+      "topic": "Taiwan status amid US-China-Russia trilateral summit",
+      "statement": "Per TAO: the Taiwan question is purely China's internal affair, unrelated to the Trump-Xi-Putin talks in Shenzhen.",
+      "original_zh": "台湾问题纯属中国内政",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "A reporter asked whether the trilateral summit between Trump, Xi and Putin in Shenzhen would touch on Taiwan.",
+      "source": "中国新闻网 (China News Service)",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-18/10734210.shtml"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Nvidia halting H200 chip shipments to China",
+      "statement": "Per MOFA: China has repeatedly clarified its principled position on the issue of US chips being exported to China.",
+      "original_zh": "中方此前已经多次阐明在美国输华芯片问题上的原则立场",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "An AFP reporter asked Guo Jiakun at the Nov 18 briefing about Nvidia's interim CEO saying the company would no longer supply H200 chips to China.",
+      "source": "搜狐 (Sohu), citing MOFA briefing",
+      "url": "https://m.sohu.com/a/1103241433_163278?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA spokesperson",
+      "topic": "Agenda for Trump-Xi-Putin trilateral summit in Shenzhen",
+      "statement": "Per MOFA: the Chinese, Russian and American heads of state will have in-depth exchanges of views on important issues concerning global peace.",
+      "original_zh": "中俴美三国元首将就事关全球和平的重要问题深入交换意见",
+      "addressed_to": "US",
+      "tone": "routine",
+      "context": "MOFA addressed the scope of the trilateral summit ahead of Trump's Nov 18 arrival in Shenzhen.",
+      "source": "新浪财经 (Sina Finance), citing MOFA briefing",
+      "url": "https://finance.sina.cn/2026-11-18/detail-inizcvuz1074665.d.html?vt=4"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "MK",
+      "who": "Minoru Kihara",
+      "handle_context": "Japan Chief Cabinet Secretary",
+      "platform_date": "Taipei Times · Nov 18, 2026",
+      "quote_text": "The violation of Japan's airspace by Russian aircraft is a serious infringement of Japan's sovereignty.",
+      "analyst_note": "Japan scrambled JASDF fighters after two suspected Russian aircraft entered its airspace off Okinoshima, Fukuoka, on Nov 17, hours ahead of Putin's arrival in Shenzhen.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/18/2003867931"
+    },
+    {
+      "avatar_initials": "JM",
+      "who": "James Marape",
+      "handle_context": "Papua New Guinea Prime Minister",
+      "platform_date": "Taipei Times · Nov 18, 2026",
+      "quote_text": "Mr President, if you want to appreciate Papua New Guinea's effort in acknowledging the fullest integrity of China in the effort to close Taiwan, it wasn't easy. I faced challenges from within, because we also relate to many nations, but we were resolved.",
+      "analyst_note": "Taiwan closed its representative office in Papua New Guinea earlier this month and halted LNG purchases from the country, citing Chinese pressure.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/18/2003867946"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.taipeitimes.com/News/front/archives/2026/11/18/2003867931",
+    "https://www.nytimes.com/2026/11/18/world/asia/putin-taiwan-japan-korea-vietnam-bombers.html",
+    "https://www.nytimes.com/2026/11/17/world/asia/putin-kim-jong-un-north-korea-china-meeting.html",
+    "https://www.reuters.com/world/china/taiwans-apec-envoy-says-he-will-speak-with-other-members-china-hosted-summit-2026-11-18/",
+    "https://cn.yna.co.kr/view/ACK20261118001300881"
+  ],
+  "story_count": 100,
+  "oped_count": 7,
+  "academic_count": 0,
+  "source_count": 124,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-18.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-18.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
