@@ -1,0 +1,629 @@
+{
+  "digest_date": "Thursday, November 19, 2026",
+  "re_line": "RE: Trump-Xi-Putin trilateral in Shenzhen · Xi warns Trump on Taiwan · TSMC, Samsung halt China chip shipments",
+  "market_indicators": {
+    "brent": {
+      "value": "89.08",
+      "change_pct": -3.63,
+      "as_of": "Nov 19"
+    },
+    "usd_cny": {
+      "value": "6.6559",
+      "change_pct": -0.22,
+      "as_of": "Nov 19"
+    },
+    "sse_composite": {
+      "value": "3,577.62",
+      "change_pct": -1.56,
+      "as_of": "Nov 19"
+    },
+    "hang_seng": {
+      "value": "22,841.62",
+      "change_pct": -4.86,
+      "as_of": "Nov 19"
+    },
+    "usd_cnh": {
+      "value": "6.6683",
+      "change_pct": 0.01,
+      "as_of": "Nov 19"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "cpi_yoy": "+0.7%",
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "Xi Jinping, Donald Trump and Vladimir Putin held the first-ever US-China-Russia trilateral in Shenzhen on Nov 19, issuing a joint declaration on UN reform, oil supply and nuclear-risk dialogue.",
+    "Xi told Trump during their bilateral that Washington must 'do the right thing' on Taiwan to keep relations on the 'right trajectory,' per Nikkei Asia.",
+    "TSMC and Samsung suspended some chip shipments to Chinese customers after the US Commerce Department introduced new export controls, the Financial Times reported."
+  ],
+  "key_stat": {
+    "number": "$71.8B",
+    "label": "Indonesia-China strategic partnerships signed around APEC",
+    "context": "Four agreements covering trade, investment and infrastructure were struck on the sidelines of the Shenzhen summit, part of a broader wave of bilateral deals this week.",
+    "source": "Reuters"
+  },
+  "prc_government": [
+    {
+      "ministry": "Ministry of Foreign Affairs",
+      "ministry_chinese": "外交部",
+      "official": "Not individually attributed in source",
+      "action": "Publishes China-Russia-US Leaders' Peace Declaration",
+      "document": "中俄美元首和平宣言 (China-Russia-US Leaders' Peace Declaration)",
+      "detail": "The declaration, issued after the Nov 19 Shenzhen trilateral, commits the three countries to pursue UN reform, increase production and supply of refined oil products, and oppose 'abuse' of ICC jurisdiction over state officials.",
+      "source_label": "MOFA ZH",
+      "url": "https://www.mfa.gov.cn/zyxw/202611/t20261119_12063191.shtml"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "Not individually named in source",
+      "action": "Conducts large overnight reverse repo operation",
+      "document": null,
+      "detail": "PBOC conducted *RMB 700.2 billion* in overnight reverse repos to ease liquidity during the tax-payment period, per Chinese financial media Nov 19.",
+      "source_label": "PBOC ZH",
+      "url": "https://finance.china.com/jinrong/13004689/20261119/49886343.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson (unnamed in source)",
+      "action": "Responds to China-Canada trade consultation outcomes",
+      "document": null,
+      "detail": "MOFCOM's spokesperson answered questions on the results of recent China-Canada economic and trade consultations, per the ministry's trade-remedy information site Nov 19.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://cacs.mofcom.gov.cn/article/gnwjmdt/sb/sbqt/202611/189808.html"
+    },
+    {
+      "ministry": "Ministry of Foreign Affairs",
+      "ministry_chinese": "外交部",
+      "official": "Guo Jiakun, MOFA spokesperson",
+      "action": "Holds Nov 19 regular press briefing",
+      "document": null,
+      "detail": "Briefing addressed whether a China-Japan leaders' meeting occurred at APEC, protocol arrangements for Takaichi's reception, and whether a Kim Jong Un-Trump meeting is planned.",
+      "source_label": "MOFA ZH",
+      "url": "https://mn.china-embassy.gov.cn/fyrth/202611/t20261119_12062896.htm"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 20,
+      "headline": "PBOC monthly LPR fixing",
+      "detail": "Recurring monthly loan prime rate announcement."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors/magistrates and roughly 11,000 offices; read as a mid-term on President Lai Ching-te."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "国家公祭日 annual commemoration."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral (Miami)",
+      "detail": "US hosts; SCMP reported Xi and Putin could hold a second encounter if Putin travels to Miami."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.washingtonpost.com/national-security/2026/11/18/trumps-dream-nuclear-deal-meets-reality-an-unwilling-russia-china/",
+      "source": "WaPo",
+      "category": "Diplomacy",
+      "headline": "Trump's Push for Nuclear Deal Meets Resistant Russia and China",
+      "body_text": "Trump's push for a nuclear arms agreement is running into resistance from Russia and China, the Washington Post reported Nov 18. Neither Beijing nor Moscow has signaled willingness to negotiate arsenal reductions ahead of the Shenzhen trilateral."
+    },
+    {
+      "url": "https://www.cnn.com/2026/11/18/politics/trump-china-russia-putin-xi",
+      "source": "CNN",
+      "category": "Diplomacy",
+      "headline": "CNN Examines Trump's Warm Treatment of Xi and Putin",
+      "body_text": "CNN's Nov 18 analysis noted Trump treats summits with Xi and Putin as if dealing with friends despite both being US adversaries. The piece examined Trump's personal rapport with both leaders during the Shenzhen trip."
+    },
+    {
+      "url": "https://www.economist.com/finance-and-economics/2026/11/19/bond-yields-are-rising-everywhere-except-china",
+      "source": "Economist",
+      "category": "PRC-Economy",
+      "headline": "Bond Yields Climb Globally Except in China",
+      "body_text": "The Economist reported Nov 19 that government bond yields are rising in most major economies while China's remain subdued. The divergence tracks contrasting monetary and growth trajectories between China and global peers."
+    },
+    {
+      "url": "https://www.wsj.com/finance/stocks/u-s-stocks-extend-slide-on-nvidia-china-fears-ea169587",
+      "source": "WSJ",
+      "category": "PRC-Economy",
+      "headline": "US Stocks Extend Slide on Nvidia, China Fears",
+      "body_text": "US equities extended their slide as worries deepened over Nvidia and China-related risks, the Wall Street Journal reported Nov 19. The sell-off follows a run of chip-related headlines including export-control actions affecting TSMC and Samsung shipments to China."
+    },
+    {
+      "url": "https://www.wsj.com/finance/commodities-futures/copper-at-lowest-since-april-amid-ai-market-turmoil-chinese-demand-concerns-4325361e",
+      "source": "WSJ",
+      "category": "Energy",
+      "headline": "Copper Falls to Lowest Since April on China Demand Fears",
+      "body_text": "Copper prices fell to their lowest level since April amid AI-market turmoil and concerns over Chinese demand, the Wall Street Journal reported Nov 19. The metal has been pressured by uncertainty over China's industrial activity and the broader AI-sector selloff."
+    },
+    {
+      "url": "https://www.reuters.com/legal/litigation/global-patent-filings-hit-record-high-2025-china-drives-growth-un-agency-says-2026-11-18/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "Global Patent Filings Hit Record High, China Drives Growth",
+      "body_text": "Global patent filings hit a record high in 2025, driven largely by growth from China, a UN agency said, per Reuters Nov 18. China's filing volume continued to outpace other major economies."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/chinese-chip-design-stocks-sink-on-concerns-over-foundry-access",
+      "source": "Bloomberg",
+      "category": "Technology",
+      "headline": "Chinese Chip-Design Stocks Sink on Foundry Access Fears",
+      "body_text": "Chinese chip-design stocks fell on investor concern over continued foundry access, Bloomberg reported Nov 19. The declines track jitters after TSMC and Samsung suspended some shipments to Chinese customers following new US export-control measures."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/trump-putin-plan-to-hold-separate-meeting-thursday-in-china",
+      "source": "Bloomberg",
+      "category": "Diplomacy",
+      "headline": "Trump, Putin Plan Separate Meeting Alongside Trilateral",
+      "body_text": "Trump and Putin planned a separate bilateral alongside their trilateral session with Xi in Shenzhen, Bloomberg reported Nov 18. The arrangement added a fourth configuration of talks to an already dense day of APEC-adjacent diplomacy."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.wsj.com/politics/national-security/the-jensen-huang-saga-has-reinvigorated-washingtons-china-hawks-0bc1bd4a",
+      "source": "WSJ",
+      "headline": "Jensen Huang Saga Reinvigorates Washington's China Hawks",
+      "body_text": "Jensen Huang's exit from Nvidia has reinvigorated China hawks in Washington, the Wall Street Journal reported Nov 19. Lawmakers are pressing for tighter controls on US chip sales to China in the saga's aftermath.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/us-house-panel-seeks-microsoft-briefing-reported-ai-deal-talks-with-chinas-2026-11-18/",
+      "source": "Reuters",
+      "headline": "US House Panel Seeks Microsoft Briefing on ByteDance AI Talks",
+      "body_text": "A US House panel asked Microsoft for a briefing on reported AI deal talks with China's ByteDance, Reuters reported Nov 18. The request follows continued congressional scrutiny of US tech firms' dealings with Chinese companies.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/trump-suggests-us-can-sell-blackwell-chips-to-china-in-future",
+      "source": "Bloomberg",
+      "headline": "Trump Suggests US Could Sell Blackwell Chips to China 'In Future'",
+      "body_text": "Trump suggested the US could eventually sell Nvidia's Blackwell-class chips to China, Bloomberg reported Nov 19. The remark came during his Shenzhen visit for the APEC summit and trilateral talks with Xi and Putin.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/trump-pushes-for-reluctant-xi-to-curb-china-s-nuclear-arsenal",
+      "source": "Bloomberg",
+      "headline": "Trump Pushes Reluctant Xi to Curb China's Nuclear Arsenal",
+      "body_text": "Trump pushed Xi to curb China's nuclear arsenal during their Shenzhen talks, Bloomberg reported Nov 19, describing Beijing's response as reluctant. China has not previously joined US-Russia nuclear arms-control frameworks.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://www.scmp.com/news/us/article/3374807/us-panel-urges-congress-punish-china-over-panama-flagged-ship-detentions",
+      "source": "SCMP",
+      "headline": "USCC Urges Congress to Punish China Over Panama-Flagged Ship Detentions",
+      "body_text": "The bipartisan US-China Economic and Security Review Commission urged Congress to declare China's detention of hundreds of Panama-flagged ships 'economic coercion,' per its annual report released Nov 18. The report follows the Panamanian Supreme Court's move to strip a CK Hutchison subsidiary of its right to run two Panama Canal ports.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/11/19/huangs-fall-shuts-us-chip-door-to-china-handing-huawei-the-market.html",
+      "source": "CNBC",
+      "headline": "Huang's Nvidia Exit Could Hand Huawei the Chinese Chip Market",
+      "body_text": "Jensen Huang's exit from Nvidia could accelerate China's shift toward Huawei chips, The Asia Group's George Chen told CNBC Nov 19. Chen said Congress could eventually move toward a full ban on US chip sales to China.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/citi-ceo-fraser-stresses-china-engagement-before-trump-xi-talks",
+      "source": "Bloomberg",
+      "headline": "Citi CEO Stresses China Engagement Ahead of Trump-Xi Talks",
+      "body_text": "Citigroup CEO Fraser stressed the importance of continued China engagement ahead of the Trump-Xi talks, Bloomberg reported Nov 18. The comments came as US banks weigh their China exposure amid the ongoing trade and tech frictions.",
+      "instrument": "Investment"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/19/2003867998",
+      "source": "Taipei Times",
+      "headline": "Taiwan 'in Close Contact' With US Ahead of Trilateral Summit",
+      "body_text": "Taiwan said it is in close contact with the US ahead of the Nov 19 Trump-Xi-Putin trilateral, Presidential Office spokeswoman Karen Kuo said. Kuo noted Russia sent two military aircraft down Taiwan's east coast this week amid rising Chinese military pressure.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/feat/archives/2026/11/19/2003867995",
+      "source": "Taipei Times",
+      "headline": "KMT Figures Pitch Ten-Year Cross-Strait Integration Plan",
+      "body_text": "Senior KMT figures including former Examination Yuan head John Kuan and ex-NSC secretary-general Su Chi met to advance a 'ten-year plan for a cross-strait peaceful integration initiative,' per Taipei Times. The proposal calls for a referendum, timed to the 2028 presidential election, authorizing cross-strait common-market negotiations with Beijing.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/19/japan-china-trump-takaichi-taiwan-.html",
+      "source": "CNBC",
+      "headline": "Takaichi Gets Chilly Reception in China on First Leader Visit Since 2019",
+      "body_text": "Japanese PM Sanae Takaichi received a subdued welcome on her first trip to China as leader for the APEC summit, CNBC reported Nov 19. Beijing has shown limited appetite for repairing ties strained by Takaichi's Taiwan remarks.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/18/world/asia/japan-china-takaichi-song-sukiyaki-apec.html",
+      "source": "NYT",
+      "headline": "Song Choice for Takaichi's APEC Welcome Draws Scrutiny",
+      "body_text": "A song chosen to welcome Takaichi at the APEC summit in Shenzhen grew out of 1960s Japanese protests against the American military presence, the New York Times reported Nov 18. The selection drew attention amid the ongoing Beijing-Tokyo freeze over Takaichi's Taiwan comments.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/third-attack-week-suspends-traffic-over-crimean-bridge-russian-official-says-2026-11-19/",
+      "source": "Reuters",
+      "headline": "Ukraine Strikes Crimean Bridge for Third Time in a Week",
+      "body_text": "Ukraine struck the Crimean Bridge for the third time in a week, Reuters reported Nov 19, disrupting traffic just ahead of the Trump-Xi-Putin trilateral in Shenzhen. The timing underscored the gap between the summit's diplomatic choreography and continued fighting in Ukraine.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3374961/japans-takaichi-meets-putin-rare-talks-amid-strained-ties-russia",
+      "source": "SCMP",
+      "headline": "Takaichi Holds Rare 30-Minute Talks With Putin at APEC in China",
+      "body_text": "Takaichi and Putin held about 30 minutes of talks on the APEC sidelines in Shenzhen, SCMP reported, the first face-to-face meeting between the two amid strained Japan-Russia ties. The talks came amid Moscow's war in Ukraine and the recent arrest of a Japanese journalist in Russia on espionage allegations.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.ft.com/content/c8be5131-b39a-4507-a5ca-9cedb07f7d38?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "China Uses COP31 Sidelines to Protest EV, Green-Energy Tariffs",
+      "body_text": "China used sideline meetings at the COP31 climate summit to complain about tariffs on EVs and green-energy products, the Financial Times reported. The trade concerns were raised directly with counterparts on the summit margins.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.ft.com/content/2166766c-b821-420b-b1e0-4e1cd481fcea?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "EU Moves Toward De Facto Export Quotas on Chinese Goods",
+      "body_text": "The EU is moving toward de facto export quotas on Chinese goods, breaking with its traditional free-trade posture, the Financial Times reported Nov 19. Brussels' shift reflects unease over Chinese industrial overcapacity across multiple sectors.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/19/world/asia/putin-xi-trump-apec-family-photo.html",
+      "source": "NYT",
+      "headline": "Putin's Return to APEC 'Family Photo' Tests Western Leaders",
+      "body_text": "Australia's Anthony Albanese and Canada's Mark Carney defended joining the APEC 'family photo' with Putin as a courtesy to host China, the New York Times reported Nov 19, despite domestic criticism. Putin's return to the group portrait tested how Western leaders balance protocol against Moscow's isolation over Ukraine.",
+      "region": "Multilateral"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://apnews.com/article/trump-xi-putin-nuclear-ukraine-iran-a04dc76ed8e786b087e2c1ea9598783a",
+      "source": "AP",
+      "category_tag": "Diplomacy",
+      "headline": "Xi, Trump and Putin Hold First-Ever Trilateral, Issue Peace Declaration",
+      "body": "Xi Jinping, Donald Trump and Vladimir Putin held the first three-way meeting among their countries' leaders in Shenzhen on Nov 19, issuing a joint declaration committing to pursue UN reform, increase refined oil product supply and resist 'abuse' of ICC jurisdiction over state officials. Xi called the talks 'positive, constructive and fruitful,' per Xinhua; SCMP reported Xi also invoked the WWII allied victory while Trump raised nuclear arms cuts during the session.",
+      "src_line": "AP · Nov 19, 2026"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/international-relations/apec/xi-tells-trump-to-do-right-thing-on-taiwan-as-trade-truce-remains-in-flux",
+      "source": "Nikkei Asia",
+      "category_tag": "Cross-Strait",
+      "headline": "Xi Tells Trump to 'Do the Right Thing' on Taiwan",
+      "body": "Xi Jinping told Donald Trump during their bilateral that he wants to keep China-US ties on the 'right trajectory' but reiterated a warning on the Taiwan question, Nikkei Asia reported Nov 19. The trade truce reached at the May 2026 Beijing summit remains unresolved on export-control and AI issues.",
+      "src_line": "Nikkei Asia · Nov 19, 2026"
+    },
+    {
+      "url": "https://www.ft.com/content/d42dd235-7b0e-4651-a8d2-f7b7b4963a74?syn-25a6b1a6=1",
+      "source": "FT",
+      "category_tag": "Technology",
+      "headline": "TSMC, Samsung Suspend Some Chip Shipments to Chinese Customers",
+      "body": "TSMC and Samsung have suspended some chip shipments to Chinese customers after the US Commerce Department introduced new export controls, the Financial Times reported Nov 19. The halt adds to a week of chip-supply disruption that has also touched Nvidia's own shipments to China.",
+      "src_line": "FT · Nov 19, 2026"
+    },
+    {
+      "url": "https://www.reuters.com/world/indonesia-china-agree-four-strategic-partnerships-worth-718-billion-2026-11-18/",
+      "source": "Reuters",
+      "category_tag": "PRC-Economy",
+      "headline": "Indonesia and China Sign Four Strategic Partnerships Worth $71.8 Billion",
+      "body": "Indonesia and China agreed four strategic partnerships valued at *$71.8 billion*, Reuters reported Nov 18. The deals form part of a wave of bilateral agreements struck around the Shenzhen APEC summit.",
+      "src_line": "Reuters · Nov 18, 2026"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/china-seeks-advanced-nvidia-chips-ai-weapons-despite-us-curbs-report-says-2026-11-18/",
+      "source": "Reuters",
+      "category_tag": "PLA",
+      "headline": "China Seeks Advanced Nvidia Chips for AI Weapons Despite US Curbs",
+      "body": "China is seeking advanced Nvidia chips for use in AI weapons systems despite existing US export curbs, according to a report cited by Reuters Nov 18. The pursuit comes as TSMC and Samsung have separately suspended chip shipments to Chinese customers following new Commerce Department controls.",
+      "src_line": "Reuters · Nov 18, 2026"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.ft.com/content/82e63f96-3a5e-47d1-9fca-9f3401903abe?syn-25a6b1a6=1",
+      "source": "FT",
+      "category": "Finance",
+      "headline": "Jardines Weighs First Private Equity Fund",
+      "body_text": "The 194-year-old Hong Kong trading house is transitioning from owner-operator to investment group.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/nike-bets-on-cricket-to-triple-india-sales-as-china-sputters",
+      "source": "Bloomberg",
+      "category": "Business",
+      "headline": "Nike Bets on Cricket to Triple India Sales as China Sputters",
+      "body_text": "Nike is pivoting growth strategy to India via cricket sponsorships as its China sales weaken.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/china-ai-biotech-firm-raises-200-million-in-oman-backed-round",
+      "source": "Bloomberg",
+      "category": "Technology",
+      "headline": "China AI Biotech Firm Raises $200 Million in Oman-Backed Round",
+      "body_text": "An Oman-backed funding round provided *$200 million* to a Chinese AI biotech firm.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/china-airport-greetings-show-how-xi-views-trump-putin-takaichi",
+      "source": "Bloomberg",
+      "category": "Diplomacy",
+      "headline": "China's Airport Greetings Show How Xi Ranks Trump, Putin, Takaichi",
+      "body_text": "Contrasting tarmac receptions at APEC signaled Beijing's differing treatment of visiting leaders.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/china-coking-coal-prices-hit-three-month-low-as-supply-recovers",
+      "source": "Bloomberg",
+      "category": "Energy",
+      "headline": "China Coking Coal Prices Hit Three-Month Low as Supply Recovers",
+      "body_text": "Coking coal prices fell to a three-month low as Chinese domestic supply recovered.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/china-oil-imports-rebound-as-beijing-turns-back-to-stockpiling",
+      "source": "Bloomberg",
+      "category": "Energy",
+      "headline": "China Oil Imports Rebound as Beijing Resumes Stockpiling",
+      "body_text": "China's crude oil imports rebounded as Beijing resumed building strategic stockpiles.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://apnews.com/article/building-collapse-chinese-business-overseas-foreign-ownership-a6603acdcb51d8dcda0bb0f130b07fa5",
+      "source": "AP",
+      "category": "Legal",
+      "headline": "Chinese Executive Convicted in Bangkok Building Collapse Case",
+      "body_text": "A Chinese executive was convicted in a case tied to a deadly Bangkok building collapse.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.bloomberg.com/graphics/2026-china-ai-jobs-slump/",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "AI Threatens to Make China's Jobs Slump Much Worse",
+      "body_text": "Automation and AI adoption threaten to deepen China's ongoing youth employment slump.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/finance/daiwa-to-bolster-china-investment-banking-as-it-buys-out-local-partners",
+      "source": "Nikkei Asia",
+      "category": "Finance",
+      "headline": "Daiwa to Bolster China Investment Banking, Buys Out Local Partners",
+      "body_text": "Japan's Daiwa Securities plans to strengthen cross-border M&A services in China via a buyout of local partners.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/china-tech/all-chinese-players-will-rely-on-domestic-chips-eventually-tencent",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Tencent: 'All Chinese Players' Will Rely on Domestic Chips Eventually",
+      "body_text": "Tencent President Martin Lau said US AI chip curbs will accelerate China's shift to domestic chips.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/19/china-south-korea-trade-deal-films-gaming.html",
+      "source": "CNBC",
+      "category": "Business",
+      "headline": "South Korean Media, Gaming Stocks Rally on China Trade Deal",
+      "body_text": "Korean media, gaming and travel stocks surged on hopes of greater access to the Chinese market.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/hong-kong-drops-case-against-chinese-sea-captain-over-baltic-pipeline-damage-2026-11-19/",
+      "source": "Reuters",
+      "category": "Sanctions",
+      "headline": "Hong Kong Drops Case Against Chinese Captain Over Baltic Pipeline",
+      "body_text": "Hong Kong prosecutors dropped their case against a Chinese sea captain accused of damaging a Baltic Sea pipeline, Reuters reported Nov 19. The captain had been investigated over damage to undersea infrastructure linking Baltic states."
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/alibaba-s-revenue-beats-estimates-during-china-s-ai-boom",
+      "source": "Bloomberg",
+      "headline": "Alibaba's Revenue Beats Estimates During China's AI Boom",
+      "body_text": "Alibaba's quarterly revenue beat analyst estimates, Bloomberg reported Nov 19, amid what it described as China's AI boom.",
+      "companies": [
+        "Alibaba"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/tencent-s-sales-miss-estimates-in-setback-for-founder-s-ai-push",
+      "source": "Bloomberg",
+      "headline": "Tencent Sales Miss Estimates in Setback for AI Push",
+      "body_text": "Tencent's sales came in below analyst estimates, Bloomberg reported Nov 18, in what it called a setback for its founder's AI investment push.",
+      "companies": [
+        "Tencent"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/18/ford-us-battery-cells-catl-tech.html",
+      "source": "CNBC",
+      "headline": "Ford Starts US Battery Cell Production Using CATL Technology",
+      "body_text": "Ford began US production and shipment of battery cells for next-generation EVs using technology licensed from China's CATL, CNBC reported Nov 18.",
+      "companies": [
+        "Ford",
+        "CATL"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/china-markets-up-to-2-billion-of-dollar-bonds-in-hong-kong",
+      "source": "Bloomberg",
+      "headline": "China Markets Up to $2 Billion of Dollar Bonds in Hong Kong",
+      "body_text": "China is marketing up to *$2 billion* of dollar-denominated bonds in Hong Kong, Bloomberg reported Nov 19.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/musk-pledges-higher-tesla-output-china-plant-chinese-state-media-says-2026-11-19/",
+      "source": "Reuters",
+      "headline": "Musk Pledges Higher Tesla Output at China Plant",
+      "body_text": "Elon Musk pledged to raise Tesla's output at its China plant, Chinese state media reported Nov 19, citing comments made during his Shenzhen visit.",
+      "companies": [
+        "Tesla"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/chinas-jetour-start-brazil-car-production-2027-plans-69-million-investment-2026-11-18/",
+      "source": "Reuters",
+      "headline": "China's Jetour to Start Brazil Car Production in 2027",
+      "body_text": "Chinese automaker Jetour will begin car production in Brazil in 2027 with a planned *$69 million* investment, Reuters reported Nov 18.",
+      "companies": [
+        "Jetour"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/china-holds-soybean-imports-at-ports-as-domestic-supplies-swell",
+      "source": "Bloomberg",
+      "headline": "China Holds Soybean Imports at Ports as Domestic Supplies Swell",
+      "body_text": "China is holding soybean shipments at ports as domestic supplies swell, Bloomberg reported Nov 19.",
+      "companies": [],
+      "sector": "macro"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "President, CCP General Secretary",
+      "topic": "Major-power relations",
+      "statement": "Healthy, positive interaction among major countries is not a multiple-choice question, it's a required one.",
+      "original_zh": "大国良性互动不是选择题，而是必答题",
+      "addressed_to": "US",
+      "tone": "conciliatory",
+      "context": "Remarks made during the Nov 19 Trump-Xi-Putin trilateral meeting in Shenzhen.",
+      "source": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/yw_214049/16500855.html"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "President, CCP General Secretary",
+      "topic": "Taiwan question",
+      "statement": "The United States must persist in doing the right thing on the Taiwan question.",
+      "original_zh": "美国在台湾问题上要坚持做正确的事",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Remarks made by Xi during his bilateral meeting with Trump ahead of the trilateral, per Lianhe Zaobao Nov 19.",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "url": "https://www.zaobao.com.sg/news/china/story20261119-10025272"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "APEC protocol for Japan PM's reception",
+      "statement": "As the host, China has, in accordance with international practice, made appropriate protocol arrangements for all participants.",
+      "original_zh": "作为东道主，中方根据国际惯例对所有参会方作出适当的礼宾安排",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Statement responded to Japanese media reports describing Takaichi's airport reception as 'simple' compared with other leaders'.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://www.bjnews.com.cn/detail/1795078652129249.html"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "Taiwan question amid trilateral summit",
+      "statement": "Per TAO: the Taiwan question is purely China's internal affair.",
+      "original_zh": "台湾问题纯属中国内政",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "TAO responded to questions on whether the Trump-Xi-Putin trilateral summit's outcomes touch on Taiwan, per China News Service Nov 18.",
+      "source": "国台办 (TAO ZH)",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-18/10734210.shtml"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "Cross-strait cultural independence",
+      "statement": "Per TAO: the DPP authorities are vigorously promoting 'cultural Taiwan independence' for their own political self-interest.",
+      "original_zh": "民进党当局为了政治私利大肆推进“文化台独”",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "Remarks responded to musician Luo Dayou's criticism of the DPP, per China.com Nov 19.",
+      "source": "国台办 (TAO ZH)",
+      "url": "https://news.china.com/socialgd/10000169/20261119/49885844.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "KK",
+      "who": "Karen Kuo",
+      "handle_context": "Taiwan Presidential Office spokeswoman",
+      "platform_date": "Taipei Times · Nov 19, 2026",
+      "quote_text": "Taiwan views positively any effort that helps manage the risks of authoritarian expansion and contributes to regional security and stability.",
+      "analyst_note": "Trump said in May 2026, after meeting Xi in Beijing, that he was holding back a new Taiwan arms sale as a 'bargaining chip,' per Taipei Times.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/19/2003867998"
+    },
+    {
+      "avatar_initials": "CS",
+      "who": "Chuck Schumer",
+      "handle_context": "Senate Leader",
+      "platform_date": "Forth.News · Nov 2026",
+      "quote_text": "Xi Jinping and Vladimir Putin are playing Donald Trump like a cheap violin.",
+      "analyst_note": "Remarks made on the Senate floor addressing Trump's trip to China for the Nov 19 trilateral summit with Xi and Putin.",
+      "badge_class": "sb-p",
+      "url": "https://www.forth.news/lists/ussen-schumer/ChAiupdWTiqXGzReS4cdb"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://apnews.com/article/trump-xi-putin-nuclear-ukraine-iran-a04dc76ed8e786b087e2c1ea9598783a",
+    "https://www.reuters.com/world/china/third-attack-week-suspends-traffic-over-crimean-bridge-russian-official-says-2026-11-19/",
+    "https://www.taipeitimes.com/News/front/archives/2026/11/19/2003867998",
+    "https://asia.nikkei.com/politics/international-relations/apec/xi-tells-trump-to-do-right-thing-on-taiwan-as-trade-truce-remains-in-flux"
+  ],
+  "story_count": 100,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 128,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-19.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-19.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
