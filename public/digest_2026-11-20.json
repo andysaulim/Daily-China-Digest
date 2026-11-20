@@ -1,0 +1,629 @@
+{
+  "digest_date": "Friday, November 20, 2026",
+  "re_line": "Shenzhen Trump-Xi-Putin summit · 879K AI chips to China scrutiny · TSMC tightens curbs · Taiwan election test",
+  "market_indicators": {
+    "usd_cny": {
+      "value": "6.6788",
+      "change_pct": 0.12,
+      "as_of": "Nov 20"
+    },
+    "brent": {
+      "value": "89.22",
+      "change_pct": -3.48,
+      "as_of": "Nov 20"
+    },
+    "hang_seng": {
+      "value": "22,410.80",
+      "change_pct": -5.19,
+      "as_of": "Nov 20"
+    },
+    "usd_cnh": {
+      "value": "6.6824",
+      "change_pct": -0.12,
+      "as_of": "Nov 20"
+    },
+    "sse_composite": {
+      "value": "3,533.79",
+      "change_pct": -1.91,
+      "as_of": "Nov 20"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "cpi_yoy": "+0.7%",
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "Xi Jinping, Donald Trump and Vladimir Putin held their first-ever trilateral summit in Shenzhen on November 19, issuing a peace declaration affirming that a nuclear war 'cannot be won and must never be fought' while reaching no breakthroughs on Ukraine, AI governance or nuclear arms limits.",
+    "House Select Committee on the CCP Chairman Brian Mast disclosed that Commerce approved sales of more than 879,000 AI chips to Chinese companies over six months, including firms on the Pentagon's China military-company list, intensifying bipartisan export-control scrutiny of Nvidia and AMD.",
+    "Reuters reported Beijing plans to bar young 'red-chip' companies from listing outside mainland China, while TSMC has quietly suspended advanced manufacturing orders for Chinese chip designers after new US Commerce rules closed a compliance loophole."
+  ],
+  "key_stat": {
+    "number": "879,000+",
+    "label": "AI chips Commerce approved for export to Chinese firms in six months",
+    "context": "Rep. Brian Mast disclosed the figure from confidential licensing data, noting some recipients sit on the Pentagon's list of China military-linked companies.",
+    "source": "CNBC"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (unnamed)",
+      "action": "Holds benchmark lending rates steady for 18th straight month",
+      "document": null,
+      "detail": "The 1-year and 5-year Loan Prime Rates remained unchanged in November; analysts cited by state media said a rate cut could still come next year given weak demand.",
+      "source_label": "PBOC ZH",
+      "url": "https://www.hkcna.hk/h5/cn/content/s6affe725e4b089a2db401f1e.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (unnamed)",
+      "action": "To issue RMB50 billion in central bank bills via Hong Kong CMU",
+      "document": null,
+      "detail": "PBOC announced it will issue *RMB50 billion* in central bank bills through the Hong Kong CMU platform on November 24.",
+      "source_label": "PBOC ZH",
+      "url": "https://www.bjnews.com.cn/detail/1795159650129864.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM (unnamed)",
+      "action": "Reports FDI inflows for Jan-Oct 2026",
+      "document": "2026年1-10月全国吸收外资数据",
+      "detail": "MOFCOM reported foreign capital utilized nationwide reached *RMB606.93 billion* in the first ten months of 2026.",
+      "source_label": "MOFCOM ZH",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_1e68a6f64c24447491870cf81f9e5c72.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "He Yadong, MOFCOM spokesperson",
+      "action": "Releases Jan-Oct 2026 consumption data",
+      "document": null,
+      "detail": "Retail sales of consumer goods rose 1 percent year-on-year Jan-Oct 2026 while services retail sales rose 4.9 percent, per MOFCOM's November 19 briefing.",
+      "source_label": "Qiushi (citing Xinhua)",
+      "url": "https://www.qstheory.cn/20261120/72212095e28f4c81b1f0ea8edc30be24/c.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 24,
+      "headline": "PBOC to issue RMB50bn in central bank bills via Hong Kong CMU",
+      "detail": "The offshore issuance manages yuan liquidity after the currency fell to a one-month low following the Shenzhen summit."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayoral and magistrate races are at stake; a new USCC report to Congress says Beijing will assess the results to gauge coercion's effectiveness ahead of 2028."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "Annual state commemoration (国家公祭日) typically features top leadership attendance."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral (Miami)",
+      "detail": "The US hosts; Xi Jinping's attendance has not been confirmed."
+    },
+    {
+      "month": "Dec",
+      "day": 20,
+      "headline": "Next PBOC Loan Prime Rate decision",
+      "detail": "The LPR has been held unchanged for 18 consecutive months as of November; some analysts expect a cut could come in 2027."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/white-house-takes-press-phones-upon-departure-from-china-summit",
+      "source": "Bloomberg",
+      "category": "Diplomacy",
+      "headline": "White House took reporters' phones as Trump departed China",
+      "body_text": "The White House confiscated reporters' phones as Trump departed China following the Shenzhen trilateral summit, Bloomberg reported. The move drew criticism from press-freedom advocates already concerned about access restrictions during the historic three-way meeting with Xi and Putin."
+    },
+    {
+      "url": "https://apnews.com/article/media-reporter-china-trump-xi-b0bf8c5fb6366f3e546d9f94d0e0c824",
+      "source": "AP",
+      "category": "Diplomacy",
+      "headline": "China bars Bloomberg reporter from trilateral meeting",
+      "body_text": "China barred a Bloomberg News journalist from the Trump-Xi-Putin meeting after she shouted a question at an earlier event, the AP reported. The incident illustrates Beijing's tight control over media access during the carefully choreographed Shenzhen summit."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/us-clashes-with-china-and-russia-over-iran-nuclear-stalemate",
+      "source": "Bloomberg",
+      "category": "Diplomacy",
+      "headline": "US clashes with China, Russia over Iran nuclear stalemate",
+      "body_text": "The US clashed with China and Russia over the stalemate on Iran's nuclear program even as the three issued a joint peace declaration in Shenzhen, Bloomberg reported. Differences over Tehran persisted despite the broader diplomatic spectacle."
+    },
+    {
+      "url": "https://www.washingtonpost.com/world/2026/11/19/summit-with-trump-putin-xi-put-himself-china-center-stage/",
+      "source": "Washington Post",
+      "category": "Diplomacy",
+      "headline": "Xi put himself and China at center stage of trilateral summit",
+      "body_text": "Xi Jinping positioned himself and China at the center of the historic trilateral summit with Trump and Putin, the Washington Post reported. Analysts said the Shenzhen setting and summit choreography projected Beijing's growing diplomatic weight."
+    },
+    {
+      "url": "https://www.economist.com/asia/2026/11/19/china-is-kicking-up-a-fuss-over-a-japanese-spy-show",
+      "source": "The Economist",
+      "category": "Japan",
+      "headline": "China objects to Japanese television drama about espionage",
+      "body_text": "China lodged complaints over a Japanese TV drama depicting espionage, the Economist reported, the latest flashpoint in the yearlong rift following PM Takaichi's Taiwan remarks. Beijing has escalated cultural and media disputes with Tokyo alongside the political standoff."
+    },
+    {
+      "url": "https://www.ft.com/content/913e3748-6bf2-4c59-b2b6-31bf58a166ab?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category": "Sanctions",
+      "headline": "Kenya awards prized rare earth deposit to US group",
+      "body_text": "Kenya awarded a prized rare earth deposit to a US group, the FT reported, a win for Washington's effort to counter China's dominance of the critical minerals used in magnets. The deal reflects accelerating competition for African mineral resources."
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/20/world/europe/putin-trump-xi-summit-apec.html",
+      "source": "New York Times",
+      "category": "Diplomacy",
+      "headline": "Putin secures symbolic win standing alongside US, Chinese leaders",
+      "body_text": "Vladimir Putin secured a symbolic win at the Shenzhen trilateral summit, standing alongside the US and Chinese presidents as an equal, the NYT reported. The optics restored a measure of global stature Moscow has sought since its invasion of Ukraine."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/china-copper-squeeze-starts-drawing-metal-from-huge-us-stockpile",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "China's copper squeeze starts drawing metal from US stockpile",
+      "body_text": "China's copper squeeze is beginning to draw metal from a huge US stockpile, Bloomberg reported, as domestic demand strains global supply. The drawdown adds pressure to copper markets already affected by the Section 232 tariff on US copper imports."
+    },
+    {
+      "url": "https://www.ft.com/content/73e7d386-c5d1-4422-8abb-adbfaf92aa0d?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "category": "Investment",
+      "headline": "China's sovereign fund pushes to restart US private equity bets",
+      "body_text": "China's flagship sovereign wealth fund is pushing to restart private equity investments in the US after a pullback, the FT reported, seeking special protective terms against disaster scenarios. The effort signals cautious re-engagement with American markets."
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/20/business/china-ai-investment-spending.html",
+      "source": "New York Times",
+      "category": "Technology",
+      "headline": "China's AI ambitions run into a funding gap",
+      "body_text": "Chinese AI companies are struggling to match the capital Silicon Valley rivals like Anthropic are raising, the NYT reported, even as Beijing pushes self-sufficiency. The funding gap complicates China's response to tightening US chip export controls."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.cnbc.com/2026/11/19/nvidia-california-bonta-subpoena-china-chips.html",
+      "source": "CNBC",
+      "headline": "California AG subpoenas Nvidia in China chip-diversion probe",
+      "body_text": "California Attorney General **Rob Bonta** subpoenaed Nvidia over possible chip diversion to China, following the resignation of CEO Jensen Huang. The probe also examines whether Nvidia misled investors about China-related business risks.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/amd-slides-after-hunterbrook-shorts-stock-cites-circular-deals",
+      "source": "Bloomberg",
+      "headline": "AMD shares slide on short-seller report alleging China links",
+      "body_text": "**AMD** fell more than *7 percent* after short seller Hunterbrook alleged its firmware appeared at a blacklisted Chinese company tied to circular financing deals. AMD said it complies with US export law.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.cnn.com/2026/11/19/politics/nvidia-chips-china-universities-invs",
+      "source": "CNN",
+      "headline": "Blacklisted Chinese universities procured Nvidia chips, records show",
+      "body_text": "At least six Chinese universities on the US Entity List reported procuring restricted Nvidia chips, per records reviewed by CNN. The disclosure adds to bipartisan scrutiny of Commerce's chip-export approvals after the Jensen Huang affair.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.reuters.com/world/fcc-votes-ban-chinese-telecoms-direct-access-us-phone-numbers-2026-11-19/",
+      "source": "Reuters",
+      "headline": "FCC votes to ban Chinese telecoms from US phone-number access",
+      "body_text": "The FCC voted to ban Chinese telecommunications carriers from direct access to US phone numbers, citing national security risks. The decision extends a multi-year campaign against Chinese telecom providers in the US market.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxObHhQcjdyV1I0MV9WaGxraEpScE9YSFhxMGpRYk4wMEZsSmFkaVZxalpYQktobUE1TXFkbTBtaGFoOS1IT1h3NG91d3JKV0hTMXpvbHhIT2lQM2JPcDNfSTJ0X3JzWkxRdlF0WW12blNQMkZ1ZHRNSVUyWVE0blhabG5lUnJxcHNtQkxUTmx2NDVPVUc1T25kY0trX2h1aHYxMUpZZkxpQzFqS2ZmNlE1WnpYb3I?oc=5",
+      "source": "Bloomberg",
+      "headline": "US lawmakers near deal to ban Chinese cars in lame-duck session",
+      "body_text": "US lawmakers are nearing a deal to ban Chinese-made cars and components from the US market during the current lame-duck session, per Bloomberg. The measure would build on Commerce's Connected Vehicles Rule.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/us-should-not-certify-chinese-aircraft-restrict-investments-chinas-aerospace-2026-11-19/",
+      "source": "Reuters",
+      "headline": "Lawmakers urge curbs on investment in China's aerospace sector",
+      "body_text": "Lawmakers told Reuters the US should restrict investment in China's aerospace sector rather than certify Chinese-made aircraft for US airspace. The recommendation reflects concern over Beijing's civil aviation ambitions, including COMAC's jet programs.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.reuters.com/technology/trump-says-he-chinas-xi-want-moderate-ai-rules-2026-11-19/",
+      "source": "Reuters",
+      "headline": "Trump says he and Xi want 'moderate' AI rules",
+      "body_text": "**Trump** said he and **Xi Jinping** want moderate AI rules following their Shenzhen summit, per Reuters. Neither leader detailed specific commitments, and AI governance was not part of the joint peace declaration.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMVJxajFFWVpKWFIzZjFkQjg3bzRfeTRmbGdhX0JtYmhXMDFiSDhmZ012TXRfUTYxOG8yNXQ1NFBWTWp5NDRIdzludmtZS0xGLXNENE5LNHo0Zk01OHR4S2hRZFhjRUZKMkRRdHBiQm1BTFluWWVzTTJORmluTXNCSWxmUV8xVEJ3Vlc4Q1l5NU9sQ3VxUzlMOEZUa21nZW11UFZtb3lVNGlEaGdNb25WazZISXFhQXY5dG1OZzVGUS0zN2pMTFE?oc=5",
+      "source": "Reuters",
+      "headline": "Trump: nuclear arms limits with China, Russia 'very hard'",
+      "body_text": "Trump said reaching nuclear arms limits with China and Russia 'will be very hard to achieve,' per Reuters, after the three leaders agreed only to a general statement that nuclear war cannot be won. No arms-control framework was announced.",
+      "instrument": "Diplomacy"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.reuters.com/world/china/taiwan-tells-meta-thousands-china-linked-accounts-seek-influence-elections-2026-11-20/",
+      "source": "Reuters",
+      "headline": "Taiwan tells Meta thousands of China-linked accounts seek to influence elections",
+      "body_text": "Taiwan's government told Meta that thousands of China-linked accounts are seeking to influence the island's politics, Reuters reported. The warning comes ahead of Taiwan's *Nov. 28* local elections.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.voachinese.com/a/trump-said-us-does-not-support-taiwan-independence-as-issue-took-backseat-in-meeting-with-xi-20261119/8225787.html",
+      "source": "VOA Chinese",
+      "headline": "Trump reiterates no US support for Taiwan independence at Shenzhen summit",
+      "body_text": "Trump reiterated that the US does not support Taiwan independence during his Shenzhen meeting with Xi, per VOA Chinese, though Taiwan featured only briefly in the talks. The two leaders offered no new formulation on cross-strait policy.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/indonesias-prabowo-chinas-xi-discuss-future-south-china-sea-cooperation-2026-11-20/",
+      "source": "Reuters",
+      "headline": "Indonesia's Prabowo, Xi discuss future South China Sea cooperation",
+      "body_text": "**Prabowo Subianto** and Xi Jinping discussed future cooperation in the South China Sea during meetings tied to the Shenzhen summit, Reuters reported. Specific joint projects were not disclosed.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/japanese-see-china-russia-ties-as-worst-on-record-survey-shows",
+      "source": "Bloomberg",
+      "headline": "Record 93% of Japanese view China ties negatively",
+      "body_text": "A new survey found *93 percent* of Japanese respondents view relations with China negatively, the highest on record, Bloomberg reported. The finding comes amid a yearlong diplomatic rift over PM Takaichi's Taiwan remarks.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/india-japan-deepen-defense-ties-amid-china-us-uncertainty",
+      "source": "Bloomberg",
+      "headline": "India, Japan deepen defense ties amid China, US uncertainty",
+      "body_text": "India and Japan are deepening defense cooperation amid uncertainty over China and the United States, Bloomberg reported. The move reflects shared concern in New Delhi and Tokyo about regional security commitments.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/japan-s-takaichi-walks-tightrope-with-russia-china-on-asia-trip",
+      "source": "Bloomberg",
+      "headline": "Takaichi walks tightrope with Russia, China on Asia trip",
+      "body_text": "Japanese PM **Sanae Takaichi** is balancing engagement with Russia and China during her Asia trip, Bloomberg reported, against Tokyo's security concerns. The trip follows a year of strained China-Japan relations since her Taiwan remarks.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.ft.com/content/ddbf0f75-047a-421a-87c0-3e60bf42ed22?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "headline": "Australia PM, Xi hail 'turnaround' despite iron ore tensions",
+      "body_text": "**Xi Jinping** and Australian PM **Anthony Albanese** hailed a 'comprehensive turnaround' in bilateral ties at their Shenzhen meeting, the FT reported, even as Beijing's growing influence over iron ore pricing stokes concern in Canberra.",
+      "region": "Australia-Pacific"
+    },
+    {
+      "url": "https://apnews.com/article/russia-nuclear-aircraft-vietnam-xi-putin-trump-7e52cafb91547b329c41d9488f1ecd8c",
+      "source": "AP",
+      "headline": "Russian nuclear-capable bombers leave Vietnam as Putin meets leaders in China",
+      "body_text": "Russian nuclear-capable bombers departed Vietnam as Putin met world leaders in China, the AP reported. The deployment coincided with the Shenzhen trilateral summit and Putin's broader Asia travel.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/eu-climate-chief-says-us-china-russia-energy-deal-is-unfortunate",
+      "source": "Bloomberg",
+      "headline": "EU climate chief calls US-China-Russia energy deal 'unfortunate'",
+      "body_text": "The EU's climate chief called the Shenzhen summit's pledge to boost refined petroleum product supply 'unfortunate,' Bloomberg reported. The declaration said the three countries would increase output 'to benefit countries around the world.'",
+      "region": "Europe"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/11/19/world/asia/trump-xi-putin.html",
+      "source": "New York Times",
+      "category_tag": "Diplomacy",
+      "headline": "Trump, Xi, Putin hold first trilateral summit, issue peace declaration",
+      "body": "**Donald Trump**, **Xi Jinping** and **Vladimir Putin** held their first-ever trilateral summit in Shenzhen on November 19, issuing a joint declaration affirming that *a nuclear war cannot be won and must never be fought*. The leaders agreed to boost global refined-petroleum supply and pursue UN reform but reached no breakthroughs on Ukraine, nuclear arms limits or AI governance.",
+      "src_line": "NYT · Nov 19, 2026"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/19/nvidia-amd-china-chip-sales-congress.html",
+      "source": "CNBC",
+      "category_tag": "Sanctions",
+      "headline": "Commerce approved 879,000+ AI chip sales to Chinese firms, Mast says",
+      "body": "House Select Committee on the CCP Chairman **Brian Mast** said Commerce approved sales of *more than 879,000 AI chips* to Chinese companies over the past six months, citing confidential licensing data. Some recipients sit on the Pentagon's list of China military-linked companies, intensifying pressure for tighter export-control legislation after the Jensen Huang affair.",
+      "src_line": "CNBC · Nov 19, 2026"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/20/2003868041",
+      "source": "Taipei Times",
+      "category_tag": "Technology",
+      "headline": "TSMC tightens China AI chip curbs as US rules close loophole",
+      "body": "**TSMC** suspended previously permitted advanced manufacturing orders for Chinese chip designers, limiting most to *28-nanometre and 40-nanometre* processes unless customers secure US export licenses, two people familiar with the matter said. The move follows new US Commerce rules that took effect yesterday, closing a compliance route Chinese firms had used to access advanced chipmaking.",
+      "src_line": "Taipei Times · Nov 20, 2026"
+    },
+    {
+      "url": "https://www.reuters.com/world/beijing-bar-young-red-chip-firms-listing-outside-mainland-china-sources-say-2026-11-20/",
+      "source": "Reuters",
+      "category_tag": "PRC-Economy",
+      "headline": "Beijing to bar young 'red-chip' firms from listing outside mainland",
+      "body": "Beijing plans to bar young Chinese 'red-chip' companies from listing outside mainland China, sources told Reuters, tightening control over where fast-growing firms raise capital. The move would extend Beijing's grip on offshore listing venues such as Hong Kong and the US.",
+      "src_line": "Reuters · Nov 20, 2026"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/20/2003868061",
+      "source": "Taipei Times",
+      "category_tag": "Cross-Strait",
+      "headline": "USCC: China eyes Taiwan's Nov. 28 elections as coercion test",
+      "body": "The US-China Economic and Security Review Commission's annual report said Beijing will assess Taiwan's *Nov. 28* local elections and the 2028 presidential race to gauge whether coercion can move the island toward unification. The report warned Beijing could resort to a blockade or quarantine if its political strategy appears to be failing.",
+      "src_line": "Taipei Times · Nov 20, 2026"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16501140.html",
+      "source": "MND ZH",
+      "category": "PLA/Military",
+      "headline": "China, US militaries hold annual maritime safety consultation meeting",
+      "body_text": "China and US militaries held their annual Military Maritime Consultative Agreement meeting and working group session, per China's Defense Ministry.",
+      "color_bar_class": "cb-red"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/19/world/asia/xi-putin-trump-meeting-china-russia.html",
+      "source": "New York Times",
+      "category": "Diplomacy",
+      "headline": "NYT: Xi, Putin share vision of challenging US primacy",
+      "body_text": "NYT: Xi and Putin share a long-term vision of challenging US global primacy, unaltered by the Shenzhen trilateral summit.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://cn.nytimes.com/china/20261120/china-japan-propaganda-xi-takaichi/",
+      "source": "NYT Chinese",
+      "category": "Diplomacy",
+      "headline": "Beijing escalates anti-Japan propaganda campaign over Takaichi remarks",
+      "body_text": "NYT Chinese: Beijing has escalated anti-Japan propaganda and pressure on PM Takaichi, with Russian state media amplifying the campaign.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://thediplomat.com/2026/11/takaichi-meets-putin-a-day-after-suspected-russian-aircraft-violate-japanese-airspace/",
+      "source": "The Diplomat",
+      "category": "Indo-Pacific",
+      "headline": "Takaichi meets Putin after suspected Russian airspace violation",
+      "body_text": "The Diplomat: Takaichi met Putin a day after suspected Russian aircraft violated Japanese airspace, raising questions about Moscow's signaling.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUnMxRXltSkhTN1oyU0VSUGRMXy1Uc0pvTDlkVzdJZ1NadjRWZXVfY1U2VjQtbVhwQnJZQmZqTE5RTlRaSnJLMDBYTEZSLWlLbTV1Q2NyTER4SUdvMVZsRmRJTDJhX0JEN2hOWW9DclBUVHlNMHFKV24yVnVCM1A4R1Ewdm5yTU9Dd2VTVnYwbkhNbmdnb0ZVaENHNXFXOVBEZlJkNml5aTl6NkxEVVhKcXJ0d0VQNWEyS1F1T19R?oc=5",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "China's weakened job market starts feeling AI impact",
+      "body_text": "Bloomberg: China's already-weakened job market is starting to feel the displacement effects of AI adoption.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/china-has-capacity-but-maybe-not-the-will-to-boost-fuel-exports",
+      "source": "Bloomberg",
+      "category": "Energy",
+      "headline": "China has capacity but maybe not will to boost fuel exports",
+      "body_text": "Bloomberg: China has refining capacity to boost fuel exports under the trilateral energy pledge but may lack commercial incentive to do so.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/us-ai-chip-curbs-hit-china-tech-stocks-spur-self-sufficiency-push-2026-11-20/",
+      "source": "Reuters",
+      "category": "Technology",
+      "headline": "US AI chip curbs hit China tech stocks, spur self-sufficiency push",
+      "body_text": "Reuters: US AI chip export curbs are hitting Chinese tech stocks and accelerating Beijing's self-sufficiency push.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://m.sohu.com/a/1104109717_122656950?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+      "source": "TAO ZH (via Sohu)",
+      "category": "Cross-Strait",
+      "headline": "TAO responds to proposal for 2032 cross-strait unified currency",
+      "body_text": "TAO responded to a Taiwanese proposal for a unified cross-strait currency by 2032, saying such ideas could promote economic cooperation.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.economist.com/china/2026/11/19/chinas-prison-for-the-elite-is-massively-expanding",
+      "source": "The Economist",
+      "category": "Governance",
+      "headline": "China's extralegal detention system for elites is expanding",
+      "body_text": "The Economist: China's network of extralegal detention facilities for Communist Party officials under investigation is expanding rapidly.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.economist.com/china/2026/11/19/chinas-efforts-to-strengthen-its-safety-net-fuel-public-anger",
+      "source": "The Economist",
+      "category": "PRC-Economy",
+      "headline": "China's safety-net push fuels public anger",
+      "body_text": "The Economist: Beijing's efforts to strengthen the social safety net are fueling public anger over implementation and cost.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/china-axes-palm-oil-purchases-with-storage-space-running-out",
+      "source": "Bloomberg",
+      "category": "PRC-Economy",
+      "headline": "China halts palm oil purchases as storage space runs out",
+      "body_text": "Bloomberg: China has halted new palm oil purchases as storage tanks run out of space.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/chinas-alibaba-beats-quarterly-revenue-estimates-2026-11-19/",
+      "source": "Reuters",
+      "headline": "Alibaba tops revenue estimates on AI cloud growth",
+      "body_text": "**Alibaba** topped quarterly revenue estimates on AI cloud growth, with profit up on investment gains, Reuters reported.",
+      "companies": [
+        "Alibaba"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/19/business/anthropic-ipo-china-hong-kong.html",
+      "source": "New York Times",
+      "headline": "Anthropic excludes China, Hong Kong investors from IPO",
+      "body_text": "**Anthropic** excluded investment firms from mainland China and Hong Kong from participating in its IPO, the NYT reported.",
+      "companies": [
+        "Anthropic"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.ft.com/content/97912585-2412-496c-a224-78e69328bcdb?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "headline": "Nscale warns of exposure to suppliers facing US blacklist",
+      "body_text": "Nvidia-backed **Nscale**'s *$35 billion* IPO plans face scrutiny over ties to suppliers at risk of Entity List designation, the FT reported.",
+      "companies": [
+        "Nscale",
+        "Nvidia"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/china-solar-cell-exports-rise-for-second-month-on-tariff-rush",
+      "source": "Bloomberg",
+      "headline": "China solar cell exports rise for second month on tariff rush",
+      "body_text": "China's solar cell exports rose for a second consecutive month as exporters rushed shipments ahead of anticipated tariff changes, Bloomberg reported.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/offshore-chinese-yuan-drops-to-weakest-level-in-over-a-month-mwnvjmz2",
+      "source": "Bloomberg",
+      "headline": "Offshore yuan drops to weakest level in over a month",
+      "body_text": "The offshore yuan dropped to its *weakest level in over a month*, Bloomberg reported, as markets digested the Shenzhen summit and the PBOC's rate decision.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.wsj.com/tech/ai/chinas-ai-firms-are-addicted-to-nvidia-chips-now-they-are-facing-withdrawal-ba851ca9",
+      "source": "WSJ",
+      "headline": "China's AI firms face 'withdrawal' from Nvidia chip dependence",
+      "body_text": "Chinese AI developers built their businesses around **Nvidia** chips and now face 'withdrawal' as US export curbs tighten, the WSJ reported.",
+      "companies": [
+        "Nvidia"
+      ],
+      "sector": "tech"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "President, CCP General Secretary",
+      "topic": "Nuclear risk at the trilateral summit",
+      "statement": "A nuclear war cannot be won and must never be fought; we must do everything possible to prevent one.",
+      "original_zh": "核战争打不赢也打不得，要尽一切努力防止。",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Made at the first-ever China-Russia-US trilateral summit in Shenzhen on November 19, where the three leaders issued a joint peace declaration.",
+      "source": "MOFCOM ZH",
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_3945bc95ce9a42ff9d9c614bea962c4b.html"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "Response to Luo Dayou's criticism of the DPP",
+      "statement": "The DPP authorities are recklessly promoting 'cultural Taiwan independence' for their own political self-interest.",
+      "original_zh": "民进党当局为了政治私利大肆推进\"文化台独\"",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "Prompted by Taiwanese singer Luo Dayou's public criticism of the DPP authorities.",
+      "source": "中华网 (citing TAO)",
+      "url": "https://news.china.com/socialgd/10000169/20261119/49885844.html"
+    },
+    {
+      "body": "MOFCOM",
+      "body_chinese": "商务部",
+      "speaker": "He Yadong (何亚东)",
+      "role": "MOFCOM spokesperson",
+      "topic": "Jan-Oct 2026 consumption market data",
+      "statement": "This year, China's consumption market has continued to expand steadily, characterized by 'stable' goods consumption, 'thriving' services consumption, and 'hot' new-type consumption.",
+      "original_zh": "今年以来，我国消费市场规模继续稳步扩大，可用商品消费\"稳\"、服务消费\"旺\"、新型消费\"热\"三个特点概括。",
+      "addressed_to": "domestic",
+      "tone": "routine",
+      "context": "Made at MOFCOM's November 19 regular press briefing releasing Jan-Oct retail and services consumption figures.",
+      "source": "Qiushi (citing Xinhua)",
+      "url": "https://www.qstheory.cn/20261120/72212095e28f4c81b1f0ea8edc30be24/c.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "DT",
+      "who": "Donald Trump",
+      "handle_context": "President of the United States",
+      "platform_date": "Taipei Times · Nov 20, 2026",
+      "quote_text": "No peace was ever forged by declining opportunities for engagement.",
+      "analyst_note": "Trump made the remark at the opening of the November 19 Shenzhen trilateral summit, the first three-way meeting among sitting US, Chinese and Russian leaders.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/20/2003868062"
+    },
+    {
+      "avatar_initials": "VP",
+      "who": "Vladimir Putin",
+      "handle_context": "President of Russia",
+      "platform_date": "Taipei Times · Nov 20, 2026",
+      "quote_text": "numerous shared interests in the settlement of regional conflicts, including obviously the conflict in Ukraine",
+      "analyst_note": "Putin spoke after Ukraine's Kerch Strait bridge linking Crimea to Russia was reported crippled, per the Taipei Times.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/20/2003868062"
+    },
+    {
+      "avatar_initials": "JG",
+      "who": "Julian Gewirtz",
+      "handle_context": "Former NSC senior director for China and Taiwan affairs",
+      "platform_date": "SCMP · Nov 20, 2026",
+      "quote_text": "A stunning image of a China-centred order: a would-be G3 with Xi presiding",
+      "analyst_note": "Gewirtz served on the Biden National Security Council and was commenting on the seating arrangement at the Shenzhen trilateral summit.",
+      "badge_class": "sb-s",
+      "url": "https://www.scmp.com/news/china/article/3375131/china-centred-order-or-host-duties-experts-weigh-xi-trump-putin-seating"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Ambassador to Djibouti",
+      "name": "Sun Wei (孙伟)",
+      "action": "arrived to take up post",
+      "detail": "New Chinese Ambassador to Djibouti Sun Wei arrived in Djibouti to begin his assignment, per MOFA.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/china/taiwan-tells-meta-thousands-china-linked-accounts-seek-influence-elections-2026-11-20/",
+    "https://apnews.com/article/russia-nuclear-aircraft-vietnam-xi-putin-trump-7e52cafb91547b329c41d9488f1ecd8c",
+    "https://www.mofcom.gov.cn/syxwfb/art/2026/art_3945bc95ce9a42ff9d9c614bea962c4b.html",
+    "https://www.taipeitimes.com/News/front/archives/2026/11/20/2003868061"
+  ],
+  "story_count": 101,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 120,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-20.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-20.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
