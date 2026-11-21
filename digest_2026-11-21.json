@@ -1,0 +1,616 @@
+{
+  "digest_date": "Saturday, November 21, 2026",
+  "re_line": "Shenzhen trilateral summit · Nvidia-Huang spy fallout · Xi snubs Takaichi · Taiwan flags China accounts",
+  "market_indicators": {
+    "usd_cnh": {
+      "value": "6.6736",
+      "change_pct": -0.25,
+      "as_of": "Nov 20"
+    },
+    "hang_seng": {
+      "value": "22,410.80",
+      "change_pct": -5.19,
+      "as_of": "Nov 20"
+    },
+    "usd_cny": {
+      "value": "6.6772",
+      "change_pct": 0.09,
+      "as_of": "Nov 21"
+    },
+    "brent": {
+      "value": "89.95",
+      "change_pct": -2.69,
+      "as_of": "Nov 20"
+    },
+    "sse_composite": {
+      "value": "3,533.79",
+      "change_pct": -1.91,
+      "as_of": "Nov 20"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "Xi Jinping chaired the first-ever China-Russia-US trilateral summit in Shenzhen on November 19, with the three leaders issuing a joint declaration on world peace and pledging to boost oil supply.",
+    "The Washington Post reported officials approved sales of 580,000 Nvidia AI chips to Chinese companies even as the New York Times tied Alice Huang's firms to China's defense industry.",
+    "Beijing told Japan to 'correct its wrong words' on Taiwan after Xi declined a formal meeting with PM Sanae Takaichi at APEC, while Taiwan flagged nearly 2,700 suspected Chinese-linked accounts to Meta ahead of the Nov. 28 elections."
+  ],
+  "key_stat": {
+    "number": "$4.8B",
+    "label": "Value of Nvidia chips allegedly routed via Alice Huang's firm",
+    "context": "Caixin's cover story is the first to attach a specific dollar figure to chip flows tied to the Jensen Huang-Alice Huang affair already under NYT and Washington Post scrutiny.",
+    "source": "Caixin"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (institutional announcement)",
+      "action": "Loan Prime Rate held unchanged for 18th consecutive month",
+      "document": null,
+      "detail": "PBOC authorized the 1-year LPR at 3.0% and the 5-year-plus LPR at 3.5%, both unchanged since the last adjustment in May 2025. Economists cited by state media attribute the pause to the recent policy-rate 'anchor switch' from the 7-day to the overnight reverse repo rate.",
+      "source_label": "PBOC ZH",
+      "url": "https://www.21jingji.com/article/20261121/herald/454305e822ab4018b32bae98c834ae80.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM (institutional, signed during APEC Shenzhen summit)",
+      "action": "China, Singapore launch FTA 4.0 upgrade negotiations",
+      "document": "Memorandum of Understanding on Launching China-Singapore FTA 4.0 Upgrade Negotiations",
+      "detail": "The MOU was signed alongside Xi Jinping's meeting with Singapore PM Lawrence Wong in Shenzhen, part of more than 20 agreements and initiatives expected to conclude at the Joint Council for Bilateral Cooperation.",
+      "source_label": "MOFCOM",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_0e7dea4cf02c4d41a5a48f19906610f5.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM (institutional, signed during APEC Shenzhen summit)",
+      "action": "China, Indonesia launch comprehensive economic partnership agreement talks",
+      "document": "Memorandum of Understanding on Launching China-Indonesia Comprehensive Economic Partnership Agreement Negotiations",
+      "detail": "Xi Jinping and Indonesian President Prabowo Subianto jointly announced the start of CEPA negotiations during Prabowo's Shenzhen visit, alongside discussion of Jakarta-Bandung rail and 'two countries, twin parks' projects.",
+      "source_label": "MOFCOM",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_cedc7b0c23a74f3fa49b23829635476e.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (institutional announcement)",
+      "action": "PBOC to auction RMB 50 billion in central bank bills via Hong Kong CMU platform",
+      "document": null,
+      "detail": "The central bank said it will issue RMB 50 billion in bills through the CMU platform on November 24, a recurring offshore yuan liquidity-management operation.",
+      "source_label": "PBOC ZH",
+      "url": "https://www.bjnews.com.cn/detail/1795159650129864.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections and nuclear referendum",
+      "detail": "Voters elect 22 mayors and magistrates and decide a fourth national referendum on restarting nuclear power, alongside roughly 11,000 local offices."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "Annual state commemoration (国家公祭日) of the 1937 Nanjing Massacre."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral (Miami)",
+      "detail": "The US hosts the G20 Leaders' Summit December 14-15; Xi Jinping's attendance has not been confirmed."
+    },
+    {
+      "month": "Dec",
+      "day": 20,
+      "headline": "Next PBOC LPR decision",
+      "detail": "The Loan Prime Rate has been held at 3.0% (1-year) and 3.5% (5-year-plus) for 18 straight months; the next monthly setting falls December 20."
+    },
+    {
+      "month": "Jan",
+      "day": 15,
+      "headline": "Section 232 semiconductor tariff first anniversary",
+      "detail": "The 25% Section 232 tariff on certain advanced logic chips (e.g. Nvidia H200, AMD MI325X class) marks one year in force."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://asia.nikkei.com/editor-s-picks/interview/us-china-stability-can-t-rely-on-bilateral-summits-warns-amcham-head",
+      "source": "Nikkei Asia",
+      "category": "Diplomacy",
+      "headline": "AmCham China Head Warns Stability Can't Rely on Summits Alone",
+      "body_text": "The head of the American Chamber of Commerce in China warned durable US-China stability cannot rest on periodic bilateral summits, Nikkei reported from Shenzhen. The comment came as Trump and Xi wrapped a year of high-profile diplomacy without resolving core trade and tech disputes."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/technology/alibaba-trains-next-gen-ai-model-on-own-chips-amid-tighter-us-curbs",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Alibaba Trains Next-Gen AI Model on Its Own Chips Amid US Curbs",
+      "body_text": "**Alibaba** is training its next-generation AI model on in-house chips as access to advanced US processors tightens, Nikkei reported. The shift reflects accelerating Chinese efforts toward chip self-sufficiency under export-control pressure."
+    },
+    {
+      "url": "https://focustaiwan.tw/politics/202611210004",
+      "source": "Focus Taiwan",
+      "category": "Cross-Strait",
+      "headline": "US-Taiwan Military Cooperation at 'Unprecedented Level,' Congressman Says",
+      "body_text": "A US congressman described US-Taiwan military cooperation as being at an unprecedented level, Focus Taiwan reported. The remark comes ahead of Taiwan's November 28 local elections and amid continued PLA pressure around the island."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/21/2003868132",
+      "source": "Taipei Times",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Justice Ministry Details Four Chinese Election Interference Tactics",
+      "body_text": "Deputy Justice Minister **Huang Mou-hsin** identified four Beijing-backed tactics: subsidized China trips, local accomplices, underground campaign funding and disinformation. The ministry said it is using organizational, investigative and legal measures to counter the activity before the Nov. 28 vote."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-21/china-military-bans-sf-express-from-procurement-over-misconduct",
+      "source": "Bloomberg",
+      "category": "PLA Procurement",
+      "headline": "China's Military Bans SF Express From Procurement Over Misconduct",
+      "body_text": "China's military has banned logistics firm **SF Express** from its procurement system over unspecified misconduct, Bloomberg reported. The move cuts the courier off from defense-related contracting."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/politics/article/3375292/hong-kong-slams-biased-us-report-accusing-city-expanding-security-powers",
+      "source": "SCMP",
+      "category": "Legal",
+      "headline": "Hong Kong Slams USCC Report Accusing City of Expanding Security Powers",
+      "body_text": "Hong Kong's government called a US-China Economic and Security Review Commission report 'biased slanders and smears,' per SCMP. The report cited restricted media coverage of the deadly Wang Fuk Court fire."
+    },
+    {
+      "url": "https://www.reuters.com/sustainability/cop/why-china-is-unwilling-be-worlds-next-climate-leader-2026-11-20/",
+      "source": "Reuters",
+      "category": "Energy",
+      "headline": "China Resists Role as World's Next Climate Leader as COP31 Runs Into Overtime",
+      "body_text": "China is unwilling to take on global climate leadership, Reuters reported, as COP31 talks ran into overtime over disputes on omitting fossil fuels from the final text. Beijing's reluctance comes despite its dominance in clean-tech exports."
+    },
+    {
+      "url": "https://www.ft.com/content/cd4ecaf3-0ded-4830-94a8-4d9c24098c07?syn-25a6b1a6=1",
+      "source": "FT",
+      "category": "Technology",
+      "headline": "Chip War's Next Battleground Shifts to Supply Chains",
+      "body_text": "The US-China AI rivalry is shifting focus toward semiconductor supply chains, the Financial Times reported, as both sides look beyond chip design to manufacturing inputs. The analysis follows weeks of turmoil over Nvidia's China exposure."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3375308/hong-kong-commerce-chief-cautiously-optimistic-after-china-us-russia-peace-declaration",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Hong Kong Commerce Chief 'Cautiously Optimistic' After Trilateral Declaration",
+      "body_text": "Hong Kong Commerce Secretary **Algernon Yau Ying-wah** called the China-US-Russia joint declaration a positive signal for the global and local economy but urged caution, per SCMP. He said the three-way consensus on resolving disputes sent 'a positive message.'"
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.reuters.com/world/china/trump-says-only-older-chips-should-be-sold-china-2026-11-20/",
+      "source": "Reuters",
+      "headline": "Trump Says Only Older Chips Should Be Sold to China",
+      "body_text": "**Donald Trump** said the US should sell only older-generation semiconductors to China, even as his administration discusses a broader trade agreement with Beijing, Reuters reported. The comment follows Nvidia's confirmation it has stopped shipping Hopper-class AI chips to Chinese customers.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://apnews.com/article/nvidia-chip-export-restrictions-china-bessent-lutnick-88142455395552afe74caec3399a648b",
+      "source": "AP",
+      "headline": "Bessent Says No Further Nvidia Export Restrictions Needed",
+      "body_text": "Treasury Secretary **Scott Bessent** said no additional restrictions are needed on Nvidia chip exports to China, AP reported, pushing back on calls from some Republicans for tighter curbs. Commerce Secretary Howard Lutnick was named alongside Bessent in the report.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1ZQlRJTDBGMm00UE1pUlp6VGYydDlOOU40M2xQN1VneEd5dVpaNnFERGJLOTNLLTVnYjlvUlY2OEhjQU9EaTh6U2RWTQ?oc=5",
+      "source": "AFP",
+      "headline": "Nvidia Confirms End to Hopper AI Chip Shipments to China",
+      "body_text": "**Nvidia** said it is no longer shipping its Hopper-generation AI chips to China, AFP reported, as the administration signals a preference for restricting only its most advanced processors to Chinese buyers. The move follows weeks of scrutiny over chip-export licensing tied to the Jensen Huang affair.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.wsj.com/politics/national-security/top-republican-senator-says-lutnick-ignored-his-china-chip-warnings-512f64fd",
+      "source": "WSJ",
+      "headline": "Republican Senator Says Lutnick Ignored His China Chip Warnings",
+      "body_text": "A senior Republican senator told the Wall Street Journal that Commerce Secretary **Howard Lutnick** disregarded his warnings about chip exports to China. The Senate plans to summon Lutnick and Bessent for joint testimony on chip policy, per VOA Chinese.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.reuters.com/legal/litigation/after-trumps-china-trip-us-house-republicans-push-ai-strategy-counter-beijing-2026-11-20/",
+      "source": "Reuters",
+      "headline": "House Republicans Push AI Strategy to Counter Beijing After China Trip",
+      "body_text": "House Republicans are advancing an AI strategy aimed at countering Beijing following **Trump**'s trip to China for the APEC summit, Reuters reported. The push comes amid bipartisan unease over chip-export licensing and the Nvidia espionage scandal.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/lawmakers-on-verge-of-deal-to-ban-chinese-cars-moreno-says",
+      "source": "Bloomberg",
+      "headline": "Lawmakers Near Deal to Ban Chinese Cars, Senator Moreno Says",
+      "body_text": "US lawmakers are close to a deal banning Chinese-made vehicles from American roads, Senator Moreno said, according to Bloomberg. The measure would extend restrictions beyond the existing Commerce Department Connected Vehicles Rule targeting PRC-origin hardware and software.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3375274/us-and-china-hold-maritime-security-talks-parallel-trump-xi-meetings",
+      "source": "SCMP",
+      "headline": "US, China Navies Hold Parallel Maritime Security Talks During Xi-Trump Meetings",
+      "body_text": "The PLA Navy hosted officials from **US Pacific Command**, the Pacific Fleet, Air Force and Coast Guard in Shanghai talks running Wednesday to Friday, parallel to the Xi-Trump summit, per SCMP. Sessions focused on reducing the risk of unsafe and unprofessional at-sea encounters.",
+      "instrument": "Military"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/20/science/chinese-scientist-detained-ice-princeton-eva-yi-xie-.html",
+      "source": "NYT",
+      "headline": "Chinese-Born Princeton Researcher Detained by ICE at US Airport",
+      "body_text": "Neuroscientist **Eva Yi Xie** was detained by ICE while returning to New Jersey from a Washington conference, the New York Times reported, the latest in a string of researcher detentions. Xie is affiliated with Princeton University.",
+      "instrument": "Legal"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/21/2003868139",
+      "source": "Taipei Times",
+      "headline": "Taiwan Academics Say Beijing's Wait-and-See Strategy Is Paying Off",
+      "body_text": "Beijing's delaying tactics on US trade talks 'lured Trump into its trap' and could translate into greater pressure over Taiwan Strait issues, Institute of National Policy Research vice president **Kuo Yu-jen** said at a Taipei forum. Academia Sinica fellow Lin Cheng-yi said the trilateral joint declaration was 'largely an empty gesture, except for oil.'",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/21/2003868141",
+      "source": "Taipei Times",
+      "headline": "Taiwan Says China's 'Improper Treatment' at APEC Won't Set a Precedent",
+      "body_text": "Taiwan held *17* rounds of negotiations with Beijing over its APEC participation, but Economic Affairs Minister **Kung Ming-hsin** was still barred from a September ministerial meeting in Guangzhou for 'political reasons,' an official said. Taipei said China's handling of the invitation fell short of 2014 arrangements but that the incidents would not set a precedent.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/21/2003868135",
+      "source": "Taipei Times",
+      "headline": "Taiwan Indicts TPP Candidate Over Alleged CCP Campaign Funding",
+      "body_text": "Prosecutors indicted Taoyuan city councilor candidate **Chou Hsiao-yun** of the Taiwan People's Party, seeking a six-year sentence, over claims she met CCP officials in Xiamen and received *US$10,000* in cash plus monthly funding. Investigators say gang-linked intermediaries arranged the meetings, with Chinese officials seeking political intelligence and local influence.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.japantimes.co.jp/news/2026/11/21/japan/us-china-russia-summits-japan-wary/",
+      "source": "Japan Times",
+      "headline": "Japan Wary as US, Russia and China Signal Regular Trilateral Summits",
+      "body_text": "Japan is wary that Washington, Moscow and Beijing could hold regular trilateral summits following the Shenzhen meeting, the Japan Times reported. Tokyo's unease compounds existing strain with Beijing over PM Takaichi's Taiwan remarks.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_11_21_909409.shtml?s=zwyxgtjdt",
+      "source": "Guancha",
+      "headline": "Japanese Officials Fret Over Trump's China Outreach as Public Approval of Beijing Policy Slides",
+      "body_text": "A Yomiuri poll found public approval of the government's China policy fell to *44 percent* from 62 percent a year earlier, while an Asahi poll found 67 percent believe ties with Beijing are unlikely to improve, up from 44 percent, per Guancha's citation of Reuters reporting. A senior Japanese official said Tokyo 'has no choice but to rely on its own strength to survive' as a middle power.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.japantimes.co.jp/news/2026/11/20/asia-pacific/politics/indonesia-south-china-sea-xi/",
+      "source": "Japan Times",
+      "headline": "Indonesia's Prabowo, China's Xi Discuss Future South China Sea Cooperation",
+      "body_text": "**Prabowo Subianto** and **Xi Jinping** discussed future cooperation in the South China Sea during Indonesia's president's Shenzhen visit, the Japan Times reported. The two also launched negotiations toward a comprehensive economic partnership agreement, per Chinese commerce ministry records.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.scmp.com/week-asia/opinion/article/3375242/steadier-us-china-relationship-still-leaves-southeast-asia-guard",
+      "source": "SCMP",
+      "headline": "Steadier US-China Relationship Still Leaves Southeast Asia on Guard",
+      "body_text": "Even as Washington and Beijing pursue stability, tensions persist for US allies and partners in Southeast Asia, SCMP noted, citing a September 24 incident around Second Thomas Shoal that unfolded while Xi was on his Washington state visit. Manila and Beijing offered conflicting accounts of that encounter.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3375277/how-beijings-south-china-sea-stance-benefits-rare-joint-warning-icc",
+      "source": "SCMP",
+      "headline": "Trilateral Declaration's 'State Consent' Language Seen Bolstering Beijing's SCS Position",
+      "body_text": "The China-US-Russia joint declaration's language on 'state consent and respect for' international judicial bodies benefits Beijing's rejection of the 2016 Permanent Court of Arbitration ruling on the South China Sea, analysts told SCMP. The rare three-way consensus challenges the authority of international courts more broadly.",
+      "region": "Multilateral"
+    },
+    {
+      "url": "https://www.wsj.com/business/energy-oil/europe-ditched-russian-fuel-now-its-hooked-on-chinese-green-tech-instead-6d3f2fd6",
+      "source": "WSJ",
+      "headline": "Europe, Having Ditched Russian Fuel, Grows Reliant on Chinese Green Tech",
+      "body_text": "Europe has shifted its energy dependence from Russian fossil fuels to Chinese green technology, the Wall Street Journal reported, spanning solar panels, batteries and EV supply chains. The shift raises questions about European strategic dependence even as Brussels pursues de-risking policies toward Beijing.",
+      "region": "Europe"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/11/19/world/asia/russia-china-united-states-oil-joint-statement.html",
+      "source": "NYT",
+      "category_tag": "Diplomacy",
+      "headline": "Xi, Trump and Putin Hold First-Ever Trilateral Summit, Pledge to Boost Oil Supply",
+      "body": "**Xi Jinping** chaired a first-ever China-Russia-US trilateral summit in Shenzhen on November 19, hosting **Donald Trump** and **Vladimir Putin** on the sidelines of the APEC Economic Leaders' Meeting. The three agreed to raise supply of refined petroleum products as oil prices climb amid the Iran war, and issued a joint declaration on 'world peace' and strategic stability, per the Foreign Ministry transcript. The declaration produced no breakthroughs on nuclear arms control, Ukraine or military AI use, the New York Times reported.",
+      "src_line": "NYT · Nov 19, 2026"
+    },
+    {
+      "url": "https://apnews.com/article/trump-xi-china-nuclear-weapons-286391edaacc7e8544dc0dc023e253fb",
+      "source": "AP",
+      "category_tag": "PLA",
+      "headline": "Trump Calls China's Nuclear Buildup 'Hot and Heavy' After Xi Meeting",
+      "body": "**Donald Trump** described China's nuclear weapons expansion as 'hot and heavy' a day after meeting **Xi Jinping** at the Shenzhen trilateral summit, per AP. The comment came after the same meeting at which Trump, Xi and Putin agreed military AI decisions should involve humans, according to Treasury Secretary Bessent.",
+      "src_line": "AP · Nov 20, 2026"
+    },
+    {
+      "url": "https://www.washingtonpost.com/technology/2026/11/20/officials-approved-sale-580000-nvidia-chips-chinese-companies/",
+      "source": "WaPo",
+      "category_tag": "Technology",
+      "headline": "Officials Approved Sale of 580,000 Nvidia Chips to Chinese Companies",
+      "body": "The Trump administration signed off on sales of *580,000* Nvidia AI chips to Chinese companies, the Washington Post reported, amid intensifying scrutiny of export licensing after the Jensen Huang affair. Nvidia separately confirmed it has stopped shipping its older 'Hopper' generation chips to China, per AFP, while **Donald Trump** said only older chips should be sold to Beijing.",
+      "src_line": "WaPo · Nov 20, 2026"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/20/us/politics/nvidia-alice-huang-chips-china.html",
+      "source": "NYT",
+      "category_tag": "US-China",
+      "headline": "Alice Huang, at Center of Nvidia CEO Scandal, Tied to Firms With China Military Links",
+      "body": "Companies linked to **Alice Huang**, the Singapore-based executive romantically linked to former Nvidia CEO **Jensen Huang**, are part of a network of Chinese tech firms and defense contractors needing advanced computing power, the New York Times reported. The report names the Ministry of State Security and the PLA among the entities tied to the network.",
+      "src_line": "NYT · Nov 20, 2026"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/world/archives/2026/11/21/2003868145",
+      "source": "Taipei Times",
+      "category_tag": "Indo-Pacific",
+      "headline": "Beijing Tells Japan to 'Correct Its Wrong Words' After Xi Snubs Takaichi at APEC",
+      "body": "China's Foreign Ministry said Japan must 'correct its wrong words and actions on the Taiwan issue as soon as possible,' spokesperson **Guo Jiakun** said, after **Xi Jinping** declined a formal meeting with Japanese PM **Sanae Takaichi** at the Shenzhen summit. Takaichi, who returned home Thursday after only two handshakes with Xi, said dialogue remained important 'because there are pending issues and challenges between Japan and China.'",
+      "src_line": "Taipei Times · Nov 21, 2026"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/21/2003868133",
+      "source": "Taipei Times",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan Flags Nearly 2,700 Suspected Chinese Accounts to Meta Ahead of Nov. 28 Elections",
+      "body": "Taiwan told Meta Platforms that *nearly 2,700* accounts on Threads appear part of a Chinese information warfare campaign targeting Saturday's nine-in-one local elections, according to officials and internal reports reviewed by Reuters. Meta said it removed the flagged accounts, nearly all opened in the past four months, adding most had no followers and had not posted on election topics.",
+      "src_line": "Taipei Times (Reuters) · Nov 21, 2026"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://sinocism.com/p/sharp-china-trump-and-xi-in-shenzhen",
+      "source": "Sinocism",
+      "category": "Diplomacy",
+      "headline": "Sinocism Podcast Covers Shenzhen Summit, PRC-Japan Tensions, Chinese AI Anxiety",
+      "body_text": "Sinocism's podcast discusses the Shenzhen trilateral summit, the ongoing PRC-Japan row and 'profound anxiety' in Chinese AI circles over the Nvidia affair.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-21/how-ai-is-forcing-china-to-reshape-industrial-policy",
+      "source": "Bloomberg",
+      "category": "Technology",
+      "headline": "How AI Is Forcing China to Reshape Industrial Policy",
+      "body_text": "Bloomberg examines how the AI race is pushing Beijing to recalibrate longstanding industrial-policy tools.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/20/cursor-chinese-ai-models-geopolitical-risk.html",
+      "source": "CNBC",
+      "category": "Technology",
+      "headline": "SpaceX's Cursor Weighs Phasing Out Chinese AI Models Over Risk",
+      "body_text": "SpaceX subsidiary Cursor told lawmakers it is considering dropping Chinese open-weight AI models over geopolitical risk, per a House report reviewed by CNBC.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/electric-vehicles/eu-curb-on-chinese-hybrid-cars-drives-shift-to-niche-powertrain",
+      "source": "Nikkei Asia",
+      "category": "Trade",
+      "headline": "EU Hybrid Car Caps Push Chinese Automakers Toward Niche Powertrains",
+      "body_text": "New EU caps on Chinese-made hybrid imports are driving automakers to ship more exempt powertrain configurations, Nikkei reported.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://ec.ltn.com.tw/article/breakingnews/5648319",
+      "source": "Liberty Times",
+      "category": "Trade",
+      "headline": "China's October Rare Earth Exports to Japan Rose Over 25% From September",
+      "body_text": "Chinese rare earth exports to Japan rose more than 25 percent in October compared with September, per Liberty Times.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.voachinese.com/a/chip-export-restrictions-debate-intensifies-as-senate-panel-plans-joint-testimony-from-lutnick-and-bessent-20261120/8226223.html",
+      "source": "VOA Chinese",
+      "category": "Congress",
+      "headline": "Senate Panel Plans Joint Testimony From Lutnick and Bessent on Chip Exports",
+      "body_text": "A Senate committee is planning to call Commerce Secretary Lutnick and Treasury Secretary Bessent to testify jointly on China chip export policy, per VOA Chinese.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://www.bbc.com/zhongwen/articles/cmp3vyl0x1x6o/simp",
+      "source": "BBC Chinese",
+      "category": "Cross-Strait",
+      "headline": "BBC Chinese Maps Taipei, New Taipei, Kaohsiung Races Ahead of Nov. 28 Vote",
+      "body_text": "BBC Chinese outlines the tight Taipei, New Taipei and Kaohsiung mayoral races, noting cross-strait themes have receded as swing voters grow.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://news.cctv.com/2026/11/21/ARTIhUPXlnTRTMebeM7J3Ow6261121.shtml",
+      "source": "CCTV",
+      "category": "Diplomacy",
+      "headline": "Chinese Embassy in Mexico Pushes Back on US Consul General's China Remarks",
+      "body_text": "China's embassy in Mexico disputed remarks about China made by the US consul general in Nuevo Laredo, per CCTV.",
+      "color_bar_class": "cb-mid"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/china-s-offshore-tax-clampdown-pushes-budget-into-rare-surplus",
+      "source": "Bloomberg",
+      "headline": "China's Offshore Tax Clampdown Pushes Budget Into Rare Surplus",
+      "body_text": "A crackdown on offshore tax avoidance has pushed China's budget into a rare surplus, Bloomberg reported.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/features/2026-11-20/china-s-exports-of-robots-cars-semiconductors-make-life-hard-for-rivals",
+      "source": "Bloomberg",
+      "headline": "China's Export Machine of Robots, Cars and Chips Squeezes Global Rivals",
+      "body_text": "China's exports of robots, cars and semiconductors are making life harder for global competitors, Bloomberg's feature reported.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-byd-has-suv-that-infringes-jlr-defender-design-dutch-court-rules-2026-11-20/",
+      "source": "Reuters",
+      "headline": "Dutch Court Bars BYD SUV in Europe Over Land Rover Defender Resemblance",
+      "body_text": "A Dutch court ruled that a **BYD** SUV infringes on Jaguar Land Rover's Defender design and barred its sale in Europe, Reuters reported.",
+      "companies": [
+        "BYD",
+        "Jaguar Land Rover"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.afp.com/en/infos/verlinvest-facilitate-china-resources-full-exit-oatly",
+      "source": "AFP",
+      "headline": "Verlinvest to Facilitate China Resources' Full Exit From Oatly",
+      "body_text": "**China Resources** is fully exiting its stake in Swedish oat-milk maker Oatly, with Belgian investment firm Verlinvest facilitating the sale, AFP reported.",
+      "companies": [
+        "China Resources",
+        "Oatly",
+        "Verlinvest"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/novartis-ceo-says-us-china-biotech-curbs-risk-drug-development",
+      "source": "Bloomberg",
+      "headline": "Novartis CEO Warns US-China Biotech Curbs Risk Drug Development",
+      "body_text": "**Novartis**'s CEO said escalating US-China biotech restrictions risk slowing global drug development, Bloomberg reported.",
+      "companies": [
+        "Novartis"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3375311/deal-duty-free-swiss-exports-china-boon-hong-kong-top-diplomat-says",
+      "source": "SCMP",
+      "headline": "Duty-Free Swiss Exports to China Seen Boosting Hong Kong Finance, Logistics",
+      "body_text": "Switzerland's scrapping of tariffs on nearly all exports to China under an upgraded FTA will boost Hong Kong's finance, logistics and legal sectors, the city's top Swiss diplomat said, per SCMP.",
+      "companies": [],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-21/china-deploys-5g-across-manufacturing-base-as-6g-testing-advances-cctv-reports",
+      "source": "Bloomberg",
+      "headline": "China Expands 5G Across Industries as 6G Testing Advances, CCTV Reports",
+      "body_text": "China is deploying 5G across its manufacturing base while advancing 6G testing, state broadcaster CCTV said, per Bloomberg.",
+      "companies": [],
+      "sector": "tech"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Japan-Taiwan remarks after Xi-Takaichi snub",
+      "statement": "For the Japanese side, the most urgent task is to correct its wrong words and actions on the Taiwan issue as soon as possible. The important thing is to adopt a correct attitude on historical issues, and fundamentally, truly achieve an objective and rational understanding of China.",
+      "original_zh": null,
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Statement followed Xi Jinping's refusal of a formal bilateral meeting with Japanese PM Sanae Takaichi at the APEC Shenzhen summit, though the two shook hands twice.",
+      "source": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/world/archives/2026/11/21/2003868145"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "CCP General Secretary, President",
+      "topic": "China-Russia-US trilateral summit on world peace",
+      "statement": "History tells us: when major countries are at peace, the world is at peace; when major countries fight, the world is in chaos. Positive interaction among major powers is not an optional question, but one that must be answered.",
+      "original_zh": "历史告诉我们，大国和则世界安，大国斗则世界乱。大国良性互动不是选择题，而是必答题。",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Remarks made while Xi chaired the first-ever China-Russia-US trilateral summit in Shenzhen on November 19, alongside Trump and Putin.",
+      "source": "MOFA",
+      "url": "https://www.fmprc.gov.cn/zyxw/202611/t20261119_12063234.shtml"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "CCP General Secretary, President",
+      "topic": "Taiwan and US-China relations",
+      "statement": "Per Reuters: Xi said the US should do the 'right thing' on Taiwan to avoid setbacks in relations, remarks made during his meetings with Trump at the APEC summit.",
+      "original_zh": null,
+      "addressed_to": "US",
+      "tone": "warning",
+      "context": "Comment came during Xi's meetings with Trump on the sidelines of the Shenzhen APEC summit.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/china/chinas-xi-says-us-should-do-right-thing-taiwan-avoid-setbacks-relations-2026-11-19/"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "ST",
+      "who": "Sanae Takaichi",
+      "handle_context": "Prime Minister of Japan",
+      "platform_date": "Taipei Times · Nov 21, 2026",
+      "quote_text": "Precisely because there are pending issues and challenges between Japan and China, we believe it is important to engage in dialogue and maintain communication.",
+      "analyst_note": "Takaichi returned home Nov 19 after Xi declined a formal bilateral meeting but shook her hand twice at the Shenzhen summit.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/world/archives/2026/11/21/2003868145"
+    },
+    {
+      "avatar_initials": "JP",
+      "who": "Senior Japanese government official (unnamed)",
+      "handle_context": "Speaking to Reuters, cited by Guancha",
+      "platform_date": "Guancha · Nov 20, 2026",
+      "quote_text": "As a middle power, Japan has no choice but to rely on its own strength to survive.",
+      "analyst_note": "Comment followed Trump's outreach to Beijing at the Shenzhen trilateral summit, which Japanese officials say has deepened doubts about US alliance commitments.",
+      "badge_class": "sb-p",
+      "url": "https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_11_21_909409.shtml?s=zwyxgtjdt"
+    },
+    {
+      "avatar_initials": "VP",
+      "who": "Vladimir Putin",
+      "handle_context": "President of Russia",
+      "platform_date": "MOFA transcript · Nov 19, 2026",
+      "quote_text": "Russia, China and the US are all major powers and permanent members of the UN Security Council, and the shared victory of World War II binds us together.",
+      "analyst_note": "Remarks made at the first-ever China-Russia-US trilateral summit in Shenzhen, chaired by Xi Jinping.",
+      "badge_class": "sb-p",
+      "url": "https://www.fmprc.gov.cn/zyxw/202611/t20261119_12063234.shtml"
+    },
+    {
+      "avatar_initials": "DT",
+      "who": "Donald Trump",
+      "handle_context": "President of the United States",
+      "platform_date": "MOFA transcript · Nov 19, 2026",
+      "quote_text": "The summit of the US, China and Russia heads of state is watched by the whole world, is very important, and has made history.",
+      "analyst_note": "Trump made the comment at the Shenzhen trilateral summit, which also produced a joint declaration on oil supply and nuclear non-proliferation.",
+      "badge_class": "sb-p",
+      "url": "https://www.fmprc.gov.cn/zyxw/202611/t20261119_12063234.shtml"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.fmprc.gov.cn/zyxw/202611/t20261119_12063234.shtml",
+    "https://www.nytimes.com/2026/11/19/world/asia/russia-china-united-states-oil-joint-statement.html",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/11/21/2003868139",
+    "https://www.scmp.com/news/china/diplomacy/article/3375277/how-beijings-south-china-sea-stance-benefits-rare-joint-warning-icc",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/11/21/2003868133"
+  ],
+  "story_count": 97,
+  "oped_count": 0,
+  "academic_count": 0,
+  "source_count": 105,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-21.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-21.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
