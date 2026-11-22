@@ -1,0 +1,494 @@
+{
+  "digest_date": "Sunday, November 22, 2026",
+  "re_line": "Trilateral summit fallout · AI-chip espionage disclosures · A-share stabilization push · Cross-Strait pressure points",
+  "market_indicators": {
+    "usd_cnh": {
+      "value": "6.6736",
+      "change_pct": -0.25,
+      "as_of": "Nov 20"
+    },
+    "brent": {
+      "value": "89.95",
+      "change_pct": -3.42,
+      "as_of": "Nov 20"
+    },
+    "sse_composite": {
+      "value": "3,533.79",
+      "change_pct": -1.91,
+      "as_of": "Nov 20"
+    },
+    "hang_seng": {
+      "value": "22,410.80",
+      "change_pct": -5.19,
+      "as_of": "Nov 20"
+    },
+    "usd_cny": {
+      "value": "6.6772",
+      "change_pct": 0.09,
+      "as_of": "Nov 22"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "Trump told reporters at the White House that China could close the nuclear gap with the US within ten years, while Bessent said Trump and Xi agreed humans must stay in the decision loop on any military use of Super Intelligence, days after the first-ever China-Russia-US trilateral meeting in Shenzhen.",
+    "The New York Times reported the Ministry of State Security ran a years-long campaign to acquire advanced AI chips and intelligence on the sector predating the Jensen Huang-Alice Huang scandal, while the Wall Street Journal and Financial Times separately detailed an associate accused of funneling Nvidia chips into China.",
+    "Shanghai, Shenzhen and Beijing exchanges cut the minimum margin-trading ratio to 80 percent effective November 30 and Shenzhen opened consultation on a ChiNext market-maker system, after a week in which the Hang Seng fell 5.19 percent and Chinese AI stocks lost an estimated $1.7 trillion."
+  ],
+  "key_stat": {
+    "number": "2 years",
+    "label": "Taiwan AI Labs founder's estimate of the US-China chip manufacturing gap",
+    "context": "Ethan Tu (Du Yijin) gave the estimate to VOA days after Trump told reporters at the White House that the US leads China by ten years in chip manufacturing.",
+    "source": "VOA Chinese, Nov 21"
+  },
+  "prc_government": [
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "People's Bank of China",
+      "action": "LPR held steady for 18th straight month under new policy-rate anchor",
+      "document": "November 2026 Loan Prime Rate announcement",
+      "detail": "The 1-year LPR stayed at *3.0 percent* and the 5-year-plus LPR at 3.5 percent on Nov 20, the first reading since the PBOC shifted its policy-rate anchor from the 7-day to the overnight reverse repo rate (1.25 percent) on Nov 2.",
+      "source_label": "Stockstar ZH",
+      "url": "http://stock.stockstar.com/IG2026112100006775.shtml"
+    },
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "People's Bank of China",
+      "action": "PBOC cuts share-buyback relending rate to 1 percent",
+      "document": null,
+      "detail": "The central bank lowered the rate on its stock buyback-and-increase relending facility to *1 percent*; state media said more than 60 companies received loan commitment letters in November.",
+      "source_label": "Stockstar ZH",
+      "url": "https://wap.stockstar.com/detail/IG2026112200007818"
+    },
+    {
+      "ministry": "CSRC / Exchanges",
+      "ministry_chinese": "中国证监会/沪深北交易所",
+      "official": "CSRC-approved joint exchange notice",
+      "action": "Exchanges cut margin-trading ratio floor to 80 percent, effective Nov 30",
+      "document": "Notice on Adjusting Margin-Trading Ratio Arrangements",
+      "detail": "Shanghai, Shenzhen and Beijing exchanges lowered the minimum margin ratio for leveraged stock purchases from 100 percent to *80 percent*, which market estimates say could release almost CNY 400 billion in incremental funds; Shenzhen separately opened consultation on a ChiNext market-maker system the same day.",
+      "source_label": "Xinhua ZH",
+      "url": "https://www.news.cn/20261122/50bbccb787fe4658bd58259f073515eb/c.html"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "Gao Yunlong, Vice Chairman of the CPPCC National Committee and ACFIC Chairman",
+      "action": "14th China Central China Investment and Trade Expo opens in Zhengzhou",
+      "document": null,
+      "detail": "Gao told the opening that the six central provinces should align with the \"three bases, one hub\" strategy and deepen integration into the Belt and Road Initiative.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://www.mofcom.gov.cn/xwfb/ldrhd/art/2026/art_20c5934f3135440f9d8fd9f2a40e027c.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 23,
+      "headline": "Swiss FM Cassis visits China",
+      "detail": "Ignazio Cassis holds the fifth round of the China-Switzerland foreign ministers' strategic dialogue with Wang Yi, Nov 23-24."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayoral and magistrate races and roughly 11,000 offices up for election, read as a mid-term test for Lai Ching-te."
+    },
+    {
+      "month": "Nov",
+      "day": 30,
+      "headline": "New 80% margin ratio rule takes effect",
+      "detail": "Shanghai, Shenzhen and Beijing exchanges' cut to the minimum margin-trading ratio becomes effective."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "Annual state commemoration (国家公祭日)."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral",
+      "detail": "US hosts the G20 summit Dec 14-15; Xi attendance unconfirmed."
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/11/22/world/asia/china-taiwan-comedian-xi-jinping.html",
+      "source": "NYT Asia",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwanese Comedian Who Mocks Xi Draws Sellout Crowds After Car Crash",
+      "body": "Huang Yi-hao, a Taiwanese comedian who calls **Xi Jinping** his \"comedy muse,\" is drawing sellout crowds after surviving a car crash Taiwanese authorities say was meant to silence him, the New York Times reports. The article does not identify a suspect or motive beyond his routines mocking the Chinese leader.",
+      "src_line": "NYT Asia, Nov 22"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/world/story20261121-10036833",
+      "source": "Lianhe Zaobao",
+      "category_tag": "Diplomacy",
+      "headline": "Trump Defends Shenzhen Trilateral With Xi and Putin, Warns China Could Close Nuclear Gap in a Decade",
+      "body": "**Trump** told reporters at the White House on Nov 20 that his relationships with **Xi Jinping** and Putin keep America safe, days after chairing the first-ever China-Russia-US trilateral meeting in Shenzhen on Nov 19. He said China is racing to expand its nuclear arsenal and *could catch up with the US within 10 years*, citing a Pentagon estimate of over 600 warheads in 2024 rising past 1,000 by 2030.",
+      "src_line": "Lianhe Zaobao, Nov 21, citing White House briefing"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/22/2003868182",
+      "source": "Taipei Times",
+      "category_tag": "PLA",
+      "headline": "PLA Navy Nears Launch of Third Type 09V Nuclear-Powered Guided-Missile Submarine",
+      "body": "Satellite imagery published by Janes shows the PLA Navy preparing to launch what is likely its third Type 09V submarine, the Institute for the Study of War and the American Enterprise Institute said in a joint statement. A third hull would bring the PLAN's SSGN fleet to *between nine and 11 hulls*, with the sub's VLS cells and pump-jet propulsor seen as suited to isolating Taiwan from outside intervention.",
+      "src_line": "Taipei Times, Nov 22, citing Janes/ISW/AEI"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/21/world/asia/china-nvidia-spy-chips-state-security.html",
+      "source": "NYT Asia",
+      "category_tag": "Technology",
+      "headline": "NYT: China's MSS Ran Years-Long Campaign to Acquire AI Chips Before Nvidia Scandal Broke",
+      "body": "The Ministry of State Security has run a secret, multi-year campaign to help Chinese companies acquire advanced AI chips and gather intelligence on the sector, officials told the New York Times, predating the scandal involving former Nvidia CEO **Jensen Huang**'s relationship with Alice Huang. The Wall Street Journal and Financial Times separately reported on an associate of Alice Huang accused of funneling Nvidia chips into China and on her broader links to the chip underworld.",
+      "src_line": "NYT Asia, Nov 21"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-22/china-s-1-7-trillion-ai-rout-turns-hot-trade-into-losing-bet",
+      "source": "Bloomberg",
+      "category_tag": "PRC-Economy",
+      "headline": "China's $1.7 Trillion AI Stock Rout Turns a Hot Trade Into a Losing Bet",
+      "body": "Bloomberg reports a *$1.7 trillion* rout has hit Chinese AI-linked stocks, reversing a trade that drew heavy retail and institutional inflows earlier this year. The sell-off tracks a broader regional pullback, with the Hang Seng down 5.19 percent and the SSE Composite off 1.91 percent as of Nov 20.",
+      "src_line": "Bloomberg, Nov 22"
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-22/china-objects-to-us-curbs-on-telecoms-access-to-phone-numbers",
+      "source": "Bloomberg",
+      "headline": "China Objects to FCC Ban on Chinese Telecoms' Direct Access to US Phone Numbers",
+      "body_text": "Beijing protested after the US Federal Communications Commission barred Chinese telecom carriers from directly accessing US phone numbers, Bloomberg and Reuters both reported. Neither wire detailed the specific carriers named or an effective date in the available text.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWXQ2YmRXMWcxSG5FQ0s4LXBFNnZwb3A2ZVVXQkFsLUFKcXI3RjJDSnRsakI5V3JzcXNFMFhac2x0d1M4S1BfOUxhT2hHN293aXlNd3RHSTUyYTZCVzRPV0V0eUdtS05TaUhVUV9VSTlhN0lXTkd4ZEYxNGI3d2llTg?oc=5",
+      "source": "CNN",
+      "headline": "Trump and Xi's APEC AI Pledge Meets 'Harsh Reality,' CNN Reports",
+      "body_text": "CNN reports that AI cooperation touted by **Trump** and **Xi Jinping** at the Shenzhen summit is colliding with the practical limits of US-China tech rivalry. The available text does not detail new policy actions beyond the leaders' public statements at the APEC summit.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE94MVRKSkVSTXVkZmRDTWYtakd3VFYtQ0VIWUhWRjVzTmlEUE9HbHh5QTZZU1pQMHRaNEpacHRjZWxad1c4VlJOdktDcFQ1c1lqRmdBR2hkZmFFVlAwNXdOamUtYVVmS3pJeFdpbVBKb05BZnYtLXktamVR?oc=5",
+      "source": "WSJ",
+      "headline": "WSJ Identifies Alice Huang Associate Accused of Funneling Nvidia Chips to China",
+      "body_text": "The Wall Street Journal identified an associate of Alice Huang, the executive linked romantically to former Nvidia CEO **Jensen Huang**, as the figure accused of funneling Nvidia chips into China. The report follows congressional scrutiny of Huang's chip sales and the MSS campaign the New York Times described separately.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.ft.com/content/f3ad8a81-3890-4a8a-8853-ff0a94b08ba9?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "FT: Alice Huang Had Ties to the 'Chip Underworld' Moving Nvidia Hardware to China",
+      "body_text": "The Financial Times reports Alice Huang had connections to the networks moving Nvidia chips into China, adding detail to disclosures following revelations of her relationship with former Nvidia chief **Jensen Huang**. The report builds on the broader MSS chip-acquisition campaign described by the New York Times.",
+      "instrument": "Sanctions"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/22/2003868165",
+      "source": "Taipei Times",
+      "headline": "Incoming House Subcommittee Chair Bera Reaffirms US Taiwan Policy",
+      "body_text": "Rep. Ami Bera, expected to chair the House Foreign Affairs Subcommittee on East Asia and the Pacific when Democrats take over, said US policy on Taiwan \"based on the Taiwan Relations Act and the six assurances, remains unchanged.\" He said Washington must engage Beijing on AI guardrails and rebuild trilateral ties with Japan and South Korea.",
+      "instrument": "Congress"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMk94aHBLLVI3V1JkYU1DWGQ1Qk5ZVnlBN2JFYWYtbzNPOU1GSkgzTmJCRXVzcllCZERfVkpWQnpIMWdXbjI5LWNaal8wTzBwdWtWSDZITm5RZVZhejZ4WldzNVpEVm90ODJ5UTY0REJUWTUtQk5PUk5CUXNSekIzSTYyRlEwOE5QZzkxZ2dic3dwTWNKZF8yRm9pSEVWbkw1cnc?oc=5",
+      "source": "AP",
+      "headline": "Taiwan Warns Canada's Carney That Deeper China Ties Carry Risks",
+      "body_text": "Taiwan warned Canadian Prime Minister Mark Carney that deepening ties with Beijing carries risks, according to the Associated Press. The available text does not detail the channel or date of the warning beyond the headline.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://money.udn.com/money/story/5603/9894387",
+      "source": "UDN",
+      "headline": "Taiwan's MAC Says China's Ethnic Unity Law Raises Risk for Travelers to the Mainland",
+      "body_text": "MAC Chairman **Chiu Chui-cheng** said China's Ethnic Unity and Progress Promotion Law, in force since July 1, 2026, for the first time formally places Taiwan within Beijing's \"ethnic work\" remit. He said its extraterritorial provisions give Beijing a legal tool for cross-border repression, raising risks for Taiwanese visiting or engaging in exchanges with the mainland.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://news.qq.com/rain/a/20261121A059AT00",
+      "source": "TAO (via Tencent News)",
+      "headline": "TAO Accuses Shen Bo-yang's Father and Son of Evading Sanctions Through Corporate 'Vest-Changing'",
+      "body_text": "Chinese outlets carried a Taiwan Affairs Office rebuttal accusing Taiwanese legislator Shen Bo-yang and his father of continuing business dealings in China under different corporate guises despite being sanctioned. No further detail on the companies involved was in the carried report.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3375372/pla-anti-submarine-ships-conduct-south-china-sea-patrol-vietnamese-navy",
+      "source": "SCMP",
+      "headline": "PLA and Vietnamese Navy Complete 41st Joint Gulf of Tonkin Patrol",
+      "body_text": "Chinese and Vietnamese naval vessels completed their 41st joint patrol in the Gulf of Tonkin on Nov 21, spanning *32 hours and 351 nautical miles*, PLA Daily said. The patrol, which included a joint search-and-rescue drill, came days after the Shenzhen trilateral summit between Xi, Trump and Putin.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.scmp.com/week-asia/politics/article/3375366/are-economic-ties-beijing-reshaping-indonesias-south-china-sea-playbook",
+      "source": "SCMP",
+      "headline": "Indonesia's Prabowo Pushes Joint South China Sea Development With Beijing",
+      "body_text": "Indonesian President Prabowo Subianto said Jakarta and Beijing have exchanged notes on joint maritime development in the South China Sea, saying \"we are already finding a strong future of cooperation.\" SCMP notes the remarks revive questions about whether Jakarta is softening its historic rejection of China's claims in the waterway.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/materials/corporate-japan-races-to-revive-rare-earth-supply-chain-amid-china-curbs",
+      "source": "Nikkei Asia",
+      "headline": "Corporate Japan Races to Build Independent Rare-Earth Supply Chain Amid China Curbs",
+      "body_text": "Nikkei reports Chinese export controls on rare-earth metals are spurring Japanese companies to build an independent supply chain, calling it the start of a structural shift. The available text does not name specific companies or investment figures.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://english.news.cn/20261122/25e8d8e581e44f17ae2f1b61db03f547/c.html",
+      "source": "Xinhua",
+      "headline": "Switzerland's Cassis to Hold Fifth China-Switzerland Strategic Dialogue Nov 23-24",
+      "body_text": "Swiss Federal Vice President and Foreign Minister Ignazio Cassis will visit China Nov 23-24 at **Wang Yi**'s invitation for the fifth round of the China-Switzerland foreign ministers' strategic dialogue, MOFA announced. The visit follows a string of bilateral meetings Xi and Li Qiang held with foreign leaders on the sidelines of the Shenzhen APEC summit.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.theguardian.com/world/2026/nov/20/xi-jinping-says-a-full-turnaround-has-been-achieved-in-australia-china-relations-praising-anthony-albanese",
+      "source": "The Guardian",
+      "headline": "Xi Says 'Full Turnaround' Achieved in Australia-China Relations, Praises Albanese",
+      "body_text": "**Xi Jinping** told Australian Prime Minister Anthony Albanese that a \"full turnaround\" has been achieved in the bilateral relationship, the Guardian reported from their meeting on the sidelines of the Shenzhen APEC summit. Albanese thanked Xi and China for hosting APEC with what he called \"exceptional leadership.\"",
+      "region": "Australia-Pacific"
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.voachinese.com/a/ai-expert-ethan-tu-told-voa-the-gap-between-us-and-china-on-advanced-chip-making-is-around-2-years-20261121/8226547.html",
+      "source": "VOA Chinese",
+      "category": "Technology",
+      "headline": "Taiwan AI Expert Puts US-China Chip Manufacturing Gap at Two Years, Not Ten",
+      "body_text": "AI Labs founder Du Yijin (Ethan Tu) told VOA the US-China chip manufacturing gap is about two years, days after **Trump** said at a White House briefing the US leads China by ten years. He compared the US-China \"Super Intelligence\" race to the Cold War-era US-Soviet space and nuclear rivalry, saying safety guardrails are a global responsibility."
+    },
+    {
+      "url": "https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_11_22_909505.shtml",
+      "source": "Guancha",
+      "category": "Technology",
+      "headline": "US Science PhD Enrollment Drops 9.9% in 2025, NSF Data Shows",
+      "body_text": "New National Science Foundation data cited by Guancha shows first-time, full-time US science and engineering PhD enrollment fell *9.9 percent* in 2025 to 46,264, with foreign-student enrollment down 16.2 percent. The piece frames the decline, tied to federal research-funding cuts, as a potential opening for China and Europe to attract talent."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/22/2003868184",
+      "source": "Taipei Times",
+      "category": "Energy",
+      "headline": "Taiwan Environment Minister Pledges Circular-Economy Cooperation After COP31",
+      "body_text": "Environment Minister Peng Chi-ming said Taiwan will join international circular-economy efforts following COP31's close in Turkey, noting Taiwan imports up to *76.14 percent* of its raw materials. He said climate action must extend beyond energy transition to product design and material use."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3375369/hong-kong-can-help-connect-global-bay-areas-paul-chan-says",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Hong Kong Can Connect Global Bay Areas, Finance Chief Paul Chan Says",
+      "body_text": "Financial Secretary Paul Chan said Hong Kong can help build the global \"association of bay areas\" that **Xi Jinping** proposed at the APEC CEO Summit, citing the city's finance, common-law and innovation strengths. The remarks followed Xi's Shenzhen proposal for deeper bay-area exchanges worldwide."
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/politics/article/3375348/xis-bay-area-vision-offers-scope-cooperation-despite-us-tokyo-hurdles-analysts",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Analysts: Xi's Global Bay-Area Vision Faces US, Tokyo Hurdles",
+      "body_text": "Observers told SCMP that Xi's call for a global association of bay areas, proposed at the Shenzhen APEC CEO Summit, signals a long-term economic vision to Washington and Tokyo despite geopolitical tension. They said finding common ground will be difficult given current US-China and Japan-China friction."
+    },
+    {
+      "url": "https://focustaiwan.tw/business/202611220004",
+      "source": "Focus Taiwan",
+      "category": "Indo-Pacific",
+      "headline": "Taiwanese Business Groups in the Philippines Merge to Pool Resources",
+      "body_text": "Taiwanese business associations operating in the Philippines have merged into a single body to pool resources, Focus Taiwan reported, without detailing the groups involved. The move follows broader Taiwan-Philippines economic coordination amid regional tension with Beijing."
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.washingtonpost.com/world/2026/11/22/china-is-becoming-easier-visit-harder-leave/",
+      "source": "WaPo",
+      "category": "Diplomacy",
+      "headline": "WaPo: China Easier to Visit, Harder to Leave",
+      "body_text": "The Washington Post reports China has eased entry rules for visitors even as exit controls for some residents remain tighter.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://newsus.cgtn.com/news/2026-11-22/Trump-says-US-cities-are-embarrassing-compared-to-China-1Sgv96N1Oa4/p.html",
+      "source": "CGTN",
+      "category": "Diplomacy",
+      "headline": "Trump Calls US Cities 'Embarrassing' Compared With China's, CGTN Reports",
+      "body_text": "Trump told reporters US cities are \"embarrassing\" compared with China's, per CGTN's coverage of his post-APEC remarks.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.21jingji.com/article/20261122/herald/7da4d03b77cb089624681652daf5d7fd.html",
+      "source": "21st Century Business Herald",
+      "category": "PRC-Economy",
+      "headline": "China Extends Bond Registration Fee Waivers for Green and Private-Firm Debt Through 2028",
+      "body_text": "China Securities Depository and Clearing will keep waiving registration and redemption fees on green, sci-tech and private-enterprise bonds from Jan 1, 2027 through Dec 31, 2028.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/society/article/3375357/hong-kong-chile-working-holiday-scheme-expected-launch-first-half-2027",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "Hong Kong-Chile Working Holiday Scheme Set to Launch in First Half of 2027",
+      "body_text": "Hong Kong's 15th working holiday arrangement and first with a South American country will offer *100 places* a year on each side, Labour Secretary Chris Sun said.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://asia.nikkei.com/spotlight/your-week-in-asia/laos-least-developed-status-shift-tata-meeting-taiwan-local-elections",
+      "source": "Nikkei Asia",
+      "category": "Cross-Strait",
+      "headline": "Nikkei Weekly Roundup Flags Taiwan's Nov. 28 Local Elections",
+      "body_text": "Nikkei's Asia weekly roundup previews Taiwan's Nov. 28 nine-in-one local elections alongside Laos's LDC graduation and a Tata meeting.",
+      "color_bar_class": "cb-navy"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.ft.com/content/91d25e77-efa2-4ced-a9e1-92f53fa18e4d?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "Hydrogen-Powered Vehicle Dream Falters in China's 'Hydrogen Capital' Foshan",
+      "body_text": "FT reports high costs and dwindling subsidies have left rows of hydrogen-powered buggies idle in Foshan, a city that branded itself China's hydrogen hub.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.reuters.com/commentary/reuters-open-interest/west-challenges-chinas-critical-minerals-dominance-with-unglamorous-tungsten-2026-11-21/",
+      "source": "Reuters",
+      "headline": "West Challenges China's Critical-Minerals Dominance With Tungsten Push",
+      "body_text": "Reuters reports Western efforts to challenge China's dominance in critical minerals are focusing on tungsten supply chains rather than higher-profile rare earths.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.jiemian.com/article/15358676.html",
+      "source": "Jiemian",
+      "headline": "China's Gold Rush Reverses as Spot Prices Crash Below 800 Yuan a Gram",
+      "body_text": "Domestic gold bar prices fell below the psychological *800 yuan per gram* floor to as low as 755 yuan, with spot gold closing at $3,537.87 an ounce on Nov 20, down 2.47 percent. A Beijing retailer, Caibai, sold out of all investment gold bars within roughly an hour of the drop, with one buyer purchasing 11 bars worth over 850,000 yuan.",
+      "companies": [
+        "Caibai"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261122-10038830",
+      "source": "Lianhe Zaobao",
+      "headline": "China's Second Domestic Large Cruise Ship Begins Commercial Service",
+      "body_text": "The Adora Magic City, China's second domestically built large cruise ship, departed Guangzhou's Nansha port Nov 22 with over *3,800 passengers* on a six-day voyage to Hong Kong and Hue, Vietnam. The 341-meter, 141,900-ton vessel will run more than 50 international voyages from Guangzhou in 2027, covering Vietnam, Malaysia and Brunei.",
+      "companies": [
+        "Adora Cruises"
+      ],
+      "sector": "manufacturing"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Japan-China tensions over Taiwan remarks",
+      "statement": "For Japan, what is urgent now is to correct its erroneous words and actions on the Taiwan question as soon as possible; what is important is to adopt a correct attitude on historical issues; and what is fundamental is to truly achieve an objective and rational understanding of China.",
+      "original_zh": "对日方而言，当前紧迫的是在台湾问题上尽快纠正错误言行，重要的是在历史问题上采取正确态度，根本的是在对华认知上真正做到客观理性。",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Guo made the remarks at the Nov 20 MOFA press conference, reiterating that honoring the four China-Japan political documents is a legal obligation Tokyo must act on, not just state.",
+      "source": "MOFA presser via Sohu",
+      "url": "https://m.sohu.com/a/1104256639_267106?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "Xi Jinping",
+      "body_chinese": "习近平",
+      "speaker": "Xi Jinping",
+      "role": "President",
+      "topic": "China-Russia-US trilateral summit, Shenzhen",
+      "statement": "Major powers uniting brings peace to the world; major powers fighting brings chaos to the world. Positive interaction among major powers is not a multiple-choice question, it is a question that must be answered.",
+      "original_zh": "大国和则世界安，大国斗则世界乱。大国良性互动不是选择题，而是必答题。",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "Xi made the remarks at the first-ever China-Russia-US leaders' meeting in Shenzhen on Nov 19, held alongside the APEC summit.",
+      "source": "PLA Daily (81.cn), citing People's Daily",
+      "url": "http://www.81.cn/xx_207779/16501326.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA spokesperson",
+      "topic": "Swiss FM Cassis visit announcement",
+      "statement": "At the invitation of Wang Yi, member of the Political Bureau of the CPC Central Committee and Minister of Foreign Affairs, Swiss Federal Vice President and Foreign Minister Ignazio Cassis will visit China November 23 to 24 and hold the fifth round of the China-Switzerland foreign ministers' strategic dialogue.",
+      "original_zh": "应中共中央政治局委员、外交部长王毅邀请，瑞士联邦副主席兼外长卡西斯将于11月23日至24日访华并举行中瑞第五轮外长级战略对话。",
+      "addressed_to": "EU",
+      "tone": "routine",
+      "context": "The announcement was carried by Xinhua and People's Daily on Nov 22 ahead of the visit.",
+      "source": "People's Daily / Xinhua",
+      "url": "https://world.people.com.cn/n1/2026/1122/c1002-40838388.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "DT",
+      "who": "Donald Trump",
+      "handle_context": "US President",
+      "platform_date": "White House briefing via Lianhe Zaobao · Nov 20, 2026",
+      "quote_text": "They can catch up with us within 10 years.",
+      "analyst_note": "The Pentagon's 2024 assessment estimated China's nuclear warhead stockpile at over 600, projected to exceed 1,000 by 2030, per the same report.",
+      "badge_class": "sb-r",
+      "url": "https://www.zaobao.com.sg/news/world/story20261121-10036833"
+    },
+    {
+      "avatar_initials": "MR",
+      "who": "Marco Rubio",
+      "handle_context": "Secretary of State and National Security Advisor",
+      "platform_date": "White House briefing via Lianhe Zaobao · Nov 20, 2026",
+      "quote_text": "These three countries hold the vast majority of the world's nuclear weapons; the idea that these three leaders shouldn't meet regularly is not just absurd, it's dangerous.",
+      "analyst_note": "Rubio spoke alongside Trump at the same Nov 20 White House press conference following the Shenzhen trilateral summit.",
+      "badge_class": "sb-p",
+      "url": "https://www.zaobao.com.sg/news/world/story20261121-10036833"
+    },
+    {
+      "avatar_initials": "SB",
+      "who": "Scott Bessent",
+      "handle_context": "Treasury Secretary",
+      "platform_date": "CNBC interview via Lianhe Zaobao · Nov 20, 2026",
+      "quote_text": "President Trump and President Xi agreed that humans must be involved in any military decision-making that touches Super Intelligence, we cannot let SI decide major military actions on its own.",
+      "analyst_note": "Bessent described the human-in-the-loop AI pledge as one of the trip's key deliverables, per the same report.",
+      "badge_class": "sb-p",
+      "url": "https://www.zaobao.com.sg/news/world/story20261121-10036833"
+    }
+  ],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.zaobao.com.sg/news/world/story20261121-10036833",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/11/22/2003868182",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMk94aHBLLVI3V1JkYU1DWGQ1Qk5ZVnlBN2JFYWYtbzNPOU1GSkgzTmJCRXVzcllCZERfVkpWQnpIMWdXbjI5LWNaal8wTzBwdWtWSDZITm5RZVZhejZ4WldzNVpEVm90ODJ5UTY0REJUWTUtQk5PUk5CUXNSekIzSTYyRlEwOE5QZzkxZ2dic3dwTWNKZF8yRm9pSEVWbkw1cnc?oc=5"
+  ],
+  "story_count": 100,
+  "oped_count": 3,
+  "academic_count": 0,
+  "source_count": 83,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-22.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-22.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
