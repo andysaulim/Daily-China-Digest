@@ -1,0 +1,574 @@
+{
+  "digest_date": "Tuesday, November 24, 2026",
+  "re_line": "RE: Huang back at Nvidia roils markets · Megaspeed blacklisted · China extends minerals truce · EU caps hybrid EVs · Solomons pivot",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "22,219.65",
+      "change_pct": -5.48,
+      "as_of": "Nov 24"
+    },
+    "usd_cny": {
+      "value": "6.6506",
+      "change_pct": -0.23,
+      "as_of": "Nov 24"
+    },
+    "sse_composite": {
+      "value": "3,548.37",
+      "change_pct": -1.1,
+      "as_of": "Nov 24"
+    },
+    "brent": {
+      "value": "86.99",
+      "change_pct": -5.43,
+      "as_of": "Nov 24"
+    },
+    "usd_cnh": {
+      "value": "6.6623",
+      "change_pct": -0.06,
+      "as_of": "Nov 24"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "Nvidia reinstated Jensen Huang as CEO within two weeks of his ouster over a China-linked espionage affair, after direct White House intervention, sending Nvidia shares surging and Taiwan, Japan and South Korean markets up 4 to 9 percent.",
+    "Washington blacklisted an Alibaba-owned company and chip broker Megaspeed, both tied to the Nvidia spy scandal, the same week Trump pushed for Huang's return.",
+    "Beijing extended its pause on critical-minerals export controls to preserve the US-China trade truce, as the EU separately adopted tariff-free import caps on Chinese hybrid vehicles effective next month."
+  ],
+  "key_stat": {
+    "number": "$1 trillion",
+    "label": "Nvidia's market-cap gain after Huang's reinstatement",
+    "context": "Nvidia's valuation jumped by roughly $1 trillion within hours of the board restoring Jensen Huang as CEO, a swing BBC Chinese says exceeds the market reaction to Steve Jobs' return to Apple or Sam Altman's reinstatement at OpenAI.",
+    "source": "BBC中文"
+  },
+  "prc_government": [
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": null,
+      "action": "Announces CNY800bn one-year MLF operation for Nov 25",
+      "document": "MLF operation announcement, Nov 25, 2026",
+      "detail": "The People's Bank of China said it will conduct an *CNY800 billion* one-year medium-term lending facility operation on Nov. 25 via fixed-quantity, interest-rate bidding, multiple-price-winning method; November's medium-term liquidity tools show a net CNY500 billion contraction for the month.",
+      "source_label": "PBOC ZH",
+      "url": "https://www.thepaper.cn/newsDetail_forward_34547849"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "Wang Wentao, Commerce Minister",
+      "action": "Convenes 11th China-Mexico high-level economic working group",
+      "document": "11th China-Mexico High-Level Working Group meeting",
+      "detail": "**Wang Wentao** and Mexican Economy Minister Marcelo Ebrard met in Beijing Monday; Mexico's Economy Ministry said China is set to export more than *$130 billion* in goods to Mexico this year, against roughly $10 billion of Mexican exports to China.",
+      "source_label": "MOFCOM ZH / SCMP",
+      "url": "http://www.mofcom.gov.cn/syxwfb/art/2026/art_9f5022d145db4165b13c255c375e21c9.html"
+    },
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM spokesperson",
+      "action": "Responds to EU provisional safeguard measures on hybrid vehicles",
+      "document": "MOFCOM spokesperson Q&A on EU hybrid vehicle measures",
+      "detail": "China's Commerce Ministry issued a same-day statement responding to reporters' questions after the European Commission announced temporary tariff-free import quotas on hybrid vehicles taking effect next month.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_67a40650300a4ef396543f5964c7748b.html"
+    },
+    {
+      "ministry": "MOD",
+      "ministry_chinese": "国防部",
+      "official": null,
+      "action": "Announces China-Cambodia 'Golden Dragon-2026' joint exercise",
+      "document": null,
+      "detail": "China's Ministry of National Defense said China and Cambodia will hold the 'Golden Dragon-2026' joint military exercise, continuing an annual bilateral drill series.",
+      "source_label": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16501662.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 25,
+      "headline": "PBOC conducts CNY800bn MLF operation",
+      "detail": "One-year tenor, fixed-quantity multiple-price-winning bidding; follows a CNY500bn net contraction of medium-term liquidity tools in November."
+    },
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors and magistrates, roughly 11,000 offices up for election; read as a mid-term test of President Lai Ching-te."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "国家公祭日, annual state commemoration."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral (Miami)",
+      "detail": "US-hosted summit; Xi attendance to be confirmed. Sinocism notes a window for the MATCH Act, RASA and AI OVERWATCH Act to advance around this date."
+    },
+    {
+      "month": "Jan",
+      "day": 15,
+      "headline": "Section 232 semiconductor tariff first anniversary",
+      "detail": "25% tariff on certain advanced logic chips (e.g. Nvidia H200, AMD MI325X class) took effect Jan 15, 2026; data-center and R&D imports remain exempt."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.cnn.com/2026/11/24/china/china-sentences-official-to-death-for-passing-state-secrets-to-foreign-spy-intl-hnk",
+      "source": "CNN China",
+      "category": "Legal",
+      "headline": "China sentences official to death for passing state secrets to foreign spy",
+      "body_text": "China sentenced a government official to death for handing over state secrets and classified documents to a foreign intelligence agent, CNN reports. Authorities did not identify the destination country or the specific documents involved."
+    },
+    {
+      "url": "https://www.wsj.com/world/china/alice-huang-us-intel-nvidia-china-34e2404a",
+      "source": "WSJ China",
+      "category": "Security",
+      "headline": "WSJ probes whether Alice Huang's China ties made her an intelligence asset",
+      "body_text": "The Wall Street Journal examines Alice Huang's documented ties to China's intelligence network amid the scandal that led to, then reversed, Jensen Huang's ouster from Nvidia. The piece weighs the evidence behind US suspicions without reaching a firm conclusion."
+    },
+    {
+      "url": "https://apnews.com/article/china-pakistan-shenzhou-24-space-a618c7d419cd556de0392829286ede66",
+      "source": "AP China",
+      "category": "Diplomacy",
+      "headline": "Pakistani astronaut to join China's Shenzhou-24 crew to space station",
+      "body_text": "China unveiled the Shenzhou-24 crew, with a Pakistani pilot set to become the first foreign astronaut aboard the Tiangong space station, AP reports. The flight marks the first joint Chinese-foreign crewed mission in China's human spaceflight program."
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/zyxw/202611/t20261124_12065805.shtml",
+      "source": "外交部 (MOFA ZH)",
+      "category": "Diplomacy",
+      "headline": "Ding Xuexiang meets Singapore's Lee Hsien Loong in Beijing",
+      "body_text": "Vice Premier Ding Xuexiang met Singapore Senior Minister Lee Hsien Loong in Beijing, China's Foreign Ministry said. No further detail of the discussion was released in the ministry's readout."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/24/2003868289",
+      "source": "Taipei Times",
+      "category": "Energy",
+      "headline": "Taiwan to continue fossil fuel phase-out after COP31 ends without deal",
+      "body_text": "Taiwan's environment minister said the island is cutting carbon emissions at about *2 percent* annually and will keep phasing out fossil fuels, after COP31 talks in Antalya closed Sunday with no agreement. Climate groups urged Taipei to prioritize electrification and fossil fuel reduction equally."
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/23/cnbcs-the-china-connection-newsletter-ai-race-spreads-to-smartphones.html",
+      "source": "CNBC China",
+      "category": "Technology",
+      "headline": "CNBC: AI chip race spreads from robots to smartphones",
+      "body_text": "More powerful AI models are raising expectations for stronger on-device chips spanning robots to smartphones, CNBC's China Connection newsletter reports. The shift is pushing device makers to seek more capable edge-computing silicon."
+    },
+    {
+      "url": "https://sinocism.com/p/trump-reinstates-jensen-huang-more",
+      "source": "Sinocism",
+      "category": "US-China",
+      "headline": "Sinocism: Huang reinstatement raises odds for tougher China tech bills",
+      "body_text": "Sinocism says Trump's push to reinstate Jensen Huang increases the likelihood Congress passes the MATCH Act, RASA and AI OVERWATCH Act, possibly around the December G20 in Miami. The edition also flags fresh Chinese measures to stabilize equity markets and October's fiscal surplus."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/taiwans-elections-not-about-china-beijing-has-lot-say-2026-11-24/",
+      "source": "Reuters China",
+      "category": "Cross-Strait",
+      "headline": "Reuters: Taiwan's local elections aren't about China, but Beijing has plenty to say",
+      "body_text": "Reuters reports Taiwan's Nov. 28 local elections nominally concern municipal governance, yet Beijing officials and state media continue to comment on the race. Chinese-language outlets have published commentary tying the vote to cross-strait reunification."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.cnbc.com/video/2026/11/23/rep-richard-neal-spying-concerns-cloud-nvidias-h200-china-sales.html",
+      "source": "CNBC China",
+      "headline": "Rep. Richard Neal: spying concerns cloud Nvidia's H200 China sales",
+      "body_text": "House Ways and Means Committee ranking member **Richard Neal** discussed the Nvidia spy scandal fallout and a joint congressional investigation into the Trump administration's approval of Nvidia H200 chip sales to China. The probe runs alongside Jensen Huang's reinstatement as CEO.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.afp.com/en/us-targets-chip-smuggling-china-after-huangs-return-scandal-hit-nvidia",
+      "source": "AFP China",
+      "headline": "US targets chip smuggling to China after Huang's return to Nvidia",
+      "body_text": "US authorities moved against chip-smuggling networks feeding China the same week Nvidia restored Jensen Huang as CEO, AFP reports. The action follows the Entity List addition of Megaspeed, the brokerage at the center of the espionage affair.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.reuters.com/business/aerospace-defense/trump-thinks-china-will-buy-another-250-boeing-airplanes-2026-11-23/",
+      "source": "Reuters China",
+      "headline": "Trump says he expects China to buy another 250 Boeing planes",
+      "body_text": "President Trump said he expects China to purchase an additional *250 Boeing aircraft*, on top of the 200-plane commitment reached at the May 2026 Beijing summit. No confirmation of the new order has come from Beijing.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-chinas-ai-firms-are-hooked-on-nvidia-chips-now-comes-the-withdrawal-57391e23",
+      "source": "WSJ China",
+      "headline": "China's AI firms are hooked on Nvidia chips; now comes the withdrawal",
+      "body_text": "WSJ's Morning Risk Report examines how dependent Chinese AI firms have become on Nvidia chips even as Washington tightens access. The piece lands as the Nvidia espionage saga intensifies scrutiny of existing chip sales to China.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/teamsters-urge-us-lawmakers-quickly-pass-chinese-car-ban-2026-11-24/",
+      "source": "Reuters China",
+      "headline": "Teamsters urge Congress to quickly pass Chinese car ban",
+      "body_text": "The Teamsters union pressed US lawmakers to move swiftly on legislation banning Chinese-made vehicles, Reuters reports. The push adds labor-movement weight to existing congressional efforts targeting Chinese connected-vehicle hardware and software.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://apnews.com/article/princeton-neuroscientist-ice-detention-china-3e7ff7ea1ce8a492a8d80018e9fe1d38",
+      "source": "AP China",
+      "headline": "Chinese neuroscientist at Princeton held by ICE after airport detention",
+      "body_text": "A Chinese neuroscientist affiliated with Princeton University was detained by ICE after being stopped at a Washington-area airport, AP reports. The case adds to a pattern of enforcement actions against Chinese-born academics amid heightened scrutiny of research ties.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/china-warns-huang-comeback-doesn-t-end-malicious-risks-from-us",
+      "source": "Bloomberg China",
+      "headline": "China warns Huang comeback doesn't end 'malicious' risks from US",
+      "body_text": "Chinese state commentary said Jensen Huang's reinstatement at Nvidia does not resolve what it calls 'malicious' US actions restricting Chinese tech access, Bloomberg reports. The warning comes as the US simultaneously blacklisted an Alibaba-owned chip firm.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3375490/china-us-ties-enter-more-difficult-2027-broad-stability-will-hold-expert",
+      "source": "SCMP China",
+      "headline": "China-US ties to stay 'broadly stable' in 2027 despite friction: Tsinghua's Da Wei",
+      "body_text": "**Da Wei** of Tsinghua University's Center for International Security and Strategy said ties will remain 'broadly stable' in 2027 despite 'more confrontational dynamics,' contingent on both sides recognizing their 'mutual vulnerability.' He said a power shift on Capitol Hill could strain the Trump administration's ability to sustain engagement with Beijing.",
+      "instrument": "Diplomacy"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.scmp.com/tech/big-tech/article/3375627/why-taiwans-chip-industry-welcomes-jensen-huangs-nvidia-comeback",
+      "source": "SCMP",
+      "headline": "Taiwan's chip industry welcomes Jensen Huang's Nvidia comeback",
+      "body_text": "Taipei's benchmark TAIEX index jumped nearly *9 percent* by midday Tuesday after Nvidia restored **Jensen Huang** as CEO, fueling a rally across chip and hardware stocks. Analysts said the reinstatement could spur fresh investment in Taiwan's semiconductor industry, particularly if Nvidia shifts more business away from mainland China.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/politics/article/3375455/whats-stake-and-battlegrounds-watch-taiwan-heads-polls",
+      "source": "SCMP",
+      "headline": "What's at stake and the battlegrounds to watch as Taiwan heads to the polls",
+      "body_text": "Taiwan's Nov. 28 local elections across 22 cities and counties will test the DPP's strength and the opposition KMT's unity ahead of the 2028 presidential race. Contests in Taipei and New Taipei City are seen as the closest-watched races with implications for **Lai Ching-te** and KMT chairwoman Cheng Li-wun.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/defense/japan-to-bolster-coast-guard-with-patrol-boats-drones-to-counter-china",
+      "source": "Nikkei Asia China",
+      "headline": "Japan to bolster coast guard with patrol boats, drones to counter China",
+      "body_text": "Japan is expanding its fleet of large patrol vessels and uncrewed aircraft to sustain coast guard operations, Nikkei reports. The buildup targets China's growing presence around Japanese waters, including the Senkaku/Diaoyu area.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/24/us-china-thwarting-india-growth.html",
+      "source": "CNBC China",
+      "headline": "China has changed tactics but is still thwarting India's rise, US panel says",
+      "body_text": "A US panel assessed that China has shifted toward containing India economically rather than through military pressure, CNBC reports. The finding marks a change in emphasis from earlier border-focused assessments of China-India friction.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.reuters.com/business/energy/china-india-set-record-russian-oil-imports-2026-demand-seen-peaking-2026-11-24/",
+      "source": "Reuters China",
+      "headline": "China, India set for record Russian oil imports in 2026, demand seen peaking",
+      "body_text": "China and India are on track for record purchases of Russian crude in 2026, Reuters reports, though analysts see demand peaking as both countries diversify supply. The imports continue despite Western sanctions pressure on Russian energy exports.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.reuters.com/business/media-telecom/us-chip-curbs-wont-impact-malaysias-china-ties-pm-says-2026-11-24/",
+      "source": "Reuters China",
+      "headline": "US chip curbs won't impact Malaysia's China ties, PM says",
+      "body_text": "Malaysia's prime minister said US semiconductor export controls will not affect Kuala Lumpur's relationship with Beijing, Reuters reports. The comment comes as Singapore and Malaysia remain transit points scrutinized for chip diversion to China.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.reuters.com/business/finance/china-eu-officials-discuss-exchange-rates-central-bank-chief-pan-urges-2026-11-23/",
+      "source": "Reuters China",
+      "headline": "China, EU officials discuss exchange rates as PBOC chief Pan urges cooperation",
+      "body_text": "China and EU officials held talks on exchange-rate issues, with PBOC Governor **Pan** urging cooperation, Reuters reports. The discussion took place as the EU separately moved to cap tariff-free Chinese hybrid-vehicle imports.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/article/3375520/mexico-and-china-agree-create-working-group-boost-trade",
+      "source": "SCMP China",
+      "headline": "Mexico and China agree to create working group to boost trade",
+      "body_text": "Economy ministers **Marcelo Ebrard** of Mexico and **Wang Wentao** of China agreed Monday to form a bilateral working group on trade priorities. Mexico's ministry noted China is set to export more than *$130 billion* in goods to Mexico this year against roughly $10 billion the other way.",
+      "region": "Latin America"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-23/china-s-150-billion-cop31-side-show-upstages-negotiations",
+      "source": "Bloomberg China",
+      "headline": "China's $150 billion COP31 side show upstages negotiations",
+      "body_text": "China's parallel climate-finance and clean-tech showcase at COP31 drew more attention than the formal negotiations, which ended in Antalya without a fossil-fuel agreement, Bloomberg reports. The *$150 billion* figure reflects Chinese clean-energy commitments announced around the summit.",
+      "region": "Multilateral"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.nytimes.com/2026/11/24/world/asia/jensen-huang-nvidia-china.html",
+      "source": "NYT China",
+      "category_tag": "Technology",
+      "headline": "Nvidia's Jensen Huang reinstated as CEO, Beijing offers no comment",
+      "body": "Nvidia's board restored **Jensen Huang** as CEO on Monday, under two weeks after his ouster amid a Justice Department probe into an alleged Chinese intelligence contact. China's foreign ministry declined to comment on the move at Tuesday's briefing, while analysts tell the New York Times the episode could reinforce Beijing's own push for AI chip self-reliance even as Huang remains Washington's leading advocate for China chip sales.",
+      "src_line": "NYT China"
+    },
+    {
+      "url": "https://www.reuters.com/business/us-blacklist-megaspeed-chip-firm-linked-nvidia-scandal-source-says-2026-11-23/",
+      "source": "Reuters China",
+      "category_tag": "Sanctions",
+      "headline": "US blacklists Alibaba subsidiary and Megaspeed over Nvidia chip scandal",
+      "body": "The Commerce Department added an Alibaba-owned subsidiary and Megaspeed, the chip brokerage tied to the Nvidia espionage affair, to its Entity List, a person familiar with the matter told Reuters. The listing follows a reported delay in Megaspeed's addition amid the scandal, and lands the same week Nvidia reinstated **Jensen Huang** as CEO.",
+      "src_line": "Reuters China"
+    },
+    {
+      "url": "https://www.ft.com/content/9104866d-f69e-497d-aeb9-f7e0db59f143?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category_tag": "US-China",
+      "headline": "China extends pause on critical-minerals export controls aimed at US",
+      "body": "China extended its pause on rare-earth and critical-mineral export controls aimed at the US, keeping intact a suspension that took effect after the **Oct. 30, 2025** Trump-Xi meeting in Busan and had been due to lapse around Nov. 10, 2026. The Financial Times reports Beijing's dominance of the supply chain continues to give it leverage as the broader tariff truce with Washington holds.",
+      "src_line": "FT China"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/solomon-islands-plans-replace-china-security-pact-with-australia-treaty-report-2026-11-24/",
+      "source": "Reuters China",
+      "category_tag": "Indo-Pacific",
+      "headline": "Solomon Islands plans to replace China security pact with Australia treaty",
+      "body": "Solomon Islands is preparing to replace a security pact with China with a new treaty with Australia, Reuters reports, citing people familiar with the matter. Asked about the reported shift, China's foreign ministry said only that it 'has always adhered to the principles of mutual respect and equality' in its dealings with Honiara.",
+      "src_line": "Reuters China"
+    },
+    {
+      "url": "https://www.theguardian.com/business/2026/nov/24/eu-cap-chinese-hybrid-ev-imports-tariff-uk",
+      "source": "Guardian China (direct)",
+      "category_tag": "PRC-Economy",
+      "headline": "EU to impose cap on Chinese hybrid EV imports next month",
+      "body": "The European Commission confirmed it will impose temporary tariff-free import quotas on hybrid vehicles starting next month, targeting a surge in Chinese exports that followed an October agreement with Beijing. The quotas also apply to hybrids from the UK, Japan, Turkey and South Korea; China's Commerce Ministry issued a same-day statement responding to reporters' questions on the measures.",
+      "src_line": "The Guardian"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/23/us/politics/taiwan-elections-misinformation.html",
+      "source": "NYT China",
+      "category_tag": "Cross-Strait",
+      "headline": "Fake personas aligned with China target Taiwan's election, researchers say",
+      "body": "Researchers at Vanderbilt University say a tool they built is detecting AI-generated social media posts that support Chinese Communist Party positions ahead of Taiwan's Nov. 28 local elections. The vote covers 22 mayors and magistrates and is being watched as a mid-term test of President **Lai Ching-te**.",
+      "src_line": "NYT China"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/singapore-china-to-deepen-yuan-ties-with-focus-on-corporates",
+      "source": "Bloomberg China",
+      "category": "Finance",
+      "headline": "Singapore, China deepen yuan ties with focus on corporates",
+      "body_text": "Singapore and China agreed to deepen renminbi-focused financial ties for corporates, part of broader yuan internationalization efforts.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/japan-s-fujitsu-woos-demand-for-alternatives-to-us-china-chips",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "Fujitsu woos demand for alternatives to US, China chips",
+      "body_text": "Fujitsu is courting demand for chip alternatives to US and Chinese suppliers as Japanese firms diversify semiconductor sourcing.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-23/the-chinese-ai-aspirants-drawing-big-bets-to-take-on-deepseek",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "Chinese AI aspirants draw big bets to take on DeepSeek",
+      "body_text": "Chinese AI startups are drawing large investor bets to challenge DeepSeek, intensifying domestic competition in large language models.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.wsj.com/business/autos/chinese-automakers-book-strong-european-growth-ahead-of-import-cap-ccdee0da",
+      "source": "WSJ China",
+      "category": "Trade",
+      "headline": "Chinese automakers book strong European growth ahead of import cap",
+      "body_text": "Chinese automakers are booking strong European sales growth ahead of the EU's new hybrid-vehicle import cap taking effect next month.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-trump-bessent-china.html",
+      "source": "CNBC China",
+      "category": "Technology",
+      "headline": "Bessent's about-face on Huang reveals Trump's China calculus",
+      "body_text": "Treasury Secretary Scott Bessent reversed an emerging hard line on Nvidia before Huang's reinstatement, a CNBC column notes.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.economist.com/china/2026/11/23/does-a-crummy-economy-threaten-chinas-social-contract",
+      "source": "Economist China",
+      "category": "PRC-Economy",
+      "headline": "Does a crummy economy threaten China's social contract?",
+      "body_text": "The Economist asks whether China's slowing economy is straining the social compact underpinning Communist Party rule.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.ft.com/content/28cb9178-ac22-44b9-99f5-d5f25a86d366?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category": "Technology",
+      "headline": "What Nvidia tells us about America and China",
+      "body_text": "The FT argues Nvidia's spy scandal shows Washington has limited leverage over Beijing in the chip relationship.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/shares-in-chinese-cobalt-producers-jump-after-congo-bans-exports",
+      "source": "Bloomberg China",
+      "category": "Energy",
+      "headline": "Shares in Chinese cobalt producers jump after Congo bans exports",
+      "body_text": "Shares in Chinese cobalt producers jumped after Congo banned exports, tightening a key battery-metal supply chain.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/china-stockpiles-soyoil-as-domestic-prices-hit-three-month-low",
+      "source": "Bloomberg China",
+      "category": "Energy",
+      "headline": "China stockpiles soyoil as domestic prices hit three-month low",
+      "body_text": "China is stockpiling soyoil as domestic prices hit a three-month low, amid broader commodity restocking.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.ft.com/content/45c49a84-53cc-44ed-9aab-0dc79f564278?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "China wanted households to put savings in shares not homes, then markets fell",
+      "body_text": "Beijing's campaign urging households to shift savings from housing into equities is faltering as stock prices slide, the FT reports. The Shanghai Composite is down *1.1 percent* and the Hang Seng *5.48 percent* in recent trading, undermining the push toward market-based household wealth.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.cna.com.tw/news/acn/202611240210.aspx",
+      "source": "中央社 (CNA ZH)",
+      "headline": "Hang Seng underperforms as Taiwan, Japan, Korea rally on Huang news",
+      "body_text": "Hong Kong's Hang Seng closed at 22,219 points, near a one-and-a-half-year low, even as Taiwan, Japan and South Korea markets jumped *4 to 9 percent* on Nvidia's reinstatement of Jensen Huang. Chinese AI stocks lagged, with MiniMax falling 2.78 percent and Zhipu dropping 6.23 percent, CNA reported.",
+      "companies": [
+        "MiniMax",
+        "Zhipu"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://asia.nikkei.com/spotlight/huawei-crackdown/china-s-huawei-says-it-has-homegrown-answer-to-us-chip-design-tool-curbs",
+      "source": "Nikkei Asia China",
+      "headline": "Huawei claims homegrown answer to US chip design tool curbs",
+      "body_text": "Huawei and a local partner say they have developed a homegrown alternative to US-restricted advanced chip design tools, Nikkei reports, a potential workaround to Washington's EDA software curbs.",
+      "companies": [
+        "Huawei"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.reuters.com/markets/europe/audi-incur-550-million-loss-china-site-says-handelsblatt-2026-11-23/",
+      "source": "Reuters China",
+      "headline": "Audi to incur $550 million loss at China site",
+      "body_text": "Audi is set to incur a *$550 million* loss at its China operations, Handelsblatt reported via Reuters, as the German automaker's local joint venture struggles against domestic EV competition.",
+      "companies": [
+        "Audi"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/chinese-refiners-snapping-up-cut-price-oil-to-refill-stockpiles",
+      "source": "Bloomberg China",
+      "headline": "Chinese refiners snap up cut-price oil to refill stockpiles",
+      "body_text": "Chinese refiners are buying cut-price crude oil to refill stockpiles, Bloomberg reports, taking advantage of lower prices to rebuild reserves.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.ft.com/content/b84dbcb1-f216-422e-89c7-f203e0ab2757?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "Traders move US copper to China as tariff fears ease",
+      "body_text": "Traders are shipping US copper to China to exploit an arbitrage between an acute Chinese shortage and high local premiums, the Financial Times reports, as concerns about further US tariff action ease.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/24/2003868257",
+      "source": "Taipei Times",
+      "headline": "Margin calls soared 200-fold in Taiwan as traders fled AI bets",
+      "body_text": "Taiwan's stock market plunged almost *18 percent* last week in its worst selloff since 1991, triggering NT$6.46 billion in margin calls Friday, more than 200 times the volume a month earlier, per Taiwan Stock Exchange data. Authorities deployed the NT$500 billion National Stabilization Fund and curbed short selling to stem the rout.",
+      "companies": [
+        "Taiwan Stock Exchange",
+        "Fubon Securities"
+      ],
+      "sector": "finance"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "Taiwan Affairs Office",
+      "role": "commentary",
+      "topic": "Taiwan's 2026 local elections and cross-strait reunification",
+      "statement": "'Relying on the US to seek independence' has suffered a heavy blow; Taiwan's future lies in national reunification.",
+      "original_zh": "“倚美谋独”遭重击 台湾前途在于国家统一",
+      "addressed_to": "Taiwan",
+      "tone": "firm",
+      "context": "Published days before Taiwan's Nov. 28 nine-in-one local elections, part of Beijing's messaging campaign around the vote.",
+      "source": "国台办 (TAO ZH)",
+      "url": "https://m.sohu.com/a/1105766648_119038?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Reported termination of China-Solomon Islands security pact",
+      "statement": "China has always adhered to the principles of mutual respect and equality in developing relations with the Solomon Islands.",
+      "original_zh": "中方始终秉持相互尊重、平等相待的原则发展同所罗门群岛关系",
+      "addressed_to": "other",
+      "tone": "firm",
+      "context": "Reports emerged that Solomon Islands notified China it would end a milestone security pact as Honiara moves toward a new treaty with Australia.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://m.sohu.com/a/1105761422_121443915?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Pakistani astronaut joining Shenzhou-24 mission",
+      "statement": "We are full of anticipation for this grand space event, and we wish the mission a complete success.",
+      "original_zh": "我们对这一航天盛事充满期待，预祝任务取得圆满成功",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "China confirmed a Pakistani pilot will become the first foreign astronaut aboard its Tiangong space station as part of the Shenzhou-24 mission.",
+      "source": "外交部发言人 (MOFA presser ZH)",
+      "url": "https://m.sohu.com/a/1105750796_203783?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    }
+  ],
+  "social_statements": [],
+  "personnel_changes": [],
+  "timeline_candidates": [
+    "https://www.nytimes.com/2026/11/23/us/politics/taiwan-elections-misinformation.html",
+    "https://m.sohu.com/a/1105766648_119038?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+  ],
+  "story_count": 100,
+  "oped_count": 5,
+  "academic_count": 0,
+  "source_count": 107,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-24.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-24.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
