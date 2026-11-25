@@ -1,228 +1,6 @@
 {
  "entries": [
   {
-   "date": "2026-11-10",
-   "url": "https://www.nytimes.com/2026/11/09/business/jensen-huang-china-spying.html",
-   "title": "nvidia ceo s alleged spy scandal draws fbi lawsuit beijing denial",
-   "headline": "Nvidia CEO's Alleged Spy Scandal Draws FBI, Lawsuit, Beijing Denial"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.reuters.com/world/asia-pacific/chinas-trade-surplus-soars-past-1-trillion-october-exports-jump-352-yy-2026-11-10/",
-   "title": "china s trade surplus tops 1 trillion for second straight year",
-   "headline": "China's Trade Surplus Tops $1 Trillion for Second Straight Year"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.wsj.com/business/wuxi-apptec-removed-from-pentagons-list-of-chinese-military-companies-275a6a36",
-   "title": "pentagon drops wuxi apptec from chinese military companies list",
-   "headline": "Pentagon Drops WuXi AppTec From Chinese Military Companies List"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.reuters.com/world/china/taiwan-says-china-is-conducting-area-denial-drills-western-pacific-2026-11-10/",
-   "title": "taiwan reports china running area denial drills in western pacific",
-   "headline": "Taiwan Reports China Running 'Area Denial' Drills in Western Pacific"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.wsj.com/world/china/u-s-balks-at-chinas-demand-for-tightly-scripted-trump-xi-putin-summit-77001908",
-   "title": "us resists china s script for possible trump xi putin summit",
-   "headline": "US Resists China's Script for Possible Trump-Xi-Putin Summit"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.reuters.com/legal/litigation/nvidia-spy-allegations-likely-spur-laws-to-tighten-chinas-access-ai-chips-2026-11-09/",
-   "title": "nvidia spy allegations seen spurring tighter china chip access laws",
-   "headline": "Nvidia Spy Allegations Seen Spurring Tighter China Chip Access Laws"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://asia.nikkei.com/politics/international-relations/us-china-tensions/democrats-midterm-victory-puts-future-of-house-china-committee-in-doubt",
-   "title": "democrats midterm win puts house select committee on china in doubt",
-   "headline": "Democrats' Midterm Win Puts House Select Committee on China in Doubt"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.reuters.com/world/nvidia-ceo-huang-sued-over-disclosures-related-suspected-chinese-spy-2026-11-09/",
-   "title": "nvidia huang sued over disclosures tied to suspected chinese spy",
-   "headline": "Nvidia, Huang Sued Over Disclosures Tied to Suspected Chinese Spy"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "http://www.mod.gov.cn/gfbw/qwfb/16498992.html",
-   "title": "us chinese militaries hold ceremony returning wwii hump pilots remains",
-   "headline": "US, Chinese Militaries Hold Ceremony Returning WWII 'Hump' Pilots' Remains"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://cacs.mofcom.gov.cn/article/gnwjmdt/sb/zm/202611/189714.html",
-   "title": "china us simultaneously announce tariff extension arrangement",
-   "headline": "China, US Simultaneously Announce Tariff Extension Arrangement"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/10/2003867473",
-   "title": "fbi case spotlights pattern of alleged beijing espionage operatives",
-   "headline": "FBI Case Spotlights Pattern of Alleged Beijing Espionage Operatives"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://english.kyodonews.net/articles/-/90840",
-   "title": "japan vietnam voice shared concern over south china sea moves",
-   "headline": "Japan, Vietnam Voice Shared Concern Over South China Sea Moves"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.scmp.com/news/china/diplomacy/article/3373831/can-xi-jinping-and-vladimir-putin-give-donald-trump-iran-exit-he-needs",
-   "title": "analysts beijing moscow may offer trump an iran exit ramp",
-   "headline": "Analysts: Beijing, Moscow May Offer Trump an Iran Exit Ramp"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://asia.nikkei.com/politics/defense/india-forms-commando-units-for-close-combat-along-china-border",
-   "title": "india forms commando units for close combat along china border",
-   "headline": "India Forms Commando Units for Close Combat Along China Border"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://asia.nikkei.com/spotlight/supply-chain/integration-among-asean-china-japan-south-korea-boosted-by-ai-boom",
-   "title": "ai boom accelerates asean china japan korea economic integration",
-   "headline": "AI Boom Accelerates ASEAN-China-Japan-Korea Economic Integration"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://factcheck.afp.com/doc.afp.com.D6GU4T7",
-   "title": "afp debunks false claims on chinese nationals amid korea registration changes",
-   "headline": "AFP Debunks False Claims on Chinese Nationals Amid Korea Registration Changes"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/10/2003867474",
-   "title": "png commentator criticizes government over taiwan office closure",
-   "headline": "PNG Commentator Criticizes Government Over Taiwan Office Closure"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/10/2003867476",
-   "title": "lai says taiwan working toward independent satellite launches",
-   "headline": "Lai Says Taiwan Working Toward Independent Satellite Launches"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.reuters.com/world/asia-pacific/chinese-chip-firms-denglin-xinde-open-mixed-hong-kong-debuts-2026-11-10/",
-   "title": "chinese chipmakers denglin xinde debut mixed in hong kong",
-   "headline": "Chinese Chipmakers Denglin, Xinde Debut Mixed in Hong Kong"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.ft.com/content/1186c272-afc7-4561-9bf8-aa3bc0464a91?syn-25a6b1a6=1",
-   "title": "vw shifts strategy as in china for china model falters",
-   "headline": "VW Shifts Strategy as 'In China, For China' Model Falters"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.reuters.com/business/energy/chinas-october-crude-oil-imports-rise-highest-level-since-march-amid-middle-east-2026-11-10/",
-   "title": "china s october crude imports hit highest level since march",
-   "headline": "China's October Crude Imports Hit Highest Level Since March"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.bloomberg.com/graphics/2026-chery-byd-china-automakers-export-boom-cost/",
-   "title": "byd chery export boom carries a 270 billion cost",
-   "headline": "BYD, Chery Export Boom Carries a $270 Billion Cost"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.bloomberg.com/news/articles/2026-11-10/moonshot-rents-nvidia-s-top-ai-chips-in-china-documents-show",
-   "title": "moonshot rents nvidia s top ai chips inside china documents show",
-   "headline": "Moonshot Rents Nvidia's Top AI Chips Inside China, Documents Show"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.bloomberg.com/news/articles/2026-11-10/china-water-environment-seeks-410-million-loan-restructuring",
-   "title": "china water environment seeks 410 million loan restructuring",
-   "headline": "China Water Environment Seeks $410 Million Loan Restructuring"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.reuters.com/business/retail-consumer/apple-intelligence-ai-service-registers-with-chinese-regulator-use-tablets-2026-11-09/",
-   "title": "apple intelligence registers with chinese regulator for tablets laptops",
-   "headline": "Apple Intelligence Registers With Chinese Regulator for Tablets, Laptops"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.afp.com/en/china-touts-tech-ai-cred-world-web-summit",
-   "title": "china touts tech ai credentials at web summit",
-   "headline": "China Touts Tech, AI Credentials at Web Summit"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.bloomberg.com/news/articles/2026-11-10/chinese-coal-buyers-balk-at-indonesian-miners-contract-demands-rkab",
-   "title": "chinese coal buyers balk at indonesian miners contract terms",
-   "headline": "Chinese Coal Buyers Balk at Indonesian Miners' Contract Terms"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.reuters.com/world/china/china-seeks-high-tech-upper-hand-industry-carrying-80-global-trade-2026-11-10/",
-   "title": "china pushes high tech edge in industry carrying 80 of global trade",
-   "headline": "China Pushes High-Tech Edge in Industry Carrying 80% of Global Trade"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.washingtonpost.com/world/2026/11/09/china-beijing-jiaquan-church-pastor-arrested/a1a3b648-dc00-11f1-912c-4fbb80d73f7f_story.html",
-   "title": "pastor at beijing underground church arrested wife says",
-   "headline": "Pastor at Beijing Underground Church Arrested, Wife Says"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.zaobao.com.sg/news/china/story20261110-9973974",
-   "title": "bloomberg intelligence hong kong home prices seen rising 5 in 2027",
-   "headline": "Bloomberg Intelligence: Hong Kong Home Prices Seen Rising 5% in 2027"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.fmprc.gov.cn/zyxw/202611/t20261110_12056544.shtml",
-   "title": "he lifeng co chairs second china canada economic dialogue",
-   "headline": "He Lifeng Co-Chairs Second China-Canada Economic Dialogue"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.bloomberg.com/news/articles/2026-11-10/for-taiwan-the-threat-of-a-chinese-invasion-is-becoming-everyday-life",
-   "title": "bloomberg feature examines beijing s non invasion pressure on taiwan",
-   "headline": "Bloomberg Feature Examines Beijing's Non-Invasion Pressure on Taiwan"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://cacs.mofcom.gov.cn/cacscms/article/ckys?articleId=189725&type=",
-   "title": "india opens anti dumping probe on chinese aluminum extrusions",
-   "headline": "India Opens Anti-Dumping Probe on Chinese Aluminum Extrusions"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://cacs.mofcom.gov.cn/cacscms/article/ckys?articleId=189726&type=",
-   "title": "india issues final sunset review ruling on chinese fumed silica",
-   "headline": "India Issues Final Sunset-Review Ruling on Chinese Fumed Silica"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.idnfinancials.com/cn/news/71451/%E4%B8%AD%E5%9B%BD%E9%93%B6%E8%A1%8C%E5%9C%A8%E4%BA%BA%E6%B0%91%E5%B8%81%E4%B8%8A%E6%B6%A8%E4%B8%AD%E6%8F%90%E4%BE%9B4-5%E7%9A%84%E7%BE%8E%E5%85%83%E5%88%A9%E7%8E%87",
-   "title": "bank of china offers 4 5 usd deposit rate as yuan rallies",
-   "headline": "Bank of China Offers 4.5% USD Deposit Rate as Yuan Rallies"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://www.fmprc.gov.cn/zyxw/202611/t20261109_12055918.shtml",
-   "title": "xi sends congratulatory message to bulgaria s president elect",
-   "headline": "Xi Sends Congratulatory Message to Bulgaria's President-Elect"
-  },
-  {
-   "date": "2026-11-10",
-   "url": "https://news.cctv.com/2026/11/10/ARTI9M8UGhD1QoNJIe1eJjI9261110.shtml",
-   "title": "us firms ciie exhibition space tops 50 000 square meters",
-   "headline": "US Firms' CIIE Exhibition Space Tops 50,000 Square Meters"
-  },
-  {
    "date": "2026-11-11",
    "url": "https://www.ft.com/content/afb6c960-a910-4d67-9588-73ba3bea5b06?syn-25a6b1a6=1",
    "title": "commerce department delays megaspeed s entity list addition amid nvidia spy scandal",
@@ -3977,6 +3755,252 @@
    "url": "https://www.bloomberg.com/news/articles/2026-11-24/china-stockpiles-soyoil-as-domestic-prices-hit-three-month-low",
    "title": "china stockpiles soyoil as domestic prices hit three month low",
    "headline": "China stockpiles soyoil as domestic prices hit three-month low"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/world/china-investigates-politburo-member-chen-jining-xinhua-says-2026-11-24/",
+   "title": "shanghai party chief and politburo member chen jining placed under investigation",
+   "headline": "Shanghai party chief and Politburo member Chen Jining placed under investigation"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.ft.com/content/6c64b8b8-531c-4eea-8fd0-90c4c4967ab9?syn-25a6b1a6=1",
+   "title": "huawei convicted in us trial over concealed iran business",
+   "headline": "Huawei convicted in US trial over concealed Iran business"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://apnews.com/article/australia-solomon-islands-china-security-treaty-6eaee893cd625ad71bd34dbe887ac73a",
+   "title": "solomon islands signs security treaty with australia checking china",
+   "headline": "Solomon Islands signs security treaty with Australia, checking China"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://apnews.com/article/trump-tariffs-china-european-union-d97ed6f4017152ca4c18de5517db6d51",
+   "title": "us readies tariffs on china eu over subsidized production",
+   "headline": "US readies tariffs on China, EU over subsidized production"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/science/chinas-shenzhou-24-space-flight-takes-off-with-pakistani-national-first-foreign-2026-11-25/",
+   "title": "pakistani astronaut becomes first foreigner to board china s tiangong station",
+   "headline": "Pakistani astronaut becomes first foreigner to board China's Tiangong station"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.cnbc.com/2026/11/25/jensen-huang-nvidia-ai-talent-race.html",
+   "title": "jensen huang s nvidia return shows ai race is about more than chips",
+   "headline": "Jensen Huang's Nvidia return shows AI race is about more than chips"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.washingtonpost.com/world/2026/11/25/top-nvidia-chips-are-still-offer-china-despite-us-ban/",
+   "title": "top nvidia chips still being sold in china despite us ban",
+   "headline": "Top Nvidia chips still being sold in China despite US ban"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.washingtonpost.com/politics/2026/11/25/backing-jensen-huang-trump-delivers-setback-china-hawks/",
+   "title": "in backing nvidia s huang trump deals china hawks a setback",
+   "headline": "In backing Nvidia's Huang, Trump deals China hawks a setback"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/business/finance/alice-huang-linked-firms-listed-270-million-ai-servers-china-records-show-2026-11-25/",
+   "title": "alice huang linked firms listed 270 million in ai servers in china",
+   "headline": "Alice Huang-linked firms listed $270 million in AI servers in China"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-25/china-us-set-for-new-chapter-of-trade-talks-ex-official-says",
+   "title": "china us set for new chapter of trade talks ex official says",
+   "headline": "China, US set for 'new chapter' of trade talks, ex-official says"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.cnbc.com/2026/11/25/china-xiamen-boeing-deal.html",
+   "title": "xiamen airlines to buy 50 boeing jets in 7 4 billion deal",
+   "headline": "Xiamen Airlines to buy 50 Boeing jets in $7.4 billion deal"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-24/china-halts-critical-minerals-ban-to-maintain-truce-with-us",
+   "title": "china halts critical minerals ban to maintain truce with us",
+   "headline": "China halts critical-minerals ban to maintain truce with US"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-24/taiwan-s-local-vote-tests-lai-with-presidential-race-on-horizon",
+   "title": "taiwan s local vote tests lai with presidential race on horizon",
+   "headline": "Taiwan's local vote tests Lai with presidential race on horizon"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/world/china/india-seizes-nepal-flood-crisis-rebuild-influence-china-gains-ground-2026-11-24/",
+   "title": "india seizes nepal flood crisis to rebuild influence as china gains ground",
+   "headline": "India seizes Nepal flood crisis to rebuild influence as China gains ground"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-24/australia-aims-to-sign-another-deal-to-block-china-in-pacific",
+   "title": "australia aims to sign another deal to block china in pacific",
+   "headline": "Australia aims to sign another deal to block China in Pacific"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/world/china/russia-sends-home-chinese-suspected-illegally-raising-23-billion-deposits-2026-11-25/",
+   "title": "russia sends home chinese suspected of illegally raising 2 3 billion in deposits",
+   "headline": "Russia sends home Chinese suspected of illegally raising $2.3 billion in deposits"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.ft.com/content/b32f9488-aa02-47f8-bebf-a97805a076e4?syn-25a6b1a6=1",
+   "title": "china issues list of demands to brussels over eu trade talks",
+   "headline": "China issues list of demands to Brussels over EU trade talks"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/world/china/eu-sets-limits-hybrid-vehicle-imports-china-other-countries-2026-11-24/",
+   "title": "eu sets emergency import limits on hybrid vehicles from china",
+   "headline": "EU sets emergency import limits on hybrid vehicles from China"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-24/codelco-offers-lower-copper-premiums-to-revive-sales-to-china",
+   "title": "codelco offers lower copper premiums to revive sales to china",
+   "headline": "Codelco offers lower copper premiums to revive sales to China"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/markets/asia/xiaomi-third-quarter-falls-57-smartphone-sales-hit-2026-11-24/",
+   "title": "xiaomi profit falls 57 as china auto downturn weighs",
+   "headline": "Xiaomi profit falls 57% as China auto downturn weighs"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-25/china-s-booming-exports-obscure-domestic-economic-strains",
+   "title": "china s booming exports obscure economic strain at home",
+   "headline": "China's booming exports obscure economic strain at home"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/business/autos-transportation/chinas-byd-talks-buy-french-car-factory-ineos-automotive-2026-11-24/",
+   "title": "byd in talks to buy french car factory from ineos",
+   "headline": "BYD in talks to buy French car factory from Ineos"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-25/vw-s-18-000-self-driving-sedan-shows-how-china-leads-on-car-tech",
+   "title": "vw s 18 000 self driving sedan shows china leads on car tech",
+   "headline": "VW's $18,000 self-driving sedan shows China leads on car tech"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/business/aerospace-defense/china-eyes-mergers-tougher-rules-to-help-struggling-airlines-scmp-says-2026-11-25/",
+   "title": "china eyes mergers tougher rules to help struggling airlines",
+   "headline": "China eyes mergers, tougher rules to help struggling airlines"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-25/china-s-surprise-soyoil-export-boom-cools-as-india-turns-to-palm",
+   "title": "china s surprise soyoil export boom cools as india turns to palm",
+   "headline": "China's surprise soyoil export boom cools as India turns to palm"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://cn.nikkei.com/politicsaeconomy/commodity/64852-2026-11-25-10-00-34.html",
+   "title": "us corn prices hit 5 month low as china farm purchases stall",
+   "headline": "US corn prices hit 5-month low as China farm purchases stall"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-25/asia-data-centers-sound-out-us-clients-to-replace-china-demand",
+   "title": "asia data centers court us clients to offset lost china demand",
+   "headline": "Asia data centers court US clients to offset lost China demand"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/world/china/eu-plans-50-billion-tech-fund-challenge-us-china-ft-reports-2026-11-25/",
+   "title": "eu plans 50 billion tech fund to challenge us and china",
+   "headline": "EU plans €50 billion tech fund to challenge US and China"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-25/amazon-targets-uk-car-buyers-being-reeled-in-by-chinese-brands",
+   "title": "amazon targets uk car buyers drawn to chinese brands",
+   "headline": "Amazon targets UK car buyers drawn to Chinese brands"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.cnbc.com/2026/11/24/jensen-huang-nvidia-employee-meeting.html",
+   "title": "jensen huang tells staff nvidia doesn t need a succession plan",
+   "headline": "Jensen Huang tells staff Nvidia doesn't need a succession plan"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://cn.nikkei.com/industry/manufacturing/64855-2026-11-25-13-46-59.html",
+   "title": "canon re enters arf lithography market after 24 years",
+   "headline": "Canon re-enters ArF lithography market after 24 years"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://cn.nikkei.com/politicsaeconomy/politicsasociety/64857-2026-11-25-14-09-39.html",
+   "title": "lowy institute us china asia power gap narrowest since 2018",
+   "headline": "Lowy Institute: US-China Asia power gap narrowest since 2018"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://sinocism.com/p/shanghai-needs-a-new-party-secretary",
+   "title": "sinocism roundup chen jining purge busan truce chip controls",
+   "headline": "Sinocism roundup: Chen Jining purge, Busan truce, chip controls"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://apnews.com/article/taiwan-jensen-huang-nvidia-scandal-1ec8552ba88c4df37cfd9af731b7e561",
+   "title": "some in taiwan welcome huang s nvidia return despite scandal",
+   "headline": "Some in Taiwan welcome Huang's Nvidia return despite scandal"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.nytimes.com/2026/11/24/business/nvidia-alice-huang-china.html",
+   "title": "nyt traces alice huang s path from hunan factory town to nvidia scandal",
+   "headline": "NYT traces Alice Huang's path from Hunan factory town to Nvidia scandal"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/business/retail-consumer/nvidias-huang-returns-cheers-china-political-hurdles-mount-2026-11-24/",
+   "title": "huang returns to cheers in china as political hurdles mount",
+   "headline": "Huang returns to cheers in China as political hurdles mount"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://cn.nikkei.com/china/cpolicssociety/64835-2026-11-24-09-36-09.html",
+   "title": "tao director eximbank sign pact to support taiwan businesses",
+   "headline": "TAO director, Eximbank sign pact to support Taiwan businesses"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://asia.nikkei.com/business/business-asia/china-ramps-up-campaign-to-electrify-the-world-s-trucking-fleet",
+   "title": "china ramps up campaign to electrify world s trucking fleet",
+   "headline": "China ramps up campaign to electrify world's trucking fleet"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://asia.nikkei.com/politics/as-taiwan-elections-near-one-kmt-mayor-s-ambitions-loom-large",
+   "title": "kmt s johnny chiang makes final sprint in taichung mayoral race",
+   "headline": "KMT's Johnny Chiang makes 'final sprint' in Taichung mayoral race"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/world/china/one-year-after-hong-kong-fire-survivors-mourn-losses-question-accountability-2026-11-25/",
+   "title": "one year after hong kong fire survivors demand accountability",
+   "headline": "One year after Hong Kong fire, survivors demand accountability"
+  },
+  {
+   "date": "2026-11-25",
+   "url": "https://www.reuters.com/world/uk/china-urges-britain-support-free-trade-provide-favourable-business-environment-2026-11-24/",
+   "title": "china urges britain to support free trade",
+   "headline": "China urges Britain to support free trade"
   }
  ]
 }
