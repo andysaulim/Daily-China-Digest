@@ -1,0 +1,562 @@
+{
+  "digest_date": "Wednesday, November 25, 2026",
+  "re_line": "RE: Chen Jining purge · Huawei convicted in US · Solomon Islands-Australia pact · US readies China tariffs",
+  "market_indicators": {
+    "brent": {
+      "value": "88.16",
+      "change_pct": -4.76,
+      "as_of": "Nov 25"
+    },
+    "usd_cnh": {
+      "value": "6.6770",
+      "change_pct": 0.2,
+      "as_of": "Nov 25"
+    },
+    "usd_cny": {
+      "value": "6.6638",
+      "change_pct": -0.06,
+      "as_of": "Nov 25"
+    },
+    "hang_seng": {
+      "value": "21,966.01",
+      "change_pct": -5.7,
+      "as_of": "Nov 25"
+    },
+    "sse_composite": {
+      "value": "3,476.47",
+      "change_pct": -2.83,
+      "as_of": "Nov 25"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "Beijing placed Shanghai party chief and Politburo member Chen Jining under corruption investigation, the fourth Politburo member to fall since 2025 and a figure once floated as a future national leader.",
+    "A New York jury convicted Huawei on bank fraud and trade-secret theft tied to its concealed Iran business after an eight-year US prosecution; Huawei called the verdict 'without legal or factual merit.'",
+    "Australia and the Solomon Islands signed a security treaty making Canberra Honiara's defense partner of choice, four years after Honiara's 2022 security pact with Beijing raised fears of a Chinese military presence."
+  ],
+  "key_stat": {
+    "number": "78.9",
+    "label": "US score on Lowy Institute's 2026 Asia Power Index — a record low",
+    "context": "China's score of 73.6 leaves the narrowest US-China power gap in the Asia-Pacific since the index began in 2018, with the US lead eroding most sharply in military capability as missile stockpiles decline and resources shift toward the Middle East.",
+    "source": "Nikkei Chinese, citing the Lowy Institute"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC (no individual official named in reporting)",
+      "action": "PBOC runs combined 1.3 trillion yuan liquidity operation",
+      "document": null,
+      "detail": "PBOC conducted an 800 billion yuan medium-term lending facility operation plus a 500 billion yuan 7-day reverse repo on Nov. 25, alongside a separate 516 billion yuan overnight reverse repo and a 50 billion yuan central bank bill issuance in Hong Kong, per Chinese financial media.",
+      "source_label": "PBOC ZH",
+      "url": "https://finance.eastmoney.com/a/202611253938840379.html"
+    },
+    {
+      "ministry": "Ministry of National Defense",
+      "ministry_chinese": "国防部",
+      "official": "MND spokesperson (unnamed in report)",
+      "action": "China and Cambodia launch 'Golden Dragon-2026' joint exercise",
+      "document": null,
+      "detail": "The annual bilateral military exercise began Nov. 25, per MND; no troop numbers or locations were disclosed in the announcement.",
+      "source_label": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/jsxd/16501964.html"
+    },
+    {
+      "ministry": "Ministry of National Defense",
+      "ministry_chinese": "国防部",
+      "official": "Central Publicity Department / CMC National Defense Mobilization Department (unnamed)",
+      "action": "Beijing issues 15th Five-Year national defense education plan",
+      "document": "全民国防教育\"十五五\"规划 (National Defense Education Plan, 2026-2030)",
+      "detail": "The Central Publicity Department and the CMC's National Defense Mobilization Department jointly issued the plan and took reporter questions Nov. 25; specific targets were not detailed in the release.",
+      "source_label": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16501865.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM (unnamed)",
+      "action": "China-Portugal trade committee holds 11th meeting in Lisbon",
+      "document": null,
+      "detail": "The China-Portugal Economic and Trade Joint Committee met Nov. 25 in Lisbon; MOFCOM's notice did not disclose specific outcomes.",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_df1f9a5c99a54d22babbe442b1297805.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "Seven departments including MOFCOM (unnamed)",
+      "action": "MOFCOM and six agencies launch 'quality e-commerce' campaign",
+      "document": "关于实施品质电商\"五优\"行动的通知 (Notice on Implementing the 'Five Excellence' Quality E-Commerce Action)",
+      "detail": "The notice encourages platforms and brands to build integrated online-offline 'quality consumption experience centers' using AI, and to open physical stores tied to online brands.",
+      "source_label": "China Economic Net",
+      "url": "http://m.ce.cn/bwzg/202611/t20261125_3305257.shtml"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "Shanghai Municipal Party Committee",
+      "action": "Shanghai party leadership pledges loyalty to Beijing after Chen Jining probe",
+      "detail": "Shanghai's party standing committee held an expanded meeting Nov. 24 to 'resolutely uphold' the central leadership's decision to investigate Chen Jining for suspected serious violations of discipline and law, per state media; Reuters reported Chen is the fourth Politburo member to fall since 2025.",
+      "url": "https://www.reuters.com/world/asia-pacific/shanghai-party-pledges-loyalty-beijing-top-official-faces-investigation-2026-11-25/"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayoral and magistrate races and roughly 11,000 offices nationwide; a mid-term test of President Lai Ching-te ahead of the next presidential race."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "China's annual state commemoration (国家公祭日)."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit opens in Doral, Miami",
+      "detail": "US-hosted summit runs Dec. 14-15; Xi Jinping's attendance is unconfirmed."
+    },
+    {
+      "month": "Jan",
+      "day": 15,
+      "headline": "Section 232 semiconductor tariff marks first anniversary",
+      "detail": "The 25% national-security tariff on advanced logic chips (Nvidia H200/AMD MI325X class) took effect Jan. 15, 2026; data-center and R&D imports remain exempt."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-25/asia-data-centers-sound-out-us-clients-to-replace-china-demand",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "Asia data centers court US clients to offset lost China demand",
+      "body_text": "Data center operators across Asia are courting US clients to offset lost Chinese demand, Bloomberg reported, as new US export restrictions announced this month target leakage of advanced chips through regional facilities. Investments in Malaysia, Singapore, Thailand and Indonesia face added scrutiny as a result."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/eu-plans-50-billion-tech-fund-challenge-us-china-ft-reports-2026-11-25/",
+      "source": "Reuters China",
+      "category": "Diplomacy",
+      "headline": "EU plans €50 billion tech fund to challenge US and China",
+      "body_text": "The EU is planning a *€50 billion* tech fund to compete with the US and China, FT reported and Reuters relayed Wednesday. Few other details on the fund's structure or timeline were disclosed."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-25/amazon-targets-uk-car-buyers-being-reeled-in-by-chinese-brands",
+      "source": "Bloomberg China",
+      "category": "Trade",
+      "headline": "Amazon targets UK car buyers drawn to Chinese brands",
+      "body_text": "Amazon is targeting UK car buyers increasingly drawn to Chinese auto brands, Bloomberg reported, as Chinese marques expand their British foothold. The push comes amid reshaped competitive dynamics in Europe's auto retail sector."
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/24/jensen-huang-nvidia-employee-meeting.html",
+      "source": "CNBC China",
+      "category": "Technology",
+      "headline": "Jensen Huang tells staff Nvidia doesn't need a succession plan",
+      "body_text": "Jensen Huang told Nvidia staff the company does not need a succession plan, CNBC reported, following his reinstatement after resigning amid an espionage scandal involving an alleged associate. Huang's rapid reversal came days after the board initially accepted his resignation."
+    },
+    {
+      "url": "https://cn.nikkei.com/industry/manufacturing/64855-2026-11-25-13-46-59.html",
+      "source": "日经中文网 (Nikkei Chinese ZH)",
+      "category": "Technology",
+      "headline": "Canon re-enters ArF lithography market after 24 years",
+      "body_text": "Canon will re-enter the ArF lithography equipment market after a 24-year absence, Nikkei's Chinese edition reported, as ASML's dominant supply position strains under AI-driven chip demand. The report cited US outlet The Information saying Chinese firms have begun producing lithography tools with some performance capability."
+    },
+    {
+      "url": "https://cn.nikkei.com/politicsaeconomy/politicsasociety/64857-2026-11-25-14-09-39.html",
+      "source": "日经中文网 (Nikkei Chinese ZH)",
+      "category": "Indo-Pacific",
+      "headline": "Lowy Institute: US-China Asia power gap narrowest since 2018",
+      "body_text": "The Lowy Institute's 2026 Asia Power Index put the US score at *78.9*, a record low down 1.5 points, versus China's 73.6, the narrowest gap since the index began in 2018, per Nikkei's Chinese edition. The institute attributed the narrowing partly to a declining US missile stockpile and the diversion of military resources toward the Middle East."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.washingtonpost.com/world/2026/11/25/top-nvidia-chips-are-still-offer-china-despite-us-ban/",
+      "source": "WaPo China",
+      "headline": "Top Nvidia chips still being sold in China despite US ban",
+      "body_text": "Top-end **Nvidia** chips subject to the US export ban remain available for purchase inside China, The Washington Post reported Wednesday. The report lands as Commerce officials face congressional pressure over enforcement following the Jensen Huang-Alice Huang affair.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.washingtonpost.com/politics/2026/11/25/backing-jensen-huang-trump-delivers-setback-china-hawks/",
+      "source": "WaPo China",
+      "headline": "In backing Nvidia's Huang, Trump deals China hawks a setback",
+      "body_text": "President **Trump's** decision to back Jensen Huang's reinstatement as Nvidia CEO handed a setback to Republican China hawks in Congress, The Washington Post reported Wednesday. The piece frames the episode as a test of Trump's willingness to override hawkish allies on chip policy toward Beijing.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.reuters.com/business/finance/alice-huang-linked-firms-listed-270-million-ai-servers-china-records-show-2026-11-25/",
+      "source": "Reuters China",
+      "headline": "Alice Huang-linked firms listed $270 million in AI servers in China",
+      "body_text": "Companies linked to **Alice Huang**, the Chinese businesswoman at the center of the Nvidia espionage affair, listed *$270 million* worth of AI servers in China, Reuters reported citing corporate records. The filings add detail to the financial footprint of the network under scrutiny since her relationship with Jensen Huang surfaced.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-25/china-us-set-for-new-chapter-of-trade-talks-ex-official-says",
+      "source": "Bloomberg China",
+      "headline": "China, US set for 'new chapter' of trade talks, ex-official says",
+      "body_text": "China and the US are poised for a 'new chapter' of trade talks, a former US official told Bloomberg, following the Trump-Xi engagements around APEC and the Shenzhen trilateral meeting with Russia. No date or agenda for renewed talks was specified.",
+      "instrument": "Diplomacy"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/25/china-xiamen-boeing-deal.html",
+      "source": "CNBC China",
+      "headline": "Xiamen Airlines to buy 50 Boeing jets in $7.4 billion deal",
+      "body_text": "**Xiamen Airlines** agreed to buy 50 Boeing 737-8 aircraft for *$7.4 billion* at list prices, CNBC reported, with deliveries expected 2031-2034. It is Boeing's largest China order since 2017; Nikkei's Chinese edition reported Trump said Nov. 23 that China plans to buy 250 more aircraft beyond the 200 agreed after the May 2026 summit.",
+      "instrument": "Investment"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/china-halts-critical-minerals-ban-to-maintain-truce-with-us",
+      "source": "Bloomberg China",
+      "headline": "China halts critical-minerals ban to maintain truce with US",
+      "body_text": "China has halted a planned critical-minerals export ban to preserve the US trade truce, Bloomberg reported. The move tracks the one-year suspension of Beijing's Oct. 9, 2025 rare-earth export-control expansion agreed alongside the Oct. 30, 2025 Busan truce.",
+      "instrument": "Export Controls"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/taiwan-s-local-vote-tests-lai-with-presidential-race-on-horizon",
+      "source": "Bloomberg China",
+      "headline": "Taiwan's local vote tests Lai with presidential race on horizon",
+      "body_text": "Taiwan heads into Nov. 28 nine-in-one local elections that will test President **Lai Ching-te's** standing ahead of the next presidential race, Bloomberg reported. The vote covers 22 mayoral and magistrate seats and roughly 11,000 offices nationwide.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/india-seizes-nepal-flood-crisis-rebuild-influence-china-gains-ground-2026-11-24/",
+      "source": "Reuters China",
+      "headline": "India seizes Nepal flood crisis to rebuild influence as China gains ground",
+      "body_text": "India is using relief efforts after Nepal's flood crisis to rebuild influence as China expands its own footprint in the country, Reuters reported. The competition reflects broader India-China jockeying for leverage in Kathmandu.",
+      "region": "India"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/australia-aims-to-sign-another-deal-to-block-china-in-pacific",
+      "source": "Bloomberg China",
+      "headline": "Australia aims to sign another deal to block China in Pacific",
+      "body_text": "Australia is pursuing another security agreement to limit Chinese influence in the Pacific, Bloomberg reported, a day before it signed its security treaty with the Solomon Islands. No target country or timeline was specified.",
+      "region": "Australia-Pacific"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/russia-sends-home-chinese-suspected-illegally-raising-23-billion-deposits-2026-11-25/",
+      "source": "Reuters China",
+      "headline": "Russia sends home Chinese suspected of illegally raising $2.3 billion in deposits",
+      "body_text": "Russia has sent home Chinese nationals suspected of illegally raising *$2.3 billion* in deposits, Reuters reported Wednesday. The case marks one of the largest known cross-border financial schemes involving Chinese nationals operating in Russia.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.ft.com/content/b32f9488-aa02-47f8-bebf-a97805a076e4?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "China issues list of demands to Brussels over EU trade talks",
+      "body_text": "China has issued a list of demands to Brussels as part of EU trade talks, the Financial Times reported. The report comes alongside separate EU moves this week to tighten import rules on Chinese-made vehicles.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/eu-sets-limits-hybrid-vehicle-imports-china-other-countries-2026-11-24/",
+      "source": "Reuters China",
+      "headline": "EU sets emergency import limits on hybrid vehicles from China",
+      "body_text": "The European Commission said Nov. 24 it will impose emergency safeguard quotas on hybrid and plug-in hybrid vehicle imports from Dec. 1 through June 2027, Reuters reported. Nikkei's Chinese edition put the quotas, set at 2025 import levels plus *15 percent*, at roughly 190,000 vehicles for China and 170,000 for Japan.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/codelco-offers-lower-copper-premiums-to-revive-sales-to-china",
+      "source": "Bloomberg China",
+      "headline": "Codelco offers lower copper premiums to revive sales to China",
+      "body_text": "Chile's **Codelco** is offering lower copper premiums to revive sales to China, Bloomberg reported, as Chinese demand concerns weigh on the market. No specific discount figures were given in the available report.",
+      "region": "Latin America"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/world/china-investigates-politburo-member-chen-jining-xinhua-says-2026-11-24/",
+      "source": "Reuters China",
+      "category_tag": "PRC-Economy",
+      "headline": "Shanghai party chief and Politburo member Chen Jining placed under investigation",
+      "body": "**Chen Jining**, Shanghai's Communist Party chief and a Politburo member once viewed as a contender for national leadership, has been placed under investigation, Reuters reported, the fourth Politburo member to fall since 2025. He previously served as Tsinghua University president, minister of environmental protection and mayor of Beijing, per NYT's Chinese edition. Shanghai's party standing committee held an expanded meeting to pledge 'resolute' support for the central leadership's decision, per state media.",
+      "src_line": "Reuters, with NYT Chinese and Shanghai party media"
+    },
+    {
+      "url": "https://www.ft.com/content/6c64b8b8-531c-4eea-8fd0-90c4c4967ab9?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category_tag": "Sanctions",
+      "headline": "Huawei convicted in US trial over concealed Iran business",
+      "body": "A federal jury in New York convicted **Huawei** on bank fraud, conspiracy to steal trade secrets and conspiracy to defraud the United States, following an eight-year prosecution, FT and AP reported. The jury acquitted Huawei on racketeering and obstruction-of-justice conspiracy charges, with NYT's Chinese edition putting the tally at 10 of 12 counts guilty. Huawei called the verdict 'without legal or factual merit,' per AFP.",
+      "src_line": "FT, with AP, AFP and NYT Chinese"
+    },
+    {
+      "url": "https://apnews.com/article/australia-solomon-islands-china-security-treaty-6eaee893cd625ad71bd34dbe887ac73a",
+      "source": "AP China",
+      "category_tag": "Indo-Pacific",
+      "headline": "Solomon Islands signs security treaty with Australia, checking China",
+      "body": "Australia and the Solomon Islands signed a security treaty Wednesday making Canberra Honiara's defense partner of choice, AP reported, four years after Honiara signed a security pact with Beijing that raised fears of a Chinese military base. The new accord explicitly precludes such basing arrangements, per the New York Times.",
+      "src_line": "AP, with NYT"
+    },
+    {
+      "url": "https://apnews.com/article/trump-tariffs-china-european-union-d97ed6f4017152ca4c18de5517db6d51",
+      "source": "AP China",
+      "category_tag": "US-China",
+      "headline": "US readies tariffs on China, EU over subsidized production",
+      "body": "The US is preparing new tariffs on China, the EU and other trading partners over subsidized industrial production, AP reported citing sources, with Bloomberg and WSJ separately reporting the levies could be announced imminently. **China's** Ministry of Foreign Affairs urged Washington to 'uphold the stable development' of trade relations in response, per AFP/HKFP. The reported action would track USTR's Section 301 'structural excess capacity' investigation opened Mar. 11, 2026 into 16 economies including China, the EU, Japan and Korea.",
+      "src_line": "AP, with Bloomberg, WSJ and AFP/HKFP"
+    },
+    {
+      "url": "https://www.reuters.com/science/chinas-shenzhou-24-space-flight-takes-off-with-pakistani-national-first-foreign-2026-11-25/",
+      "source": "Reuters China",
+      "category_tag": "Diplomacy",
+      "headline": "Pakistani astronaut becomes first foreigner to board China's Tiangong station",
+      "body": "**Muhammad Zeeshan Ali**, a Pakistani astronaut, became the first foreign national to board China's Tiangong space station as part of the Shenzhou-24 crew launched Wednesday, Reuters reported. **Xi Jinping** and Pakistani President **Asif Ali Zardari** exchanged congratulatory messages over the joint mission, per China's Ministry of National Defense.",
+      "src_line": "Reuters, with MND statement"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/25/jensen-huang-nvidia-ai-talent-race.html",
+      "source": "CNBC China",
+      "category_tag": "Technology",
+      "headline": "Jensen Huang's Nvidia return shows AI race is about more than chips",
+      "body": "**Jensen Huang's** reinstatement as Nvidia CEO shows the US-China AI competition extends beyond chip supply to tech talent, CNBC reported. The piece frames his abrupt return, after resigning amid an espionage scandal involving an alleged associate, as evidence that talent retention is now as contested as hardware access.",
+      "src_line": "CNBC"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://sinocism.com/p/shanghai-needs-a-new-party-secretary",
+      "source": "Sinocism",
+      "category": "Diplomacy",
+      "headline": "Sinocism roundup: Chen Jining purge, Busan truce, chip controls",
+      "body_text": "Sinocism's daily brief tracks Chen Jining's purge, Busan-truce durability, chip-control enforcement, Solomon Islands' pivot from China, and the Shenzhou-24 launch.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://apnews.com/article/taiwan-jensen-huang-nvidia-scandal-1ec8552ba88c4df37cfd9af731b7e561",
+      "source": "AP China",
+      "category": "Cross-Strait",
+      "headline": "Some in Taiwan welcome Huang's Nvidia return despite scandal",
+      "body_text": "Some in Jensen Huang's native Taiwan welcomed his return to Nvidia despite the espionage scandal engulfing the company, AP reported.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/24/business/nvidia-alice-huang-china.html",
+      "source": "NYT China",
+      "category": "Technology",
+      "headline": "NYT traces Alice Huang's path from Hunan factory town to Nvidia scandal",
+      "body_text": "The New York Times traced Alice Huang's path from a Hunan factory town to the center of the Nvidia spying controversy.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/nvidias-huang-returns-cheers-china-political-hurdles-mount-2026-11-24/",
+      "source": "Reuters China",
+      "category": "Technology",
+      "headline": "Huang returns to cheers in China as political hurdles mount",
+      "body_text": "Jensen Huang drew cheers on his return to China even as political hurdles around the Nvidia affair mount, Reuters reported.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://cn.nikkei.com/china/cpolicssociety/64835-2026-11-24-09-36-09.html",
+      "source": "日经中文网 (Nikkei Chinese ZH)",
+      "category": "Cross-Strait",
+      "headline": "TAO director, Eximbank sign pact to support Taiwan businesses",
+      "body_text": "TAO director **Song Tao** and China's Export-Import Bank signed an agreement to support Taiwan businesses integrating into Belt and Road projects.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/business-asia/china-ramps-up-campaign-to-electrify-the-world-s-trucking-fleet",
+      "source": "Nikkei Asia China",
+      "category": "Energy",
+      "headline": "China ramps up campaign to electrify world's trucking fleet",
+      "body_text": "China is expanding efforts to electrify the global trucking fleet, Nikkei Asia reported, citing a port operator in northern Vietnam adopting Chinese electric trucks.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/as-taiwan-elections-near-one-kmt-mayor-s-ambitions-loom-large",
+      "source": "Nikkei Asia China",
+      "category": "Cross-Strait",
+      "headline": "KMT's Johnny Chiang makes 'final sprint' in Taichung mayoral race",
+      "body_text": "KMT candidate Johnny Chiang is making a 'final sprint' to succeed Lu Shiow-yen as Taichung mayor ahead of Taiwan's Nov. 28 vote, Nikkei Asia reported.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/one-year-after-hong-kong-fire-survivors-mourn-losses-question-accountability-2026-11-25/",
+      "source": "Reuters China",
+      "category": "Diplomacy",
+      "headline": "One year after Hong Kong fire, survivors demand accountability",
+      "body_text": "Survivors of a deadly Hong Kong fire are still mourning losses and demanding accountability a year later, Reuters reported Wednesday. The anniversary renewed scrutiny of building-safety enforcement and the government's disaster response."
+    },
+    {
+      "url": "https://www.reuters.com/world/uk/china-urges-britain-support-free-trade-provide-favourable-business-environment-2026-11-24/",
+      "source": "Reuters China",
+      "category": "Diplomacy",
+      "headline": "China urges Britain to support free trade",
+      "body_text": "China urged Britain to support free trade and provide a favorable business environment, Reuters reported, without specifying the venue. The appeal comes as EU-UK coordination on China trade policy tightens around new vehicle-import rules."
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.reuters.com/markets/asia/xiaomi-third-quarter-falls-57-smartphone-sales-hit-2026-11-24/",
+      "source": "Reuters China",
+      "headline": "Xiaomi profit falls 57% as China auto downturn weighs",
+      "body_text": "**Xiaomi's** third-quarter profit fell *57 percent* as China's auto downturn weighed on results, Reuters reported, even as the company eyes expansion into Europe's car market.",
+      "companies": [
+        "Xiaomi"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-25/china-s-booming-exports-obscure-domestic-economic-strains",
+      "source": "Bloomberg China",
+      "headline": "China's booming exports obscure economic strain at home",
+      "body_text": "China's exports continue to boom even as the strength obscures softer domestic consumption, Bloomberg reported Wednesday.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.reuters.com/business/autos-transportation/chinas-byd-talks-buy-french-car-factory-ineos-automotive-2026-11-24/",
+      "source": "Reuters China",
+      "headline": "BYD in talks to buy French car factory from Ineos",
+      "body_text": "**BYD** is in talks to buy a French car factory from Ineos Automotive, Reuters reported, as the Chinese EV maker expands its European manufacturing footprint.",
+      "companies": [
+        "BYD",
+        "Ineos Automotive"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-25/vw-s-18-000-self-driving-sedan-shows-how-china-leads-on-car-tech",
+      "source": "Bloomberg China",
+      "headline": "VW's $18,000 self-driving sedan shows China leads on car tech",
+      "body_text": "**Volkswagen's** new *$18,000* self-driving sedan illustrates how China leads on car technology, even in a foreign brand's China-market model, Bloomberg reported.",
+      "companies": [
+        "Volkswagen"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.reuters.com/business/aerospace-defense/china-eyes-mergers-tougher-rules-to-help-struggling-airlines-scmp-says-2026-11-25/",
+      "source": "Reuters China",
+      "headline": "China eyes mergers, tougher rules to help struggling airlines",
+      "body_text": "China is weighing mergers and tougher rules to help struggling airlines, Reuters reported citing SCMP, without detailing which carriers could be affected.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-25/china-s-surprise-soyoil-export-boom-cools-as-india-turns-to-palm",
+      "source": "Bloomberg China",
+      "headline": "China's surprise soyoil export boom cools as India turns to palm",
+      "body_text": "China's surprise soyoil export boom is cooling as India shifts purchases to palm oil, Bloomberg reported Wednesday.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://cn.nikkei.com/politicsaeconomy/commodity/64852-2026-11-25-10-00-34.html",
+      "source": "日经中文网 (Nikkei Chinese ZH)",
+      "headline": "US corn prices hit 5-month low as China farm purchases stall",
+      "body_text": "US corn prices sank to a five-month low as the US and China made no progress on expanding Chinese purchases of American farm goods, Nikkei's Chinese edition reported.",
+      "companies": [],
+      "sector": "macro"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "US tariff plans on Chinese goods",
+      "statement": "Per AFP: Beijing urged the United States to \"uphold the stable development\" of trade relations, after reports said Washington plans new tariffs on Chinese and other goods.",
+      "original_zh": null,
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "The statement followed reports that Washington could announce new duties on China, the EU, Japan and South Korea as soon as this week.",
+      "source": "Hong Kong Free Press / AFP",
+      "url": "https://hongkongfp.com/2026/11/25/china-warns-us-against-imposing-new-tariffs/"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "Taiwan Strait peace and US-China common ground",
+      "statement": "Per TAO: Maintaining peace and stability in the Taiwan Strait is the biggest common denominator between China and the United States.",
+      "original_zh": "维护台海和平稳定是中美双方的最大公约数",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "The remark came at TAO's Nov. 25 regular press briefing in Beijing.",
+      "source": "国台办 (TAO ZH)",
+      "url": "https://www.sohu.com/a/1106170172_114911?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "Japan's statements on Taiwan",
+      "statement": "Per TAO: Japan should promptly correct its wrongful statements and actions on the Taiwan question.",
+      "original_zh": "日方应在台湾问题上尽快纠正错误言行",
+      "addressed_to": "Japan",
+      "tone": "warning",
+      "context": "The remark came amid continued China-Japan tension over statements by Tokyo officials on the Taiwan Strait.",
+      "source": "国台办 (TAO ZH)",
+      "url": "https://m.sohu.com/a/1106299788_123753?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA spokesperson",
+      "topic": "Mekong River pollution at Thai-Myanmar border",
+      "statement": "Per MOFA: China will dispatch experts to help with the investigation into pollution of the Mekong at the Thai-Myanmar border.",
+      "original_zh": null,
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "The offer followed concerns over a pollution incident affecting a Mekong tributary along the Thailand-Myanmar border.",
+      "source": "MOFA Spokesperson",
+      "url": "https://m.sohu.com/a/1106233147_163278?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    }
+  ],
+  "social_statements": [],
+  "personnel_changes": [
+    {
+      "position": "Shanghai CCP Party Secretary / Politburo member",
+      "name": "Chen Jining",
+      "action": "investigated",
+      "detail": "Placed under investigation for suspected serious violations of discipline and law, per Xinhua; Reuters called him the fourth Politburo member to fall since 2025. He previously served as Tsinghua University president, minister of environmental protection and mayor of Beijing, per NYT's Chinese edition.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://apnews.com/article/australia-solomon-islands-china-security-treaty-6eaee893cd625ad71bd34dbe887ac73a",
+    "https://www.reuters.com/science/chinas-shenzhou-24-space-flight-takes-off-with-pakistani-national-first-foreign-2026-11-25/",
+    "https://www.bloomberg.com/news/articles/2026-11-24/taiwan-s-local-vote-tests-lai-with-presidential-race-on-horizon",
+    "https://www.reuters.com/world/china/russia-sends-home-chinese-suspected-illegally-raising-23-billion-deposits-2026-11-25/"
+  ],
+  "story_count": 98,
+  "oped_count": 4,
+  "academic_count": 0,
+  "source_count": 113,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-25.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-25.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
