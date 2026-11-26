@@ -1,0 +1,584 @@
+{
+  "digest_date": "Thursday, November 26, 2026",
+  "re_line": "20% China tariff proposed · Shanghai chief Chen Jining purged · Huawei convicted · Senkaku protest",
+  "market_indicators": {
+    "brent": {
+      "value": "90.94",
+      "change_pct": -1.76,
+      "as_of": "Nov 26"
+    },
+    "sse_composite": {
+      "value": "3,476.88",
+      "change_pct": -1.61,
+      "as_of": "Nov 26"
+    },
+    "hang_seng": {
+      "value": "22,226.88",
+      "change_pct": -2.69,
+      "as_of": "Nov 26"
+    },
+    "usd_cny": {
+      "value": "6.6508",
+      "change_pct": -0.24,
+      "as_of": "Nov 26"
+    },
+    "usd_cnh": {
+      "value": "6.6623",
+      "change_pct": -0.05,
+      "as_of": "Nov 26"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "USTR proposed new Section 301 tariffs on 14 economies including China at up to *20 percent*, prompting MOFCOM to vow it 'reserves the right to take necessary measures.'",
+    "Xi Jinping's anti-graft campaign placed Shanghai party chief Chen Jining, a sitting Politburo member, under investigation, Reuters and Bloomberg report.",
+    "A Brooklyn jury convicted Huawei on 10 of 12 criminal counts including trade-secret theft and sanctions-evasion bank fraud, even as US officials told Congress they found no evidence China's MSS orchestrated Jensen Huang's affair."
+  ],
+  "key_stat": {
+    "number": "20%",
+    "label": "Proposed US Section 301 tariff rate on China",
+    "context": "The highest of 14 new tariffs the USTR proposed Nov 25 under its 'structural excess capacity' probe, versus a 15 percent non-stacked cap for Taiwan, the EU, Japan and South Korea.",
+    "source": "Taipei Times / CNBC"
+  },
+  "prc_government": [
+    {
+      "ministry": "MOFCOM",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM (eight ministries jointly)",
+      "action": "Issues 15th Five-Year services-trade development plan",
+      "document": "《服务贸易发展\"十五五\"规划》(商服贸发〔2026〕212号)",
+      "detail": "MOFCOM and seven other ministries jointly issued the plan Nov 26 setting services-trade development goals through the 15th Five-Year Plan period; a MOFCOM services-trade official briefed press on its contents the same day.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://fec.mofcom.gov.cn/article/ggfw/zcfg/zcqt/202611/9629.html"
+    },
+    {
+      "ministry": "Customs (GACC)",
+      "ministry_chinese": "海关总署",
+      "official": "General Administration of Customs",
+      "action": "Tightens cosmetics import/export safety oversight",
+      "document": "海关总署公告2026年第162号",
+      "detail": "Customs issued Announcement No. 162 of 2026 on Nov 26 further regulating safety supervision requirements for imported and exported cosmetics.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://fec.mofcom.gov.cn/article/ggfw/zcfg/zcfgdwmy/zcfgdwmyxx/202611/9630.html"
+    },
+    {
+      "ministry": "MOFA",
+      "ministry_chinese": "外交部",
+      "official": "MOFA",
+      "action": "Launches online platform for supplementary authentication certificates",
+      "document": null,
+      "detail": "MOFA rolled out an electronic application platform Nov 26 for \"electronic supplementary certificates,\" part of ongoing consular-service digitization.",
+      "source_label": "MOFCOM ZH",
+      "url": "https://fec.mofcom.gov.cn/article/xwdt/xwdtqtzx/xwtzhzcj/202611/9636.html"
+    },
+    {
+      "ministry": "MND",
+      "ministry_chinese": "国防部",
+      "official": "Chen Xi, MND spokesperson",
+      "action": "Announces December security seminar, naval HADR drill and ASEAN peacekeeping exercise",
+      "document": null,
+      "detail": "MND said National Defense University will host a Dec 2-14 international security studies seminar; China's navy will hold a Western Pacific Naval Symposium HADR workshop in Nanjing in early December; China and Brunei will co-host a Nov 27-Dec 12 ASEAN Defence Ministers' Meeting-Plus peacekeeping exercise codenamed \"Shared Destiny · Peace and Harmony-2026.\"",
+      "source_label": "PLA Daily ZH",
+      "url": "http://www.81.cn/yw_208727/16502214.html"
+    },
+    {
+      "ministry": "PBOC",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC",
+      "action": "Schedules Rmb100 billion treasury cash deposit auction",
+      "document": null,
+      "detail": "PBOC said a *Rmb100 billion* two-month central treasury cash deposit auction is set for Dec 1, 2026.",
+      "source_label": "PBOC ZH",
+      "url": "https://stock.jrj.com.cn/2026/11/26173659287909.shtml"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "Voters choose 22 mayors/magistrates and roughly 11,000 local offices; AP frames it as a mid-term test for President Lai Ching-te."
+    },
+    {
+      "month": "Nov",
+      "day": 27,
+      "headline": "China-Brunei co-host ASEAN peacekeeping exercise",
+      "detail": "A Nov 27-Dec 12 ASEAN Defence Ministers' Meeting-Plus peacekeeping field exercise codenamed \"Shared Destiny · Peace and Harmony-2026\" runs in Bandar Seri Begawan."
+    },
+    {
+      "month": "Dec",
+      "day": 2,
+      "headline": "PLA hosts international security studies seminar",
+      "detail": "China's National Defense University holds a Dec 2-14 seminar on \"global security dynamics and regional security cooperation,\" per the Nov 26 MND briefing."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "China's annual state commemoration of the 1937 Nanjing Massacre (国家公祭日)."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral (Miami)",
+      "detail": "The US hosts the G20 leaders' summit Dec 14-15; Xi Jinping's attendance has not been confirmed."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.nytimes.com/2026/11/26/world/asia/hong-kong-fire-wang-fuk-court-anniversary.html",
+      "source": "NYT Asia (direct)",
+      "category": "Hong Kong",
+      "headline": "Hong Kong marks one year since Wang Fuk Court fire killed 168",
+      "body_text": "Residents quietly mourned the 168 people killed in the Wang Fuk Court blaze a year ago, the city's deadliest fire since 1980, the New York Times reports. Officials warned against using the disaster to 'sow division' as bereaved families press for accountability."
+    },
+    {
+      "url": "https://apnews.com/article/china-space-shenzhou-24-543306bfe17419395d10fae107500564",
+      "source": "AP China",
+      "category": "Space",
+      "headline": "China launches Shenzhou 24 with two Chinese, one Pakistani astronaut",
+      "body_text": "China launched the Shenzhou 24 spacecraft carrying two Chinese astronauts and one Pakistani astronaut, AP reports, extending China-Pakistan space cooperation. **Xi Jinping** hailed the joint mission as the crew heads to the Tiangong space station."
+    },
+    {
+      "url": "https://www.reuters.com/world/data-chinese-ai-firm-minimax-accessed-by-unidentified-parties-researcher-says-2026-11-26/",
+      "source": "Reuters China",
+      "category": "Technology",
+      "headline": "Data from Chinese AI firm MiniMax accessed by unidentified parties",
+      "body_text": "A researcher told Reuters that data belonging to Chinese AI company MiniMax was accessed by unidentified outside parties, in an exclusive report published Nov 26. The scope of the exposure has not been disclosed."
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/26/business/china-women-spending-entertainment.html",
+      "source": "NYT Asia (direct)",
+      "category": "Society",
+      "headline": "China's 'female gaze' entertainment boom tests censors' limits",
+      "body_text": "A thriving Chinese entertainment industry catering to female fantasies, from male dance troupes to paid hiking companions, is testing the limits of Beijing's tolerance, the New York Times reports. The boom reflects shifting consumer-spending patterns among Chinese women."
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM1BOZHJ2d0E5MXN6cVhHTVdoQm43SHlaMmJsMXlsQVJVeEtEbFVla3B4WHF0clJJV3BmNXctM2Y1SWFEU0ZkZ09FZ2hXcElpb1pqbGxaLXNZQ0djb1F4VFpBVFg3YXNFRzBLWFpmVEMwUzNVMF9XNXI1dUU4ZnBiME5Hb0VWdXlxYnRSNXJTbkZGT1U2Y1hDSV9yT25rT3haSVZVWWl1dG5WUDhRQmJOakRFdw?oc=5",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "Huawei teases next-generation AI memory chip to rival Samsung, SK Hynix",
+      "body_text": "Huawei previewed a next-generation AI memory chip aimed at competing with Samsung and SK Hynix, Bloomberg reports. The move underscores Huawei's push into high-bandwidth memory as US export controls constrain China's access to foreign advanced chips."
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOT2tkTlRwUGhfWWd6YzlhY1dEY2RrVjZEbkJuNUtjcFRUUzZaem10ZDJ0SzJBaFhuV28tZnQyUHl2SmJPT3VOQXBoRDV4TkEzcGFQVi0zUFZUdDk0bDZudDBBb2VtbGV4VmszLWpQMWtKdS1YeUJ0TG9jbDgxRlU3cVN6YjMwTkx3M1hqMFJ4NDZVUFBMMi1oRTVEUW5xUDdMdWhvd2taYVU4NEt6bnNFazNB?oc=5",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "EU seeks €50 billion fund for frontier tech to rival US, China",
+      "body_text": "The European Union is seeking *€50 billion* to fund frontier-technology development aimed at keeping pace with the US and China, Bloomberg reports. The plan reflects growing European concern over falling behind both powers in AI and advanced computing."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.wsj.com/politics/national-security/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-00228bb7",
+      "source": "WSJ China",
+      "headline": "Officials brief Congress: no evidence China directed Huang affair",
+      "body_text": "US officials briefed congressional staff that they have found no evidence **China**'s Ministry of State Security directed Huang Le to pursue her relationship with Nvidia CEO **Jensen Huang**, the Wall Street Journal reports. Reuters separately reported that US officials remain divided over the broader spying allegations following Huang's reinstatement as CEO.",
+      "instrument": "Congress"
+    },
+    {
+      "url": "https://www.ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "Nvidia halts chip shipments to Malaysia, Singapore, Thailand, Indonesia",
+      "body_text": "Nvidia told manufacturing partners Dell and Supermicro to stop shipping servers built with its chips to buyers in four Southeast Asian countries, FT reports, as Washington tightens export controls to prevent Chinese access to AI computing power. It remains unclear whether the halt is temporary.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPU05FY1hvQmJod19oM3p3aTZQaS1CdktCWEZsSnk0TmVWREE1a0tmVW5kVnBxdG5VNU1TX2FmWnZ1aTc1UEQyblFkSklCZ3NlcU1XQUZQVDUwTXZ6R3BoVjlRb1RPY0pTNGdmUUdNZkw0Zi1oanJOcXFieGlBdzRTN05pa3FsaVhUWVk0UWpzc0hkN2kySGF6bGRpU1Y1a2IyNi1iaUFQZThLNVZON0E?oc=5",
+      "source": "Reuters China",
+      "headline": "How China got access to Nvidia's AI chips despite the rules",
+      "body_text": "Reuters examines how advanced Nvidia chips have continued reaching China despite US export restrictions designed to block them. Washington Post separately found that top-tier Nvidia chips remain readily available for sale inside China.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSHo5VjlHR1l4UkdCSmFGNUd6WVlZNXlwZXl6Yk5oYUFnTm9ISC1ZSWdmbi1aZ3R1b1Q3bXhpaXVoSXRaNy1hcWdSWHdCd2RFVGx6WlhYN25pZXI4Q2xHWGpQVkJYN2MwTk1ma2NERnBKTHhBUXpHSElLeFdwdEpVZFZZcWhxMm1QUEVpeHRYSXczYXNJelJTUWtHdEkxSGpud2NxeV90R0VjTXVkTmE4U0JRZWVRM1RFUmt3UGhIbw?oc=5",
+      "source": "Reuters China",
+      "headline": "US chip curbs, distillation crackdown threaten Chinese AI model development",
+      "body_text": "Sources tell Reuters that tightening US chip export controls and a crackdown on AI model 'distillation' techniques are threatening the pace of Chinese model development. The constraints add pressure on Chinese labs already contending with reduced access to Nvidia's most advanced processors.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://www.wsj.com/finance/stocks/nvidia-china-executive-affair-jay-puri-cenly-chen-a42d733b",
+      "source": "WSJ China",
+      "headline": "Second Nvidia executive romance tied to China-linked company surfaces",
+      "body_text": "The Wall Street Journal reports on a separate relationship between Nvidia executive Jay Puri and Cenly Chen, an executive at a company with China ties, drawing fresh scrutiny of personal relationships across the chip industry's China-facing supply chain. The report follows the Huang-Huang Le affair that triggered the current congressional inquiry.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.economist.com/china/2026/11/25/nuclear-arms-control-is-on-hold-until-china-catches-up",
+      "source": "Economist China",
+      "headline": "Nuclear-arms control stalls until China 'catches up'",
+      "body_text": "The Economist reports US-China-Russia nuclear arms control talks remain stalled, with Washington effectively waiting for China's arsenal to grow before pursuing a trilateral framework. The dynamic complicates any near-term successor to existing bilateral US-Russia arms limits.",
+      "instrument": "Diplomacy"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/26/2003868391",
+      "source": "Taipei Times (direct)",
+      "headline": "Jensen Huang's comeback reassures Taiwan chip suppliers",
+      "body_text": "Taiwanese suppliers found reassurance in **Jensen Huang**'s reinstatement, with veteran tech journalist Owen Lin calling Huang the AI industry's 'central bank' for his role financing so-called neocloud computing firms. Lin said he does not expect Huang's Taiwanese partnerships, including TSMC ties, to change significantly.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/26/world/asia/japan-china-takaichi-snubbed.html",
+      "source": "NYT Asia (direct)",
+      "headline": "Images fuel debate over whether Japan's Takaichi was snubbed in Shenzhen",
+      "body_text": "Photos comparing the welcome given to Japanese Prime Minister **Sanae Takaichi** against other leaders at China's Shenzhen summit have prompted some Japanese officials to allege a snub, the New York Times reports. The dispute adds friction to an already strained Japan-China relationship.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/electric-vehicles/suzuki-turns-to-rare-metal-free-batteries-amid-china-supply-risks",
+      "source": "Nikkei Asia China",
+      "headline": "Suzuki shifts to rare metal-free batteries amid China supply risk",
+      "body_text": "Suzuki Motor will produce batteries without rare metals for its kei and minicar lineup, Nikkei reports, seeking to secure affordable batteries without relying on Chinese rare-earth supply chains. The shift reflects broader Japanese industry moves to reduce China dependency after Beijing's rare-earth export controls.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://apnews.com/article/china-consumer-activist-wang-hai-south-korea-bbb712001f613da3b23edf383d390ae1",
+      "source": "AP China",
+      "headline": "Chinese consumer advocate Wang Hai stranded in South Korea amid crackdown",
+      "body_text": "Prominent Chinese consumer-rights campaigner Wang Hai is stranded in South Korea as a broader crackdown inside China targets consumer advocates, AP reports. His case illustrates tightening space for civil-society campaigners under Beijing's rules.",
+      "region": "Korea"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWFVpME5hQ1VTaDIwVWlteDB0akRPQjJYYldDck5GTUVSNmdjelZXZnBTcU03R01fVW9CZE8zTXZVYVc0dl92M3hxcDhjZlhicUFEQndIS1Iyd1RPRXNjS1ZkUnFjWTNHeFZIcmFMUGRadXdvYnpXZkhhMFJwSjJVYnRWTlJrTkxIaFpucUdNQzJQQ0cxOGd6Z2J5WmJKVGVFSjdTUGJDWU5YSm1KUUNaWktTRzk3a3VPT3JrczlvWXpuaG9PV0huag?oc=5",
+      "source": "Reuters China",
+      "headline": "China, Japan, South Korea and ASEAN launch cross-border digital payments talks",
+      "body_text": "China, Japan, South Korea and ASEAN members launched talks on interoperable cross-border digital payment systems, Reuters reports. The initiative aims to streamline regional commerce as Asian economies push deeper financial integration.",
+      "region": "Multilateral"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/china-urges-netherlands-offer-fair-predictable-business-climate-amid-nexperia-2026-11-25/",
+      "source": "Reuters China",
+      "headline": "China urges Netherlands to offer 'fair, predictable' climate amid Nexperia dispute",
+      "body_text": "**China** urged the Netherlands to provide a fair and predictable business environment amid the ongoing Nexperia dispute, Reuters reports. The standoff over the Dutch-headquartered, China-linked chipmaker remains a flashpoint in European semiconductor supply-chain politics.",
+      "region": "Europe"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.cnbc.com/2026/11/25/us-tariffs-trump-section-301.html",
+      "source": "CNBC China",
+      "category_tag": "US-China",
+      "headline": "US proposes new 301 tariffs on China, 13 other trading partners",
+      "body": "USTR proposed new Section 301 tariffs on 14 economies including China, the EU, Japan, Taiwan and South Korea, with the highest rate of *20 percent* set for China, a senior US official said, per Taipei Times. **MOFCOM** spokesperson He Yadong called the move \"typical unilateralism\" that \"severely violates WTO rules\" and said China \"reserves the right to take necessary measures.\" Taiwan's rate is expected to revert to the previously agreed *15 percent* non-stacked cap.",
+      "src_line": "CNBC, Nov 25 2026"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/26/business/huawei-trump-china-ai.html",
+      "source": "NYT Asia (direct)",
+      "category_tag": "Technology",
+      "headline": "Huawei becomes 'indispensable' to China's AI push as Nvidia access shrinks",
+      "body": "As China's access to Nvidia's advanced chips shrinks under US export controls, **Huawei** is becoming increasingly central to Beijing's AI ambitions despite a wide technological gap with its American rival, the New York Times reports. The Trump administration's yearslong campaign to cripple Huawei through export restrictions has instead pushed Chinese AI developers toward the company's domestic alternatives.",
+      "src_line": "NYT Asia (direct), Nov 26 2026"
+    },
+    {
+      "url": "https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-chinas-huawei-convicted-of-fraud-in-u-s-criminal-trial-63fc5211",
+      "source": "WSJ China",
+      "category_tag": "Sanctions",
+      "headline": "Huawei found guilty in US trade-secrets, sanctions-evasion trial",
+      "body": "A federal jury in Brooklyn found **Huawei** guilty on 10 of 12 counts, including conspiracy to steal trade secrets and defrauding banks about business in Iran and North Korea, after an 11-week trial, per Taipei Times' report on the verdict. Brooklyn US Attorney Joseph Nocella said the case reflects Huawei's \"decades-long pattern of endangering US national security.\" Huawei was acquitted of racketeering and obstruction charges and says it will review its legal options.",
+      "src_line": "WSJ, Nov 25-26 2026"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/chinas-defence-ministry-urges-japan-stop-stirring-up-south-china-sea-disputes-2026-11-26/",
+      "source": "Reuters China",
+      "category_tag": "PLA",
+      "headline": "China's defence ministry warns Japan to stop 'stirring up' South China Sea disputes",
+      "body": "**MND** spokesperson Chen Xi said Japan should \"stop fanning the flames\" on the South China Sea issue and warned any attempt to \"challenge China's sovereign rights\" is \"doomed to fail,\" Reuters reported. Separately, **MOFA** lodged \"stern representations\" with Japan on Nov 26 over a Japanese vessel's intrusion into waters near the Senkaku/Diaoyu Islands.",
+      "src_line": "Reuters, Nov 26 2026"
+    },
+    {
+      "url": "https://apnews.com/article/taiwan-local-elections-dpp-kmt-china-cbfaf36781893dc1a7830b702889f829",
+      "source": "AP China",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan heads into Nov 28 local elections watched closely by Beijing",
+      "body": "Taiwan votes Saturday, Nov 28, in nine-in-one local elections for 22 mayors, magistrates and roughly 11,000 local offices, a vote AP reads as a mid-term test for President **Lai Ching-te**. A Vanderbilt University study cited by the New York Times found pro-Beijing AI-generated personas, including accounts linked to China-based company GoLaxy, inserting pro-unification messaging into non-political social media content ahead of the vote.",
+      "src_line": "AP, Nov 26 2026"
+    },
+    {
+      "url": "https://www.reuters.com/world/china/xis-graft-probe-shanghai-rising-star-upends-traditional-path-power-china-2026-11-25/",
+      "source": "Reuters China",
+      "category_tag": "PRC-Economy",
+      "headline": "Xi's anti-graft probe fells Shanghai party chief Chen Jining",
+      "body": "**Xi Jinping**'s government placed Shanghai Communist Party secretary **Chen Jining**, a Politburo member and former Beijing mayor and environment minister, under investigation, Reuters and Bloomberg reported Nov 25. Nikkei Asia said the move \"clouds China's leadership reset\" ahead of 2027.",
+      "src_line": "Reuters, Nov 25 2026"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.chinatimes.com/newspapers/20261126000599-260120",
+      "source": "China Times (ZH)",
+      "category": "Trade",
+      "headline": "USTR proposes 20% China tariff, keeps Taiwan at 15% cap",
+      "body_text": "USTR cited nine 'unreasonable' Taiwan policies while proposing a 20% rate on China and a 15% cap for Taiwan under new Section 301 duties.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMFdYai14Q0VyLWZhd3EwN3lxOWNzRklQb0FDNlI0UHFDbWFKWVhIdTg0Wnh3OGQ1d2VkSWxhenJWdWV3a3lWWmVDNC1HS3pQRDdqdU5nbkNTZTB3Ry00TTNPRVZHQWpwTzRiUmVXcHZmWk5MRmp5dEU0RWpPN3hvYXh6VlZfdTJVT3pNeVNRSXJxQTNBN1otSw?oc=5",
+      "source": "WSJ China",
+      "category": "Markets",
+      "headline": "Asian stocks rise on tariff news even as China, HK shares fall",
+      "body_text": "Asian markets broadly rose after the US tariff announcement, but China's SSE Composite fell 1.61% and Hong Kong's Hang Seng dropped 2.69% on Nov 26.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://sinocism.com/p/ustr-section-301-investigation-report",
+      "source": "Sinocism",
+      "category": "Analysis",
+      "headline": "Sinocism previews USTR 301 report, Nvidia fallout, Dutch FM Beijing visit",
+      "body_text": "Sinocism's Nov 26 issue covers the USTR 301 report, Nvidia fallout, the Dutch FM's Beijing trip and CICIR's president on new security risks.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.ft.com/content/368c4526-a0ce-4951-a847-f039af2a51af?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category": "Technology",
+      "headline": "'Jensanity' sweeps Taiwan and mainland China over Huang's comeback",
+      "body_text": "FT: Jensen Huang, 'among the few business leaders to straddle both sides of the Taiwan Strait,' is driving fan enthusiasm in Taiwan and China.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/singapore/story20261126-10060091",
+      "source": "Lianhe Zaobao (ZH)",
+      "category": "Diplomacy",
+      "headline": "Zaobao debunks viral link between Lee Hsien Loong remark and Chen Jining's fall",
+      "body_text": "Zaobao found social-media claims tying a 2024 Lee Hsien Loong remark on 'China's next generation of leaders' to Chen Jining's purge misread the plural phrasing.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/gn/2026/11-26/10738329.shtml",
+      "source": "China News (ZH)",
+      "category": "Diplomacy",
+      "headline": "Li Qiang tells ADB chief China's economy 'withstood pressure' this year",
+      "body_text": "Li Qiang told ADB President Masato Kanda China's economy 'withstood pressure and advanced steadily' this year, marking 40 years of China-ADB cooperation.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://fec.mofcom.gov.cn/article/xwdt/xwdtqtzx/xwfwydyl/202611/9634.html",
+      "source": "MOFCOM (ZH)",
+      "category": "Technology",
+      "headline": "China sweeps top three in global science-city rankings",
+      "body_text": "China took the top three spots in the Global Research City rankings within the International Science and Technology Innovation Center Index 2026, per MOFCOM.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_0a3031180dd0414285f18fc1f7cc8aab.html",
+      "source": "MOFCOM (ZH)",
+      "category": "Trade",
+      "headline": "China marks 25th WTO anniversary with Geneva dialogue",
+      "body_text": "China held a high-level dialogue in Geneva marking 25 years since its Dec 11, 2001 WTO accession, per MOFCOM.",
+      "color_bar_class": "cb-lt"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.reuters.com/legal/litigation/chinas-hansoh-pharma-strikes-drug-deal-with-bayer-unit-worth-nearly-33-billion-2026-11-25/",
+      "source": "Reuters China",
+      "headline": "Hansoh Pharma strikes $3.3 billion drug deal with Bayer unit",
+      "body_text": "China's Hansoh Pharma signed a licensing deal with a Bayer unit worth nearly *$3.3 billion*, Reuters reports, among the largest China-outbound pharmaceutical agreements this year.",
+      "companies": [
+        "Hansoh Pharma",
+        "Bayer"
+      ],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQRzdRdE1tcjNoVEQ0Z1U0LWxXUDUtZ3dpQVp0RnRzTm01M2hFVWZRRDVjNjFyaG9mcnN2WXRxN3BnakwzbXhqR2ctdkdQa1lvU0Qza1JMUmhjbURpdDJxNjBNR1RPdDg4RUgxcHNNYm05Q2N2eGx3VHI5RlM5ekMwZEJPNjNkU1FSZU00QUdFTXpmczN5SjZJTGx0Z0xaNndyZHZhNExzUEZFY3Z1RXlaWm5Edk9DZw?oc=5",
+      "source": "Bloomberg China",
+      "headline": "Vanke seeks bond extension again as builder distress deepens",
+      "body_text": "Chinese developer Vanke is again seeking a delay on bond repayment, Bloomberg reports, as distress among Chinese builders continues despite earlier state support.",
+      "companies": [
+        "China Vanke"
+      ],
+      "sector": "property"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-26/tim-hortons-china-is-said-to-weigh-options-including-stake-sale",
+      "source": "Bloomberg China",
+      "headline": "Tim Hortons China weighs options including stake sale",
+      "body_text": "Tim Hortons' China operation is weighing strategic options including a stake sale, Bloomberg reports, as the chain reassesses its position in the Chinese market.",
+      "companies": [
+        "Tim Hortons China"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-26/china-backed-pakistan-exchange-prepares-to-launch-stock-options",
+      "source": "Bloomberg China",
+      "headline": "China-backed Pakistan Exchange prepares to launch stock options",
+      "body_text": "A Pakistan stock exchange backed by Chinese investors is preparing to launch stock options trading, Bloomberg reports, part of continued Chinese capital-markets engagement in Pakistan.",
+      "companies": [
+        "Pakistan Stock Exchange"
+      ],
+      "sector": "finance"
+    },
+    {
+      "url": "https://www.ft.com/content/e6557cf5-1c02-4ff7-abdd-f0682298b8c1",
+      "source": "FT China",
+      "headline": "Nvidia fallout exposes China's fragility on frontier AI",
+      "body_text": "The lack of US-style capital markets and domestic commercial demand makes it difficult for Beijing to fuel AI innovation on its own, the Financial Times reports following the Nvidia-linked turmoil.",
+      "companies": [
+        "Nvidia"
+      ],
+      "sector": "tech"
+    },
+    {
+      "url": "https://finance.huanqiu.com/article/4UBOZOQaLYG",
+      "source": "Global Times (ZH)",
+      "headline": "Hong Kong launches CMU digital asset platform for bond settlement",
+      "body_text": "The Hong Kong Monetary Authority launched its CMU Digital Asset Platform on Nov 25, built on distributed-ledger technology, with *over HK$6 trillion* in bond custody as of end-September 2026 and 10 founding member banks including Bank of China (Hong Kong), HSBC and Standard Chartered.",
+      "companies": [
+        "Hong Kong Monetary Authority",
+        "HSBC",
+        "Standard Chartered",
+        "Bank of China (Hong Kong)"
+      ],
+      "sector": "finance"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFCOM",
+      "body_chinese": "商务部",
+      "speaker": "He Yadong",
+      "role": "MOFCOM spokesperson",
+      "topic": "US Section 301 tariffs",
+      "statement": "The US Section 301 investigation is a typical act of unilateralism that severely undermines international economic order and gravely violates WTO rules. We firmly oppose this. China urges the US to correct its wrongdoing and return to the right track of resolving issues through dialogue and consultation. China will closely watch developments, reserves the right to take necessary measures, and will resolutely defend its legitimate rights and interests.",
+      "original_zh": "美方301调查是典型的单边主义行为，严重破坏国际经济秩序，严重违反世贸组织规则，中方对此坚决反对。中方敦促美方纠正错误做法，回到通过对话协商解决问题的正确轨道上来。中方将密切关注事态进展，保留采取必要措施的权利，坚决捍卫自身正当权益。",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Statement follows USTR's Nov 25 proposal of Section 301 tariffs on 14 economies, with the highest rate of 20 percent aimed at China.",
+      "source": "MOFCOM ZH",
+      "url": "https://fec.mofcom.gov.cn/article/xwdt/xwdtqtzx/xwzcdt/202611/9633.html"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "Trump-Xi summit and Taiwan independence",
+      "statement": "Per TAO: the Trump-Xi summit provided 'new strategic guidance' for US-China relations, and China hopes Washington will put into practice its stated non-support for 'Taiwan independence' and avoid letting the Taiwan question disrupt the broader picture of ties.",
+      "original_zh": "国台办发言人表示：中美元首会晤作出两国关系新战略指引，希望美方将不支持\"台独\"落到实处，避免台湾问题干扰中美关系大局",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "Comment follows recent Trump-Xi engagement referenced in Chinese state media coverage of cross-strait and bilateral ties.",
+      "source": "TAO ZH",
+      "url": "https://www.nbd.com.cn/articles/2026-11-25/4658153.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA spokesperson",
+      "topic": "Senkaku/Diaoyu waters intrusion",
+      "statement": "Per MOFA: the Japanese vessel's illegal intrusion into Diaoyu Islands waters seriously violated China's sovereignty and undermined stability there; China has lodged stern representations with Tokyo.",
+      "original_zh": "日本船只非法侵闯钓鱼岛领海挑衅滋事，外交部：严重侵犯中国主权，破坏钓鱼岛局势稳定，中方已向日方提出严正交涉",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "A Japanese vessel entered waters near the Senkaku/Diaoyu Islands on Nov 26, prompting the formal protest.",
+      "source": "MOFA presser ZH",
+      "url": "https://www.sohu.com/a/1106800764_267106?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MND",
+      "body_chinese": "国防部",
+      "speaker": "Chen Xi",
+      "role": "MND spokesperson (Senior Colonel)",
+      "topic": "South China Sea / Japan",
+      "statement": "We demand that Japan stop fanning the flames and stirring up trouble on the South China Sea issue; any attempt to challenge China's sovereign rights and interests or undermine regional peace and stability is doomed to fail.",
+      "original_zh": "我们要求日方停止在南海问题上拱火滋事，任何试图挑战中国主权权益、破坏地区和平稳定的图谋都注定失败。",
+      "addressed_to": "Japan",
+      "tone": "warning",
+      "context": "Remarks made at the Nov 26 MND monthly press briefing amid Japan-China friction over the South China Sea and East China Sea.",
+      "source": "PLA Daily ZH",
+      "url": "http://www.81.cn/yw_208727/16502214.html"
+    },
+    {
+      "body": "MND",
+      "body_chinese": "国防部",
+      "speaker": "Chen Xi",
+      "role": "MND spokesperson (Senior Colonel)",
+      "topic": "Japan's abandoned chemical weapons",
+      "statement": "We urge Japan to provide effective information on burial sites as soon as possible, increase human resource input, comprehensively speed up the disposal of its abandoned chemical weapons, and completely eliminate this poison at an early date, returning a clean land to the Chinese people.",
+      "original_zh": "我们督促日方尽快提供有效埋藏线索信息，加大人力资源投入，全面加快日遗化武处置进程，早日彻底清除日遗化武毒害，还中国人民以净土。",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Comment made at the same Nov 26 briefing, timed to China's release of the \"Huan Wo Jing Tu\" documentary on Japan's abandoned WWII-era chemical weapons.",
+      "source": "PLA Daily ZH",
+      "url": "http://www.81.cn/yw_208727/16502214.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "JN",
+      "who": "Joseph Nocella",
+      "handle_context": "US Attorney for the Eastern District of New York",
+      "platform_date": "Taipei Times · Nov 26, 2026",
+      "quote_text": "Few crimes are as serious as Huawei's decades-long pattern of endangering US national security, violating the sanctity of US commerce, and impeding the enforcement of US laws.",
+      "analyst_note": "Statement followed a Brooklyn federal jury's guilty verdict on 10 of 12 counts against Huawei after an 11-week trial.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868406"
+    },
+    {
+      "avatar_initials": "BH",
+      "who": "Brian Heberlig",
+      "handle_context": "Huawei's lead trial attorney",
+      "platform_date": "Taipei Times · Nov 26, 2026",
+      "quote_text": "It's hard not to have profoundly mixed emotions from the verdict we just heard.",
+      "analyst_note": "Huawei was acquitted of RICO racketeering and obstruction charges but convicted on 10 of 12 counts including trade-secret theft and sanctions-related bank fraud.",
+      "badge_class": "sb-r",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868406"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Shanghai CCP Party Secretary / Politburo member",
+      "name": "Chen Jining",
+      "action": "under investigation",
+      "detail": "Xi Jinping's government placed Chen Jining, a Politburo member and former Beijing mayor and environment minister, under investigation, Reuters and Bloomberg reported Nov 25. Jamestown Foundation analysis said the move ends the \"Tsinghua clique's\" hold on a traditional path to the top leadership.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/china/chinas-defence-ministry-urges-japan-stop-stirring-up-south-china-sea-disputes-2026-11-26/",
+    "https://apnews.com/article/taiwan-local-elections-dpp-kmt-china-cbfaf36781893dc1a7830b702889f829",
+    "https://www.reuters.com/world/china/china-urges-netherlands-offer-fair-predictable-business-climate-amid-nexperia-2026-11-25/",
+    "https://www.reuters.com/world/china/xis-graft-probe-shanghai-rising-star-upends-traditional-path-power-china-2026-11-25/"
+  ],
+  "story_count": 100,
+  "oped_count": 4,
+  "academic_count": 0,
+  "source_count": 118,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-26.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-26.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}

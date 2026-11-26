@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-26",
+    "filename": "2026-11-26.html",
+    "re_line": "20% China tariff proposed \u00b7 Shanghai chief Chen Jining purged \u00b7 Huawei convicted \u00b7 Senkaku protest",
+    "top_stories": 6,
+    "overnight_items": 6,
+    "word_count": 2801,
+    "sources": 118,
+    "pdf": true
+  },
+  {
     "date": "2026-11-25",
     "filename": "2026-11-25.html",
     "re_line": "RE: Chen Jining purge \u00b7 Huawei convicted in US \u00b7 Solomon Islands-Australia pact \u00b7 US readies China tariffs",
