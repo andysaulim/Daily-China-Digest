@@ -1,0 +1,559 @@
+{
+  "digest_date": "Friday, November 27, 2026",
+  "re_line": "Beijing's market rescue · USTR's new 301 tariffs on 14 economies · Taiwan votes amid PLA activity · Nvidia's SE Asia halt",
+  "market_indicators": {
+    "sse_composite": {
+      "value": "3,606.49",
+      "change_pct": 1.91,
+      "as_of": "Nov 27"
+    },
+    "usd_cny": {
+      "value": "6.6437",
+      "change_pct": -0.5,
+      "as_of": "Nov 27"
+    },
+    "hang_seng": {
+      "value": "22,694.77",
+      "change_pct": 1.27,
+      "as_of": "Nov 27"
+    },
+    "usd_cnh": {
+      "value": "6.6544",
+      "change_pct": -0.06,
+      "as_of": "Nov 27"
+    },
+    "brent": {
+      "value": "92.06",
+      "change_pct": -0.55,
+      "as_of": "Nov 27"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "pmi_mfg": "49.3"
+    }
+  },
+  "morning_memo": [
+    "China's State Council issued a rare midday statement pledging stronger 'national team' intervention in capital markets, sending the CSI 300 to its biggest one-day gain in two years and the SSE Composite up 1.91 percent.",
+    "USTR published results of its Section 301 'structural overcapacity' investigation on Nov 25, proposing new tariffs on 14 economies including China; Beijing's state trade promotion body urged Washington to withdraw the measure.",
+    "Taiwan heads into Saturday's nine-in-one local elections after Reuters reported China sent warplanes as campaigning entered its final day, with China-sanctioned DPP Taipei candidate Puma Shen emerging as a serious challenger to KMT incumbent Chiang Wan-an."
+  ],
+  "key_stat": {
+    "number": "¥1.6 trillion",
+    "label": "Decline in Chinese household consumption debt, Jan-Oct 2026",
+    "context": "PBOC data cited by FT Chinese show total household consumption loans, including mortgages, fell to ¥56.6 trillion ($8.5 trillion), more than three times the ¥500 billion full-year decline recorded in 2025.",
+    "source": "FT Chinese"
+  },
+  "prc_government": [
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC department official (unnamed)",
+      "action": "Issued new rules on RMB deposit and loan interest rate management",
+      "document": "《人民币存贷款利率管理规定》(Provisions on the Administration of RMB Deposit and Loan Interest Rates)",
+      "detail": "The regulation, approved Oct 30 2026 at the PBOC's 10th executive meeting, takes effect March 21 2027 and lowers minimum large-denomination certificate of deposit subscriptions to ¥100,000 for individuals and ¥5 million for institutions.",
+      "source_label": "PBOC ZH",
+      "url": "https://www.chinanews.com.cn/cj/2026/11-27/10738954.shtml"
+    },
+    {
+      "ministry": "State Council",
+      "ministry_chinese": "国务院",
+      "official": "Li Qiang, Premier",
+      "action": "Chaired executive meeting on capital markets and standards reform",
+      "document": null,
+      "detail": "The Nov 27 meeting called for a greater 'national team' investor role, an enhanced quasi-stabilization function for Central Huijin, and crackdowns on financial fraud and illegal share reductions; it also reviewed a draft workplace-safety hazard rule.",
+      "source_label": "State Council ZH (via PLA Daily/Xinhua)",
+      "url": "http://www.81.cn/ss_208539/16502343.html"
+    },
+    {
+      "ministry": "Ministry of National Defense",
+      "ministry_chinese": "国防部",
+      "official": null,
+      "action": "Completed second China-Vietnam coast guard joint patrol of Gulf of Tonkin in 2026",
+      "document": null,
+      "detail": "China's and Vietnam's coast guards concluded their second joint patrol of the Gulf of Tonkin this year, per MND, part of routine bilateral maritime cooperation.",
+      "source_label": "MND ZH",
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/yw_214049/16502381.html"
+    }
+  ],
+  "npc_politburo": [],
+  "calendar_watch": [
+    {
+      "month": "Nov",
+      "day": 28,
+      "headline": "Taiwan nine-in-one local elections",
+      "detail": "22 mayors and magistrates and roughly 11,000 offices are at stake; the Taipei mayoral race between KMT incumbent Chiang Wan-an and DPP's Puma Shen is watched as a mid-term test for President Lai Ching-te."
+    },
+    {
+      "month": "Dec",
+      "day": 1,
+      "headline": "Philippine Senate impeachment court resumes Sara Duterte trial",
+      "detail": "The Senate impeachment court reconvenes for the final phase of proceedings against Vice President Sara Duterte, who says she will not resign."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "China's annual state commemoration (国家公祭日) of the 1937 Nanjing Massacre."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit, Doral (Miami)",
+      "detail": "The US hosts the G20 summit Dec 14-15; Xi Jinping's attendance has not been confirmed."
+    },
+    {
+      "month": "Jan",
+      "day": 15,
+      "headline": "Trump-Xi trade truce reportedly set to expire",
+      "detail": "Per BBC Chinese, the 20 percent US tariff rate on China, matched to the Trump-Xi trade truce, is reported to expire in mid-January 2027."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-27/toyota-car-sales-fall-for-ninth-month-as-china-slump-worsens",
+      "source": "Bloomberg China",
+      "category": "Auto",
+      "headline": "Toyota Car Sales Fall for Ninth Straight Month as China Slump Worsens",
+      "body_text": "Toyota's China sales fell for a ninth consecutive month, Bloomberg reports, as the broader slowdown in China's auto market deepens further. The decline adds pressure on legacy automakers already losing ground to Chinese EV makers in their home market."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/former-government-chief-chinas-guangxi-sentenced-death-with-reprieve-over-graft-2026-11-27/",
+      "source": "Reuters China",
+      "category": "Domestic/Anti-corruption",
+      "headline": "Former Guangxi Government Chief Sentenced to Death With Reprieve for Graft",
+      "body_text": "A former government chief of China's Guangxi region was sentenced to death with a two-year reprieve on corruption charges, Reuters reports. Such suspended sentences are commonly commuted to life imprisonment after a period of good behavior."
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/fall-of-shanghai-party-chief-clouds-china-s-leadership-reset-in-2027",
+      "source": "Nikkei Asia China",
+      "category": "Politics/Personnel",
+      "headline": "Fall of Shanghai Party Chief Clouds China's 2027 Leadership Reset",
+      "body_text": "Beijing's announcement that Shanghai party secretary Chen Jining is under investigation has cast a shadow over China's planned 2027 leadership transition, per Nikkei. Jamestown separately frames the move as ending the political influence of the so-called Tsinghua clique."
+    },
+    {
+      "url": "https://asia.nikkei.com/economy/fires/hong-kong-fire-survivors-and-families-mark-anniversary-as-questions-linger",
+      "source": "Nikkei Asia China",
+      "category": "Society/Hong Kong",
+      "headline": "Hong Kong Fire Survivors Mark Anniversary as Accountability Questions Linger",
+      "body_text": "Survivors and families marked one year since the Wang Fuk Court fire killed 168 people, Hong Kong's deadliest blaze in decades, per Nikkei. No official government commemoration was held, and questions over responsibility remain unresolved."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/technology/china-s-sany-pushes-ai-into-heavy-machinery-as-overseas-sales-grow",
+      "source": "Nikkei Asia China",
+      "category": "Technology/Manufacturing",
+      "headline": "China's Sany Pushes AI Into Heavy Machinery as Overseas Sales Grow",
+      "body_text": "Sany Heavy Industry plans to roll out autonomous mining equipment and AI agents capable of coordinating entire equipment fleets, Nikkei reports. The push comes as the company's overseas sales continue to expand."
+    },
+    {
+      "url": "https://www.taiwannews.com.tw/news/6481651",
+      "source": "Taiwan News",
+      "category": "Technology",
+      "headline": "TSMC-Backed European Semiconductor Manufacturing to Begin Production Late 2027",
+      "body_text": "European Semiconductor Manufacturing Company, backed by TSMC, is on track to begin production in late 2027, per Taiwan News. The plant forms part of Europe's push to diversify chipmaking capacity away from Asia."
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-27/singapore-wealth-firm-farro-plans-hong-kong-office-with-20-hires",
+      "source": "Bloomberg China",
+      "category": "Finance",
+      "headline": "Singapore Wealth Firm Farro Plans Hong Kong Office With 20 Hires",
+      "body_text": "Singapore-based wealth manager Farro plans to open a Hong Kong office and hire 20 staff, Bloomberg reports. The move reflects continuing interest in the city's family-office and wealth-management sector."
+    },
+    {
+      "url": "https://www.ft.com/content/5a8b6b3c-c293-4f38-9f14-f5cc6cf98a34?syn-25a6b1a6=1",
+      "source": "FT China",
+      "category": "Economy/Culture",
+      "headline": "China's Super-Rich Chase Million-Dollar Koi Amid Wealth Crackdown",
+      "body_text": "Chinese collectors are paying fortunes for prized koi fish even as an economic slowdown and Beijing's crackdown on conspicuous wealth threaten the market, per FT. Prices for top specimens have reached seven figures."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.cnbc.com/2026/11/26/neoclouds-nvidia-china-ai.html",
+      "source": "CNBC China",
+      "headline": "Nvidia GPU Buyers Told to Exclude Chinese Renters Under New BIS Rule",
+      "body_text": "Neocloud operators have been instructed to rule out Chinese renters before purchasing Nvidia GPUs, sources told CNBC, after a new BIS rule intended to close export-control 'loopholes.' USTR **Jamieson Greer** said the rule targets indirect Chinese access to advanced AI chips via rented cloud capacity.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://news.cctv.com/2026/11/27/ARTIbUNLQsts37sdePkdBNC3261127.shtml",
+      "source": "CCTV ZH",
+      "headline": "China's Trade Body Urges US to Withdraw Proposed 301 Tariffs",
+      "body_text": "The China Council for the Promotion of International Trade said Chinese business circles 'resolutely oppose' USTR's Nov 25 proposal to impose new Section 301 tariffs on 14 economies, including China, over alleged manufacturing overcapacity. CCTV reported the group called on Washington to withdraw the measure.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://www.bbc.com/zhongwen/articles/c3j4rw1r4p29o/simp",
+      "source": "BBC Chinese",
+      "headline": "BBC Chinese: New Tariff Threat Lands Softer Than 2025's 'Liberation Day'",
+      "body_text": "BBC Chinese reports the new duties will not take effect until January or February 2027 after an eight-month consultation, in contrast to last year's overnight 'Liberation Day' shock. The 20 percent China rate matches the Trump-Xi trade truce level, reported due to expire in mid-January; 25 US states are separately suing to overturn earlier forced-labor-based tariffs.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://asia.nikkei.com/economy/trade-war/trump-tariffs/asia-rejects-basis-of-new-trump-tariffs-as-us-gathers-china-ammunition",
+      "source": "Nikkei Asia China",
+      "headline": "Asian Governments Reject Basis of New Trump Tariffs, Nikkei Reports",
+      "body_text": "Asian governments hit by the new overcapacity-based tariffs are disputing Washington's rationale even as the US compiles what Nikkei describes as additional 'ammunition' against China. The duties stem from USTR's Nov 25 findings covering 14 named economies.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "http://world.people.com.cn/n1/2026/1127/c1002-40841700.html",
+      "source": "人民日报国际 (People's Daily World ZH)",
+      "headline": "Dutch Officials Oppose US Push to Tighten Chip-Equipment Export Controls",
+      "body_text": "Dutch officials said they oppose proposed US legislation that would strengthen export controls on semiconductor manufacturing equipment, per People's Daily's international desk. The brief report did not specify the bill's sponsor or its status in Congress.",
+      "instrument": "Export Controls"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.japantimes.co.jp/news/2026/11/27/asia-pacific/china-taiwan-landing-tactics/",
+      "source": "Japan Times China",
+      "headline": "Chinese Military Tests New Taiwan Landing Tactics in Coastal Drills",
+      "body_text": "The Chinese military has tested new amphibious landing tactics during coastal drills oriented toward a Taiwan contingency, the Japan Times reports. The drills precede Taiwan's Nov 28 local elections amid heightened cross-strait tension.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/27/world/asia/puma-shen-taiwan-election-china.html",
+      "source": "NYT Asia (direct)",
+      "headline": "Sanctioned China Critic Puma Shen Could Become Taipei's Next Mayor",
+      "body_text": "**Puma Shen**, sanctioned by Beijing for organizing civilian invasion-preparedness efforts, could become Taiwan's next political star if he wins Saturday's Taipei mayoral race, per NYT. He faces KMT incumbent Chiang Wan-an in a contest watched as a bellwether for 2028.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/27/2003868482",
+      "source": "Taipei Times",
+      "headline": "Taiwan Secures Preferential Tariff Treatment for Chipmakers Ahead of US Section 232 Rate",
+      "body_text": "Vice Premier **Cheng Li-chiun** said Taiwan has negotiated exemptions from potential US semiconductor tariffs within agreed quotas and a non-stacked rate of no more than 15 percent, under a January investment memorandum. The remarks followed Washington's Nov 25 proposal to impose Section 301 tariffs on 14 economies, including Taiwan, over alleged overcapacity.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/27/2003868491",
+      "source": "Taipei Times",
+      "headline": "Lithuania Threatens to Revoke Taiwan Office's Legal Status",
+      "body_text": "Lithuanian President **Gitanas Nauseda** said the government could unilaterally revoke the legal status of Taiwan's representative office in Vilnius if Taipei refuses to drop 'Taiwanese' from its name. The dispute dates to the office's November 2021 opening, which prompted Beijing to downgrade diplomatic relations with Lithuania.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/nissan-poised-to-import-cars-from-china-to-japan-for-first-time",
+      "source": "Nikkei Asia China",
+      "headline": "Nissan to Import China-Made Plug-In Hybrids to Japan for First Time",
+      "body_text": "Nissan is preparing to sell in Japan plug-in hybrids built by a joint venture in China, taking advantage of faster development and lower production costs, per Nikkei. It would mark the first time Nissan imports China-made vehicles into the Japanese market.",
+      "region": "Japan"
+    },
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261127-10066210",
+      "source": "联合早报 (Lianhe Zaobao ZH)",
+      "headline": "China, Russia Militaries Hold Strategic Consultations by Video Link",
+      "body_text": "China's and Russia's defense ministries held strategic consultations via video conference on Nov 26, exchanging views on implementing the two heads of state's consensus and deepening military ties, per China's Defense Ministry. Russia's deputy defense minister Osmakov took part in what Russian state media called the first round of such consultations.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3375855/us-reviving-subic-bay-philippines-unbranded-military-base",
+      "source": "SCMP China",
+      "headline": "Chinese Think Tank: US Rebuilding Subic Bay as 'Unbranded Military Base'",
+      "body_text": "A report from the National Institute for South China Sea Studies says the US is rebuilding a network of facilities at Subic Bay in the Philippines, logistics, fuel storage, ship repair and weapons stockpiles, that could support operations in both the South China Sea and the Taiwan Strait. The report was released Wednesday, per SCMP.",
+      "region": "ASEAN"
+    },
+    {
+      "url": "https://www.reuters.com/world/africa/china-railway-resources-group-plans-600-million-investment-zimbabwe-gold-mines-2026-11-26/",
+      "source": "Reuters China",
+      "headline": "China Railway Resources Group to Invest $600 Million in Zimbabwe Gold Mines",
+      "body_text": "China Railway Resources Group plans a *$600 million* investment in Zimbabwe's gold mining sector, Reuters reports. The investment adds to China's existing mining footprint in the country, which includes lithium and platinum operations.",
+      "region": "Africa"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/world/china/taiwan-candidates-campaign-key-local-elections-final-day-2026-11-27/",
+      "source": "Reuters China",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan's Election Eve: China Sends Warplanes as Sanctioned DPP Candidate Surges in Taipei",
+      "body": "Taiwan's nine-in-one local elections take place Nov 28, electing 22 mayors and magistrates; Reuters reports China sent warplanes as campaigning entered its final day. DPP legislator **Puma Shen**, sanctioned by Beijing for civil-defense preparation work, has emerged as a serious Taipei mayoral contender against KMT incumbent Chiang Wan-an, per NYT.",
+      "src_line": "Reuters; NYT"
+    },
+    {
+      "url": "https://apnews.com/article/us-tariffs-china-japan-singapore-b94a693004ad8f9b5e78f7aafb196a71",
+      "source": "AP China",
+      "category_tag": "US-China",
+      "headline": "USTR Proposes New Section 301 Tariffs on 14 Economies Including China",
+      "body": "The US Trade Representative published findings Nov 25 from its 'structural excess capacity' Section 301 investigation, proposing new tariffs on 14 economies including China, per AP. China's state trade promotion body CCPIT said business circles 'resolutely oppose' the move and called for the measures to be withdrawn, per CCTV.",
+      "src_line": "AP; CCTV"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-27/china-s-cabinet-stresses-market-support-in-midday-release",
+      "source": "Bloomberg China",
+      "category_tag": "PRC-Economy",
+      "headline": "Beijing's Rare Midday Market-Support Statement Fuels Biggest Rally in Two Years",
+      "body": "China's State Council issued a rare midday statement pledging to deepen capital market reforms, sending the CSI 300 to its biggest one-day rise in two years and lifting the SSE Composite *1.91 percent* and the Hang Seng *1.27 percent*. Premier **Li Qiang** chaired the State Council's Nov 27 executive meeting, which called for greater 'national team' investor support and an enhanced quasi-stabilization role for Central Huijin, per Xinhua.",
+      "src_line": "Bloomberg; Xinhua (State Council readout)"
+    },
+    {
+      "url": "https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+      "source": "NYT Asia (direct)",
+      "category_tag": "Technology",
+      "headline": "Nvidia Halts Chip Shipments to Southeast Asia Under New BIS Licensing Rule",
+      "body": "Nvidia told partners Dell and Supermicro to stop shipping AI servers to Malaysia, Singapore, Thailand and Indonesia after a new Commerce Department rule requiring licenses for advanced chips destined for the region, per NYT. Chinese state media separately noted Nvidia's Singapore subsidiary alone recorded *$104 billion* in 2025 revenue, up 72 percent year-on-year.",
+      "src_line": "NYT; Economic Daily (China)"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/27/2003868473",
+      "source": "Taipei Times",
+      "category_tag": "Indo-Pacific",
+      "headline": "China, Japan Trade Accusations Over Senkaku/Diaoyu Intrusion",
+      "body": "Japan's coast guard said it repeatedly warned two Chinese vessels approaching a Japanese fishing boat near the Senkaku/Diaoyu islands on Nov 26, the fifth such incident this year. **Guo Jiakun** of China's Foreign Ministry said China 'lodged serious representations' with Japan and that coast guard vessels 'took necessary control measures... in accordance with the law.'",
+      "src_line": "Taipei Times"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.wsj.com/tech/a-game-changing-move-just-gave-america-the-edge-over-china-in-ai-53492e2c",
+      "source": "WSJ China",
+      "category": "Technology",
+      "headline": "A Game-Changing Move Just Gave America the Edge Over China in AI",
+      "body_text": "WSJ reports a policy shift has strengthened the US position in the AI race against China.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.economist.com/business/2026/11/26/chinese-cities-want-to-become-token-factories-for-the-world",
+      "source": "Economist China",
+      "category": "Technology",
+      "headline": "Chinese Cities Want to Become 'Token Factories' for the World",
+      "body_text": "The Economist reports Chinese cities are competing to host AI compute infrastructure serving global demand.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-27/china-hedge-fund-star-builds-operating-system-kernel-for-ai",
+      "source": "Bloomberg China",
+      "category": "Technology",
+      "headline": "China Hedge Fund Star Builds Operating System Kernel for AI",
+      "body_text": "A prominent Chinese hedge fund manager is developing an AI operating-system kernel, Bloomberg reports.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-27/china-tech-s-earnings-offer-little-relief-in-worst-ever-year",
+      "source": "Bloomberg China",
+      "category": "Economy",
+      "headline": "China Tech's Earnings Offer Little Relief in Worst-Ever Year",
+      "body_text": "Chinese tech companies' latest earnings have failed to reverse what Bloomberg calls their worst year on record.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://focustaiwan.tw/business/202611270007",
+      "source": "Focus Taiwan",
+      "category": "Trade",
+      "headline": "Taiwan Machinery Makers See Limited Impact From Proposed US Tariffs",
+      "body_text": "Focus Taiwan reports local machinery makers expect minimal disruption from Washington's newly proposed Section 301 tariffs.",
+      "color_bar_class": "cb-lt"
+    },
+    {
+      "url": "https://asia.nikkei.com/politics/taiwan-elections-5-things-to-know-about-city-races-eyed-by-china-and-us",
+      "source": "Nikkei Asia China",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Elections: Five Things to Know About Races Eyed by China and US",
+      "body_text": "Nikkei outlines the city and county races in Saturday's vote that Beijing and Washington are watching most closely.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://factcheck.afp.com/doc.afp.com.D8NB7T3",
+      "source": "AFP China",
+      "category": "Cross-Strait",
+      "headline": "Mistranslated Clip Falsely Shared as Trump Criticizing Taiwan President",
+      "body_text": "AFP Fact Check debunks a viral clip misrepresenting Trump as criticizing Lai Ching-te ahead of Saturday's local polls.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://asia.nikkei.com/spotlight/cybersecurity/taiwan-weathers-wave-of-cyberattacks-ahead-of-saturday-s-elections",
+      "source": "Nikkei Asia China",
+      "category": "Cross-Strait",
+      "headline": "Taiwan Weathers Wave of Cyberattacks Ahead of Saturday's Elections",
+      "body_text": "Nikkei reports a barrage of cyberattacks has targeted Taiwanese officials and politicians in the run-up to Saturday's vote.",
+      "color_bar_class": "cb-navy"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.reuters.com/markets/asia/chinese-industrial-profit-rises-16-january-october-2026-11-27/",
+      "source": "Reuters China",
+      "headline": "China's Industrial Profit Growth Fastest in Five Months",
+      "body_text": "China's industrial profits rose 1.6 percent year-on-year in the January-October period, the fastest pace in five months, though the recovery remains uneven.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/11/27/china-chip-stocks-beijing-market-support.html",
+      "source": "CNBC China",
+      "headline": "Chinese Chip Stocks Post Biggest-Ever One-Day Gains",
+      "body_text": "Chinese semiconductor stocks notched their biggest one-day gains on record after a rare intraday state media readout and top policymaker pledges of market liquidity support, per CNBC.",
+      "companies": [],
+      "sector": "tech"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-26/stellantis-to-pause-more-europe-plants-as-chinese-rivals-advance",
+      "source": "Bloomberg China",
+      "headline": "Stellantis to Pause More Europe Plants as Chinese Rivals Advance",
+      "body_text": "Stellantis is set to pause additional European production lines as Chinese automakers expand their market share, Bloomberg reports.",
+      "companies": [
+        "Stellantis"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.ft.com/content/8aafaa00-9b46-4513-9be9-b5ec5c6d123f?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "Rest of World Plays Catch-Up With China's Solar Power Dominance",
+      "body_text": "Europe, India and the US are investing in domestic solar and battery manufacturing but remain far from reducing reliance on Chinese suppliers, per FT.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.ft.com/content/f683c0d1-c48e-45fe-a0bb-666380299b31?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "China's Wind Turbine Makers Expand Abroad Amid Domestic Pressure",
+      "body_text": "Chinese wind turbine manufacturers are expanding into emerging markets as intense domestic competition and political barriers limit growth in the West, per FT.",
+      "companies": [],
+      "sector": "energy"
+    },
+    {
+      "url": "https://www.ft.com/content/0285a2eb-5312-443d-bd60-b094af9575b1?syn-25a6b1a6=1",
+      "source": "FT China",
+      "headline": "Hong Kong Seeks to Lure Sovereign Wealth Funds With Tax Breaks",
+      "body_text": "Hong Kong is offering tax incentives to attract sovereign wealth funds after some global investors pulled out or scaled back teams in the financial hub, per FT.",
+      "companies": [],
+      "sector": "finance"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部发言人",
+      "speaker": "Guo Jiakun",
+      "role": "MOFA spokesperson",
+      "topic": "Senkaku/Diaoyu waters intrusion dispute with Japan",
+      "statement": "China has already lodged serious representations with Japan. Chinese coast guard vessels took necessary control measures against the relevant vessels in accordance with the law.",
+      "original_zh": null,
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Japan's coast guard said it warned two Chinese vessels approaching a Japanese fishing boat near the Senkaku/Diaoyu islands on Nov 26, the fifth such incident this year.",
+      "source": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/27/2003868473"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部发言人",
+      "speaker": "MOFA spokesperson",
+      "role": "MOFA spokesperson",
+      "topic": "Response to new US tariffs on Chinese goods",
+      "statement": "Per Eastmoney: Both sides should jointly implement the important consensus reached by the two heads of state.",
+      "original_zh": null,
+      "addressed_to": "US",
+      "tone": "conciliatory",
+      "context": "USTR proposed new Section 301 tariffs on 14 economies including China on Nov 25, citing 'structural overcapacity.'",
+      "source": "Eastmoney (citing MOFA)",
+      "url": "https://finance.eastmoney.com/a/202611263940580417.html"
+    },
+    {
+      "body": "TAO",
+      "body_chinese": "国台办发言人",
+      "speaker": "Zhang Han",
+      "role": "TAO spokesperson",
+      "topic": "Other countries' affirmation of the one-China principle at APEC",
+      "statement": "Per Tencent News: multiple countries' leaders affirmed the one-China principle during the APEC summit, and 'we appreciate the position of the relevant countries,' TAO spokesperson Zhang Han said on Nov 25.",
+      "original_zh": "在APEC会议期间，多国领导人明确表示，坚定恪守一个中国原则，国台办发言人张晗25日表示，我们对有关国家的立场表示赞赏",
+      "addressed_to": "other",
+      "tone": "conciliatory",
+      "context": "The remark followed multiple APEC-attending leaders reaffirming the one-China principle during the Nov 2026 summit.",
+      "source": "Tencent News (citing TAO)",
+      "url": "https://news.qq.com/rain/a/20261125V0G2VP00"
+    },
+    {
+      "body": "State Council",
+      "body_chinese": "国务院",
+      "speaker": "Li Qiang",
+      "role": "Premier",
+      "topic": "Capital markets stabilization measures",
+      "statement": "Per Xinhua (State Council readout): the meeting called for resolutely investigating financial fraud and illegal share reductions, effectively protecting investors' legitimate rights, and strengthening the 'national team's' market-stabilizing role.",
+      "original_zh": "坚决查处财务造假、违规减持等行为，有效保护投资者合法权益...加力发挥'国家队'稳市作用",
+      "addressed_to": "domestic",
+      "tone": "firm",
+      "context": "Li Qiang chaired the State Council executive meeting on Nov 27, which also discussed optimizing Central Huijin's quasi-stabilization-fund function.",
+      "source": "PLA Daily (via Xinhua)",
+      "url": "http://www.81.cn/ss_208539/16502343.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "JG",
+      "who": "Jamieson Greer",
+      "handle_context": "US Trade Representative",
+      "platform_date": "BBC Chinese (citing CNBC) · Nov 27, 2026",
+      "quote_text": "We expect wide-ranging, even multilateral, negotiations on the overcapacity issue and how to resolve it.",
+      "analyst_note": "Greer's comments followed USTR's Nov 25 publication of Section 301 'structural overcapacity' findings proposing tariffs on 14 economies including China.",
+      "badge_class": "sb-p",
+      "url": "https://www.bbc.com/zhongwen/articles/c3j4rw1r4p29o/simp"
+    },
+    {
+      "avatar_initials": "HJ",
+      "who": "Hakeem Jeffries",
+      "handle_context": "Incoming US House Speaker",
+      "platform_date": "BBC Chinese · Nov 27, 2026",
+      "quote_text": "actively take action ... to repeal Trump's tariffs",
+      "analyst_note": "Democrats are set to control the House after the Nov 3 2026 midterms; Jeffries made the comment this week per BBC Chinese.",
+      "badge_class": "sb-p",
+      "url": "https://www.bbc.com/zhongwen/articles/c3j4rw1r4p29o/simp"
+    },
+    {
+      "avatar_initials": "GN",
+      "who": "Gitanas Nauseda",
+      "handle_context": "President of Lithuania",
+      "platform_date": "Taipei Times · Nov 27, 2026",
+      "quote_text": "In the past years there were certain expectations. But the end result was different.",
+      "analyst_note": "Nauseda said the government could unilaterally revoke Taipei's representative office status if Taiwan refuses to drop 'Taiwanese' from the office's name, a dispute dating to its Nov 2021 opening.",
+      "badge_class": "sb-p",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/27/2003868491"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "CCP Shanghai Municipal Party Secretary",
+      "name": "Chen Jining",
+      "action": "under investigation",
+      "detail": "Nikkei reports Beijing's announcement that Chen Jining is under investigation has cast a shadow over China's 2027 leadership reset; Jamestown separately describes it as marking the end of the 'Tsinghua clique.'",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.taipeitimes.com/News/front/archives/2026/11/27/2003868473",
+    "https://www.zaobao.com.sg/news/china/story20261127-10066210",
+    "https://www.japantimes.co.jp/news/2026/11/27/asia-pacific/china-taiwan-landing-tactics/",
+    "https://www.reuters.com/world/china/taiwan-candidates-campaign-key-local-elections-final-day-2026-11-27/"
+  ],
+  "story_count": 96,
+  "oped_count": 8,
+  "academic_count": 0,
+  "source_count": 107,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-27.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-27.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
