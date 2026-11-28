@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-28",
+    "filename": "2026-11-28.html",
+    "re_line": "Taiwan votes amid PLA drills \u00b7 New US tariffs on 14 partners \u00b7 PBOC overhauls deposit rules \u00b7 Nvidia Blackwell chips in Shanghai",
+    "top_stories": 5,
+    "overnight_items": 6,
+    "word_count": 2527,
+    "sources": 98,
+    "pdf": true
+  },
+  {
     "date": "2026-11-27",
     "filename": "2026-11-27.html",
     "re_line": "Beijing's market rescue \u00b7 USTR's new 301 tariffs on 14 economies \u00b7 Taiwan votes amid PLA activity \u00b7 Nvidia's SE Asia halt",

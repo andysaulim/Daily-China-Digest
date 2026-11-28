@@ -1,0 +1,538 @@
+{
+  "digest_date": "Saturday, November 28, 2026",
+  "re_line": "Taiwan votes amid PLA drills · New US tariffs on 14 partners · PBOC overhauls deposit rules · Nvidia Blackwell chips in Shanghai",
+  "market_indicators": {
+    "hang_seng": {
+      "value": "22,694.77",
+      "change_pct": 1.27,
+      "as_of": "Nov 27"
+    },
+    "usd_cnh": {
+      "value": "6.6542",
+      "change_pct": -0.07,
+      "as_of": "Nov 27"
+    },
+    "sse_composite": {
+      "value": "3,606.49",
+      "change_pct": 1.91,
+      "as_of": "Nov 27"
+    },
+    "brent": {
+      "value": "90.84",
+      "change_pct": 1.64,
+      "as_of": "Nov 27"
+    },
+    "usd_cny": {
+      "value": "6.6541",
+      "change_pct": -0.34,
+      "as_of": "Nov 28"
+    },
+    "cgb_10y": {
+      "value": "—",
+      "change_pct": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "pboc_lpr": {
+      "lpr_1y": "—",
+      "lpr_5y": "—",
+      "as_of": "",
+      "unavailable": true
+    },
+    "china_cds": {
+      "value": "—",
+      "change_bps": 0,
+      "as_of": "",
+      "unavailable": true
+    },
+    "gdp_yoy": {
+      "value": "—",
+      "period": "",
+      "source": "",
+      "unavailable": true
+    },
+    "china_macro": {
+      "cpi_yoy": "+0.7%",
+      "pmi_mfg": "49.4"
+    }
+  },
+  "morning_memo": [
+    "Taiwan voters began casting ballots Saturday in nine-in-one local elections across 22 cities and counties, with the tightest race in Taipei pitting China-sanctioned DPP legislator Puma Shen against KMT incumbent Chiang Wan-an.",
+    "Satellite imagery shows the PLA has spent weeks rehearsing a civilian-vessel floating-bridge landing technique in Fujian's Dacheng Bay, 280km from Taiwan, per geospatial firm ingeniSPACE.",
+    "Washington is readying new tariffs on 14 trading partners including China a week after the Shenzhen Trump-Xi summit, even as Beijing moves to suspend some critical-material export curbs on US-bound shipments until January."
+  ],
+  "key_stat": {
+    "number": "CNY 100,000",
+    "label": "New minimum purchase for individual large-denomination CDs, down from CNY 200,000",
+    "context": "The large-denomination CD market totaled CNY 31.7 trillion — 10.8% of yuan deposits — across 1,536 licensed institutions at the end of 2025, per the PBOC's Nov 27 regulatory overhaul.",
+    "source": "PBOC via Eastmoney"
+  },
+  "prc_government": [
+    {
+      "ministry": "Ministry of Industry and Information Technology",
+      "ministry_chinese": "工业和信息化部",
+      "official": "Wang Zhiqin, Deputy Director, China Academy of Information and Communications Technology",
+      "action": "State Council approves next-generation communication network roadmap",
+      "document": "新一代通信网建设实施方案 (Next-Generation Communication Network Construction Implementation Plan)",
+      "detail": "Issued jointly with the Cyberspace Administration and NDRC, the plan targets 2030 for nationwide 5G-A/6G deployment, expanded gigabit broadband and a LEO satellite internet system; China had 5.254 million 5G base stations and 265 million gigabit-speed broadband users as of September 2026.",
+      "source_label": "21st Century Business Herald ZH",
+      "url": "https://www.21jingji.com/article/20261128/herald/ccf21c77a2b8030af3d3ec467f256e07.html"
+    },
+    {
+      "ministry": "People's Bank of China",
+      "ministry_chinese": "中国人民银行",
+      "official": "PBOC department head (unnamed in source)",
+      "action": "Share buyback re-lending facility expands past CNY 600 billion",
+      "document": null,
+      "detail": "China's four largest state banks have signed more than CNY 600 billion in loans for corporate share buybacks and stake increases, after the PBOC cut the facility's re-lending rate 0.25 points to 1% effective Nov 4, 2026.",
+      "source_label": "PBOC via Sina",
+      "url": "https://www.sina.cn/news/detail/5370307310257037.html"
+    },
+    {
+      "ministry": "Ministry of Commerce",
+      "ministry_chinese": "商务部",
+      "official": "MOFCOM (unnamed)",
+      "action": "MOFCOM publishes green-consumption pilot review results",
+      "document": "关于绿色消费试点评审结果的公示",
+      "detail": "The ministry posted evaluation results for its green-consumption pilot program; the notice gives no further detail on scope or selected localities in the available text.",
+      "source_label": "MOFCOM",
+      "url": "https://www.mofcom.gov.cn/gztz/art/2026/art_5fb44968ddd041f59e5c3f4353c3fc39.html"
+    }
+  ],
+  "npc_politburo": [
+    {
+      "body": "Politburo",
+      "action": "Shanghai party chief Chen Jining placed under investigation",
+      "detail": "Chen Jining, 62, a Politburo member and Shanghai Communist Party secretary, was placed under investigation for suspected 'serious violations of discipline and law,' announced late Tuesday, days after Xi Jinping returned from APEC meetings in Shenzhen.",
+      "url": "https://www.scmp.com/news/china/politics/article/3376088/no-warning-no-mercy-why-china-moved-fast-topple-chen-jining"
+    },
+    {
+      "body": "Central Committee",
+      "action": "New plenum reading material signals stricter vetting before 2027 congress",
+      "detail": "China released supplementary reading for the 20th Central Committee's fifth plenary session emphasizing party discipline as officials face scrutiny ahead of the 21st Party Congress's expected leadership changes next year.",
+      "url": "https://www.scmp.com/news/china/politics/article/3376004/how-xis-party-discipline-playbook-signals-strict-vetting-ahead-2027-congress"
+    }
+  ],
+  "calendar_watch": [
+    {
+      "month": "Dec",
+      "day": 2,
+      "headline": "Li Qiang hosts '1+10' dialogue with global economic institution heads in Xiamen",
+      "detail": "Premier Li Qiang meets heads of the New Development Bank, World Bank, IMF, WTO, UNCTAD, ILO and OECD; the dialogue, previously held in Beijing, moves to Xiamen without stated reason."
+    },
+    {
+      "month": "Dec",
+      "day": 13,
+      "headline": "Nanjing Massacre National Memorial Day",
+      "detail": "Annual state commemoration (国家公祭日)."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "China Evergrande New Energy Vehicle Group delisted from HKEX",
+      "detail": "Last trading day Dec 11; delisting takes effect 9am Dec 14 after the Listing Committee ruled the company failed to meet resumption guidance by the Sept 30, 2026 deadline."
+    },
+    {
+      "month": "Dec",
+      "day": 14,
+      "headline": "G20 Leaders' Summit opens in Doral, Miami",
+      "detail": "US-hosted summit runs Dec 14-15; Xi Jinping's attendance remains unconfirmed."
+    }
+  ],
+  "overnight_items": [
+    {
+      "url": "https://www.scmp.com/news/hong-kong/politics/article/3376100/more-57000-granted-uk-permanent-residence-bno-route-year-september",
+      "source": "SCMP",
+      "category": "Diplomacy",
+      "headline": "57,040 Hongkongers granted UK permanent residence via BN(O) route in a year",
+      "body_text": "More than 57,000 Hong Kong arrivals became UK permanent residents in the 12 months to September 2026 under the BN(O) pathway, up from just 637 the prior year. Hong Kong ranked second behind India in UK settlement grants during the period, per the UK Home Office."
+    },
+    {
+      "url": "https://asia.nikkei.com/spotlight/electric-cars-in-china/toyota-starts-china-comeback-bid-with-extended-range-ev",
+      "source": "Nikkei Asia",
+      "category": "Technology",
+      "headline": "Toyota launches extended-range EV in China comeback bid",
+      "body_text": "Toyota will launch a new extended-range electric vehicle with an onboard generator in China through its local joint venture, Nikkei reported. The move targets a Chinese EV market where Japanese automakers have ceded share to domestic rivals."
+    },
+    {
+      "url": "https://asia.nikkei.com/business/automobiles/japan-auto-parts-makers-lose-global-lead-as-china-drives-ev-transition",
+      "source": "Nikkei Asia",
+      "category": "Indo-Pacific",
+      "headline": "Japanese auto parts makers cede global lead to German, Chinese rivals",
+      "body_text": "Japan's auto parts manufacturers are falling behind as China's EV transition reshapes the supply chain, ceding the top global market-share spot to German suppliers, per Nikkei. Chinese rivals are gaining ground as the industry pivots from combustion to electric platforms."
+    },
+    {
+      "url": "https://www.yicai.com/news/103458189.html",
+      "source": "Yicai",
+      "category": "Technology",
+      "headline": "Fujing Precision plans CNY 100-200 million share buyback",
+      "body_text": "The semiconductor-equipment maker will repurchase shares at no more than CNY182.53 each, funded partly by an CNY180 million special loan commitment from Bank of China's Liaoning branch. Shares will support an employee stock plan and equity incentives."
+    },
+    {
+      "url": "http://www.81.cn/ss_208539/16502425.html",
+      "source": "PLA Daily",
+      "category": "Diplomacy",
+      "headline": "Politburo security chief Chen Wenqing visits Austria",
+      "body_text": "Chen Wenqing, Politburo member and secretary of the Central Political and Legal Affairs Commission, met Austrian National Council President Walter Rosenkranz and national security adviser Florian Wolfhofer Nov 25-27. The two sides agreed to deepen law-enforcement and security cooperation."
+    },
+    {
+      "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_c6aaf3e241e2440fa307e6c3373e8342.html",
+      "source": "MOFCOM",
+      "category": "Diplomacy",
+      "headline": "China-Denmark trade commission holds 25th session in Copenhagen",
+      "body_text": "MOFCOM held the 25th China-Denmark Joint Economic and Trade Commission meeting in Copenhagen, part of a broader push including a parallel 'Export to China' event in the Danish capital."
+    }
+  ],
+  "us_china": [
+    {
+      "url": "https://www.wsj.com/finance/asian-stocks-rise-as-investors-shrug-off-u-s-tariff-plan-f8daa85b",
+      "source": "WSJ",
+      "headline": "Asian stocks rise even as Washington preps new tariffs",
+      "body_text": "Asian equities extended gains Friday despite Washington preparing fresh tariffs on 14 trading partners including China, the Journal reported. The Hang Seng rose 1.27% to 22,694.77 and the Shanghai Composite gained 1.91% to 3,606.49 on Nov 27.",
+      "instrument": "Tariff"
+    },
+    {
+      "url": "https://www.cnbc.com/video/2026/11/27/two-chinese-firms-linked-to-alice-huang-installed-nvidia-blackwell-chips-report.html",
+      "source": "CNBC / Bloomberg",
+      "headline": "Nvidia Blackwell chips surface at Shanghai site tied to Alice Huang",
+      "body_text": "Two Chinese firms installed Nvidia **Blackwell**-class chips, a generation newer than the H200s implicated in earlier reporting, at a Shanghai facility linked to **Alice Huang**, Bloomberg reported; CNBC separately confirmed the finding. Neither outlet's available text named the two firms.",
+      "instrument": "Export Controls"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZkh6eTBBZnA2bzNwOEJwZ3JtTDNwNzlYdUp6Y2tPVDVlcmxQelFUMkVmU1R0ckpHV24wNkNjZTM1SUhjSlgtQ2NmZ3BSSWRDb25wN3dabWdid0NrMVZGQmUtZVplRGZ0djljUnNUYUxSdEtyQ1ROV1ZqZGZRcXFocEhHb2I3YjZUV29iaGdtYkU3ekpMRERCM1ltZDRHQ2Jj?oc=5",
+      "source": "CNN",
+      "headline": "CIA expert says Chinese intelligence recruitment growing more sophisticated",
+      "body_text": "A CIA expert told CNN that Chinese intelligence recruitment tactics have become increasingly sophisticated, though the available text does not detail specific tradecraft changes. The assessment follows a year of scrutiny over espionage concerns tied to the Nvidia-Alice Huang affair.",
+      "instrument": "Legal"
+    },
+    {
+      "url": "https://www.aljazeera.com/features/2026/11/27/trump-embraced-xi-then-slapped-new-tariffs-on-china-whats-his-game-plan",
+      "source": "Al Jazeera",
+      "headline": "Al Jazeera asks what's behind Trump's embrace-then-tariff pattern with Xi",
+      "body_text": "Al Jazeera examined the Trump administration's pattern of warm summitry with **Xi Jinping** followed swiftly by new tariff moves. The piece follows the Nov 19 Trump-Xi-Putin trilateral summit in Shenzhen.",
+      "instrument": "Diplomacy"
+    }
+  ],
+  "china_world": [
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/28/2003868537",
+      "source": "Taipei Times",
+      "headline": "Taiwan indicts woman for unauthorized Chinese tech-recruitment firm",
+      "body_text": "Taipei prosecutors indicted a woman surnamed Yang for setting up Kinxi, an unauthorized company, to help Shanghai-based Wayon Electronics recruit Taiwanese high-tech workers and expand business in Taiwan. Prosecutors seek at least 16 months in prison and forfeiture of $48,000 in alleged proceeds.",
+      "region": "Cross-Strait"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/28/2003868539",
+      "source": "Taipei Times",
+      "headline": "Taiwan rules out renaming Lithuania office after Vilnius warning",
+      "body_text": "Taiwan's MOFA ruled out renaming its 'Taiwanese Representative Office' in Lithuania after Lithuanian PM Mindaugas Sinkevicius and President Gitanas Nauseda warned Vilnius could unilaterally alter the office's legal status to restore ties with Beijing. MOFA urged both sides to honor their 2021 consensus and resist pressure to divide democracies.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.ft.com/content/a8ecccda-f986-4ae9-9f45-9470d2be8c65?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "EU weighs tighter export controls on battery waste bound for China",
+      "body_text": "Brussels will classify 'black mass' battery waste as hazardous from Dec 9, restricting its export to non-OECD countries to stop valuable cobalt and lithium reaching China for processing. Much EU black mass is currently shipped abroad and the recovered metals re-exported to Europe in finished products.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-27/eu-to-probe-china-singapore-sustainable-aviation-fuel-imports-mwysdbf3",
+      "source": "Bloomberg",
+      "headline": "EU opens probe into Chinese and Singaporean sustainable aviation fuel",
+      "body_text": "The European Commission will investigate sustainable aviation fuel imports from China and Singapore, Bloomberg reported, the latest in a string of EU trade-defense actions targeting Chinese-linked supply chains.",
+      "region": "Europe"
+    },
+    {
+      "url": "https://www.reuters.com/business/energy/russian-domestic-natural-gas-price-may-complicate-talks-with-china-analyst-says-2026-11-27/",
+      "source": "Reuters",
+      "headline": "Russia's domestic gas pricing seen complicating China pipeline talks",
+      "body_text": "An analyst told Reuters that Russia's domestic natural gas pricing structure could complicate ongoing negotiations with China over gas supply terms. The report did not specify which pipeline project or contract is under discussion.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3376084/trade-gold-and-culture-russian-envoy-pushes-closer-ties-hong-kong",
+      "source": "SCMP",
+      "headline": "Russian consul general pushes closer trade, gold ties with Hong Kong",
+      "body_text": "Russia's consul general in Hong Kong, Anatoly Kargapolov, said Russian firms show growing interest in the city despite sanctions-related 'obstacles,' describing an 'ongoing dialogue' with authorities. He said he hopes for more Russian cultural events in the financial hub.",
+      "region": "Russia-Central Asia"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3376105/colombian-congress-chiefs-rush-reassure-china-envoy-berates-lawmakers-taiwan",
+      "source": "SCMP",
+      "headline": "Colombian Congress leaders reaffirm one-China policy as lawmakers visit Taiwan",
+      "body_text": "Chinese Ambassador Zhu Jingyang met Colombian lower-house foreign affairs chair Elizabeth Jay-Pang Diaz and Congress speaker Nicolas Barguil this week, securing reaffirmations of the one-China policy as nine Colombian lawmakers wrapped up a Taiwan trip. Colombian President Abelardo de la Espriella has not commented on the visit.",
+      "region": "Latin America"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/28/2003868538",
+      "source": "Taipei Times",
+      "headline": "Taiwan to send 15 retired AT-3 jets to Paraguay",
+      "body_text": "Taiwan will give Paraguay 15 retired AT-3 trainer jets after replacing them with the Brave Eagle, with delivery starting next year and completing by the end of 2028, a Paraguayan defense blog reported. Paraguay has not operated combat jets in more than 20 years.",
+      "region": "Latin America"
+    }
+  ],
+  "top_stories": [
+    {
+      "url": "https://www.reuters.com/world/china/taiwan-votes-key-local-elections-china-looks-2026-11-28/",
+      "source": "Reuters",
+      "category_tag": "Cross-Strait",
+      "headline": "Taiwan votes in tight local elections as China watches",
+      "body": "Taiwan's roughly 19.6 million eligible voters chose local leaders across 22 cities and counties and *11,000* posts in Saturday's nine-in-one elections, alongside a nuclear-power referendum. The tightest race is in Taipei, where DPP legislator **Puma Shen**, sanctioned by China for training civilians to resist invasion, challenges KMT incumbent **Chiang Wan-an**; the winner also co-hosts the annual Taipei-Shanghai twin-city forum.",
+      "src_line": "Reuters, Bloomberg, FT, NYT, AFP, Nikkei; Nov 28"
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/28/2003868536",
+      "source": "Taipei Times",
+      "category_tag": "PLA",
+      "headline": "Satellite images show PLA rehearsing civilian-vessel landing bridge in Fujian",
+      "body": "Satellite imagery captured a weeks-long PLA amphibious exercise in Dacheng Bay, Fujian, 280km from Taiwan, where eight civilian vessels formed and dismantled an *800-meter* floating bridge between Nov 1 and 16, per geospatial firm ingeniSPACE. COO **Jason Wang** said the PLA appeared to be rehearsing 'low-signature methods to provide logistical support to forces that could be involved in a First Island Chain invasion scenario'; a Taiwan security official confirmed the drill was still underway Nov 27.",
+      "src_line": "Taipei Times; Nov 28"
+    },
+    {
+      "url": "https://ai.ftchinese.com/interactive/17a849f1-7e64-4f56-b756-ccf12662ebff",
+      "source": "FT Chinese",
+      "category_tag": "US-China",
+      "headline": "Trump proposes new tariffs on 14 trading partners including China",
+      "body": "The White House proposed new import tariffs on 14 trading partners including the EU, Japan, Korea, China and Vietnam on the eve of Thanksgiving, less than three weeks after Democrats swept both chambers of Congress in the midterms, per FT Chinese. Exit polls showed two-thirds of midterm voters said tariffs hurt the economy; the move follows October's core PCE inflation reading of *3.3%* and headline inflation of 3.8%, both three-year highs.",
+      "src_line": "FT Chinese, SCMP, gCaptain; Nov 27-28"
+    },
+    {
+      "url": "https://www.wsj.com/economy/trade/china-to-suspend-some-critical-material-export-curbs-to-u-s-until-january-35bc8dca",
+      "source": "WSJ",
+      "category_tag": "Sanctions",
+      "headline": "China to suspend some critical-material export curbs on US until January",
+      "body": "China will suspend some critical-material export controls on US-bound shipments until January, the Wall Street Journal reported Friday. The move extends relief beyond the one-year rare-earth suspension that began Nov 10, 2025 under the Busan truce, with the broader rare-earth and chip-affiliate disputes still unresolved.",
+      "src_line": "WSJ; Nov 27"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202611283942374247.html",
+      "source": "Eastmoney (via PBOC)",
+      "category_tag": "PRC-Economy",
+      "headline": "PBOC scraps fixed loan-penalty markup, halves large-deposit threshold",
+      "body": "The PBOC published two regulations effective March 21, 2027, ending the standard 30-50% markup on loan penalty rates in favor of bank-borrower negotiation, and cutting the individual large-denomination CD entry threshold from CNY 200,000 to CNY 100,000. The central bank said it expects penalty rates to fall overall as a result.",
+      "src_line": "Eastmoney, Sina, Jiemian via PBOC; Nov 27-28"
+    }
+  ],
+  "also_today": [
+    {
+      "url": "https://www.bbc.com/zhongwen/articles/cmy0e8yd585wo/simp",
+      "source": "BBC Chinese",
+      "category": "Diplomacy",
+      "headline": "Hong Kong removes memorial flowers on Tai Po fire anniversary",
+      "body_text": "Authorities removed public memorial flowers at the site of last year's deadly Tai Po fire, prompting residents to ask why official mourning was permitted but private tributes were not.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.dw.com/zh/%E5%BE%B7%E8%AF%AD%E5%AA%92%E4%BD%93%E4%B9%A0%E8%BF%91%E5%B9%B3%E6%B8%85%E9%99%A4%E4%BA%86%E4%B8%80%E5%90%8D%E6%BD%9C%E5%9C%A8%E7%BB%A7%E4%BB%BB%E8%80%85/a-80077870",
+      "source": "DW Chinese",
+      "category": "PRC-Economy",
+      "headline": "German media: Chen Jining's fall removes a potential Xi successor",
+      "body_text": "German commentary tied Chen Jining's ouster to land-sale revenue that peaked at CNY8.7 trillion in 2021 and has since fallen by more than half, straining local government finances.",
+      "color_bar_class": "cb-biz"
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/world/breakingnews/5656457",
+      "source": "Liberty Times",
+      "category": "Cross-Strait",
+      "headline": "Weibo's top 50 trending topics omit Taiwan election entirely",
+      "body_text": "Chinese social platform Weibo's top 50 trending searches carried no mention of Taiwan's election Saturday, dominated instead by entertainment content, Liberty Times reported.",
+      "color_bar_class": "cb-navy"
+    },
+    {
+      "url": "https://news.cctv.com/2026/11/28/ARTIh8tIXssqvnfeBQfTQCbF261128.shtml",
+      "source": "CCTV",
+      "category": "Diplomacy",
+      "headline": "Shenzhou-23, Shenzhou-24 crews complete in-orbit handover",
+      "body_text": "Pakistan's prime minister and army chief spoke by video link with Pakistani payload specialist Mohammed Zeeshan Ali aboard Tiangong during the crew handover.",
+      "color_bar_class": "cb-mid"
+    },
+    {
+      "url": "https://www.news.cn/politics/20261128/5388d2f3ec1749359bf1b9c8fe0d99ff/c.html",
+      "source": "Xinhua",
+      "category": "Technology",
+      "headline": "China launches Asia-Pacific digital cooperation platform in Chengdu",
+      "body_text": "The National Data Administration and Sichuan province launched an APEC-linked digital-empowerment cooperation platform aimed at data infrastructure and talent exchange across the Asia-Pacific.",
+      "color_bar_class": "cb-tech"
+    },
+    {
+      "url": "https://weekly.caixin.com/2026-11-28/102509508.html",
+      "source": "Caixin",
+      "category": "PRC-Economy",
+      "headline": "China's rural 'village banks' shrink from 1,600-plus peak to under 1,000",
+      "body_text": "ICBC is completing the wind-down of its remaining village-bank subsidiaries via acquisition by larger units as Beijing consolidates small lenders nationwide.",
+      "color_bar_class": "cb-biz"
+    }
+  ],
+  "business_economy": [
+    {
+      "url": "https://www.zaobao.com.sg/news/china/story20261128-10071389",
+      "source": "Lianhe Zaobao",
+      "headline": "HKEX delists China Evergrande New Energy Vehicle Group",
+      "body_text": "HKEX's listing committee ruled the EV maker failed to meet resumption guidance by the Sept 30, 2026 deadline; last trading day is Dec 11, with delisting effective Dec 14. Parent China Evergrande has already exited the exchange and entered liquidation.",
+      "companies": [
+        "China Evergrande New Energy Vehicle Group",
+        "China Evergrande"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.21jingji.com/article/20261128/herald/991facd8685e5a64007bb5d8b0165392.html",
+      "source": "21st Century Business Herald",
+      "headline": "RT-Mart parent posts widening loss as same-store sales fall 9.5%",
+      "body_text": "Sun Art Retail's half-year revenue fell 9.9% to CNY27.49 billion with a net loss of CNY514 million, up 317.9% year-on-year, even as private-label sales rose 82% under new owner DCP Capital.",
+      "companies": [
+        "RT-Mart",
+        "Sun Art Retail Group",
+        "DCP Capital"
+      ],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.ft.com/content/f83dd2dc-f51e-4151-9139-cf1918eb9d0a?syn-25a6b1a6=1",
+      "source": "FT",
+      "headline": "Chery pivots Jaecoo brand toward police and nurse robots",
+      "body_text": "Chery, owner of the Jaecoo brand, is diversifying into service robots as it tries to close a late start in the EV race, per the FT.",
+      "companies": [
+        "Chery",
+        "Jaecoo"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.reuters.com/business/retail-consumer/chinas-premium-puffer-jacket-push-meets-consumer-resistance-2026-11-28/",
+      "source": "Reuters",
+      "headline": "China's premium puffer jacket push meets consumer resistance",
+      "body_text": "Chinese apparel makers' attempt to move upmarket on premium puffer jackets is running into price-sensitive consumer pushback, Reuters reported.",
+      "companies": [],
+      "sector": "manufacturing"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-11-28/china-import-logistics-fell-0-6-in-january-october-xinhua-says",
+      "source": "Bloomberg",
+      "headline": "China import logistics fell 0.6% in January-October",
+      "body_text": "Import logistics activity declined 0.6% year-on-year over the first ten months of 2026, Xinhua-sourced data showed, per Bloomberg.",
+      "companies": [],
+      "sector": "macro"
+    },
+    {
+      "url": "https://www.hk01.com/%E5%8D%B3%E6%99%82%E5%9C%8B%E9%9A%9B/60415954/%E6%97%A5%E7%94%A2%E5%9C%A8%E8%8F%AF%E9%8A%B7%E5%94%AE%E6%9A%B4%E8%B7%8C-%E6%93%AC%E5%8F%8D%E9%8A%B7%E6%B1%BD%E8%BB%8A%E5%9B%9E%E6%97%A5%E6%9C%AC-%E4%BD%88%E5%B1%80%E4%B8%AD%E5%9C%8B%E4%BD%9C%E5%87%BA%E5%8F%A3%E5%9F%BA%E5%9C%B0",
+      "source": "HK01",
+      "headline": "Nissan plans to re-export China-made cars to Japan amid sales slump",
+      "body_text": "Nissan is considering reverse-exporting vehicles built in China back to Japan, repositioning its Chinese plants as an export base after a sharp sales decline domestically, HK01 reported.",
+      "companies": [
+        "Nissan"
+      ],
+      "sector": "auto"
+    },
+    {
+      "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3376111/european-financial-firms-plan-larger-hong-kong-investment-treasury-chief-says",
+      "source": "SCMP",
+      "headline": "European financial firms plan bigger Hong Kong push, says treasury chief",
+      "body_text": "Hong Kong's Secretary for Financial Services and the Treasury Christopher Hui said European institutions plan to expand investment in the city's commodities, gold and renminbi businesses after his trip to Germany, Belgium and Luxembourg.",
+      "companies": [],
+      "sector": "finance"
+    }
+  ],
+  "official_line": [
+    {
+      "body": "TAO",
+      "body_chinese": "国台办",
+      "speaker": "TAO spokesperson",
+      "role": "Taiwan Affairs Office spokesperson",
+      "topic": "Trump remarks on Taiwan independence",
+      "statement": "Per TAO: Trump said he does not support \"Taiwan independence.\"",
+      "original_zh": "特朗普表示不支持\"台独\"",
+      "addressed_to": "US",
+      "tone": "routine",
+      "context": "The comment references remarks attributed to Trump following the Nov 19 Trump-Xi summit in Shenzhen.",
+      "source": "Guangzhou Daily",
+      "url": "https://huacheng.gz-cmc.com/pages/2026/11/27/9ffbd7a6f4554f639911244591b410b4.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "Ministry of Foreign Affairs spokesperson",
+      "topic": "US tariff hike on Chinese goods",
+      "statement": "Per MOFA: both sides should earnestly implement the important consensus reached by the two heads of state.",
+      "original_zh": "双方应共同落实好两国元首达成的重要共识",
+      "addressed_to": "US",
+      "tone": "firm",
+      "context": "The comment followed reports Washington is preparing new tariffs on Chinese goods weeks after the Shenzhen Trump-Xi summit.",
+      "source": "Eastmoney via MOFA",
+      "url": "https://finance.eastmoney.com/a/202611263940580417.html"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "Ministry of Foreign Affairs spokesperson",
+      "topic": "Japanese vessels near Diaoyu/Senkaku Islands",
+      "statement": "Per MOFA: Japanese vessels illegally trespassed into Diaoyu Islands territorial waters and provoked trouble; China has lodged stern representations with Japan.",
+      "original_zh": "日本船只非法侵闯钓鱼岛领海挑衅滋事，中方提出严正交涉",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "Japan said it had warned two Chinese vessels to leave waters near the Senkaku/Diaoyu Islands.",
+      "source": "Sohu via MOFA",
+      "url": "https://m.sohu.com/a/1106905770_180220?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+    },
+    {
+      "body": "MOFA",
+      "body_chinese": "外交部",
+      "speaker": "MOFA spokesperson",
+      "role": "Ministry of Foreign Affairs spokesperson",
+      "topic": "Japan's abandoned WWII chemical weapons in China",
+      "statement": "Per MOFA: the issue of Japan's abandoned chemical weapons is the biggest practical obstacle to achieving the goal of a \"world free of chemical weapons.\"",
+      "original_zh": "日遗化武问题是实现'无化武世界'目标的最大现实障碍",
+      "addressed_to": "Japan",
+      "tone": "firm",
+      "context": "The statement addresses unresolved munitions the Japanese army abandoned in China during WWII.",
+      "source": "China Youth Daily via MOFA",
+      "url": "http://m.cyol.com/gb/news/articles/2026-11/26/content_ny6myqse3W.html"
+    }
+  ],
+  "social_statements": [
+    {
+      "avatar_initials": "DI",
+      "who": "Dolkun Isa",
+      "handle_context": "Former president, World Uyghur Congress (2017-2024)",
+      "platform_date": "BBC Chinese · Nov 28",
+      "quote_text": "In 2018, we could easily mobilize thousands of people to take to the streets to protest China's human rights violations. Now, we can barely gather 500.",
+      "analyst_note": "China's three 2026 summits with Trump, including the Shenzhen meeting, did not address China's human rights record, per BBC Chinese.",
+      "badge_class": "sb-s",
+      "url": "https://www.bbc.com/zhongwen/articles/cqrmgenjvkgxo/simp"
+    }
+  ],
+  "personnel_changes": [
+    {
+      "position": "Shanghai CCP Secretary / Politburo member",
+      "name": "Chen Jining",
+      "action": "placed under investigation",
+      "detail": "Placed under investigation for suspected 'serious violations of discipline and law,' announced days after Xi Jinping returned from APEC meetings in Shenzhen.",
+      "predecessor": null
+    },
+    {
+      "position": "Guangxi Zhuang Autonomous Region Chairman (former)",
+      "name": "Lan Tianli",
+      "action": "sentenced",
+      "detail": "Sentenced to death with reprieve for bribery; a Guangxi court found he accepted RMB587 million (about NT$2.907 billion) in illicit payments.",
+      "predecessor": null
+    }
+  ],
+  "timeline_candidates": [
+    "https://www.reuters.com/world/china/taiwan-votes-key-local-elections-china-looks-2026-11-28/",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/11/28/2003868536",
+    "https://www.scmp.com/news/china/diplomacy/article/3376105/colombian-congress-chiefs-rush-reassure-china-envoy-berates-lawmakers-taiwan",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/11/28/2003868538",
+    "https://www.taipeitimes.com/News/taiwan/archives/2026/11/28/2003868537",
+    "https://www.reuters.com/business/energy/russian-domestic-natural-gas-price-may-complicate-talks-with-china-analyst-says-2026-11-27/",
+    "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3376084/trade-gold-and-culture-russian-envoy-pushes-closer-ties-hong-kong"
+  ],
+  "story_count": 100,
+  "oped_count": 5,
+  "academic_count": 0,
+  "source_count": 98,
+  "web_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-28.html",
+  "pdf_url": "https://andysaulim.github.io/Daily-China-Digest/2026-11-28.pdf",
+  "archive_url": "https://andysaulim.github.io/Daily-China-Digest/archive.html"
+}
